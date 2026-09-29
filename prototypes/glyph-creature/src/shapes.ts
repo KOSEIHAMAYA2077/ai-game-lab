@@ -27,6 +27,22 @@ function single(spec: SceneSpec, id: number, time: number, seed: number): Vec3 {
   const a = fract((id + seed * .13) * .618033988749895);
   const b = fract((id + seed * .27) * .754877666246693);
   const surface = spec.mode === 'surface';
+  if (spec.shape === 'fireworks') {
+    const burst = id % 3, ray = Math.floor(id / 3) % 79;
+    const phase = fract(time * .19 + burst / 3);
+    const radius = 2.1 * Math.sin(Math.PI * phase) ** 2;
+    const azimuth = ray * 2.399963229728653;
+    const z = 1 - 2 * (ray + .5) / 79;
+    const radial = Math.sqrt(1 - z * z), tail = .62 + .38 * a;
+    return [Math.cos(azimuth) * radial * radius * tail + .35 * Math.sin(burst * 2.1),
+      z * radius * tail - .6 * Math.sin(Math.PI * phase) ** 4 + .35,
+      Math.sin(azimuth) * radial * radius * tail];
+  }
+  if (spec.shape === 'condense' && !surface) {
+    const u = a * TAU + time * .25;
+    const latitude = .92 * Math.sin(u * 3);
+    return [Math.cos(latitude) * Math.cos(u) * 1.2, Math.sin(latitude) * 1.2, Math.cos(latitude) * Math.sin(u) * 1.2];
+  }
   if (spec.shape === 'mobius') return animatedMobius(a * TAU * 2 + time * .33, surface ? (b - .5) * .94 : .37 + (b - .5) * .025, time, spec.deformation === 'omega');
   if (spec.shape === 'ring') {
     const u = a * TAU + time * .38;

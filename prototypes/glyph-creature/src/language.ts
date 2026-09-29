@@ -1,12 +1,13 @@
-export const SHAPES = ['condense', 'vortex', 'orbit', 'mobius', 'ring', 'cube', 'cuboid', 'cross', 'triangle', 'square'] as const;
+export const SHAPES = ['condense', 'vortex', 'orbit', 'mobius', 'ring', 'cube', 'cuboid', 'cross', 'triangle', 'square', 'fireworks'] as const;
 export type Shape = typeof SHAPES[number];
 export type SceneSpec = { shape: Shape; mode: 'flow' | 'surface'; count: number; arrangement: 'single' | 'swarm' | 'chain'; deformation: 'gentle' | 'omega' | 'double' };
 export const DEFAULT_SPEC: SceneSpec = { shape: 'condense', mode: 'surface', count: 1, arrangement: 'single', deformation: 'gentle' };
 export const COLORS = { white: [0.94, 0.95, 0.94], red: [1, 0.19, 0.16], yellow: [1, 0.85, 0.12], blue: [0.25, 0.48, 1], cyan: [0.15, 0.9, 1], green: [0.25, 1, 0.48], purple: [0.8, 0.4, 1], pink: [1, 0.4, 0.7] } as const;
 export type Ink = keyof typeof COLORS;
-export const SHAPE_NAMES: Record<Shape, string> = { condense: '塊', vortex: '渦', orbit: '軌道', mobius: 'メビウスの輪', ring: '円環', cube: '立方体', cuboid: '直方体', cross: '十字', triangle: '三角形', square: '四角形' };
+export const SHAPE_NAMES: Record<Shape, string> = { condense: '球体', vortex: '渦', orbit: '軌道', mobius: 'メビウスの輪', ring: '円環', cube: '立方体', cuboid: '直方体', cross: '十字', triangle: '三角形', square: '四角形', fireworks: '花火' };
 export const INK_NAMES: Record<Ink, string> = { white: '白', red: '赤', yellow: '黄色', blue: '青', cyan: '水色', green: '緑', purple: '紫', pink: '桃色' };
 const shapeWords: [RegExp, Shape][] = [
+  [/花火|はなび|fireworks?/iu, 'fireworks'],
   [/メビウス|メビュウス|möbius|mobius/iu, 'mobius'], [/直方体|cuboid|rectangular\s*(prism|box)/iu, 'cuboid'],
   [/立方体|キューブ|cube/iu, 'cube'], [/三角|triangle/iu, 'triangle'], [/四角|正方形|square/iu, 'square'],
   [/十字|cross/iu, 'cross'], [/円環|円|リング|輪|ring|circle/iu, 'ring'], [/原子|軌道|orbit/iu, 'orbit'],
@@ -20,11 +21,29 @@ export type Interpretation = { spec: SceneSpec; ink?: Ink; recognized: boolean; 
 
 export const explicitShape = (text: string) => shapeWords.find(([pattern]) => pattern.test(text.normalize('NFKC')))?.[1];
 
+/** Longest overlapping words win: メビウスの輪 must not also count as 輪. */
+export function wordChoices<T>(source: string, vocabulary: [RegExp, T][]): T[] {
+  const hits = vocabulary.flatMap(([pattern, value]) => [...source.matchAll(new RegExp(pattern.source, pattern.flags + 'g'))]
+    .map(match => ({ start: match.index!, end: match.index! + match[0].length, value })));
+  const accepted: typeof hits = [];
+  for (const hit of hits.sort((a, b) => (b.end - b.start) - (a.end - a.start))) {
+    if (!accepted.some(other => hit.start < other.end && hit.end > other.start)) accepted.push(hit);
+  }
+  // A ring word within メビウスの輪 is part of that name, even though メビウス matched separately.
+  return [...new Set(accepted.sort((a, b) => a.start - b.start).map(hit => hit.value))];
+}
+
+export function shapeChoices(text: string): Shape[] {
+  const source = text.normalize('NFKC').replace(/(メビウス|メビュウス)の輪/gu, '$1');
+  return wordChoices(source, shapeWords);
+}
+
 /** An explicit vocabulary composer, not a claim of general language understanding. */
-export function interpret(text: string, current: SceneSpec, shapeOverride?: Shape | null): Interpretation {
+export function interpret(text: string, current: SceneSpec, shapeOverride?: Shape | null, choose?: () => number): Interpretation {
   const source = text.normalize('NFKC');
-  const shape = shapeOverride === undefined ? explicitShape(source) : shapeOverride ?? undefined;
-  const ink = inkWords.find(([pattern]) => pattern.test(source))?.[1];
+  const pick = <T>(items: T[]) => items[Math.min(items.length - 1, Math.floor((choose?.() ?? 0) * items.length))];
+  const shape = shapeOverride === undefined ? choose ? pick(shapeChoices(source)) : explicitShape(source) : shapeOverride ?? undefined;
+  const ink = choose ? pick(wordChoices(source, inkWords)) : inkWords.find(([pattern]) => pattern.test(source))?.[1];
   const surface = /表面|surface/iu.test(source), flow = /流れ|流す|流れる|flow|stream/iu.test(source);
   const chain = /鎖|くさり|chain/iu.test(source);
   const double = /大小|大きい.*小さい|小さい.*大きい|二つの輪|2つの輪/iu.test(source);
@@ -36,7 +55,7 @@ export function interpret(text: string, current: SceneSpec, shapeOverride?: Shap
   const recognized = Boolean(shape || ink || surface || flow || chain || double || omega || rawCount !== undefined);
   const spec: SceneSpec = {
     shape: shape ?? (chain || double ? 'ring' : omega ? 'mobius' : current.shape),
-    mode: surface ? 'surface' : flow ? 'flow' : current.mode,
+    mode: surface && flow && choose ? pick<SceneSpec['mode']>(['surface', 'flow']) : surface ? 'surface' : flow ? 'flow' : current.mode,
     count: double ? 2 : count,
     arrangement: chain ? 'chain' : double ? 'swarm' : shape ? count > 1 ? 'swarm' : 'single' : count === 1 ? 'single' : current.arrangement === 'chain' ? 'chain' : 'swarm',
     deformation: double ? 'double' : omega ? 'omega' : shape || (rawCount !== undefined && rawCount !== 2) ? 'gentle' : current.deformation,
