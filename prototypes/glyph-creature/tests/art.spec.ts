@@ -22,7 +22,7 @@ const browserErrors = new WeakMap<Page, string[]>();
 test.beforeEach(async ({ page }, testInfo) => {
   const errors: string[] = []; browserErrors.set(page, errors);
   page.on('pageerror', error => errors.push(error.message));
-  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  page.on('console', message => { if (message.type() === 'error') errors.push(`${message.text()} ${message.location().url}`); });
   await page.goto('/');
   await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
   mkdirSync('evidence', { recursive: true });
@@ -185,26 +185,28 @@ test('狭い画面でも入力・形の切替が収まり、タッチで開く',
   await page.screenshot({ path: 'evidence/mobile.png', fullPage: true });
 });
 
-test('導入: press enter自身が材料になり、二回目で文章を入力できる', async ({ page }) => {
+test('導入: 最初のEnterで入力し、文字を送ってからボタンが現れる', async ({ page }) => {
   await expect(page.locator('#start-prompt')).toBeVisible();
   await expect(page.locator('#terminal')).toBeHidden();
   expect((await inspect(page)).count).toBe(1);
-  await page.locator('#start-prompt').evaluate(el => el.getAnimations().forEach(animation => animation.finish()));
+  await page.locator('#start-prompt').evaluate(el => el.getAnimations().forEach(animation => animation.effect?.getTiming().iterations === Infinity ? animation.cancel() : animation.finish()));
   await page.screenshot({ path: 'evidence/initial.png' });
   await page.keyboard.press('Enter');
-  expect((await inspect(page)).batches[0].text).toBe('press enter');
-  expect((await inspect(page)).count).toBe(11);
-  await expect(page.locator('#terminal')).toBeHidden();
-  await advance(page, 700);
-  await page.screenshot({ path: 'evidence/intro-intake.png' });
-  await advance(page, 4000);
-  await page.keyboard.press('Enter');
+  expect((await inspect(page)).count).toBe(1);
+  await expect(page.locator('#actions')).toBeHidden();
   await expect(page.locator('#text-input')).toBeFocused();
   await expect(page.locator('#input-help')).toContainText('文章');
   await page.screenshot({ path: 'evidence/terminal.png' });
   await page.locator('#text-input').fill('今日は、文字が空に浮かんでいる。');
   await page.keyboard.press('Enter');
-  expect((await inspect(page)).batches[1].text).toBe('今日は、文字が空に浮かんでいる。');
+  expect((await inspect(page)).batches[0].text).toBe('今日は、文字が空に浮かんでいる。');
+  await expect(page.locator('#actions')).toBeVisible();
+  await page.locator('#show-help').click();
+  await expect(page.locator('#lesson')).toContainText('1 / 5');
+  await page.locator('#lesson-try').click();
+  await expect(page.locator('#text-input')).toHaveValue('流れる 球体');
+  await page.locator('#text-input').press('Enter');
+  expect((await inspect(page)).spec).toMatchObject({shape:'condense', mode:'flow'});
 });
 
 test('言葉の形・表面・色・個数・鎖と入力位置からの取り込み', async ({ page }) => {
@@ -268,5 +270,127 @@ test('実験用の学習モデルが形だけを補い、入力文字と色を�
   await page.keyboard.press('Enter'); await page.keyboard.press('Enter');
   await page.locator('#guide summary').click();
   await expect(page.locator('#learned-shapes')).not.toBeChecked();
+  expect(external).toEqual([]);
+});
+
+
+test('花火を文章から拾い、形ボタンからも切り替えられる', async ({ page }) => {
+  await feed(page, '今夜は赤い花火を眺めている。', '64');
+  await advance(page, 5500);
+  expect((await inspect(page)).spec.shape).toBe('fireworks');
+  expect((await inspect(page)).batches[0].ink).toBe('red');
+  expect((await inspect(page)).scene.finite).toBe(true);
+  await page.screenshot({path:'evidence/fireworks.png'});
+  await page.locator('#choose-form').click();
+  await page.locator('[data-shape="cube"]').click();
+  expect((await inspect(page)).spec.shape).toBe('cube');
+});
+
+test('執筆: 入力が届き、Enterで一度取り込み、再読込で日記を復元する', async ({page, context}) => {
+  await page.goto('/?write');
+  await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  const input = page.locator('#manuscript');
+  await input.fill('今日は黄色い球体について書く。');
+  await expect(page.locator('#draft-preview')).toHaveText('今日は黄色い球体について書く。');
+  expect((await inspect(page)).count).toBe(1);
+  await input.dispatchEvent('compositionstart');
+  await input.dispatchEvent('keydown',{key:'Enter',isComposing:true,keyCode:229});
+  expect((await inspect(page)).count).toBe(1);
+  await input.dispatchEvent('compositionend');
+  await input.press('Enter');
+  expect((await inspect(page)).count).toBe(1);
+  await page.waitForTimeout(100);
+  await input.press('Enter');
+  const state = await inspect(page);
+  expect(state.batches.length).toBe(1);
+  expect(state.spec.shape).toBe('condense');
+  expect(state.batches[0].ink).toBe('yellow');
+  await expect(input).toBeFocused();
+  await advance(page, 5000);
+  await page.screenshot({path:'evidence/writing-day.png'});
+  const view = await context.newPage();
+  await view.goto('/?companion');
+  await view.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  expect((await inspect(view)).count).toBe(state.count);
+  await input.fill('流れる 赤 立方体');
+  await expect(view.locator('#draft-preview')).toHaveText('流れる 赤 立方体');
+  await input.press('Enter');
+  await expect.poll(async () => (await inspect(view)).spec.shape).toBe('cube');
+  await view.close();
+  const latest = await inspect(page);
+  await page.reload();
+  await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  expect((await inspect(page)).count).toBe(latest.count);
+  expect((await inspect(page)).spec).toEqual(latest.spec);
+  await page.locator('#writing-history').click();
+  await expect(page.locator('.day')).toHaveCount(1);
+});
+
+test('執筆: 日付が変わると前日を保存し新しい @ になる', async ({page}) => {
+  await page.clock.setFixedTime(new Date(2026,8,30,23,59,50));
+  await page.goto('/?write');
+  await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#manuscript').fill('水色の円環');
+  await page.locator('#manuscript').press('Enter');
+  const yesterday = (await inspect(page)).count;
+  await page.clock.setFixedTime(new Date(2026,9,1,0,0,1));
+  await page.locator('#manuscript').fill('今日は新しい日');
+  expect((await inspect(page)).count).toBe(1);
+  await page.locator('#manuscript').press('Enter');
+  const entries = await page.evaluate(() => JSON.parse(localStorage.getItem('glyph-matter:days:v1')!));
+  expect(entries.map((d:any)=>d.date)).toEqual(['2026-10-01','2026-09-30']);
+  expect(entries[1].batches.reduce((n:number,b:any)=>n+b.added,1)).toBe(yesterday);
+});
+
+test('執筆: 保存失敗時に日付が変わっても前日の文字を消さない', async ({page}) => {
+  await page.clock.setFixedTime(new Date(2026,8,30,23,59,50));
+  await page.goto('/?write'); await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#manuscript').fill('昨日の大切な文字'); await page.locator('#manuscript').press('Enter');
+  const count = (await inspect(page)).count;
+  await page.evaluate(() => { Storage.prototype.setItem = () => { throw new DOMException('full','QuotaExceededError'); }; });
+  await page.clock.setFixedTime(new Date(2026,9,1,0,0,1));
+  await page.locator('#manuscript').fill('今日の文章');
+  expect((await inspect(page)).count).toBe(count);
+  await expect(page.locator('#writing-status')).toContainText('保存できません');
+  await page.locator('#manuscript').press('Enter');
+  expect((await inspect(page)).count).toBe(count);
+  await expect(page.locator('#manuscript')).toHaveValue('今日の文章\n');
+});
+
+test('執筆: 日記を見ている間は操作ボタンが入力を受けず、戻れば続けられる', async ({page}) => {
+  await page.goto('/?write'); await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#manuscript').fill('球体を見つめる'); await page.locator('#manuscript').press('Enter');
+  await page.locator('#writing-history').click(); await page.locator('.day').click();
+  expect(await page.locator('#actions').evaluate(el => (el as HTMLElement).inert)).toBe(true);
+  await page.locator('#diary-close').click();
+  expect(await page.locator('#actions').evaluate(el => (el as HTMLElement).inert)).toBe(false);
+  await page.locator('#manuscript').fill('次の行は立方体'); await page.locator('#manuscript').press('Enter');
+  expect((await inspect(page)).batches).toHaveLength(2);
+});
+
+test('執筆: 別窓が開き、編集側の行を同時に受け取る（通常窓の代替）', async ({page}) => {
+  await page.addInitScript(() => Object.defineProperty(window,'documentPictureInPicture',{value:undefined, configurable:true}));
+  await page.goto('/?write'); await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  const popupPromise=page.waitForEvent('popup'); await page.locator('#floating').click(); const popup=await popupPromise;
+  await popup.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#manuscript').fill('青い立方体'); await page.locator('#manuscript').press('Enter');
+  await expect.poll(async () => (await inspect(popup)).spec.shape).toBe('cube');
+  await expect(popup.locator('#actions')).toBeHidden(); await popup.close();
+});
+
+test('筆画: 同梱の花火11画をほどいて戻し、未収録は現在の形を保つ', async ({page}) => {
+  const external:string[]=[];
+  page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4173')&&!r.url().startsWith('data:'))external.push(r.url());});
+  await page.goto('/strokes.html');
+  await expect(page.locator('#stroke-status')).toContainText('11画');
+  await page.locator('[data-motion="scatter"]').click();
+  await expect(page.locator('#strokes-scene')).toHaveAttribute('data-mode','scatter');
+  await page.locator('[data-motion="flow"]').click();
+  await expect(page.locator('#strokes-scene')).toHaveAttribute('data-mode','flow');
+  await page.locator('[data-motion="gather"]').click();
+  await expect(page.locator('#strokes-scene')).toHaveAttribute('data-mode','gather');
+  await page.locator('#stroke-input').fill('空'); await page.locator('#stroke-input').press('Enter');
+  await expect(page.locator('#stroke-status')).toContainText('未収録');
+  await expect(page.locator('#strokes-scene')).toHaveAttribute('data-mode','gather');
   expect(external).toEqual([]);
 });

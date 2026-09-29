@@ -1,3 +1,17 @@
+# P0 v0.5.0 の確認記録
+
+2026-09-30 / macOS / Node.js v26.4.0 / Chrome 152.0.7977.65。ロジック21件・ブラウザ19件・型チェック・配布用ビルド成功。実OSのIME、Windows、Safari、実スマートフォン、Document PiPの最前面表示は未確認。
+
+- [最初の画面](initial.png) → [初回Enterの入力](terminal.png)。送信後にボタンが現れる。HELPから5段階の例。
+- [文章からの花火](fireworks.png)。球体の流路と複数候補の抽選も確認。
+- [執筆と横の空間](writing-day.png)。通常別窓へ入力プレビューと形を連携。
+- 日付切替、同日復元、保存容量エラーでも前日を保持、日記閲覧中の編集防止をブラウザ試験で確認。
+- [一画ずつ書く](strokes-writing.png)・[一画ずつ流れる](strokes-flow.png)。別の実操作で花火11画、永水字球26画、未収録通知、HELPを確認。
+
+筆画由来の図形画像にはKanjiVG / Ulrich ApelのCC BY-SA 3.0が適用される。[出所と条件](../public/strokes/NOTICE.md)。
+
+以下の形画像と説明は旧版の記録として保持。導入のpress enter自動投入はv0.5.0で廃止した。
+
 # P0 v0.4.0 の確認記録
 
 2026-09-30 / macOS / Node.js v26.4.0 / Chrome 152.0.7977.65。

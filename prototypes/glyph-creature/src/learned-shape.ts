@@ -27,11 +27,13 @@ export function predictShape(text: string): ShapePrediction {
 }
 
 /** In the optional model mode, the model owns the shape slot; modifiers remain explicit. */
-export function interpretWithModel(text: string, current: SceneSpec, enabled: boolean) {
-  const original = interpret(text, current);
+export function interpretWithModel(text: string, current: SceneSpec, enabled: boolean, choose?: () => number) {
+  const original = interpret(text, current, undefined, choose);
   if (!enabled) return { ...original, learned: false };
+  // New authored phenomena are outside the frozen model's label set.
+  if (original.spec.shape === 'fireworks' && /花火|はなび|fireworks?/iu.test(text)) return { ...original, learned: false };
   const prediction = predictShape(text);
-  if (prediction.label === 'none') return { ...interpret(text, current, null), learned: false, prediction };
-  const composed = interpret(text, current, prediction.label);
+  if (prediction.label === 'none') return { ...interpret(text, current, null, choose), learned: false, prediction };
+  const composed = interpret(text, current, prediction.label, choose);
   return { ...composed, learned: true, prediction };
 }

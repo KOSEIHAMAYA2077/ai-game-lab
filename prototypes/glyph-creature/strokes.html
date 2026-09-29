@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>一画ずつ — 文字のかたち</title>
+  </head>
+  <body>
+    <canvas id="strokes-scene" aria-label="文字の一画ずつが、ほどけて空間を流れる" role="img"></canvas>
+    <header><a href="./">← 文字のかたち</a><span>一画ずつ</span></header>
+    <main id="stroke-terminal">
+      <form id="stroke-form">
+        <label for="stroke-input">&gt;</label>
+        <input id="stroke-input" value="花火" aria-label="筆画に分ける文字" maxlength="12" autocomplete="off" spellcheck="false" />
+        <button type="submit" aria-label="文字を書く">[enter]</button>
+      </form>
+      <nav aria-label="一画ずつの動き">
+        <button type="button" data-motion="write" aria-pressed="true">＊ 書く</button>
+        <button type="button" data-motion="scatter" aria-pressed="false">ほどく</button>
+        <button type="button" data-motion="flow" aria-pressed="false">流す</button>
+        <button type="button" data-motion="gather" aria-pressed="false">戻す</button>
+        <button type="button" id="stroke-pause" aria-pressed="false">とめる</button>
+        <button type="button" id="stroke-help" aria-expanded="false" aria-controls="stroke-guide">? help</button>
+      </nav>
+      <p id="stroke-status" role="status" aria-live="polite">筆画を読み込んでいます。</p>
+      <section id="stroke-guide" hidden>
+        <p>文字を書いたら「ほどく」。一画ずつが離れ、「流す」で奥行きのある流れへ。「戻す」で文字に戻ります。</p>
+        <p>この試作の収録文字：<span id="stroke-examples"></span>。組み合わせは6文字まで。文字を選んで enter。</p>
+        <p>同じ「ほどく」でも流れは毎回変わります。入力した文章を外部へ送ることはありません。</p>
+        <small>筆画：<a href="https://kanjivg.tagaini.net/" target="_blank" rel="noreferrer">KanjiVG / Ulrich Apel</a> · <a href="./strokes/NOTICE.md" target="_blank">CC BY-SA 3.0・出所</a></small>
+      </section>
+    </main>
+    <svg id="stroke-measure" width="109" height="109" viewBox="0 0 109 109" aria-hidden="true"></svg>
+    <script type="module" src="/src/strokes.ts"></script>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 
 更新日: 2026-09-30 / 設計の最初の版: `design-v0.1.0`
 
-**現在地: 制作方法の設計は完了。文字の集合P0に、自作の形分類モデルと再学習の入口を追加。v0.4.0の試遊待ち。**
+**現在地: 制作方法の設計は完了。文字の集合P0に、導入・HELP・花火・筆画実験・執筆と日記を追加。v0.5.0の試遊待ち。**
 
 公開先: [ai-game-lab](https://github.com/KOSEIHAMAYA2077/ai-game-lab) / 試作の作業一覧: [Issue #1](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues/1)
 
@@ -11,9 +11,9 @@
 | 市場・本・カンファレンス・並列AIの調査 | 完了 | [RESEARCH.md](RESEARCH.md) |
 | 質問から試作へ進む制作手順 | 完了 | [WORKFLOW.md](WORKFLOW.md) |
 | ハーネスの設計 | 完了。実行機能は試作と合わせて実装・確認 | [HARNESS.md](HARNESS.md) |
-| 文字の集合P0の核と最小範囲 | 版0.5へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
-| コンセプトアートの実装 | 自作学習モデルの組み込みとビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
-| 動作確認・本人の試遊 | 自動テスト30件・画面確認済み、実IMEと修正版の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 文字の集合P0の核と最小範囲 | 版0.6へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
+| コンセプトアートの実装 | 執筆・日記・筆画の試作とビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 動作確認・本人の試遊 | 自動テスト40件・画面確認済み、実IMEと修正版の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
 
 ## 完了したこと
 
@@ -39,6 +39,11 @@
 
 - [x] 自作分類器を3,684例で学習し、独立問題群で評価。重み・失敗・再学習手順を保存。
 - [x] 学習モデルを初期オフの実験機能として作品へ追加。
+
+- [x] 最初のEnterで入力欄、初回送信後にボタン、HELPから5段階の案内。
+- [x] 自由文の複数候補選択、花火、球体の流路。
+- [x] 執筆の別窓連携、日別保存・復元・書き出し。OS全体の入力取得は未実装。
+- [x] KanjiVGの7文字による一画分解試作、MARYの一次資料確認。
 
 ## 次の一手
 
