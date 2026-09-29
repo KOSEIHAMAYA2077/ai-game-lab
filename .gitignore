@@ -1,0 +1,17 @@
+# User-provided references stay local.
+.local/
+concepts/*/references/*
+!concepts/*/references/README.md
+
+# Credentials, local configuration, generated files
+.env
+.env.*
+!.env.example
+*.local.*
+.DS_Store
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.log
