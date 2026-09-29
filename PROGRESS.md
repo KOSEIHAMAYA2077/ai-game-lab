@@ -2,7 +2,7 @@
 
 更新日: 2026-09-30 / 設計の最初の版: `design-v0.1.0`
 
-**現在地: 制作方法の設計は完了。文字の集合P0の初回実装・動作確認が完了。本人の試遊待ち。**
+**現在地: 制作方法の設計は完了。文字の集合P0を、黒い空間・隠れるターミナル・3D文字平面へ修正。v0.2.0の試遊待ち。**
 
 公開先: [ai-game-lab](https://github.com/KOSEIHAMAYA2077/ai-game-lab) / 試作の作業一覧: [Issue #1](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues/1)
 
@@ -11,9 +11,9 @@
 | 市場・本・カンファレンス・並列AIの調査 | 完了 | [RESEARCH.md](RESEARCH.md) |
 | 質問から試作へ進む制作手順 | 完了 | [WORKFLOW.md](WORKFLOW.md) |
 | ハーネスの設計 | 完了。実行機能は試作と合わせて実装・確認 | [HARNESS.md](HARNESS.md) |
-| 文字の集合P0の核と最小範囲 | 版0.2へ改訂、実装許可取得済み | [BRIEF](concepts/glyph-creature/BRIEF.md) |
-| コンセプトアートの実装 | 初回実装・ビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
-| 動作確認・本人の試遊 | 自動テスト13件・画面確認済み、実IMEと本人の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 文字の集合P0の核と最小範囲 | 版0.3へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
+| コンセプトアートの実装 | UI・3D文字の修正とビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 動作確認・本人の試遊 | 自動テスト15件・画面確認済み、実IMEと修正版の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
 
 ## 完了したこと
 
@@ -29,6 +29,10 @@
 - [x] 「回答後に試作開始」という明示の指示に従い、実装許可を版0.2へ記録した。
 
 - [x] 初回の文字アートを実装し、4形状・入力・色・成長・密度を確認した。
+
+- [x] 常設のWeb風UIを除去し、Enterで開く白枠ターミナルに変更した。
+- [x] 文字を厚さゼロの3D平面にし、表・真横・裏の描画を確認した。
+- [ ] クイズ・実績／図鑑の方向は相談中。今回の修正には含めない。
 
 ## 次の一手
 
