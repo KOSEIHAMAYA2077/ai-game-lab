@@ -3,12 +3,14 @@ import type { Vec3 } from './model';
 export const MOTIONS = ['calm', 'breathe', 'wave'] as const;
 export type Motion = typeof MOTIONS[number];
 export const MOTION_NAMES: Record<Motion, string> = { calm: '通常', breathe: '呼吸', wave: '波打つ' };
+const BREATH_AMPLITUDE = .12;
+export const MOTION_EXTENT: Record<Motion, number> = { calm: 1, breathe: Math.exp(BREATH_AMPLITUDE), wave: 1 };
 
 /** Prepare once per frame. Pass an existing object to avoid frame allocations. */
 export type MotionTransform = { kind: Motion; scale: number; phase: number };
 export function prepareMotion(kind: Motion, time: number, out: MotionTransform = { kind: 'calm', scale: 1, phase: 0 }): MotionTransform {
   out.kind = kind;
-  out.scale = kind === 'breathe' ? Math.exp(.12 * Math.sin(.75 * time)) : 1;
+  out.scale = kind === 'breathe' ? Math.exp(BREATH_AMPLITUDE * Math.sin(.75 * time)) : 1;
   out.phase = -.8 * time;
   return out;
 }

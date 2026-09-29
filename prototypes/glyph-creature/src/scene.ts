@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import { Matter, MAX_GLYPHS, MAX_KINDS, growth, cameraDistance, smooth, type Form, type Vec3 } from './model';
 import { COLORS, type SceneSpec } from './language';
 import { composedPosition, intakePosition, randomUnit } from './shapes';
-import { createSurfaceFrame, surfaceFrame } from './surface-frame';
+import { createSurfaceFrame, normalizeSurfaceFrame, surfaceFrame } from './surface-frame';
+import { applyMotionFrame, prepareMotion, MOTION_EXTENT } from './motions';
 
 const CELL = 64;
 const COLUMNS = 32;
@@ -55,6 +56,9 @@ export class GlyphScene {
   frameScratch = createSurfaceFrame();
   frameMatrix = new THREE.Matrix4();
   frameRotation = new THREE.Quaternion();
+  motionScratch = prepareMotion('calm', 0);
+  localPoint: Vec3 = [0, 0, 0];
+  movedPoint: Vec3 = [0, 0, 0];
   material: THREE.ShaderMaterial;
   planes: THREE.Mesh;
   testYaw: number | null = null;
@@ -169,6 +173,7 @@ export class GlyphScene {
     const inverse = this.planes.matrixWorld.clone().invert();
     const rect = this.host.getBoundingClientRect();
     const projectionScale = this.height / (2 * Math.tan(THREE.MathUtils.degToRad(43 / 2)));
+    const motion = prepareMotion(this.matter.spec.motion ?? 'calm', this.matter.time, this.motionScratch);
     for (let i = this.count; i < this.matter.glyphs.length; i++) {
       const glyph = this.matter.glyphs[i];
       const tile = this.atlas.add(glyph.text);
@@ -188,7 +193,7 @@ export class GlyphScene {
         (1 - (screen.y - rect.top) / this.height * 2) * this.distance / projectionScale * this.height / 2, 0,
       ).applyMatrix4(inverse).toArray() as Vec3 : [0, -1.9 / this.scale, 0];
       this.sources.set(source, i * 3);
-      const target = composedPosition(this.matter.spec, i, this.matter.time, this.matter.seed);
+      const target = composedPosition(this.matter.spec, i, this.matter.time, this.matter.seed, motion);
       this.origins.set(target, i * 3); this.morphTargets.set(target, i * 3);
     }
     this.count = this.matter.glyphs.length;
@@ -220,6 +225,7 @@ export class GlyphScene {
 
   render(dt: number) {
     const t = this.matter.time;
+    const motion = prepareMotion(this.matter.spec.motion ?? 'calm', t, this.motionScratch);
     const targetScale = growth(this.count);
     const lerp = dt === 0 ? 0 : 1 - Math.exp(-dt * 3.5);
     this.scale += (targetScale - this.scale) * lerp;
@@ -228,7 +234,9 @@ export class GlyphScene {
     this.formation += (targetFormation - this.formation) * lerp;
     this.seedFocus += (Math.exp(-(this.count - 1) / 18) - this.seedFocus) * lerp;
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
-    const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit;
+    // Fit the largest breath once; following its current scale would cancel the visible motion.
+    const motionFit = 1 + (MOTION_EXTENT[motion.kind] - 1) * this.formation;
+    const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
     const aligned = surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
@@ -237,7 +245,7 @@ export class GlyphScene {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
         ? this.testYaw === null ? [0.018 * Math.sin(t * 1.3), 0.024 * Math.sin(t * 0.9), 0.012 * Math.sin(t)] : [0, 0, 0]
-        : composedPosition(this.matter.spec, i, t, this.matter.seed).map(v => v * this.formation);
+        : composedPosition(this.matter.spec, i, t, this.matter.seed, motion, this.localPoint).map(v => v * this.formation);
       const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
       const target = p.map((v, axis) => this.origins[i * 3 + axis] * (1 - blend) + v * blend) as Vec3;
       this.morphTargets.set(target, i * 3);
@@ -247,7 +255,12 @@ export class GlyphScene {
         this.positions[i * 3 + axis] = formed[axis];
       }
       if (alignment > 0) {
-        const { x, y, z } = surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
+        const frame = surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
+        if (motion.kind !== 'calm') {
+          applyMotionFrame(motion, this.localPoint, frame.x, frame.y, this.movedPoint, frame.x, frame.y);
+          normalizeSurfaceFrame(frame);
+        }
+        const { x, y, z } = frame;
         this.frameMatrix.set(x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0, 0, 0, 0, 1);
         this.frameRotation.setFromRotationMatrix(this.frameMatrix);
         this.frames[i * 4] = this.frameRotation.x; this.frames[i * 4 + 1] = this.frameRotation.y;

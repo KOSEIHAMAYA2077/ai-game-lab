@@ -1,5 +1,7 @@
 import type { SceneSpec } from './language';
 import { shapePosition, TAU, type Vec3 } from './model';
+import { applyMotionPosition, prepareMotion, type MotionTransform } from './motions';
+import { dangoPosition } from './dango';
 
 const fract = (n: number) => n - Math.floor(n);
 const mix = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -24,6 +26,7 @@ const triangle: [number, number][] = [[0, 1.3], [-1.12, -.65], [1.12, -.65]];
 const cross: [number, number][] = [[-.32,-1.2],[.32,-1.2],[.32,-.32],[1.2,-.32],[1.2,.32],[.32,.32],[.32,1.2],[-.32,1.2],[-.32,.32],[-1.2,.32],[-1.2,-.32],[-.32,-.32]];
 
 function single(spec: SceneSpec, id: number, time: number, seed: number): Vec3 {
+  if (spec.shape === 'dango') return dangoPosition(id, time, seed, spec.mode);
   const a = fract((id + seed * .13) * .618033988749895);
   const b = fract((id + seed * .27) * .754877666246693);
   const surface = spec.mode === 'surface';
@@ -75,10 +78,14 @@ function single(spec: SceneSpec, id: number, time: number, seed: number): Vec3 {
   return shapePosition(spec.shape, id, time, seed);
 }
 
-export function composedPosition(spec: SceneSpec, id: number, time: number, seed = 1): Vec3 {
+/** localPoint optionally receives the undeformed point for orienting glyph planes. */
+export function composedPosition(spec: SceneSpec, id: number, time: number, seed = 1,
+  motion: MotionTransform = prepareMotion(spec.motion ?? 'calm', time), localPoint?: Vec3): Vec3 {
   const count = spec.deformation === 'double' ? 2 : spec.count;
   const group = id % count;
   const p = single(spec, Math.floor(id / count), time + group * .23, seed);
+  if (localPoint) { localPoint[0] = p[0]; localPoint[1] = p[1]; localPoint[2] = p[2]; }
+  applyMotionPosition(motion, p, p);
   if (count === 1) return p;
   if (spec.arrangement === 'chain') {
     const spacing = 1.45, fit = 3.7 / (2.5 + (count - 1) * spacing);

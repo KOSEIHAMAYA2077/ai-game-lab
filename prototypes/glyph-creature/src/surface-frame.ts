@@ -1,10 +1,16 @@
 import type { SceneSpec } from './language';
 import { TAU, type Vec3 } from './model';
+import { dangoFrame } from './dango';
 
 /** Local glyph axes: x follows the flow, y spans the surface, z = x × y. */
 export type SurfaceFrame = { x: Vec3; y: Vec3; z: Vec3 };
 export const createSurfaceFrame = (): SurfaceFrame => ({ x: [1, 0, 0], y: [0, 1, 0], z: [0, 0, 1] });
 const fract = (value: number) => value - Math.floor(value);
+
+/** Rebuild the normal after transforming both tangents through a deformation. */
+export function normalizeSurfaceFrame(frame: SurfaceFrame): SurfaceFrame {
+  return basis(...frame.x, ...frame.y, frame);
+}
 
 /** Gram–Schmidt without temporary vectors. The caller may reuse one output. */
 function basis(xx: number, xy: number, xz: number, yx: number, yy: number, yz: number, out: SurfaceFrame): SurfaceFrame {
@@ -78,9 +84,10 @@ function condenseFlow(u: number, out: SurfaceFrame): SurfaceFrame {
  */
 export function surfaceFrame(spec: SceneSpec, id: number, time: number, seed = 1, out?: SurfaceFrame): SurfaceFrame | null {
   if (spec.count !== 1 || spec.arrangement !== 'single' || spec.deformation === 'double'
-      || (spec.shape !== 'condense' && spec.shape !== 'mobius')) return null;
+      || (spec.shape !== 'condense' && spec.shape !== 'mobius' && spec.shape !== 'dango')) return null;
   const a = fract((id + seed * .13) * .618033988749895);
   const target = out ?? createSurfaceFrame();
+  if (spec.shape === 'dango') return dangoFrame(id, time, seed, spec.mode, target);
   if (spec.shape === 'condense' && spec.mode === 'flow') return condenseFlow(a * TAU + time * .25, target);
   const b = fract((id + seed * .27) * .754877666246693);
   if (spec.shape === 'mobius') return mobiusFrame(a * TAU * 2 + time * .33,

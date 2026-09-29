@@ -1,5 +1,6 @@
 import { Matter, MAX_GLYPHS, MAX_INPUT_LENGTH, MAX_KINDS } from './model';
 import { COLORS, SHAPES, type SceneSpec, type Ink } from './language';
+import { MOTIONS } from './motions';
 
 export const DIARY_KEY = 'glyph-matter:days:v1';
 export type Day = { version: 1; date: string; seed: number; time: number; spec: SceneSpec; batches: Matter['batches']; thumbnail?: string };
@@ -13,6 +14,7 @@ export function validDay(value: unknown): value is Day {
   if (!d || d.version !== 1 || !/^\d{4}-\d{2}-\d{2}$/u.test(d.date) || !finite(d.time) || d.time < 0 || d.time > 1e9 || !finite(d.seed)) return false;
   const s = d.spec;
   if (!s || !SHAPES.includes(s.shape) || !['surface', 'flow'].includes(s.mode) || !Number.isInteger(s.count) || s.count < 1 || s.count > 16 || !['single', 'swarm', 'chain'].includes(s.arrangement) || !['gentle', 'omega', 'double'].includes(s.deformation)) return false;
+  if (s.motion !== undefined && !MOTIONS.includes(s.motion)) return false;
   if (d.thumbnail !== undefined && (typeof d.thumbnail !== 'string' || !d.thumbnail.startsWith('data:image/webp;base64,') || d.thumbnail.length > 100_000)) return false;
   if (!Array.isArray(d.batches) || d.batches.length > MAX_GLYPHS) return false;
   let total = 1;
@@ -35,7 +37,7 @@ export function restoreDay(matter: Matter, day: Day) {
     }
   }
   if (restored.kinds.size > MAX_KINDS) throw new Error('文字の種類が多すぎます');
-  restored.spec = { ...day.spec }; restored.time = day.time;
+  restored.spec = { ...day.spec, motion: day.spec.motion ?? 'calm' }; restored.time = day.time;
   Object.assign(matter, restored);
 }
 export function readDays(storage: Pick<Storage, 'getItem'> = localStorage): Day[] {

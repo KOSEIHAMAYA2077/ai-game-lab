@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_SPEC, SHAPES, interpret, type SceneSpec } from './language';
 import { animatedMobius, composedPosition, intakePosition } from './shapes';
 import { Matter } from './model';
+import { interpretWithModel } from './learned-shape';
 
 describe('言葉の組み合わせ', () => {
   it('ユーザーの例を形・流れ・色・数・配置へ分ける', () => {
@@ -32,6 +33,38 @@ describe('言葉の組み合わせ', () => {
     expect(matter.glyphs.slice(0, before.length).map(g => g.ink)).toEqual(before);
     expect(matter.glyphs.slice(before.length).every(g => g.ink === 'yellow')).toBe(true);
     expect(matter.batches.map(b => b.text)).toEqual(['最初の文章。', '表面 黄色 立方体']);
+  });
+
+  it('動きを形・色・配置と組み合わせ、未指定は維持して通常で解除する', () => {
+    const breathing = interpret('表面 呼吸する 黄色 立方体', DEFAULT_SPEC);
+    expect(breathing).toMatchObject({ spec: { motion: 'breathe', shape: 'cube', mode: 'surface' }, ink: 'yellow', recognized: true });
+    expect(breathing.description).toContain('呼吸');
+    expect(interpret('呼吸', DEFAULT_SPEC)).toMatchObject({ recognized: true, spec: { motion: 'breathe', shape: 'condense' } });
+    expect(interpret('赤', breathing.spec).spec).toEqual(breathing.spec);
+    expect(interpret('普通の立方体', breathing.spec).spec.motion).toBe('calm');
+    expect(interpret('通常', breathing.spec)).toMatchObject({ recognized: true, spec: { motion: 'calm', shape: 'cube' } });
+    expect(interpret('通常', breathing.spec).description).not.toContain('呼吸');
+    expect(interpret('揺れなし', breathing.spec).spec.motion).toBe('calm');
+    const chain = interpret('円環 鎖 8個', DEFAULT_SPEC).spec;
+    expect(interpret('波打つ', chain).spec).toMatchObject({ shape: 'ring', arrangement: 'chain', count: 8, motion: 'wave' });
+    expect(interpret('呼吸する 波打つ 立方体', DEFAULT_SPEC, undefined, () => .9).spec.motion).toBe('wave');
+    const { motion: _motion, ...old } = DEFAULT_SPEC;
+    expect(interpret('今日はいい天気', old)).toMatchObject({ recognized: false, spec: { motion: 'calm' } });
+  });
+
+  it('団子は明示形で処理し、モデルの推論と区別しながら色・運動を保つ', () => {
+    for (const name of ['だんご', '団子', 'DANGO']) {
+      const result = interpretWithModel(`呼吸する 黄色 ${name} 2個`, DEFAULT_SPEC, true);
+      expect(result).toMatchObject({ learned: false, ink: 'yellow', spec: { shape: 'dango', count: 2, arrangement: 'swarm', motion: 'breathe' } });
+    }
+    expect(interpretWithModel('表面 波打つ 花火', DEFAULT_SPEC, true)).toMatchObject({ learned: false, spec: { shape: 'fireworks', motion: 'wave' } });
+    expect(interpretWithModel('microwave fandango', DEFAULT_SPEC, false).recognized).toBe(false);
+  });
+
+  it('英語の形・色・運動は別単語に反応せず、普通のコマンドは解釈する', () => {
+    expect(interpret('spring colored overflow downstream microwave fandango', DEFAULT_SPEC).recognized).toBe(false);
+    expect(interpret('wave red surface cube', DEFAULT_SPEC)).toMatchObject({ ink: 'red', spec: { shape: 'cube', mode: 'surface', motion: 'wave' } });
+    expect(interpret('breathe yellow dango', DEFAULT_SPEC)).toMatchObject({ ink: 'yellow', spec: { shape: 'dango', motion: 'breathe' } });
   });
 
 });

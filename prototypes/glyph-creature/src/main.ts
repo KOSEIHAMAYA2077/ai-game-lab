@@ -7,7 +7,7 @@ import { setupCompanion } from './companion';
 import { randomUnit } from './shapes';
 
 const names: Record<Form, string> = { condense: '凝縮', vortex: '渦', orbit: '軌道', mobius: 'メビウス' };
-const examples = ['流れる 球体', '表面 立方体', '今夜は赤い花火を眺めている。', '球体と立方体のあいだに、青い文字が流れる。', '流れる メビウスの輪', '表面 メビウスの輪', '流れる 赤 四角形', '表面 黄色 立方体', '円 8個', '円環 鎖', 'オメガ メビウスの輪', '円環 大小', '表面 直方体', '流れる 十字', '表面 三角形'];
+const examples = ['流れる 球体', '表面 立方体', '今夜は赤い花火を眺めている。', '呼吸する 黄色い立方体', '流れる 波打つ メビウスの輪', '表面 メビウスの輪', '流れる 赤 四角形', 'だんご', '円 8個', '円環 鎖', 'オメガ メビウスの輪', '円環 大小', '表面 呼吸する だんご', '流れる 十字', '通常の動き'];
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main id="scene" tabindex="-1" aria-label="文字の空間。Enterで始める"></main>
@@ -22,7 +22,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <details id="guide"><summary>❔ HELP — ことば / 操作</summary>
       <p id="lesson"></p><div class="controls"><button id="lesson-try" type="button">このことばを試す</button><button id="lesson-next" type="button">次のヒント →</button></div>
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
-      <p class="help">例を選んで書き換えられます。対応する形・流れ・色・個数を組み合わせます。文章に含まれる形・色を拾います。複数の候補があれば、送るたびに一つ選びます。文章そのものも全部、材料として残ります。</p>
+      <p class="help">例を選んで書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」も組み合わせられます。「通常」で動きの変形を戻します。複数の候補があれば、送るたびに一つ選びます。文章そのものも全部、材料として残ります。</p>
       <label class="help"><input id="learned-shapes" type="checkbox" /> 学習した形を使う（実験）</label><p class="help">サイコロ、ドーナツなどの言い換えを、自作モデルで推定します。この実験をオンにすると、形の選択はモデルを優先します。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
@@ -50,7 +50,7 @@ const lessons = [
   ['1 / 5　ことばを道にする。「流れる 球体」で、球をめぐる一本の流れへ。', '流れる 球体'],
   ['2 / 5　面をつくる。「表面 立方体」で、文字が六つの面を流れる。', '表面 立方体'],
   ['3 / 5　今の文字に色をつける。前からいる文字の色は、そのまま。', '黄色い文字が立方体の表面を流れる'],
-  ['4 / 5　文章でもいい。複数の形があったら、今回はどれか一つ。', '球体と立方体を思い浮かべる。青い文字が流れる。'],
+  ['4 / 5　動きも重ねる。「呼吸する 立方体」「波打つ メビウス」。動きだけ変えてもいい。「通常」で戻せる。', '表面 呼吸する 黄色い立方体'],
   ['5 / 5　現象もことばに。「花火」「円 8個」「円環 鎖」。ドラッグで回し、スクロールで近づく。', '夜空に赤い花火がひらく'],
 ];
 let compositionEnded = -Infinity;
