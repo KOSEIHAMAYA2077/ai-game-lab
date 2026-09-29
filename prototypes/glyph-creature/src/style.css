@@ -48,3 +48,17 @@ nav button:first-child { padding-left: 0; }
   .controls { gap: 6px; }
   .input-line { font-size: 18px; }
 }
+#start-prompt { position: fixed; left: 50%; top: 26%; transform: translateX(-50%); padding: 12px; border: 0; background: transparent; animation: emerge 4s ease both; }
+#prompt-ink { display: block; width: 260px; height: 28px; image-rendering: pixelated; }
+@keyframes emerge { 0%, 12% { opacity: 0; } 100% { opacity: .9; } }
+#whisper { position: fixed; top: 18%; left: 5%; right: 5%; text-align: center; font-size: 12px; line-height: 2; color: #aaa; pointer-events: none; }
+#guide { margin-top: 12px; font-size: 12px; }
+#guide summary { cursor: pointer; width: fit-content; color: #aaa; }
+.examples { margin: 14px 0; display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.examples button { padding: 0; text-align: left; }
+.help { font-size: 11px; color: #999; line-height: 1.8; margin: 10px 0; }
+.keys { margin-bottom: 0; }
+#input-help { margin-bottom: 8px; color: #ccc; }
+#ink { max-width: 110px; }
+@media(max-width:500px) { #prompt-ink { width: 195px; height: 21px; } #whisper { font-size: 11px; } }
+@media(prefers-reduced-motion:reduce) { #start-prompt { animation-duration: .01s; } }
