@@ -2,7 +2,7 @@
 
 更新日: 2026-09-30 / 設計の最初の版: `design-v0.1.0`
 
-**現在地: v0.5.0を基準に、ユーザー依頼の約3時間の試行錯誤を実施中。少数文字の成長・原稿保存に続き、形と組み合わせる呼吸・波・団子を試作。**
+**現在地: v0.5.0を基準に、ユーザー依頼の約3時間の試行錯誤を実施中。少数文字の成長・原稿保存に続き、形と組み合わせる呼吸・波・団子と、筆画をほどいて戻す動きを改良。**
 
 [実験の比較](experiments/overnight-20260930/README.md) / [作業中PR #7](https://github.com/KOSEIHAMAYA2077/ai-game-lab/pull/7) / [継続状況](experiments/overnight-20260930/STATUS.md)。期限は2026-09-30 07:26 JST。現在は新しい配布版の確定前。
 
@@ -15,7 +15,7 @@
 | ハーネスの設計 | 完了。実行機能は試作と合わせて実装・確認 | [HARNESS.md](HARNESS.md) |
 | 文字の集合P0の核と最小範囲 | 版0.6へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
 | コンセプトアートの実装 | 執筆・日記・筆画の試作とビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
-| 動作確認・本人の試遊 | ロジック48件・ブラウザ36件と画面を確認。実IMEと本人の新しい版の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 動作確認・本人の試遊 | ロジック50件、筆画関連6件を今回確認。他のブラウザ操作は前回確認。実IMEと本人の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
 
 ## 完了したこと
 
