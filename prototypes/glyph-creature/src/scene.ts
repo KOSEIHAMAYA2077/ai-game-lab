@@ -60,6 +60,8 @@ export class GlyphScene {
   zoom = 1;
   distance = 3.8;
   scale = 1;
+  formation = 0;
+  seedFocus = 1;
   width = 1;
   height = 1;
   resizeObserver: ResizeObserver;
@@ -159,7 +161,9 @@ export class GlyphScene {
       this.uv[i * 2] = (tile % COLUMNS) / COLUMNS;
       this.uv[i * 2 + 1] = 1 - (Math.floor(tile / COLUMNS) + 1) / COLUMNS;
       this.born[i] = glyph.born;
-      this.phases[i] = i * 2.399963229728653;
+      // Keep the seed's familiar pose. Other letters rotate independently of
+      // the golden-angle positions, which otherwise form synchronized ribs.
+      this.phases[i] = i === 0 ? 0 : randomUnit(i * 2654435761 + this.matter.seed) * Math.PI * 2;
       const ink = COLORS[glyph.ink ?? 'red'];
       this.inks.set([...ink, glyph.ink ? 1 : 0], i * 4);
       this.birthSizes[i] = fontSize * CELL / 42 * this.distance / projectionScale;
@@ -195,7 +199,7 @@ export class GlyphScene {
   reset() {
     this.atlas.clear(); this.count = 0; this.switchedAt = -100;
     this.testYaw = null;
-    this.distance = 3.8; this.scale = 1; this.zoom = 1; this.turnX = 0.12; this.turnY = -0.25;
+    this.distance = 3.8; this.scale = 1; this.formation = 0; this.seedFocus = 1; this.zoom = 1; this.turnX = 0.12; this.turnY = -0.25;
     this.sync();
   }
 
@@ -204,15 +208,19 @@ export class GlyphScene {
     const targetScale = growth(this.count);
     const lerp = dt === 0 ? 0 : 1 - Math.exp(-dt * 3.5);
     this.scale += (targetScale - this.scale) * lerp;
+    // A handful of letters is a small body; it opens into the full form as it grows.
+    const targetFormation = 1 - Math.exp(-Math.sqrt((this.count - 1) / 30));
+    this.formation += (targetFormation - this.formation) * lerp;
+    this.seedFocus += (Math.exp(-(this.count - 1) / 18) - this.seedFocus) * lerp;
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
-    const targetDistance = (cameraDistance(this.count) + (this.count > 1 ? .7 : 0) + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit;
+    const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
         ? this.testYaw === null ? [0.018 * Math.sin(t * 1.3), 0.024 * Math.sin(t * 0.9), 0.012 * Math.sin(t)] : [0, 0, 0]
-        : composedPosition(this.matter.spec, i, t, this.matter.seed);
+        : composedPosition(this.matter.spec, i, t, this.matter.seed).map(v => v * this.formation);
       const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
       const target = p.map((v, axis) => this.origins[i * 3 + axis] * (1 - blend) + v * blend) as Vec3;
       this.morphTargets.set(target, i * 3);
@@ -228,9 +236,8 @@ export class GlyphScene {
     this.camera.position.z = this.distance;
     const size = Math.max(0.065, 0.145 / Math.pow(Math.max(1, this.count / 80), 0.10));
     const projectionScale = this.height / (2 * Math.tan(THREE.MathUtils.degToRad(43 / 2)));
-    this.material.uniforms.glyphSize.value = this.count === 1
-      ? 104 * this.distance / projectionScale / this.scale
-      : size;
+    const seedSize = 104 * this.distance / projectionScale / this.scale;
+    this.material.uniforms.glyphSize.value = size + (seedSize - size) * this.seedFocus;
     this.material.uniforms.time.value = t;
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
@@ -263,7 +270,8 @@ export class GlyphScene {
 
   inspect() {
     const points = Array.from(this.positions.slice(0, Math.min(this.count, 5) * 3));
-    return { camera: this.distance, renderedScale: this.scale, drawn: this.count, points,
+    return { camera: this.distance, renderedScale: this.scale, formation: this.formation,
+      glyphSize: this.material.uniforms.glyphSize.value, drawn: this.count, points,
       finite: this.positions.subarray(0, this.count * 3).every(Number.isFinite),
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
       renderer: 'instanced-planes', testYaw: this.testYaw };
