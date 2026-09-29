@@ -1,10 +1,12 @@
+import { DEFAULT_SPEC, type SceneSpec, type Shape, type Ink } from './language';
+
 export const MAX_GLYPHS = 32_000;
 export const MAX_KINDS = 1_024;
 export const MAX_INPUT_LENGTH = 16_384;
 export const FORMS = ['condense', 'vortex', 'orbit', 'mobius'] as const;
 export type Form = (typeof FORMS)[number];
 export type Vec3 = [number, number, number];
-export type Glyph = { text: string; born: number; id: number };
+export type Glyph = { text: string; born: number; id: number; ink?: Ink; intakeSeed: number; inputIndex: number };
 export const TAU = Math.PI * 2;
 const fract = (n: number) => n - Math.floor(n);
 export const smooth = (n: number) => { const v = Math.max(0, Math.min(1, n)); return v * v * (3 - 2 * v); };
@@ -16,7 +18,7 @@ export function splitGlyphs(text: string): string[] {
 }
 
 export function growth(count: number): number { return 1 + 0.22 * Math.log2(1 + (count - 1) / 64); }
-export function cameraDistance(count: number): number { return 6.3 + (growth(count) - 1) * 4.1; }
+export function cameraDistance(count: number): number { return 3.8 + (growth(count) - 1) * 4.1; }
 export function newness(born: number, time: number): number { return 1 - smooth((time - born - 0.6) / 7); }
 
 export function mobius(u: number, width: number): Vec3 {
@@ -65,32 +67,35 @@ export class Matter {
   kinds = new Set<string>();
   time = 0;
   seed = 1;
-  form: Form = 'condense';
-  batches: { text: string; repeat: number; added: number; at: number }[] = [];
+  spec: SceneSpec = { ...DEFAULT_SPEC };
+  get form(): Shape { return this.spec.shape; }
+  set form(value: Shape) { this.spec = { ...this.spec, shape: value }; }
+  batches: { text: string; repeat: number; added: number; at: number; ink?: Ink; seed: number }[] = [];
   constructor() { this.reset(); }
   reset(seed = 1) {
-    this.seed = seed; this.time = 0; this.form = 'condense';
-    this.glyphs = [{ text: '@', born: -20, id: 0 }]; this.kinds = new Set(['@']); this.batches = [];
+    this.seed = seed; this.time = 0; this.spec = { ...DEFAULT_SPEC };
+    this.glyphs = [{ text: '@', born: -20, id: 0, ink: 'white', intakeSeed: 0, inputIndex: 0 }]; this.kinds = new Set(['@']); this.batches = [];
   }
-  add(text: string, repeat = 1): { added: number; limited: boolean; empty: boolean; reason?: 'input' | 'capacity' | 'kinds' } {
+  add(text: string, repeat = 1, options: { ink?: Ink; seed?: number } = {}): { added: number; limited: boolean; empty: boolean; reason?: 'input' | 'capacity' | 'kinds' } {
     // Reject oversized input intact: slicing UTF-16 can split a glyph or surrogate pair.
     if (text.length > MAX_INPUT_LENGTH) return { added: 0, limited: true, empty: false, reason: 'input' };
     const chars = splitGlyphs(text);
     if (!chars.length) return { added: 0, limited: false, empty: true };
     const repetitions = Math.max(1, Math.min(256, Math.floor(repeat) || 1));
+    const intakeSeed = options.seed ?? crypto.getRandomValues(new Uint32Array(1))[0];
     let added = 0;
     let limited = false;
     let reason: 'capacity' | 'kinds' | undefined;
     outer: for (let r = 0; r < repetitions; r++) {
-      for (const char of chars) {
+      for (const [inputIndex, char] of chars.entries()) {
         if (this.glyphs.length >= MAX_GLYPHS) { limited = true; reason = 'capacity'; break outer; }
         if (!this.kinds.has(char) && this.kinds.size >= MAX_KINDS) { limited = true; reason = 'kinds'; break outer; }
         this.kinds.add(char);
-        this.glyphs.push({ text: char, born: this.time, id: this.glyphs.length });
+        this.glyphs.push({ text: char, born: this.time, id: this.glyphs.length, ink: options.ink, intakeSeed: intakeSeed + added * 17, inputIndex });
         added++;
       }
     }
-    if (added) this.batches.push({ text, repeat: repetitions, added, at: this.time });
+    if (added) this.batches.push({ text, repeat: repetitions, added, at: this.time, ink: options.ink, seed: intakeSeed });
     return { added, limited, empty: false, reason };
   }
   step(seconds: number) { this.time += Math.max(0, Math.min(seconds, 60)); }
@@ -101,6 +106,7 @@ export class Matter {
       redCount: this.glyphs.filter(g => newness(g.born, this.time) > 0.05).length,
       characters: [...this.kinds], batches: this.batches.map(b => ({ ...b })),
       seed: this.seed, limit: MAX_GLYPHS,
+      spec: { ...this.spec }, inks: this.glyphs.slice(0, 128).map(g => g.ink ?? 'auto'),
     };
   }
 }
