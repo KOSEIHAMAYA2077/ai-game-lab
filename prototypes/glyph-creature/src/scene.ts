@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { Matter, MAX_GLYPHS, MAX_KINDS, growth, cameraDistance, smooth, type Form, type Vec3 } from './model';
 import { COLORS, type SceneSpec } from './language';
 import { composedPosition, intakePosition, randomUnit } from './shapes';
+import { createSurfaceFrame, surfaceFrame } from './surface-frame';
 
 const CELL = 64;
 const COLUMNS = 32;
@@ -50,6 +51,10 @@ export class GlyphScene {
   inks = new Float32Array(MAX_GLYPHS * 4);
   sources = new Float32Array(MAX_GLYPHS * 3);
   birthSizes = new Float32Array(MAX_GLYPHS);
+  frames = new Float32Array(MAX_GLYPHS * 4);
+  frameScratch = createSurfaceFrame();
+  frameMatrix = new THREE.Matrix4();
+  frameRotation = new THREE.Quaternion();
   material: THREE.ShaderMaterial;
   planes: THREE.Mesh;
   testYaw: number | null = null;
@@ -84,18 +89,21 @@ export class GlyphScene {
     this.geometry.setAttribute('phase', new THREE.InstancedBufferAttribute(this.phases, 1));
     this.geometry.setAttribute('inkColor', new THREE.InstancedBufferAttribute(this.inks, 4));
     this.geometry.setAttribute('birthSize', new THREE.InstancedBufferAttribute(this.birthSizes, 1));
+    this.geometry.setAttribute('surfaceRotation', new THREE.InstancedBufferAttribute(this.frames, 4).setUsage(THREE.DynamicDrawUsage));
     this.material = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false, depthTest: false, side: THREE.DoubleSide, forceSinglePass: true,
       uniforms: {
         atlas: { value: this.atlas.texture }, time: { value: 0 }, glyphSize: { value: 0.09 },
         distance: { value: 6.3 }, scale: { value: 1 }, testYaw: { value: 0 }, testPose: { value: false },
+        alignment: { value: 0 },
       },
       vertexShader: `
         attribute vec2 atlasOffset;
         attribute vec3 center;
         attribute float bornAt, phase, birthSize;
         attribute vec4 inkColor;
-        uniform float time, glyphSize, distance, scale, testYaw;
+        attribute vec4 surfaceRotation;
+        uniform float time, glyphSize, distance, scale, testYaw, alignment;
         uniform bool testPose;
         varying vec2 atlasUV;
         varying float freshness;
@@ -103,13 +111,19 @@ export class GlyphScene {
         varying vec3 glyphColor;
         void main() {
           float pitch = testPose ? 0.0 : 0.25 * sin(time * 0.71 + phase);
-          float yaw = testPose ? testYaw : phase + time * (0.32 + 0.09 * sin(phase));
+          float turn = phase + time * (0.32 + 0.09 * sin(phase));
+          // On a dense surface, linger near the front/back, but still pass through edge-on.
+          float yaw = testPose ? testYaw : atan(mix(1.0, 0.12, alignment) * sin(turn), cos(turn));
           float roll = testPose ? 0.0 : 0.18 * sin(time * 0.47 + phase * 1.3);
           float pulse = testPose ? 1.0 : 1.0 + 0.16 * sin(time * 0.8 + phase);
           vec3 q = position * glyphSize * pulse;
           q = vec3(q.x, cos(pitch) * q.y - sin(pitch) * q.z, sin(pitch) * q.y + cos(pitch) * q.z);
           q = vec3(cos(yaw) * q.x + sin(yaw) * q.z, q.y, -sin(yaw) * q.x + cos(yaw) * q.z);
           q = vec3(cos(roll) * q.x - sin(roll) * q.y, sin(roll) * q.x + cos(roll) * q.y, q.z);
+          // Mix planar positions, not quaternion representatives. This stays continuous
+          // across 180° (q and -q give the same result). Mid-density letters may flatten.
+          vec3 onSurface = q + 2.0 * cross(surfaceRotation.xyz, cross(surfaceRotation.xyz, q) + surfaceRotation.w * q);
+          q = mix(q, onSurface, testPose ? 0.0 : alignment);
           float settled = smoothstep(0.0, 3.8, time - bornAt);
           vec4 mv = modelViewMatrix * vec4(center, 1.0) + mix(vec4(position.xy * birthSize, 0.0, 0.0), modelViewMatrix * vec4(q, 0.0), settled);
           gl_Position = projectionMatrix * mv;
@@ -167,6 +181,7 @@ export class GlyphScene {
       const ink = COLORS[glyph.ink ?? 'red'];
       this.inks.set([...ink, glyph.ink ? 1 : 0], i * 4);
       this.birthSizes[i] = fontSize * CELL / 42 * this.distance / projectionScale;
+      this.frames[i * 4 + 3] = 1;
       const screen = screenPoints?.[glyph.inputIndex % screenPoints.length];
       const source: Vec3 = screen ? new THREE.Vector3(
         ((screen.x - rect.left) / this.width * 2 - 1) * this.distance / projectionScale * this.width / 2,
@@ -216,6 +231,8 @@ export class GlyphScene {
     const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
+    const aligned = surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
+    const alignment = aligned ? .88 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
@@ -229,8 +246,16 @@ export class GlyphScene {
       for (let axis = 0; axis < 3; axis++) {
         this.positions[i * 3 + axis] = formed[axis];
       }
+      if (alignment > 0) {
+        const { x, y, z } = surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
+        this.frameMatrix.set(x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0, 0, 0, 0, 1);
+        this.frameRotation.setFromRotationMatrix(this.frameMatrix);
+        this.frames[i * 4] = this.frameRotation.x; this.frames[i * 4 + 1] = this.frameRotation.y;
+        this.frames[i * 4 + 2] = this.frameRotation.z; this.frames[i * 4 + 3] = this.frameRotation.w;
+      }
     }
     this.geometry.getAttribute('center').needsUpdate = true;
+    if (alignment > 0) this.geometry.getAttribute('surfaceRotation').needsUpdate = true;
     this.planes.scale.setScalar(this.scale);
     this.planes.rotation.set(this.testYaw === null ? this.turnX : 0, this.testYaw === null ? this.turnY + t * 0.025 : 0, 0);
     this.camera.position.z = this.distance;
@@ -241,6 +266,7 @@ export class GlyphScene {
     this.material.uniforms.time.value = t;
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
+    this.material.uniforms.alignment.value = alignment;
     this.material.uniforms.testPose.value = this.testYaw !== null;
     this.material.uniforms.testYaw.value = this.testYaw ?? 0;
     this.renderer.render(this.scene, this.camera);
