@@ -1,0 +1,40 @@
+[
+  {
+    "name": "cursor-first-line-boundary",
+    "count": 1,
+    "batches": [],
+    "editor": "\n\n表面 赤 立方体",
+    "expectation": "caret on empty first line should not add second line"
+  },
+  {
+    "name": "editor-reset-does-not-sync",
+    "viewerBefore": 7,
+    "writerAfter": 1,
+    "viewerAfter": 7
+  },
+  {
+    "name": "writing-terminal-feed-does-not-sync",
+    "writerAfter": 449,
+    "viewerAfter": 1,
+    "writerShape": "cube",
+    "viewerShape": "condense"
+  },
+  {
+    "name": "two-writing-tabs-last-writer-wins",
+    "firstTab": [
+      "一人目の文章"
+    ],
+    "secondTab": [
+      "二人目の文章"
+    ],
+    "stored": [
+      "二人目の文章"
+    ]
+  },
+  {
+    "name": "corrupt-history-blocks-new-save",
+    "status": "保存できませんでした。容量・ブラウザの設定を確認し、日記を書き出してください。",
+    "memoryCount": 6,
+    "storage": "not-json"
+  }
+]

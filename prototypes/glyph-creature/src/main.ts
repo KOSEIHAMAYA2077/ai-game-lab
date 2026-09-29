@@ -44,7 +44,7 @@ const repeatLast = el<HTMLButtonElement>('#repeat-last');
 const matter = new Matter();
 let scene: GlyphScene;
 let paused = false, composing = false, introDone = false, awakened = false;
-let companion: ReturnType<typeof setupCompanion> | undefined;
+let companion: Awaited<ReturnType<typeof setupCompanion>> | undefined;
 let lesson = 0;
 const lessons = [
   ['1 / 5　ことばを道にする。「流れる 球体」で、球をめぐる一本の流れへ。', '流れる 球体'],
@@ -101,12 +101,13 @@ function inputSources(text: string) {
 }
 
 function begin() {
-  if (companion?.viewer || (document.querySelector<HTMLElement>('#diary')?.hidden === false)) return;
+  if (companion?.viewer || (companion && !companion.canEdit()) || (document.querySelector<HTMLElement>('#diary')?.hidden === false)) return;
   introDone = true; el('#start-prompt').hidden = true;
   openTerminal(); updateUI();
 }
 
 function addText(text: string, times: number, forcedInk?: Ink, writing = false): boolean {
+  if (companion && (!companion.canEdit() || !companion.rollover())) return false;
   if (text.length > MAX_INPUT_LENGTH || !splitGlyphs(text).length) {
     status.textContent = text.length > MAX_INPUT_LENGTH ? '入力が長すぎます。短く分けて入力してください。' : '空白以外の文字を入力してください。'; if (!writing) input.focus(); return false;
   }
@@ -128,6 +129,7 @@ function addText(text: string, times: number, forcedInk?: Ink, writing = false):
     const meaning = interpreted ? `${parsed.learned ? '学習した形: ' : ''}${describe(matter.spec, ink)}` : `文字として、この形に加わります。`;
     status.textContent = meaning;
     if (!first || writing) notice(meaning, 5);
+    if (!writing) companion?.changed();
   }
   if (result.limited) status.textContent = `${result.added.toLocaleString('ja-JP')}文字を追加。合計32,000文字・1,024種類までです。`;
   updateUI();
@@ -139,7 +141,7 @@ async function start() {
   await document.fonts.ready;
   try { scene = new GlyphScene(el('#scene'), matter); }
   catch (error) { el('#fatal').hidden = false; el('#fatal').textContent = '描画を開始できませんでした。WebGL2が使えるブラウザで開いてください。'; console.error(error); return; }
-  companion = setupCompanion(matter, scene, {
+  companion = await setupCompanion(matter, scene, {
     feed: text => addText(text, 1, undefined, true),
     refresh: updateUI,
     pause: value => { paused = value; updateUI(); },
@@ -169,8 +171,9 @@ async function start() {
   el('#show-diary').addEventListener('click', () => { closeTerminal(); companion?.openGallery(); });
   el('#choose-form').addEventListener('click', () => { el('#quick-forms').hidden = !el('#quick-forms').hidden; });
   document.querySelectorAll<HTMLButtonElement>('[data-shape]').forEach(button => button.addEventListener('click', () => {
+    if (companion && !companion.rollover()) return;
     scene.setSpec({ ...matter.spec, shape: button.dataset.shape as Shape, count: 1, arrangement: 'single', deformation: 'gentle' });
-    el('#quick-forms').hidden = true; paused = false; updateUI(); companion?.publish();
+    el('#quick-forms').hidden = true; paused = false; updateUI(); companion?.changed();
   }));
   el('#lesson-next').addEventListener('click', () => { lesson = (lesson + 1) % lessons.length; updateUI(); });
   el('#lesson-try').addEventListener('click', () => { input.value = lessons[lesson][1]; previewInk(); input.focus(); });
@@ -178,13 +181,14 @@ async function start() {
   el('#close').addEventListener('click', closeTerminal);
   repeatLast.addEventListener('click', () => { input.value = lastText; void addText(lastText, Number(repeat.value), lastInk); });
   document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach(button => button.addEventListener('click', () => { input.value = button.dataset.example!; previewInk(); input.focus(); }));
-  document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.addEventListener('click', () => { scene.setForm(button.dataset.form as Form); paused = false; updateUI(); closeTerminal(); }));
+  document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.addEventListener('click', () => { if (companion && !companion.rollover()) return; scene.setForm(button.dataset.form as Form); paused = false; updateUI(); closeTerminal(); companion?.changed(); }));
   el('#pause').addEventListener('click', () => { paused = !paused; updateUI(); closeTerminal(); });
   el('#reset').addEventListener('click', () => {
+    if (companion && !companion.rollover()) return;
     matter.reset(); scene.reset(); lastText = ''; lastInk = undefined; paused = false; introDone = false; awakened = false; lesson = 0;
     input.value = ''; el<HTMLInputElement>('#learned-shapes').checked = false; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
     el('#start-prompt').hidden = Boolean(companion?.writer || companion?.viewer); el('#quick-forms').hidden = true; awakened = Boolean(companion?.writer); el('#input-help').textContent = '「エンター」と入力して、Enter。好きな言葉や文章でもいい。'; el<HTMLDetailsElement>('#guide').open = false;
-    updateUI(); closeTerminal();
+    updateUI(); closeTerminal(); companion?.changed();
   });
   el('#scene').addEventListener('webglcontextlost', event => { event.preventDefault(); el('#fatal').hidden = false; el('#fatal').textContent = '描画が中断されました。ページを再読み込みしてください。'; }, true);
   updateUI();

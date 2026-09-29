@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { Matter } from './model';
-import { captureDay, localDay, restoreDay, validDay, readDays, writeDay } from './diary';
+import { captureDay, localDay, restoreDay, validDay, readDays, writeDay, readDraft, writeDraft, recoverDays, DIARY_KEY } from './diary';
 import { interpret, DEFAULT_SPEC, shapeChoices } from './language';
 
 describe('文章の候補と日記', () => {
@@ -29,5 +29,37 @@ describe('文章の候補と日記', () => {
     writeDay(captureDay(matter,'2026-09-16'),storage);
     expect(readDays(storage)[0].date).toBe('2026-09-16');
     expect(readDays(storage)).toHaveLength(14);
+  });
+});
+
+
+describe('原稿と日記の復旧', () => {
+  const memoryStorage = () => { const data = new Map<string, string>(); return { data, getItem: (key: string) => data.get(key) ?? null, setItem: (key: string, value: string) => { data.set(key, value); } }; };
+  it('原稿と選択位置を、形への追加とは別に保持する', () => {
+    const storage = memoryStorage();
+    const draft = { version: 1 as const, text: 'まだ送っていない\n文章', start: 3, end: 5 };
+    writeDraft(draft, storage); expect(readDraft(storage)).toEqual(draft);
+    expect(readDays(storage)).toEqual([]);
+  });
+  it('不正な復元は作業中の形を変更しない', () => {
+    const matter = new Matter(); matter.add('今の文章', 1, { seed: 9 });
+    const before = matter.inspect(), invalid = captureDay(matter);
+    invalid.batches[0].added += 1;
+    expect(() => restoreDay(matter, invalid)).toThrow();
+    expect(matter.inspect()).toEqual(before);
+  });
+  it('壊れた原本を退避してから、読み取れる日を回復する', () => {
+    const storage = memoryStorage(), matter = new Matter(); matter.add('保存した文章', 1, { seed: 8 });
+    const valid = captureDay(matter, '2026-09-29');
+    const raw = JSON.stringify([valid, { version: 99 }]); storage.setItem(DIARY_KEY, raw);
+    expect(() => readDays(storage)).toThrow();
+    const recovered = recoverDays(storage);
+    expect(recovered.days).toEqual([valid]); expect(readDays(storage)).toEqual([valid]);
+    expect([...storage.data.entries()].some(([key, value]) => key.includes(':recovery:') && value === raw)).toBe(true);
+  });
+  it('退避が保存できない場合、壊れた原本も置き換えない', () => {
+    const storage = memoryStorage(); storage.setItem(DIARY_KEY, 'broken');
+    const failing = { getItem: storage.getItem, setItem: () => { throw new Error('quota'); } };
+    expect(() => recoverDays(failing)).toThrow(); expect(storage.getItem(DIARY_KEY)).toBe('broken');
   });
 });
