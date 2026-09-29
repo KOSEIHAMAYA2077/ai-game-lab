@@ -1,0 +1,93 @@
+{
+  "model_sha256": "d864924d7295f3f03b90446c47863adabd94fa55b673879f666f2be9607e9cd6",
+  "numpy": "2.3.5",
+  "train_n": 3684,
+  "validation_n": 418,
+  "features": 6029,
+  "parameters": 66330,
+  "elapsed_seconds": 1.498,
+  "curve": [
+    {
+      "epoch": 1,
+      "loss": 2.4098377227783203,
+      "train_accuracy": 0.06460369163952226
+    },
+    {
+      "epoch": 20,
+      "loss": 0.6243894100189209,
+      "train_accuracy": 0.993756786102063
+    },
+    {
+      "epoch": 40,
+      "loss": 0.452590674161911,
+      "train_accuracy": 0.996471226927253
+    },
+    {
+      "epoch": 60,
+      "loss": 0.41131460666656494,
+      "train_accuracy": 0.997014115092291
+    },
+    {
+      "epoch": 80,
+      "loss": 0.39301037788391113,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 100,
+      "loss": 0.3842642605304718,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 120,
+      "loss": 0.3791296184062958,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 140,
+      "loss": 0.3759188652038574,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 160,
+      "loss": 0.37377673387527466,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 180,
+      "loss": 0.37229791283607483,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 200,
+      "loss": 0.3712506592273712,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 220,
+      "loss": 0.3704989552497864,
+      "train_accuracy": 0.999728555917481
+    },
+    {
+      "epoch": 240,
+      "loss": 0.3699544072151184,
+      "train_accuracy": 0.999728555917481
+    }
+  ],
+  "thresholds": {
+    "score": 0.75,
+    "margin": 0.3,
+    "coverage": 0.65
+  },
+  "validation": {
+    "n": 418,
+    "accuracy": 0.8444976076555024,
+    "accepted": 169,
+    "accepted_precision": 0.8994082840236687,
+    "shape_recall": 0.76,
+    "negative_n": 218,
+    "false_shape_on_none": 17,
+    "none_false_positive_rate": 0.0779816513761468
+  },
+  "holdout_used": false,
+  "validation_objective": "shape_recall - 4*none_false_positive_rate - (1-accepted_precision)"
+}

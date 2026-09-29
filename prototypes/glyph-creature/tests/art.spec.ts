@@ -248,3 +248,25 @@ test('吸収中に形を変えても既存の文字が跳び戻らない', async
   });
   for (let i = 0; i < before.length; i++) expect(Math.abs(after[i] - before[i])).toBeLessThan(.00001);
 });
+
+test('実験用の学習モデルが形だけを補い、入力文字と色を保つ', async ({ page }) => {
+  const external: string[] = [];
+  page.on('request', r => { if (!r.url().startsWith('http://127.0.0.1:4173') && !r.url().startsWith('data:')) external.push(r.url()); });
+  await open(page);
+  await expect(page.locator('#learned-shapes')).not.toBeChecked();
+  await page.locator('#learned-shapes').check();
+  await feed(page, 'サイコロを黄色に', '64'); await advance(page, 4500);
+  expect((await inspect(page)).spec.shape).toBe('cube');
+  expect((await inspect(page)).batches[0]).toMatchObject({ text: 'サイコロを黄色に', ink: 'yellow' });
+  await feed(page, 'ドーナツ 8個', '64'); await advance(page, 4500);
+  expect((await inspect(page)).spec).toMatchObject({ shape: 'ring', count: 8 });
+  await page.screenshot({ path: 'evidence/learned-rings.png' });
+  const spec = (await inspect(page)).spec;
+  await feed(page, '今日は眠い', '1');
+  expect((await inspect(page)).spec).toEqual(spec);
+  await open(page); await page.locator('#reset').click();
+  await page.keyboard.press('Enter'); await page.keyboard.press('Enter');
+  await page.locator('#guide summary').click();
+  await expect(page.locator('#learned-shapes')).not.toBeChecked();
+  expect(external).toEqual([]);
+});
