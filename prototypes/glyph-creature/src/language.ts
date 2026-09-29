@@ -18,10 +18,12 @@ const inkWords: [RegExp, Ink][] = [
 ];
 export type Interpretation = { spec: SceneSpec; ink?: Ink; recognized: boolean; description: string };
 
+export const explicitShape = (text: string) => shapeWords.find(([pattern]) => pattern.test(text.normalize('NFKC')))?.[1];
+
 /** An explicit vocabulary composer, not a claim of general language understanding. */
-export function interpret(text: string, current: SceneSpec): Interpretation {
+export function interpret(text: string, current: SceneSpec, shapeOverride?: Shape | null): Interpretation {
   const source = text.normalize('NFKC');
-  const shape = shapeWords.find(([pattern]) => pattern.test(source))?.[1];
+  const shape = shapeOverride === undefined ? explicitShape(source) : shapeOverride ?? undefined;
   const ink = inkWords.find(([pattern]) => pattern.test(source))?.[1];
   const surface = /表面|surface/iu.test(source), flow = /流れ|流す|流れる|flow|stream/iu.test(source);
   const chain = /鎖|くさり|chain/iu.test(source);
@@ -48,4 +50,3 @@ export function interpret(text: string, current: SceneSpec): Interpretation {
 export function describe(spec: SceneSpec, ink?: Ink) {
   return `${spec.mode === 'surface' ? '表面' : '流れる'} · ${SHAPE_NAMES[spec.shape]}${spec.count > 1 ? ` · ${spec.count}個` : ''}${spec.arrangement === 'chain' ? ' · 鎖' : ''}${spec.deformation === 'omega' ? ' · オメガ' : ''}${spec.deformation === 'double' ? ' · 大小' : ''}${ink ? ` · 追加文字は${INK_NAMES[ink]}` : ''}`;
 }
-

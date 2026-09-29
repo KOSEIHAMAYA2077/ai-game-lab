@@ -1,6 +1,7 @@
 import './style.css';
 import { FORMS, MAX_GLYPHS, MAX_INPUT_LENGTH, Matter, splitGlyphs, type Form } from './model';
 import { GlyphScene } from './scene';
+import { interpretWithModel } from './learned-shape';
 import { COLORS, INK_NAMES, interpret, describe, type Ink } from './language';
 
 const names: Record<Form, string> = { condense: '凝縮', vortex: '渦', orbit: '軌道', mobius: 'メビウス' };
@@ -17,6 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <details id="guide"><summary>ことば / 操作</summary>
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
       <p class="help">例を選んで書き換えられます。対応する形・流れ・色・個数を組み合わせます。普通の文章も材料として残ります。</p>
+      <label class="help"><input id="learned-shapes" type="checkbox" /> 学習した形を使う（実験）</label><p class="help">サイコロ、ドーナツなどの言い換えを、自作モデルで推定します。誤解することもあります。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
       <p class="help">× は入力した文字の繰り返し。指定した色は今回の文字だけに残ります。</p>
@@ -98,13 +100,13 @@ function addText(text: string, times: number, forcedInk?: Ink) {
     status.textContent = text.length > MAX_INPUT_LENGTH ? '入力が長すぎます。短く分けて入力してください。' : '空白以外の文字を入力してください。'; input.focus(); return;
   }
   const emission = inputSources(text);
-  const parsed = interpret(text, matter.spec);
+  const parsed = interpretWithModel(text, matter.spec, el<HTMLInputElement>('#learned-shapes').checked);
   const spec = parsed.spec, ink = forcedInk ?? parsed.ink ?? selectedInk(), interpreted = parsed.recognized;
   const result = matter.add(text, times, { ink });
   if (result.added) {
     scene.setSpec(interpreted ? spec : matter.spec); scene.sync(emission.points, emission.fontSize); paused = false;
     lastText = text; lastInk = ink; input.value = '';
-    const meaning = interpreted ? `${describe(matter.spec, ink)}` : `文字として、この形に加わります。`;
+    const meaning = interpreted ? `${parsed.learned ? '学習した形: ' : ''}${describe(matter.spec, ink)}` : `文字として、この形に加わります。`;
     status.textContent = meaning;
     notice(meaning, 5);
   }
@@ -143,7 +145,7 @@ async function start() {
   el('#pause').addEventListener('click', () => { paused = !paused; updateUI(); closeTerminal(); });
   el('#reset').addEventListener('click', () => {
     matter.reset(); scene.reset(); lastText = ''; lastInk = undefined; paused = false; introDone = false;
-    input.value = ''; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
+    input.value = ''; el<HTMLInputElement>('#learned-shapes').checked = false; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
     el('#start-prompt').hidden = false; el<HTMLDetailsElement>('#guide').open = false;
     updateUI(); closeTerminal();
   });

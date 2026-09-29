@@ -1,0 +1,989 @@
+{
+  "model_sha256": "d864924d7295f3f03b90446c47863adabd94fa55b673879f666f2be9607e9cd6",
+  "holdout_sha256": "1c7a6405a59cafa08b7479e3baa7a8c8947a61e440fba6ad9e62c77862506dbc",
+  "overlap_count": 1,
+  "all": {
+    "n": 60,
+    "accuracy": 0.65,
+    "accepted": 21,
+    "accepted_precision": 0.9523809523809523,
+    "shape_recall": 0.5,
+    "negative_n": 20,
+    "false_shape_on_none": 1,
+    "none_false_positive_rate": 0.05
+  },
+  "without_exact_overlap": {
+    "n": 59,
+    "accuracy": 0.6440677966101694,
+    "accepted": 21,
+    "accepted_precision": 0.9523809523809523,
+    "shape_recall": 0.5,
+    "negative_n": 19,
+    "false_shape_on_none": 1,
+    "none_false_positive_rate": 0.05263157894736842
+  },
+  "by_category": {
+    "ambiguous": {
+      "n": 2,
+      "accuracy": 1.0,
+      "accepted": 0,
+      "accepted_precision": 0.0,
+      "shape_recall": 0.0,
+      "negative_n": 2,
+      "false_shape_on_none": 0,
+      "none_false_positive_rate": 0.0
+    },
+    "known_paraphrase": {
+      "n": 20,
+      "accuracy": 0.65,
+      "accepted": 13,
+      "accepted_precision": 1.0,
+      "shape_recall": 0.65,
+      "negative_n": 0,
+      "false_shape_on_none": 0,
+      "none_false_positive_rate": 0.0
+    },
+    "negation": {
+      "n": 5,
+      "accuracy": 1.0,
+      "accepted": 0,
+      "accepted_precision": 0.0,
+      "shape_recall": 0.0,
+      "negative_n": 5,
+      "false_shape_on_none": 0,
+      "none_false_positive_rate": 0.0
+    },
+    "prose": {
+      "n": 7,
+      "accuracy": 1.0,
+      "accepted": 0,
+      "accepted_precision": 0.0,
+      "shape_recall": 0.0,
+      "negative_n": 7,
+      "false_shape_on_none": 0,
+      "none_false_positive_rate": 0.0
+    },
+    "unseen_synonym": {
+      "n": 20,
+      "accuracy": 0.35,
+      "accepted": 7,
+      "accepted_precision": 1.0,
+      "shape_recall": 0.35,
+      "negative_n": 0,
+      "false_shape_on_none": 0,
+      "none_false_positive_rate": 0.0
+    },
+    "unsupported": {
+      "n": 5,
+      "accuracy": 0.8,
+      "accepted": 1,
+      "accepted_precision": 0.0,
+      "shape_recall": 0.0,
+      "negative_n": 5,
+      "false_shape_on_none": 1,
+      "none_false_positive_rate": 0.2
+    }
+  },
+  "results": [
+    {
+      "id": "holdout-001",
+      "text": "文字を丸い塊にまとめたい",
+      "label": "condense",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "condense",
+        "candidate": "condense",
+        "score": 0.7752823648731573,
+        "margin": 0.6474089974623944,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-002",
+      "text": "球の形でゆっくり回して",
+      "label": "condense",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "condense",
+        "score": 0.6395871833499865,
+        "margin": 0.559748907956898,
+        "coverage": 0.9090909090909091,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-003",
+      "text": "ボールみたいな丸い立体にして",
+      "label": "condense",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "condense",
+        "candidate": "condense",
+        "score": 0.942532720722998,
+        "margin": 0.9268868800191474,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-004",
+      "text": "小さな玉になるまでぎゅっと集めて",
+      "label": "condense",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.3795489549633465,
+        "margin": 0.12369260664118259,
+        "coverage": 0.8,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-005",
+      "text": "大きな渦巻きにしてほしい",
+      "label": "vortex",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "vortex",
+        "candidate": "vortex",
+        "score": 0.7919555850882571,
+        "margin": 0.6972687430994793,
+        "coverage": 0.9,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-006",
+      "text": "中心へ吸い込まれる渦を作る",
+      "label": "vortex",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "vortex",
+        "score": 0.5492737072511341,
+        "margin": 0.29343411299385963,
+        "coverage": 0.6666666666666666,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-007",
+      "text": "ぐるぐる巻いたスパイラルに変えて",
+      "label": "vortex",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "vortex",
+        "candidate": "vortex",
+        "score": 0.8429918642190689,
+        "margin": 0.7549339280223122,
+        "coverage": 0.9285714285714286,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-008",
+      "text": "蚊取り線香のように平たく巻く形にして",
+      "label": "vortex",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.575063035711524,
+        "margin": 0.4497874437607006,
+        "coverage": 0.6875,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-009",
+      "text": "原子軌道の形で文字を回す",
+      "label": "orbit",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "orbit",
+        "candidate": "orbit",
+        "score": 0.9745440667159581,
+        "margin": 0.962588466875618,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-010",
+      "text": "電子が原子核のまわりを巡るようにして",
+      "label": "orbit",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "orbit",
+        "score": 0.618966888527746,
+        "margin": 0.35295324998069855,
+        "coverage": 0.8235294117647058,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-011",
+      "text": "中心を囲むアトミックな周回軌道に",
+      "label": "orbit",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "orbit",
+        "score": 0.8393023078748566,
+        "margin": 0.721023120557094,
+        "coverage": 0.5625,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-012",
+      "text": "原子の模型みたいに、傾いた軌道を重ねたい",
+      "label": "orbit",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "orbit",
+        "candidate": "orbit",
+        "score": 0.9736417966300287,
+        "margin": 0.9538078160721843,
+        "coverage": 0.8125,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-013",
+      "text": "メビウスの輪に文字を並べよう",
+      "label": "mobius",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "mobius",
+        "candidate": "mobius",
+        "score": 0.8657913207475221,
+        "margin": 0.7753217945780808,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-014",
+      "text": "表面を流れるメビウスの帯がほしい",
+      "label": "mobius",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "mobius",
+        "candidate": "mobius",
+        "score": 0.9400152947598747,
+        "margin": 0.9290172298739877,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-015",
+      "text": "帯を半回転ひねって両端をつないで",
+      "label": "mobius",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "mobius",
+        "score": 0.5049844029418148,
+        "margin": 0.055346252698939113,
+        "coverage": 0.8666666666666667,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-016",
+      "text": "表と裏がつながる一枚の帯の形にして",
+      "label": "mobius",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.2151705907079728,
+        "margin": 0.01991867503083608,
+        "coverage": 0.9333333333333333,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-017",
+      "text": "円環をひとつ浮かべて",
+      "label": "ring",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "ring",
+        "candidate": "ring",
+        "score": 0.8671777549639326,
+        "margin": 0.8478468109583354,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-018",
+      "text": "文字を輪にして回してほしい",
+      "label": "ring",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "ring",
+        "score": 0.4807357345040023,
+        "margin": 0.3860376703286073,
+        "coverage": 1.0,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-019",
+      "text": "真ん中が空いたリングの形で",
+      "label": "ring",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "ring",
+        "score": 0.5532532347169243,
+        "margin": 0.34466651031610285,
+        "coverage": 0.9230769230769231,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-020",
+      "text": "丸いわっかを作ろう",
+      "label": "ring",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.4905998024919448,
+        "margin": 0.22888769436981887,
+        "coverage": 0.8888888888888888,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-021",
+      "text": "立方体の表面を文字で覆って",
+      "label": "cube",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "cube",
+        "candidate": "cube",
+        "score": 0.8953697230121992,
+        "margin": 0.863587340456649,
+        "coverage": 0.9230769230769231,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-022",
+      "text": "青いキューブにして",
+      "label": "cube",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "cube",
+        "score": 0.7451526892495881,
+        "margin": 0.6621821046752493,
+        "coverage": 1.0,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-023",
+      "text": "サイコロみたいな正六面体を作って",
+      "label": "cube",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "cube",
+        "candidate": "cube",
+        "score": 0.9863174585999839,
+        "margin": 0.979288698233077,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-024",
+      "text": "縦横高さが全部同じ箱の形にする",
+      "label": "cube",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "cross",
+        "score": 0.21179340309086936,
+        "margin": 0.017563183904094393,
+        "coverage": 0.8,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-025",
+      "text": "細長い直方体がいい",
+      "label": "cuboid",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "cuboid",
+        "candidate": "cuboid",
+        "score": 0.9800386716850845,
+        "margin": 0.9700040097115098,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-026",
+      "text": "直方体の外側に文字を流そう",
+      "label": "cuboid",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "cuboid",
+        "candidate": "cuboid",
+        "score": 0.8664792215882174,
+        "margin": 0.8331100055628932,
+        "coverage": 0.9230769230769231,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-027",
+      "text": "レンガみたいな四角い立体にして",
+      "label": "cuboid",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "cuboid",
+        "score": 0.6050842691767075,
+        "margin": 0.4670338067608456,
+        "coverage": 1.0,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-028",
+      "text": "高さよりも横幅の長い長方形の箱に",
+      "label": "cuboid",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "cuboid",
+        "candidate": "cuboid",
+        "score": 0.7710066318181298,
+        "margin": 0.665527461726586,
+        "coverage": 0.8571428571428571,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-029",
+      "text": "十字を描いて",
+      "label": "cross",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "cross",
+        "candidate": "cross",
+        "score": 0.909877194363209,
+        "margin": 0.8895521234978538,
+        "coverage": 1.0,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-030",
+      "text": "赤いクロスの形にしてほしい",
+      "label": "cross",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "square",
+        "score": 0.1211722231460747,
+        "margin": 0.008400253112364267,
+        "coverage": 1.0,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-031",
+      "text": "プラス記号の形に文字を集める",
+      "label": "cross",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "cross",
+        "candidate": "cross",
+        "score": 0.9228328109442339,
+        "margin": 0.8886036526898993,
+        "coverage": 0.9285714285714286,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-032",
+      "text": "縦棒と横棒が真ん中で交わる十字架の形",
+      "label": "cross",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "cross",
+        "candidate": "cross",
+        "score": 0.8919577623049556,
+        "margin": 0.8469077297736263,
+        "coverage": 0.8235294117647058,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-033",
+      "text": "三角形のふちに沿って流して",
+      "label": "triangle",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "triangle",
+        "candidate": "triangle",
+        "score": 0.95766621299711,
+        "margin": 0.9465141114384424,
+        "coverage": 0.8333333333333334,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-034",
+      "text": "黄色い三角にしたい",
+      "label": "triangle",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "none",
+        "candidate": "triangle",
+        "score": 0.6681274532179653,
+        "margin": 0.534670645651805,
+        "coverage": 1.0,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-035",
+      "text": "トライアングルの形を作って",
+      "label": "triangle",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "ring",
+        "score": 0.2634454322855477,
+        "margin": 0.092259478921947,
+        "coverage": 0.8461538461538461,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-036",
+      "text": "三本の辺で閉じた平面図形にする",
+      "label": "triangle",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "triangle",
+        "score": 0.6034746723164338,
+        "margin": 0.5168955228092429,
+        "coverage": 0.7333333333333333,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-037",
+      "text": "平らな正方形にして",
+      "label": "square",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "square",
+        "candidate": "square",
+        "score": 0.7521701599982171,
+        "margin": 0.6169368183834132,
+        "coverage": 0.8888888888888888,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-038",
+      "text": "四角形の周囲を文字が巡る形で",
+      "label": "square",
+      "category": "known_paraphrase",
+      "prediction": {
+        "label": "square",
+        "candidate": "square",
+        "score": 0.9400496171919809,
+        "margin": 0.9246912972877248,
+        "coverage": 0.8461538461538461,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-039",
+      "text": "スクエアの輪郭を作りたい",
+      "label": "square",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.32353339414322785,
+        "margin": 0.185252757918196,
+        "coverage": 0.8333333333333334,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-040",
+      "text": "同じ長さの四辺が直角につながる平面にして",
+      "label": "square",
+      "category": "unseen_synonym",
+      "prediction": {
+        "label": "none",
+        "candidate": "square",
+        "score": 0.3521997910533963,
+        "margin": 0.17201135399747033,
+        "coverage": 0.8888888888888888,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-041",
+      "text": "今日は立方体の体積を学校で習った。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.5779711357301217,
+        "margin": 0.25416118550844213,
+        "coverage": 0.6875,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-042",
+      "text": "駅前の十字路で友達と待ち合わせた。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "cross",
+        "score": 0.5743623728543128,
+        "margin": 0.25797910602748825,
+        "coverage": 0.5294117647058824,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-043",
+      "text": "三角形のパンを朝ごはんに食べました。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "triangle",
+        "score": 0.6939556936155685,
+        "margin": 0.45076705405663836,
+        "coverage": 0.8333333333333334,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-044",
+      "text": "この小説は渦に巻き込まれる場面が印象的だった。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "vortex",
+        "score": 0.6989808723311373,
+        "margin": 0.5054618997575955,
+        "coverage": 0.6956521739130435,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-045",
+      "text": "祖父から銀の指輪をもらった。大切にしたい。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.719622613284747,
+        "margin": 0.48207938241033915,
+        "coverage": 0.6666666666666666,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-046",
+      "text": "正方形という言葉をノートに書いて覚えた。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.7669635238452441,
+        "margin": 0.575582330096321,
+        "coverage": 0.6842105263157895,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-047",
+      "text": "だんご",
+      "label": "none",
+      "category": "unsupported",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.6062220468781658,
+        "margin": 0.5362236847731923,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": true
+    },
+    {
+      "id": "holdout-048",
+      "text": "犬の形を作って",
+      "label": "none",
+      "category": "unsupported",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.2731774117734442,
+        "margin": 0.11424548765378298,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-049",
+      "text": "人間の顔に変えてほしい",
+      "label": "none",
+      "category": "unsupported",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.6735514517094676,
+        "margin": 0.6253781886818847,
+        "coverage": 0.9090909090909091,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-050",
+      "text": "五角形に並べて",
+      "label": "none",
+      "category": "unsupported",
+      "prediction": {
+        "label": "none",
+        "candidate": "square",
+        "score": 0.246571247879,
+        "margin": 0.027591385127252593,
+        "coverage": 0.8571428571428571,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-051",
+      "text": "星型にして",
+      "label": "none",
+      "category": "unsupported",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.1502260594893506,
+        "margin": 0.0138195051314976,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-052",
+      "text": "三角屋根の家を作って",
+      "label": "none",
+      "category": "unsupported",
+      "prediction": {
+        "label": "triangle",
+        "candidate": "triangle",
+        "score": 0.9160443963709856,
+        "margin": 0.8814851483615199,
+        "coverage": 0.8,
+        "reason": "accepted"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-053",
+      "text": "立方体にはしないで",
+      "label": "none",
+      "category": "negation",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.8965394739054044,
+        "margin": 0.8069777612193046,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-054",
+      "text": "メビウスの輪に変えるのはやめて",
+      "label": "none",
+      "category": "negation",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.6938441409358913,
+        "margin": 0.4091219918879042,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-055",
+      "text": "渦巻きは作らないでほしい",
+      "label": "none",
+      "category": "negation",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.7739197476286801,
+        "margin": 0.5657438699962448,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-056",
+      "text": "三角形にしなくていいです",
+      "label": "none",
+      "category": "negation",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.4951334405931895,
+        "margin": 0.06648773080305292,
+        "coverage": 1.0,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-057",
+      "text": "円環ではなく、今の形を保って",
+      "label": "none",
+      "category": "negation",
+      "prediction": {
+        "label": "none",
+        "candidate": "ring",
+        "score": 0.7397413049295992,
+        "margin": 0.6586621178431106,
+        "coverage": 0.8571428571428571,
+        "reason": "uncertain"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-058",
+      "text": "もっと不思議な感じにして",
+      "label": "none",
+      "category": "ambiguous",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.44920036726021767,
+        "margin": 0.35615456998815276,
+        "coverage": 0.6666666666666666,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-059",
+      "text": "何か別の形がいいな",
+      "label": "none",
+      "category": "ambiguous",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.34754688557995295,
+        "margin": 0.19432497368363136,
+        "coverage": 0.875,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    },
+    {
+      "id": "holdout-060",
+      "text": "おはよう、今日もよろしく。",
+      "label": "none",
+      "category": "prose",
+      "prediction": {
+        "label": "none",
+        "candidate": "none",
+        "score": 0.9127263033917723,
+        "margin": 0.8960840408901997,
+        "coverage": 0.8333333333333334,
+        "reason": "none"
+      },
+      "exact_overlap": false
+    }
+  ]
+}
