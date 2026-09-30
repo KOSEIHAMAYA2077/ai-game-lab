@@ -1,23 +1,24 @@
 import './style.css';
 import { FORMS, MAX_GLYPHS, MAX_INPUT_LENGTH, Matter, splitGlyphs, type Form } from './model';
 import { GlyphScene } from './scene';
-import { interpretWithModel } from './learned-shape';
-import { COLORS, DEFAULT_SPEC, INK_NAMES, SHAPE_NAMES, SHAPES, interpret, describe, type Ink, type Shape } from './language';
+import { COLORS, DEFAULT_SPEC, INK_NAMES, SHAPE_NAMES, SHAPE_GROUPS, interpret, describe, type Ink, type Shape, type SceneSpec } from './language';
 import { setupCompanion } from './companion';
 import { randomUnit } from './shapes';
 import { ShapeCycle, hasShapeIntent, writingCue } from './shape-cycle';
 
+const interpretAuthored = (text: string, spec: SceneSpec, choose?: () => number) => ({ ...interpret(text, spec, undefined, choose), learned: false });
+
 const names: Record<Form, string> = { condense: '凝縮', vortex: '渦', orbit: '軌道', mobius: 'メビウス' };
-const examples = ['流れる 球体', '表面 立方体', '今夜は赤い花火を眺めている。', '呼吸する 黄色い立方体', '流れる 波打つ メビウスの輪', '表面 メビウスの輪', '流れる 赤 四角形', 'だんご', '円 8個', '円環 鎖', 'オメガ メビウスの輪', '円環 大小', '表面 呼吸する だんご', '流れる 十字', '通常の動き'];
+const examples = ['流れる 球体', '表面 立方体', '波打つ メビウスの輪', '今夜は赤い花火を眺めている。', ...['花', '蝶', 'くらげ', '木', '星', '螺旋', '砂時計', '土星', '剣', '花瓶'].map(word => `白い文字が${word}の表面を流れる`), '円 8個', '円環 鎖', '表面 呼吸する だんご'];
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main id="scene" tabindex="-1" aria-label="文字の空間。Enterで始める"></main>
   <button id="start-prompt" type="button" aria-label="press enter"><canvas id="prompt-ink" aria-hidden="true"></canvas></button>
-  <nav id="actions" aria-label="空間の操作" hidden><button id="write-word">▶ 入力</button><button id="choose-form">◇ 形</button><button id="show-help">? HELP</button><a href="./?write">✎ 書く</a><a href="./strokes.html">一画</a><button id="show-diary">日記</button></nav>
-  <nav id="quick-forms" aria-label="形のボタン" hidden>${SHAPES.map(shape => `<button type="button" data-shape="${shape}">${SHAPE_NAMES[shape]}</button>`).join('')}</nav>
+  <nav id="actions" aria-label="空間の操作" hidden><button id="write-word">▶ 入力</button><button id="choose-form">◇ 形</button><button id="thicken" type="button" title="今の形のまま、直前の入力をもう一度追加" disabled>＋文字</button><button id="show-help">? HELP</button><a href="./?write">✎ 書く</a><a href="./strokes.html">一画</a><button id="show-diary">日記</button></nav>
+  <nav id="quick-forms" aria-label="形のボタン" hidden>${SHAPE_GROUPS.map(group => `<details><summary>${group.name}</summary><div>${group.shapes.map(shape => `<button type="button" data-shape="${shape}">${SHAPE_NAMES[shape]}</button>`).join('')}</div></details>`).join('')}</nav>
   <p id="whisper" aria-live="polite" hidden></p>
   <section id="terminal" hidden aria-label="文字のターミナル">
-    <form id="feed-form"><div class="input-line"><label for="text-input" aria-label="文字を入力">&gt;</label><input id="text-input" type="text" autocomplete="off" spellcheck="false" aria-label="加える文字" aria-describedby="input-help" placeholder="enter word [enter]" /><button id="feed" type="submit" aria-label="文字を加える">↵</button></div></form>
+    <form id="feed-form"><div class="input-line"><label for="text-input" aria-label="文字を入力">&gt;</label><input id="text-input" type="text" autocomplete="off" spellcheck="false" aria-label="加える文字" aria-describedby="input-help" placeholder="enter word [enter]" /><button id="feed" type="submit" aria-label="文字を加える">↵</button><button id="close" type="button" aria-label="閉じる">×</button></div></form>
     <p id="input-help">「エンター」と入力して、Enter。文章も入力できます。</p>
     <p id="status" role="status" aria-live="polite"></p>
     <details id="guide"><summary>❔ HELP — 入力 / 操作</summary>
@@ -25,11 +26,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
       <p class="help">入力例は書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」を組み合わせられます。「通常」で変形を戻します。候補が複数ある場合は、送信ごとに一つ選びます。入力した文章全体を文字として追加します。</p>
       <label class="help"><input id="auto-shape" type="checkbox" checked /> 形を自動で変える（30秒）</label><p class="help">言葉やボタンで選んだ形は60秒保ちます。停止中と日記の閲覧中は切り替わりません。</p>
-      <label class="help"><input id="learned-shapes" type="checkbox" /> 学習した形を使う（実験）</label><p class="help">サイコロ、ドーナツなどの言い換えを、自作モデルで推定します。この実験をオンにすると、形の選択はモデルを優先します。</p>
+      <p class="help">この版は対応語と数式だけで動きます。花・蝶・くらげ・木・星・螺旋・砂時計・土星・剣・花瓶を追加しています。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
-      <p class="help">× は入力した文字の繰り返し。指定した色は今回の文字だけに残ります。</p>
-      <div class="controls"><button id="repeat-last" type="button" disabled>もう一度</button><button id="pause" type="button" aria-pressed="false">止める</button><button id="reset" type="button">最初へ</button><button id="close" type="button">閉じる</button></div>
+      <p class="help">＋文字 は直前の入力をもう一度追加。×256で一度に増やせます。指定した色は今回の文字だけに残ります。</p>
+      <div class="controls"><button id="repeat-last" type="button" disabled>もう一度</button><button id="pause" type="button" aria-pressed="false">止める</button><button id="reset" type="button">最初へ</button></div>
     </details>
     <p class="help keys">Enter で送る　Esc で閉じる</p>
   </section>
@@ -87,6 +88,7 @@ function updateUI() {
   el('#lesson').textContent = lessons[lesson][0];
   document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.form === matter.form)));
   repeatLast.disabled = !lastText || matter.glyphs.length >= MAX_GLYPHS;
+  el<HTMLButtonElement>('#thicken').disabled = repeatLast.disabled;
   el('#pause').textContent = paused ? '動かす' : '止める';
   el('#pause').setAttribute('aria-pressed', String(paused));
   previewInk();
@@ -111,28 +113,31 @@ function begin() {
   openTerminal(); updateUI();
 }
 
-function addText(text: string, times: number, forcedInk?: Ink, writing = false, context?: { text: string; line: number }): boolean {
+function addText(text: string, times: number, forcedInk?: Ink, writing = false, context?: { text: string; line: number }, replay = false): boolean {
   if (companion && (!companion.canEdit() || !companion.rollover())) return false;
   if (text.length > MAX_INPUT_LENGTH || !splitGlyphs(text).length) {
     status.textContent = text.length > MAX_INPUT_LENGTH ? '入力が長すぎます。短く分けて入力してください。' : '空白以外の文字を入力してください。'; if (!writing) input.focus(); return false;
   }
   let emission = inputSources(text);
+  if (replay) {
+    const rect = el('#thicken').getBoundingClientRect();
+    emission = { points: splitGlyphs(text).map((_, i) => ({ x: rect.left + rect.width / 2 + (i % 7 - 3) * 3, y: rect.top + rect.height / 2 })), fontSize: 17 };
+  }
   if (writing) {
     const rect = el<HTMLTextAreaElement>('#manuscript').getBoundingClientRect();
     emission = { points: splitGlyphs(text).map((_, i) => ({ x: rect.left + 12 + (i % 24) * 10, y: rect.top + 24 + Math.floor(i / 24) * 24 })), fontSize: 17 };
   }
   const seed = crypto.getRandomValues(new Uint32Array(1))[0]; let pickIndex = 0;
-  const learned = el<HTMLInputElement>('#learned-shapes').checked;
   const words = context?.text ?? text;
-  const parsed = interpretWithModel(words, matter.spec, learned, () => randomUnit(seed + pickIndex++));
-  let applyInterpretation = parsed.recognized;
+  const parsed = interpretAuthored(words, matter.spec, () => randomUnit(seed + pickIndex++));
+  let applyInterpretation = !replay && parsed.recognized;
   if (context) {
-    const cues = writingCue(words, interpretWithModel(words, DEFAULT_SPEC, learned));
+    const cues = writingCue(words, interpretAuthored(words, DEFAULT_SPEC));
     const key = cues ? `${context.line}:${cues}` : '';
     applyInterpretation = Boolean(key && key !== lastWritingCue);
     lastWritingCue = key;
   }
-  const spec = parsed.spec, ink = forcedInk ?? parsed.ink ?? selectedInk(), interpreted = applyInterpretation;
+  const spec = parsed.spec, ink = replay ? lastInk : forcedInk ?? parsed.ink ?? selectedInk(), interpreted = applyInterpretation;
   const result = matter.add(text, times, { ink, seed });
   if (result.added) {
     if (interpreted && hasShapeIntent(words, parsed.learned)) cycle.hold();
@@ -140,7 +145,7 @@ function addText(text: string, times: number, forcedInk?: Ink, writing = false, 
     lastText = text; lastInk = ink; input.value = '';
     const first = !awakened; awakened = true;
     el('#input-help').textContent = '文字・文章を入力して、Enter で追加。';
-    if (first && !writing) notice('Enter で追加入力。? HELP で操作と入力例を表示。', 14);
+    if (first && !writing) notice('Enter で入力。＋文字 でもう一度追加。? HELP で入力例。', 14);
     const meaning = interpreted ? `${parsed.learned ? '学習した形: ' : ''}${describe(matter.spec, ink)}` : `現在の形に文字を追加しました。`;
     status.textContent = meaning;
     if (!first && !context) notice(meaning, 5);
@@ -196,14 +201,16 @@ async function start() {
   el('#lesson-try').addEventListener('click', () => { input.value = lessons[lesson][1]; previewInk(); input.focus(); });
   el('#scene').addEventListener('open-terminal', begin);
   el('#close').addEventListener('click', closeTerminal);
-  repeatLast.addEventListener('click', () => { input.value = lastText; void addText(lastText, Number(repeat.value), lastInk); });
+  const repeatInput = () => { void addText(lastText, Number(repeat.value), lastInk, false, undefined, true); };
+  repeatLast.addEventListener('click', repeatInput);
+  el('#thicken').addEventListener('click', repeatInput);
   document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach(button => button.addEventListener('click', () => { input.value = button.dataset.example!; previewInk(); input.focus(); }));
   document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.addEventListener('click', () => { if (companion && !companion.rollover()) return; scene.setForm(button.dataset.form as Form); cycle.hold(); paused = false; updateUI(); closeTerminal(); companion?.changed(); }));
   el('#pause').addEventListener('click', () => { paused = !paused; updateUI(); closeTerminal(); });
   el('#reset').addEventListener('click', () => {
     if (companion && !companion.rollover()) return;
     matter.reset(); scene.reset(); cycle.reset(); lastWritingCue = ''; lastText = ''; lastInk = undefined; paused = false; introDone = false; awakened = false; lesson = 0;
-    input.value = ''; el<HTMLInputElement>('#learned-shapes').checked = false; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
+    input.value = ''; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
     el('#start-prompt').hidden = Boolean(companion?.writer || companion?.viewer); el('#quick-forms').hidden = true; awakened = Boolean(companion?.writer); el('#input-help').textContent = '「エンター」と入力して、Enter。文章も入力できます。'; el<HTMLDetailsElement>('#guide').open = false;
     updateUI(); closeTerminal(); companion?.changed();
   });

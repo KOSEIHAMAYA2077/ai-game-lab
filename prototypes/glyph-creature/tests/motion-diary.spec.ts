@@ -32,16 +32,16 @@ test('動きの日記: 通常入力から保存し、執筆・別窓・再読込
   expect((await inspect(page)).batches).toEqual(beforeReload.batches);
 });
 
-test('動きの日記: 指定しない文章・形ボタン・学習モードでも維持する', async ({ page, context }) => {
+test('動きの日記: 指定しない文章・形ボタン・手動辞書でも維持する', async ({ page, context }) => {
   await start(page); const viewer = await context.newPage(); await start(viewer, '/?companion');
   await terminalFeed(page, '波打つ'); expect((await inspect(page)).spec.motion).toBe('wave');
-  await page.locator('#choose-form').click(); await page.locator('[data-shape="dango"]').click();
+  await page.locator('#choose-form').click(); await page.locator('#quick-forms summary').filter({ hasText: 'もの・空' }).click(); await page.locator('[data-shape="dango"]').click();
   expect((await inspect(page)).spec).toMatchObject({ shape: 'dango', motion: 'wave' });
   await page.locator('#show-help').click(); await page.locator('[data-form="mobius"]').click();
   expect((await saved(page)).spec).toMatchObject({ shape: 'mobius', motion: 'wave' });
   await terminalFeed(page, '流れる 球体');
   expect((await inspect(page)).spec).toMatchObject({ shape: 'condense', motion: 'wave', mode: 'flow' });
-  await page.locator('#show-help').click(); await page.locator('#learned-shapes').check();
+  await page.locator('#show-help').click(); await expect(page.locator('#learned-shapes')).toHaveCount(0);
   await terminalFeed(page, 'サイコロを黄色に'); expect((await saved(page)).spec).toMatchObject({ shape: 'cube', motion: 'wave' });
   await terminalFeed(page, 'だんご'); expect((await saved(page)).spec).toMatchObject({ shape: 'dango', motion: 'wave' });
   await expect.poll(async () => (await inspect(viewer)).spec).toEqual((await inspect(page)).spec);

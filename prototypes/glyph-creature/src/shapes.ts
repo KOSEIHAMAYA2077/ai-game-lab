@@ -1,6 +1,7 @@
 import type { SceneSpec } from './language';
 import { shapePosition, TAU, type Vec3 } from './model';
 import { applyMotionPosition, prepareMotion, type MotionTransform } from './motions';
+import { isWordSurface, wordSurface } from './word-surfaces';
 import { dangoPosition } from './dango';
 import { mobiusMaterial, mobiusSurface, sphereSurface, cubeSurface, quietFireworks } from './surface-flow';
 
@@ -24,6 +25,7 @@ const cross: [number, number][] = [[-.32,-1.2],[.32,-1.2],[.32,-.32],[1.2,-.32],
 
 type SurfaceTangents = { x: Vec3; y: Vec3 };
 function single(spec: SceneSpec, id: number, time: number, seed: number, tangents?: SurfaceTangents): Vec3 {
+  if (isWordSurface(spec.shape)) return wordSurface(spec.shape, id, time, seed, undefined, tangents?.x, tangents?.y);
   if (spec.shape === 'dango') return dangoPosition(id, time, seed, spec.mode, undefined, tangents?.x, tangents?.y);
   const a = fract((id + seed * .13) * .618033988749895);
   const b = fract((id + seed * .27) * .754877666246693);

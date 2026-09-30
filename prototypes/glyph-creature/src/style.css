@@ -102,3 +102,12 @@ body.companion #actions, body.companion #terminal, body.companion #start-prompt,
   body.writing #draft-preview { left: 5%; bottom: 59%; }
 }
 @media(prefers-reduced-motion:reduce) { #start-prompt { animation: none; opacity: .9; } }
+
+/* Extra authored forms stay behind three compact groups. */
+#quick-forms details { border: 1px solid #777; background: #000; padding: 6px 10px; }
+#quick-forms summary { cursor: pointer; font-size: 12px; }
+#quick-forms details div { display: flex; flex-wrap: wrap; gap: 5px; max-width: 330px; padding-top: 9px; }
+
+#terminal { max-height: calc(100dvh - 112px); }
+#quick-forms { max-height: calc(100dvh - 108px); overflow: auto; }
+@media(max-width:600px) { body.writing #terminal, body.writing #quick-forms { max-height: 42vh; } }
