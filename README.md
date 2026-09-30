@@ -1,8 +1,8 @@
 # AIでアイデアを遊べる形にするための制作設計
 
-作成日: 2026-09-30 / 現在の試作設計: 0.6
+作成日: 2026-09-30 / 現在の試作設計: 0.7.1
 
-**現在地: 制作方法の設計は完了。文字の集合P0に、少数文字の成長、呼吸・波・団子、連続した筆画、原稿保護と日記読込みを追加。v0.6.0の試遊版を用意。**
+**現在地: 試遊フィードバックを受け、表面を流れる文字、歪むメビウス、落ち着いた花火、簡素なUI文へ改訂。v0.7.1では球体などの全面を文字で覆う描画へ修正。**
 
 [進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
 
@@ -14,7 +14,7 @@
 
 [文字のかたち — 起動方法と操作](prototypes/glyph-creature/README.md)
 
-![文字が立方体の表面を流れる](prototypes/glyph-creature/evidence/surface-cube.png)
+![文字が球の全面を覆う](experiments/surface-coverage-20260930/qa/final/sphere-2048-t12.png)
 
 ## 読み方と現在地
 

@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_SPEC, type SceneSpec } from './language';
-import { shapePosition, TAU, type Vec3 } from './model';
+import { TAU, type Vec3 } from './model';
 import { animatedMobius, composedPosition } from './shapes';
+import { mobiusMaterial, sphereSurface } from './surface-flow';
 import { createSurfaceFrame, mobiusFrame, surfaceFrame, type SurfaceFrame } from './surface-frame';
 
 const dot = (a: Vec3, b: Vec3) => a.reduce((sum, value, i) => sum + value * b[i], 0);
 const diff = (a: Vec3, b: Vec3): Vec3 => a.map((value, i) => value - b[i]) as Vec3;
 const unit = (v: Vec3): Vec3 => v.map(value => value / Math.hypot(...v)) as Vec3;
-const fract = (value: number) => value - Math.floor(value);
 function orthonormal(frame: SurfaceFrame) {
   for (const axis of [frame.x, frame.y, frame.z]) {
     expect(axis.every(Number.isFinite)).toBe(true);
@@ -45,27 +45,19 @@ describe('文字を形の接線へ沿わせる候補フレーム', () => {
     }
   });
 
-  it('球のフレームは元の変形した表面へ接し、独立した位置パラメータの差分と一致する', () => {
-    const spec = { ...DEFAULT_SPEC }, h = 1e-5;
-    for (const id of [1, 17, 512, 31999]) for (const time of [0, 13, 200]) {
-      const seed = 7, frame = surfaceFrame(spec, id, time, seed)!; orthonormal(frame);
-      expect(composedPosition(spec, id, time, seed)).toEqual(shapePosition('condense', id, time, seed));
-      // Holding b constant changes only longitude; holding a constant changes latitude.
-      // Use model's original position function with fractional id, avoiding composedPosition's floor.
-      const da = diff(shapePosition('condense', id + .27 * h, time, seed - h), shapePosition('condense', id - .27 * h, time, seed + h));
-      const db = diff(shapePosition('condense', id - .13 * h, time, seed + h), shapePosition('condense', id + .13 * h, time, seed - h));
+  it('球面の文字は両モードで面へ接し、法線は外を向く', () => {
+    const h = 1e-5;
+    for (const mode of ['surface', 'flow'] as const) for (const id of [1, 17, 512, 31999]) for (const time of [0, 13, 200]) {
+      const spec = { ...DEFAULT_SPEC, mode }, seed = 7.25;
+      const frame = surfaceFrame(spec, id, time, seed)!; orthonormal(frame);
+      const position = composedPosition(spec, id, time, seed);
+      expect(Math.hypot(...position)).toBeCloseTo(1.2, 10);
+      expect(dot(frame.z, unit(position))).toBeCloseTo(1, 10);
+      // Perturb independent material coordinates, keeping the seeded field unchanged.
+      const da = diff(sphereSurface(id + .27 * h, time, seed - h), sphereSurface(id - .27 * h, time, seed + h));
+      const db = diff(sphereSurface(id - .13 * h, time, seed + h), sphereSurface(id + .13 * h, time, seed - h));
       expect(dot(frame.x, unit(da))).toBeCloseTo(1, 7);
       expect(dot(frame.z, unit(db))).toBeCloseTo(0, 7);
-    }
-  });
-
-  it('球の流路では文字横軸が曲線へ接し、法線は球の外向きになる', () => {
-    const spec: SceneSpec = { ...DEFAULT_SPEC, mode: 'flow' }, h = 1e-5;
-    for (const id of [0, 12, 713, 31999]) for (const time of [0, 17]) {
-      const frame = surfaceFrame(spec, id, time, 5)!; orthonormal(frame);
-      const forward = composedPosition(spec, id, time + h, 5), backward = composedPosition(spec, id, time - h, 5);
-      expect(dot(frame.x, unit(diff(forward, backward)))).toBeCloseTo(1, 8);
-      expect(dot(frame.z, unit(composedPosition(spec, id, time, 5)))).toBeCloseTo(1, 8);
     }
   });
 
@@ -73,8 +65,8 @@ describe('文字を形の接線へ沿わせる候補フレーム', () => {
     const out = createSurfaceFrame(), identities = [out.x, out.y, out.z];
     for (const mode of ['flow', 'surface'] as const) for (const deformation of ['gentle', 'omega'] as const) for (const id of [0, 31, 31999]) {
       const spec: SceneSpec = { ...DEFAULT_SPEC, shape: 'mobius', mode, deformation };
-      const time = 7, seed = 3, a = fract((id + seed * .13) * .618033988749895), b = fract((id + seed * .27) * .754877666246693);
-      const u = a * TAU * 2 + time * .33, w = mode === 'surface' ? (b - .5) * .94 : .37 + (b - .5) * .025;
+      const time = 7, seed = 3;
+      const [u, w] = mobiusMaterial(id, time, seed, mode === 'surface');
       expect(composedPosition(spec, id, time, seed)).toEqual(animatedMobius(u, w, time, deformation === 'omega'));
       expect(surfaceFrame(spec, id, time, seed, out)).toBe(out);
       expect(out).toEqual(mobiusFrame(u, w, time, deformation === 'omega'));

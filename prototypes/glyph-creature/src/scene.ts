@@ -99,7 +99,7 @@ export class GlyphScene {
       uniforms: {
         atlas: { value: this.atlas.texture }, time: { value: 0 }, glyphSize: { value: 0.09 },
         distance: { value: 6.3 }, scale: { value: 1 }, testYaw: { value: 0 }, testPose: { value: false },
-        alignment: { value: 0 },
+        alignment: { value: 0 }, closedSurface: { value: 0 },
       },
       vertexShader: `
         attribute vec2 atlasOffset;
@@ -107,26 +107,30 @@ export class GlyphScene {
         attribute float bornAt, phase, birthSize;
         attribute vec4 inkColor;
         attribute vec4 surfaceRotation;
-        uniform float time, glyphSize, distance, scale, testYaw, alignment;
+        uniform float time, glyphSize, distance, scale, testYaw, alignment, closedSurface;
         uniform bool testPose;
         varying vec2 atlasUV;
         varying float freshness;
         varying float light;
         varying vec3 glyphColor;
         void main() {
-          float pitch = testPose ? 0.0 : 0.25 * sin(time * 0.71 + phase);
-          float turn = phase + time * (0.32 + 0.09 * sin(phase));
-          // On a dense surface, linger near the front/back, but still pass through edge-on.
-          float yaw = testPose ? testYaw : atan(mix(1.0, 0.12, alignment) * sin(turn), cos(turn));
-          float roll = testPose ? 0.0 : 0.18 * sin(time * 0.47 + phase * 1.3);
-          float pulse = testPose ? 1.0 : 1.0 + 0.16 * sin(time * 0.8 + phase);
+          float pitch = testPose ? 0.0 : 0.15 * sin(time * 0.17 + phase);
+          float turn = phase + time * (0.09 + 0.025 * sin(phase));
+          // Dense letters lie on the material surface; sparse letters still turn freely.
+          float yaw = testPose ? testYaw : turn;
+          float roll = testPose ? 0.0 : 0.12 * sin(time * 0.13 + phase * 1.3);
+          float pulse = testPose ? 1.0 : 1.0 + 0.06 * sin(time * 0.19 + phase);
           vec3 q = position * glyphSize * pulse;
           q = vec3(q.x, cos(pitch) * q.y - sin(pitch) * q.z, sin(pitch) * q.y + cos(pitch) * q.z);
           q = vec3(cos(yaw) * q.x + sin(yaw) * q.z, q.y, -sin(yaw) * q.x + cos(yaw) * q.z);
           q = vec3(cos(roll) * q.x - sin(roll) * q.y, sin(roll) * q.x + cos(roll) * q.y, q.z);
           // Mix planar positions, not quaternion representatives. This stays continuous
           // across 180° (q and -q give the same result). Mid-density letters may flatten.
-          vec3 onSurface = q + 2.0 * cross(surfaceRotation.xyz, cross(surfaceRotation.xyz, q) + surfaceRotation.w * q);
+          vec3 materialPlane = position * glyphSize * pulse;
+          materialPlane = vec3(cos(roll) * materialPlane.x - sin(roll) * materialPlane.y,
+            sin(roll) * materialPlane.x + cos(roll) * materialPlane.y, materialPlane.z);
+          vec3 onSurface = materialPlane + 2.0 * cross(surfaceRotation.xyz,
+            cross(surfaceRotation.xyz, materialPlane) + surfaceRotation.w * materialPlane);
           q = mix(q, onSurface, testPose ? 0.0 : alignment);
           float settled = smoothstep(0.0, 3.8, time - bornAt);
           vec4 mv = modelViewMatrix * vec4(center, 1.0) + mix(vec4(position.xy * birthSize, 0.0, 0.0), modelViewMatrix * vec4(q, 0.0), settled);
@@ -135,6 +139,17 @@ export class GlyphScene {
           freshness = 1.0 - smoothstep(0.6, 7.6, time - bornAt);
           glyphColor = mix(vec3(0.94, 0.95, 0.94), inkColor.rgb, inkColor.a > 0.5 ? 1.0 : freshness);
           light = 0.30 + 0.70 * clamp((distance + 1.6 * scale + mv.z) / (3.2 * scale), 0.0, 1.0);
+          // Closed bodies show the material on their near side. Do not show the
+          // reversed back hemisphere through it; open strips remain two-sided.
+          vec3 outward = vec3(0.0, 0.0, 1.0);
+          outward += 2.0 * cross(surfaceRotation.xyz,
+            cross(surfaceRotation.xyz, outward) + surfaceRotation.w * outward);
+          vec3 viewNormal = normalize(normalMatrix * outward);
+          vec3 viewCenter = (modelViewMatrix * vec4(center, 1.0)).xyz;
+          float facing = dot(viewNormal, normalize(-viewCenter));
+          float nearSide = smoothstep(-0.08, 0.18, facing);
+          float coating = testPose ? 0.0 : closedSurface * smoothstep(0.3, 0.96, alignment) * settled;
+          light *= mix(1.0, nearSide, coating);
         }
       `,
       fragmentShader: `
@@ -236,16 +251,18 @@ export class GlyphScene {
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
     // Fit the largest breath once; following its current scale would cancel the visible motion.
     const motionFit = 1 + (MOTION_EXTENT[motion.kind] - 1) * this.formation;
-    const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit;
+    const formFit = 1 + (this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
+    const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit * formFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
     const aligned = surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
-    const alignment = aligned ? .88 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
+    const alignment = aligned ? .98 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
+    const sharedSurface = alignment > 0 && ['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape);
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
         ? this.testYaw === null ? [0.018 * Math.sin(t * 1.3), 0.024 * Math.sin(t * 0.9), 0.012 * Math.sin(t)] : [0, 0, 0]
-        : composedPosition(this.matter.spec, i, t, this.matter.seed, motion, this.localPoint).map(v => v * this.formation);
+        : composedPosition(this.matter.spec, i, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined).map(v => v * this.formation);
       const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
       const target = p.map((v, axis) => this.origins[i * 3 + axis] * (1 - blend) + v * blend) as Vec3;
       this.morphTargets.set(target, i * 3);
@@ -255,7 +272,8 @@ export class GlyphScene {
         this.positions[i * 3 + axis] = formed[axis];
       }
       if (alignment > 0) {
-        const frame = surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
+        const frame = sharedSurface ? normalizeSurfaceFrame(this.frameScratch)
+          : surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
         if (motion.kind !== 'calm') {
           applyMotionFrame(motion, this.localPoint, frame.x, frame.y, this.movedPoint, frame.x, frame.y);
           normalizeSurfaceFrame(frame);
@@ -280,6 +298,7 @@ export class GlyphScene {
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
     this.material.uniforms.alignment.value = alignment;
+    this.material.uniforms.closedSurface.value = ['condense', 'cube', 'cuboid', 'dango'].includes(this.matter.spec.shape) ? 1 : 0;
     this.material.uniforms.testPose.value = this.testYaw !== null;
     this.material.uniforms.testYaw.value = this.testYaw ?? 0;
     this.renderer.render(this.scene, this.camera);
