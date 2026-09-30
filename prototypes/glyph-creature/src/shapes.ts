@@ -1,3 +1,4 @@
+import { isExpandedSurface, expandedSurface } from './expanded-surfaces';
 import type { SceneSpec } from './language';
 import { shapePosition, TAU, type Vec3 } from './model';
 import { applyMotionPosition, prepareMotion, type MotionTransform } from './motions';
@@ -25,6 +26,7 @@ const cross: [number, number][] = [[-.32,-1.2],[.32,-1.2],[.32,-.32],[1.2,-.32],
 
 type SurfaceTangents = { x: Vec3; y: Vec3 };
 function single(spec: SceneSpec, id: number, time: number, seed: number, tangents?: SurfaceTangents): Vec3 {
+  if (isExpandedSurface(spec.shape)) return expandedSurface(spec.shape, id, time, seed, undefined, tangents?.x, tangents?.y);
   if (isWordSurface(spec.shape)) return wordSurface(spec.shape, id, time, seed, undefined, tangents?.x, tangents?.y);
   if (spec.shape === 'dango') return dangoPosition(id, time, seed, spec.mode, undefined, tangents?.x, tangents?.y);
   const a = fract((id + seed * .13) * .618033988749895);

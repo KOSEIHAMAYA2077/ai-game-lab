@@ -1,7 +1,8 @@
+import { lexicalStats } from './lexical';
 import './style.css';
 import { FORMS, MAX_GLYPHS, MAX_INPUT_LENGTH, Matter, splitGlyphs, type Form } from './model';
 import { GlyphScene } from './scene';
-import { COLORS, DEFAULT_SPEC, INK_NAMES, SHAPE_NAMES, SHAPE_GROUPS, interpret, describe, type Ink, type Shape, type SceneSpec } from './language';
+import { COLORS, DEFAULT_SPEC, INK_NAMES, SHAPE_NAMES, SHAPE_GROUPS, SHAPES, shapeEvidence, interpret, describe, type Ink, type Shape, type SceneSpec } from './language';
 import { setupCompanion } from './companion';
 import { randomUnit } from './shapes';
 import { ShapeCycle, hasShapeIntent, writingCue } from './shape-cycle';
@@ -9,7 +10,7 @@ import { ShapeCycle, hasShapeIntent, writingCue } from './shape-cycle';
 const interpretAuthored = (text: string, spec: SceneSpec, choose?: () => number) => ({ ...interpret(text, spec, undefined, choose), learned: false });
 
 const names: Record<Form, string> = { condense: '凝縮', vortex: '渦', orbit: '軌道', mobius: 'メビウス' };
-const examples = ['流れる 球体', '表面 立方体', '波打つ メビウスの輪', '今夜は赤い花火を眺めている。', ...['花', '蝶', 'くらげ', '木', '星', '螺旋', '砂時計', '土星', '剣', '花瓶'].map(word => `白い文字が${word}の表面を流れる`), '円 8個', '円環 鎖', '表面 呼吸する だんご'];
+const examples = ['輪っか', 'ねじれた輪っか', 'ふわふわしたもの', '白い文字が巻き貝の表面を流れる', '赤い文字でできた鳥が羽ばたく', '青い歯車', '表面 雪の結晶', '花を生けるもの', '流れる 球体', '表面 立方体', '波打つ メビウスの輪', '今夜は赤い花火を眺めている。', ...['花', '蝶', 'くらげ', '木', '星', '螺旋', '砂時計', '土星', '剣', '花瓶'].map(word => `白い文字が${word}の表面を流れる`), '円 8個', '円環 鎖', '表面 呼吸する だんご'];
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main id="scene" tabindex="-1" aria-label="文字の空間。Enterで始める"></main>
@@ -26,7 +27,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
       <p class="help">入力例は書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」を組み合わせられます。「通常」で変形を戻します。候補が複数ある場合は、送信ごとに一つ選びます。入力した文章全体を文字として追加します。</p>
       <label class="help"><input id="auto-shape" type="checkbox" checked /> 形を自動で変える（30秒）</label><p class="help">言葉やボタンで選んだ形は60秒保ちます。停止中と日記の閲覧中は切り替わりません。</p>
-      <p class="help">この版は対応語と数式だけで動きます。花・蝶・くらげ・木・星・螺旋・砂時計・土星・剣・花瓶を追加しています。</p>
+      <p class="help">60種類の形があります。「輪っか」「ぐるぐる」などから近い形を選びます。形の名前を直接書くと、その指定を優先します。対応しない文章では今の形を保ちます。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
       <p class="help">＋文字 は直前の入力をもう一度追加。×256で一度に増やせます。指定した色は今回の文字だけに残ります。</p>
@@ -233,6 +234,7 @@ async function start() {
   requestAnimationFrame(frame);
   if (import.meta.env.DEV) {
     (window as unknown as { __GLYPH_ART__: unknown }).__GLYPH_ART__ = {
+      vocabulary: (text = '') => ({ candidates: shapeEvidence(text), stats: lexicalStats(), shapes: SHAPES.length }),
       inspect: () => ({ ...matter.inspect(), paused, introDone, awakened, terminalOpen: !terminal.hidden, scene: scene.inspect(), cycle: { enabled: cycle.enabled, remaining: cycle.remaining } }),
       pause: (value = true) => { paused = value; updateUI(); },
       step: (ms: number, automatic = false) => { paused = true; matter.step(ms / 1000); if (automatic) advanceCycle(ms / 1000); scene.render(Math.min(ms / 1000, 1)); updateUI(); },

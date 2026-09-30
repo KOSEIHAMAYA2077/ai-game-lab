@@ -1,3 +1,4 @@
+import { isExpandedSurface, expandedSurface } from './expanded-surfaces';
 import type { SceneSpec } from './language';
 import type { Vec3 } from './model';
 import { isWordSurface, wordSurface } from './word-surfaces';
@@ -50,8 +51,9 @@ export function mobiusFrame(u: number, w: number, time: number, omega = false, o
  */
 export function surfaceFrame(spec: SceneSpec, id: number, time: number, seed = 1, out?: SurfaceFrame): SurfaceFrame | null {
   if (spec.count !== 1 || spec.arrangement !== 'single' || spec.deformation === 'double'
-      || (spec.shape !== 'condense' && spec.shape !== 'mobius' && spec.shape !== 'dango' && spec.shape !== 'cube' && spec.shape !== 'cuboid' && !isWordSurface(spec.shape))) return null;
+      || (spec.shape !== 'condense' && spec.shape !== 'mobius' && spec.shape !== 'dango' && spec.shape !== 'cube' && spec.shape !== 'cuboid' && !isWordSurface(spec.shape) && !isExpandedSurface(spec.shape))) return null;
   const target = out ?? createSurfaceFrame();
+  if (isExpandedSurface(spec.shape)) { expandedSurface(spec.shape, id, time, seed, target.z, target.x, target.y); return normalizeSurfaceFrame(target); }
   if (isWordSurface(spec.shape)) { wordSurface(spec.shape, id, time, seed, target.z, target.x, target.y); return normalizeSurfaceFrame(target); }
   if (spec.shape === 'dango') return dangoFrame(id, time, seed, spec.mode, target);
   if (spec.shape === 'mobius') {

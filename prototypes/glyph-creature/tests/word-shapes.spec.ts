@@ -1,6 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
-const evidence = '../../experiments/word-shapes-v2/evidence';
+const evidence = '../../experiments/konjo-v1/regression/word-shapes-v2/evidence';
 test.use({ viewport: { width: 1280, height: 960 }, deviceScaleFactor: 1 });
 const inspect = (page: Page) => page.evaluate(() => (window as any).__GLYPH_ART__.inspect());
 async function feed(page: Page, words: string, count = 4096) {
@@ -32,7 +32,7 @@ test('十種類の表面を文章から選び、文字・色・有限な描画�
     await page.screenshot({ path: `${evidence}/${shape}-4096-t30.png` });
     records.push({ shape, count: state.count, shapeState: state.spec, finite: later.scene.finite, changed: true });
   }
-  expect(errors).toEqual([]); expect(requests.filter(url => !url.startsWith('http://127.0.0.1:4194') && !url.startsWith('data:'))).toEqual([]);
+  expect(errors).toEqual([]); expect(requests.filter(url => !url.startsWith('http://127.0.0.1:4195') && !url.startsWith('data:'))).toEqual([]);
   expect(requests.some(url => /learned-shape|model\.json/.test(url))).toBe(false);
   writeFileSync(`${evidence}/surfaces.json`, JSON.stringify({ records, errors, externalRequests: [], modelLoaded: false }, null, 2));
 });

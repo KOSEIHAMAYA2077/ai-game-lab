@@ -1,0 +1,1004 @@
+{
+  "description": "Artificial development examples, not heldout evaluation; expected shapes test inclusion, not unique correctness.",
+  "passed": 44,
+  "scored": 44,
+  "observed": 6,
+  "results": [
+    {
+      "id": "positive-01",
+      "category": "synonym",
+      "text": "胡蝶がゆっくり羽ばたく。",
+      "expectedShapes": [
+        "butterfly"
+      ],
+      "triggerTerm": "胡蝶",
+      "candidates": [
+        {
+          "shape": "butterfly",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "胡蝶",
+          "path": [
+            "wn30:02274259-n",
+            "synonym",
+            "butterfly"
+          ]
+        },
+        {
+          "shape": "bird",
+          "score": 0.9,
+          "kind": "association",
+          "word": "羽ばたく",
+          "path": [
+            "wing",
+            "bird"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-02",
+      "category": "synonym",
+      "text": "夢見鳥のかたちを眺める。",
+      "expectedShapes": [
+        "butterfly"
+      ],
+      "triggerTerm": "夢見鳥",
+      "candidates": [
+        {
+          "shape": "bird",
+          "score": 1,
+          "kind": "name",
+          "word": "鳥",
+          "path": [
+            "bird"
+          ]
+        },
+        {
+          "shape": "butterfly",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "夢見鳥",
+          "path": [
+            "wn30:02274259-n",
+            "synonym",
+            "butterfly"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-03",
+      "category": "synonym",
+      "text": "白い正六面体を思い浮かべた。",
+      "expectedShapes": [
+        "cube"
+      ],
+      "triggerTerm": "正六面体",
+      "candidates": [
+        {
+          "shape": "cube",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "正六面体",
+          "path": [
+            "wn30:13916721-n",
+            "synonym",
+            "cube"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-04",
+      "category": "synonym",
+      "text": "まっ四角の面に文字を置く。",
+      "expectedShapes": [
+        "square"
+      ],
+      "triggerTerm": "まっ四角",
+      "candidates": [
+        {
+          "shape": "square",
+          "score": 1,
+          "kind": "name",
+          "word": "四角形",
+          "path": [
+            "square"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-05",
+      "category": "synonym",
+      "text": "輪っかがひとつ浮かんでいる。",
+      "expectedShapes": [
+        "ring"
+      ],
+      "triggerTerm": "輪っか",
+      "candidates": [
+        {
+          "shape": "mobius",
+          "score": 0.9,
+          "kind": "association",
+          "word": "輪っか",
+          "path": [
+            "loop",
+            "twisted-loop",
+            "mobius"
+          ]
+        },
+        {
+          "shape": "ring",
+          "score": 0.855,
+          "kind": "association",
+          "word": "輪っか",
+          "path": [
+            "loop",
+            "circular",
+            "ring"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-06",
+      "category": "synonym",
+      "text": "円筒を静かに回したい。",
+      "expectedShapes": [
+        "cylinder"
+      ],
+      "triggerTerm": "円筒",
+      "candidates": [
+        {
+          "shape": "cylinder",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "円筒",
+          "path": [
+            "wn30:13899804-n",
+            "synonym",
+            "cylinder"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-07",
+      "category": "synonym",
+      "text": "樹葉が風に揺れている。",
+      "expectedShapes": [
+        "leaf"
+      ],
+      "triggerTerm": "樹葉",
+      "candidates": [
+        {
+          "shape": "leaf",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "樹葉",
+          "path": [
+            "wn30:13152742-n",
+            "synonym",
+            "leaf"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-08",
+      "category": "synonym",
+      "text": "青い華瓶を机に置いた。",
+      "expectedShapes": [
+        "vase"
+      ],
+      "triggerTerm": "華瓶",
+      "candidates": [
+        {
+          "shape": "bottle",
+          "score": 1,
+          "kind": "name",
+          "word": "瓶",
+          "path": [
+            "bottle"
+          ]
+        },
+        {
+          "shape": "vase",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "華瓶",
+          "path": [
+            "wn30:04522168-n",
+            "synonym",
+            "vase"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-09",
+      "category": "synonym",
+      "text": "小さな提燈を点けた。",
+      "expectedShapes": [
+        "lantern"
+      ],
+      "triggerTerm": "提燈",
+      "candidates": [
+        {
+          "shape": "lantern",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "提燈",
+          "path": [
+            "wn30:03640988-n",
+            "synonym",
+            "lantern"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-10",
+      "category": "synonym",
+      "text": "帝冠を文字で描く。",
+      "expectedShapes": [
+        "crown"
+      ],
+      "triggerTerm": "帝冠",
+      "candidates": [
+        {
+          "shape": "crown",
+          "score": 1,
+          "kind": "name",
+          "word": "王冠",
+          "path": [
+            "crown"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-11",
+      "category": "synonym",
+      "text": "歯車が静かに動く。",
+      "expectedShapes": [
+        "gear"
+      ],
+      "triggerTerm": "歯車",
+      "candidates": [
+        {
+          "shape": "gear",
+          "score": 1,
+          "kind": "name",
+          "word": "歯車",
+          "path": [
+            "gear"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-12",
+      "category": "synonym",
+      "text": "結い目をほどかずに眺める。",
+      "expectedShapes": [
+        "knot"
+      ],
+      "triggerTerm": "結い目",
+      "candidates": [
+        {
+          "shape": "knot",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "結い目",
+          "path": [
+            "wn30:03627232-n",
+            "synonym",
+            "knot"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-13",
+      "category": "synonym",
+      "text": "西洋梨の表面をなぞる。",
+      "expectedShapes": [
+        "pear"
+      ],
+      "triggerTerm": "西洋梨",
+      "candidates": [
+        {
+          "shape": "pear",
+          "score": 1,
+          "kind": "name",
+          "word": "洋梨",
+          "path": [
+            "pear"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-14",
+      "category": "synonym",
+      "text": "金剛石が黒い背景に浮かぶ。",
+      "expectedShapes": [
+        "diamond"
+      ],
+      "triggerTerm": "金剛石",
+      "candidates": [
+        {
+          "shape": "diamond",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "金剛石",
+          "path": [
+            "wn30:13371958-n",
+            "synonym",
+            "diamond"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-15",
+      "category": "synonym",
+      "text": "パンプキンの丸みを表す。",
+      "expectedShapes": [
+        "pumpkin"
+      ],
+      "triggerTerm": "パンプキン",
+      "candidates": [
+        {
+          "shape": "pumpkin",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "パンプキン",
+          "path": [
+            "wn30:07735510-n",
+            "synonym",
+            "pumpkin"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-16",
+      "category": "synonym",
+      "text": "小鳥が横を向いている。",
+      "expectedShapes": [
+        "bird"
+      ],
+      "triggerTerm": "小鳥",
+      "candidates": [
+        {
+          "shape": "bird",
+          "score": 1,
+          "kind": "name",
+          "word": "鳥",
+          "path": [
+            "bird"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-17",
+      "category": "synonym",
+      "text": "青い大蛇がうねる。",
+      "expectedShapes": [
+        "snake"
+      ],
+      "triggerTerm": "大蛇",
+      "candidates": [
+        {
+          "shape": "snake",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "大蛇",
+          "path": [
+            "wn30:01726692-n",
+            "synonym",
+            "snake"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-18",
+      "category": "synonym",
+      "text": "白い雪片がひとつある。",
+      "expectedShapes": [
+        "snowflake"
+      ],
+      "triggerTerm": "雪片",
+      "candidates": [
+        {
+          "shape": "snowflake",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "雪片",
+          "path": [
+            "wn30:11509066-n",
+            "synonym",
+            "snowflake"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-19",
+      "category": "synonym",
+      "text": "御月様を見上げる。",
+      "expectedShapes": [
+        "moon"
+      ],
+      "triggerTerm": "御月様",
+      "candidates": [
+        {
+          "shape": "moon",
+          "score": 1,
+          "kind": "name",
+          "word": "三日月",
+          "path": [
+            "moon"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-20",
+      "category": "synonym",
+      "text": "ソレイユが明るい。",
+      "expectedShapes": [
+        "sun"
+      ],
+      "triggerTerm": "ソレイユ",
+      "candidates": [
+        {
+          "shape": "sun",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "ソレイユ",
+          "path": [
+            "wn30:09450163-n",
+            "synonym",
+            "sun"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-21",
+      "category": "synonym",
+      "text": "波動の曲線を眺める。",
+      "expectedShapes": [
+        "wave"
+      ],
+      "triggerTerm": "波動",
+      "candidates": [
+        {
+          "shape": "wave",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "波動",
+          "path": [
+            "wn30:13868944-n",
+            "synonym",
+            "wave"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-22",
+      "category": "synonym",
+      "text": "クラゲが浮いている。",
+      "expectedShapes": [
+        "jellyfish"
+      ],
+      "triggerTerm": "クラゲ",
+      "candidates": [
+        {
+          "shape": "jellyfish",
+          "score": 1,
+          "kind": "name",
+          "word": "くらげ",
+          "path": [
+            "jellyfish"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-23",
+      "category": "synonym",
+      "text": "マッシュルームの傘が開く。",
+      "expectedShapes": [
+        "mushroom"
+      ],
+      "triggerTerm": "マッシュルーム",
+      "candidates": [
+        {
+          "shape": "umbrella",
+          "score": 1,
+          "kind": "name",
+          "word": "傘",
+          "path": [
+            "umbrella"
+          ]
+        },
+        {
+          "shape": "mushroom",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "マッシュルーム",
+          "path": [
+            "wn30:07734744-n",
+            "synonym",
+            "mushroom"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-24",
+      "category": "synonym",
+      "text": "青い薔薇をひとつ置く。",
+      "expectedShapes": [
+        "rose"
+      ],
+      "triggerTerm": "薔薇",
+      "candidates": [
+        {
+          "shape": "rose",
+          "score": 1,
+          "kind": "name",
+          "word": "薔薇",
+          "path": [
+            "rose"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-25",
+      "category": "synonym",
+      "text": "白い蓮が開いている。",
+      "expectedShapes": [
+        "lotus"
+      ],
+      "triggerTerm": "蓮",
+      "candidates": [
+        {
+          "shape": "lotus",
+          "score": 1,
+          "kind": "name",
+          "word": "蓮",
+          "path": [
+            "lotus"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-26",
+      "category": "synonym",
+      "text": "鶏卵をそっと置いた。",
+      "expectedShapes": [
+        "egg"
+      ],
+      "triggerTerm": "鶏卵",
+      "candidates": [
+        {
+          "shape": "egg",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "鶏卵",
+          "path": [
+            "wn30:07840804-n",
+            "synonym",
+            "egg"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-27",
+      "category": "synonym",
+      "text": "遠くに稲光が見えた。",
+      "expectedShapes": [
+        "bolt"
+      ],
+      "triggerTerm": "稲光",
+      "candidates": [
+        {
+          "shape": "bolt",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "稲光",
+          "path": [
+            "wn30:11475279-n",
+            "synonym",
+            "bolt"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-28",
+      "category": "synonym",
+      "text": "西洋のソードを思い出す。",
+      "expectedShapes": [
+        "sword"
+      ],
+      "triggerTerm": "ソード",
+      "candidates": [
+        {
+          "shape": "sword",
+          "score": 1,
+          "kind": "name",
+          "word": "剣",
+          "path": [
+            "sword"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-29",
+      "category": "synonym",
+      "text": "トライアングルのかたち。",
+      "expectedShapes": [
+        "triangle"
+      ],
+      "triggerTerm": "トライアングル",
+      "candidates": [
+        {
+          "shape": "triangle",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "トライアングル",
+          "path": [
+            "wn30:13879320-n",
+            "synonym",
+            "triangle"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-30",
+      "category": "synonym",
+      "text": "draw a regular hexahedron",
+      "expectedShapes": [
+        "cube"
+      ],
+      "triggerTerm": "regular hexahedron",
+      "candidates": [
+        {
+          "shape": "cube",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "regular hexahedron",
+          "path": [
+            "wn30:13916721-n",
+            "synonym",
+            "cube"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-31",
+      "category": "synonym",
+      "text": "a small sandglass on a desk",
+      "expectedShapes": [
+        "hourglass"
+      ],
+      "triggerTerm": "sandglass",
+      "candidates": [
+        {
+          "shape": "hourglass",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "sandglass",
+          "path": [
+            "wn30:04134632-n",
+            "synonym",
+            "hourglass"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "positive-32",
+      "category": "synonym",
+      "text": "a quiet maelstrom",
+      "expectedShapes": [
+        "vortex"
+      ],
+      "triggerTerm": "maelstrom",
+      "candidates": [
+        {
+          "shape": "vortex",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "maelstrom",
+          "path": [
+            "wn30:07433145-n",
+            "synonym",
+            "vortex"
+          ]
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "neutral-01",
+      "category": "neutral",
+      "text": "この文章には指定を入れていません。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-02",
+      "category": "neutral",
+      "text": "木曜日は予定がありません。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-03",
+      "category": "neutral",
+      "text": "これは形ではない。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-04",
+      "category": "neutral",
+      "text": "はなしを続けてみる。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-05",
+      "category": "neutral",
+      "text": "2026年5月18日の日記。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-06",
+      "category": "neutral",
+      "text": "結果をまとめて保存した。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-07",
+      "category": "neutral",
+      "text": "接続を確認してください。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-08",
+      "category": "neutral",
+      "text": "今日は何もしなかった。",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-09",
+      "category": "neutral",
+      "text": "Sunday is a day off.",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-10",
+      "category": "neutral",
+      "text": "The starter failed to respond.",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-11",
+      "category": "neutral",
+      "text": "Their offspring grew quickly.",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "neutral-12",
+      "category": "neutral",
+      "text": "The brand changed its policy.",
+      "expectedShapes": [],
+      "candidates": [],
+      "pass": true
+    },
+    {
+      "id": "ambiguous-01",
+      "category": "context_required",
+      "text": "Spring begins in March.",
+      "expectedShapes": null,
+      "possibleLexicalShapes": [
+        "helix"
+      ],
+      "note": "season or coil",
+      "candidates": [
+        {
+          "shape": "helix",
+          "score": 1,
+          "kind": "name",
+          "word": "螺旋",
+          "path": [
+            "helix"
+          ]
+        }
+      ],
+      "pass": null
+    },
+    {
+      "id": "ambiguous-02",
+      "category": "context_required",
+      "text": "シェルからコマンドを実行する。",
+      "expectedShapes": null,
+      "possibleLexicalShapes": [
+        "shell"
+      ],
+      "note": "software shell rather than mollusc shell",
+      "candidates": [
+        {
+          "shape": "shell",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "シェル",
+          "path": [
+            "wn30:01904182-n",
+            "synonym",
+            "shell"
+          ]
+        }
+      ],
+      "pass": null
+    },
+    {
+      "id": "ambiguous-03",
+      "category": "context_required",
+      "text": "ローズ色の紙を使った。",
+      "expectedShapes": null,
+      "possibleLexicalShapes": [
+        "rose"
+      ],
+      "note": "rose color rather than plant",
+      "candidates": [
+        {
+          "shape": "rose",
+          "score": 0.96,
+          "kind": "synonym",
+          "word": "ローズ",
+          "path": [
+            "wn30:12620196-n",
+            "synonym",
+            "rose"
+          ]
+        }
+      ],
+      "pass": null
+    },
+    {
+      "id": "ambiguous-04",
+      "category": "context_required",
+      "text": "クラウンという車を見た。",
+      "expectedShapes": null,
+      "possibleLexicalShapes": [
+        "crown"
+      ],
+      "note": "product name rather than crown",
+      "candidates": [
+        {
+          "shape": "crown",
+          "score": 1,
+          "kind": "name",
+          "word": "王冠",
+          "path": [
+            "crown"
+          ]
+        }
+      ],
+      "pass": null
+    },
+    {
+      "id": "ambiguous-05",
+      "category": "context_required",
+      "text": "That performer is a star.",
+      "expectedShapes": null,
+      "possibleLexicalShapes": [
+        "star"
+      ],
+      "note": "person rather than geometric figure",
+      "candidates": [
+        {
+          "shape": "star",
+          "score": 1,
+          "kind": "name",
+          "word": "星",
+          "path": [
+            "star"
+          ]
+        }
+      ],
+      "pass": null
+    },
+    {
+      "id": "ambiguous-06",
+      "category": "context_required",
+      "text": "カプセル型のホテルに泊まる。",
+      "expectedShapes": null,
+      "possibleLexicalShapes": [
+        "capsule"
+      ],
+      "note": "container shape or compound place name",
+      "candidates": [
+        {
+          "shape": "capsule",
+          "score": 1,
+          "kind": "name",
+          "word": "カプセル",
+          "path": [
+            "capsule"
+          ]
+        }
+      ],
+      "pass": null
+    }
+  ]
+}

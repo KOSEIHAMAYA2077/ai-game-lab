@@ -4,7 +4,7 @@ import type { Motion } from './motions';
 // English words need boundaries: "microwave" must not activate "wave".
 const words: [RegExp, Motion][] = [
   [/呼吸|息づく|息づいて|脈動|\b(?:breath|breathe|breathing|pulse|pulsing)\b/iu, 'breathe'],
-  [/波打つ|波打って|うねる|うねって|\b(?:wave|waving|ripple|rippling)\b/iu, 'wave'],
+  [/ふわふわ|ふわり|ゆらゆら|漂う|漂って|羽ばたく|はばたく|波打つ|波打って|うねる|うねって|\b(?:wave|waving|ripple|rippling)\b/iu, 'wave'],
   [/通常|普通|変形なし|揺れなし|\b(?:calm|normal)\b/iu, 'calm'],
 ];
 
