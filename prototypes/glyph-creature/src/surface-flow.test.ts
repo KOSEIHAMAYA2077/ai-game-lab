@@ -117,7 +117,8 @@ describe('ゆっくり変化する表面と文字の流れ', () => {
 
   it('位置と接線の共有計算は従来の位置・個別フレームと同じ結果を返す', () => {
     const forms: Partial<SceneSpec>[] = [
-      { shape: 'cube', mode: 'surface' }, { shape: 'cuboid', mode: 'surface' },
+      ...(['condense', 'cube', 'cuboid', 'dango'] as const).flatMap(shape =>
+        (['surface', 'flow'] as const).map(mode => ({ shape, mode }))),
       { shape: 'mobius', mode: 'surface' }, { shape: 'mobius', mode: 'flow' },
       { shape: 'mobius', mode: 'surface', deformation: 'omega' },
       { shape: 'mobius', mode: 'flow', deformation: 'omega' },

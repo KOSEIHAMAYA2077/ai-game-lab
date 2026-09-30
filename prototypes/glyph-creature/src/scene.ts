@@ -99,7 +99,7 @@ export class GlyphScene {
       uniforms: {
         atlas: { value: this.atlas.texture }, time: { value: 0 }, glyphSize: { value: 0.09 },
         distance: { value: 6.3 }, scale: { value: 1 }, testYaw: { value: 0 }, testPose: { value: false },
-        alignment: { value: 0 },
+        alignment: { value: 0 }, closedSurface: { value: 0 },
       },
       vertexShader: `
         attribute vec2 atlasOffset;
@@ -107,7 +107,7 @@ export class GlyphScene {
         attribute float bornAt, phase, birthSize;
         attribute vec4 inkColor;
         attribute vec4 surfaceRotation;
-        uniform float time, glyphSize, distance, scale, testYaw, alignment;
+        uniform float time, glyphSize, distance, scale, testYaw, alignment, closedSurface;
         uniform bool testPose;
         varying vec2 atlasUV;
         varying float freshness;
@@ -139,6 +139,17 @@ export class GlyphScene {
           freshness = 1.0 - smoothstep(0.6, 7.6, time - bornAt);
           glyphColor = mix(vec3(0.94, 0.95, 0.94), inkColor.rgb, inkColor.a > 0.5 ? 1.0 : freshness);
           light = 0.30 + 0.70 * clamp((distance + 1.6 * scale + mv.z) / (3.2 * scale), 0.0, 1.0);
+          // Closed bodies show the material on their near side. Do not show the
+          // reversed back hemisphere through it; open strips remain two-sided.
+          vec3 outward = vec3(0.0, 0.0, 1.0);
+          outward += 2.0 * cross(surfaceRotation.xyz,
+            cross(surfaceRotation.xyz, outward) + surfaceRotation.w * outward);
+          vec3 viewNormal = normalize(normalMatrix * outward);
+          vec3 viewCenter = (modelViewMatrix * vec4(center, 1.0)).xyz;
+          float facing = dot(viewNormal, normalize(-viewCenter));
+          float nearSide = smoothstep(-0.08, 0.18, facing);
+          float coating = testPose ? 0.0 : closedSurface * smoothstep(0.3, 0.96, alignment) * settled;
+          light *= mix(1.0, nearSide, coating);
         }
       `,
       fragmentShader: `
@@ -246,7 +257,7 @@ export class GlyphScene {
     const blend = smooth((t - this.switchedAt) / 1.6);
     const aligned = surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
     const alignment = aligned ? .98 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
-    const sharedSurface = alignment > 0 && ['cube', 'cuboid', 'mobius'].includes(this.matter.spec.shape);
+    const sharedSurface = alignment > 0 && ['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape);
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
@@ -287,6 +298,7 @@ export class GlyphScene {
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
     this.material.uniforms.alignment.value = alignment;
+    this.material.uniforms.closedSurface.value = ['condense', 'cube', 'cuboid', 'dango'].includes(this.matter.spec.shape) ? 1 : 0;
     this.material.uniforms.testPose.value = this.testYaw !== null;
     this.material.uniforms.testYaw.value = this.testYaw ?? 0;
     this.renderer.render(this.scene, this.camera);

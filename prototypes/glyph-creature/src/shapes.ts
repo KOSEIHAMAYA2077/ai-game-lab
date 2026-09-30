@@ -2,7 +2,7 @@ import type { SceneSpec } from './language';
 import { shapePosition, TAU, type Vec3 } from './model';
 import { applyMotionPosition, prepareMotion, type MotionTransform } from './motions';
 import { dangoPosition } from './dango';
-import { mobiusMaterial, mobiusSurface, cubeSurface, quietFireworks } from './surface-flow';
+import { mobiusMaterial, mobiusSurface, sphereSurface, cubeSurface, quietFireworks } from './surface-flow';
 
 const fract = (n: number) => n - Math.floor(n);
 const mix = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -24,15 +24,19 @@ const cross: [number, number][] = [[-.32,-1.2],[.32,-1.2],[.32,-.32],[1.2,-.32],
 
 type SurfaceTangents = { x: Vec3; y: Vec3 };
 function single(spec: SceneSpec, id: number, time: number, seed: number, tangents?: SurfaceTangents): Vec3 {
-  if (spec.shape === 'dango') return dangoPosition(id, time, seed, spec.mode);
+  if (spec.shape === 'dango') return dangoPosition(id, time, seed, spec.mode, undefined, tangents?.x, tangents?.y);
   const a = fract((id + seed * .13) * .618033988749895);
   const b = fract((id + seed * .27) * .754877666246693);
   const surface = spec.mode === 'surface';
   if (spec.shape === 'fireworks') return quietFireworks(id, time, seed);
-  if (spec.shape === 'condense' && !surface) {
-    const u = a * TAU + time * .25;
-    const latitude = .92 * Math.sin(u * 3);
-    return [Math.cos(latitude) * Math.cos(u) * 1.2, Math.sin(latitude) * 1.2, Math.cos(latitude) * Math.sin(u) * 1.2];
+  if (spec.shape === 'condense') {
+    // A solid stays a surface even when the sentence includes “flow”.
+    const p = sphereSurface(id, time, seed, undefined, tangents?.x, tangents?.y);
+    for (let axis = 0; axis < 3; axis++) {
+      p[axis] *= 1.2;
+      if (tangents) { tangents.x[axis] *= 1.2; tangents.y[axis] *= 1.2; }
+    }
+    return p;
   }
   if (spec.shape === 'mobius') {
     const [u, w] = mobiusMaterial(id, time, seed, surface);
@@ -46,14 +50,6 @@ function single(spec: SceneSpec, id: number, time: number, seed: number, tangent
     return [r * Math.cos(u), r * Math.sin(u), tube * Math.sin(v)];
   }
   if (spec.shape === 'cube' || spec.shape === 'cuboid') {
-    const extents = spec.shape === 'cube' ? [1, 1, 1] : [1.35, .75, .55];
-    if (!surface) {
-      // Opposite XY and YZ face circuits cover all 12 edges (four shared).
-      const p = polygon(a + time * .07, square);
-      const side = id % 4;
-      const v = side < 2 ? [p[0], p[1], side === 0 ? 1 : -1] : [side === 2 ? 1 : -1, p[0], p[1]];
-      return v.map((n, axis) => n * extents[axis]) as Vec3;
-    }
     return cubeSurface(id, time, seed, spec.shape === 'cuboid', undefined, tangents?.x, tangents?.y);
   }
   if (spec.shape === 'square' || spec.shape === 'triangle' || spec.shape === 'cross') {
@@ -65,7 +61,7 @@ function single(spec: SceneSpec, id: number, time: number, seed: number, tangent
 }
 
 /** localPoint receives the undeformed point. Optional tangents share its calculation
- * for single cube/cuboid surfaces and the Möbius strip; normalize before rendering. */
+ * for single solid surfaces and the Möbius strip; normalize before rendering. */
 export function composedPosition(spec: SceneSpec, id: number, time: number, seed = 1,
   motion: MotionTransform = prepareMotion(spec.motion ?? 'calm', time), localPoint?: Vec3, tangents?: SurfaceTangents): Vec3 {
   const count = spec.deformation === 'double' ? 2 : spec.count;

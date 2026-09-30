@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { TAU, type Vec3 } from './model';
+import type { Vec3 } from './model';
 import { createSurfaceFrame } from './surface-frame';
 import { DANGO_RADIUS, DANGO_SPACING, dangoFrame, dangoPosition } from './dango';
 
@@ -22,36 +22,34 @@ describe('文字でできる三つの団子', () => {
     expect(DANGO_RADIUS * 2).toBeGreaterThan(DANGO_SPACING);
   });
 
-  it('表面は各球の上下左右前後を覆い、流路とは異なる位置になる', () => {
-    for (const group of [0, 1, 2]) {
-      const points = Array.from({ length: 256 }, (_, local) => delta(dangoPosition(local * 3 + group, 0), center(group)));
+  it('両モードとも各球の上下左右前後を覆う', () => {
+    for (const mode of ['surface', 'flow'] as const) for (const group of [0, 1, 2]) {
+      const points = Array.from({ length: 256 }, (_, local) => delta(dangoPosition(local * 3 + group, 0, 1, mode), center(group)));
       for (const axis of [0, 1, 2]) {
         expect(Math.min(...points.map(p => p[axis]))).toBeLessThan(-.42);
         expect(Math.max(...points.map(p => p[axis]))).toBeGreaterThan(.42);
         expect(Math.abs(points.reduce((sum, p) => sum + p[axis], 0) / points.length)).toBeLessThan(.015);
       }
     }
-    expect(dangoPosition(71, 3, 2, 'surface')).not.toEqual(dangoPosition(71, 3, 2, 'flow'));
   });
 
-  it('循環の一周で位置も姿勢も戻り、継ぎ目で跳ばない', () => {
-    for (const mode of ['surface', 'flow'] as const) {
-      const period = TAU / (mode === 'flow' ? .30 : .22);
+  it('表面の流れは長時間でも飛ばず、各球で同じ動きを繰り返さない', () => {
+    for (const mode of ['surface', 'flow'] as const) for (const time of [0, 20, 120, 3600]) {
       for (const id of [0, 1, 2, 127, 31999]) {
-        const a = dangoPosition(id, 3, 5, mode), b = dangoPosition(id, 3 + period, 5, mode);
-        expect(Math.hypot(...delta(a, b))).toBeLessThan(1e-12);
-        const start = dangoFrame(id, 3, 5, mode), end = dangoFrame(id, 3 + period, 5, mode);
-        for (const axis of ['x', 'y', 'z'] as const) expect(dot(start[axis], end[axis])).toBeCloseTo(1, 10);
-        expect(Math.hypot(...delta(dangoPosition(id, period - 1e-5, 5, mode), dangoPosition(id, period + 1e-5, 5, mode)))).toBeLessThan(1e-4);
+        const before = dangoPosition(id, time - 1e-5, 5, mode), after = dangoPosition(id, time + 1e-5, 5, mode);
+        expect(Math.hypot(...delta(before, after))).toBeLessThan(1e-4);
+        const start = dangoFrame(id, time - 1e-5, 5, mode), end = dangoFrame(id, time + 1e-5, 5, mode);
+        for (const axis of ['x', 'y', 'z'] as const) expect(dot(start[axis], end[axis])).toBeGreaterThan(.999999);
       }
     }
+    expect(delta(dangoPosition(0, 20), center(0))).not.toEqual(delta(dangoPosition(1, 20), center(1)));
   });
 
-  it('文字の横軸は位置の時間差分へ接し、法線は外を向く', () => {
+  it('文字の平面は表面に接し、法線は外を向く', () => {
     for (const mode of ['surface', 'flow'] as const) for (const id of [1, 2, 43, 279, 31999]) {
       const time = 12, frame = dangoFrame(id, time, 4, mode);
       const velocity = normalized(delta(dangoPosition(id, time + 1e-5, 4, mode), dangoPosition(id, time - 1e-5, 4, mode)));
-      expect(dot(frame.x, velocity)).toBeCloseTo(1, 8);
+      expect(dot(frame.z, velocity)).toBeCloseTo(0, 8);
       expect(dot(frame.z, normalized(delta(dangoPosition(id, time, 4, mode), center(id))))).toBeCloseTo(1, 10);
       expect(dot(frame.x, frame.y)).toBeCloseTo(0, 10);
       expect(dot(frame.x, frame.z)).toBeCloseTo(0, 10);

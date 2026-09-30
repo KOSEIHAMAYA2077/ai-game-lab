@@ -47,7 +47,7 @@ let paused = false, composing = false, introDone = false, awakened = false;
 let companion: Awaited<ReturnType<typeof setupCompanion>> | undefined;
 let lesson = 0;
 const lessons = [
-  ['1 / 5　「流れる 球体」で、球状の経路に沿って文字が流れます。', '流れる 球体'],
+  ['1 / 5　「流れる 球体」で、球の表面全体に文字が流れます。', '流れる 球体'],
   ['2 / 5　「表面 立方体」で、文字が六つの面に沿って流れます。', '表面 立方体'],
   ['3 / 5　色の指定は、今回追加する文字だけに適用されます。', '黄色い文字が立方体の表面を流れる'],
   ['4 / 5　「呼吸する 立方体」「波打つ メビウス」で変形を指定します。動きだけの指定も可能です。「通常」で戻します。', '表面 呼吸する 黄色い立方体'],

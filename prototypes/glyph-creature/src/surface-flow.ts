@@ -63,8 +63,9 @@ function shear(p: Vec3, u: Vec3 | undefined, v: Vec3 | undefined, axis: number, 
   p[i] = x; p[j] = y;
 }
 
-/** Smooth swirls across a rounded box. Surface orientation uses exact differentials. */
-export function cubeSurface(id: number, time: number, seed: number, cuboid = false,
+/** Area-preserving shears carry a two-dimensional material over the whole unit sphere.
+ * Both tangents follow the same map; no glyph is assigned to a single orbit. */
+export function sphereSurface(id: number, time: number, seed: number,
   p: Vec3 = [0, 0, 0], du?: Vec3, dv?: Vec3): Vec3 {
   const a = fract((id + seed * .13) * .618033988749895), b = fract((id + seed * .27) * .754877666246693);
   const angle = a * TAU, y = 2 * b - 1, radius = Math.sqrt(Math.max(0, 1 - y * y));
@@ -79,6 +80,13 @@ export function cubeSurface(id: number, time: number, seed: number, cuboid = fal
   shear(p, du, dv, 0, .5 * Math.sin(f), 1.4 * Math.cos(f));
   f = 2.6 * p[2] + .043 * time + phase(seed, 213);
   shear(p, du, dv, 2, .4 * Math.sin(f), 1.04 * Math.cos(f));
+  return p;
+}
+
+/** Smooth swirls across a rounded box. Surface orientation uses exact differentials. */
+export function cubeSurface(id: number, time: number, seed: number, cuboid = false,
+  p: Vec3 = [0, 0, 0], du?: Vec3, dv?: Vec3): Vec3 {
+  sphereSurface(id, time, seed, p, du, dv);
   const powers = p.map(x => x ** 11), sum = p.reduce((n, x, i) => n + x * powers[i], 0), m = sum ** (1 / 12);
   const extents = cuboid ? [1.35, .75, .55] : [1, 1, 1];
   for (const tangent of [du, dv]) if (tangent) {
