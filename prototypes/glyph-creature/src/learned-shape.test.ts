@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import parity from '../../../experiments/word-shape/artifacts/parity.json';
 import { predictShape, interpretWithModel } from './learned-shape';
@@ -47,6 +47,7 @@ describe('学習した重みをブラウザへ渡す', () => {
         false_shape_on_none: negatives.filter((r: any) => r[key] !== 'none').length, negatives: negatives.length };
     };
     const report = { model_sha256: frozen.model_sha256, exact_overlap_excluded: frozen.overlap_count, model: summarize('model'), grammar: summarize('grammar'), combined: summarize('combined'), results };
-    writeFileSync(new URL('../word-shapes-v2/evidence/legacy-model-comparison.json', root), JSON.stringify(report, null, 2) + '\n');
+    mkdirSync(new URL('../konjo-v1/regression/', root), { recursive: true });
+    writeFileSync(new URL('../konjo-v1/regression/legacy-model-comparison.json', root), JSON.stringify(report, null, 2) + '\n');
   });
 });
