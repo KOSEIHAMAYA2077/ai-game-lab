@@ -2,7 +2,7 @@
 
 作成日: 2026-09-30 / 現在の試作設計: 0.6
 
-**現在地: 制作方法の設計は完了。文字の集合P0に、導入・HELP・花火・筆画実験・執筆と日記を追加。v0.5.0を試せる。**
+**現在地: 制作方法の設計は完了。文字の集合P0に、少数文字の成長、呼吸・波・団子、連続した筆画、原稿保護と日記読込みを追加。v0.6.0の試遊版を用意。**
 
 [進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
 

@@ -1,6 +1,7 @@
 import type { Matter } from './model';
 import type { GlyphScene } from './scene';
 import { captureDay, localDay, readDays, restoreDay, validDay, writeDay, readDraft, writeDraft, recoverDays, recoverDraft, type Day } from './diary';
+import { parseDiaryFile, MAX_DIARY_FILE_BYTES } from './diary-file';
 
 type Handlers = { feed: (text: string) => boolean; refresh: () => void; pause: (value: boolean) => void };
 const WRITER_LOCK = 'glyph-matter:journal-owner:v1';
@@ -12,6 +13,7 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
   let releaseWriter: (() => void) | undefined, draftTimer: ReturnType<typeof setTimeout> | undefined;
   let beforeArchive: Day | undefined;
   let selectedDate = day;
+  let fileRequest = 0;
   const root = document.createElement('section'); root.id = 'writing'; root.hidden = !writer;
   root.innerHTML = `<a href="./">← 空間へ</a><p class="writing-title">きょうのことば</p><p class="help">書いている文字が、隣に届く。<br>Enter でその行を取り込む。Shift + Enter は改行。</p><textarea id="manuscript" aria-label="執筆する文章" spellcheck="false" placeholder="今日は、どんなことを考えた？"></textarea><div class="controls"><button id="writing-feed">この行を渡す ↵</button><button id="floating">別窓で眺める ↗</button><button id="writing-history">日記</button><button id="export-manuscript">原稿を書き出す</button><button id="resume-writing" hidden>ここで続きを書く</button></div><p id="draft-status" class="help"></p><p id="writing-status" role="status" class="help"></p><p class="help">原稿は自動保存。日付が変わっても、書きかけの文章は残ります。Enterで渡した文章と形も、このブラウザに保存します（14日分）。他のアプリの入力は受け取りません。保存は一つの執筆タブから行います。</p>`;
   document.querySelector('#app')!.append(root);
@@ -19,7 +21,7 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
   document.querySelector('#app')!.append(draft);
   const gallery = document.createElement('section'); gallery.id = 'diary'; gallery.hidden = true;
   gallery.setAttribute('aria-label', '日ごとの形');
-  gallery.innerHTML = `<p>日ごとの形</p><p class="help">端末の日付で一区切り。最近14日分を、このブラウザに保存。選ぶと、その日の姿に戻ります。</p><div id="days"></div><div class="controls"><button id="save-today">いまの形を残す</button><button id="export-day">日記を書き出す</button><button id="export-image">画像にする</button><button id="recover-diary" hidden>壊れた保存を退避して再開</button><button id="diary-close">戻る</button></div><p id="diary-status" role="status" class="help"></p>`;
+  gallery.innerHTML = `<p>日ごとの形</p><p class="help">端末の日付で一区切り。最近14日分を、このブラウザに保存。選ぶと、その日の姿に戻ります。書き出した日記も、ファイルから眺め直せます。</p><div id="days"></div><div class="controls"><button id="save-today">いまの形を残す</button><button id="export-day">日記を書き出す</button><button id="import-day">日記を開く</button><input id="diary-file" type="file" accept=".json,application/json" hidden /><button id="export-image">画像にする</button><button id="recover-diary" hidden>壊れた保存を退避して再開</button><button id="diary-close">戻る</button></div><p id="diary-status" role="status" class="help"></p>`;
   document.querySelector('#app')!.append(gallery);
   const textarea = root.querySelector<HTMLTextAreaElement>('textarea')!;
   const message = (text: string) => { root.querySelector('#writing-status')!.textContent = text; gallery.querySelector('#diary-status')!.textContent = text; };
@@ -71,10 +73,19 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
     textarea.readOnly = writer && !ownsWriter;
     (root.querySelector('#writing-feed') as HTMLButtonElement).disabled = writer && !ownsWriter;
     (root.querySelector('#resume-writing') as HTMLButtonElement).hidden = !writer || ownsWriter;
+    (gallery.querySelector('#save-today') as HTMLButtonElement).disabled = displayingArchive;
   };
   const leaveArchive = () => {
+    fileRequest++;
     if (displayingArchive && beforeArchive) restore(beforeArchive);
-    displayingArchive = false; beforeArchive = undefined; handlers.pause(false); rollover();
+    displayingArchive = false; beforeArchive = undefined; handlers.pause(false); rollover(); lockEditing();
+  };
+  const showArchive = (entry: Day, source = '') => {
+    const current = displayingArchive ? beforeArchive : captureDay(matter, day);
+    restore(entry);
+    fileRequest++; beforeArchive = current; displayingArchive = true; selectedDate = entry.date;
+    handlers.pause(true); lockEditing();
+    message(`${entry.date} の姿${source}。戻ると今日の続きです。`);
   };
   const refreshGallery = () => {
     const list = gallery.querySelector('#days')!; list.replaceChildren();
@@ -85,9 +96,7 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
         const label = document.createElement('span'); label.textContent = `${entry.date} / ${1 + entry.batches.reduce((n, b) => n + b.added, 0)}文字`; button.append(label);
         button.addEventListener('click', () => {
           try {
-            const current = displayingArchive ? beforeArchive : captureDay(matter, day);
-            restore(entry); beforeArchive = current; displayingArchive = true; selectedDate = entry.date;
-            handlers.pause(true); message(`${entry.date} の姿。戻ると今日の続きです。`);
+            showArchive(entry);
           } catch { checkRecovery(); message('この日の文字を復元できません。現在の形は保持しています。'); }
         }); list.append(button);
       }
@@ -95,7 +104,25 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
     } catch { checkRecovery(); message('保存された日記を読み込めませんでした。「壊れた保存を退避して再開」で原本を残して復旧できます。'); }
   };
   const openGallery = () => { rollover(); gallery.hidden = false; lockEditing(); refreshGallery(); };
-  gallery.querySelector('#save-today')!.addEventListener('click', async () => { leaveArchive(); await save(); refreshGallery(); });
+  gallery.querySelector('#save-today')!.addEventListener('click', async () => { if (displayingArchive) return; leaveArchive(); await save(); refreshGallery(); });
+  const fileInput = gallery.querySelector<HTMLInputElement>('#diary-file')!;
+  gallery.querySelector('#import-day')!.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', async () => {
+    const file = fileInput.files?.[0], request = ++fileRequest;
+    fileInput.value = '';
+    if (!file) return;
+    try {
+      if (file.size > MAX_DIARY_FILE_BYTES) throw new Error('8 MiB以下の日記ファイルを選んでください。');
+      message('日記を開いています。');
+      const text = await file.text();
+      // Closing the gallery, selecting a saved day, or choosing another file cancels this read.
+      if (request !== fileRequest || gallery.hidden) return;
+      const entry = parseDiaryFile(text);
+      showArchive(entry, '（ファイルから閲覧中・保存は変更しません）');
+    } catch (error) {
+      if (request === fileRequest && !gallery.hidden) message(`日記を開けませんでした。${error instanceof Error ? error.message : 'ファイルを確認してください。'} 今の形はそのままです。`);
+    }
+  });
   gallery.querySelector('#export-day')!.addEventListener('click', () => {
     const data = captureDay(matter, displayingArchive ? selectedDate : day);
     downloadText(JSON.stringify(data, null, 2), `glyph-diary-${data.date}.json`, 'application/json');
