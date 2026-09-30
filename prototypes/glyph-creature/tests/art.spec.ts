@@ -289,6 +289,7 @@ test('花火を文章から拾い、形ボタンからも切り替えられる',
 test('執筆: 入力が届き、Enterで一度取り込み、再読込で日記を復元する', async ({page, context}) => {
   await page.goto('/?write');
   await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#live-writing').uncheck();
   const input = page.locator('#manuscript');
   await input.fill('今日は黄色い球体について書く。');
   await expect(page.locator('#draft-preview')).toHaveText('今日は黄色い球体について書く。');

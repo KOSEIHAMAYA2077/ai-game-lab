@@ -4,12 +4,13 @@ const start = async (page: Page, route = '/?write') => { await page.goto(route);
 const write = async (page: Page, text: string) => { await page.locator('#manuscript').fill(text); await page.locator('#manuscript').press('Enter'); };
 const savedTexts = (page: Page) => page.evaluate(() => JSON.parse(localStorage.getItem('glyph-matter:days:v1')!)[0].batches.map((b: any) => b.text));
 
-test('原稿: 未送信の行と選択位置を復元し、勝手に取り込まない', async ({ page }) => {
-  await start(page); const input = page.locator('#manuscript');
+test('手動追加の原稿: 未送信の行と選択位置を復元し、勝手に取り込まない', async ({ page }) => {
+  await start(page); await page.locator('#live-writing').uncheck(); const input = page.locator('#manuscript');
   await input.fill('書きかけの文章\nまだ送っていない');
   await input.evaluate((el: HTMLTextAreaElement) => { el.setSelectionRange(3, 5); el.dispatchEvent(new Event('select')); });
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('glyph-matter:manuscript:v1') || '{}').start)).toBe(3);
   await page.reload(); await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#live-writing').uncheck();
   await expect(input).toHaveValue('書きかけの文章\nまだ送っていない');
   expect(await input.evaluate((el: HTMLTextAreaElement) => [el.selectionStart, el.selectionEnd])).toEqual([3, 5]);
   expect((await inspect(page)).count).toBe(1);
@@ -17,7 +18,7 @@ test('原稿: 未送信の行と選択位置を復元し、勝手に取り込ま
 });
 
 test('原稿: 日付変更で形が新しくなっても、書きかけは残る', async ({ page }) => {
-  await page.clock.setFixedTime(new Date(2026, 8, 30, 23, 59)); await start(page);
+  await page.clock.setFixedTime(new Date(2026, 8, 30, 23, 59)); await start(page); await page.locator('#live-writing').uncheck();
   await write(page, '昨日の一行');
   await page.locator('#manuscript').fill('昨日の一行\n日をまたぐ書きかけ');
   await page.clock.setFixedTime(new Date(2026, 9, 1, 0, 1));

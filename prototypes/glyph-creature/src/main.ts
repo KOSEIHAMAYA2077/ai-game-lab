@@ -2,9 +2,10 @@ import './style.css';
 import { FORMS, MAX_GLYPHS, MAX_INPUT_LENGTH, Matter, splitGlyphs, type Form } from './model';
 import { GlyphScene } from './scene';
 import { interpretWithModel } from './learned-shape';
-import { COLORS, INK_NAMES, SHAPE_NAMES, SHAPES, interpret, describe, type Ink, type Shape } from './language';
+import { COLORS, DEFAULT_SPEC, INK_NAMES, SHAPE_NAMES, SHAPES, interpret, describe, type Ink, type Shape } from './language';
 import { setupCompanion } from './companion';
 import { randomUnit } from './shapes';
+import { ShapeCycle, hasShapeIntent, writingCue } from './shape-cycle';
 
 const names: Record<Form, string> = { condense: '凝縮', vortex: '渦', orbit: '軌道', mobius: 'メビウス' };
 const examples = ['流れる 球体', '表面 立方体', '今夜は赤い花火を眺めている。', '呼吸する 黄色い立方体', '流れる 波打つ メビウスの輪', '表面 メビウスの輪', '流れる 赤 四角形', 'だんご', '円 8個', '円環 鎖', 'オメガ メビウスの輪', '円環 大小', '表面 呼吸する だんご', '流れる 十字', '通常の動き'];
@@ -23,6 +24,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <p id="lesson"></p><div class="controls"><button id="lesson-try" type="button">入力例を使う</button><button id="lesson-next" type="button">次へ →</button></div>
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
       <p class="help">入力例は書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」を組み合わせられます。「通常」で変形を戻します。候補が複数ある場合は、送信ごとに一つ選びます。入力した文章全体を文字として追加します。</p>
+      <label class="help"><input id="auto-shape" type="checkbox" checked /> 形を自動で変える（30秒）</label><p class="help">言葉やボタンで選んだ形は60秒保ちます。停止中と日記の閲覧中は切り替わりません。</p>
       <label class="help"><input id="learned-shapes" type="checkbox" /> 学習した形を使う（実験）</label><p class="help">サイコロ、ドーナツなどの言い換えを、自作モデルで推定します。この実験をオンにすると、形の選択はモデルを優先します。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
@@ -42,6 +44,8 @@ const inkSelect = el<HTMLSelectElement>('#ink');
 const status = el<HTMLParagraphElement>('#status');
 const repeatLast = el<HTMLButtonElement>('#repeat-last');
 const matter = new Matter();
+const cycle = new ShapeCycle();
+let lastWritingCue = '';
 let scene: GlyphScene;
 let paused = false, composing = false, introDone = false, awakened = false;
 let companion: Awaited<ReturnType<typeof setupCompanion>> | undefined;
@@ -78,6 +82,7 @@ function previewInk() {
   input.style.color = `rgb(${COLORS[ink].map(v => Math.round(v * 255)).join(',')})`;
 }
 function updateUI() {
+  el<HTMLInputElement>('#auto-shape').checked = cycle.enabled;
   el('#actions').hidden = !awakened || Boolean(companion?.viewer);
   el('#lesson').textContent = lessons[lesson][0];
   document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.form === matter.form)));
@@ -106,7 +111,7 @@ function begin() {
   openTerminal(); updateUI();
 }
 
-function addText(text: string, times: number, forcedInk?: Ink, writing = false): boolean {
+function addText(text: string, times: number, forcedInk?: Ink, writing = false, context?: { text: string; line: number }): boolean {
   if (companion && (!companion.canEdit() || !companion.rollover())) return false;
   if (text.length > MAX_INPUT_LENGTH || !splitGlyphs(text).length) {
     status.textContent = text.length > MAX_INPUT_LENGTH ? '入力が長すぎます。短く分けて入力してください。' : '空白以外の文字を入力してください。'; if (!writing) input.focus(); return false;
@@ -117,10 +122,20 @@ function addText(text: string, times: number, forcedInk?: Ink, writing = false):
     emission = { points: splitGlyphs(text).map((_, i) => ({ x: rect.left + 12 + (i % 24) * 10, y: rect.top + 24 + Math.floor(i / 24) * 24 })), fontSize: 17 };
   }
   const seed = crypto.getRandomValues(new Uint32Array(1))[0]; let pickIndex = 0;
-  const parsed = interpretWithModel(text, matter.spec, el<HTMLInputElement>('#learned-shapes').checked, () => randomUnit(seed + pickIndex++));
-  const spec = parsed.spec, ink = forcedInk ?? parsed.ink ?? selectedInk(), interpreted = parsed.recognized;
+  const learned = el<HTMLInputElement>('#learned-shapes').checked;
+  const words = context?.text ?? text;
+  const parsed = interpretWithModel(words, matter.spec, learned, () => randomUnit(seed + pickIndex++));
+  let applyInterpretation = parsed.recognized;
+  if (context) {
+    const cues = writingCue(words, interpretWithModel(words, DEFAULT_SPEC, learned));
+    const key = cues ? `${context.line}:${cues}` : '';
+    applyInterpretation = Boolean(key && key !== lastWritingCue);
+    lastWritingCue = key;
+  }
+  const spec = parsed.spec, ink = forcedInk ?? parsed.ink ?? selectedInk(), interpreted = applyInterpretation;
   const result = matter.add(text, times, { ink, seed });
   if (result.added) {
+    if (interpreted && hasShapeIntent(words, parsed.learned)) cycle.hold();
     scene.setSpec(interpreted ? spec : matter.spec); scene.sync(emission.points, emission.fontSize); paused = false;
     lastText = text; lastInk = ink; input.value = '';
     const first = !awakened; awakened = true;
@@ -128,7 +143,7 @@ function addText(text: string, times: number, forcedInk?: Ink, writing = false):
     if (first && !writing) notice('Enter で追加入力。? HELP で操作と入力例を表示。', 14);
     const meaning = interpreted ? `${parsed.learned ? '学習した形: ' : ''}${describe(matter.spec, ink)}` : `現在の形に文字を追加しました。`;
     status.textContent = meaning;
-    if (!first || writing) notice(meaning, 5);
+    if (!first && !context) notice(meaning, 5);
     if (!writing) companion?.changed();
   }
   if (result.limited) status.textContent = `${result.added.toLocaleString('ja-JP')}文字を追加。合計32,000文字・1,024種類までです。`;
@@ -142,10 +157,12 @@ async function start() {
   try { scene = new GlyphScene(el('#scene'), matter); }
   catch (error) { el('#fatal').hidden = false; el('#fatal').textContent = '描画を開始できませんでした。WebGL2が使えるブラウザで開いてください。'; console.error(error); return; }
   companion = await setupCompanion(matter, scene, {
-    feed: text => addText(text, 1, undefined, true),
+    feed: (text, context) => addText(text, 1, undefined, true, context),
+    resetCycle: () => { cycle.reset(); lastWritingCue = ''; },
     refresh: updateUI,
     pause: value => { paused = value; updateUI(); },
   });
+  el('#auto-shape').addEventListener('change', () => cycle.setEnabled(el<HTMLInputElement>('#auto-shape').checked));
   if (companion.writer || companion.viewer) { introDone = true; awakened = true; el('#start-prompt').hidden = true; }
   const imeActive = (event: KeyboardEvent) => composing || event.isComposing || event.keyCode === 229 || performance.now() - compositionEnded < 80;
   input.addEventListener('input', previewInk); inkSelect.addEventListener('change', previewInk);
@@ -173,7 +190,7 @@ async function start() {
   document.querySelectorAll<HTMLButtonElement>('[data-shape]').forEach(button => button.addEventListener('click', () => {
     if (companion && !companion.rollover()) return;
     scene.setSpec({ ...matter.spec, shape: button.dataset.shape as Shape, count: 1, arrangement: 'single', deformation: 'gentle' });
-    el('#quick-forms').hidden = true; paused = false; updateUI(); companion?.changed();
+    cycle.hold(); el('#quick-forms').hidden = true; paused = false; updateUI(); companion?.changed();
   }));
   el('#lesson-next').addEventListener('click', () => { lesson = (lesson + 1) % lessons.length; updateUI(); });
   el('#lesson-try').addEventListener('click', () => { input.value = lessons[lesson][1]; previewInk(); input.focus(); });
@@ -181,31 +198,38 @@ async function start() {
   el('#close').addEventListener('click', closeTerminal);
   repeatLast.addEventListener('click', () => { input.value = lastText; void addText(lastText, Number(repeat.value), lastInk); });
   document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach(button => button.addEventListener('click', () => { input.value = button.dataset.example!; previewInk(); input.focus(); }));
-  document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.addEventListener('click', () => { if (companion && !companion.rollover()) return; scene.setForm(button.dataset.form as Form); paused = false; updateUI(); closeTerminal(); companion?.changed(); }));
+  document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.addEventListener('click', () => { if (companion && !companion.rollover()) return; scene.setForm(button.dataset.form as Form); cycle.hold(); paused = false; updateUI(); closeTerminal(); companion?.changed(); }));
   el('#pause').addEventListener('click', () => { paused = !paused; updateUI(); closeTerminal(); });
   el('#reset').addEventListener('click', () => {
     if (companion && !companion.rollover()) return;
-    matter.reset(); scene.reset(); lastText = ''; lastInk = undefined; paused = false; introDone = false; awakened = false; lesson = 0;
+    matter.reset(); scene.reset(); cycle.reset(); lastWritingCue = ''; lastText = ''; lastInk = undefined; paused = false; introDone = false; awakened = false; lesson = 0;
     input.value = ''; el<HTMLInputElement>('#learned-shapes').checked = false; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
     el('#start-prompt').hidden = Boolean(companion?.writer || companion?.viewer); el('#quick-forms').hidden = true; awakened = Boolean(companion?.writer); el('#input-help').textContent = '「エンター」と入力して、Enter。文章も入力できます。'; el<HTMLDetailsElement>('#guide').open = false;
     updateUI(); closeTerminal(); companion?.changed();
   });
   el('#scene').addEventListener('webglcontextlost', event => { event.preventDefault(); el('#fatal').hidden = false; el('#fatal').textContent = '描画が中断されました。ページを再読み込みしてください。'; }, true);
   updateUI();
+  function advanceCycle(dt: number) {
+    if (!companion?.canCycle() || matter.glyphs.length <= 1) return;
+    const next = cycle.advance(dt, matter.spec);
+    if (next && companion.rollover() && matter.glyphs.length > 1) {
+      scene.setSpec(next); updateUI(); companion.shapeChanged();
+    }
+  }
   function frame(now: number) {
     const dt = Math.min((now - frameTime) / 1000, .05); frameTime = now;
     const activeDt = paused || document.hidden ? 0 : dt;
-    matter.step(activeDt); scene.render(activeDt);
+    matter.step(activeDt); advanceCycle(activeDt); scene.render(activeDt);
     el('#whisper').hidden = !terminal.hidden || !introDone || matter.time > whisperUntil || (awakened && matter.time < 3);
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
   if (import.meta.env.DEV) {
     (window as unknown as { __GLYPH_ART__: unknown }).__GLYPH_ART__ = {
-      inspect: () => ({ ...matter.inspect(), paused, introDone, awakened, terminalOpen: !terminal.hidden, scene: scene.inspect() }),
+      inspect: () => ({ ...matter.inspect(), paused, introDone, awakened, terminalOpen: !terminal.hidden, scene: scene.inspect(), cycle: { enabled: cycle.enabled, remaining: cycle.remaining } }),
       pause: (value = true) => { paused = value; updateUI(); },
-      step: (ms: number) => { paused = true; matter.step(ms / 1000); scene.render(Math.min(ms / 1000, 1)); updateUI(); },
-      reset: (seed = 1) => { matter.reset(seed); scene.reset(); lastText = ''; paused = true; introDone = true; awakened = false; el('#start-prompt').hidden = true; updateUI(); },
+      step: (ms: number, automatic = false) => { paused = true; matter.step(ms / 1000); if (automatic) advanceCycle(ms / 1000); scene.render(Math.min(ms / 1000, 1)); updateUI(); },
+      reset: (seed = 1) => { matter.reset(seed); scene.reset(); cycle.reset(); lastWritingCue = ''; lastText = ''; paused = true; introDone = true; awakened = false; el('#start-prompt').hidden = true; updateUI(); },
       planePose: (yaw: number | null) => { paused = true; scene.testYaw = yaw; scene.render(0); updateUI(); },
     };
   }
