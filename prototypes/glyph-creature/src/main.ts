@@ -12,17 +12,17 @@ const examples = ['流れる 球体', '表面 立方体', '今夜は赤い花火
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main id="scene" tabindex="-1" aria-label="文字の空間。Enterで始める"></main>
   <button id="start-prompt" type="button" aria-label="press enter"><canvas id="prompt-ink" aria-hidden="true"></canvas></button>
-  <nav id="actions" aria-label="空間の操作" hidden><button id="write-word">▶ ことば</button><button id="choose-form">◇ かたち</button><button id="show-help">? HELP</button><a href="./?write">✎ 書く</a><a href="./strokes.html">一画</a><button id="show-diary">日記</button></nav>
+  <nav id="actions" aria-label="空間の操作" hidden><button id="write-word">▶ 入力</button><button id="choose-form">◇ 形</button><button id="show-help">? HELP</button><a href="./?write">✎ 書く</a><a href="./strokes.html">一画</a><button id="show-diary">日記</button></nav>
   <nav id="quick-forms" aria-label="形のボタン" hidden>${SHAPES.map(shape => `<button type="button" data-shape="${shape}">${SHAPE_NAMES[shape]}</button>`).join('')}</nav>
   <p id="whisper" aria-live="polite" hidden></p>
   <section id="terminal" hidden aria-label="文字のターミナル">
     <form id="feed-form"><div class="input-line"><label for="text-input" aria-label="文字を入力">&gt;</label><input id="text-input" type="text" autocomplete="off" spellcheck="false" aria-label="加える文字" aria-describedby="input-help" placeholder="enter word [enter]" /><button id="feed" type="submit" aria-label="文字を加える">↵</button></div></form>
-    <p id="input-help">「エンター」と入力して、Enter。好きな言葉や文章でもいい。</p>
+    <p id="input-help">「エンター」と入力して、Enter。文章も入力できます。</p>
     <p id="status" role="status" aria-live="polite"></p>
-    <details id="guide"><summary>❔ HELP — ことば / 操作</summary>
-      <p id="lesson"></p><div class="controls"><button id="lesson-try" type="button">このことばを試す</button><button id="lesson-next" type="button">次のヒント →</button></div>
+    <details id="guide"><summary>❔ HELP — 入力 / 操作</summary>
+      <p id="lesson"></p><div class="controls"><button id="lesson-try" type="button">入力例を使う</button><button id="lesson-next" type="button">次へ →</button></div>
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
-      <p class="help">例を選んで書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」も組み合わせられます。「通常」で動きの変形を戻します。複数の候補があれば、送るたびに一つ選びます。文章そのものも全部、材料として残ります。</p>
+      <p class="help">入力例は書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」を組み合わせられます。「通常」で変形を戻します。候補が複数ある場合は、送信ごとに一つ選びます。入力した文章全体を文字として追加します。</p>
       <label class="help"><input id="learned-shapes" type="checkbox" /> 学習した形を使う（実験）</label><p class="help">サイコロ、ドーナツなどの言い換えを、自作モデルで推定します。この実験をオンにすると、形の選択はモデルを優先します。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
@@ -47,11 +47,11 @@ let paused = false, composing = false, introDone = false, awakened = false;
 let companion: Awaited<ReturnType<typeof setupCompanion>> | undefined;
 let lesson = 0;
 const lessons = [
-  ['1 / 5　ことばを道にする。「流れる 球体」で、球をめぐる一本の流れへ。', '流れる 球体'],
-  ['2 / 5　面をつくる。「表面 立方体」で、文字が六つの面を流れる。', '表面 立方体'],
-  ['3 / 5　今の文字に色をつける。前からいる文字の色は、そのまま。', '黄色い文字が立方体の表面を流れる'],
-  ['4 / 5　動きも重ねる。「呼吸する 立方体」「波打つ メビウス」。動きだけ変えてもいい。「通常」で戻せる。', '表面 呼吸する 黄色い立方体'],
-  ['5 / 5　現象もことばに。「花火」「円 8個」「円環 鎖」。ドラッグで回し、スクロールで近づく。', '夜空に赤い花火がひらく'],
+  ['1 / 5　「流れる 球体」で、球状の経路に沿って文字が流れます。', '流れる 球体'],
+  ['2 / 5　「表面 立方体」で、文字が六つの面に沿って流れます。', '表面 立方体'],
+  ['3 / 5　色の指定は、今回追加する文字だけに適用されます。', '黄色い文字が立方体の表面を流れる'],
+  ['4 / 5　「呼吸する 立方体」「波打つ メビウス」で変形を指定します。動きだけの指定も可能です。「通常」で戻します。', '表面 呼吸する 黄色い立方体'],
+  ['5 / 5　「花火」「円 8個」「円環 鎖」も入力できます。ドラッグで回転、スクロールで拡大・縮小します。', '夜空に赤い花火がひらく'],
 ];
 let compositionEnded = -Infinity;
 let lastText = '', lastInk: Ink | undefined;
@@ -124,9 +124,9 @@ function addText(text: string, times: number, forcedInk?: Ink, writing = false):
     scene.setSpec(interpreted ? spec : matter.spec); scene.sync(emission.points, emission.fontSize); paused = false;
     lastText = text; lastInk = ink; input.value = '';
     const first = !awakened; awakened = true;
-    el('#input-help').textContent = '文章でもいい。ことばが、ここに残る。';
-    if (first && !writing) notice('ことばが動きだした。下のボタンや ? HELP から、次のことばを。', 14);
-    const meaning = interpreted ? `${parsed.learned ? '学習した形: ' : ''}${describe(matter.spec, ink)}` : `文字として、この形に加わります。`;
+    el('#input-help').textContent = '文字・文章を入力して、Enter で追加。';
+    if (first && !writing) notice('Enter で追加入力。? HELP で操作と入力例を表示。', 14);
+    const meaning = interpreted ? `${parsed.learned ? '学習した形: ' : ''}${describe(matter.spec, ink)}` : `現在の形に文字を追加しました。`;
     status.textContent = meaning;
     if (!first || writing) notice(meaning, 5);
     if (!writing) companion?.changed();
@@ -187,7 +187,7 @@ async function start() {
     if (companion && !companion.rollover()) return;
     matter.reset(); scene.reset(); lastText = ''; lastInk = undefined; paused = false; introDone = false; awakened = false; lesson = 0;
     input.value = ''; el<HTMLInputElement>('#learned-shapes').checked = false; repeat.value = '64'; inkSelect.value = 'auto'; status.textContent = ''; whisperUntil = 0;
-    el('#start-prompt').hidden = Boolean(companion?.writer || companion?.viewer); el('#quick-forms').hidden = true; awakened = Boolean(companion?.writer); el('#input-help').textContent = '「エンター」と入力して、Enter。好きな言葉や文章でもいい。'; el<HTMLDetailsElement>('#guide').open = false;
+    el('#start-prompt').hidden = Boolean(companion?.writer || companion?.viewer); el('#quick-forms').hidden = true; awakened = Boolean(companion?.writer); el('#input-help').textContent = '「エンター」と入力して、Enter。文章も入力できます。'; el<HTMLDetailsElement>('#guide').open = false;
     updateUI(); closeTerminal(); companion?.changed();
   });
   el('#scene').addEventListener('webglcontextlost', event => { event.preventDefault(); el('#fatal').hidden = false; el('#fatal').textContent = '描画が中断されました。ページを再読み込みしてください。'; }, true);

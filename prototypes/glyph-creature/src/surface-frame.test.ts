@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_SPEC, type SceneSpec } from './language';
 import { shapePosition, TAU, type Vec3 } from './model';
 import { animatedMobius, composedPosition } from './shapes';
+import { mobiusMaterial } from './surface-flow';
 import { createSurfaceFrame, mobiusFrame, surfaceFrame, type SurfaceFrame } from './surface-frame';
 
 const dot = (a: Vec3, b: Vec3) => a.reduce((sum, value, i) => sum + value * b[i], 0);
@@ -73,8 +74,8 @@ describe('文字を形の接線へ沿わせる候補フレーム', () => {
     const out = createSurfaceFrame(), identities = [out.x, out.y, out.z];
     for (const mode of ['flow', 'surface'] as const) for (const deformation of ['gentle', 'omega'] as const) for (const id of [0, 31, 31999]) {
       const spec: SceneSpec = { ...DEFAULT_SPEC, shape: 'mobius', mode, deformation };
-      const time = 7, seed = 3, a = fract((id + seed * .13) * .618033988749895), b = fract((id + seed * .27) * .754877666246693);
-      const u = a * TAU * 2 + time * .33, w = mode === 'surface' ? (b - .5) * .94 : .37 + (b - .5) * .025;
+      const time = 7, seed = 3;
+      const [u, w] = mobiusMaterial(id, time, seed, mode === 'surface');
       expect(composedPosition(spec, id, time, seed)).toEqual(animatedMobius(u, w, time, deformation === 'omega'));
       expect(surfaceFrame(spec, id, time, seed, out)).toBe(out);
       expect(out).toEqual(mobiusFrame(u, w, time, deformation === 'omega'));

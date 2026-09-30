@@ -2,9 +2,9 @@
 
 更新日: 2026-09-30 / 設計の最初の版: `design-v0.1.0`
 
-**現在地: 比較実験を終え、v0.6.0の試遊版へ整理。少数文字の身体、呼吸・波・団子、筆画の流れ、原稿保護と日記読込みを改良。**
+**現在地: 試遊後の修正として、簡素なUI文、表面を流れる文字、歪むメビウス、落ち着いた花火へ更新。**
 
-[実験の比較](experiments/overnight-20260930/README.md) / [PR #7](https://github.com/KOSEIHAMAYA2077/ai-game-lab/pull/7) / [終了記録](experiments/overnight-20260930/STATUS.md)。UIツールの長時間待ちで07:26の終了予定を超え、09:07 JSTの復帰時に追加制作を停止。自動実行も停止済み。
+[今回の比較と範囲](experiments/surface-flow-20260930/README.md)。夜間の自動実行は停止したまま、今回はユーザーの直接の修正依頼による作業。
 
 公開先: [ai-game-lab](https://github.com/KOSEIHAMAYA2077/ai-game-lab) / 試作の作業一覧: [Issue #1](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues/1)
 
@@ -13,9 +13,9 @@
 | 市場・本・カンファレンス・並列AIの調査 | 完了 | [RESEARCH.md](RESEARCH.md) |
 | 質問から試作へ進む制作手順 | 完了 | [WORKFLOW.md](WORKFLOW.md) |
 | ハーネスの設計 | 完了。実行機能は試作と合わせて実装・確認 | [HARNESS.md](HARNESS.md) |
-| 文字の集合P0の核と最小範囲 | 版0.6へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
+| 文字の集合P0の核と最小範囲 | 版0.7へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
 | コンセプトアートの実装 | 執筆・日記・筆画の試作とビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
-| 動作確認・本人の試遊 | ロジック56件・全45ブラウザケース・ビルド成功。実IMEと本人の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 動作確認・本人の試遊 | ロジック63件・全51ブラウザケース・ビルド成功。実IMEと本人の試遊は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
 
 ## 完了したこと
 
