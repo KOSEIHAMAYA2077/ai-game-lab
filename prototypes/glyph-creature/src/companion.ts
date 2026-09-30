@@ -1,9 +1,10 @@
-import type { Matter } from './model';
+import { MAX_GLYPHS, MAX_INPUT_LENGTH, splitGlyphs, type Matter } from './model';
+import { LiveWriting } from './writing-delta';
 import type { GlyphScene } from './scene';
 import { captureDay, localDay, readDays, restoreDay, validDay, writeDay, readDraft, writeDraft, recoverDays, recoverDraft, type Day } from './diary';
 import { parseDiaryFile, MAX_DIARY_FILE_BYTES } from './diary-file';
 
-type Handlers = { feed: (text: string) => boolean; refresh: () => void; pause: (value: boolean) => void };
+type Handlers = { feed: (text: string, context?: { text: string; line: number }) => boolean; refresh: () => void; pause: (value: boolean) => void; resetCycle: () => void };
 const WRITER_LOCK = 'glyph-matter:journal-owner:v1';
 export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers: Handlers) {
   const params = new URLSearchParams(location.search);
@@ -14,8 +15,10 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
   let beforeArchive: Day | undefined;
   let selectedDate = day;
   let fileRequest = 0;
+  const liveText = new LiveWriting();
+  let flushLive = () => {}, liveTimer: ReturnType<typeof setTimeout> | undefined;
   const root = document.createElement('section'); root.id = 'writing'; root.hidden = !writer;
-  root.innerHTML = `<a href="./">← 戻る</a><p class="writing-title">執筆</p><p class="help">Enter で行を追加。<br>Shift + Enter で改行。</p><textarea id="manuscript" aria-label="執筆する文章" spellcheck="false" placeholder="文章を入力"></textarea><div class="controls"><button id="writing-feed">この行を追加 ↵</button><button id="floating">別窓を開く ↗</button><button id="writing-history">日記</button><button id="export-manuscript">原稿を書き出す</button><button id="resume-writing" hidden>ここで続きを書く</button></div><p id="draft-status" class="help"></p><p id="writing-status" role="status" class="help"></p><p class="help">原稿はこのブラウザに自動保存します。日付が変わっても原稿は保持します。Enterで追加した文字と形も保存します（14日分）。他のアプリの入力は受け取りません。保存は一つの執筆タブから行います。</p>`;
+  root.innerHTML = `<a href="./">← 戻る</a><p class="writing-title">執筆</p><p class="help">入力が落ち着くと文字を追加。<br>Enter で改行。</p><label class="help"><input id="live-writing" type="checkbox" checked /> 入力に合わせて追加</label><textarea id="manuscript" aria-label="執筆する文章" spellcheck="false" placeholder="文章を入力"></textarea><div class="controls"><button id="writing-feed">この行を追加 ↵</button><button id="floating">別窓を開く ↗</button><button id="writing-history">日記</button><button id="export-manuscript">原稿を書き出す</button><button id="resume-writing" hidden>ここで続きを書く</button></div><p id="draft-status" class="help"></p><p id="writing-status" role="status" class="help"></p><p class="help">原稿はこのブラウザに自動保存します。日付が変わっても原稿は保持します。追加した文字と形も保存します（14日分）。他のアプリの入力は受け取りません。保存は一つの執筆タブから行います。</p>`;
   document.querySelector('#app')!.append(root);
   const draft = document.createElement('p'); draft.id = 'draft-preview'; draft.hidden = !writer && !viewer;
   document.querySelector('#app')!.append(draft);
@@ -35,7 +38,18 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
     ctx.drawImage(source, (180 - source.width * fit) / 2, (180 - source.height * fit) / 2, source.width * fit, source.height * fit);
     return canvas.toDataURL('image/webp', .72);
   };
-  const restore = (value: Day) => { restoreDay(matter, value); scene.reset(); scene.render(1); handlers.refresh(); };
+  const restore = (value: Day, append = false) => {
+    const previousSpec = matter.spec;
+    const continuous = append && value.seed === matter.seed && value.date === day
+      && value.batches.length >= matter.batches.length
+      && matter.batches.every((batch, i) => JSON.stringify(batch) === JSON.stringify(value.batches[i]));
+    restoreDay(matter, value); // Validate in isolation before changing the visible body.
+    if (continuous) {
+      const spec = matter.spec; matter.spec = previousSpec;
+      scene.setSpec(spec); scene.sync(); scene.render(0);
+    } else { scene.reset(); scene.render(1); }
+    handlers.refresh();
+  };
   const snapshot = () => captureDay(matter, day, thumbnail());
   const publish = () => { if (writer && ownsWriter && !displayingArchive) channel?.postMessage({ type: 'shape', day: captureDay(matter, day) }); };
   const checkRecovery = () => { try { readDays(); } catch { (gallery.querySelector('#recover-diary') as HTMLButtonElement).hidden = false; } };
@@ -64,13 +78,14 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
   const rollover = () => {
     if (!writer || !ownsWriter || displayingArchive || day === localDay()) return !writer || ownsWriter;
     if (!saveNow()) return false;
-    day = localDay(); matter.reset(); scene.reset(); lastSavedAt = -100;
+    day = localDay(); matter.reset(); scene.reset(); handlers.resetCycle(); lastSavedAt = -100;
     handlers.refresh(); publish(); message('日付が変わりました。前日の形を保存し、@ にリセットしました。原稿は保持しています。'); return true;
   };
   const lockEditing = () => {
     const locked = displayingArchive || !gallery.hidden || (writer && !ownsWriter);
     for (const id of ['actions', 'terminal', 'quick-forms']) (document.getElementById(id) as HTMLElement).inert = locked;
-    textarea.readOnly = writer && !ownsWriter;
+    textarea.readOnly = displayingArchive || !gallery.hidden || (writer && !ownsWriter);
+    (root.querySelector('#live-writing') as HTMLInputElement).disabled = displayingArchive || !gallery.hidden || (writer && !ownsWriter);
     (root.querySelector('#writing-feed') as HTMLButtonElement).disabled = writer && !ownsWriter;
     (root.querySelector('#resume-writing') as HTMLButtonElement).hidden = !writer || ownsWriter;
     (gallery.querySelector('#save-today') as HTMLButtonElement).disabled = displayingArchive;
@@ -103,7 +118,7 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
       if (!list.childElementCount) list.textContent = '保存された日記はありません。';
     } catch { checkRecovery(); message('保存された日記を読み込めませんでした。「壊れた保存を退避して再開」で原本を残して復旧できます。'); }
   };
-  const openGallery = () => { rollover(); gallery.hidden = false; lockEditing(); refreshGallery(); };
+  const openGallery = () => { flushLive(); rollover(); gallery.hidden = false; lockEditing(); refreshGallery(); };
   gallery.querySelector('#save-today')!.addEventListener('click', async () => { if (displayingArchive) return; leaveArchive(); await save(); refreshGallery(); });
   const fileInput = gallery.querySelector<HTMLInputElement>('#diary-file')!;
   gallery.querySelector('#import-day')!.addEventListener('click', () => fileInput.click());
@@ -141,7 +156,7 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
   gallery.querySelector('#diary-close')!.addEventListener('click', () => { leaveArchive(); gallery.hidden = true; lockEditing(); });
   root.querySelector('#writing-history')!.addEventListener('click', openGallery);
   root.querySelector('#export-manuscript')!.addEventListener('click', () => downloadText(textarea.value, `glyph-manuscript-${localDay()}.txt`));
-  const loadToday = () => { day = localDay(); try { const today = readDays().find(d => d.date === day); if (today) restore(today); else { matter.reset(); scene.reset(); handlers.refresh(); } } catch { checkRecovery(); message('日記を読み込めませんでした。現在の形は保持し、原本を退避して復旧できます。'); } };
+  const loadToday = () => { handlers.resetCycle(); day = localDay(); try { const today = readDays().find(d => d.date === day); if (today) restore(today); else { matter.reset(); scene.reset(); handlers.refresh(); } } catch { checkRecovery(); message('日記を読み込めませんでした。現在の形は保持し、原本を退避して復旧できます。'); } };
   let preview = () => {};
   const acquireWriter = async () => {
     if (ownsWriter || acquiring) return;
@@ -162,7 +177,7 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
       loadToday();
       try { const saved = readDraft(); if (saved) { textarea.value = saved.text; textarea.setSelectionRange(saved.start, saved.end); root.querySelector('#draft-status')!.textContent = '原稿を読み込みました。未送信の行も復元しています。'; } }
       catch { draftDamaged = true; (gallery.querySelector('#recover-diary') as HTMLButtonElement).hidden = false; root.querySelector('#draft-status')!.textContent = '保存した原稿を読み込めませんでした。日記から原本を退避して再開できます。今の文章は書き出せます。'; }
-      publish(); preview();
+      liveText.load(textarea.value); publish(); preview();
     } else message(navigator.locks ? '別のタブで執筆中です。そちらを閉じて「ここで続きを書く」を押してください。今は読むだけです。' : 'このブラウザは保存の競合防止に対応していません。対応ブラウザで開いてください。');
     lockEditing();
   };
@@ -174,21 +189,60 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
       const end = textarea.value.indexOf('\n', textarea.selectionStart);
       return { start, end: end < 0 ? textarea.value.length : end, text: textarea.value.slice(start, end < 0 ? textarea.value.length : end) };
     };
+    let pendingLine: ReturnType<typeof currentLine> | undefined;
+    const captureInput = () => { liveText.update(textarea.value); pendingLine = currentLine(); };
     preview = () => { const text = currentLine().text.slice(-240); draft.textContent = text; if (ownsWriter) channel?.postMessage({ type: 'draft', text }); };
+    const liveEnabled = () => (root.querySelector('#live-writing') as HTMLInputElement).checked;
+    const scheduleLive = () => { clearTimeout(liveTimer); if (liveEnabled()) liveTimer = setTimeout(flushLive, 350); };
+    flushLive = () => {
+      clearTimeout(liveTimer);
+      if (!ownsWriter || !liveEnabled() || composing || displayingArchive || !gallery.hidden || !rollover()) return;
+      // The caret can move during the debounce. Interpret the line where input
+      // was confirmed, not whichever line happens to be selected when it fires.
+      const text = liveText.take(), line = pendingLine; pendingLine = undefined;
+      if (!splitGlyphs(text).length) return;
+      const context = { text: (text.includes('\n') ? text : line?.text ?? text).slice(-MAX_INPUT_LENGTH), line: line?.start ?? 0 };
+      // Split large pastes at grapheme boundaries; the original manuscript remains intact.
+      let chunk = '', received = false;
+      for (const glyph of new Intl.Segmenter('ja', { granularity: 'grapheme' }).segment(text)) {
+        if (chunk.length + glyph.segment.length > MAX_INPUT_LENGTH) {
+          received = handlers.feed(chunk, context) || received; chunk = '';
+          if (matter.glyphs.length >= MAX_GLYPHS) break;
+        }
+        chunk += glyph.segment;
+      }
+      if (chunk) received = handlers.feed(chunk, context) || received;
+      if (received) { publish(); saveNow(); }
+      else message('文字を追加できませんでした。原稿は残っています。文字数の上限と保存容量を確認してください。');
+    };
     const feed = () => {
-      if (!ownsWriter || composing || performance.now() - ended < 80) return;
-      leaveArchive(); gallery.hidden = true; lockEditing();
-      const canReceive = rollover(), line = currentLine();
-      const received = Boolean(line.text.trim()) && canReceive && handlers.feed(line.text);
+      if (!ownsWriter || composing || performance.now() - ended < 80 || displayingArchive || !gallery.hidden) return;
+      const line = currentLine(); let received = false;
+      if (liveEnabled()) flushLive();
+      else received = Boolean(line.text.trim()) && rollover() && handlers.feed(line.text);
       textarea.setSelectionRange(line.end, line.end); textarea.setRangeText('\n', line.end, line.end, 'end');
+      liveText.update(textarea.value); liveText.take(); pendingLine = undefined;
       preview(); saveDraft();
       if (received) { publish(); saveNow(); }
-      else if (line.text.trim()) message('この行は形に追加できませんでした。原稿は残っています。文字数の上限、日記の保存容量を確認してください。');
+      else if (!liveEnabled() && line.text.trim()) message('この行は形に追加できませんでした。原稿は残っています。文字数の上限、日記の保存容量を確認してください。');
       textarea.focus();
     };
-    textarea.addEventListener('compositionstart', () => { composing = true; });
-    textarea.addEventListener('compositionend', () => { composing = false; ended = performance.now(); preview(); scheduleDraft(); });
-    textarea.addEventListener('input', () => { if (!ownsWriter) return; rollover(); scheduleDraft(); if (!composing) preview(); });
+    root.querySelector('#live-writing')!.addEventListener('change', () => {
+      clearTimeout(liveTimer); liveText.load(textarea.value); pendingLine = undefined;
+      root.querySelector('#writing-feed')!.textContent = liveEnabled() ? '改行 ↵' : 'この行を追加 ↵';
+      root.querySelector('.writing-title + .help')!.innerHTML = liveEnabled()
+        ? '入力が落ち着くと文字を追加。<br>Enter で改行。' : 'Enter で行を追加。<br>Shift + Enter で改行。';
+    });
+    root.querySelector('#writing-feed')!.textContent = '改行 ↵';
+    textarea.addEventListener('compositionstart', () => { composing = true; clearTimeout(liveTimer); });
+    textarea.addEventListener('compositionend', () => {
+      composing = false; ended = performance.now(); captureInput(); preview(); scheduleDraft(); scheduleLive();
+    });
+    textarea.addEventListener('input', () => {
+      if (!ownsWriter || displayingArchive || !gallery.hidden) return;
+      rollover(); scheduleDraft();
+      if (!composing) { captureInput(); preview(); scheduleLive(); }
+    });
     textarea.addEventListener('select', scheduleDraft);
     textarea.addEventListener('click', () => { preview(); scheduleDraft(); });
     textarea.addEventListener('keyup', event => { if (event.key.startsWith('Arrow')) { preview(); scheduleDraft(); } });
@@ -215,9 +269,9 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
     });
     setInterval(rollover, 10_000);
     setInterval(() => { rollover(); if (ownsWriter && !displayingArchive && matter.batches.length && matter.time - lastSavedAt > 15) saveNow(); }, 5000);
-    window.addEventListener('pagehide', () => { if (ownsWriter) { saveDraft(); saveNow(); releaseWriter?.(); } });
+    window.addEventListener('pagehide', () => { if (ownsWriter) { flushLive(); saveDraft(); saveNow(); releaseWriter?.(); } });
     window.addEventListener('pageshow', event => { if (event.persisted) void acquireWriter(); });
-    document.addEventListener('visibilitychange', () => { rollover(); if (document.hidden && ownsWriter) { saveDraft(); saveNow(); } });
+    document.addEventListener('visibilitychange', () => { rollover(); if (document.hidden && ownsWriter) { flushLive(); saveDraft(); saveNow(); } });
     channel?.addEventListener('message', event => { if (event.data?.type === 'ready' && ownsWriter) { publish(); preview(); } });
     await acquireWriter();
     if (ownsWriter) textarea.focus();
@@ -228,10 +282,26 @@ export async function setupCompanion(matter: Matter, scene: GlyphScene, handlers
   }
   channel?.addEventListener('message', event => {
     if (!(viewer || (writer && !ownsWriter)) || displayingArchive) return;
-    try { if (event.data?.type === 'shape' && validDay(event.data.day)) restore(event.data.day); } catch { /* Keep current state when a message is invalid. */ }
+    try {
+      if (event.data?.type === 'shape' && validDay(event.data.day)) { restore(event.data.day, true); day = event.data.day.date; }
+      const update = event.data;
+      if (update?.type === 'spec' && update.date === day && update.seed === matter.seed && update.count === matter.glyphs.length
+          && validDay({ ...captureDay(matter, day), spec: update.spec })) {
+        scene.setSpec(update.spec); handlers.refresh();
+      }
+    } catch { /* Keep current state when a message is invalid. */ }
     if (event.data?.type === 'draft' && typeof event.data.text === 'string') draft.textContent = event.data.text.slice(-240);
   });
   if (viewer || (writer && !ownsWriter)) channel?.postMessage({ type: 'ready' });
   const changed = () => { if (writer && ownsWriter && !displayingArchive) { publish(); saveNow(); } };
-  return { openGallery, save, publish, changed, writer, viewer, rollover, canEdit: () => !writer || ownsWriter };
+  const shapeChanged = () => {
+    if (writer && ownsWriter && !displayingArchive) {
+      channel?.postMessage({ type: 'spec', date: day, seed: matter.seed, count: matter.glyphs.length, spec: { ...matter.spec } });
+      saveNow();
+    }
+  };
+  return { openGallery, save, publish, changed, shapeChanged, writer, viewer, rollover,
+    canCycle: () => !viewer && (!writer || ownsWriter) && !displayingArchive && gallery.hidden,
+    canEdit: () => !writer || ownsWriter };
+
 }

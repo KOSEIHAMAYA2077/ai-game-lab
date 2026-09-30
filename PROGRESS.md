@@ -2,9 +2,9 @@
 
 更新日: 2026-09-30 / 設計の最初の版: `design-v0.1.0`
 
-**現在地: 球体などが線へ潰れず、文字で全面を覆う描画に修正。v0.7.1。**
+**現在地: 執筆の逐次追加、30秒の形の周期、文章の形指定後60秒の優先を統合。v0.8.0。**
 
-[今回の比較と範囲](experiments/surface-coverage-20260930/README.md)。夜間の自動実行は停止したまま、今回はユーザーの直接の修正依頼による作業。
+[今回の操作と範囲](prototypes/glyph-creature/README.md#執筆と形の変化)。夜間の自動実行は停止したまま、今回はユーザーの直接の修正依頼による作業。
 
 公開先: [ai-game-lab](https://github.com/KOSEIHAMAYA2077/ai-game-lab) / 試作の作業一覧: [Issue #1](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues/1)
 
@@ -13,9 +13,9 @@
 | 市場・本・カンファレンス・並列AIの調査 | 完了 | [RESEARCH.md](RESEARCH.md) |
 | 質問から試作へ進む制作手順 | 完了 | [WORKFLOW.md](WORKFLOW.md) |
 | ハーネスの設計 | 完了。実行機能は試作と合わせて実装・確認 | [HARNESS.md](HARNESS.md) |
-| 文字の集合P0の核と最小範囲 | 版0.7.1へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
+| 文字の集合P0の核と最小範囲 | 版0.8.0へ改訂、直接の修正指示を反映 | [BRIEF](concepts/glyph-creature/BRIEF.md) |
 | コンセプトアートの実装 | 執筆・日記・筆画の試作とビルド完了 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
-| 動作確認・本人の試遊 | ロジック65件・全54ブラウザケース・ビルド成功。実IMEと本人による修正版の評価は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
+| 動作確認・本人の試遊 | ロジック77件・全60ブラウザケース・型確認・ビルド成功。実IMEと本人による今回の版の評価は未確認 | [作品の進捗](concepts/glyph-creature/PROGRESS.md) |
 
 ## 完了したこと
 

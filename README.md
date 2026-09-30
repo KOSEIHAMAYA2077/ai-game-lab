@@ -1,8 +1,8 @@
 # AIでアイデアを遊べる形にするための制作設計
 
-作成日: 2026-09-30 / 現在の試作設計: 0.7.1
+作成日: 2026-09-30 / 現在の試作設計: 0.8.0
 
-**現在地: 試遊フィードバックを受け、表面を流れる文字、歪むメビウス、落ち着いた花火、簡素なUI文へ改訂。v0.7.1では球体などの全面を文字で覆う描画へ修正。**
+**現在地: 執筆中の文字を逐次追加し、通常は30秒ごと、文章の形指定があれば60秒優先して形を変える試遊版。v0.8.0。**
 
 [進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
 
