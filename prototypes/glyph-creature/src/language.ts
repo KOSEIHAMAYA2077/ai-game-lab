@@ -1,20 +1,35 @@
 import { interpretMotion } from './motion-language';
 import { MOTION_NAMES, type Motion } from './motions';
 
-export const SHAPES = ['condense', 'vortex', 'orbit', 'mobius', 'ring', 'cube', 'cuboid', 'cross', 'triangle', 'square', 'fireworks', 'dango'] as const;
+export const SHAPES = ['condense', 'vortex', 'orbit', 'mobius', 'ring', 'cube', 'cuboid', 'cross', 'triangle', 'square', 'fireworks', 'dango', 'flower', 'butterfly', 'jellyfish', 'tree', 'star', 'helix', 'hourglass', 'saturn', 'sword', 'vase'] as const;
 export type Shape = typeof SHAPES[number];
 export type SceneSpec = { shape: Shape; mode: 'flow' | 'surface'; count: number; arrangement: 'single' | 'swarm' | 'chain'; deformation: 'gentle' | 'omega' | 'double'; motion?: Motion };
 export const DEFAULT_SPEC: SceneSpec = { shape: 'condense', mode: 'surface', count: 1, arrangement: 'single', deformation: 'gentle', motion: 'calm' };
 export const COLORS = { white: [0.94, 0.95, 0.94], red: [1, 0.19, 0.16], yellow: [1, 0.85, 0.12], blue: [0.25, 0.48, 1], cyan: [0.15, 0.9, 1], green: [0.25, 1, 0.48], purple: [0.8, 0.4, 1], pink: [1, 0.4, 0.7] } as const;
 export type Ink = keyof typeof COLORS;
-export const SHAPE_NAMES: Record<Shape, string> = { condense: '球体', vortex: '渦', orbit: '軌道', mobius: 'メビウスの輪', ring: '円環', cube: '立方体', cuboid: '直方体', cross: '十字', triangle: '三角形', square: '四角形', fireworks: '花火', dango: '団子' };
+export const SHAPE_NAMES: Record<Shape, string> = { condense: '球体', vortex: '渦', orbit: '軌道', mobius: 'メビウスの輪', ring: '円環', cube: '立方体', cuboid: '直方体', cross: '十字', triangle: '三角形', square: '四角形', fireworks: '花火', dango: '団子', flower: '花', butterfly: '蝶', jellyfish: 'くらげ', tree: '木', star: '星', helix: '螺旋', hourglass: '砂時計', saturn: '土星', sword: '剣', vase: '花瓶' };
 export const INK_NAMES: Record<Ink, string> = { white: '白', red: '赤', yellow: '黄色', blue: '青', cyan: '水色', green: '緑', purple: '紫', pink: '桃色' };
+export const SHAPE_GROUPS: { name: string; shapes: Shape[] }[] = [
+  { name: '形', shapes: ['condense', 'cube', 'cuboid', 'mobius', 'ring', 'square', 'triangle', 'cross', 'star', 'helix'] },
+  { name: '生きもの', shapes: ['flower', 'butterfly', 'jellyfish', 'tree'] },
+  { name: 'もの・空', shapes: ['vase', 'sword', 'hourglass', 'saturn', 'dango', 'fireworks', 'vortex', 'orbit'] },
+];
 const shapeWords: [RegExp, Shape][] = [
+  [/花瓶|かびん|壺|つぼ|\b(?:vase|urn|pottery)\b/iu, 'vase'],
+  [/砂時計|すなどけい|\bhourglass\b/iu, 'hourglass'],
+  [/土星|どせい|\bsaturn\b/iu, 'saturn'],
+  [/くらげ|クラゲ|海月|水母|\bjellyfish\b/iu, 'jellyfish'],
+  [/蝶|ちょうちょ|チョウチョ|バタフライ|\bbutterfl(?:y|ies)\b/iu, 'butterfly'],
+  [/螺旋|らせん|スプリング|コイル|\b(?:helix|spring|coil)\b/iu, 'helix'],
+  [/剣|つるぎ|ソード|\b(?:sword|blade)\b/iu, 'sword'],
+  [/樹木|大樹|樹|木(?!曜)|ツリー|\b(?:tree|fir)\b/iu, 'tree'],
+  [/星型|星形|星|スター|\bstars?\b/iu, 'star'],
+  [/花びら|花|はな(?=が|を|に|の|[\s。、!?]|$)|フラワー|\b(?:flower|blossom|petal)\b/iu, 'flower'],
   [/花火|はなび|\bfireworks?\b/iu, 'fireworks'], [/団子|だんご|\bdango\b/iu, 'dango'],
   [/メビウス|メビュウス|\b(?:möbius|mobius)\b/iu, 'mobius'], [/直方体|\b(?:cuboid|rectangular\s*(?:prism|box))\b/iu, 'cuboid'],
-  [/立方体|キューブ|\bcube\b/iu, 'cube'], [/三角|\btriangle\b/iu, 'triangle'], [/四角|正方形|\bsquare\b/iu, 'square'],
-  [/十字|\bcross\b/iu, 'cross'], [/円環|円|リング|輪|\b(?:ring|circle)\b/iu, 'ring'], [/原子|軌道|\borbit\b/iu, 'orbit'],
-  [/渦|うず|\bvortex\b/iu, 'vortex'], [/凝縮|塊|かたまり|球|\bsphere\b/iu, 'condense'],
+  [/立方体|キューブ|サイコロ|さいころ|\b(?:cube|dice)\b/iu, 'cube'], [/三角|\btriangle\b/iu, 'triangle'], [/四角|正方形|\bsquare\b/iu, 'square'],
+  [/十字|\bcross\b/iu, 'cross'], [/ドーナツ|どーなつ|円環|円|リング|輪|\b(?:ring|circle|donut|doughnut|torus)\b/iu, 'ring'], [/原子|軌道|\borbit\b/iu, 'orbit'],
+  [/渦|うず|\bvortex\b/iu, 'vortex'], [/凝縮|塊|かたまり|球|ボール|地球|\b(?:sphere|ball|globe)\b/iu, 'condense'],
 ];
 const inkWords: [RegExp, Ink][] = [
   [/水色|シアン|\bcyan\b/iu, 'cyan'], [/黄色?|\byellow\b/iu, 'yellow'], [/赤色?|\bred\b/iu, 'red'], [/青色?|\bblue\b/iu, 'blue'],
@@ -22,7 +37,7 @@ const inkWords: [RegExp, Ink][] = [
 ];
 export type Interpretation = { spec: SceneSpec; ink?: Ink; recognized: boolean; description: string };
 
-export const explicitShape = (text: string) => shapeWords.find(([pattern]) => pattern.test(text.normalize('NFKC')))?.[1];
+export const explicitShape = (text: string) => shapeChoices(text)[0];
 
 /** Longest overlapping words win: メビウスの輪 must not also count as 輪. */
 export function wordChoices<T>(source: string, vocabulary: [RegExp, T][]): T[] {

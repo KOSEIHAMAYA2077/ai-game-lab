@@ -2,7 +2,7 @@ import { DEFAULT_SPEC, shapeChoices, type SceneSpec, type Shape } from './langua
 
 export const CYCLE_SECONDS = 30;
 export const PHRASE_SECONDS = 60;
-const sequence: Shape[] = ['condense', 'cube', 'mobius', 'ring', 'cuboid', 'dango', 'orbit', 'vortex'];
+const sequence: Shape[] = ['condense', 'cube', 'mobius', 'ring', 'cuboid', 'dango', 'orbit', 'vortex', 'flower', 'butterfly', 'jellyfish', 'tree', 'star', 'helix', 'hourglass', 'saturn', 'sword', 'vase'];
 
 /** Only active viewing time counts; the caller excludes pause, archives and followers. */
 export class ShapeCycle {

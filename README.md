@@ -1,8 +1,10 @@
 # AIでアイデアを遊べる形にするための制作設計
 
-作成日: 2026-09-30 / 現在の試作設計: 0.8.0
+作成日: 2026-09-30 / 別版: word-shapes 0.9.0
 
-**現在地: 執筆中の文字を逐次追加し、通常は30秒ごと、文章の形指定があれば60秒優先して形を変える試遊版。v0.8.0。**
+**現在地: v0.8.0から分岐し、手動の対応語と10種の表面を増やした試遊版。モデル推論はこの入口では使わない。**
+
+[対応語と形の別版・比較記録](experiments/word-shapes-v2/README.md) / 通常画面は localhost:4194。元版の作業コピーと4173は保持する。
 
 [進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
 

@@ -62,7 +62,7 @@ describe('言葉の組み合わせ', () => {
   });
 
   it('英語の形・色・運動は別単語に反応せず、普通のコマンドは解釈する', () => {
-    expect(interpret('spring colored overflow downstream microwave fandango', DEFAULT_SPEC).recognized).toBe(false);
+    expect(interpret('offspring colored overflow downstream microwave fandango', DEFAULT_SPEC).recognized).toBe(false);
     expect(interpret('wave red surface cube', DEFAULT_SPEC)).toMatchObject({ ink: 'red', spec: { shape: 'cube', mode: 'surface', motion: 'wave' } });
     expect(interpret('breathe yellow dango', DEFAULT_SPEC)).toMatchObject({ ink: 'yellow', spec: { shape: 'dango', motion: 'breathe' } });
   });

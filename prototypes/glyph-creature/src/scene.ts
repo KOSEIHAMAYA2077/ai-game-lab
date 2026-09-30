@@ -1,3 +1,4 @@
+import { isWordSurface, CLOSED_WORD_SURFACES } from './word-surfaces';
 import * as THREE from 'three';
 import { Matter, MAX_GLYPHS, MAX_KINDS, growth, cameraDistance, smooth, type Form, type Vec3 } from './model';
 import { COLORS, type SceneSpec } from './language';
@@ -251,13 +252,13 @@ export class GlyphScene {
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
     // Fit the largest breath once; following its current scale would cancel the visible motion.
     const motionFit = 1 + (MOTION_EXTENT[motion.kind] - 1) * this.formation;
-    const formFit = 1 + (this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
+    const formFit = 1 + (isWordSurface(this.matter.spec.shape) ? .25 : this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
     const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit * formFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
     const aligned = surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
     const alignment = aligned ? .98 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
-    const sharedSurface = alignment > 0 && ['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape);
+    const sharedSurface = alignment > 0 && (['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape) || isWordSurface(this.matter.spec.shape));
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
@@ -298,7 +299,7 @@ export class GlyphScene {
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
     this.material.uniforms.alignment.value = alignment;
-    this.material.uniforms.closedSurface.value = ['condense', 'cube', 'cuboid', 'dango'].includes(this.matter.spec.shape) ? 1 : 0;
+    this.material.uniforms.closedSurface.value = ['condense', 'cube', 'cuboid', 'dango', ...CLOSED_WORD_SURFACES].includes(this.matter.spec.shape) ? 1 : 0;
     this.material.uniforms.testPose.value = this.testYaw !== null;
     this.material.uniforms.testYaw.value = this.testYaw ?? 0;
     this.renderer.render(this.scene, this.camera);

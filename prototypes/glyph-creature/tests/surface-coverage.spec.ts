@@ -67,7 +67,7 @@ test('流れる立方体から形ボタンで球へ変えても、面の分布�
   const before = await inspect(page);
   expect(before.spec).toMatchObject({ shape: 'cube', mode: 'flow' });
   expect((await coverage(page)).filled).toBeGreaterThanOrEqual(80);
-  await page.locator('#choose-form').click(); await page.locator('[data-shape="condense"]').click();
+  await page.locator('#choose-form').click(); await page.locator('#quick-forms summary').filter({ hasText: '形' }).click(); await page.locator('[data-shape="condense"]').click();
   await settle(page);
   const after = await inspect(page);
   expect(after.spec).toMatchObject({ shape: 'condense', mode: 'flow' });
