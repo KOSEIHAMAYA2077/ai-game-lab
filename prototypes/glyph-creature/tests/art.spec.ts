@@ -231,7 +231,7 @@ test('言葉の形・表面・色・個数・鎖と入力位置からの取り�
 
 test('通常操作は外部通信なし', async ({ page }) => {
   const external: string[] = [];
-  page.on('request', request => { if (!request.url().startsWith('http://127.0.0.1:4194') && !request.url().startsWith('data:')) external.push(request.url()); });
+  page.on('request', request => { if (!request.url().startsWith('http://127.0.0.1:4196') && !request.url().startsWith('data:')) external.push(request.url()); });
   await feed(page, '表面 青 三角形', '16');
   await feed(page, '円環 鎖', '16');
   expect((await inspect(page)).spec.arrangement).toBe('chain');
@@ -253,7 +253,7 @@ test('吸収中に形を変えても既存の文字が跳び戻らない', async
 
 test('手動辞書の言い換えが形を選び、入力文字と色を保つ', async ({ page }) => {
   const external: string[] = [];
-  page.on('request', r => { if (!r.url().startsWith('http://127.0.0.1:4194') && !r.url().startsWith('data:')) external.push(r.url()); });
+  page.on('request', r => { if (!r.url().startsWith('http://127.0.0.1:4196') && !r.url().startsWith('data:')) external.push(r.url()); });
   await open(page);
   await expect(page.locator('#learned-shapes')).toHaveCount(0);
   await feed(page, 'サイコロを黄色に', '64'); await advance(page, 4500);
@@ -380,7 +380,7 @@ test('執筆: 別窓が開き、編集側の行を同時に受け取る（通常
 
 test('筆画: 同梱の花火11画をほどいて戻し、未収録は現在の形を保つ', async ({page}) => {
   const external:string[]=[];
-  page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4194')&&!r.url().startsWith('data:'))external.push(r.url());});
+  page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4196')&&!r.url().startsWith('data:'))external.push(r.url());});
   await page.goto('/strokes.html');
   await expect(page.locator('#stroke-status')).toContainText('11画');
   await page.locator('[data-motion="scatter"]').click();

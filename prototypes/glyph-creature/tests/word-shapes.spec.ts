@@ -32,7 +32,7 @@ test('十種類の表面を文章から選び、文字・色・有限な描画�
     await page.screenshot({ path: `${evidence}/${shape}-4096-t30.png` });
     records.push({ shape, count: state.count, shapeState: state.spec, finite: later.scene.finite, changed: true });
   }
-  expect(errors).toEqual([]); expect(requests.filter(url => !url.startsWith('http://127.0.0.1:4194') && !url.startsWith('data:'))).toEqual([]);
+  expect(errors).toEqual([]); expect(requests.filter(url => !url.startsWith('http://127.0.0.1:4196') && !url.startsWith('data:'))).toEqual([]);
   expect(requests.some(url => /learned-shape|model\.json/.test(url))).toBe(false);
   writeFileSync(`${evidence}/surfaces.json`, JSON.stringify({ records, errors, externalRequests: [], modelLoaded: false }, null, 2));
 });

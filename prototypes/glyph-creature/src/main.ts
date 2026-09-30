@@ -1,3 +1,4 @@
+import type { ContourMode } from './contour';
 import './style.css';
 import { FORMS, MAX_GLYPHS, MAX_INPUT_LENGTH, Matter, splitGlyphs, type Form } from './model';
 import { GlyphScene } from './scene';
@@ -26,6 +27,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="examples" aria-label="入力例">${examples.map(text => `<button type="button" data-example="${text}">${text}</button>`).join('')}</div>
       <p class="help">入力例は書き換えられます。形・流れ・色・個数に「呼吸」「波打つ」を組み合わせられます。「通常」で変形を戻します。候補が複数ある場合は、送信ごとに一つ選びます。入力した文章全体を文字として追加します。</p>
       <label class="help"><input id="auto-shape" type="checkbox" checked /> 形を自動で変える（30秒）</label><p class="help">言葉やボタンで選んだ形は60秒保ちます。停止中と日記の閲覧中は切り替わりません。</p>
+      <label class="help">輪郭の実験 <select id="contour-mode" aria-label="輪郭の実験"><option value="off">なし</option><option value="emphasis">輪郭を強調</option><option value="contour">色付き文字が巡回</option></select></label><p class="help">球体・立方体の通常 / 呼吸で比較できます。赤・青など色を指定した文字の一部が輪郭を通って戻ります。他の形・波打つ・複数の形では通常の表面を保ちます。</p>
       <p class="help">この版は対応語と数式だけで動きます。花・蝶・くらげ・木・星・螺旋・砂時計・土星・剣・花瓶を追加しています。</p>
       <nav aria-label="形を選ぶ">${FORMS.map(form => `<button type="button" data-form="${form}" aria-pressed="${form === 'condense'}">${names[form]}</button>`).join('')}</nav>
       <div class="controls"><label for="repeat">×</label><select id="repeat" aria-label="繰り返し回数"><option value="1">1</option><option value="16">16</option><option value="64" selected>64</option><option value="256">256</option></select><label for="ink">文字色</label><select id="ink" aria-label="追加文字の色"><option value="auto">赤 → 白</option>${Object.keys(COLORS).map(ink => `<option value="${ink}">${INK_NAMES[ink as Ink]}</option>`).join('')}</select></div>
@@ -206,6 +208,7 @@ async function start() {
   el('#thicken').addEventListener('click', repeatInput);
   document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach(button => button.addEventListener('click', () => { input.value = button.dataset.example!; previewInk(); input.focus(); }));
   document.querySelectorAll<HTMLButtonElement>('[data-form]').forEach(button => button.addEventListener('click', () => { if (companion && !companion.rollover()) return; scene.setForm(button.dataset.form as Form); cycle.hold(); paused = false; updateUI(); closeTerminal(); companion?.changed(); }));
+  el<HTMLSelectElement>('#contour-mode').addEventListener('change', event => { scene.contourMode = (event.target as HTMLSelectElement).value as ContourMode; });
   el('#pause').addEventListener('click', () => { paused = !paused; updateUI(); closeTerminal(); });
   el('#reset').addEventListener('click', () => {
     if (companion && !companion.rollover()) return;

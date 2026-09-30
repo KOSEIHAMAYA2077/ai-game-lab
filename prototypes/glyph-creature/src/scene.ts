@@ -1,3 +1,4 @@
+import { contourCandidate, contourColored, contourPageWeight, contourFrame, contourPath, contourSupported, contourVisit, facingBody, surfaceJourney, type ContourMode, type ContourShape } from './contour';
 import { isWordSurface, CLOSED_WORD_SURFACES } from './word-surfaces';
 import * as THREE from 'three';
 import { Matter, MAX_GLYPHS, MAX_KINDS, growth, cameraDistance, smooth, type Form, type Vec3 } from './model';
@@ -57,6 +58,18 @@ export class GlyphScene {
   frameScratch = createSurfaceFrame();
   frameMatrix = new THREE.Matrix4();
   frameRotation = new THREE.Quaternion();
+  contourRotation = new THREE.Quaternion();
+  contourMode: ContourMode = 'off';
+  contourMix = 0;
+  contourIds = new Set<number>();
+  contourRanks = new Int32Array(MAX_GLYPHS);
+  contourWeights = new Float32Array(MAX_GLYPHS);
+  contourData = new Float32Array(MAX_GLYPHS * 2);
+  contourEligible = new Float32Array(MAX_GLYPHS);
+  inverseBody = new THREE.Matrix4();
+  contourCamera = new THREE.Vector3();
+  contourRight = new THREE.Vector3();
+  contourActive = 0;
   motionScratch = prepareMotion('calm', 0);
   localPoint: Vec3 = [0, 0, 0];
   movedPoint: Vec3 = [0, 0, 0];
@@ -94,13 +107,15 @@ export class GlyphScene {
     this.geometry.setAttribute('phase', new THREE.InstancedBufferAttribute(this.phases, 1));
     this.geometry.setAttribute('inkColor', new THREE.InstancedBufferAttribute(this.inks, 4));
     this.geometry.setAttribute('birthSize', new THREE.InstancedBufferAttribute(this.birthSizes, 1));
+    this.geometry.setAttribute('contourData', new THREE.InstancedBufferAttribute(this.contourData, 2).setUsage(THREE.DynamicDrawUsage));
+    this.geometry.setAttribute('contourEligible', new THREE.InstancedBufferAttribute(this.contourEligible, 1));
     this.geometry.setAttribute('surfaceRotation', new THREE.InstancedBufferAttribute(this.frames, 4).setUsage(THREE.DynamicDrawUsage));
     this.material = new THREE.ShaderMaterial({
       transparent: true, depthWrite: false, depthTest: false, side: THREE.DoubleSide, forceSinglePass: true,
       uniforms: {
         atlas: { value: this.atlas.texture }, time: { value: 0 }, glyphSize: { value: 0.09 },
         distance: { value: 6.3 }, scale: { value: 1 }, testYaw: { value: 0 }, testPose: { value: false },
-        alignment: { value: 0 }, closedSurface: { value: 0 },
+        alignment: { value: 0 }, closedSurface: { value: 0 }, rimEmphasis: { value: 0 },
       },
       vertexShader: `
         attribute vec2 atlasOffset;
@@ -108,7 +123,9 @@ export class GlyphScene {
         attribute float bornAt, phase, birthSize;
         attribute vec4 inkColor;
         attribute vec4 surfaceRotation;
-        uniform float time, glyphSize, distance, scale, testYaw, alignment, closedSurface;
+        attribute vec2 contourData;
+        attribute float contourEligible;
+        uniform float time, glyphSize, distance, scale, testYaw, alignment, closedSurface, rimEmphasis;
         uniform bool testPose;
         varying vec2 atlasUV;
         varying float freshness;
@@ -132,9 +149,17 @@ export class GlyphScene {
             sin(roll) * materialPlane.x + cos(roll) * materialPlane.y, materialPlane.z);
           vec3 onSurface = materialPlane + 2.0 * cross(surfaceRotation.xyz,
             cross(surfaceRotation.xyz, materialPlane) + surfaceRotation.w * materialPlane);
-          q = mix(q, onSurface, testPose ? 0.0 : alignment);
+          q = mix(q, onSurface, testPose ? 0.0 : max(alignment, contourData.x));
+          vec3 outward = vec3(0.0, 0.0, 1.0);
+          outward += 2.0 * cross(surfaceRotation.xyz,
+            cross(surfaceRotation.xyz, outward) + surfaceRotation.w * outward);
+          vec3 viewNormal = normalize(normalMatrix * outward);
+          vec3 viewCenter = (modelViewMatrix * vec4(center, 1.0)).xyz;
+          float facing = dot(viewNormal, normalize(-viewCenter));
+          float rim = (1.0 - smoothstep(0.04, 0.34, abs(facing))) * rimEmphasis * contourEligible;
           float settled = smoothstep(0.0, 3.8, time - bornAt);
-          vec4 mv = modelViewMatrix * vec4(center, 1.0) + mix(vec4(position.xy * birthSize, 0.0, 0.0), modelViewMatrix * vec4(q, 0.0), settled);
+          vec4 viewPlane = mix(modelViewMatrix * vec4(q, 0.0), vec4(position.xy * glyphSize * scale, 0.0, 0.0), rim * 0.65);
+          vec4 mv = modelViewMatrix * vec4(center, 1.0) + mix(vec4(position.xy * birthSize, 0.0, 0.0), viewPlane, settled);
           gl_Position = projectionMatrix * mv;
           atlasUV = atlasOffset + uv / 32.0;
           freshness = 1.0 - smoothstep(0.6, 7.6, time - bornAt);
@@ -142,14 +167,11 @@ export class GlyphScene {
           light = 0.30 + 0.70 * clamp((distance + 1.6 * scale + mv.z) / (3.2 * scale), 0.0, 1.0);
           // Closed bodies show the material on their near side. Do not show the
           // reversed back hemisphere through it; open strips remain two-sided.
-          vec3 outward = vec3(0.0, 0.0, 1.0);
-          outward += 2.0 * cross(surfaceRotation.xyz,
-            cross(surfaceRotation.xyz, outward) + surfaceRotation.w * outward);
-          vec3 viewNormal = normalize(normalMatrix * outward);
-          vec3 viewCenter = (modelViewMatrix * vec4(center, 1.0)).xyz;
-          float facing = dot(viewNormal, normalize(-viewCenter));
           float nearSide = smoothstep(-0.08, 0.18, facing);
-          float coating = testPose ? 0.0 : closedSurface * smoothstep(0.3, 0.96, alignment) * settled;
+          if (contourData.x > 0.001) nearSide = contourData.y;
+          nearSide = mix(nearSide, max(nearSide, 0.78), rim);
+          light = mix(light, max(light, 0.86), max(rim, contourData.x * 0.85));
+          float coating = testPose ? 0.0 : max(closedSurface * smoothstep(0.3, 0.96, alignment), contourData.x) * settled;
           light *= mix(1.0, nearSide, coating);
         }
       `,
@@ -190,6 +212,7 @@ export class GlyphScene {
     const rect = this.host.getBoundingClientRect();
     const projectionScale = this.height / (2 * Math.tan(THREE.MathUtils.degToRad(43 / 2)));
     const motion = prepareMotion(this.matter.spec.motion ?? 'calm', this.matter.time, this.motionScratch);
+    let contourAdded = 0;
     for (let i = this.count; i < this.matter.glyphs.length; i++) {
       const glyph = this.matter.glyphs[i];
       const tile = this.atlas.add(glyph.text);
@@ -201,6 +224,8 @@ export class GlyphScene {
       this.phases[i] = i === 0 ? 0 : randomUnit(i * 2654435761 + this.matter.seed) * Math.PI * 2;
       const ink = COLORS[glyph.ink ?? 'red'];
       this.inks.set([...ink, glyph.ink ? 1 : 0], i * 4);
+      this.contourEligible[i] = contourColored(glyph.ink) ? 1 : 0;
+      if (this.contourEligible[i] && contourAdded < 80 && (contourAdded === 0 || contourCandidate(i))) { this.contourRanks[i] = this.contourIds.size; this.contourIds.add(i); contourAdded++; }
       this.birthSizes[i] = fontSize * CELL / 42 * this.distance / projectionScale;
       this.frames[i * 4 + 3] = 1;
       const screen = screenPoints?.[glyph.inputIndex % screenPoints.length];
@@ -218,6 +243,7 @@ export class GlyphScene {
     this.geometry.getAttribute('bornAt').needsUpdate = true;
     this.geometry.getAttribute('phase').needsUpdate = true;
     this.geometry.getAttribute('inkColor').needsUpdate = true;
+    this.geometry.getAttribute('contourEligible').needsUpdate = true;
     this.geometry.getAttribute('birthSize').needsUpdate = true;
   }
 
@@ -234,6 +260,7 @@ export class GlyphScene {
 
   reset() {
     this.atlas.clear(); this.count = 0; this.switchedAt = -100;
+    this.contourIds.clear(); this.contourData.fill(0); this.contourWeights.fill(0); this.contourMix = 0; this.contourActive = 0;
     this.testYaw = null;
     this.distance = 3.8; this.scale = 1; this.formation = 0; this.seedFocus = 1; this.zoom = 1; this.turnX = 0.12; this.turnY = -0.25;
     this.sync();
@@ -252,19 +279,52 @@ export class GlyphScene {
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
     // Fit the largest breath once; following its current scale would cancel the visible motion.
     const motionFit = 1 + (MOTION_EXTENT[motion.kind] - 1) * this.formation;
-    const formFit = 1 + (isWordSurface(this.matter.spec.shape) ? .25 : this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
+    const formFit = 1 + (isWordSurface(this.matter.spec.shape) ? .25 : this.matter.spec.shape === 'cube' ? .14 : this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
     const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit * formFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
     const aligned = surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
     const alignment = aligned ? .98 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
     const sharedSurface = alignment > 0 && (['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape) || isWordSurface(this.matter.spec.shape));
+    const contourAllowed = contourSupported(this.matter.spec) && this.testYaw === null;
+    this.contourMix += ((this.contourMode === 'contour' ? 1 : 0) - this.contourMix) * (dt > 0 ? 1 - Math.exp(-dt * 1.6) : 0);
+    this.planes.scale.setScalar(this.scale);
+    this.planes.rotation.set(this.testYaw === null ? this.turnX : 0, this.testYaw === null ? this.turnY + t * 0.025 : 0, 0);
+    this.planes.updateMatrixWorld(true);
+    this.inverseBody.copy(this.planes.matrixWorld).invert();
+    this.contourCamera.set(0, 0, this.distance).applyMatrix4(this.inverseBody).divideScalar(Math.max(.001, this.formation * motion.scale));
+    this.contourRight.set(1, 0, 0).transformDirection(this.inverseBody);
+    const contourCamera = this.contourCamera.toArray() as Vec3, contourRight = this.contourRight.toArray() as Vec3;
+    this.contourActive = 0;
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
         ? this.testYaw === null ? [0.018 * Math.sin(t * 1.3), 0.024 * Math.sin(t * 0.9), 0.012 * Math.sin(t)] : [0, 0, 0]
         : composedPosition(this.matter.spec, i, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined).map(v => v * this.formation);
       const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
+      let contourWeight = 0;
+      let contourAxes: ReturnType<typeof contourFrame> | undefined;
+      this.contourData[i * 2] = this.contourData[i * 2 + 1] = 0;
+      if (contourAllowed && this.contourMix > .0001 && this.contourIds.has(i)) {
+        const desired = this.contourMix * contourPageWeight(this.contourRanks[i], this.contourIds.size, t) * contourVisit(i, t) * smooth((t - glyph.born - 5) / 3);
+        // Adding a later cohort must not teleport an earlier glyph when the schedule grows.
+        this.contourWeights[i] += (desired - this.contourWeights[i]) * (dt > 0 ? 1 - Math.exp(-dt * 4) : 0);
+        contourWeight = this.contourWeights[i];
+        if (contourWeight > .0001) {
+          const shape = this.matter.spec.shape as ContourShape;
+          const path = contourPath(shape, i * .61803398875 + t * .018, contourCamera, contourRight);
+          const scale = Math.max(.001, this.formation * motion.scale);
+          const source = p.map(v => v / scale) as Vec3;
+          const position = surfaceJourney(shape, source, path.point, contourWeight);
+          for (let axis = 0; axis < 3; axis++) p[axis] = position[axis] * scale;
+          contourAxes = contourFrame(position, path.tangent, contourCamera);
+          this.contourData[i * 2] = contourWeight * blend;
+          const facing = facingBody(shape, position, contourCamera);
+          this.contourData[i * 2 + 1] = smooth((facing + .025) / .065);
+          if (shape === 'condense' && facing >= -.025) this.contourData[i * 2 + 1] = Math.max(this.contourData[i * 2 + 1], smooth((contourWeight - .9) / .1) * .92);
+          if (contourWeight > .5 && this.contourData[i * 2 + 1] > .1) this.contourActive++;
+        }
+      }
       const target = p.map((v, axis) => this.origins[i * 3 + axis] * (1 - blend) + v * blend) as Vec3;
       this.morphTargets.set(target, i * 3);
       const source = Array.from(this.sources.subarray(i * 3, i * 3 + 3)) as Vec3;
@@ -272,7 +332,7 @@ export class GlyphScene {
       for (let axis = 0; axis < 3; axis++) {
         this.positions[i * 3 + axis] = formed[axis];
       }
-      if (alignment > 0) {
+      if (alignment > 0 || contourAxes) {
         const frame = sharedSurface ? normalizeSurfaceFrame(this.frameScratch)
           : surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
         if (motion.kind !== 'calm') {
@@ -282,12 +342,19 @@ export class GlyphScene {
         const { x, y, z } = frame;
         this.frameMatrix.set(x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0, 0, 0, 0, 1);
         this.frameRotation.setFromRotationMatrix(this.frameMatrix);
+        if (contourAxes) {
+          const { x, y, z } = contourAxes;
+          this.frameMatrix.set(x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0, 0, 0, 0, 1);
+          this.contourRotation.setFromRotationMatrix(this.frameMatrix);
+          this.frameRotation.slerp(this.contourRotation, contourWeight * blend);
+        }
         this.frames[i * 4] = this.frameRotation.x; this.frames[i * 4 + 1] = this.frameRotation.y;
         this.frames[i * 4 + 2] = this.frameRotation.z; this.frames[i * 4 + 3] = this.frameRotation.w;
       }
     }
     this.geometry.getAttribute('center').needsUpdate = true;
-    if (alignment > 0) this.geometry.getAttribute('surfaceRotation').needsUpdate = true;
+    this.geometry.getAttribute('contourData').needsUpdate = true;
+    if (alignment > 0 || this.contourIds.size > 0) this.geometry.getAttribute('surfaceRotation').needsUpdate = true;
     this.planes.scale.setScalar(this.scale);
     this.planes.rotation.set(this.testYaw === null ? this.turnX : 0, this.testYaw === null ? this.turnY + t * 0.025 : 0, 0);
     this.camera.position.z = this.distance;
@@ -296,6 +363,7 @@ export class GlyphScene {
     const seedSize = 104 * this.distance / projectionScale / this.scale;
     this.material.uniforms.glyphSize.value = size + (seedSize - size) * this.seedFocus;
     this.material.uniforms.time.value = t;
+    this.material.uniforms.rimEmphasis.value = this.contourMode === 'emphasis' && contourAllowed ? 1 : 0;
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
     this.material.uniforms.alignment.value = alignment;
@@ -333,6 +401,11 @@ export class GlyphScene {
       glyphSize: this.material.uniforms.glyphSize.value, drawn: this.count, points,
       finite: this.positions.subarray(0, this.count * 3).every(Number.isFinite),
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
-      renderer: 'instanced-planes', testYaw: this.testYaw };
+      renderer: 'instanced-planes', testYaw: this.testYaw,
+      contour: { mode: this.contourMode, supported: contourSupported(this.matter.spec), mix: this.contourMix, enrolled: this.contourIds.size, visible: this.contourActive,
+        cameraLocal: this.contourCamera.toArray(), bodyScale: this.formation * (this.matter.spec.motion === 'breathe' ? prepareMotion('breathe', this.matter.time).scale : 1),
+        colors: [...this.contourIds].reduce<Record<string, number>>((counts, id) => { const ink = this.matter.glyphs[id].ink ?? 'auto'; counts[ink] = (counts[ink] ?? 0) + 1; return counts; }, {}),
+        selected: [...this.contourIds].slice(0, 12).map(id => ({ id, text: this.matter.glyphs[id].text, ink: this.matter.glyphs[id].ink,
+          weight: this.contourData[id * 2], visibility: this.contourData[id * 2 + 1], point: Array.from(this.positions.subarray(id * 3, id * 3 + 3)) })) } };
   }
 }
