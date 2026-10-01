@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
-const out = '../../experiments/konjo-v1/browser';
+const out = '../../experiments/konjo-motion-v1/regression';
 const state = (page: any) => page.evaluate(() => (window as any).__GLYPH_ART__.inspect());
 async function add(page: any, text: string) {
   await page.locator('#write-word').click();
@@ -11,7 +11,7 @@ test('輪っか・同義語・誤字を通常の入力で送り、元の文章�
   mkdirSync(out, { recursive: true });
   const errors: string[] = [], external: string[] = [];
   page.on('pageerror', e => errors.push(e.message)); page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
-  page.on('request', r => { if (!/^(http:\/\/127\.0\.0\.1:4195\/|data:|blob:)/.test(r.url())) external.push(r.url()); });
+  page.on('request', r => { if (!/^(http:\/\/127\.0\.0\.1:4197\/|data:|blob:)/.test(r.url())) external.push(r.url()); });
   await page.goto('/'); await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
   await page.keyboard.press('Enter'); await page.locator('#text-input').fill('白い輪っか'); await page.locator('#text-input').press('Enter');
   expect(['mobius','ring']).toContain((await state(page)).spec.shape);

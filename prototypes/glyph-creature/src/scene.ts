@@ -253,7 +253,9 @@ export class GlyphScene {
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
     // Fit the largest breath once; following its current scale would cancel the visible motion.
     const motionFit = 1 + (MOTION_EXTENT[motion.kind] - 1) * this.formation;
-    const formFit = 1 + ((isWordSurface(this.matter.spec.shape) || isExpandedSurface(this.matter.spec.shape)) ? .25 : this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
+    const formFit = 1 + (this.matter.spec.shape === 'jellyfish' ? .32
+      : (isWordSurface(this.matter.spec.shape) || isExpandedSurface(this.matter.spec.shape)) ? .25
+      : this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
     const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit * formFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
@@ -290,7 +292,8 @@ export class GlyphScene {
     this.geometry.getAttribute('center').needsUpdate = true;
     if (alignment > 0) this.geometry.getAttribute('surfaceRotation').needsUpdate = true;
     this.planes.scale.setScalar(this.scale);
-    this.planes.rotation.set(this.testYaw === null ? this.turnX : 0, this.testYaw === null ? this.turnY + t * 0.025 : 0, 0);
+    this.planes.rotation.set(this.testYaw === null ? this.turnX + .09 * Math.sin(t * .038) : 0,
+      this.testYaw === null ? this.turnY + t * .03 : 0, 0);
     this.camera.position.z = this.distance;
     const size = Math.max(0.065, 0.145 / Math.pow(Math.max(1, this.count / 80), 0.10));
     const projectionScale = this.height / (2 * Math.tan(THREE.MathUtils.degToRad(43 / 2)));
@@ -334,6 +337,7 @@ export class GlyphScene {
       glyphSize: this.material.uniforms.glyphSize.value, drawn: this.count, points,
       finite: this.positions.subarray(0, this.count * 3).every(Number.isFinite),
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
-      renderer: 'instanced-planes', testYaw: this.testYaw };
+      renderer: 'instanced-planes', testYaw: this.testYaw,
+      viewRotation: this.planes.rotation.toArray().slice(0, 3), manualRotation: [this.turnX, this.turnY] };
   }
 }
