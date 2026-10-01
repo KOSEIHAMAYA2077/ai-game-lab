@@ -1,3 +1,21 @@
+# 文字のかたち — AI Game Lab
+
+### [▶ ブラウザで試す](https://koseihamaya2077.github.io/ai-game-lab/)
+
+ダウンロード・インストール不要。Enterで入力欄を開き、好きな文章を加えると、その文字が3Dの形を作って流れます。`表面 鳥`、`表面 魚`、`表面 蛇`、`表面 メビウスの輪`などを試せます。[執筆モード](https://koseihamaya2077.github.io/ai-game-lab/?write) / [公開版と保存について](docs/WEB_DEMO.md)。
+
+**軽量モデルで、曖昧な言葉からその場で3Dの形を作る表現を研究・試作中。** 一般的なPCで動き、蓄積した文字を形の表面へ流せることを目標にしています。
+
+**Codexのサブエージェントをフル稼働。** 先行研究の調査、実装、動きや設計のレビュー、検証を複数のエージェントで分担し、試作と比較を繰り返しています。
+
+公開中の試遊版は、用意した60形と語彙・連想グラフ・限定した曖昧検索で動く「根性版」に、鳥・魚・蛇の骨格を追加した版です。試遊中のモデル推論は使いません。軽量モデルによる任意の3D形状生成は、まだ研究段階です。
+
+[公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/ai-game-lab/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
+
+---
+
+以下は制作設計と以前の試作の記録です。公開Web版は上記のタグから配布し、このブランチ内の以前のコードは保持しています。
+
 # AIでアイデアを遊べる形にするための制作設計
 
 作成日: 2026-09-30 / 現在の試作設計: 0.6

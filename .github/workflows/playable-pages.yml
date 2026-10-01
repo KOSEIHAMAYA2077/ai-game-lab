@@ -1,0 +1,70 @@
+name: Publish playable prototype
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/playable-pages.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: playable-pages
+  cancel-in-progress: false
+
+env:
+  PLAYABLE_REF: glyph-creature-p0-v0.11.0-rigs.1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Check out the preserved playable version
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.PLAYABLE_REF }}
+          path: prototype-source
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install locked dependencies
+        working-directory: prototype-source/prototypes/glyph-creature
+        run: npm ci --ignore-scripts
+      - name: Check the prototype
+        working-directory: prototype-source/prototypes/glyph-creature
+        run: npm test
+      - name: Build the playable files
+        working-directory: prototype-source/prototypes/glyph-creature
+        run: npm run build
+      - name: Record the published version
+        working-directory: prototype-source/prototypes/glyph-creature
+        run: |
+          SOURCE_SHA=$(git rev-parse HEAD) node -e 'const fs = require("node:fs"); const pkg = require("./package.json"); fs.writeFileSync("dist/version.json", JSON.stringify({ version: pkg.version, ref: process.env.PLAYABLE_REF, commit: process.env.SOURCE_SHA }, null, 2) + "\n");'
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Upload only built public files
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: prototype-source/prototypes/glyph-creature/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
