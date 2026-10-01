@@ -1,5 +1,6 @@
 import type { Vec3 } from './model';
 import { EXPANDED_SHAPES, type ExpandedShape } from './shape-catalog';
+import { isRiggedCreature, skinCreaturePoint } from './creature-rig';
 
 export const isExpandedSurface = (shape: string): shape is ExpandedShape => (EXPANDED_SHAPES as readonly string[]).includes(shape);
 /** Only globally convex or star-shaped closed forms use the renderer's front-surface mask.
@@ -46,7 +47,7 @@ function revolved(u: number, v: number, radius: number, y: number, out: Vec3): V
   return set(out, radius * Math.cos(a), y, radius * Math.sin(a));
 }
 /** Periodic u, bounded v, stable part: input letters never jump between disconnected parts. */
-export function expandedSurfacePoint(shape: ExpandedShape, u: number, v: number, t: number, part: number, out: Vec3 = [0, 0, 0]): Vec3 {
+function authoredSurfacePoint(shape: ExpandedShape, u: number, v: number, t: number, part: number, out: Vec3 = [0, 0, 0]): Vec3 {
   const a = u * TAU, c = Math.cos(a), s = Math.sin(a), b = Math.PI * v, part64 = part % 64;
   if (shape === 'cone' || shape === 'cylinder') {
     if (part64 < 48) return revolved(u, v, shape === 'cone' ? 1.04 * Math.sqrt(v) : .86, 1.25 - 2.5 * (shape === 'cone' ? Math.sqrt(v) : v), out);
@@ -232,6 +233,10 @@ export function expandedSurfacePoint(shape: ExpandedShape, u: number, v: number,
     return set(out,x+w*.14,y+.08*Math.sin(a*2+t*.11),.16*s);
   }
   return out;
+}
+export function expandedSurfacePoint(shape: ExpandedShape, u: number, v: number, t: number, part: number, out: Vec3 = [0, 0, 0]): Vec3 {
+  authoredSurfacePoint(shape, u, v, isRiggedCreature(shape) ? 0 : t, part, out);
+  return isRiggedCreature(shape) ? skinCreaturePoint(shape, part % 64, v, t, out) : out;
 }
 const dx: Vec3 = [0,0,0], dy: Vec3 = [0,0,0];
 export function expandedSurface(shape: ExpandedShape, id: number, time: number, seed: number, out: Vec3 = [0,0,0], du?: Vec3, dv?: Vec3): Vec3 {

@@ -1,6 +1,7 @@
 import { isExpandedSurface, CLOSED_EXPANDED_SURFACES } from './expanded-surfaces';
 import { isWordSurface, CLOSED_WORD_SURFACES } from './word-surfaces';
 import * as THREE from 'three';
+import { inspectCreatureRig } from './creature-rig';
 import { Matter, MAX_GLYPHS, MAX_KINDS, growth, cameraDistance, smooth, type Form, type Vec3 } from './model';
 import { COLORS, type SceneSpec } from './language';
 import { composedPosition, intakePosition, randomUnit } from './shapes';
@@ -338,6 +339,7 @@ export class GlyphScene {
       finite: this.positions.subarray(0, this.count * 3).every(Number.isFinite),
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
       renderer: 'instanced-planes', testYaw: this.testYaw,
-      viewRotation: this.planes.rotation.toArray().slice(0, 3), manualRotation: [this.turnX, this.turnY] };
+      viewRotation: this.planes.rotation.toArray().slice(0, 3), manualRotation: [this.turnX, this.turnY],
+      rig: inspectCreatureRig(this.matter.spec.shape, this.matter.time) };
   }
 }

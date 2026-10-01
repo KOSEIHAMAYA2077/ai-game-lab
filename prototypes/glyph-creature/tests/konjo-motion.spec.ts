@@ -47,12 +47,12 @@ for (const viewport of [{ width: 1200, height: 900 }, { width: 390, height: 844 
     expect(after.scene.viewRotation[1] - before.scene.viewRotation[1]).toBeCloseTo(6.48, 5);
     expect(after.scene.viewRotation[0]).not.toBe(before.scene.viewRotation[0]);
     expect(errors).toEqual([]);
-    const out = '../../experiments/konjo-motion-v1/evidence-v2';
+    const out = '../../experiments/creature-rigs-v1/regression/jellyfish';
     mkdirSync(out, { recursive: true });
     writeFileSync(`${out}/jellyfish-${viewport.width}.json`, JSON.stringify({ viewport, count: after.count,
       shape: after.spec.shape, motion: after.spec.motion, beforeRotation: before.scene.viewRotation,
       afterRotation: after.scene.viewRotation, errors, frames }, null, 2) + '\n');
-    await page.screenshot({ path: `../../experiments/konjo-motion-v1/evidence-v2/jellyfish-${viewport.width}.png` });
+    await page.screenshot({ path: `../../experiments/creature-rigs-v1/regression/jellyfish/jellyfish-${viewport.width}.png` });
   });
 }
 
