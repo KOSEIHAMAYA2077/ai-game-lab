@@ -38,14 +38,24 @@ export function wordSurfacePoint(shape: WordSurface, u: number, v: number, t: nu
     return assign(out, x * Math.cos(flap), y, Math.abs(x) * Math.sin(flap) + .07 * r * Math.sin(3 * a + t * .13));
   }
   if (shape === 'jellyfish') {
+    // A shared bell pulse leads the arms; motion stays on the authored surface.
+    const phase = t * TAU / 7.2;
+    const pulse = (.5 + .5 * Math.sin(phase)) ** 2;
+    const bob = .055 * Math.sin(t * .31) + .015 * Math.sin(t * .12);
     if (part < 24) {
-      const y = 1 - v * .97, r = Math.sqrt(1 - y * y) * (1 + .045 * Math.sin(t * .21));
-      return assign(out, r * c, .1 + .9 * y, r * s);
+      const y = 1 - v * .97;
+      const r = Math.sqrt(1 - y * y) * (1 - .10 * pulse) * (1 + .015 * v * v * Math.sin(8 * a + t * .14));
+      return assign(out, r * c, .1 + .9 * y * (1 + .065 * pulse) + bob - .025 * v * v * pulse, r * s);
     }
-    const arm = part - 24, angle = arm * TAU / 8, y = .14 - v * 1.65;
-    const bend = .13 * Math.sin(v * 5 + t * .17 + arm), radius = .018 + .014 * (1 - v);
-    const r = .74 + .17 * v;
-    return assign(out, r * Math.cos(angle) + bend + radius * c, y, r * Math.sin(angle) + .11 * Math.cos(v * 4 - t * .13 + arm) + radius * s);
+    const arm = part - 24, angle = arm * TAU / 8;
+    const rootY = .127 + .001755 * pulse + bob - .025 * pulse;
+    const y = rootY - v * (1.65 + .05 * Math.sin(phase - v * 1.8));
+    const lag = v ** 1.25;
+    const bend = lag * (.16 * Math.sin(v * 5 - t * .70 + arm * .77) + .045 * Math.sin(t * .19 + arm * 1.13 + v * 7));
+    const radius = .017 + .014 * (1 - v);
+    const r = (Math.sqrt(1 - .03 * .03) + .10 * v) * (1 - .10 * (1 - v) ** 2 * pulse) * (1 + .015 * Math.sin(8 * angle + t * .14));
+    return assign(out, r * Math.cos(angle) + bend + radius * c, y,
+      r * Math.sin(angle) + lag * .14 * Math.sin(v * 4 - t * .45 + arm * .63) + radius * s);
   }
   if (shape === 'tree') {
     if (part < 9) {
