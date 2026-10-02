@@ -58,3 +58,9 @@ GitHubのREADMEトップからGitHub Pagesの試遊版へ直接進む導線を�
 作業の区切りごとに、実際に終えたこと・確認した結果・次の一手を更新する。作品ごとの詳しい実行結果は、対象作品のPROGRESS.mdへ残す。この一覧はその要約にする。
 
 常時監視や自動更新はまだ設定していない。作業を実行した際に更新し、意味のある区切りをGitHubへ反映する。
+
+## Glyph Matterと16GB向け調査 — 2026-10-02
+
+リポジトリを `glyph-matter` に改名し、[新しい公開URL](https://koseihamaya2077.github.io/glyph-matter/)で入力・描画と保存タグのmanifestを確認した。公開元の版・過去の履歴は保持。
+
+[先行研究と次の方針](research/16gb-text-to-3d-20261002.md)、[小モデルCPU比較](experiments/consumer-16gb-20261002/README.md)を追加。0.8B/2BはCPUで動くが、形を求めた20文の全意味条件一致は0/20・1/20。汎用小LLMの直接採用は見送る。次は小さい意味encoder・専用head/decoderと決定的配置処理を別版で比較する。16GB Intel/AMDノートでの性能・新しい構造の組立は未検証。
