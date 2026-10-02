@@ -1,12 +1,18 @@
 # 進捗
 
+## 2026-10-02 — 断面のねじれと色の構造分離
+
+`0.13.1-twist.1`で箱/刃の実体をねじり、文字の位相移動と分けた。色語を構造解析のコピーから除き、元の文字と入力の色を保つ。モデル重み・閾値・captionは固定。CPU/実Workerで186色付き文の全Programが色なしと一致。
+
+太管が小球を包む等の貫通反例を保留へ落とす。通常18組合せを維持し、54例中39受理、受理39は0〜120秒の独立10時刻で実材質交差。有限の数値確認で連続時間保証ではない。132単体・type/build、実UI62操作は例外/入力外部要求0、既知44例に退行なし。[比較・残る範囲](experiments/physical-twist-v1/README.md)。試遊入口は[twist-v1](https://koseihamaya2077.github.io/glyph-matter/twist-v1/)。旧3公開入口は保持。 冷初回は取得・演出を含め12.213秒、準備後は3.970〜4.027秒。30秒以内だが冷初回10秒目標は未達。一般的な16GB機は未測定。[独立評価](experiments/physical-twist-v1/evaluation/REPORT.md)。
+
 ## 2026-10-02 — 部位と関係から文字の面を作る別版
 
 `0.13.0-program.1`で、sphere/box/tube/blade/ring/vaseを最大2部位、学習した関係分類器と制約付き幾何で組み合わせる。元の根性版、v0.12骨格版は保存済みタグとURLを保持。新しい試遊入口は[program-v1](https://koseihamaya2077.github.io/glyph-matter/program-v1/)。
 
 128単体テスト・型・build、新UI2ケース、旧骨格6ケースを確認。独立初回21/30、実UI修正後28/30（同種6/6、追加4/8）は回帰。モデル初回準備9.225秒、準備後の全工程3.970〜4.015秒をこのMacで実測。16GB CPU/iGPU実機は未測定。実際の幾何では32生成の有限面、above接触11/11、through交差5/5を確認。[結果・制限・再現](experiments/scaffold-program-v1/evaluation/REPORT.md)。
 
-20:33 JSTまでの許可された作業を継続中。次は現在の版を固定し、文字座標の移動から断面自体のねじれへ分けて比較する。[次の研究](experiments/scaffold-program-v1/RESEARCH_NEXT.md)。
+その後、別版で断面自体のねじれと色の構造分離を実装・比較した（上の0.13.1節）。[次の研究](experiments/scaffold-program-v1/RESEARCH_NEXT.md)。
 
 ## 2026-10-01 — インストール不要のWeb試遊版
 

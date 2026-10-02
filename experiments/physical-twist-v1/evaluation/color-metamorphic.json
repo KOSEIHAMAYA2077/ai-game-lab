@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-02T10:11:52.570427+00:00",
+  "purpose": "Metamorphic color invariance, not unknown-language accuracy. Colored form should preserve the uncolored request primitive roles and relation.",
+  "cases": [
+    {
+      "id": "color-end-none",
+      "group": "end",
+      "baseId": "color-end-none",
+      "ink": "none",
+      "text": "棒の先に球",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube"
+          },
+          {
+            "primitive": "sphere"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "color-end-red",
+      "group": "end",
+      "baseId": "color-end-none",
+      "ink": "red",
+      "text": "赤い棒の先に球",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube"
+          },
+          {
+            "primitive": "sphere"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "color-end-yellow",
+      "group": "end",
+      "baseId": "color-end-none",
+      "ink": "yellow",
+      "text": "黄色い棒の先に球",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube"
+          },
+          {
+            "primitive": "sphere"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "color-end-blue",
+      "group": "end",
+      "baseId": "color-end-none",
+      "ink": "blue",
+      "text": "青い棒の先に球",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube"
+          },
+          {
+            "primitive": "sphere"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "color-above-none",
+      "group": "above",
+      "baseId": "color-above-none",
+      "ink": "none",
+      "text": "球の上に箱",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere"
+          },
+          {
+            "primitive": "box"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "color-above-red",
+      "group": "above",
+      "baseId": "color-above-none",
+      "ink": "red",
+      "text": "赤い球の上に箱",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere"
+          },
+          {
+            "primitive": "box"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "color-above-yellow",
+      "group": "above",
+      "baseId": "color-above-none",
+      "ink": "yellow",
+      "text": "黄色い球の上に箱",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere"
+          },
+          {
+            "primitive": "box"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "color-above-blue",
+      "group": "above",
+      "baseId": "color-above-none",
+      "ink": "blue",
+      "text": "青い球の上に箱",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere"
+          },
+          {
+            "primitive": "box"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "color-through-none",
+      "group": "through",
+      "baseId": "color-through-none",
+      "ink": "none",
+      "text": "箱を輪が貫く",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "color-through-red",
+      "group": "through",
+      "baseId": "color-through-none",
+      "ink": "red",
+      "text": "赤い箱を輪が貫く",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "color-through-yellow",
+      "group": "through",
+      "baseId": "color-through-none",
+      "ink": "yellow",
+      "text": "黄色い箱を輪が貫く",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "color-through-blue",
+      "group": "through",
+      "baseId": "color-through-none",
+      "ink": "blue",
+      "text": "青い箱を輪が貫く",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "through"
+      }
+    }
+  ]
+}

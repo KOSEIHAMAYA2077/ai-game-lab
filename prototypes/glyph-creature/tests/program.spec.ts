@@ -5,7 +5,7 @@ const inspect = (page: import('@playwright/test').Page) => page.evaluate(() => (
 test('input constructs two surface parts, retains earlier text and scopes new color', async ({ page }) => {
   const errors: string[] = [], external: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  page.on('request', req => { if (!req.url().startsWith(`http://127.0.0.1:${process.env.GLYPH_TEST_PORT ?? '4222'}/`) && !/^(data:|blob:)/.test(req.url())) external.push(req.url()); });
+  page.on('request', req => { if (!req.url().startsWith(`http://127.0.0.1:${process.env.GLYPH_TEST_PORT ?? '4226'}/`) && !/^(data:|blob:)/.test(req.url())) external.push(req.url()); });
   await page.goto('/program.html');
   await expect(page.getByRole('button', { name: 'press enter' })).toBeVisible();
   await page.keyboard.press('Enter');

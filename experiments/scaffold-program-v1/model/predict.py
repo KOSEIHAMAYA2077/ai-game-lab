@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "experiments/skeleton-surface-v1/server"))
 from interpreter import Embeddings
 import numpy as np
-from config import ALIASES, ANCHORS, BACKGROUND, BOUNDS, CAPTIONS, DEFAULTS, DESCRIPTORS, MIN_MARGIN, MIN_SCORE, NEGATIVE_OPERATION, PATTERNS, RELATION_MIN_MARGIN, RELATION_MIN_SCORE, relation_query
+from config import ALIASES, ANCHORS, BACKGROUND, BOUNDS, CAPTIONS, DEFAULTS, DESCRIPTORS, MIN_MARGIN, MIN_SCORE, NEGATIVE_OPERATION, PATTERNS, RELATION_MIN_MARGIN, RELATION_MIN_SCORE, relation_query, without_color
 
 
 def normalize(text):
@@ -179,7 +179,7 @@ class ProgramModel:
         if not isinstance(text, str) or len(text) > 4000:
             raise ValueError("text must be a string of at most 4000 characters")
         normalized = normalize(text)
-        cleaned, negated = clean_negation(normalized)
+        cleaned, negated = clean_negation(without_color(normalized))
         def hold(reason, evidence=None):
             return {"program": None, "source": "unchanged", "modelMs": round((time.perf_counter()-started)*1000, 3), "reason": reason, "evidence": evidence or []}
         if not cleaned or not re.search(r"[\w\u3040-\u9fff]", cleaned):

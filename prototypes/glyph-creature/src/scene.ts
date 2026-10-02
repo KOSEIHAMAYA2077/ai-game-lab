@@ -374,7 +374,7 @@ export class GlyphScene {
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
       renderer: 'instanced-planes', testYaw: this.testYaw,
       viewRotation: this.planes.rotation.toArray().slice(0, 3), manualRotation: [this.turnX, this.turnY],
-      program: this.program ? { spec: this.program.spec, effective: this.program.parts.map(p => ({...p.effective})), adjustments: this.program.adjustments, centerlines: this.program.centerlines, bounds: this.program.bounds, scale: this.program.scale } : null,
+      program: this.program ? { spec: this.program.spec, effective: this.program.parts.map(p => ({...p.effective})), adjustments: this.program.adjustments, throughCheck: this.program.throughCheck ?? null, centerlines: this.program.centerlines, bounds: this.program.bounds, scale: this.program.scale } : null,
       rig: inspectCreatureRig(this.matter.spec.shape, this.matter.time), skeleton: this.skeleton ? { ...this.skeleton } : null };
   }
 }

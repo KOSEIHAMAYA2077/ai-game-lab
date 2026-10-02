@@ -1,0 +1,3041 @@
+{
+  "geometrySha256": "699e0ec1d3f5ec16b8ab19a8b5fe498d09a625395b3a739052aa9d542a5e6aa8",
+  "sourceUnchanged": true,
+  "summary": {
+    "cases": 25,
+    "compileAccepted": 24,
+    "finite": 24,
+    "inverseCalibrated": 18,
+    "throughCases": 18,
+    "throughCrossingPass": 18,
+    "aboveCases": 3,
+    "aboveMaterialContactPass": 3,
+    "endCases": 3,
+    "endEndpointPass": 3
+  },
+  "twistWitness": [
+    {
+      "primitive": "box",
+      "maxDeviationFromUntwistedMaterialBoundary": 1347.8142884711328,
+      "physicalSectionChanges": true
+    },
+    {
+      "primitive": "blade",
+      "maxDeviationFromUntwistedMaterialBoundary": 278.3283787413741,
+      "physicalSectionChanges": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "through-sphere-ring-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.084
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4368506384698776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 156,
+            "outsideParent": 868,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 160,
+            "outsideParent": 864,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 167,
+            "outsideParent": 857,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 157,
+            "outsideParent": 867,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 154,
+            "outsideParent": 870,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 161,
+            "outsideParent": 863,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 160,
+            "outsideParent": 864,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 168,
+            "outsideParent": 856,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 157,
+            "outsideParent": 867,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 154,
+            "outsideParent": 870,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-ring-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.2728469077610745
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.2273515537231106e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 180,
+            "outsideParent": 844,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 196,
+            "outsideParent": 828,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 197,
+            "outsideParent": 827,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 198,
+            "outsideParent": 826,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 173,
+            "outsideParent": 851,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 179,
+            "outsideParent": 845,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 184,
+            "outsideParent": 840,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 192,
+            "outsideParent": 832,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 186,
+            "outsideParent": 838,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 196,
+            "outsideParent": 828,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-ring-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.2209980723153386
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4226397837546756e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 164,
+            "outsideParent": 860,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 183,
+            "outsideParent": 841,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 180,
+            "outsideParent": 844,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 180,
+            "outsideParent": 844,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 157,
+            "outsideParent": 867,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 152,
+            "outsideParent": 872,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 153,
+            "outsideParent": 871,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 169,
+            "outsideParent": 855,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 156,
+            "outsideParent": 868,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 177,
+            "outsideParent": 847,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-tube-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4368506384698776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 817,
+            "outsideParent": 207,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 813,
+            "outsideParent": 211,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 816,
+            "outsideParent": 208,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 818,
+            "outsideParent": 206,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 820,
+            "outsideParent": 204,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 815,
+            "outsideParent": 209,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 815,
+            "outsideParent": 209,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 818,
+            "outsideParent": 206,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 819,
+            "outsideParent": 205,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 813,
+            "outsideParent": 211,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-tube-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.2273515537231106e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 790,
+            "outsideParent": 234,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 784,
+            "outsideParent": 240,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 781,
+            "outsideParent": 243,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 786,
+            "outsideParent": 238,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 780,
+            "outsideParent": 244,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 790,
+            "outsideParent": 234,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 786,
+            "outsideParent": 238,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 788,
+            "outsideParent": 236,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 780,
+            "outsideParent": 244,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 781,
+            "outsideParent": 243,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-tube-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4235279621743757e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 763,
+            "outsideParent": 261,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 760,
+            "outsideParent": 264,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 755,
+            "outsideParent": 269,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 762,
+            "outsideParent": 262,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 766,
+            "outsideParent": 258,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 762,
+            "outsideParent": 262,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 765,
+            "outsideParent": 259,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 764,
+            "outsideParent": 260,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 762,
+            "outsideParent": 262,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 763,
+            "outsideParent": 261,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-blade-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4368506384698776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 904,
+            "outsideParent": 120,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 895,
+            "outsideParent": 129,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 894,
+            "outsideParent": 130,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 897,
+            "outsideParent": 127,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 909,
+            "outsideParent": 115,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 916,
+            "outsideParent": 108,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 915,
+            "outsideParent": 109,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 902,
+            "outsideParent": 122,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 911,
+            "outsideParent": 113,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 897,
+            "outsideParent": 127,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-blade-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.227462576025573e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 846,
+            "outsideParent": 178,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 835,
+            "outsideParent": 189,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 832,
+            "outsideParent": 192,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 838,
+            "outsideParent": 186,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 849,
+            "outsideParent": 175,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 859,
+            "outsideParent": 165,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 861,
+            "outsideParent": 163,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 850,
+            "outsideParent": 174,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 847,
+            "outsideParent": 177,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 839,
+            "outsideParent": 185,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-blade-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4229728506620631e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 814,
+            "outsideParent": 210,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 803,
+            "outsideParent": 221,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 806,
+            "outsideParent": 218,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 810,
+            "outsideParent": 214,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 822,
+            "outsideParent": 202,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 832,
+            "outsideParent": 192,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 839,
+            "outsideParent": 185,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 812,
+            "outsideParent": 212,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 816,
+            "outsideParent": 208,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 803,
+            "outsideParent": 221,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-ring-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.084
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9346746427117978e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 614,
+            "outsideParent": 410,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 602,
+            "outsideParent": 422,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 608,
+            "outsideParent": 416,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 605,
+            "outsideParent": 419,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 593,
+            "outsideParent": 431,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 603,
+            "outsideParent": 421,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 596,
+            "outsideParent": 428,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 613,
+            "outsideParent": 411,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 600,
+            "outsideParent": 424,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 593,
+            "outsideParent": 431,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-ring-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.7235523585092716
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 4.0667469392019484e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 232,
+            "outsideParent": 792,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 244,
+            "outsideParent": 780,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 242,
+            "outsideParent": 782,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 243,
+            "outsideParent": 781,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 238,
+            "outsideParent": 786,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 232,
+            "outsideParent": 792,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 231,
+            "outsideParent": 793,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 231,
+            "outsideParent": 793,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 229,
+            "outsideParent": 795,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 235,
+            "outsideParent": 789,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-ring-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.710263834166963
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.0216940061222886e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 233,
+            "outsideParent": 791,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 239,
+            "outsideParent": 785,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 244,
+            "outsideParent": 780,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 235,
+            "outsideParent": 789,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 224,
+            "outsideParent": 800,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 229,
+            "outsideParent": 795,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 227,
+            "outsideParent": 797,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 245,
+            "outsideParent": 779,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 234,
+            "outsideParent": 790,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 238,
+            "outsideParent": 786,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-tube-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.3945043455219852
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9346746427117978e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 792,
+            "outsideParent": 232,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 795,
+            "outsideParent": 229,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 787,
+            "outsideParent": 237,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 789,
+            "outsideParent": 235,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 793,
+            "outsideParent": 231,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 799,
+            "outsideParent": 225,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 800,
+            "outsideParent": 224,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 800,
+            "outsideParent": 224,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 789,
+            "outsideParent": 235,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 795,
+            "outsideParent": 229,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-tube-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4085320037254991
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 4.0667469392019484e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 793,
+            "outsideParent": 231,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 792,
+            "outsideParent": 232,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 797,
+            "outsideParent": 227,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 799,
+            "outsideParent": 225,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 802,
+            "outsideParent": 222,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 795,
+            "outsideParent": 229,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 793,
+            "outsideParent": 231,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 795,
+            "outsideParent": 229,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 799,
+            "outsideParent": 225,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 792,
+            "outsideParent": 232,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-tube-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4618084968080263
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.0203617384927384e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 786,
+            "outsideParent": 238,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 783,
+            "outsideParent": 241,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 786,
+            "outsideParent": 238,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 787,
+            "outsideParent": 237,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 777,
+            "outsideParent": 247,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 778,
+            "outsideParent": 246,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 783,
+            "outsideParent": 241,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 782,
+            "outsideParent": 242,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 785,
+            "outsideParent": 239,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 789,
+            "outsideParent": 235,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-blade-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.3945043455219852
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9346746427117978e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 872,
+            "outsideParent": 152,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 868,
+            "outsideParent": 156,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 866,
+            "outsideParent": 158,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 865,
+            "outsideParent": 159,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 877,
+            "outsideParent": 147,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 880,
+            "outsideParent": 144,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 878,
+            "outsideParent": 146,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 871,
+            "outsideParent": 153,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 877,
+            "outsideParent": 147,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 868,
+            "outsideParent": 156,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-blade-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4085320037254991
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 4.0667469392019484e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 887,
+            "outsideParent": 137,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 883,
+            "outsideParent": 141,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 881,
+            "outsideParent": 143,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 883,
+            "outsideParent": 141,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 890,
+            "outsideParent": 134,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 889,
+            "outsideParent": 135,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 886,
+            "outsideParent": 138,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 880,
+            "outsideParent": 144,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 893,
+            "outsideParent": 131,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 882,
+            "outsideParent": 142,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-blade-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4618084968080263
+        }
+      ],
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 15,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 30,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          },
+          {
+            "time": 45,
+            "sampledPoints": 5,
+            "insideCount": 4,
+            "outsideCount": 1
+          }
+        ]
+      },
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.0203617384927384e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 901,
+            "outsideParent": 123,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 7.5,
+            "sampleCount": 1024,
+            "insideParent": 894,
+            "outsideParent": 129,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 890,
+            "outsideParent": 134,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 22.5,
+            "sampleCount": 1024,
+            "insideParent": 900,
+            "outsideParent": 124,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 902,
+            "outsideParent": 122,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 37.5,
+            "sampleCount": 1024,
+            "insideParent": 899,
+            "outsideParent": 125,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 902,
+            "outsideParent": 122,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 60,
+            "sampleCount": 1024,
+            "insideParent": 891,
+            "outsideParent": 133,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 90,
+            "sampleCount": 1024,
+            "insideParent": 904,
+            "outsideParent": 120,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 120,
+            "sampleCount": 1024,
+            "insideParent": 895,
+            "outsideParent": 129,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "end-bent-box-sphere",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "endpoint": {
+        "distance": 0,
+        "pass": true,
+        "limitation": "Centerline endpoint placement, not a proof of universal watertight material contact."
+      }
+    },
+    {
+      "id": "end-bent-box-box",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "endpoint": {
+        "distance": 0,
+        "pass": true,
+        "limitation": "Centerline endpoint placement, not a proof of universal watertight material contact."
+      }
+    },
+    {
+      "id": "end-bent-box-tube",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "endpoint": {
+        "distance": 0,
+        "pass": true,
+        "limitation": "Centerline endpoint placement, not a proof of universal watertight material contact."
+      }
+    },
+    {
+      "id": "above-bent-box-sphere",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "materialContact": {
+        "atTimes": [
+          {
+            "time": 0,
+            "distance": 0,
+            "pass": true
+          },
+          {
+            "time": 15,
+            "distance": 6.206335383118183e-17,
+            "pass": true
+          },
+          {
+            "time": 30,
+            "distance": 6.206335383118183e-17,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "above-bent-box-box",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "materialContact": {
+        "atTimes": [
+          {
+            "time": 0,
+            "distance": 1.3877787807814457e-17,
+            "pass": true
+          },
+          {
+            "time": 15,
+            "distance": 2.8609792490763984e-17,
+            "pass": true
+          },
+          {
+            "time": 30,
+            "distance": 5.594315114139762e-17,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "above-bent-box-tube",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "materialContact": {
+        "atTimes": [
+          {
+            "time": 0,
+            "distance": 5.594315114139762e-17,
+            "pass": true
+          },
+          {
+            "time": 15,
+            "distance": 5.551115123125783e-17,
+            "pass": true
+          },
+          {
+            "time": 30,
+            "distance": 5.551115123125783e-17,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "through-tiny-sphere-thick-tube",
+      "compileAccepted": false
+    }
+  ],
+  "limitations": [
+    "Numerical inverse of a non-self-intersecting sweep; not a general signed distance field or watertight mesh proof.",
+    "Ring uses Catmull-Rom/Hermite centerline root solving; vase uses outer sweep minus its hollow inner sweep. Root sampling is numerical and thin material can be missed.",
+    "Boundary residuals test inverse correctness against actual independent renderer samples.",
+    "Bend and physical section twist are included; no bounding-box-only intersection claim.",
+    "No browser rendering or language inference time is measured here."
+  ]
+}

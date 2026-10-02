@@ -71,6 +71,27 @@ PATTERNS = [
 ]
 NEGATIVE_OPERATION = r"置かない|乗せない|載せない|付けない|つながない|繋がない|貫かない|通さない|接続しない|do not|don't|never"
 
+# The renderer already supports these eight inks. Color is not a structural
+# relation. Only the relation head input removes it; part interpretation keeps
+# the original phrase and the rendering side still sees every submitted word.
+COLOR_PATTERNS = [
+    r"(?:水色|シアン)(?:い|く)?(?:の)?|(?<![a-z])cyan(?![a-z])",
+    r"黄色?(?:い|く)?(?:の)?|(?<![a-z])yellow(?![a-z])",
+    r"赤色?(?:い|く)?(?:の)?|(?<![a-z])red(?![a-z])",
+    r"青色?(?:い|く)?(?:の)?|(?<![a-z])blue(?![a-z])",
+    r"緑色?(?:い|く)?(?:の)?|(?<![a-z])green(?![a-z])",
+    r"紫色?(?:い|く)?(?:の)?|(?<![a-z])purple(?![a-z])",
+    r"(?:桃色|ピンク)(?:い|く)?(?:の)?|(?<![a-z])pink(?![a-z])",
+    r"白色?(?:い|く)?(?:の)?|(?<![a-z])white(?![a-z])",
+]
+
+
+def without_color(text):
+    """Structural interpretation omits ink; submitted glyph text stays intact."""
+    for expression in COLOR_PATTERNS:
+        text = re.sub(expression, "", text, flags=re.I)
+    return text
+
 
 def relation_query(text):
     """Mask known shape nouns/modifiers, retaining the actual relation wording.
@@ -78,6 +99,7 @@ def relation_query(text):
     The authored mask reduces noun/size leakage into the learned relation head.
     It neither supplies the relation label nor changes lexical relation cues.
     """
+    text = without_color(text)
     placeholder = "object" if text.isascii() else "物体"
     for expression, _ in ANCHORS:
         text = re.sub(expression, " ", text, flags=re.I)

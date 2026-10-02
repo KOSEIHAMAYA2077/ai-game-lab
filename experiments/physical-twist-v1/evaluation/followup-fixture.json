@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-02T09:39:44.638528+00:00",
+  "purpose": "First independent followup after general parser fixes were frozen; no semantic fixes permitted before first scoring. Six new structures plus two intended holds.",
+  "cases": [
+    {
+      "id": "fresh-tip-ja",
+      "group": "end",
+      "text": "長い棒の先っぽに小さな箱を取り付けたい。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube",
+            "attributes": {
+              "height": {
+                "min": 1.2
+              }
+            }
+          },
+          {
+            "primitive": "box",
+            "attributes": {
+              "height": {
+                "max": 0.8
+              },
+              "width": {
+                "max": 0.8
+              },
+              "depth": {
+                "max": 0.8
+              }
+            }
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "fresh-tip-en",
+      "group": "end",
+      "text": "At the very tip of a blade, attach a vase.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "blade"
+          },
+          {
+            "primitive": "vase"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "fresh-above-direction-ja",
+      "group": "above",
+      "text": "大きい箱を下にして、その上に細い管を載せる。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          },
+          {
+            "primitive": "tube",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "fresh-same-rings-en",
+      "group": "same-type",
+      "text": "A broad ring sits above a narrow ring.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "ring",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          },
+          {
+            "primitive": "ring",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "fresh-through-sphere-ring-ja",
+      "group": "through",
+      "text": "球を輪が横切って貫く姿にして。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "fresh-unsupported-through-sphere-en",
+      "group": "through-geometry-unsupported",
+      "text": "A sphere passes through a box.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box"
+          },
+          {
+            "primitive": "sphere"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "fresh-negated-two-ja",
+      "group": "negation-hold",
+      "text": "棒も球も付けないで、そのままにして。",
+      "expected": null
+    },
+    {
+      "id": "fresh-ordinary-ja",
+      "group": "ordinary",
+      "text": "その日の日記を読み返すと、昔の気持ちが少し戻ってきた。",
+      "expected": null
+    }
+  ]
+}

@@ -104,6 +104,34 @@ describe('finite centerline and section programs', () => {
     expect(field(middle)).toBeLessThan(0);
   });
 
+  it('holds the previous shape when a thick enclosing or bent avoiding tube provides no material crossing', () => {
+    const tiny = { height: .4, width: .4, depth: .4 };
+    expect(compileScaffoldProgram(pair('sphere', 'tube', 'through', tiny, { height: 1.8, width: 1.8, depth: 1.8, twist: -.8 }))).toBeNull();
+    for (const parent of ['sphere', 'box'] as const) {
+      expect(compileScaffoldProgram(pair(parent, 'tube', 'through', tiny, { height: 1.8, width: .4, depth: .4, bend: 1 }))).toBeNull();
+    }
+  });
+
+  it('retains ordinary through combinations with nonzero bends and records finite sampling evidence', () => {
+    for (const parent of PRIMITIVES) for (const child of ['ring', 'tube', 'blade'] as const) {
+      const compiled = compileScaffoldProgram(pair(parent, child, 'through', { width: .9, depth: .65, bend: .4, twist: .7 }, { height: 1, width: .7, depth: .55, bend: -.4, twist: -.7 }))!;
+      expect(compiled, `${parent}/${child}`).not.toBeNull();
+      expect(compiled.throughCheck?.method).toBe('sampled-material-occupancy');
+      expect(compiled.throughCheck?.maximumPointsPerTime).toBe(266);
+      expect(compiled.throughCheck?.atTimes.map(row => row.time)).toEqual([0, 15, 30, 45]);
+      for (const row of compiled.throughCheck!.atTimes) {
+        expect(row.sampledPoints).toBeLessThanOrEqual(266);
+        expect(row.insideCount).toBeGreaterThan(0); expect(row.outsideCount).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it('holds a bent rod that temporarily leaves a tiny ring despite crossing at the initial pose', () => {
+    expect(compileScaffoldProgram(pair('ring', 'tube', 'through',
+      { height: .4, width: .4, depth: .4, bend: .2, twist: .8 },
+      { height: 1.8, width: .4, depth: .4, bend: 1, twist: -.8 }))).toBeNull();
+  });
+
   it('supports two instances of the same primitive and preserves their distinct identities', () => {
     const compiled = compileScaffoldProgram(pair('sphere', 'sphere', 'above', { width: .4 }, { width: 1.8 }))!;
     expect(compiled.parts.map(p => p.id)).toEqual(['0', '1']);
@@ -178,6 +206,27 @@ describe('finite centerline and section programs', () => {
       const b0 = compiledPartSurfacePoint(compiled, 0, u, v - h, 0, chart), b1 = compiledPartSurfacePoint(compiled, 0, u, v + h, 0, chart);
       const normal = cross(a1.map((x, k) => x - a0[k]) as Vec3, b1.map((x, k) => x - b0[k]) as Vec3);
       expect(normal[1] * (chart === 'capStart' ? -1 : 1)).toBeGreaterThan(0);
+    }
+  });
+});
+
+
+describe('physical section twisting', () => {
+  it('rotates the whole noncircular point set, not only the glyph material positions', () => {
+    // Recover raw part coordinates so automatic global fit cannot imitate twisting.
+    const rawWidth = 1.4, rawDepth = .4, compiled = compileScaffoldProgram(one('box', { width: rawWidth, depth: rawDepth, twist: 1 }))!;
+    for (const along of [.25, .75]) {
+      const twist = .8 * (2 * along - 1), radius = (1 - Math.abs(2 * along - 1) ** 12) ** (1 / 12);
+      const ca = Math.cos(twist), sa = Math.sin(twist), samples = Array.from({ length: 256 }, (_, i) => inversePartPoint(compiled, 0, compiledPartSurfacePoint(compiled, 0, i / 256, along, 0)));
+      const implicit = (x: number, z: number) => (Math.abs(x / (rawWidth * radius))) ** 12 + (Math.abs(z / (rawDepth * radius))) ** 12 - 1;
+      // The old UV-only twist puts *all* points on the untwisted implicit surface.
+      expect(Math.max(...samples.map(p => Math.abs(implicit(p[0], p[2]))))).toBeGreaterThan(.5);
+      for (const p of samples) {
+        expect(Math.abs(implicit(ca * p[0] + sa * p[2], -sa * p[0] + ca * p[2]))).toBeLessThan(.00001);
+      }
+      // The lower and upper sections have opposing, nonzero orientations.
+      const endpoint = inversePartPoint(compiled, 0, compiledPartSurfacePoint(compiled, 0, 0, along, 0));
+      expect(Math.atan2(endpoint[2], endpoint[0])).toBeCloseTo(twist, 6);
     }
   });
 });
