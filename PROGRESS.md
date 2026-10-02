@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-03 02:10 — 描画Aを公開、次の小窓比較へ
+
+`0.14.1-widget.2`をPR #25・独立tag・`widget-v2/`・macOS arm64 Releaseへ保存。Pages成功、旧5版と新v2の6 manifest SHAを確認。表示容量に配列とGPU更新を合わせ、原文全文と旧色を保持。隔離した公開commitの174単体・型・production build、容量末尾とreload復元が成功。[表現・保存・実機原票](experiments/widget-render-budget-v2/README.md)。実macOSの基準→A→基準再測定でCPU改善は再確認できず、RAMは低い観測値に留まった。
+
+小型分類器は同じ重みを保ち、新しい120合成文の評価と分類クエリ重複の監査を保存した。guard-v2でも表現可能正例は21/44、保留文の誤発火2/40。[限界・採否](experiments/widget-student-v2-fresh/REPORT.md)。標準60形を置き換えない。段階atlasと遅延読込の実験選択肢を、さらに別版へ統合中。
+
+球・箱・メビウスの面をMetalへ移す別候補は、CPU/GPUの数値とoffscreen画像を確認。[技術・原票](experiments/widget-metal-lab-v1/README.md)。Macがロックされ実操作と通常表示のCPU/RAM比較は延期。スリープ防止と08:25までの改良継続は有効で、既存版やOS設定を変更しない。[継続状況](experiments/widget-companion-v1/STATUS.md)。
+
 ## 2026-10-03 — 小窓の基準版と8時間の比較改善
 
 `0.14.0-widget.1`を旧4版から分け、通常15fps/吸収30fps・非表示停止・入力時だけモデルWorker・文字履歴と描画数の分離を実装。Mac標準の独立した小窓も作った。[操作と測定範囲](experiments/widget-companion-v1/README.md)。取得量128MBとRAMは異なり、初回準備の4PID合算footprintは約1.4GiBまで増える。通常表示も候補CPU/RAM予算に未達で、低負荷を達成した製品とは扱わない。

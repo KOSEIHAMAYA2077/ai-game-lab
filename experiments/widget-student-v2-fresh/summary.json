@@ -1,0 +1,3183 @@
+{
+  "createdAtUtc": "2026-10-02T16:54:01.814Z",
+  "fixtureHash": "df7105b2f8bd134944ca2029fcd215eed987bc3164d5e06cd32bc49fa3409f45",
+  "cases": 120,
+  "environment": {
+    "node": "v26.4.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "overlap": {
+    "trainExact": [],
+    "trainNormalized": [],
+    "devExact": [],
+    "devNormalized": [],
+    "trainRows": 1815,
+    "devRows": 478
+  },
+  "full": {
+    "v1": {
+      "count": 120,
+      "strictCorrect": 64,
+      "structureCorrect": 72,
+      "accepted": 47,
+      "meaningful": {
+        "count": 60,
+        "accepted": 32,
+        "structureCorrect": 27,
+        "strictCorrect": 19
+      },
+      "schemaRepresentable": {
+        "count": 44,
+        "accepted": 28,
+        "structureCorrect": 27,
+        "strictCorrect": 19
+      },
+      "unrepresentable": {
+        "count": 16,
+        "accepted": 4,
+        "appropriatelyHeld": 12
+      },
+      "clearHold": {
+        "count": 40,
+        "correct": 25,
+        "falseActivations": 15
+      },
+      "ambiguous": {
+        "count": 20,
+        "correct": 20,
+        "falseActivations": 0
+      },
+      "attributeChecksOnReturnedCorrectlySizedPrograms": {
+        "count": 27,
+        "passed": 19
+      },
+      "geometry": {
+        "accepted": 47,
+        "schemaPass": 47,
+        "compilerPass": 47,
+        "finiteSurfacePass": 47,
+        "strictSemanticRenderAndCompilerPass": 19
+      },
+      "reasons": {
+        "selected": 47,
+        "negation-held": 13,
+        "primitive-uncertain": 21,
+        "relation-uncertain": 39
+      }
+    },
+    "guard_v2": {
+      "count": 120,
+      "strictCorrect": 79,
+      "structureCorrect": 85,
+      "accepted": 32,
+      "meaningful": {
+        "count": 60,
+        "accepted": 30,
+        "structureCorrect": 27,
+        "strictCorrect": 21
+      },
+      "schemaRepresentable": {
+        "count": 44,
+        "accepted": 28,
+        "structureCorrect": 27,
+        "strictCorrect": 21
+      },
+      "unrepresentable": {
+        "count": 16,
+        "accepted": 2,
+        "appropriatelyHeld": 14
+      },
+      "clearHold": {
+        "count": 40,
+        "correct": 38,
+        "falseActivations": 2
+      },
+      "ambiguous": {
+        "count": 20,
+        "correct": 20,
+        "falseActivations": 0
+      },
+      "attributeChecksOnReturnedCorrectlySizedPrograms": {
+        "count": 27,
+        "passed": 21
+      },
+      "geometry": {
+        "accepted": 32,
+        "schemaPass": 32,
+        "compilerPass": 32,
+        "finiteSurfacePass": 32,
+        "strictSemanticRenderAndCompilerPass": 21
+      },
+      "reasons": {
+        "selected": 32,
+        "negation-held": 7,
+        "primitive-uncertain": 20,
+        "explicit-negation-or-absence": 6,
+        "relation-uncertain": 37,
+        "relation-order-unresolved": 2,
+        "quotation-or-code-context": 11,
+        "contradictory-local-attributes": 2,
+        "cancel-or-removal": 3
+      }
+    },
+    "rules": {
+      "count": 120,
+      "strictCorrect": 58,
+      "structureCorrect": 69,
+      "accepted": 56,
+      "meaningful": {
+        "count": 60,
+        "accepted": 35,
+        "structureCorrect": 30,
+        "strictCorrect": 19
+      },
+      "schemaRepresentable": {
+        "count": 44,
+        "accepted": 32,
+        "structureCorrect": 30,
+        "strictCorrect": 19
+      },
+      "unrepresentable": {
+        "count": 16,
+        "accepted": 3,
+        "appropriatelyHeld": 13
+      },
+      "clearHold": {
+        "count": 40,
+        "correct": 22,
+        "falseActivations": 18
+      },
+      "ambiguous": {
+        "count": 20,
+        "correct": 17,
+        "falseActivations": 3
+      },
+      "attributeChecksOnReturnedCorrectlySizedPrograms": {
+        "count": 28,
+        "passed": 17
+      },
+      "geometry": {
+        "accepted": 56,
+        "schemaPass": 56,
+        "compilerPass": 56,
+        "finiteSurfacePass": 56,
+        "strictSemanticRenderAndCompilerPass": 19
+      },
+      "reasons": {
+        "指定語": 48,
+        "否定を保留": 8,
+        "形の指定なし、または2部位超過": 25,
+        "関係の指定なし": 31,
+        "指定語と関係規則": 8
+      }
+    }
+  },
+  "withoutExactTrainOverlap": {
+    "v1": {
+      "count": 120,
+      "strictCorrect": 64,
+      "structureCorrect": 72,
+      "accepted": 47,
+      "meaningful": {
+        "count": 60,
+        "accepted": 32,
+        "structureCorrect": 27,
+        "strictCorrect": 19
+      },
+      "schemaRepresentable": {
+        "count": 44,
+        "accepted": 28,
+        "structureCorrect": 27,
+        "strictCorrect": 19
+      },
+      "unrepresentable": {
+        "count": 16,
+        "accepted": 4,
+        "appropriatelyHeld": 12
+      },
+      "clearHold": {
+        "count": 40,
+        "correct": 25,
+        "falseActivations": 15
+      },
+      "ambiguous": {
+        "count": 20,
+        "correct": 20,
+        "falseActivations": 0
+      },
+      "attributeChecksOnReturnedCorrectlySizedPrograms": {
+        "count": 27,
+        "passed": 19
+      },
+      "geometry": {
+        "accepted": 47,
+        "schemaPass": 47,
+        "compilerPass": 47,
+        "finiteSurfacePass": 47,
+        "strictSemanticRenderAndCompilerPass": 19
+      },
+      "reasons": {
+        "selected": 47,
+        "negation-held": 13,
+        "primitive-uncertain": 21,
+        "relation-uncertain": 39
+      }
+    },
+    "guard_v2": {
+      "count": 120,
+      "strictCorrect": 79,
+      "structureCorrect": 85,
+      "accepted": 32,
+      "meaningful": {
+        "count": 60,
+        "accepted": 30,
+        "structureCorrect": 27,
+        "strictCorrect": 21
+      },
+      "schemaRepresentable": {
+        "count": 44,
+        "accepted": 28,
+        "structureCorrect": 27,
+        "strictCorrect": 21
+      },
+      "unrepresentable": {
+        "count": 16,
+        "accepted": 2,
+        "appropriatelyHeld": 14
+      },
+      "clearHold": {
+        "count": 40,
+        "correct": 38,
+        "falseActivations": 2
+      },
+      "ambiguous": {
+        "count": 20,
+        "correct": 20,
+        "falseActivations": 0
+      },
+      "attributeChecksOnReturnedCorrectlySizedPrograms": {
+        "count": 27,
+        "passed": 21
+      },
+      "geometry": {
+        "accepted": 32,
+        "schemaPass": 32,
+        "compilerPass": 32,
+        "finiteSurfacePass": 32,
+        "strictSemanticRenderAndCompilerPass": 21
+      },
+      "reasons": {
+        "selected": 32,
+        "negation-held": 7,
+        "primitive-uncertain": 20,
+        "explicit-negation-or-absence": 6,
+        "relation-uncertain": 37,
+        "relation-order-unresolved": 2,
+        "quotation-or-code-context": 11,
+        "contradictory-local-attributes": 2,
+        "cancel-or-removal": 3
+      }
+    },
+    "rules": {
+      "count": 120,
+      "strictCorrect": 58,
+      "structureCorrect": 69,
+      "accepted": 56,
+      "meaningful": {
+        "count": 60,
+        "accepted": 35,
+        "structureCorrect": 30,
+        "strictCorrect": 19
+      },
+      "schemaRepresentable": {
+        "count": 44,
+        "accepted": 32,
+        "structureCorrect": 30,
+        "strictCorrect": 19
+      },
+      "unrepresentable": {
+        "count": 16,
+        "accepted": 3,
+        "appropriatelyHeld": 13
+      },
+      "clearHold": {
+        "count": 40,
+        "correct": 22,
+        "falseActivations": 18
+      },
+      "ambiguous": {
+        "count": 20,
+        "correct": 17,
+        "falseActivations": 3
+      },
+      "attributeChecksOnReturnedCorrectlySizedPrograms": {
+        "count": 28,
+        "passed": 17
+      },
+      "geometry": {
+        "accepted": 56,
+        "schemaPass": 56,
+        "compilerPass": 56,
+        "finiteSurfacePass": 56,
+        "strictSemanticRenderAndCompilerPass": 19
+      },
+      "reasons": {
+        "指定語": 48,
+        "否定を保留": 8,
+        "形の指定なし、または2部位超過": 25,
+        "関係の指定なし": 31,
+        "指定語と関係規則": 8
+      }
+    }
+  },
+  "byLanguage": {
+    "ja": {
+      "v1": {
+        "count": 60,
+        "strictCorrect": 29,
+        "structureCorrect": 35,
+        "accepted": 24,
+        "meaningful": {
+          "count": 30,
+          "accepted": 16,
+          "structureCorrect": 13,
+          "strictCorrect": 7
+        },
+        "schemaRepresentable": {
+          "count": 22,
+          "accepted": 14,
+          "structureCorrect": 13,
+          "strictCorrect": 7
+        },
+        "unrepresentable": {
+          "count": 8,
+          "accepted": 2,
+          "appropriatelyHeld": 6
+        },
+        "clearHold": {
+          "count": 20,
+          "correct": 12,
+          "falseActivations": 8
+        },
+        "ambiguous": {
+          "count": 10,
+          "correct": 10,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 14,
+          "passed": 8
+        },
+        "geometry": {
+          "accepted": 24,
+          "schemaPass": 24,
+          "compilerPass": 24,
+          "finiteSurfacePass": 24,
+          "strictSemanticRenderAndCompilerPass": 7
+        },
+        "reasons": {
+          "selected": 24,
+          "primitive-uncertain": 11,
+          "negation-held": 6,
+          "relation-uncertain": 19
+        }
+      },
+      "guard_v2": {
+        "count": 60,
+        "strictCorrect": 39,
+        "structureCorrect": 43,
+        "accepted": 16,
+        "meaningful": {
+          "count": 30,
+          "accepted": 16,
+          "structureCorrect": 13,
+          "strictCorrect": 9
+        },
+        "schemaRepresentable": {
+          "count": 22,
+          "accepted": 14,
+          "structureCorrect": 13,
+          "strictCorrect": 9
+        },
+        "unrepresentable": {
+          "count": 8,
+          "accepted": 2,
+          "appropriatelyHeld": 6
+        },
+        "clearHold": {
+          "count": 20,
+          "correct": 20,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 10,
+          "correct": 10,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 14,
+          "passed": 10
+        },
+        "geometry": {
+          "accepted": 16,
+          "schemaPass": 16,
+          "compilerPass": 16,
+          "finiteSurfacePass": 16,
+          "strictSemanticRenderAndCompilerPass": 9
+        },
+        "reasons": {
+          "selected": 16,
+          "primitive-uncertain": 11,
+          "explicit-negation-or-absence": 6,
+          "relation-uncertain": 18,
+          "negation-held": 1,
+          "quotation-or-code-context": 5,
+          "contradictory-local-attributes": 1,
+          "cancel-or-removal": 2
+        }
+      },
+      "rules": {
+        "count": 60,
+        "strictCorrect": 29,
+        "structureCorrect": 36,
+        "accepted": 31,
+        "meaningful": {
+          "count": 30,
+          "accepted": 21,
+          "structureCorrect": 16,
+          "strictCorrect": 9
+        },
+        "schemaRepresentable": {
+          "count": 22,
+          "accepted": 18,
+          "structureCorrect": 16,
+          "strictCorrect": 9
+        },
+        "unrepresentable": {
+          "count": 8,
+          "accepted": 3,
+          "appropriatelyHeld": 5
+        },
+        "clearHold": {
+          "count": 20,
+          "correct": 12,
+          "falseActivations": 8
+        },
+        "ambiguous": {
+          "count": 10,
+          "correct": 8,
+          "falseActivations": 2
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 15,
+          "passed": 8
+        },
+        "geometry": {
+          "accepted": 31,
+          "schemaPass": 31,
+          "compilerPass": 31,
+          "finiteSurfacePass": 31,
+          "strictSemanticRenderAndCompilerPass": 9
+        },
+        "reasons": {
+          "指定語": 27,
+          "形の指定なし、または2部位超過": 14,
+          "指定語と関係規則": 4,
+          "関係の指定なし": 11,
+          "否定を保留": 4
+        }
+      }
+    },
+    "en": {
+      "v1": {
+        "count": 60,
+        "strictCorrect": 35,
+        "structureCorrect": 37,
+        "accepted": 23,
+        "meaningful": {
+          "count": 30,
+          "accepted": 16,
+          "structureCorrect": 14,
+          "strictCorrect": 12
+        },
+        "schemaRepresentable": {
+          "count": 22,
+          "accepted": 14,
+          "structureCorrect": 14,
+          "strictCorrect": 12
+        },
+        "unrepresentable": {
+          "count": 8,
+          "accepted": 2,
+          "appropriatelyHeld": 6
+        },
+        "clearHold": {
+          "count": 20,
+          "correct": 13,
+          "falseActivations": 7
+        },
+        "ambiguous": {
+          "count": 10,
+          "correct": 10,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 13,
+          "passed": 11
+        },
+        "geometry": {
+          "accepted": 23,
+          "schemaPass": 23,
+          "compilerPass": 23,
+          "finiteSurfacePass": 23,
+          "strictSemanticRenderAndCompilerPass": 12
+        },
+        "reasons": {
+          "selected": 23,
+          "negation-held": 7,
+          "primitive-uncertain": 10,
+          "relation-uncertain": 20
+        }
+      },
+      "guard_v2": {
+        "count": 60,
+        "strictCorrect": 40,
+        "structureCorrect": 42,
+        "accepted": 16,
+        "meaningful": {
+          "count": 30,
+          "accepted": 14,
+          "structureCorrect": 14,
+          "strictCorrect": 12
+        },
+        "schemaRepresentable": {
+          "count": 22,
+          "accepted": 14,
+          "structureCorrect": 14,
+          "strictCorrect": 12
+        },
+        "unrepresentable": {
+          "count": 8,
+          "accepted": 0,
+          "appropriatelyHeld": 8
+        },
+        "clearHold": {
+          "count": 20,
+          "correct": 18,
+          "falseActivations": 2
+        },
+        "ambiguous": {
+          "count": 10,
+          "correct": 10,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 13,
+          "passed": 11
+        },
+        "geometry": {
+          "accepted": 16,
+          "schemaPass": 16,
+          "compilerPass": 16,
+          "finiteSurfacePass": 16,
+          "strictSemanticRenderAndCompilerPass": 12
+        },
+        "reasons": {
+          "selected": 16,
+          "negation-held": 6,
+          "primitive-uncertain": 9,
+          "relation-uncertain": 19,
+          "relation-order-unresolved": 2,
+          "quotation-or-code-context": 6,
+          "contradictory-local-attributes": 1,
+          "cancel-or-removal": 1
+        }
+      },
+      "rules": {
+        "count": 60,
+        "strictCorrect": 29,
+        "structureCorrect": 33,
+        "accepted": 25,
+        "meaningful": {
+          "count": 30,
+          "accepted": 14,
+          "structureCorrect": 14,
+          "strictCorrect": 10
+        },
+        "schemaRepresentable": {
+          "count": 22,
+          "accepted": 14,
+          "structureCorrect": 14,
+          "strictCorrect": 10
+        },
+        "unrepresentable": {
+          "count": 8,
+          "accepted": 0,
+          "appropriatelyHeld": 8
+        },
+        "clearHold": {
+          "count": 20,
+          "correct": 10,
+          "falseActivations": 10
+        },
+        "ambiguous": {
+          "count": 10,
+          "correct": 9,
+          "falseActivations": 1
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 13,
+          "passed": 9
+        },
+        "geometry": {
+          "accepted": 25,
+          "schemaPass": 25,
+          "compilerPass": 25,
+          "finiteSurfacePass": 25,
+          "strictSemanticRenderAndCompilerPass": 10
+        },
+        "reasons": {
+          "指定語": 21,
+          "否定を保留": 4,
+          "形の指定なし、または2部位超過": 11,
+          "関係の指定なし": 20,
+          "指定語と関係規則": 4
+        }
+      }
+    }
+  },
+  "byHoldReason": {
+    "negated_shape": {
+      "v1": {
+        "count": 8,
+        "strictCorrect": 6,
+        "structureCorrect": 6,
+        "accepted": 2,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 6,
+          "falseActivations": 2
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 2,
+          "schemaPass": 2,
+          "compilerPass": 2,
+          "finiteSurfacePass": 2,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "negation-held": 6,
+          "selected": 2
+        }
+      },
+      "guard_v2": {
+        "count": 8,
+        "strictCorrect": 7,
+        "structureCorrect": 7,
+        "accepted": 1,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 7,
+          "falseActivations": 1
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 1,
+          "schemaPass": 1,
+          "compilerPass": 1,
+          "finiteSurfacePass": 1,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "explicit-negation-or-absence": 3,
+          "negation-held": 4,
+          "selected": 1
+        }
+      },
+      "rules": {
+        "count": 8,
+        "strictCorrect": 5,
+        "structureCorrect": 5,
+        "accepted": 3,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 5,
+          "falseActivations": 3
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 3,
+          "schemaPass": 3,
+          "compilerPass": 3,
+          "finiteSurfacePass": 3,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "否定を保留": 4,
+          "形の指定なし、または2部位超過": 1,
+          "指定語": 3
+        }
+      }
+    },
+    "quoted_suggestion": {
+      "v1": {
+        "count": 8,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 4,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 4,
+          "falseActivations": 4
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 4,
+          "schemaPass": 4,
+          "compilerPass": 4,
+          "finiteSurfacePass": 4,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "selected": 4,
+          "relation-uncertain": 2,
+          "negation-held": 2
+        }
+      },
+      "guard_v2": {
+        "count": 8,
+        "strictCorrect": 8,
+        "structureCorrect": 8,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 8,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "quotation-or-code-context": 6,
+          "explicit-negation-or-absence": 1,
+          "negation-held": 1
+        }
+      },
+      "rules": {
+        "count": 8,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 6,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 2,
+          "falseActivations": 6
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 6,
+          "schemaPass": 6,
+          "compilerPass": 6,
+          "finiteSurfacePass": 6,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "指定語": 4,
+          "指定語と関係規則": 2,
+          "形の指定なし、または2部位超過": 1,
+          "否定を保留": 1
+        }
+      }
+    },
+    "code": {
+      "v1": {
+        "count": 6,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 4,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 6,
+          "correct": 2,
+          "falseActivations": 4
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 4,
+          "schemaPass": 4,
+          "compilerPass": 4,
+          "finiteSurfacePass": 4,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "selected": 4,
+          "primitive-uncertain": 2
+        }
+      },
+      "guard_v2": {
+        "count": 6,
+        "strictCorrect": 6,
+        "structureCorrect": 6,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 6,
+          "correct": 6,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "quotation-or-code-context": 5,
+          "primitive-uncertain": 1
+        }
+      },
+      "rules": {
+        "count": 6,
+        "strictCorrect": 3,
+        "structureCorrect": 3,
+        "accepted": 3,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 6,
+          "correct": 3,
+          "falseActivations": 3
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 3,
+          "schemaPass": 3,
+          "compilerPass": 3,
+          "finiteSurfacePass": 3,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "指定語": 3,
+          "形の指定なし、または2部位超過": 3
+        }
+      }
+    },
+    "unsupported_shape": {
+      "v1": {
+        "count": 8,
+        "strictCorrect": 8,
+        "structureCorrect": 8,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 8,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "primitive-uncertain": 8
+        }
+      },
+      "guard_v2": {
+        "count": 8,
+        "strictCorrect": 8,
+        "structureCorrect": 8,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 8,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "primitive-uncertain": 8
+        }
+      },
+      "rules": {
+        "count": 8,
+        "strictCorrect": 8,
+        "structureCorrect": 8,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 8,
+          "correct": 8,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "形の指定なし、または2部位超過": 8
+        }
+      }
+    },
+    "conflict": {
+      "v1": {
+        "count": 6,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 2,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 6,
+          "correct": 4,
+          "falseActivations": 2
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 2,
+          "schemaPass": 2,
+          "compilerPass": 2,
+          "finiteSurfacePass": 2,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 3,
+          "selected": 2,
+          "negation-held": 1
+        }
+      },
+      "guard_v2": {
+        "count": 6,
+        "strictCorrect": 6,
+        "structureCorrect": 6,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 6,
+          "correct": 6,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 3,
+          "contradictory-local-attributes": 2,
+          "explicit-negation-or-absence": 1
+        }
+      },
+      "rules": {
+        "count": 6,
+        "strictCorrect": 3,
+        "structureCorrect": 3,
+        "accepted": 3,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 6,
+          "correct": 3,
+          "falseActivations": 3
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 3,
+          "schemaPass": 3,
+          "compilerPass": 3,
+          "finiteSurfacePass": 3,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "関係の指定なし": 2,
+          "指定語": 2,
+          "否定を保留": 1,
+          "指定語と関係規則": 1
+        }
+      }
+    },
+    "cancel": {
+      "v1": {
+        "count": 4,
+        "strictCorrect": 1,
+        "structureCorrect": 1,
+        "accepted": 3,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 4,
+          "correct": 1,
+          "falseActivations": 3
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 3,
+          "schemaPass": 3,
+          "compilerPass": 3,
+          "finiteSurfacePass": 3,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "selected": 3,
+          "negation-held": 1
+        }
+      },
+      "guard_v2": {
+        "count": 4,
+        "strictCorrect": 3,
+        "structureCorrect": 3,
+        "accepted": 1,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 4,
+          "correct": 3,
+          "falseActivations": 1
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 1,
+          "schemaPass": 1,
+          "compilerPass": 1,
+          "finiteSurfacePass": 1,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "cancel-or-removal": 3,
+          "selected": 1
+        }
+      },
+      "rules": {
+        "count": 4,
+        "strictCorrect": 1,
+        "structureCorrect": 1,
+        "accepted": 3,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 4,
+          "correct": 1,
+          "falseActivations": 3
+        },
+        "ambiguous": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 3,
+          "schemaPass": 3,
+          "compilerPass": 3,
+          "finiteSurfacePass": 3,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "指定語": 3,
+          "否定を保留": 1
+        }
+      }
+    },
+    "unresolved_choice": {
+      "v1": {
+        "count": 6,
+        "strictCorrect": 6,
+        "structureCorrect": 6,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 6,
+          "correct": 6,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 6
+        }
+      },
+      "guard_v2": {
+        "count": 6,
+        "strictCorrect": 6,
+        "structureCorrect": 6,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 6,
+          "correct": 6,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 6
+        }
+      },
+      "rules": {
+        "count": 6,
+        "strictCorrect": 5,
+        "structureCorrect": 5,
+        "accepted": 1,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 6,
+          "correct": 5,
+          "falseActivations": 1
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 1,
+          "schemaPass": 1,
+          "compilerPass": 1,
+          "finiteSurfacePass": 1,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "関係の指定なし": 5,
+          "指定語": 1
+        }
+      }
+    },
+    "missing_relation": {
+      "v1": {
+        "count": 4,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 4,
+          "correct": 4,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 4
+        }
+      },
+      "guard_v2": {
+        "count": 4,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 4,
+          "correct": 4,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 4
+        }
+      },
+      "rules": {
+        "count": 4,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 4,
+          "correct": 4,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "関係の指定なし": 4
+        }
+      }
+    },
+    "missing_referent": {
+      "v1": {
+        "count": 4,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 4,
+          "correct": 4,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "primitive-uncertain": 4
+        }
+      },
+      "guard_v2": {
+        "count": 4,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 4,
+          "correct": 4,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "primitive-uncertain": 4
+        }
+      },
+      "rules": {
+        "count": 4,
+        "strictCorrect": 4,
+        "structureCorrect": 4,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 4,
+          "correct": 4,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "形の指定なし、または2部位超過": 4
+        }
+      }
+    },
+    "metaphor": {
+      "v1": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "primitive-uncertain": 2
+        }
+      },
+      "guard_v2": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "primitive-uncertain": 2
+        }
+      },
+      "rules": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "形の指定なし、または2部位超過": 2
+        }
+      }
+    },
+    "underspecified": {
+      "v1": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 2
+        }
+      },
+      "guard_v2": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 2
+        }
+      },
+      "rules": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "関係の指定なし": 2
+        }
+      }
+    },
+    "unresolved_relation": {
+      "v1": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 2
+        }
+      },
+      "guard_v2": {
+        "count": 2,
+        "strictCorrect": 2,
+        "structureCorrect": 2,
+        "accepted": 0,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 2,
+          "falseActivations": 0
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 0,
+          "schemaPass": 0,
+          "compilerPass": 0,
+          "finiteSurfacePass": 0,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "relation-uncertain": 2
+        }
+      },
+      "rules": {
+        "count": 2,
+        "strictCorrect": 0,
+        "structureCorrect": 0,
+        "accepted": 2,
+        "meaningful": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "schemaRepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "structureCorrect": 0,
+          "strictCorrect": 0
+        },
+        "unrepresentable": {
+          "count": 0,
+          "accepted": 0,
+          "appropriatelyHeld": 0
+        },
+        "clearHold": {
+          "count": 0,
+          "correct": 0,
+          "falseActivations": 0
+        },
+        "ambiguous": {
+          "count": 2,
+          "correct": 0,
+          "falseActivations": 2
+        },
+        "attributeChecksOnReturnedCorrectlySizedPrograms": {
+          "count": 0,
+          "passed": 0
+        },
+        "geometry": {
+          "accepted": 2,
+          "schemaPass": 2,
+          "compilerPass": 2,
+          "finiteSurfacePass": 2,
+          "strictSemanticRenderAndCompilerPass": 0
+        },
+        "reasons": {
+          "指定語と関係規則": 2
+        }
+      }
+    }
+  },
+  "contributions": {
+    "v1": {
+      "accepted": 47,
+      "casesReachingPrimitiveClassifier": 107,
+      "completePrimitiveInventoryHeadsAvailable": 51,
+      "rawTop1PrimitiveInventoryCorrect": 48,
+      "evidenceKinds": {
+        "learned-char-primitive": {
+          "cases": 107,
+          "acceptedCases": 47
+        },
+        "explicit-attribute-scope": {
+          "cases": 43,
+          "acceptedCases": 43
+        },
+        "explicit-negation-guard": {
+          "cases": 13,
+          "acceptedCases": 0
+        },
+        "explicit-noun-and-color-mask": {
+          "cases": 43,
+          "acceptedCases": 4
+        },
+        "learned-char-relation": {
+          "cases": 43,
+          "acceptedCases": 4
+        },
+        "explicit-part-order-and-attribute-scope": {
+          "cases": 4,
+          "acceptedCases": 4
+        }
+      },
+      "note": "Primitive inventory ignores relation direction and attributes. Guard classifierMs is the complete v1 pipeline, not a pure learned-head measurement; evidenceKinds are exposure counts, not causal ablations."
+    },
+    "guard_v2": {
+      "accepted": 32,
+      "casesReachingPrimitiveClassifier": 91,
+      "completePrimitiveInventoryHeadsAvailable": 51,
+      "rawTop1PrimitiveInventoryCorrect": 48,
+      "evidenceKinds": {
+        "learned-char-primitive": {
+          "cases": 91,
+          "acceptedCases": 32
+        },
+        "explicit-attribute-scope": {
+          "cases": 30,
+          "acceptedCases": 30
+        },
+        "explicit-v2-compiler-accepted": {
+          "cases": 32,
+          "acceptedCases": 32
+        },
+        "explicit-negation-guard": {
+          "cases": 7,
+          "acceptedCases": 0
+        },
+        "explicit-v2-global-guard": {
+          "cases": 20,
+          "acceptedCases": 0
+        },
+        "explicit-v2-scoped-attribute": {
+          "cases": 3,
+          "acceptedCases": 3
+        },
+        "explicit-noun-and-color-mask": {
+          "cases": 41,
+          "acceptedCases": 2
+        },
+        "learned-char-relation": {
+          "cases": 41,
+          "acceptedCases": 2
+        },
+        "explicit-part-order-and-attribute-scope": {
+          "cases": 4,
+          "acceptedCases": 2
+        },
+        "explicit-v2-parent-order": {
+          "cases": 2,
+          "acceptedCases": 2
+        },
+        "explicit-v2-relation-consistency-guard": {
+          "cases": 2,
+          "acceptedCases": 0
+        },
+        "explicit-v2-local-contradiction": {
+          "cases": 2,
+          "acceptedCases": 0
+        }
+      },
+      "note": "Primitive inventory ignores relation direction and attributes. Guard classifierMs is the complete v1 pipeline, not a pure learned-head measurement; evidenceKinds are exposure counts, not causal ablations."
+    },
+    "rules": {
+      "accepted": 56,
+      "casesReachingPrimitiveClassifier": 0,
+      "completePrimitiveInventoryHeadsAvailable": 0,
+      "rawTop1PrimitiveInventoryCorrect": 0,
+      "evidenceKinds": {},
+      "note": "Primitive inventory ignores relation direction and attributes. Guard classifierMs is the complete v1 pipeline, not a pure learned-head measurement; evidenceKinds are exposure counts, not causal ablations."
+    }
+  },
+  "model": {
+    "format": "glyph-char-student-v1",
+    "dimensions": 4096,
+    "headCount": 2,
+    "decodedWeightBytes": 91136,
+    "maxInputCodeUnits": 4000,
+    "transformer": false,
+    "externalRequests": false,
+    "thresholds": {
+      "primitiveScore": 0.8,
+      "primitiveMargin": 0.35,
+      "primitiveCoverage": 0.24,
+      "relationScore": 0.78,
+      "relationMargin": 0.3
+    }
+  },
+  "v1ToGuardV2": {
+    "changedCases": 18,
+    "improved": 15,
+    "regressed": 0,
+    "details": [
+      {
+        "id": "fresh-014",
+        "text": "円柱を低く、ずんぐりした感じで。",
+        "stratum": "meaningful",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 1.4,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 0.65,
+              "width": 1.1,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "selected",
+        "guardV2Evidence": [
+          {
+            "kind": "learned-char-primitive",
+            "detail": "tube",
+            "score": 0.9995064696384398
+          },
+          {
+            "kind": "explicit-attribute-scope"
+          },
+          {
+            "kind": "explicit-v2-scoped-attribute",
+            "detail": "squat"
+          },
+          {
+            "kind": "explicit-v2-compiler-accepted"
+          }
+        ]
+      },
+      {
+        "id": "fresh-017",
+        "text": "Make a squat cylinder.",
+        "stratum": "meaningful",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 0.65,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 0.65,
+              "width": 1.1,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "v1Correct": true,
+        "guardV2Correct": true,
+        "guardV2Reason": "selected",
+        "guardV2Evidence": [
+          {
+            "kind": "learned-char-primitive",
+            "detail": "tube",
+            "score": 0.9978099868480201
+          },
+          {
+            "kind": "explicit-attribute-scope"
+          },
+          {
+            "kind": "explicit-v2-scoped-attribute",
+            "detail": "squat"
+          },
+          {
+            "kind": "explicit-v2-compiler-accepted"
+          }
+        ]
+      },
+      {
+        "id": "fresh-033",
+        "text": "花瓶の胴を横に広くして。",
+        "stratum": "meaningful",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "vase",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "vase",
+              "height": 1,
+              "width": 1.65,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "selected",
+        "guardV2Evidence": [
+          {
+            "kind": "learned-char-primitive",
+            "detail": "vase",
+            "score": 0.9992088300098984
+          },
+          {
+            "kind": "explicit-attribute-scope"
+          },
+          {
+            "kind": "explicit-v2-scoped-attribute",
+            "detail": "horizontal-elongation"
+          },
+          {
+            "kind": "explicit-v2-compiler-accepted"
+          }
+        ]
+      },
+      {
+        "id": "fresh-053",
+        "text": "Set a blade to the left of a vase.",
+        "stratum": "meaningful",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "blade",
+              "height": 1.4,
+              "width": 0.5,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "vase",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "end",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": false,
+        "guardV2Reason": "relation-order-unresolved",
+        "guardV2Evidence": [
+          {
+            "kind": "learned-char-primitive",
+            "detail": "blade",
+            "score": 0.9979817838174333
+          },
+          {
+            "kind": "learned-char-primitive",
+            "detail": "vase",
+            "score": 0.99653818581156
+          },
+          {
+            "kind": "explicit-noun-and-color-mask"
+          },
+          {
+            "kind": "learned-char-relation",
+            "detail": "end",
+            "score": 0.9852006264799885
+          },
+          {
+            "kind": "explicit-part-order-and-attribute-scope",
+            "detail": "forward"
+          },
+          {
+            "kind": "explicit-v2-relation-consistency-guard",
+            "detail": "unrecognized-order"
+          }
+        ]
+      },
+      {
+        "id": "fresh-055",
+        "text": "Put the vase to the right of the sphere.",
+        "stratum": "meaningful",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "vase",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "end",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": false,
+        "guardV2Reason": "relation-order-unresolved",
+        "guardV2Evidence": [
+          {
+            "kind": "learned-char-primitive",
+            "detail": "vase",
+            "score": 0.99653818581156
+          },
+          {
+            "kind": "learned-char-primitive",
+            "detail": "sphere",
+            "score": 0.9978700611622817
+          },
+          {
+            "kind": "explicit-noun-and-color-mask"
+          },
+          {
+            "kind": "learned-char-relation",
+            "detail": "end",
+            "score": 0.9530330252208591
+          },
+          {
+            "kind": "explicit-part-order-and-attribute-scope",
+            "detail": "forward"
+          },
+          {
+            "kind": "explicit-v2-relation-consistency-guard",
+            "detail": "unrecognized-order"
+          }
+        ]
+      },
+      {
+        "id": "fresh-063",
+        "text": "円柱を出すのは禁止。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 1.4,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "explicit-negation-or-absence",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "explicit-negation-or-absence"
+          }
+        ]
+      },
+      {
+        "id": "fresh-069",
+        "text": "友人の案は「球を作る」だった。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-071",
+        "text": "メモ：円柱を作る、という提案。まだ決定していない。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 1.4,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "explicit-negation-or-absence",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "explicit-negation-or-absence"
+          }
+        ]
+      },
+      {
+        "id": "fresh-072",
+        "text": "誰かが「輪っかにしよう」と言っていた。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "ring",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-073",
+        "text": "Someone suggested \"make a sphere\".",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-077",
+        "text": "`shape = \"sphere\";` このコードを眺めている。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-078",
+        "text": "```json\n{\"shape\":\"box\"}\n```",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "box",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-081",
+        "text": "```js\nconst shape = \"torus\";\n```",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "ring",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-082",
+        "text": "The variable is called blade_length.",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "blade",
+              "height": 1.4,
+              "width": 0.5,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "quotation-or-code-context",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "quotation-or-code-context"
+          }
+        ]
+      },
+      {
+        "id": "fresh-092",
+        "text": "同じ花瓶を、背が高くて背が低い形に同時にして。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "vase",
+              "height": 1.65,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "contradictory-local-attributes",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-local-contradiction",
+            "detail": "height"
+          }
+        ]
+      },
+      {
+        "id": "fresh-095",
+        "text": "Make the same cylinder simultaneously tall and short.",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 0.65,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "contradictory-local-attributes",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-local-contradiction",
+            "detail": "height"
+          }
+        ]
+      },
+      {
+        "id": "fresh-097",
+        "text": "さっきの球の注文を取り消して。",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "cancel-or-removal",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "cancel-or-removal"
+          }
+        ]
+      },
+      {
+        "id": "fresh-099",
+        "text": "Cancel my earlier request for a box.",
+        "stratum": "hold",
+        "v1Program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "box",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ]
+        },
+        "guardV2Program": null,
+        "v1Correct": false,
+        "guardV2Correct": true,
+        "guardV2Reason": "cancel-or-removal",
+        "guardV2Evidence": [
+          {
+            "kind": "explicit-v2-global-guard",
+            "detail": "cancel-or-removal"
+          }
+        ]
+      }
+    ]
+  }
+}

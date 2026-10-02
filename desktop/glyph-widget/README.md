@@ -87,3 +87,5 @@ window.webkit?.messageHandlers.widgetMetrics.postMessage({
 Appleの一次資料: [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)、[NWListener](https://developer.apple.com/documentation/network/nwlistener)、[requiredLocalEndpoint](https://developer.apple.com/documentation/network/nwparameters/requiredlocalendpoint)、[WKScriptMessage](https://developer.apple.com/documentation/webkit/wkscriptmessage)。
 
 比較版を日常的に使う場合は `--bundle-id dev.glyphmatter.companion.widget-v2` のように別IDを指定する。portと窓設定のUserDefaultsを分け、保存originも前版から引き継がない。ベンチマークA/R3は同じ人工身体を復元するため基準IDを使用したが、公開v2アプリは別IDで、旧アプリや文字履歴を変更しない。
+
+新しい比較buildは `--source-commit` に40桁の保存点を指定できる。`Contents/Resources/BuildInfo.json`へ、その値、native sourceと同梱WebファイルのSHA-256、version/IDを記録してから署名する。ファイル名はbundle内の相対名だけで、端末固有pathや本文は含めない。値だけで再現を保証せず、配布後は同梱ファイルを実際に照合する。

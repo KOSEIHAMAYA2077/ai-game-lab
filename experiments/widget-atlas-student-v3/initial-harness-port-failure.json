@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-10-02T17:08:30.816Z",
+  "environment": {
+    "browser": "Chrome headless",
+    "realWebGL": true,
+    "nativeUI": false,
+    "actualIME": false
+  },
+  "tests": [],
+  "measurements": [],
+  "requests": [],
+  "exceptions": [],
+  "freezeSha256": {
+    "experiments/widget-student-v1/student-model.json": "dfc8be816ca9a53206ec41d44118db52e5f4ac694bd263efab1a64d5ca05d7dd",
+    "prototypes/glyph-creature/src/widget-student.ts": "30bd84b0dfe2f2ff7a9046a58362829323aad064f0c56e27f66481d9a447d9c4",
+    "prototypes/glyph-creature/src/widget-student-guard-v2.ts": "a9d0b382b6bbb8a1c604df7ff454974e00e400c8116e696b0f7580393ea41d7f"
+  },
+  "passed": false,
+  "failure": {
+    "message": "TypeError: Cannot read properties of undefined (reading 'loaded')",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'loaded')\n    at file://<repo>/experiments/widget-atlas-student-v3/run-ui-regression.mjs:48:109"
+  }
+}

@@ -1,5 +1,9 @@
 # Glyph Matter — 文字のかたち
 
+### [▶ 小窓・形の保持と小型分類器の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/)
+
+根性の60形を標準にし、メビウスが単純な輪へ縮退する経路を修正。文字用画像は必要な行数だけ確保します。HELPで約122KBの小型分類器を選べますが、6形・最大2部位の実験用で、自由文の取りこぼしが残ります。[表現・操作・回帰](experiments/widget-atlas-student-v3/README.md) / [新しい120文の意味評価と限界](experiments/widget-student-v2-fresh/REPORT.md)。旧版のURLと文字履歴は保持します。
+
 ### [▶ 小窓・描画予算の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v2/)
 
 旧小窓を残し、表示用の配列・転送を削減した版。形と文字表面を前版と比較して保持し、保存32,000文字と描画1,536文字を分ける。実機のCPU改善は未確認、メモリは少し低い観測値に留まる。[比較・原票・制限](experiments/widget-render-budget-v2/README.md) / [基準の小窓](https://koseihamaya2077.github.io/glyph-matter/widget-v1/)。
