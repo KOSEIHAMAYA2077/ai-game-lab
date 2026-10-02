@@ -1,0 +1,3346 @@
+{
+  "geometrySha256": "ed411f6f24ed13099f63b19182fde506ebc316047e21668f01257739e2756dc0",
+  "sourceUnchanged": true,
+  "summary": {
+    "cases": 54,
+    "compileAccepted": 41,
+    "finite": 41,
+    "inverseCalibrated": 41,
+    "throughCases": 41,
+    "throughCrossingPass": 40,
+    "aboveCases": 0,
+    "aboveMaterialContactPass": 0,
+    "endCases": 0,
+    "endEndpointPass": 0
+  },
+  "twistWitness": [
+    {
+      "primitive": "box",
+      "maxDeviationFromUntwistedMaterialBoundary": 1347.8142884711328,
+      "physicalSectionChanges": true
+    },
+    {
+      "primitive": "blade",
+      "maxDeviationFromUntwistedMaterialBoundary": 278.3283787413741,
+      "physicalSectionChanges": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "compatibility-sphere-ring-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.9770000000000001,
+          "height": 1.132361359734531
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.3105072582675348e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 217,
+            "outsideParent": 807,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 225,
+            "outsideParent": 799,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 217,
+            "outsideParent": 807,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 222,
+            "outsideParent": 802,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-sphere-ring-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.6520000000000001,
+          "height": 0.6520000000000001
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.213473765915296e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 134,
+            "outsideParent": 890,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 140,
+            "outsideParent": 884,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 132,
+            "outsideParent": 892,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 143,
+            "outsideParent": 881,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-sphere-ring-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.456,
+          "height": 0.5009405208221213
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.2141398997300712e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 188,
+            "outsideParent": 836,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 208,
+            "outsideParent": 816,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 208,
+            "outsideParent": 816,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 213,
+            "outsideParent": 811,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-sphere-tube-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.05
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.3109513474773848e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 791,
+            "outsideParent": 233,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 785,
+            "outsideParent": 239,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 791,
+            "outsideParent": 233,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 788,
+            "outsideParent": 236,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-sphere-tube-tiny-parent-thick-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-sphere-tube-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-sphere-blade-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.05
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.3105072582675348e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 879,
+            "outsideParent": 145,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 864,
+            "outsideParent": 160,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 874,
+            "outsideParent": 150,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 892,
+            "outsideParent": 132,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-sphere-blade-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.213473765915296e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 166,
+            "outsideParent": 858,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 162,
+            "outsideParent": 862,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 158,
+            "outsideParent": 866,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 154,
+            "outsideParent": 870,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-sphere-blade-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-box-ring-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.9770000000000001,
+          "height": 1.446897399263272
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.841304886340822e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 383,
+            "outsideParent": 641,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 387,
+            "outsideParent": 637,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 383,
+            "outsideParent": 641,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 380,
+            "outsideParent": 644,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-ring-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.6520000000000001,
+          "height": 0.6520000000000001
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.1711742686770776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 254,
+            "outsideParent": 770,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 251,
+            "outsideParent": 773,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 251,
+            "outsideParent": 773,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 249,
+            "outsideParent": 775,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-ring-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.456,
+          "height": 0.690599384552
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.5480949855373183e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 193,
+            "outsideParent": 831,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 221,
+            "outsideParent": 803,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 203,
+            "outsideParent": 821,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 205,
+            "outsideParent": 819,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-tube-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.269390266058775
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.841304886340822e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 687,
+            "outsideParent": 337,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 686,
+            "outsideParent": 338,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 678,
+            "outsideParent": 346,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 684,
+            "outsideParent": 340,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-tube-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.1711742686770776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 80,
+            "outsideParent": 944,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 86,
+            "outsideParent": 938,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 82,
+            "outsideParent": 942,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 88,
+            "outsideParent": 936,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-tube-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.5480949855373183e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 27,
+            "outsideParent": 997,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 27,
+            "outsideParent": 997,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 28,
+            "outsideParent": 996,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 29,
+            "outsideParent": 995,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-blade-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.269390266058775
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.841304886340822e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 786,
+            "outsideParent": 238,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 776,
+            "outsideParent": 248,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 777,
+            "outsideParent": 247,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 792,
+            "outsideParent": 232,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-blade-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.1711742686770776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 266,
+            "outsideParent": 758,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 246,
+            "outsideParent": 778,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 259,
+            "outsideParent": 765,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 259,
+            "outsideParent": 765,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-box-blade-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.5480949855373183e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 32,
+            "outsideParent": 992,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 30,
+            "outsideParent": 994,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 30,
+            "outsideParent": 994,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 29,
+            "outsideParent": 995,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-ring-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.29300000000000004,
+          "height": 1.1606380616465894
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.7741363933510002e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 224,
+            "outsideParent": 800,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 220,
+            "outsideParent": 804,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 210,
+            "outsideParent": 814,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 213,
+            "outsideParent": 811,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-ring-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.5840000000000001,
+          "height": 0.6520000000000001
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 8.881784197001252e-16,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 26,
+            "outsideParent": 998,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 34,
+            "outsideParent": 990,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 32,
+            "outsideParent": 992,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 33,
+            "outsideParent": 991,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-ring-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.192,
+          "height": 0.5063919836039066
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.1102230246251565e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 41,
+            "outsideParent": 983,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 61,
+            "outsideParent": 963,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 50,
+            "outsideParent": 974,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 33,
+            "outsideParent": 991,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-tube-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.7741363933510002e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 148,
+            "outsideParent": 876,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 154,
+            "outsideParent": 870,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 155,
+            "outsideParent": 869,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 157,
+            "outsideParent": 867,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-tube-tiny-parent-thick-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-tube-tube-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-tube-blade-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.7741363933510002e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 246,
+            "outsideParent": 778,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 240,
+            "outsideParent": 784,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 236,
+            "outsideParent": 788,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 240,
+            "outsideParent": 784,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-blade-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 8.881784197001252e-16,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 32,
+            "outsideParent": 992,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 32,
+            "outsideParent": 992,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 27,
+            "outsideParent": 997,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 27,
+            "outsideParent": 997,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-tube-blade-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-blade-ring-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.26033333333333336,
+          "height": 1.1168817742150603
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 7.792100298331661e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 83,
+            "outsideParent": 941,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 80,
+            "outsideParent": 944,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 75,
+            "outsideParent": 949,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 81,
+            "outsideParent": 943,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-blade-ring-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.5840000000000001,
+          "height": 0.6520000000000001
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 7.767564369487445e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 9,
+            "outsideParent": 1015,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 6,
+            "outsideParent": 1018,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 9,
+            "outsideParent": 1015,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 9,
+            "outsideParent": 1015,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-blade-ring-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.192,
+          "height": 0.4769925565846819
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 7.760903031339694e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 16,
+            "outsideParent": 1008,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 18,
+            "outsideParent": 1006,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 19,
+            "outsideParent": 1005,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 13,
+            "outsideParent": 1011,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-blade-tube-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 7.792100298331661e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 28,
+            "outsideParent": 996,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 25,
+            "outsideParent": 999,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 21,
+            "outsideParent": 1003,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 28,
+            "outsideParent": 996,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-blade-tube-tiny-parent-thick-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-blade-tube-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-blade-blade-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 7.794542788985837e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 135,
+            "outsideParent": 889,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 140,
+            "outsideParent": 884,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 139,
+            "outsideParent": 885,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 134,
+            "outsideParent": 890,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-blade-blade-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 7.757794406870744e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 7,
+            "outsideParent": 1017,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 4,
+            "outsideParent": 1020,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 6,
+            "outsideParent": 1018,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 3,
+            "outsideParent": 1021,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-blade-blade-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-vase-ring-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.85746875,
+          "height": 1.1850324962935113
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.8980372828991676e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 72,
+            "outsideParent": 952,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 75,
+            "outsideParent": 949,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 69,
+            "outsideParent": 955,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 69,
+            "outsideParent": 955,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-vase-ring-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.598875,
+          "height": 0.6520000000000001
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.8011148128493915e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 42,
+            "outsideParent": 982,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 42,
+            "outsideParent": 982,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 44,
+            "outsideParent": 980,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 36,
+            "outsideParent": 988,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-vase-ring-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.402875,
+          "height": 0.5210896454883793
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.801003790546929e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 54,
+            "outsideParent": 970,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 61,
+            "outsideParent": 963,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 65,
+            "outsideParent": 959,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 51,
+            "outsideParent": 973,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-vase-tube-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.89814830520163e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 45,
+            "outsideParent": 979,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 49,
+            "outsideParent": 975,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 58,
+            "outsideParent": 966,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 61,
+            "outsideParent": 963,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-vase-tube-tiny-parent-thick-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-vase-tube-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-vase-blade-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.8982593275040927e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 57,
+            "outsideParent": 967,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 63,
+            "outsideParent": 961,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 45,
+            "outsideParent": 979,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 58,
+            "outsideParent": 966,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-vase-blade-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.8011148128493915e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 28,
+            "outsideParent": 996,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 36,
+            "outsideParent": 988,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 29,
+            "outsideParent": 995,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 24,
+            "outsideParent": 1000,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-vase-blade-tiny-parent-bent-child",
+      "compileAccepted": false
+    },
+    {
+      "id": "compatibility-ring-ring-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.082,
+          "height": 1.182
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 2.7755575615628914e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 343,
+            "outsideParent": 681,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 346,
+            "outsideParent": 678,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 332,
+            "outsideParent": 692,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 349,
+            "outsideParent": 675,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-ring-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.9040000000000001,
+          "height": 0.9040000000000001
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 2.4424906541753444e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 43,
+            "outsideParent": 981,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 43,
+            "outsideParent": 981,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 41,
+            "outsideParent": 983,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 45,
+            "outsideParent": 979,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-ring-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 0.512,
+          "height": 0.512
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9984014443252818e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 286,
+            "outsideParent": 738,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 295,
+            "outsideParent": 729,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 292,
+            "outsideParent": 732,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 294,
+            "outsideParent": 730,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-tube-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.232
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 2.7755575615628914e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 273,
+            "outsideParent": 751,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 259,
+            "outsideParent": 765,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 266,
+            "outsideParent": 758,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 253,
+            "outsideParent": 771,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-tube-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.7763568394002505e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 17,
+            "outsideParent": 1007,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 19,
+            "outsideParent": 1005,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 17,
+            "outsideParent": 1007,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 21,
+            "outsideParent": 1003,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-tube-tiny-parent-bent-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.2,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.8,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 1,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 2.220446049250313e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 5,
+            "outsideParent": 1019,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 0,
+            "outsideParent": 1024,
+            "surfaceCrossing": false
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 6,
+            "outsideParent": 1018,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 15,
+            "outsideParent": 1009,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": false
+      }
+    },
+    {
+      "id": "compatibility-ring-blade-normal",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.9,
+            "depth": 0.65,
+            "bend": 0.4,
+            "twist": 0.7
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.55,
+            "bend": -0.4,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.232
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.4416913763379853e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 273,
+            "outsideParent": 751,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 272,
+            "outsideParent": 752,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 272,
+            "outsideParent": 752,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 273,
+            "outsideParent": 751,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-blade-tiny-parent-thick-child",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.7763568394002505e-15,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 139,
+            "outsideParent": 885,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 15,
+            "sampleCount": 1024,
+            "insideParent": 139,
+            "outsideParent": 885,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 125,
+            "outsideParent": 899,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 45,
+            "sampleCount": 1024,
+            "insideParent": 138,
+            "outsideParent": 886,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "compatibility-ring-blade-tiny-parent-bent-child",
+      "compileAccepted": false
+    }
+  ],
+  "limitations": [
+    "Numerical inverse of a non-self-intersecting sweep; not a general signed distance field or watertight mesh proof.",
+    "Ring uses Catmull-Rom/Hermite centerline root solving; vase uses outer sweep minus its hollow inner sweep. Root sampling is numerical and thin material can be missed.",
+    "Boundary residuals test inverse correctness against actual independent renderer samples.",
+    "Bend and physical section twist are included; no bounding-box-only intersection claim.",
+    "No browser rendering or language inference time is measured here."
+  ]
+}

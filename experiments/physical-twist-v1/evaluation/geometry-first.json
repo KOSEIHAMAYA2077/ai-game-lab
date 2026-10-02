@@ -1,0 +1,1554 @@
+{
+  "geometrySha256": "1fb3a1a7c1d4fb5b0ee46cce188551b55d77122cb7d5a0378ef87bf8e4c48aae",
+  "sourceUnchanged": true,
+  "summary": {
+    "cases": 25,
+    "compileAccepted": 25,
+    "finite": 25,
+    "inverseCalibrated": 19,
+    "throughCases": 19,
+    "throughCrossingPass": 18,
+    "aboveCases": 3,
+    "aboveMaterialContactPass": 3,
+    "endCases": 3,
+    "endEndpointPass": 3
+  },
+  "twistWitness": [
+    {
+      "primitive": "box",
+      "maxDeviationFromUntwistedMaterialBoundary": 1347.8142884711328,
+      "physicalSectionChanges": true
+    },
+    {
+      "primitive": "blade",
+      "maxDeviationFromUntwistedMaterialBoundary": 278.3283787413741,
+      "physicalSectionChanges": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "through-sphere-ring-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.084
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4368506384698776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 156,
+            "outsideParent": 868,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 154,
+            "outsideParent": 870,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-ring-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.2728469077610745
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.2273515537231106e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 180,
+            "outsideParent": 844,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 173,
+            "outsideParent": 851,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-ring-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.2209980723153386
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4226397837546756e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 164,
+            "outsideParent": 860,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 157,
+            "outsideParent": 867,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-tube-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4368506384698776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 817,
+            "outsideParent": 207,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 820,
+            "outsideParent": 204,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-tube-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.2273515537231106e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 790,
+            "outsideParent": 234,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 780,
+            "outsideParent": 244,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-tube-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4235279621743757e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 763,
+            "outsideParent": 261,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 766,
+            "outsideParent": 258,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-blade-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4368506384698776e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 904,
+            "outsideParent": 120,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 909,
+            "outsideParent": 115,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-blade-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.227462576025573e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 846,
+            "outsideParent": 178,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 849,
+            "outsideParent": 175,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-sphere-blade-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.2999999999999998
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.4229728506620631e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 814,
+            "outsideParent": 210,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 822,
+            "outsideParent": 202,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-ring-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.084
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9346746427117978e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 614,
+            "outsideParent": 410,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 593,
+            "outsideParent": 431,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-ring-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.7235523585092716
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 4.0667469392019484e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 232,
+            "outsideParent": 792,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 238,
+            "outsideParent": 786,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-ring-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "width": 1.234,
+          "height": 1.710263834166963
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.0216940061222886e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 233,
+            "outsideParent": 791,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 224,
+            "outsideParent": 800,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-tube-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.3945043455219852
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9346746427117978e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 792,
+            "outsideParent": 232,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 793,
+            "outsideParent": 231,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-tube-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4085320037254991
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 4.0667469392019484e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 793,
+            "outsideParent": 231,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 802,
+            "outsideParent": 222,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-tube-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4618084968080263
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.0203617384927384e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 786,
+            "outsideParent": 238,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 777,
+            "outsideParent": 247,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-blade-twist",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.3945043455219852
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.9346746427117978e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 872,
+            "outsideParent": 152,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 877,
+            "outsideParent": 147,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-blade-bend",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4085320037254991
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 4.0667469392019484e-13,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 887,
+            "outsideParent": 137,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 890,
+            "outsideParent": 134,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "through-box-blade-both",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1.15,
+            "depth": 0.65,
+            "bend": 0.65,
+            "twist": 0.85
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 0.8,
+            "depth": 0.6,
+            "bend": -0.45,
+            "twist": -0.7
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.4618084968080263
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 3.0203617384927384e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 901,
+            "outsideParent": 123,
+            "surfaceCrossing": true
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 902,
+            "outsideParent": 122,
+            "surfaceCrossing": true
+          }
+        ],
+        "pass": true
+      }
+    },
+    {
+      "id": "end-bent-box-sphere",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "endpoint": {
+        "distance": 0,
+        "pass": true,
+        "limitation": "Centerline endpoint placement, not a proof of universal watertight material contact."
+      }
+    },
+    {
+      "id": "end-bent-box-box",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "endpoint": {
+        "distance": 0,
+        "pass": true,
+        "limitation": "Centerline endpoint placement, not a proof of universal watertight material contact."
+      }
+    },
+    {
+      "id": "end-bent-box-tube",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "endpoint": {
+        "distance": 0,
+        "pass": true,
+        "limitation": "Centerline endpoint placement, not a proof of universal watertight material contact."
+      }
+    },
+    {
+      "id": "above-bent-box-sphere",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "materialContact": {
+        "atTimes": [
+          {
+            "time": 0,
+            "distance": 0,
+            "pass": true
+          },
+          {
+            "time": 15,
+            "distance": 6.206335383118183e-17,
+            "pass": true
+          },
+          {
+            "time": 30,
+            "distance": 6.206335383118183e-17,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "above-bent-box-box",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "materialContact": {
+        "atTimes": [
+          {
+            "time": 0,
+            "distance": 1.3877787807814457e-17,
+            "pass": true
+          },
+          {
+            "time": 15,
+            "distance": 2.8609792490763984e-17,
+            "pass": true
+          },
+          {
+            "time": 30,
+            "distance": 5.594315114139762e-17,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "above-bent-box-tube",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.25,
+            "width": 0.9,
+            "depth": 0.55,
+            "bend": 0.75,
+            "twist": 0.9
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 0.7,
+            "depth": 0.45,
+            "bend": -0.6,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [],
+      "materialContact": {
+        "atTimes": [
+          {
+            "time": 0,
+            "distance": 5.594315114139762e-17,
+            "pass": true
+          },
+          {
+            "time": 15,
+            "distance": 5.551115123125783e-17,
+            "pass": true
+          },
+          {
+            "time": 30,
+            "distance": 5.551115123125783e-17,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "through-tiny-sphere-thick-tube",
+      "source": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 0.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0.8
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.8,
+            "width": 1.8,
+            "depth": 1.8,
+            "bend": 0,
+            "twist": -0.8
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "compileAccepted": true,
+      "finite": true,
+      "adjustments": [
+        {
+          "part": "1",
+          "reason": "surface-intersection",
+          "height": 1.8
+        }
+      ],
+      "inverseCalibration": {
+        "sideSamples": 80,
+        "maxBoundaryResidual": 1.213473765915296e-12,
+        "pass": true
+      },
+      "intersection": {
+        "expected": true,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampleCount": 1024,
+            "insideParent": 0,
+            "outsideParent": 1024,
+            "surfaceCrossing": false
+          },
+          {
+            "time": 30,
+            "sampleCount": 1024,
+            "insideParent": 0,
+            "outsideParent": 1024,
+            "surfaceCrossing": false
+          }
+        ],
+        "pass": false
+      }
+    }
+  ],
+  "limitations": [
+    "Numerical inverse of a non-self-intersecting open sweep; not a general signed distance field or watertight mesh proof.",
+    "Ring/vase parent occupancy is intentionally not claimed.",
+    "Boundary residuals test inverse correctness against actual independent renderer samples.",
+    "Bend and physical section twist are included; no bounding-box-only intersection claim.",
+    "No browser rendering or language inference time is measured here."
+  ]
+}

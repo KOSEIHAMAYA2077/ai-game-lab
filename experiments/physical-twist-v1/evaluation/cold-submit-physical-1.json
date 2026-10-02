@@ -1,0 +1,219 @@
+{
+  "label": "Actual cold first input, automatic model download/preparation included in app submit timer.",
+  "driverWallMs": 12223.301500000001,
+  "timing": {
+    "totalMs": 12212.699999988079,
+    "firstFrameMs": 8262.599999964237,
+    "interpretationMs": 8253.699999988079,
+    "constructionMs": 8.899999976158142,
+    "modelMs": 50.90000003576279,
+    "source": "semantic-model",
+    "program": {
+      "version": 1,
+      "parts": [
+        {
+          "id": "0",
+          "primitive": "sphere",
+          "height": 1,
+          "width": 1.55,
+          "depth": 1.55,
+          "bend": 0,
+          "twist": 0
+        },
+        {
+          "id": "1",
+          "primitive": "tube",
+          "height": 1.4,
+          "width": 0.4,
+          "depth": 0.4,
+          "bend": 0,
+          "twist": 0
+        }
+      ],
+      "relation": {
+        "kind": "above",
+        "parent": "0",
+        "child": "1"
+      }
+    },
+    "within30s": true,
+    "glyphs": 961,
+    "renderCpuP95Ms": 1.4000000357627869
+  },
+  "model": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "provider": "wasm",
+    "modelLoadMs": 8148.299999952316,
+    "downloadedBytes": 127494442,
+    "cacheUsed": false,
+    "maxTokens": 128
+  },
+  "output": {
+    "program": {
+      "version": 1,
+      "parts": [
+        {
+          "id": "0",
+          "primitive": "sphere",
+          "height": 1,
+          "width": 1.55,
+          "depth": 1.55,
+          "bend": 0,
+          "twist": 0
+        },
+        {
+          "id": "1",
+          "primitive": "tube",
+          "height": 1.4,
+          "width": 0.4,
+          "depth": 0.4,
+          "bend": 0,
+          "twist": 0
+        }
+      ],
+      "relation": {
+        "kind": "above",
+        "parent": "0",
+        "child": "1"
+      }
+    },
+    "source": "semantic-model",
+    "modelMs": 50.90000003576279,
+    "reason": "selected",
+    "evidence": [
+      {
+        "kind": "part-extraction-rule",
+        "pattern": "jp-top",
+        "parts": 2
+      },
+      {
+        "kind": "embedding-primitive",
+        "part": "0",
+        "primitive": "sphere",
+        "score": 0.9948
+      },
+      {
+        "kind": "noun-focus-rule",
+        "part": "0"
+      },
+      {
+        "kind": "embedding-descriptor",
+        "part": "0",
+        "attribute": "width"
+      },
+      {
+        "kind": "explicit-attribute-rule",
+        "part": "0",
+        "attribute": "width"
+      },
+      {
+        "kind": "explicit-attribute-rule",
+        "part": "0",
+        "attribute": "depth"
+      },
+      {
+        "kind": "embedding-primitive",
+        "part": "1",
+        "primitive": "tube",
+        "score": 0.98887
+      },
+      {
+        "kind": "noun-focus-rule",
+        "part": "1"
+      },
+      {
+        "kind": "embedding-descriptor",
+        "part": "1",
+        "attribute": "width"
+      },
+      {
+        "kind": "explicit-attribute-rule",
+        "part": "1",
+        "attribute": "width"
+      },
+      {
+        "kind": "explicit-attribute-rule",
+        "part": "1",
+        "attribute": "depth"
+      },
+      {
+        "kind": "relation-input-mask-rule"
+      },
+      {
+        "kind": "learned-relation-head",
+        "label": "above",
+        "score": 0.982584
+      }
+    ],
+    "relationCandidates": [
+      {
+        "kind": "above",
+        "score": 0.982584
+      },
+      {
+        "kind": "end",
+        "score": 0.012993
+      },
+      {
+        "kind": "through",
+        "score": 0.002711
+      },
+      {
+        "kind": "none",
+        "score": 0.001712
+      }
+    ]
+  },
+  "finite": true,
+  "requests": [
+    {
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch",
+      "hasPayload": false,
+      "containsInputText": false
+    },
+    {
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch",
+      "hasPayload": false,
+      "containsInputText": false
+    },
+    {
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch",
+      "hasPayload": false,
+      "containsInputText": false
+    },
+    {
+      "host": "us.aws.cdn.hf.co",
+      "method": "GET",
+      "resourceType": "fetch",
+      "hasPayload": false,
+      "containsInputText": false
+    },
+    {
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch",
+      "hasPayload": false,
+      "containsInputText": false
+    },
+    {
+      "host": "us.aws.cdn.hf.co",
+      "method": "GET",
+      "resourceType": "fetch",
+      "hasPayload": false,
+      "containsInputText": false
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Apple M5 32GB / Chrome, not a 16GB laptop test.",
+    "This generation includes download, verification and model initialization; model-only warm cases are separate.",
+    "External requests are fixed official model assets, with no payload or input text in the request."
+  ]
+}

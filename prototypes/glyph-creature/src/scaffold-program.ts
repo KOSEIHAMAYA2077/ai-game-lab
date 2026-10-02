@@ -24,6 +24,11 @@ export type CompiledProgram = {
   centerlines: { id: string; closed: boolean; points: Vec3[] }[];
   bounds: Bounds; scale: number; translation: Vec3; area: number;
   adjustments: { part: string; reason: 'surface-intersection'; height?: number; width?: number; depth?: number }[];
+  throughCheck?: ThroughCheck;
+};
+export type ThroughCheck = {
+  method: 'sampled-material-occupancy'; maximumPointsPerTime: number;
+  atTimes: { time: number; sampledPoints: number; insideCount: number; outsideCount: number }[];
 };
 
 const TAU = Math.PI * 2;
@@ -140,7 +145,7 @@ function localPoint(part: CompiledPart, around: number, along: number, time: num
   assign(normal, tangent[1] / n, -tangent[0] / n, 0);
   assign(binormal, normal[1] * tangent[2], -normal[0] * tangent[2], normal[0] * tangent[1] - normal[1] * tangent[0]);
   const twist = part.effective.twist * .8 * (part.centerline.closed ? Math.sin(s * TAU) : 2 * s - 1);
-  const angle = orientation * around * TAU + twist, c = Math.cos(angle), sn = Math.sin(angle);
+  const angle = orientation * around * TAU;
   let [rx, rz] = radii(part, s);
   if (chart === 'inside') {
     rx = Math.max(.015, rx - .055 * part.effective.width); rz = Math.max(.015, rz - .055 * part.effective.depth);
@@ -148,9 +153,12 @@ function localPoint(part: CompiledPart, around: number, along: number, time: num
     rx *= closing; rz *= closing; orientation = 1;
   }
   if (chart === 'rim') { rx -= .055 * part.effective.width * (1 - along); rz -= .055 * part.effective.depth * (1 - along); }
-  const theta = chart === 'inside' ? around * TAU + twist : angle, ct = Math.cos(theta), st = Math.sin(theta);
+  const theta = chart === 'inside' ? around * TAU : angle, ct = Math.cos(theta), st = Math.sin(theta);
   const norm = part.section.kind === 'superellipse' ? (Math.abs(ct) ** part.section.exponent + Math.abs(st) ** part.section.exponent) ** (1 / part.section.exponent) : 1;
-  const x = rx * ct / norm * radial, z = rz * st / norm * radial;
+  // Rotate the completed section, rather than merely shifting its material coordinate.
+  const sectionX = rx * ct / norm * radial, sectionZ = rz * st / norm * radial;
+  const ca = Math.cos(twist), sa = Math.sin(twist);
+  const x = ca * sectionX - sa * sectionZ, z = sa * sectionX + ca * sectionZ;
   return assign(out, center[0] + x * normal[0] + z * binormal[0], center[1] + x * normal[1] + z * binormal[1], center[2] + x * normal[2] + z * binormal[2]);
 }
 
@@ -205,12 +213,93 @@ function finishRawPart(part: CompiledPart): void {
   part.centerline.points = Array.from({ length: 65 }, (_, i) => linePoint(i / 64));
 }
 
+/** Invert a swept section through its normal plane. This checks the generated
+ * solid material, including a vase's hollow cavity, rather than its bounds.
+ * Root finding is finite and numerical; it is not a universal SDF proof. */
+function materialOccupancy(part: CompiledPart, world: Vec3, time: number): number {
+  const relative = world.map((x, k) => x - part.rawPosition[k]) as Vec3;
+  const point = part.basis.map(axis => axis.reduce((sum, x, k) => sum + x * relative[k], 0)) as Vec3;
+  const line: Vec3 = [0, 0, 0], direction: Vec3 = [0, 0, 0];
+  const plane = (s: number): number => {
+    curve(part, s, time, line, direction);
+    return (point[0] - line[0]) * direction[0] + (point[1] - line[1]) * direction[1] + (point[2] - line[2]) * direction[2];
+  };
+  const section = (s: number): number => {
+    // An end plane is a boundary, never evidence of deep solid interior.
+    if (!part.centerline.closed && (s <= .00001 || s >= .99999)) return Infinity;
+    curve(part, s, time, line, direction);
+    const length = Math.hypot(...direction) || 1;
+    for (let k = 0; k < 3; k++) direction[k] /= length;
+    const n = Math.hypot(direction[0], direction[1]) || 1;
+    const nx = direction[1] / n, ny = -direction[0] / n;
+    const bx = ny * direction[2], by = -nx * direction[2], bz = nx * direction[1] - ny * direction[0];
+    const dx = point[0] - line[0], dy = point[1] - line[1], dz = point[2] - line[2];
+    const u = dx * nx + dy * ny, v = dx * bx + dy * by + dz * bz;
+    const angle = .8 * part.effective.twist * (part.centerline.closed ? Math.sin(s * TAU) : 2 * s - 1);
+    const ca = Math.cos(angle), sa = Math.sin(angle), x = ca * u + sa * v, z = -sa * u + ca * v;
+    const [rx, rz] = radii(part, s), power = part.section.exponent;
+    if (rx < 1e-10 || rz < 1e-10) return Infinity;
+    let score = Math.abs(x / rx) ** power + Math.abs(z / rz) ** power;
+    if (part.source.primitive === 'vase' && s >= .06) {
+      const along = (s - .06) / .94, f = Math.max(0, (.08 - along) / .08);
+      const closing = along <= 0 ? 0 : Math.sqrt(Math.max(0, 1 - f * f));
+      const ix = Math.max(.015, rx - .055 * part.effective.width) * closing;
+      const iz = Math.max(.015, rz - .055 * part.effective.depth) * closing;
+      if (ix > 1e-10 && iz > 1e-10) score = Math.max(score, 2 - (Math.abs(x / ix) ** power + Math.abs(z / iz) ** power));
+      else if (Math.hypot(x, z) < 1e-8) score = Math.max(score, 1);
+    }
+    return score;
+  };
+  let best = Infinity, low = 0, lowValue = plane(0);
+  if (Math.abs(lowValue) < 1e-9) best = Math.min(best, section(0));
+  for (let i = 1; i <= 64; i++) {
+    const high = i / 64, highValue = plane(high);
+    if (Math.abs(highValue) < 1e-9) best = Math.min(best, section(high));
+    if (lowValue * highValue < 0) {
+      let a = low, b = high, fa = lowValue;
+      for (let step = 0; step < 24; step++) {
+        const mid = (a + b) / 2, fm = plane(mid);
+        if (fa * fm <= 0) b = mid;
+        else { a = mid; fa = fm; }
+      }
+      best = Math.min(best, section((a + b) / 2));
+    }
+    if (best < .995) return best;
+    low = high; lowValue = highValue;
+  }
+  return best;
+}
+
+const THROUGH_COORDINATES: [number, number][] = [[0, .5], [.25, .5], [.5, .5], [.75, .5], [0, 0], [.5, 0], [.25, 0], [.75, 0], [0, 1], [.5, 1],
+  ...Array.from({ length: 256 }, (_, i): [number, number] => [fract((i + 1) * .618033988749895), fract((i + 1) * .754877666246693)])];
+function checkThroughMaterial(parent: CompiledPart, child: CompiledPart): ThroughCheck | null {
+  const check: ThroughCheck = { method: 'sampled-material-occupancy', maximumPointsPerTime: THROUGH_COORDINATES.length, atTimes: [] };
+  const local: Vec3 = [0, 0, 0], point: Vec3 = [0, 0, 0];
+  // At most 1,064 material samples across four poses. This finite check does
+  // not prove intersection at every intervening or future animation time.
+  for (const time of [0, 15, 30, 45]) {
+    const result = { time, sampledPoints: 0, insideCount: 0, outsideCount: 0 };
+    for (const [around, along] of THROUGH_COORDINATES) {
+      localPoint(child, around, along, time, 'side', local); rawWorld(child, local, point);
+      const occupancy = materialOccupancy(parent, point, time);
+      result.sampledPoints++;
+      if (occupancy < .995) result.insideCount++;
+      if (occupancy > 1.005) result.outsideCount++;
+      if (result.insideCount && result.outsideCount) break;
+    }
+    check.atTimes.push(result);
+    if (!result.insideCount || !result.outsideCount) return null;
+  }
+  return check;
+}
+
 /** Compile finite part instructions into real centerlines, sections, charts and
  * relative placement. This builds procedural geometry, not a neural mesh. */
 export function compileScaffoldProgram(raw: unknown): CompiledProgram | null {
   const source = validateScaffoldProgram(raw);
   if (!source) return null;
   const parts = source.parts.map(makePart), adjustments: CompiledProgram['adjustments'] = [];
+  let throughCheck: ThroughCheck | undefined;
   finishRawPart(parts[0]);
   if (parts.length === 2) {
     let child = parts[1]; const parent = parts[0], relation = source.relation!;
@@ -243,6 +332,9 @@ export function compileScaffoldProgram(raw: unknown): CompiledProgram | null {
       child.rawPosition = clone(parent.anchors.center);
       child.rawPosition[0] += throughShift;
       finishRawPart(child);
+      const checked = checkThroughMaterial(parent, child);
+      if (!checked) return null;
+      throughCheck = checked;
     } else {
       finishRawPart(child);
       const anchor = relation.kind === 'end' ? parent.anchors.end : parent.anchors.top;
@@ -265,7 +357,7 @@ export function compileScaffoldProgram(raw: unknown): CompiledProgram | null {
     part.centerline.points = part.centerline.points.map(world);
     accumulated += part.area / area; part.cumulativeArea = accumulated;
   }
-  return { version: 1, source, spec: source, parts, ...(source.relation ? { relation: source.relation } : {}), centerlines: parts.map(part => ({ id: part.id, closed: part.centerline.closed, points: part.centerline.points })), bounds: { min: world(rawBounds.min), max: world(rawBounds.max) }, scale, translation, area, adjustments };
+  return { version: 1, source, spec: source, parts, ...(source.relation ? { relation: source.relation } : {}), ...(throughCheck ? { throughCheck } : {}), centerlines: parts.map(part => ({ id: part.id, closed: part.centerline.closed, points: part.centerline.points })), bounds: { min: world(rawBounds.min), max: world(rawBounds.max) }, scale, translation, area, adjustments };
 }
 
 const attachmentCache = new WeakMap<CompiledProgram, { time: number; offset: Vec3 }>();

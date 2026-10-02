@@ -1,0 +1,34 @@
+{
+  "label": "Development diagnosis of actual UI failure; no tuning and no independent accuracy claim",
+  "runtime": "Chrome, browser Worker, ONNX Runtime WASM, frozen CPU-trained head",
+  "headSha256": "2b5e212a7b8fec5cbf9683620ba7883c77e74140ccb65a1e91bc5ca1f5618a87",
+  "controllerSha256": "d594439bd8a4d6ae37fbcfc5c3b3d755cff3b4f7ff3cb78402760f0573d925eb",
+  "rows": [
+    {
+      "text": "棒の先に球",
+      "selected": true,
+      "primitives": ["tube", "sphere"],
+      "relation": "end",
+      "headTop": "end",
+      "headScore": 0.889716,
+      "modelMs": 38.80000001192093
+    },
+    {
+      "text": "細い棒の先に大きな球",
+      "selected": true,
+      "primitives": ["tube", "sphere"],
+      "relation": "end",
+      "headTop": "end",
+      "headScore": 0.820273,
+      "modelMs": 52.40000003576279
+    },
+    {
+      "text": "白い細い棒の先に大きな球",
+      "selected": false,
+      "reason": "relation-uncertain",
+      "headTop": "none",
+      "headScore": 0.89049,
+      "modelMs": 61.5
+    }
+  ]
+}

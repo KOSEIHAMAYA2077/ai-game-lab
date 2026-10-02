@@ -9,7 +9,7 @@ import { loadProgramModel, resolveProgram, type ProgramModelInfo } from './scaff
 type Resolution = { program: Program | null; source: 'semantic-model' | 'unchanged' | 'rules' | 'replay'; modelMs: number; reason: string; evidence?: unknown };
 
 const labels = { vase: '花瓶', blade: '刃', tube: '棒', ring: '輪', sphere: '球', box: '箱' };
-const examples = ['棒の先に球', '球の上に箱', '箱を輪が貫く', '細い棒の先に大きな球', '青い細長い花瓶', 'a sphere above a box', 'a blade at the end of a tube'];
+const examples = ['棒の先に球', '球の上に箱', '箱を輪が貫く', '細い棒の先に大きな球', '青い細長い花瓶', 'a sphere above a box', 'a blade at the end of a tube','白いねじれた箱','ねじれた細長い刃'];
 document.querySelector('#app')!.innerHTML = `
 <main id="scene" tabindex="-1" aria-label="文字の空間。Enterで入力"></main>
 <button id="start-prompt" aria-label="press enter">press enter</button>

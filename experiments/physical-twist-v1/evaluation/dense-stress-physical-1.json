@@ -1,0 +1,430 @@
+{
+  "runId": "dense-stress-physical-1",
+  "graphics": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 10
+  },
+  "rows": [
+    {
+      "id": "dense-sphere",
+      "glyphs": 8191,
+      "finite": true,
+      "output": {
+        "program": null,
+        "source": "unchanged",
+        "modelMs": 37.89999997615814,
+        "reason": "primitive-uncertain",
+        "evidence": [
+          {
+            "kind": "part-extraction-rule",
+            "pattern": "en-coordination",
+            "parts": 2
+          },
+          {
+            "kind": "embedding-primitive",
+            "part": "0",
+            "primitive": "sphere",
+            "score": 0.99264
+          },
+          {
+            "kind": "noun-focus-rule",
+            "part": "0"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "0",
+            "attribute": "height"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "0",
+            "attribute": "width"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "0",
+            "attribute": "depth"
+          },
+          {
+            "kind": "primitive-uncertain",
+            "part": "1"
+          }
+        ]
+      },
+      "timing": {
+        "totalMs": 4048,
+        "firstFrameMs": 94,
+        "interpretationMs": 40.30000001192093,
+        "constructionMs": 53.69999998807907,
+        "modelMs": 37.89999997615814,
+        "source": "unchanged",
+        "program": null,
+        "within30s": true,
+        "glyphs": 8191,
+        "renderCpuP95Ms": 20
+      },
+      "frameSamples": 250,
+      "frameIntervalP50Ms": 16.700000000000728,
+      "frameIntervalP95Ms": 33.30000000000109,
+      "frameIntervalMaxMs": 66.70000000000073,
+      "intervalsOver33ms": 52,
+      "intervalsOver50ms": 1
+    },
+    {
+      "id": "dense-through",
+      "glyphs": 8143,
+      "finite": true,
+      "output": {
+        "program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "box",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "ring",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "through",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "source": "semantic-model",
+        "modelMs": 58.5,
+        "reason": "selected",
+        "evidence": [
+          {
+            "kind": "part-extraction-rule",
+            "pattern": "en-through",
+            "parts": 2
+          },
+          {
+            "kind": "embedding-primitive",
+            "part": "0",
+            "primitive": "box",
+            "score": 0.99401
+          },
+          {
+            "kind": "noun-focus-rule",
+            "part": "0"
+          },
+          {
+            "kind": "embedding-primitive",
+            "part": "1",
+            "primitive": "ring",
+            "score": 0.99537
+          },
+          {
+            "kind": "noun-focus-rule",
+            "part": "1"
+          },
+          {
+            "kind": "relation-input-mask-rule"
+          },
+          {
+            "kind": "learned-relation-head",
+            "label": "through",
+            "score": 0.856136
+          }
+        ],
+        "relationCandidates": [
+          {
+            "kind": "through",
+            "score": 0.856136
+          },
+          {
+            "kind": "end",
+            "score": 0.092854
+          },
+          {
+            "kind": "none",
+            "score": 0.047388
+          },
+          {
+            "kind": "above",
+            "score": 0.003622
+          }
+        ]
+      },
+      "timing": {
+        "totalMs": 4093.199999988079,
+        "firstFrameMs": 115.30000001192093,
+        "interpretationMs": 62.09999996423721,
+        "constructionMs": 53.200000047683716,
+        "modelMs": 58.5,
+        "source": "semantic-model",
+        "program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "box",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "ring",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "through",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "within30s": true,
+        "glyphs": 8143,
+        "renderCpuP95Ms": 35.19999998807907
+      },
+      "frameSamples": 146,
+      "frameIntervalP50Ms": 33.30000000000109,
+      "frameIntervalP95Ms": 50,
+      "frameIntervalMaxMs": 83.29999999999927,
+      "intervalsOver33ms": 140,
+      "intervalsOver50ms": 6
+    },
+    {
+      "id": "dense-above",
+      "glyphs": 8173,
+      "finite": true,
+      "output": {
+        "program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1.55,
+              "depth": 1.55,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "tube",
+              "height": 1.4,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "above",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "source": "semantic-model",
+        "modelMs": 49.799999952316284,
+        "reason": "selected",
+        "evidence": [
+          {
+            "kind": "part-extraction-rule",
+            "pattern": "jp-top",
+            "parts": 2
+          },
+          {
+            "kind": "embedding-primitive",
+            "part": "0",
+            "primitive": "sphere",
+            "score": 0.9948
+          },
+          {
+            "kind": "noun-focus-rule",
+            "part": "0"
+          },
+          {
+            "kind": "embedding-descriptor",
+            "part": "0",
+            "attribute": "width"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "0",
+            "attribute": "width"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "0",
+            "attribute": "depth"
+          },
+          {
+            "kind": "embedding-primitive",
+            "part": "1",
+            "primitive": "tube",
+            "score": 0.98887
+          },
+          {
+            "kind": "noun-focus-rule",
+            "part": "1"
+          },
+          {
+            "kind": "embedding-descriptor",
+            "part": "1",
+            "attribute": "width"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "1",
+            "attribute": "width"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "part": "1",
+            "attribute": "depth"
+          },
+          {
+            "kind": "relation-input-mask-rule"
+          },
+          {
+            "kind": "learned-relation-head",
+            "label": "above",
+            "score": 0.982584
+          }
+        ],
+        "relationCandidates": [
+          {
+            "kind": "above",
+            "score": 0.982584
+          },
+          {
+            "kind": "end",
+            "score": 0.012993
+          },
+          {
+            "kind": "through",
+            "score": 0.002711
+          },
+          {
+            "kind": "none",
+            "score": 0.001712
+          }
+        ]
+      },
+      "timing": {
+        "totalMs": 4087.199999988079,
+        "firstFrameMs": 102,
+        "interpretationMs": 53.90000003576279,
+        "constructionMs": 48.09999996423721,
+        "modelMs": 49.799999952316284,
+        "source": "semantic-model",
+        "program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1.55,
+              "depth": 1.55,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "tube",
+              "height": 1.4,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "above",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "within30s": true,
+        "glyphs": 8173,
+        "renderCpuP95Ms": 33.90000003576279
+      },
+      "frameSamples": 160,
+      "frameIntervalP50Ms": 33.29999999999927,
+      "frameIntervalP95Ms": 33.400000000001455,
+      "frameIntervalMaxMs": 66.70000000000073,
+      "intervalsOver33ms": 144,
+      "intervalsOver50ms": 1
+    }
+  ],
+  "requests": [
+    {
+      "phase": "prepare",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "prepare",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "prepare",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "prepare",
+      "host": "us.aws.cdn.hf.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "prepare",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "prepare",
+      "host": "us.aws.cdn.hf.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "cases": 3,
+    "allUnder10s": true,
+    "allUnder30s": true,
+    "allFinite": true,
+    "inferenceExternalRequests": 0
+  },
+  "limitations": [
+    "4x Chrome CDP CPU throttling on M5 32GB is synthetic stress, not a 16GB RAM/laptop CPU/iGPU measurement.",
+    "requestAnimationFrame intervals measure actual browser delivery cadence and include model/build/animation startup.",
+    "CPU render() duration is separately recorded in timing and is not treated as FPS.",
+    "All prompts synthetic; no user writing was sent."
+  ]
+}

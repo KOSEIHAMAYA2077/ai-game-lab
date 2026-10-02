@@ -1,0 +1,110 @@
+{
+  "host": {
+    "cpu": "Apple M5",
+    "architecture": "arm64",
+    "ramGiB": 32,
+    "node": "v26.4.0"
+  },
+  "scope": "Short Node CPU compile measurement; model inference, browser render and 16GB laptop excluded",
+  "runsPerCase": 8,
+  "warmups": 2,
+  "maximumGuardPoints": 1064,
+  "normalPlaneIntervals": 64,
+  "bisectionStepsPerSignChange": 24,
+  "geometrySha256": "699e0ec1d3f5ec16b8ab19a8b5fe498d09a625395b3a739052aa9d542a5e6aa8",
+  "rows": [
+    {
+      "id": "normal-box-ring",
+      "accepted": true,
+      "medianCompileMs": 0.6417915000000036,
+      "p95CompileMs": 1.3036670000000044,
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 15,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 30,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          },
+          {
+            "time": 45,
+            "sampledPoints": 3,
+            "insideCount": 1,
+            "outsideCount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "normal-vase-tube",
+      "accepted": true,
+      "medianCompileMs": 2.3064370000000025,
+      "p95CompileMs": 4.115583000000001,
+      "throughCheck": {
+        "method": "sampled-material-occupancy",
+        "maximumPointsPerTime": 266,
+        "atTimes": [
+          {
+            "time": 0,
+            "sampledPoints": 46,
+            "insideCount": 1,
+            "outsideCount": 45
+          },
+          {
+            "time": 15,
+            "sampledPoints": 19,
+            "insideCount": 1,
+            "outsideCount": 18
+          },
+          {
+            "time": 30,
+            "sampledPoints": 46,
+            "insideCount": 1,
+            "outsideCount": 45
+          },
+          {
+            "time": 45,
+            "sampledPoints": 46,
+            "insideCount": 1,
+            "outsideCount": 44
+          }
+        ]
+      }
+    },
+    {
+      "id": "held-fat-tube",
+      "accepted": false,
+      "medianCompileMs": 1.3116039999999956,
+      "p95CompileMs": 1.937334000000007,
+      "throughCheck": null
+    },
+    {
+      "id": "held-bent-tube",
+      "accepted": false,
+      "medianCompileMs": 1.1955005000000014,
+      "p95CompileMs": 1.894874999999999,
+      "throughCheck": null
+    },
+    {
+      "id": "held-transient-ring-tube",
+      "accepted": false,
+      "medianCompileMs": 1.774291500000011,
+      "p95CompileMs": 2.570207999999994,
+      "throughCheck": null
+    }
+  ]
+}

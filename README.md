@@ -22,6 +22,10 @@
 
 このMacでは、モデル準備後の入力から吸収完了まで約4秒。初回モデル準備は別に約9秒。モデル未準備から同じ入力内で取得も行った初回は13.839秒。16GBノートPC実機は未確認。初回独立30例は21/30、修正後の実ブラウザ回帰は28/30で、自由文の取りこぼしが残る。任意の物体を作るtext-to-meshではなく、6種類の基本形を組み合わせる試作。[次の研究・局所的な形の予測](experiments/scaffold-program-v1/RESEARCH_NEXT.md)。
 
+### [▶ 形の断面と色を直した比較版](https://koseihamaya2077.github.io/glyph-matter/twist-v1/)
+
+箱や刃の断面そのものがねじれ、色の指定だけで形が変わらない版。`白い細い棒の先に大きな球`、`白いねじれた箱`などを試せる。学習済みheadを保ち、色語と構造の解釈を分離した。貫通は材料の内外へ跨ぐことを数値で確認できる範囲に制限する。[操作・前の版との違い](experiments/physical-twist-v1/README.md)。
+
 公開中の試遊版は、用意した60形と語彙・連想グラフ・限定した曖昧検索で動く「根性版」に、鳥・魚・蛇の骨格を追加した版です。試遊中のモデル推論は使いません。軽量モデルによる任意の3D形状生成は、まだ研究段階です。
 
 [公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/glyph-matter/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)

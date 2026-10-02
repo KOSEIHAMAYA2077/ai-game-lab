@@ -23,7 +23,7 @@ for (const [shape, word, count, times] of [
     const errors: string[] = [], external: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
     page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
-    page.on('request', r => { if (!/^(http:\/\/127\.0\.0\.1:4222\/|data:|blob:)/.test(r.url())) external.push(r.url()); });
+    page.on('request', r => { if (!r.url().startsWith(`http://127.0.0.1:${process.env.GLYPH_TEST_PORT ?? '4226'}/`) && !/^(data:|blob:)/.test(r.url())) external.push(r.url()); });
     await feed(page, `表面 白い${word} 通常`);
     const before = await inspect(page), records = [];
     for (const time of times) {

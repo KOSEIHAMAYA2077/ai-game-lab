@@ -28,6 +28,10 @@ function progress(value: ModelProgress) { scope.postMessage({ id: progressId, ki
 function rounded(value: number) { return Math.round(value * 100000) / 100000; }
 function dot(a: Vector, b: Vector) { let sum = 0; for (let i = 0; i < a.length; i++) sum += a[i] * b[i]; return sum; }
 function normalize(text: string) { return text.normalize('NFKC').trim().toLowerCase(); }
+function withoutColor(text: string) {
+  for (const expression of config.colorPatterns) text = text.replace(new RegExp(expression, 'gi'), '');
+  return text;
+}
 function escape(value: string) { return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 function aliasPattern(alias: string) {
   if (/^[a-z ]+$/.test(alias)) return `(?<![a-z])${escape(alias)}(?![a-z])`;
@@ -239,6 +243,9 @@ function relationScope(text: string): string {
 }
 
 function relationQuery(text: string): string {
+  // Ink is handled separately by the renderer and cannot choose a relation.
+  // Do not modify the part phrases used for shape/attribute interpretation.
+  text = withoutColor(text);
   const placeholder = /^[\x00-\x7f]*$/.test(text) ? 'object' : '物体';
   for (const [expression] of config.anchors) text = text.replace(new RegExp(expression as string, 'gi'), ' ');
   const spans: { start: number; end: number }[] = [];
@@ -304,7 +311,7 @@ async function interpret(text: unknown, _previous: unknown): Promise<Result> {
   if (typeof text !== 'string' || text.length > config.maxText) throw new Error(`最大${config.maxText}文字で入力してください。`);
   await load();
   const started = performance.now();
-  const cleaned = cleanNegation(normalize(text));
+  const cleaned = cleanNegation(withoutColor(normalize(text)));
   const hold = (reason: string, evidence: Evidence[] = []): Result => ({ program: null, source: 'unchanged', modelMs: performance.now()-started, reason, evidence });
   if (!cleaned.text || !/[\w\u3040-\u9fff]/u.test(cleaned.text)) return hold(cleaned.rejected ? 'negated' : 'empty');
   const input = cleaned.text;
