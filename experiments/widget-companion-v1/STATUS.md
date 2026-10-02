@@ -1,5 +1,32 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 02:54 JST
+
+追加の使用像は、創作・プログラミング・仕事中の入力を材料に育つサイドインテリア。既存の改良を継続し、02:37から8時間の設計分析を追加。新期限10:37 JST（2026-10-03 01:37 UTC）、10:17から新機能を止めまとめる。専用caffeinateはPID83393へ置換（8時間限定、旧専用52785だけ終了）。同タスク20分継続3d-5も更新済み。今回の追加は使用想定と分析であり、OS全体入力監視を開始・設定変更していない。Macロック時は解除を求めずoffscreen/コード/資料を続け、通常窓の計測としない。02:48頃にはR2 nativeを実操作可能になり短いsmokeを行った。8時間の実窓資源測定ではない。
+
+### 保存した区切り
+
+- A v0.14.1 / tag `glyph-matter-v0.14.1-widget.2` / commit `ca65073` / PR #25はmainへmerge。Pages run37037565082成功、旧5版と新widget-v2の6manifestを確認。macOS Release ZIPの新展開先strict署名成功。関連4PIDの基準→A→基準CPU13.278→12.110→11.798%から全CPU改善は未確認、RAM低い観測値でも200MiB/5%未達。
+- Bはbranch `experiment/widget-atlas-student-v3`、統合commit `8acd4f3`。段階atlasをwidgetだけON、根性60形・メビウス・生き物を保持、guard-v2 tinyを約122KBの実験選択肢へ遅延読込。旧保存を触らないkeyv3 / bundleIDv3。23実WebGL UI回帰、15吸収完了最長3.95秒、174単体成功。atlas48GPU条件のCanvas全一致/GPU最大2/255以内は論理画像比較でnativeRAM未測定。
+- exact8acd sourceを隔離production buildし、32k/1536・全文/旧色・reload容量回帰成功。native0.14.2 R1新アプリはBuildInfo source/web全hash・strict署名成功、実nativeUI未確認。公開前の独立reviewで、kind1024上限で追加0の入力が消える不具合と入力previewの選択色不一致を再現。rootは追加0でdraft/shape/pauseを保持、previewと送信の色優先順位をそろえる修正を行い、型/174単体成功。修正commit c016661の再production・独立23項目/60形の選択が成功。新R2 ZIPのstrict署名/hash照合と、native日本語paste/表面/再起動/pause/hide/復帰の短いsmokeも成功。R1と失敗原票は保存。これから別tag/URL/Releaseへ公開する。
+- tiny fresh120: guard-v2全体79/120、表現可能21/44、明確な保留の誤反応2/40。全文訓練一致0でも分類クエリに大量一致。AI合成意図、人間評価なし。既定60形を置き換えない。
+- static retrievalとfresh140は所有返却済み。全1024guard正解30/80・要求受理34/80・保留誤反応5/40、128guard23/80・受理23/80・誤反応3/40。日本語21/40、英語2/40。1024mmap独立PythonRSS約90MiB/p95約0.136msは窓全体ではない。128f16は最終判断一致、生top1 139/140一致。未知文字span失敗を別v3診断へ保持。既定採用見送り、研究比較に保持。
+- Metal R5は別AppKit/Metal/CoreTextアプリの球/箱/メビウス。CPU1213/GPU581確認と3offscreen画像、BuildInfo/strict署名成功。ロック中startupはframe0で通常資源測定から除外。60形/rig/model/実IMEは未移植/未検証。
+
+### 進行中と所有
+
+1. root: widget-main/state/版管理/研究map/STATUS/公開。追加0・色修正後のB production確認と独立reviewを受け、新tag/URL/Releaseへ保存する。R1は上書きしない。
+2. `static_fresh_evaluation`: review所有返却済み。新 `experiments/ambient-input-contract-v1/` だけ所有し、非監視の人工入力イベント契約/IME確定の品質/重複/負荷/蓄積を比較。共有sourceはrootだけ編集。
+3. `static_japanese_retrieval`: `research/widget-study-protocol-v1/`だけ所有。既知形・保留付き解釈のRQ、比較/分割/少人数人間評価/資源制約を設計。最新サイドインテリア像と命令/ambientの差を反映。
+4. `widget_metal_comparison`: `experiments/widget-metal-soak-v1/`だけ所有。frozenR5から2時間offscreen実時間表示、PID83137/session36101、02:35:33〜04:35:33 JST。explicitPID sampler session1218、5秒周期。1536文字400x440/15fps、10分毎の3形切替・人工入力/atlas成長・旧ID/色保持を記録。offscreen一process資源で窓全体のRAM/CPUではない。原文/旧アプリにアクセスしない。
+
+### 次の一実験
+
+Bを安全に公開し、全旧manifestが同じことを確認。新しい分析の主軸は他アプリ入力連動で、キーイベントとIME確定文字・貼付・編集差分を分け、macOS/Windows一次APIと権限/制約から方式を選ぶ。命令入力の解釈と、通常文を低頻度で視覚へ反映するモードを分ける。人工イベントで蓄積・重複・取消・負荷・情報を保存しない経路を比較し、実入力の監視はまだ開始しない。研究文書には実装済み/未実装、AI合成/人手、未見/回帰、offscreen/窓、取得量/RAMを分けて残す。
+
+
+以下は01:10時点の履歴。最新の判断は上の節を参照する。
+
 2026-10-03 01:10 JST。現在branch experiment/widget-render-budget-v2。8時間の改良を許可取得、期限08:25 JST（前20分は公開とまとめ）。期限付きスリープ防止と20分間隔の継続実行が有効。旧4版と小窓基準版はタグと公開URLを保持。
 
 ## できたこと

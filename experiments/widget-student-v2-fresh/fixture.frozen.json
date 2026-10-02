@@ -1,0 +1,2324 @@
+{
+  "schema": "fresh-human-intent-v1",
+  "authored_at_utc": "2026-10-02T16:49:00.091970+00:00",
+  "provenance": {
+    "synthetic": true,
+    "private_text": false,
+    "existing_examples_seen": false,
+    "model_or_runtime_seen": false,
+    "prior_task_scope_known": true
+  },
+  "guidance": "Expected intent is authored independently. Attribute and relation expressiveness is not assumed to be supported by the implementation. Ambiguous and clear hold inputs must not activate a new program.",
+  "cases": [
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "小さな球をひとつ、お願い。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {
+              "size": "small"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [],
+      "id": "fresh-001"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "色はどうでもいいので、大きい球形にして。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {
+              "size": "large"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "unrelated_clause"
+      ],
+      "id": "fresh-002"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "横に幅のある丸い球体。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {
+              "width": "wide"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "fragment"
+      ],
+      "id": "fresh-003"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A tiny orb, please.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {
+              "size": "small"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym"
+      ],
+      "id": "fresh-004"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "I don't care about the color; make a sphere.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "unrelated_negation",
+        "multi_clause"
+      ],
+      "id": "fresh-005"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Stretch the ball vertically so it is tall.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {
+              "height": "tall"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-006"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "奥行きの浅い直方体を作って。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "attributes": {
+              "depth": "shallow"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "near_synonym"
+      ],
+      "id": "fresh-007"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "横幅の狭い箱型。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "attributes": {
+              "width": "narrow"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "fragment"
+      ],
+      "id": "fresh-008"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "説明はいらない、立方体を表示して。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "unrelated_negation"
+      ],
+      "id": "fresh-009"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Give me a broad cuboid.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "attributes": {
+              "width": "wide"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "directional_dimension"
+      ],
+      "id": "fresh-010"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A short box with little height.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "attributes": {
+              "height": "short"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "fragment"
+      ],
+      "id": "fresh-011"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "No animation is needed. Please create one cube.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "unrelated_negation",
+        "multi_clause"
+      ],
+      "id": "fresh-012"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "背が高い円柱を一本。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {
+              "height": "tall"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "fragment"
+      ],
+      "id": "fresh-013"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "円柱を低く、ずんぐりした感じで。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {
+              "height": "short"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "directional_dimension"
+      ],
+      "id": "fresh-014"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "細い筒の形にしてほしい。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {
+              "width": "narrow"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "directional_dimension"
+      ],
+      "id": "fresh-015"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A tall cylinder standing upright.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {
+              "height": "tall"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "fragment"
+      ],
+      "id": "fresh-016"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Make a squat cylinder.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {
+              "height": "short"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "directional_dimension"
+      ],
+      "id": "fresh-017"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Please form a slender cylindrical column.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {
+              "width": "narrow"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "directional_dimension"
+      ],
+      "id": "fresh-018"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "ドーナツ状の輪を小さめに作って。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {
+              "size": "small"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym"
+      ],
+      "id": "fresh-019"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "真ん中が抜けた丸い輪っかを大きく。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {
+              "size": "large"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "fragment"
+      ],
+      "id": "fresh-020"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "輪の太さが薄いトーラス。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {
+              "thickness": "thin"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension",
+        "fragment"
+      ],
+      "id": "fresh-021"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A small doughnut shape, please.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {
+              "size": "small"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym"
+      ],
+      "id": "fresh-022"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Make the torus thick around its ring.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {
+              "thickness": "thick"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-023"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "An oversized circular ring with a hole.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {
+              "size": "large"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "fragment"
+      ],
+      "id": "fresh-024"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "細長い刃の形を作って。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {
+              "length": "long",
+              "width": "narrow"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-025"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "刀身を短くして表示。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {
+              "length": "short"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "fragment"
+      ],
+      "id": "fresh-026"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "刃の幅を広めにして。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {
+              "width": "wide"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-027"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Create a long, slender blade.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {
+              "length": "long",
+              "width": "narrow"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-028"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A short sword blade.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {
+              "length": "short"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "fragment"
+      ],
+      "id": "fresh-029"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Give the blade a broad width.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {
+              "width": "wide"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-030"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "背の高い花瓶を作って。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {
+              "height": "tall"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-031"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "小ぶりな花器をひとつ。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {
+              "size": "small"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym",
+        "fragment"
+      ],
+      "id": "fresh-032"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "花瓶の胴を横に広くして。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {
+              "width": "wide"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-033"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Create a tall flower vase.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {
+              "height": "tall"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-034"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A little vase for flowers, please.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {
+              "size": "small"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "near_synonym"
+      ],
+      "id": "fresh-035"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Make a vase with a wide body.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {
+              "width": "wide"
+            }
+          }
+        ],
+        "relation": null
+      },
+      "tags": [
+        "directional_dimension"
+      ],
+      "id": "fresh-036"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "箱の上に球を置いて。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "above",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order"
+      ],
+      "id": "fresh-037"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "球を上に、その下には箱を配置して。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "above",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "multi_clause"
+      ],
+      "id": "fresh-038"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "輪っかの下に円柱をひとつ。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "below",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order",
+        "near_synonym"
+      ],
+      "id": "fresh-039"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "円柱が下、トーラスが上になるように。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "below",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "fragment"
+      ],
+      "id": "fresh-040"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "花瓶の左側に刃を置く。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "vase",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "left_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order"
+      ],
+      "id": "fresh-041"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "刃を左、花器を右。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "vase",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "left_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "fragment",
+        "near_synonym"
+      ],
+      "id": "fresh-042"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "球の右に花瓶を配置して。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "right_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order"
+      ],
+      "id": "fresh-043"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "花瓶を右側に、球体はその左へ。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "right_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "multi_clause",
+        "near_synonym"
+      ],
+      "id": "fresh-044"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "トーラスの穴の中に球を入れて。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "inside",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order"
+      ],
+      "id": "fresh-045"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "箱の内側に、小さな花瓶を置いて。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "inside",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order"
+      ],
+      "id": "fresh-046"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "箱の手前に円柱を立てて。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "in_front_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order"
+      ],
+      "id": "fresh-047"
+    },
+    {
+      "language": "ja",
+      "stratum": "meaningful",
+      "text": "刃の奥に輪っかを置いてほしい。",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "blade",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "behind",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order",
+        "near_synonym"
+      ],
+      "id": "fresh-048"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Put a sphere above a box.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "above",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part"
+      ],
+      "id": "fresh-049"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "The box goes below the ball.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "above",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order",
+        "near_synonym"
+      ],
+      "id": "fresh-050"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A cylinder beneath the torus, please.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "below",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "near_synonym",
+        "fragment"
+      ],
+      "id": "fresh-051"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Place the ring over the cylinder.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "below",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order",
+        "near_synonym"
+      ],
+      "id": "fresh-052"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Set a blade to the left of a vase.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "vase",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "left_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part"
+      ],
+      "id": "fresh-053"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "The vase should be on the right, with the blade on its left.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "blade",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "vase",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "left_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order",
+        "multi_clause"
+      ],
+      "id": "fresh-054"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Put the vase to the right of the sphere.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "right_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part"
+      ],
+      "id": "fresh-055"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "On the left is an orb; on the right is a flower vase.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "right_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "reversed_mention_order",
+        "near_synonym",
+        "multi_clause"
+      ],
+      "id": "fresh-056"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Place the sphere inside the torus hole.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "inside",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part"
+      ],
+      "id": "fresh-057"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "A vase inside a box.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "vase",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "inside",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "fragment"
+      ],
+      "id": "fresh-058"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Stand the cylinder in front of the box.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "in_front_of",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part"
+      ],
+      "id": "fresh-059"
+    },
+    {
+      "language": "en",
+      "stratum": "meaningful",
+      "text": "Put the ring behind the blade.",
+      "expected": {
+        "action": "render",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "attributes": {}
+          },
+          {
+            "id": "b",
+            "shape": "blade",
+            "attributes": {}
+          }
+        ],
+        "relation": {
+          "subject": "a",
+          "predicate": "behind",
+          "object": "b"
+        }
+      },
+      "tags": [
+        "two_part",
+        "near_synonym"
+      ],
+      "id": "fresh-060"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "球は作らないで。",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-061"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "今回は箱を表示しない。",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-062"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "円柱を出すのは禁止。",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-063"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "花瓶は要りません。",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-064"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Do not create a sphere.",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-065"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Please avoid making a box.",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-066"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "I don't want a cylinder.",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-067"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "No vase this time.",
+      "expected": {
+        "action": "hold",
+        "reason": "negated_shape"
+      },
+      "tags": [
+        "negated_shape"
+      ],
+      "id": "fresh-068"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "友人の案は「球を作る」だった。",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-069"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "「箱の上に球を置いて」という文を引用しているだけ。",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-070"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "メモ：円柱を作る、という提案。まだ決定していない。",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-071"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "誰かが「輪っかにしよう」と言っていた。",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-072"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Someone suggested \"make a sphere\".",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-073"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "The note says \"put a box above a vase\"; it is only a quotation.",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-074"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "A proposal I read was to make a cylinder. No decision yet.",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-075"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "\"Create a torus\" is an example sentence, not a request.",
+      "expected": {
+        "action": "hold",
+        "reason": "quoted_suggestion"
+      },
+      "tags": [
+        "quoted_suggestion"
+      ],
+      "id": "fresh-076"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "`shape = \"sphere\";` このコードを眺めている。",
+      "expected": {
+        "action": "hold",
+        "reason": "code"
+      },
+      "tags": [
+        "code"
+      ],
+      "id": "fresh-077"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "```json\n{\"shape\":\"box\"}\n```",
+      "expected": {
+        "action": "hold",
+        "reason": "code"
+      },
+      "tags": [
+        "code"
+      ],
+      "id": "fresh-078"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "関数名は createCylinder() です。",
+      "expected": {
+        "action": "hold",
+        "reason": "code"
+      },
+      "tags": [
+        "code"
+      ],
+      "id": "fresh-079"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "`createVase();` is a code snippet.",
+      "expected": {
+        "action": "hold",
+        "reason": "code"
+      },
+      "tags": [
+        "code"
+      ],
+      "id": "fresh-080"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "```js\nconst shape = \"torus\";\n```",
+      "expected": {
+        "action": "hold",
+        "reason": "code"
+      },
+      "tags": [
+        "code"
+      ],
+      "id": "fresh-081"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "The variable is called blade_length.",
+      "expected": {
+        "action": "hold",
+        "reason": "code"
+      },
+      "tags": [
+        "code"
+      ],
+      "id": "fresh-082"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "ピラミッドを作って。",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-083"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "五芒星の立体がほしい。",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-084"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "うさぎの形を出して。",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-085"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "人間の手の模型を生成して。",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-086"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Make a cone, please.",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-087"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Create a realistic tree.",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-088"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "I want a triangular pyramid.",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-089"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Build a human hand.",
+      "expected": {
+        "action": "hold",
+        "reason": "unsupported_shape"
+      },
+      "tags": [
+        "unsupported_shape"
+      ],
+      "id": "fresh-090"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "一個だけの物体を、球であり立方体でもある形にして。",
+      "expected": {
+        "action": "hold",
+        "reason": "conflict"
+      },
+      "tags": [
+        "conflict"
+      ],
+      "id": "fresh-091"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "同じ花瓶を、背が高くて背が低い形に同時にして。",
+      "expected": {
+        "action": "hold",
+        "reason": "conflict"
+      },
+      "tags": [
+        "conflict"
+      ],
+      "id": "fresh-092"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "球を箱の左にも右にも同時に置いて。二つは作らないで。",
+      "expected": {
+        "action": "hold",
+        "reason": "conflict"
+      },
+      "tags": [
+        "conflict"
+      ],
+      "id": "fresh-093"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "One single object must be both a sphere and a box at once.",
+      "expected": {
+        "action": "hold",
+        "reason": "conflict"
+      },
+      "tags": [
+        "conflict"
+      ],
+      "id": "fresh-094"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Make the same cylinder simultaneously tall and short.",
+      "expected": {
+        "action": "hold",
+        "reason": "conflict"
+      },
+      "tags": [
+        "conflict"
+      ],
+      "id": "fresh-095"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Put the one blade both above and below the vase at the same time.",
+      "expected": {
+        "action": "hold",
+        "reason": "conflict"
+      },
+      "tags": [
+        "conflict"
+      ],
+      "id": "fresh-096"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "さっきの球の注文を取り消して。",
+      "expected": {
+        "action": "hold",
+        "reason": "cancel"
+      },
+      "tags": [
+        "cancel"
+      ],
+      "id": "fresh-097"
+    },
+    {
+      "language": "ja",
+      "stratum": "hold",
+      "text": "花瓶の生成はキャンセル。何も追加しないで。",
+      "expected": {
+        "action": "hold",
+        "reason": "cancel"
+      },
+      "tags": [
+        "cancel"
+      ],
+      "id": "fresh-098"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Cancel my earlier request for a box.",
+      "expected": {
+        "action": "hold",
+        "reason": "cancel"
+      },
+      "tags": [
+        "cancel"
+      ],
+      "id": "fresh-099"
+    },
+    {
+      "language": "en",
+      "stratum": "hold",
+      "text": "Stop the torus request; add nothing.",
+      "expected": {
+        "action": "hold",
+        "reason": "cancel"
+      },
+      "tags": [
+        "cancel"
+      ],
+      "id": "fresh-100"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "球か箱、どっちがいいかな。",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_choice"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-101"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "円柱にするか花瓶にするか迷ってる。",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_choice"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-102"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "輪っかっぽい刃ってどういう形だろう。",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_choice"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-103"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "箱と球をいい感じに配置。",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_relation"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-104"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "刃と花瓶を近くに、でも位置はまだ考え中。",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_relation"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-105"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "それを左に置いて。",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_referent"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-106"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "あれを小さくして。",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_referent"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-107"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "丸い気分の形が欲しい。",
+      "expected": {
+        "action": "hold",
+        "reason": "metaphor"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-108"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "花瓶みたいな、でも花瓶とは違う何か。",
+      "expected": {
+        "action": "hold",
+        "reason": "underspecified"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-109"
+    },
+    {
+      "language": "ja",
+      "stratum": "ambiguous",
+      "text": "球の上か下に箱を置こうかな。",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_relation"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-110"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "Maybe a sphere, maybe a cube.",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_choice"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-111"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "Should it be a cylinder or a vase?",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_choice"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-112"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "A blade that is sort of a ring?",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_choice"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-113"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "Arrange the sphere and the box somehow.",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_relation"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-114"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "The vase and blade should look good together; position undecided.",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_relation"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-115"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "Put it above that one.",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_referent"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-116"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "Make that a little wider.",
+      "expected": {
+        "action": "hold",
+        "reason": "missing_referent"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-117"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "I feel round today; show that feeling.",
+      "expected": {
+        "action": "hold",
+        "reason": "metaphor"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-118"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "Something vase-like but unlike an actual vase.",
+      "expected": {
+        "action": "hold",
+        "reason": "underspecified"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-119"
+    },
+    {
+      "language": "en",
+      "stratum": "ambiguous",
+      "text": "A box either above or below a ball, perhaps.",
+      "expected": {
+        "action": "hold",
+        "reason": "unresolved_relation"
+      },
+      "tags": [
+        "ambiguity"
+      ],
+      "id": "fresh-120"
+    }
+  ]
+}

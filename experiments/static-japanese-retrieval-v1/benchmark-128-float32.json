@@ -1,0 +1,57 @@
+{
+  "variant": "128-float32",
+  "platform": "darwin",
+  "python": "3.9.6",
+  "pid": 80467,
+  "tableResidentArrayBytes": 16777216,
+  "captionIndexArrayBytes": 175616,
+  "tokenizerFileBytes": 2127941,
+  "processRSSBytesAfterWarmAndStress": 100712448,
+  "processPeakRSSBytes": 100728832,
+  "peakRSSUnits": "bytes on macOS",
+  "setupMsIncludesHashTableLoadTokenizerAndCaptionIndex": 26.530541000000003,
+  "warmEncodeRankMs": {
+    "n": 240,
+    "median": 0.06479150000000128,
+    "p95": 0.07606069999999895,
+    "max": 0.15525000000000955
+  },
+  "stress": {
+    "128": {
+      "elapsedMs": 0.1237500000000058,
+      "encoding": {
+        "tokens": 91,
+        "unknownFraction": 0.0
+      },
+      "rankingReturned": true
+    },
+    "1024": {
+      "elapsedMs": 0.415040999999991,
+      "encoding": {
+        "tokens": 711,
+        "unknownFraction": 0.0
+      },
+      "rankingReturned": true
+    },
+    "4000": {
+      "elapsedMs": 1.5294160000000057,
+      "encoding": {
+        "tokens": 2771,
+        "unknownFraction": 0.0
+      },
+      "rankingReturned": true
+    },
+    "4001": {
+      "elapsedMs": 0.002041999999993771,
+      "encoding": {
+        "hold": "input_limit"
+      },
+      "rankingReturned": false
+    }
+  },
+  "limits": {
+    "chars": 4000,
+    "tokens": 4000
+  },
+  "interpretation": "independent Python CPU process in locked-screen multi-agent session; not whole-app memory, idle CPU or visual/play benchmark"
+}

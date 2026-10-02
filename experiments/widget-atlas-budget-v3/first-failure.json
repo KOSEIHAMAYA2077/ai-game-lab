@@ -1,0 +1,18 @@
+{
+  "attempt": "dynamic UV span in the vertex shader",
+  "baseline": "6788869c79ae3fcda4777a81b4775ff6a6e363e6",
+  "candidateSceneBlob": "d684f7e319986a0dd7fe04e5f73ff2de7c94a93e",
+  "vertexUvExpression": "atlasUV = atlasOffset + uv / vec2(32.0, atlasRows);",
+  "fragmentSampleExpression": "texture2D(atlas, atlasUV).a",
+  "case": "kinds-512",
+  "rows": 16,
+  "maxChannelDifference": 11,
+  "meanChannelDifference": 0.0001534090909090909,
+  "requiredMaxChannelDifference": 2,
+  "requiredMeanChannelDifference": 0.01,
+  "accepted": false,
+  "canvasPixelsExactAtFailure": true,
+  "glyphIdentityAndCoordinatesExactAtFailure": true,
+  "inference": "Changing interpolated vertex UV spans may expose GPU rounding differences; the cause has not been independently proven.",
+  "nextCandidate": "Use the fixed atlas reference UV for interpolation and convert its height in the fragment shader. Keep the tolerance unchanged."
+}

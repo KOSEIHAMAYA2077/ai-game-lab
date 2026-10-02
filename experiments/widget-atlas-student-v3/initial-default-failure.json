@@ -1,0 +1,50 @@
+{
+  "createdAt": "2026-10-02T17:09:01.617Z",
+  "environment": {
+    "browser": "Chrome headless",
+    "realWebGL": true,
+    "nativeUI": false,
+    "actualIME": false
+  },
+  "tests": [],
+  "measurements": [
+    {
+      "text": "表面 メビウスの輪",
+      "totalMs": 3917.400000035763,
+      "firstFrameMs": 5.300000011920929,
+      "interpretationMs": 1.4000000357627869,
+      "constructionMs": 3.899999976158142,
+      "modelMs": 0,
+      "source": "rules",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "within30s": true,
+      "glyphs": 513,
+      "renderCpuP95Ms": 2.699999988079071
+    }
+  ],
+  "requests": [],
+  "exceptions": [],
+  "freezeSha256": {
+    "experiments/widget-student-v1/student-model.json": "dfc8be816ca9a53206ec41d44118db52e5f4ac694bd263efab1a64d5ca05d7dd",
+    "prototypes/glyph-creature/src/widget-student.ts": "30bd84b0dfe2f2ff7a9046a58362829323aad064f0c56e27f66481d9a447d9c4",
+    "prototypes/glyph-creature/src/widget-student-guard-v2.ts": "a9d0b382b6bbb8a1c604df7ff454974e00e400c8116e696b0f7580393ea41d7f"
+  },
+  "passed": false,
+  "failure": {
+    "message": "AssertionError [ERR_ASSERTION]: default rich Möbius must remain authored\n+ actual - expected\n\n+ 'condense'\n- 'mobius'\n",
+    "stack": "AssertionError [ERR_ASSERTION]: default rich Möbius must remain authored\n+ actual - expected\n\n+ 'condense'\n- 'mobius'\n\n    at file://<repo>/experiments/widget-atlas-student-v3/run-ui-regression.mjs:50:10"
+  }
+}

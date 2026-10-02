@@ -1,0 +1,5445 @@
+{
+  "fixture_sha256": "1f0d971a19adbba9551799f5543bb2e42b9e144c6fdf8028d428d4c7f0affb1e",
+  "scoring_sha256": "721b787efc4d3d12a72ccd5ecc62021505c356cf8a5160ad65db2264aed5b536",
+  "candidate_frozen_sha256": "ee83896eb1f074a787a8f587d12577761c399b224d5b5a8675351c5b5884abe1",
+  "metrics": {
+    "1024-float32": {
+      "shape": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 43,
+            "positive_coverage": 0.5375,
+            "positive_exact_correct": 39,
+            "positive_exact_accuracy": 0.4875,
+            "positive_family_correct": 39,
+            "positive_family_accuracy": 0.4875,
+            "positive_accepted_exact_precision": 0.9069767441860465,
+            "positive_accepted_family_precision": 0.9069767441860465,
+            "hold_n": 40,
+            "hold_false_activations": 17,
+            "hold_false_activation_rate": 0.425,
+            "accepted_unambiguous_exact_precision": 0.65,
+            "accepted_unambiguous_family_precision": 0.65,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 16,
+            "ambiguous_acceptance_rate": 0.8,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 6
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 3
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 7
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 1
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.13510449999998286,
+              "p95_ms": 0.15137500000000914,
+              "max_ms": 0.18491700000000666
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 33,
+            "positive_coverage": 0.825,
+            "positive_exact_correct": 31,
+            "positive_exact_accuracy": 0.775,
+            "positive_family_correct": 31,
+            "positive_family_accuracy": 0.775,
+            "positive_accepted_exact_precision": 0.9393939393939394,
+            "positive_accepted_family_precision": 0.9393939393939394,
+            "hold_n": 20,
+            "hold_false_activations": 11,
+            "hold_false_activation_rate": 0.55,
+            "accepted_unambiguous_exact_precision": 0.7045454545454546,
+            "accepted_unambiguous_family_precision": 0.7045454545454546,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 8,
+            "ambiguous_acceptance_rate": 0.8,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 4
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 4
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 1
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.12837499999998614,
+              "p95_ms": 0.14608300000001906,
+              "max_ms": 0.18491700000000666
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 10,
+            "positive_coverage": 0.25,
+            "positive_exact_correct": 8,
+            "positive_exact_accuracy": 0.2,
+            "positive_family_correct": 8,
+            "positive_family_accuracy": 0.2,
+            "positive_accepted_exact_precision": 0.8,
+            "positive_accepted_family_precision": 0.8,
+            "hold_n": 20,
+            "hold_false_activations": 6,
+            "hold_false_activation_rate": 0.3,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 8,
+            "ambiguous_acceptance_rate": 0.8,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 3
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.13839600000001284,
+              "p95_ms": 0.1507499999999773,
+              "max_ms": 0.15574999999995454
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 34,
+            "positive_coverage": 0.425,
+            "positive_exact_correct": 30,
+            "positive_exact_accuracy": 0.375,
+            "positive_family_correct": 30,
+            "positive_family_accuracy": 0.375,
+            "positive_accepted_exact_precision": 0.8823529411764706,
+            "positive_accepted_family_precision": 0.8823529411764706,
+            "hold_n": 40,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.125,
+            "accepted_unambiguous_exact_precision": 0.7692307692307693,
+            "accepted_unambiguous_family_precision": 0.7692307692307693,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 12,
+            "ambiguous_acceptance_rate": 0.6,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 1
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.4216039999999921,
+              "p95_ms": 0.4834590000000194,
+              "max_ms": 27.938125000000035
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 26,
+            "positive_coverage": 0.65,
+            "positive_exact_correct": 25,
+            "positive_exact_accuracy": 0.625,
+            "positive_family_correct": 25,
+            "positive_family_accuracy": 0.625,
+            "positive_accepted_exact_precision": 0.9615384615384616,
+            "positive_accepted_family_precision": 0.9615384615384616,
+            "hold_n": 20,
+            "hold_false_activations": 4,
+            "hold_false_activation_rate": 0.2,
+            "accepted_unambiguous_exact_precision": 0.8333333333333334,
+            "accepted_unambiguous_family_precision": 0.8333333333333334,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 7,
+            "ambiguous_acceptance_rate": 0.7,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 1
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.40322900000000494,
+              "p95_ms": 0.4393749999999641,
+              "max_ms": 27.938125000000035
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 8,
+            "positive_coverage": 0.2,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.125,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.125,
+            "positive_accepted_exact_precision": 0.625,
+            "positive_accepted_family_precision": 0.625,
+            "hold_n": 20,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.05,
+            "accepted_unambiguous_exact_precision": 0.5555555555555556,
+            "accepted_unambiguous_family_precision": 0.5555555555555556,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.5,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.44987449999997486,
+              "p95_ms": 0.49445800000003093,
+              "max_ms": 0.7414159999999947
+            },
+            "errors": 0
+          }
+        }
+      },
+      "primitive": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 8,
+            "positive_coverage": 0.2962962962962963,
+            "positive_exact_correct": 8,
+            "positive_exact_accuracy": 0.2962962962962963,
+            "positive_family_correct": 8,
+            "positive_family_accuracy": 0.2962962962962963,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 11,
+            "hold_false_activation_rate": 0.275,
+            "accepted_unambiguous_exact_precision": 0.42105263157894735,
+            "accepted_unambiguous_family_precision": 0.42105263157894735,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 7,
+            "ambiguous_acceptance_rate": 0.35,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 7
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.04795799999995909,
+              "p95_ms": 0.05720800000003079,
+              "max_ms": 0.06295899999997356
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 4,
+            "positive_coverage": 0.5714285714285714,
+            "positive_exact_correct": 4,
+            "positive_exact_accuracy": 0.5714285714285714,
+            "positive_family_correct": 4,
+            "positive_family_accuracy": 0.5714285714285714,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 7,
+            "hold_false_activation_rate": 0.35,
+            "accepted_unambiguous_exact_precision": 0.36363636363636365,
+            "accepted_unambiguous_family_precision": 0.36363636363636365,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 4,
+            "ambiguous_acceptance_rate": 0.4,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 5
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.04141599999996082,
+              "p95_ms": 0.053917000000014426,
+              "max_ms": 0.05825000000003744
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 4,
+            "positive_coverage": 0.2,
+            "positive_exact_correct": 4,
+            "positive_exact_accuracy": 0.2,
+            "positive_family_correct": 4,
+            "positive_family_accuracy": 0.2,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 4,
+            "hold_false_activation_rate": 0.2,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.05089599999999472,
+              "p95_ms": 0.05720800000003079,
+              "max_ms": 0.06295899999997356
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 4,
+            "positive_coverage": 0.14814814814814814,
+            "positive_exact_correct": 4,
+            "positive_exact_accuracy": 0.14814814814814814,
+            "positive_family_correct": 4,
+            "positive_family_accuracy": 0.14814814814814814,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.125,
+            "accepted_unambiguous_exact_precision": 0.4444444444444444,
+            "accepted_unambiguous_family_precision": 0.4444444444444444,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 4,
+            "ambiguous_acceptance_rate": 0.2,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 3
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.10833399999998772,
+              "p95_ms": 0.14324999999998367,
+              "max_ms": 6.727333000000002
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 4,
+            "positive_coverage": 0.5714285714285714,
+            "positive_exact_correct": 4,
+            "positive_exact_accuracy": 0.5714285714285714,
+            "positive_family_correct": 4,
+            "positive_family_accuracy": 0.5714285714285714,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.15,
+            "accepted_unambiguous_exact_precision": 0.5714285714285714,
+            "accepted_unambiguous_family_precision": 0.5714285714285714,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.10154099999998278,
+              "p95_ms": 0.11087500000001027,
+              "max_ms": 6.727333000000002
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 0,
+            "positive_coverage": 0.0,
+            "positive_exact_correct": 0,
+            "positive_exact_accuracy": 0.0,
+            "positive_family_correct": 0,
+            "positive_family_accuracy": 0.0,
+            "positive_accepted_exact_precision": null,
+            "positive_accepted_family_precision": null,
+            "hold_n": 20,
+            "hold_false_activations": 2,
+            "hold_false_activation_rate": 0.1,
+            "accepted_unambiguous_exact_precision": 0.0,
+            "accepted_unambiguous_family_precision": 0.0,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 1,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.12539599999999984,
+              "p95_ms": 0.1435000000000186,
+              "max_ms": 0.15775000000001205
+            },
+            "errors": 0
+          }
+        }
+      }
+    },
+    "128-float32": {
+      "shape": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 18,
+            "positive_coverage": 0.225,
+            "positive_exact_correct": 18,
+            "positive_exact_accuracy": 0.225,
+            "positive_family_correct": 18,
+            "positive_family_accuracy": 0.225,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.125,
+            "accepted_unambiguous_exact_precision": 0.782608695652174,
+            "accepted_unambiguous_family_precision": 0.782608695652174,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.15,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.07335399999996994,
+              "p95_ms": 0.08808299999996105,
+              "max_ms": 0.09287499999999227
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 17,
+            "positive_coverage": 0.425,
+            "positive_exact_correct": 17,
+            "positive_exact_accuracy": 0.425,
+            "positive_family_correct": 17,
+            "positive_family_accuracy": 0.425,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 4,
+            "hold_false_activation_rate": 0.2,
+            "accepted_unambiguous_exact_precision": 0.8095238095238095,
+            "accepted_unambiguous_family_precision": 0.8095238095238095,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.06899999999993023,
+              "p95_ms": 0.07333300000000875,
+              "max_ms": 0.08883300000006589
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 1,
+            "positive_coverage": 0.025,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.025,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.025,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.05,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 0,
+            "ambiguous_acceptance_rate": 0.0,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.07766650000001762,
+              "p95_ms": 0.08966700000001548,
+              "max_ms": 0.09287499999999227
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 23,
+            "positive_coverage": 0.2875,
+            "positive_exact_correct": 23,
+            "positive_exact_accuracy": 0.2875,
+            "positive_family_correct": 23,
+            "positive_family_accuracy": 0.2875,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.075,
+            "accepted_unambiguous_exact_precision": 0.8846153846153846,
+            "accepted_unambiguous_family_precision": 0.8846153846153846,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.25,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.3687915000000208,
+              "p95_ms": 0.4126250000000553,
+              "max_ms": 0.4534170000000115
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 21,
+            "positive_coverage": 0.525,
+            "positive_exact_correct": 21,
+            "positive_exact_accuracy": 0.525,
+            "positive_family_correct": 21,
+            "positive_family_accuracy": 0.525,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.15,
+            "accepted_unambiguous_exact_precision": 0.875,
+            "accepted_unambiguous_family_precision": 0.875,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 2,
+            "ambiguous_acceptance_rate": 0.2,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.34885400000006506,
+              "p95_ms": 0.38008400000000275,
+              "max_ms": 0.3974169999999555
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 2,
+            "positive_coverage": 0.05,
+            "positive_exact_correct": 2,
+            "positive_exact_accuracy": 0.05,
+            "positive_family_correct": 2,
+            "positive_family_accuracy": 0.05,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": 1.0,
+            "accepted_unambiguous_family_precision": 1.0,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.38468749999998053,
+              "p95_ms": 0.4191250000000757,
+              "max_ms": 0.4534170000000115
+            },
+            "errors": 0
+          }
+        }
+      },
+      "primitive": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 10,
+            "positive_coverage": 0.37037037037037035,
+            "positive_exact_correct": 10,
+            "positive_exact_accuracy": 0.37037037037037035,
+            "positive_family_correct": 10,
+            "positive_family_accuracy": 0.37037037037037035,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 16,
+            "hold_false_activation_rate": 0.4,
+            "accepted_unambiguous_exact_precision": 0.38461538461538464,
+            "accepted_unambiguous_family_precision": 0.38461538461538464,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 8,
+            "ambiguous_acceptance_rate": 0.4,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 7
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 5
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 4
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.03204200000006541,
+              "p95_ms": 0.0416670000000785,
+              "max_ms": 0.05504099999997791
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 5,
+            "positive_coverage": 0.7142857142857143,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.7142857142857143,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.7142857142857143,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 11,
+            "hold_false_activation_rate": 0.55,
+            "accepted_unambiguous_exact_precision": 0.3125,
+            "accepted_unambiguous_family_precision": 0.3125,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.5,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 5
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 3
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 3
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.026874999999981775,
+              "p95_ms": 0.03637500000008842,
+              "max_ms": 0.0416670000000785
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 5,
+            "positive_coverage": 0.25,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.25,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.25,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.25,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.03420849999996589,
+              "p95_ms": 0.04404099999999467,
+              "max_ms": 0.05504099999997791
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 5,
+            "positive_coverage": 0.18518518518518517,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.18518518518518517,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.18518518518518517,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.125,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.25,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 3
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.09312499999991619,
+              "p95_ms": 0.11937500000003265,
+              "max_ms": 0.14412500000005046
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 5,
+            "positive_coverage": 0.7142857142857143,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.7142857142857143,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.7142857142857143,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.15,
+            "accepted_unambiguous_exact_precision": 0.625,
+            "accepted_unambiguous_family_precision": 0.625,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 4,
+            "ambiguous_acceptance_rate": 0.4,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.08758300000000219,
+              "p95_ms": 0.09375000000000355,
+              "max_ms": 0.1095410000000463
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 0,
+            "positive_coverage": 0.0,
+            "positive_exact_correct": 0,
+            "positive_exact_accuracy": 0.0,
+            "positive_family_correct": 0,
+            "positive_family_accuracy": 0.0,
+            "positive_accepted_exact_precision": null,
+            "positive_accepted_family_precision": null,
+            "hold_n": 20,
+            "hold_false_activations": 2,
+            "hold_false_activation_rate": 0.1,
+            "accepted_unambiguous_exact_precision": 0.0,
+            "accepted_unambiguous_family_precision": 0.0,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 1,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.10814599999997565,
+              "p95_ms": 0.12133399999991745,
+              "max_ms": 0.14412500000005046
+            },
+            "errors": 0
+          }
+        }
+      }
+    },
+    "128-float16": {
+      "shape": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 18,
+            "positive_coverage": 0.225,
+            "positive_exact_correct": 18,
+            "positive_exact_accuracy": 0.225,
+            "positive_family_correct": 18,
+            "positive_family_accuracy": 0.225,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.125,
+            "accepted_unambiguous_exact_precision": 0.782608695652174,
+            "accepted_unambiguous_family_precision": 0.782608695652174,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.15,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.07387500000000102,
+              "p95_ms": 0.08854199999996926,
+              "max_ms": 0.11604099999995565
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 17,
+            "positive_coverage": 0.425,
+            "positive_exact_correct": 17,
+            "positive_exact_accuracy": 0.425,
+            "positive_family_correct": 17,
+            "positive_family_accuracy": 0.425,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 4,
+            "hold_false_activation_rate": 0.2,
+            "accepted_unambiguous_exact_precision": 0.8095238095238095,
+            "accepted_unambiguous_family_precision": 0.8095238095238095,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.06860400000002764,
+              "p95_ms": 0.07395900000006783,
+              "max_ms": 0.08170799999995815
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 1,
+            "positive_coverage": 0.025,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.025,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.025,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.05,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 0,
+            "ambiguous_acceptance_rate": 0.0,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.0782085000000099,
+              "p95_ms": 0.09200000000009201,
+              "max_ms": 0.11604099999995565
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 23,
+            "positive_coverage": 0.2875,
+            "positive_exact_correct": 23,
+            "positive_exact_accuracy": 0.2875,
+            "positive_family_correct": 23,
+            "positive_family_accuracy": 0.2875,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.075,
+            "accepted_unambiguous_exact_precision": 0.8846153846153846,
+            "accepted_unambiguous_family_precision": 0.8846153846153846,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.25,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.36620850000002036,
+              "p95_ms": 0.4125409999999885,
+              "max_ms": 0.45037500000000286
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 21,
+            "positive_coverage": 0.525,
+            "positive_exact_correct": 21,
+            "positive_exact_accuracy": 0.525,
+            "positive_family_correct": 21,
+            "positive_family_accuracy": 0.525,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.15,
+            "accepted_unambiguous_exact_precision": 0.875,
+            "accepted_unambiguous_family_precision": 0.875,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 2,
+            "ambiguous_acceptance_rate": 0.2,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.35075049999999663,
+              "p95_ms": 0.3807500000000408,
+              "max_ms": 0.38754100000004676
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 2,
+            "positive_coverage": 0.05,
+            "positive_exact_correct": 2,
+            "positive_exact_accuracy": 0.05,
+            "positive_family_correct": 2,
+            "positive_family_accuracy": 0.05,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": 1.0,
+            "accepted_unambiguous_family_precision": 1.0,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.3869579999999928,
+              "p95_ms": 0.4177499999999945,
+              "max_ms": 0.45037500000000286
+            },
+            "errors": 0
+          }
+        }
+      },
+      "primitive": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 10,
+            "positive_coverage": 0.37037037037037035,
+            "positive_exact_correct": 10,
+            "positive_exact_accuracy": 0.37037037037037035,
+            "positive_family_correct": 10,
+            "positive_family_accuracy": 0.37037037037037035,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 16,
+            "hold_false_activation_rate": 0.4,
+            "accepted_unambiguous_exact_precision": 0.38461538461538464,
+            "accepted_unambiguous_family_precision": 0.38461538461538464,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 8,
+            "ambiguous_acceptance_rate": 0.4,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 7
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 5
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 4
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.032542000000024274,
+              "p95_ms": 0.03983400000007187,
+              "max_ms": 0.047917000000063936
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 5,
+            "positive_coverage": 0.7142857142857143,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.7142857142857143,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.7142857142857143,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 11,
+            "hold_false_activation_rate": 0.55,
+            "accepted_unambiguous_exact_precision": 0.3125,
+            "accepted_unambiguous_family_precision": 0.3125,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.5,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 5
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 3
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 3
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.02820799999991852,
+              "p95_ms": 0.03437500000003091,
+              "max_ms": 0.03737500000000615
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 5,
+            "positive_coverage": 0.25,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.25,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.25,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.25,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.3,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.03514549999994454,
+              "p95_ms": 0.04058299999998294,
+              "max_ms": 0.047917000000063936
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 5,
+            "positive_coverage": 0.18518518518518517,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.18518518518518517,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.18518518518518517,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.125,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 5,
+            "ambiguous_acceptance_rate": 0.25,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 3
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.09241699999995578,
+              "p95_ms": 0.11845799999998796,
+              "max_ms": 0.13429200000003583
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 5,
+            "positive_coverage": 0.7142857142857143,
+            "positive_exact_correct": 5,
+            "positive_exact_accuracy": 0.7142857142857143,
+            "positive_family_correct": 5,
+            "positive_family_accuracy": 0.7142857142857143,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.15,
+            "accepted_unambiguous_exact_precision": 0.625,
+            "accepted_unambiguous_family_precision": 0.625,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 4,
+            "ambiguous_acceptance_rate": 0.4,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.08612499999993695,
+              "p95_ms": 0.0955419999999485,
+              "max_ms": 0.09970900000000338
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 0,
+            "positive_coverage": 0.0,
+            "positive_exact_correct": 0,
+            "positive_exact_accuracy": 0.0,
+            "positive_family_correct": 0,
+            "positive_family_accuracy": 0.0,
+            "positive_accepted_exact_precision": null,
+            "positive_accepted_family_precision": null,
+            "hold_n": 20,
+            "hold_false_activations": 2,
+            "hold_false_activation_rate": 0.1,
+            "accepted_unambiguous_exact_precision": 0.0,
+            "accepted_unambiguous_family_precision": 0.0,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 1,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.10631250000003867,
+              "p95_ms": 0.12224999999999042,
+              "max_ms": 0.13429200000003583
+            },
+            "errors": 0
+          }
+        }
+      }
+    },
+    "chargram": {
+      "shape": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 1,
+            "positive_coverage": 0.0125,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.0125,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.0125,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": 1.0,
+            "accepted_unambiguous_family_precision": 1.0,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 0,
+            "ambiguous_acceptance_rate": 0.0,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.2833125000000214,
+              "p95_ms": 0.3101660000000006,
+              "max_ms": 0.3319580000000766
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 1,
+            "positive_coverage": 0.025,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.025,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.025,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": 1.0,
+            "accepted_unambiguous_family_precision": 1.0,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 0,
+            "ambiguous_acceptance_rate": 0.0,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.2684785000000578,
+              "p95_ms": 0.29216700000000984,
+              "max_ms": 0.297542000000095
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 0,
+            "positive_coverage": 0.0,
+            "positive_exact_correct": 0,
+            "positive_exact_accuracy": 0.0,
+            "positive_family_correct": 0,
+            "positive_family_accuracy": 0.0,
+            "positive_accepted_exact_precision": null,
+            "positive_accepted_family_precision": null,
+            "hold_n": 20,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": null,
+            "accepted_unambiguous_family_precision": null,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 0,
+            "ambiguous_acceptance_rate": 0.0,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.29220850000000187,
+              "p95_ms": 0.32166700000002546,
+              "max_ms": 0.3319580000000766
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 140,
+            "positive_n": 80,
+            "positive_accepted": 20,
+            "positive_coverage": 0.25,
+            "positive_exact_correct": 18,
+            "positive_exact_accuracy": 0.225,
+            "positive_family_correct": 18,
+            "positive_family_accuracy": 0.225,
+            "positive_accepted_exact_precision": 0.9,
+            "positive_accepted_family_precision": 0.9,
+            "hold_n": 40,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.025,
+            "accepted_unambiguous_exact_precision": 0.8571428571428571,
+            "accepted_unambiguous_family_precision": 0.8571428571428571,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 4,
+            "ambiguous_acceptance_rate": 0.2,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 140,
+              "median_ms": 0.5743125000000071,
+              "p95_ms": 0.63787500000001,
+              "max_ms": 0.6646249999999743
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 17,
+            "positive_coverage": 0.425,
+            "positive_exact_correct": 17,
+            "positive_exact_accuracy": 0.425,
+            "positive_family_correct": 17,
+            "positive_family_accuracy": 0.425,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.05,
+            "accepted_unambiguous_exact_precision": 0.9444444444444444,
+            "accepted_unambiguous_family_precision": 0.9444444444444444,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 0,
+            "ambiguous_acceptance_rate": 0.0,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.5557079999999881,
+              "p95_ms": 0.585958000000053,
+              "max_ms": 0.6220420000000448
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 70,
+            "positive_n": 40,
+            "positive_accepted": 3,
+            "positive_coverage": 0.075,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.025,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.025,
+            "positive_accepted_exact_precision": 0.3333333333333333,
+            "positive_accepted_family_precision": 0.3333333333333333,
+            "hold_n": 20,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": 0.3333333333333333,
+            "accepted_unambiguous_family_precision": 0.3333333333333333,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 4,
+            "ambiguous_acceptance_rate": 0.4,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 70,
+              "median_ms": 0.6105625000000225,
+              "p95_ms": 0.6460000000000354,
+              "max_ms": 0.6646249999999743
+            },
+            "errors": 0
+          }
+        }
+      },
+      "primitive": {
+        "retrieval_only": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 3,
+            "positive_coverage": 0.1111111111111111,
+            "positive_exact_correct": 3,
+            "positive_exact_accuracy": 0.1111111111111111,
+            "positive_family_correct": 3,
+            "positive_family_accuracy": 0.1111111111111111,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 8,
+            "hold_false_activation_rate": 0.2,
+            "accepted_unambiguous_exact_precision": 0.2727272727272727,
+            "accepted_unambiguous_family_precision": 0.2727272727272727,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 2,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 4
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 1
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.08908299999998981,
+              "p95_ms": 0.1067080000000109,
+              "max_ms": 0.12604199999999288
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 1,
+            "positive_coverage": 0.14285714285714285,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.14285714285714285,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.14285714285714285,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 5,
+            "hold_false_activation_rate": 0.25,
+            "accepted_unambiguous_exact_precision": 0.16666666666666666,
+            "accepted_unambiguous_family_precision": 0.16666666666666666,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 1,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.07545899999994443,
+              "p95_ms": 0.08183300000008664,
+              "max_ms": 0.08545800000003823
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 2,
+            "positive_coverage": 0.1,
+            "positive_exact_correct": 2,
+            "positive_exact_accuracy": 0.1,
+            "positive_family_correct": 2,
+            "positive_family_accuracy": 0.1,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 3,
+            "hold_false_activation_rate": 0.15,
+            "accepted_unambiguous_exact_precision": 0.4,
+            "accepted_unambiguous_family_precision": 0.4,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 1,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 2
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 1
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.09470850000004027,
+              "p95_ms": 0.11099999999997223,
+              "max_ms": 0.12604199999999288
+            },
+            "errors": 0
+          }
+        },
+        "guarded": {
+          "overall": {
+            "submitted": 87,
+            "positive_n": 27,
+            "positive_accepted": 1,
+            "positive_coverage": 0.037037037037037035,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.037037037037037035,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.037037037037037035,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 40,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.025,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 20,
+            "ambiguous_accepted": 3,
+            "ambiguous_acceptance_rate": 0.15,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 10,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 10,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 10,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 87,
+              "median_ms": 0.14250000000004537,
+              "p95_ms": 0.1815840000000124,
+              "max_ms": 0.20924999999993865
+            },
+            "errors": 0
+          },
+          "ja": {
+            "submitted": 37,
+            "positive_n": 7,
+            "positive_accepted": 1,
+            "positive_coverage": 0.14285714285714285,
+            "positive_exact_correct": 1,
+            "positive_exact_accuracy": 0.14285714285714285,
+            "positive_family_correct": 1,
+            "positive_family_accuracy": 0.14285714285714285,
+            "positive_accepted_exact_precision": 1.0,
+            "positive_accepted_family_precision": 1.0,
+            "hold_n": 20,
+            "hold_false_activations": 1,
+            "hold_false_activation_rate": 0.05,
+            "accepted_unambiguous_exact_precision": 0.5,
+            "accepted_unambiguous_family_precision": 0.5,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 1,
+            "ambiguous_acceptance_rate": 0.1,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 1
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 37,
+              "median_ms": 0.13370800000001015,
+              "p95_ms": 0.14366599999993124,
+              "max_ms": 0.1487500000000308
+            },
+            "errors": 0
+          },
+          "en": {
+            "submitted": 50,
+            "positive_n": 20,
+            "positive_accepted": 0,
+            "positive_coverage": 0.0,
+            "positive_exact_correct": 0,
+            "positive_exact_accuracy": 0.0,
+            "positive_family_correct": 0,
+            "positive_family_accuracy": 0.0,
+            "positive_accepted_exact_precision": null,
+            "positive_accepted_family_precision": null,
+            "hold_n": 20,
+            "hold_false_activations": 0,
+            "hold_false_activation_rate": 0.0,
+            "accepted_unambiguous_exact_precision": null,
+            "accepted_unambiguous_family_precision": null,
+            "ambiguous_n": 10,
+            "ambiguous_accepted": 2,
+            "ambiguous_acceptance_rate": 0.2,
+            "hold_by_subtype": {
+              "cancel_or_prohibit": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "conflicting_intent": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "mention_or_quote": {
+                "n": 5,
+                "false_activations": 0
+              },
+              "unsupported_object": {
+                "n": 5,
+                "false_activations": 0
+              }
+            },
+            "query_timing": {
+              "n": 50,
+              "median_ms": 0.16397899999998078,
+              "p95_ms": 0.18362500000002058,
+              "max_ms": 0.20924999999993865
+            },
+            "errors": 0
+          }
+        }
+      }
+    }
+  },
+  "raw_top1": {
+    "1024-float32": {
+      "shape": {
+        "overall": {
+          "positive_n": 80,
+          "raw_top1_exact_correct": 52,
+          "raw_top1_exact_accuracy": 0.65,
+          "expected_top3": 64
+        },
+        "ja": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 37,
+          "raw_top1_exact_accuracy": 0.925,
+          "expected_top3": 39
+        },
+        "en": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 15,
+          "raw_top1_exact_accuracy": 0.375,
+          "expected_top3": 25
+        }
+      },
+      "primitive": {
+        "overall": {
+          "positive_n": 27,
+          "raw_top1_exact_correct": 21,
+          "raw_top1_exact_accuracy": 0.7777777777777778,
+          "expected_top3": 24
+        },
+        "ja": {
+          "positive_n": 7,
+          "raw_top1_exact_correct": 5,
+          "raw_top1_exact_accuracy": 0.7142857142857143,
+          "expected_top3": 6
+        },
+        "en": {
+          "positive_n": 20,
+          "raw_top1_exact_correct": 16,
+          "raw_top1_exact_accuracy": 0.8,
+          "expected_top3": 18
+        }
+      }
+    },
+    "128-float32": {
+      "shape": {
+        "overall": {
+          "positive_n": 80,
+          "raw_top1_exact_correct": 48,
+          "raw_top1_exact_accuracy": 0.6,
+          "expected_top3": 55
+        },
+        "ja": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 36,
+          "raw_top1_exact_accuracy": 0.9,
+          "expected_top3": 39
+        },
+        "en": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 12,
+          "raw_top1_exact_accuracy": 0.3,
+          "expected_top3": 16
+        }
+      },
+      "primitive": {
+        "overall": {
+          "positive_n": 27,
+          "raw_top1_exact_correct": 20,
+          "raw_top1_exact_accuracy": 0.7407407407407407,
+          "expected_top3": 24
+        },
+        "ja": {
+          "positive_n": 7,
+          "raw_top1_exact_correct": 5,
+          "raw_top1_exact_accuracy": 0.7142857142857143,
+          "expected_top3": 7
+        },
+        "en": {
+          "positive_n": 20,
+          "raw_top1_exact_correct": 15,
+          "raw_top1_exact_accuracy": 0.75,
+          "expected_top3": 17
+        }
+      }
+    },
+    "128-float16": {
+      "shape": {
+        "overall": {
+          "positive_n": 80,
+          "raw_top1_exact_correct": 48,
+          "raw_top1_exact_accuracy": 0.6,
+          "expected_top3": 55
+        },
+        "ja": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 36,
+          "raw_top1_exact_accuracy": 0.9,
+          "expected_top3": 39
+        },
+        "en": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 12,
+          "raw_top1_exact_accuracy": 0.3,
+          "expected_top3": 16
+        }
+      },
+      "primitive": {
+        "overall": {
+          "positive_n": 27,
+          "raw_top1_exact_correct": 20,
+          "raw_top1_exact_accuracy": 0.7407407407407407,
+          "expected_top3": 24
+        },
+        "ja": {
+          "positive_n": 7,
+          "raw_top1_exact_correct": 5,
+          "raw_top1_exact_accuracy": 0.7142857142857143,
+          "expected_top3": 7
+        },
+        "en": {
+          "positive_n": 20,
+          "raw_top1_exact_correct": 15,
+          "raw_top1_exact_accuracy": 0.75,
+          "expected_top3": 17
+        }
+      }
+    },
+    "chargram": {
+      "shape": {
+        "overall": {
+          "positive_n": 80,
+          "raw_top1_exact_correct": 40,
+          "raw_top1_exact_accuracy": 0.5,
+          "expected_top3": 50
+        },
+        "ja": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 32,
+          "raw_top1_exact_accuracy": 0.8,
+          "expected_top3": 38
+        },
+        "en": {
+          "positive_n": 40,
+          "raw_top1_exact_correct": 8,
+          "raw_top1_exact_accuracy": 0.2,
+          "expected_top3": 12
+        }
+      },
+      "primitive": {
+        "overall": {
+          "positive_n": 27,
+          "raw_top1_exact_correct": 18,
+          "raw_top1_exact_accuracy": 0.6666666666666666,
+          "expected_top3": 23
+        },
+        "ja": {
+          "positive_n": 7,
+          "raw_top1_exact_correct": 5,
+          "raw_top1_exact_accuracy": 0.7142857142857143,
+          "expected_top3": 7
+        },
+        "en": {
+          "positive_n": 20,
+          "raw_top1_exact_correct": 13,
+          "raw_top1_exact_accuracy": 0.65,
+          "expected_top3": 16
+        }
+      }
+    }
+  },
+  "raw_top1_agreement": {
+    "shape": {
+      "1024-float32 vs 128-float32": {
+        "same": 103,
+        "total": 140,
+        "disagreements": [
+          {
+            "id": "ja-P08",
+            "left": "cone",
+            "right": "pyramid"
+          },
+          {
+            "id": "ja-P28",
+            "left": "snake",
+            "right": "spider"
+          },
+          {
+            "id": "ja-P32",
+            "left": "flower",
+            "right": "rose"
+          },
+          {
+            "id": "en-P05",
+            "left": "lotus",
+            "right": "octahedron"
+          },
+          {
+            "id": "en-P07",
+            "left": "flower",
+            "right": "bell"
+          },
+          {
+            "id": "en-P09",
+            "left": "condense",
+            "right": "cylinder"
+          },
+          {
+            "id": "en-P10",
+            "left": "bolt",
+            "right": "cuboid"
+          },
+          {
+            "id": "en-P16",
+            "left": "diamond",
+            "right": "flower"
+          },
+          {
+            "id": "en-P20",
+            "left": "snowflake",
+            "right": "bottle"
+          },
+          {
+            "id": "en-P21",
+            "left": "knot",
+            "right": "apple"
+          },
+          {
+            "id": "en-P22",
+            "left": "knot",
+            "right": "condense"
+          },
+          {
+            "id": "en-P24",
+            "left": "snowflake",
+            "right": "cup"
+          },
+          {
+            "id": "en-P26",
+            "left": "bird",
+            "right": "bell"
+          },
+          {
+            "id": "en-P28",
+            "left": "saturn",
+            "right": "ring"
+          },
+          {
+            "id": "en-P29",
+            "left": "cube",
+            "right": "capsule"
+          },
+          {
+            "id": "en-P30",
+            "left": "cross",
+            "right": "snake"
+          },
+          {
+            "id": "en-P34",
+            "left": "cone",
+            "right": "turtle"
+          },
+          {
+            "id": "en-P37",
+            "left": "mushroom",
+            "right": "butterfly"
+          },
+          {
+            "id": "en-P40",
+            "left": "bolt",
+            "right": "droplet"
+          },
+          {
+            "id": "ja-H05",
+            "left": "cuboid",
+            "right": "cone"
+          },
+          {
+            "id": "ja-H12",
+            "left": "fireworks",
+            "right": "umbrella"
+          },
+          {
+            "id": "ja-H15",
+            "left": "jellyfish",
+            "right": "umbrella"
+          },
+          {
+            "id": "ja-H17",
+            "left": "ring",
+            "right": "condense"
+          },
+          {
+            "id": "en-H05",
+            "left": "knot",
+            "right": "octahedron"
+          },
+          {
+            "id": "en-H07",
+            "left": "sword",
+            "right": "bottle"
+          },
+          {
+            "id": "en-H10",
+            "left": "snowflake",
+            "right": "vase"
+          },
+          {
+            "id": "en-H11",
+            "left": "cylinder",
+            "right": "snake"
+          },
+          {
+            "id": "en-H12",
+            "left": "crown",
+            "right": "sun"
+          },
+          {
+            "id": "en-H13",
+            "left": "fireworks",
+            "right": "umbrella"
+          },
+          {
+            "id": "en-H14",
+            "left": "bird",
+            "right": "moon"
+          },
+          {
+            "id": "en-H15",
+            "left": "vase",
+            "right": "wave"
+          },
+          {
+            "id": "en-H17",
+            "left": "condense",
+            "right": "pumpkin"
+          },
+          {
+            "id": "en-H19",
+            "left": "sword",
+            "right": "vase"
+          },
+          {
+            "id": "en-H20",
+            "left": "cube",
+            "right": "cuboid"
+          },
+          {
+            "id": "ja-A03",
+            "left": "cuboid",
+            "right": "capsule"
+          },
+          {
+            "id": "en-A03",
+            "left": "wave",
+            "right": "snake"
+          },
+          {
+            "id": "en-A08",
+            "left": "saturn",
+            "right": "shell"
+          }
+        ]
+      },
+      "1024-float32 vs 128-float16": {
+        "same": 103,
+        "total": 140,
+        "disagreements": [
+          {
+            "id": "ja-P08",
+            "left": "cone",
+            "right": "pyramid"
+          },
+          {
+            "id": "ja-P28",
+            "left": "snake",
+            "right": "spider"
+          },
+          {
+            "id": "ja-P32",
+            "left": "flower",
+            "right": "rose"
+          },
+          {
+            "id": "en-P05",
+            "left": "lotus",
+            "right": "octahedron"
+          },
+          {
+            "id": "en-P07",
+            "left": "flower",
+            "right": "bell"
+          },
+          {
+            "id": "en-P09",
+            "left": "condense",
+            "right": "cylinder"
+          },
+          {
+            "id": "en-P10",
+            "left": "bolt",
+            "right": "cuboid"
+          },
+          {
+            "id": "en-P16",
+            "left": "diamond",
+            "right": "flower"
+          },
+          {
+            "id": "en-P20",
+            "left": "snowflake",
+            "right": "bottle"
+          },
+          {
+            "id": "en-P21",
+            "left": "knot",
+            "right": "apple"
+          },
+          {
+            "id": "en-P22",
+            "left": "knot",
+            "right": "condense"
+          },
+          {
+            "id": "en-P24",
+            "left": "snowflake",
+            "right": "cup"
+          },
+          {
+            "id": "en-P26",
+            "left": "bird",
+            "right": "bell"
+          },
+          {
+            "id": "en-P28",
+            "left": "saturn",
+            "right": "ring"
+          },
+          {
+            "id": "en-P29",
+            "left": "cube",
+            "right": "capsule"
+          },
+          {
+            "id": "en-P30",
+            "left": "cross",
+            "right": "fireworks"
+          },
+          {
+            "id": "en-P34",
+            "left": "cone",
+            "right": "turtle"
+          },
+          {
+            "id": "en-P37",
+            "left": "mushroom",
+            "right": "butterfly"
+          },
+          {
+            "id": "en-P40",
+            "left": "bolt",
+            "right": "droplet"
+          },
+          {
+            "id": "ja-H05",
+            "left": "cuboid",
+            "right": "cone"
+          },
+          {
+            "id": "ja-H12",
+            "left": "fireworks",
+            "right": "umbrella"
+          },
+          {
+            "id": "ja-H15",
+            "left": "jellyfish",
+            "right": "umbrella"
+          },
+          {
+            "id": "ja-H17",
+            "left": "ring",
+            "right": "condense"
+          },
+          {
+            "id": "en-H05",
+            "left": "knot",
+            "right": "octahedron"
+          },
+          {
+            "id": "en-H07",
+            "left": "sword",
+            "right": "bottle"
+          },
+          {
+            "id": "en-H10",
+            "left": "snowflake",
+            "right": "vase"
+          },
+          {
+            "id": "en-H11",
+            "left": "cylinder",
+            "right": "snake"
+          },
+          {
+            "id": "en-H12",
+            "left": "crown",
+            "right": "sun"
+          },
+          {
+            "id": "en-H13",
+            "left": "fireworks",
+            "right": "umbrella"
+          },
+          {
+            "id": "en-H14",
+            "left": "bird",
+            "right": "moon"
+          },
+          {
+            "id": "en-H15",
+            "left": "vase",
+            "right": "wave"
+          },
+          {
+            "id": "en-H17",
+            "left": "condense",
+            "right": "pumpkin"
+          },
+          {
+            "id": "en-H19",
+            "left": "sword",
+            "right": "vase"
+          },
+          {
+            "id": "en-H20",
+            "left": "cube",
+            "right": "cuboid"
+          },
+          {
+            "id": "ja-A03",
+            "left": "cuboid",
+            "right": "capsule"
+          },
+          {
+            "id": "en-A03",
+            "left": "wave",
+            "right": "snake"
+          },
+          {
+            "id": "en-A08",
+            "left": "saturn",
+            "right": "shell"
+          }
+        ]
+      },
+      "128-float32 vs 128-float16": {
+        "same": 139,
+        "total": 140,
+        "disagreements": [
+          {
+            "id": "en-P30",
+            "left": "snake",
+            "right": "fireworks"
+          }
+        ]
+      }
+    },
+    "primitive": {
+      "1024-float32 vs 128-float32": {
+        "same": 67,
+        "total": 87,
+        "disagreements": [
+          {
+            "id": "en-P02",
+            "left": "box",
+            "right": "blade"
+          },
+          {
+            "id": "en-P07",
+            "left": "tube",
+            "right": "vase"
+          },
+          {
+            "id": "en-P28",
+            "left": "box",
+            "right": "ring"
+          },
+          {
+            "id": "en-P34",
+            "left": "box",
+            "right": "sphere"
+          },
+          {
+            "id": "en-P38",
+            "left": "vase",
+            "right": "box"
+          },
+          {
+            "id": "en-P40",
+            "left": "box",
+            "right": "blade"
+          },
+          {
+            "id": "ja-H10",
+            "left": "tube",
+            "right": "sphere"
+          },
+          {
+            "id": "ja-H12",
+            "left": "tube",
+            "right": "sphere"
+          },
+          {
+            "id": "ja-H13",
+            "left": "ring",
+            "right": "tube"
+          },
+          {
+            "id": "ja-H14",
+            "left": "vase",
+            "right": "tube"
+          },
+          {
+            "id": "en-H08",
+            "left": "ring",
+            "right": "blade"
+          },
+          {
+            "id": "en-H13",
+            "left": "ring",
+            "right": "box"
+          },
+          {
+            "id": "en-H17",
+            "left": "sphere",
+            "right": "box"
+          },
+          {
+            "id": "en-H19",
+            "left": "blade",
+            "right": "vase"
+          },
+          {
+            "id": "ja-A08",
+            "left": "box",
+            "right": "sphere"
+          },
+          {
+            "id": "ja-A10",
+            "left": "tube",
+            "right": "ring"
+          },
+          {
+            "id": "en-A06",
+            "left": "sphere",
+            "right": "tube"
+          },
+          {
+            "id": "en-A07",
+            "left": "blade",
+            "right": "box"
+          },
+          {
+            "id": "en-A08",
+            "left": "ring",
+            "right": "tube"
+          },
+          {
+            "id": "en-A10",
+            "left": "box",
+            "right": "ring"
+          }
+        ]
+      },
+      "1024-float32 vs 128-float16": {
+        "same": 67,
+        "total": 87,
+        "disagreements": [
+          {
+            "id": "en-P02",
+            "left": "box",
+            "right": "blade"
+          },
+          {
+            "id": "en-P07",
+            "left": "tube",
+            "right": "vase"
+          },
+          {
+            "id": "en-P28",
+            "left": "box",
+            "right": "ring"
+          },
+          {
+            "id": "en-P34",
+            "left": "box",
+            "right": "sphere"
+          },
+          {
+            "id": "en-P38",
+            "left": "vase",
+            "right": "box"
+          },
+          {
+            "id": "en-P40",
+            "left": "box",
+            "right": "blade"
+          },
+          {
+            "id": "ja-H10",
+            "left": "tube",
+            "right": "sphere"
+          },
+          {
+            "id": "ja-H12",
+            "left": "tube",
+            "right": "sphere"
+          },
+          {
+            "id": "ja-H13",
+            "left": "ring",
+            "right": "tube"
+          },
+          {
+            "id": "ja-H14",
+            "left": "vase",
+            "right": "tube"
+          },
+          {
+            "id": "en-H08",
+            "left": "ring",
+            "right": "blade"
+          },
+          {
+            "id": "en-H13",
+            "left": "ring",
+            "right": "box"
+          },
+          {
+            "id": "en-H17",
+            "left": "sphere",
+            "right": "box"
+          },
+          {
+            "id": "en-H19",
+            "left": "blade",
+            "right": "vase"
+          },
+          {
+            "id": "ja-A08",
+            "left": "box",
+            "right": "sphere"
+          },
+          {
+            "id": "ja-A10",
+            "left": "tube",
+            "right": "ring"
+          },
+          {
+            "id": "en-A06",
+            "left": "sphere",
+            "right": "tube"
+          },
+          {
+            "id": "en-A07",
+            "left": "blade",
+            "right": "box"
+          },
+          {
+            "id": "en-A08",
+            "left": "ring",
+            "right": "tube"
+          },
+          {
+            "id": "en-A10",
+            "left": "box",
+            "right": "ring"
+          }
+        ]
+      },
+      "128-float32 vs 128-float16": {
+        "same": 87,
+        "total": 87,
+        "disagreements": []
+      }
+    }
+  },
+  "positive_label_coverage": {
+    "1024-float32": {
+      "retrieval_only": {
+        "condense": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 4,
+          "exact_correct": 4
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      },
+      "guarded": {
+        "condense": {
+          "n": 4,
+          "accepted": 2,
+          "exact_correct": 1
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 2,
+          "exact_correct": 2
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      }
+    },
+    "128-float32": {
+      "retrieval_only": {
+        "condense": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      },
+      "guarded": {
+        "condense": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      }
+    },
+    "128-float16": {
+      "retrieval_only": {
+        "condense": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      },
+      "guarded": {
+        "condense": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      }
+    },
+    "chargram": {
+      "retrieval_only": {
+        "condense": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      },
+      "guarded": {
+        "condense": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vortex": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "orbit": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mobius": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ring": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cube": {
+          "n": 3,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "cuboid": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cross": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "triangle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "square": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fireworks": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "dango": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "flower": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "butterfly": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "jellyfish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "tree": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "star": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "helix": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "hourglass": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "saturn": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sword": {
+          "n": 4,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "vase": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 0
+        },
+        "cone": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cylinder": {
+          "n": 4,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "capsule": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pyramid": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "diamond": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "octahedron": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "heart": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "egg": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "droplet": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "moon": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "cloud": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "mushroom": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "leaf": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "apple": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "pumpkin": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "shell": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "fish": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bird": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "turtle": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "spider": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lotus": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "rose": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "sun": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "snowflake": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "gear": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "bolt": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bottle": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "cup": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "teapot": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "umbrella": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "bell": {
+          "n": 1,
+          "accepted": 1,
+          "exact_correct": 1
+        },
+        "lantern": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "crown": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "knot": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "wave": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        },
+        "ribbon": {
+          "n": 1,
+          "accepted": 0,
+          "exact_correct": 0
+        }
+      }
+    }
+  },
+  "load_timing_ms": {
+    "1024-float32": 104.611208,
+    "128-float32": 44.34725,
+    "128-float16": 36.41816699999989,
+    "chargram": 17.455665999999926
+  },
+  "total_elapsed_ms": 734.716208,
+  "exception_failures": [],
+  "overlap_count": 0,
+  "scoring": "Independent frozen expected exact labels and explicit permitted_labels; candidate family graph not used. Ambiguous rows excluded from correctness denominators. No threshold/fixture tuning."
+}

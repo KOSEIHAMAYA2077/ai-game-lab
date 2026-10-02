@@ -1,0 +1,668 @@
+{
+  "createdAt": "2026-10-02T17:09:30.388Z",
+  "environment": {
+    "browser": "Chrome headless",
+    "realWebGL": true,
+    "nativeUI": false,
+    "actualIME": false
+  },
+  "tests": [
+    {
+      "name": "default authored Möbius and lazy tiny import",
+      "passed": true,
+      "evidence": {
+        "shape": "mobius",
+        "atlas": {
+          "dynamic": true,
+          "columns": 32,
+          "rows": 1,
+          "kinds": 9,
+          "pixelBytes": 524288
+        },
+        "tinyLoaded": false
+      }
+    },
+    {
+      "name": "default authored jellyfish preserves surface/rig",
+      "passed": true,
+      "evidence": {
+        "shape": "jellyfish",
+        "mode": "surface",
+        "rig": null
+      }
+    },
+    {
+      "name": "default authored bird preserves surface/rig",
+      "passed": true,
+      "evidence": {
+        "shape": "bird",
+        "mode": "surface",
+        "rig": {
+          "shape": "bird",
+          "bones": [
+            {
+              "name": "body",
+              "parent": -1,
+              "position": [
+                0,
+                -0.011216370388865471,
+                0
+              ]
+            },
+            {
+              "name": "neck",
+              "parent": 0,
+              "position": [
+                0,
+                0.378783643245697,
+                0
+              ]
+            },
+            {
+              "name": "left-shoulder",
+              "parent": 0,
+              "position": [
+                -0.19998319447040558,
+                0.18878363072872162,
+                -0.0025929000694304705
+              ]
+            },
+            {
+              "name": "left-wrist",
+              "parent": 2,
+              "position": [
+                -0.7228703498840332,
+                0.2466025948524475,
+                -0.009372441098093987
+              ]
+            },
+            {
+              "name": "right-shoulder",
+              "parent": 0,
+              "position": [
+                0.19998319447040558,
+                0.18878363072872162,
+                0.0025929000694304705
+              ]
+            },
+            {
+              "name": "right-wrist",
+              "parent": 4,
+              "position": [
+                0.7228703498840332,
+                0.2466025948524475,
+                0.009372441098093987
+              ]
+            },
+            {
+              "name": "tail",
+              "parent": 0,
+              "position": [
+                0,
+                -0.5012163519859314,
+                0
+              ]
+            }
+          ],
+          "matrixUpdates": 117,
+          "cacheSlots": 16,
+          "skinning": "linear-blend",
+          "inverseBind": 7
+        }
+      }
+    },
+    {
+      "name": "default authored fish preserves surface/rig",
+      "passed": true,
+      "evidence": {
+        "shape": "fish",
+        "mode": "surface",
+        "rig": {
+          "shape": "fish",
+          "bones": [
+            {
+              "name": "head",
+              "parent": -1,
+              "position": [
+                0.3499999940395355,
+                0,
+                0
+              ]
+            },
+            {
+              "name": "body",
+              "parent": 0,
+              "position": [
+                -0.19992122054100037,
+                0,
+                0.009308555163443089
+              ]
+            },
+            {
+              "name": "tail-base",
+              "parent": 1,
+              "position": [
+                -0.678311288356781,
+                0,
+                0.04858868196606636
+              ]
+            },
+            {
+              "name": "tail-tip",
+              "parent": 2,
+              "position": [
+                -1.1595070362091064,
+                0,
+                0.18442212045192719
+              ]
+            }
+          ],
+          "matrixUpdates": 118,
+          "cacheSlots": 16,
+          "skinning": "linear-blend",
+          "inverseBind": 4
+        }
+      }
+    },
+    {
+      "name": "default authored snake preserves surface/rig",
+      "passed": true,
+      "evidence": {
+        "shape": "snake",
+        "mode": "surface",
+        "rig": {
+          "shape": "snake",
+          "bones": [
+            {
+              "name": "head",
+              "parent": -1,
+              "position": [
+                0.5099999904632568,
+                1.100000023841858,
+                0
+              ]
+            },
+            {
+              "name": "spine-1",
+              "parent": 0,
+              "position": [
+                0.2642083168029785,
+                0.8145469427108765,
+                0.15368367731571198
+              ]
+            },
+            {
+              "name": "spine-2",
+              "parent": 1,
+              "position": [
+                -0.23534971475601196,
+                0.52972012758255,
+                0.15940918028354645
+              ]
+            },
+            {
+              "name": "spine-3",
+              "parent": 2,
+              "position": [
+                -0.5113957524299622,
+                0.24045443534851074,
+                0.015043923631310463
+              ]
+            },
+            {
+              "name": "spine-4",
+              "parent": 3,
+              "position": [
+                -0.3004763722419739,
+                -0.03719264268875122,
+                -0.1585589051246643
+              ]
+            },
+            {
+              "name": "spine-5",
+              "parent": 4,
+              "position": [
+                0.20664101839065552,
+                -0.29306697845458984,
+                -0.23210231959819794
+              ]
+            },
+            {
+              "name": "spine-6",
+              "parent": 5,
+              "position": [
+                0.547904372215271,
+                -0.564579427242279,
+                -0.14985941350460052
+              ]
+            },
+            {
+              "name": "spine-7",
+              "parent": 6,
+              "position": [
+                0.41158273816108704,
+                -0.8744151592254639,
+                0.008465885184705257
+              ]
+            },
+            {
+              "name": "spine-8",
+              "parent": 7,
+              "position": [
+                -0.06858588010072708,
+                -1.174191951751709,
+                0.056923724710941315
+              ]
+            }
+          ],
+          "matrixUpdates": 118,
+          "cacheSlots": 16,
+          "skinning": "linear-blend",
+          "inverseBind": 9
+        }
+      }
+    },
+    {
+      "name": "default authored mobius preserves surface/rig",
+      "passed": true,
+      "evidence": {
+        "shape": "mobius",
+        "mode": "surface",
+        "rig": null
+      }
+    },
+    {
+      "name": "tiny positive two parts; decoded weights separate from Worker",
+      "passed": true,
+      "evidence": {
+        "program": {
+          "version": 1,
+          "parts": [
+            {
+              "id": "0",
+              "primitive": "tube",
+              "height": 1.4,
+              "width": 0.4,
+              "depth": 0.4,
+              "bend": 0,
+              "twist": 0
+            },
+            {
+              "id": "1",
+              "primitive": "sphere",
+              "height": 1,
+              "width": 1,
+              "depth": 1,
+              "bend": 0,
+              "twist": 0
+            }
+          ],
+          "relation": {
+            "kind": "end",
+            "parent": "0",
+            "child": "1"
+          }
+        },
+        "classifier": {
+          "loaded": true,
+          "source": "tiny-student",
+          "assetBytes": 122601,
+          "frozenWeightBytes": 91136,
+          "decodedWeightBytes": 91136,
+          "loadMs": 16.30000001192093,
+          "classifierMs": 2.600000023841858,
+          "guardMs": 6.300000011920929,
+          "transformer": false,
+          "worker": false
+        },
+        "worker": {
+          "workerActive": false,
+          "workerCount": 0,
+          "started": 0,
+          "stopped": 0,
+          "lastInfo": null
+        }
+      }
+    },
+    {
+      "name": "negated holds geometry and still adds body",
+      "passed": true,
+      "evidence": {
+        "reason": "explicit-negation-or-absence",
+        "beforeCount": 1800,
+        "afterCount": 1813
+      }
+    },
+    {
+      "name": "unsupported-authored holds geometry and still adds body",
+      "passed": true,
+      "evidence": {
+        "reason": "primitive-uncertain",
+        "beforeCount": 1813,
+        "afterCount": 1818
+      }
+    },
+    {
+      "name": "unsupported-free-text holds geometry and still adds body",
+      "passed": true,
+      "evidence": {
+        "reason": "primitive-uncertain",
+        "beforeCount": 1818,
+        "afterCount": 1831
+      }
+    },
+    {
+      "name": "current batch color only",
+      "passed": true,
+      "evidence": {
+        "oldBatches": 7,
+        "newInk": "red"
+      }
+    },
+    {
+      "name": "4k code-unit budget is enforced before classification",
+      "passed": true,
+      "evidence": {
+        "unchangedBatches": 11
+      }
+    },
+    {
+      "name": "reload preserves full original batches/color/program; rules default",
+      "passed": true,
+      "evidence": {
+        "batches": 11,
+        "count": 1832
+      }
+    },
+    {
+      "name": "pause has zero frame/timer queue",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "started": true,
+          "disposed": false,
+          "visible": true,
+          "paused": true,
+          "mode": "paused",
+          "frames": 1,
+          "ticks": 0,
+          "redraws": 1,
+          "invalidations": 0,
+          "timerCallbacks": 1,
+          "rafCallbacks": 0,
+          "elapsedSeconds": 0,
+          "lastFrameAt": 76.5,
+          "timerPending": false,
+          "rafPending": false,
+          "pending": 0,
+          "nextDueAt": null,
+          "boostedUntil": 0,
+          "dirty": false
+        },
+        "after": {
+          "started": true,
+          "disposed": false,
+          "visible": true,
+          "paused": true,
+          "mode": "paused",
+          "frames": 1,
+          "ticks": 0,
+          "redraws": 1,
+          "invalidations": 0,
+          "timerCallbacks": 1,
+          "rafCallbacks": 0,
+          "elapsedSeconds": 0,
+          "lastFrameAt": 76.5,
+          "timerPending": false,
+          "rafPending": false,
+          "pending": 0,
+          "nextDueAt": null,
+          "boostedUntil": 0,
+          "dirty": false
+        }
+      }
+    },
+    {
+      "name": "synthetic native hidden lifecycle has zero queue",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "started": true,
+          "disposed": false,
+          "visible": false,
+          "paused": false,
+          "mode": "hidden",
+          "frames": 1,
+          "ticks": 0,
+          "redraws": 1,
+          "invalidations": 0,
+          "timerCallbacks": 1,
+          "rafCallbacks": 0,
+          "elapsedSeconds": 0,
+          "lastFrameAt": 76.5,
+          "timerPending": false,
+          "rafPending": false,
+          "pending": 0,
+          "nextDueAt": null,
+          "boostedUntil": 0,
+          "dirty": true
+        },
+        "after": {
+          "started": true,
+          "disposed": false,
+          "visible": false,
+          "paused": false,
+          "mode": "hidden",
+          "frames": 1,
+          "ticks": 0,
+          "redraws": 1,
+          "invalidations": 0,
+          "timerCallbacks": 1,
+          "rafCallbacks": 0,
+          "elapsedSeconds": 0,
+          "lastFrameAt": 76.5,
+          "timerPending": false,
+          "rafPending": false,
+          "pending": 0,
+          "nextDueAt": null,
+          "boostedUntil": 0,
+          "dirty": true
+        }
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "text": "表面 メビウスの輪",
+      "totalMs": 3937.699999988079,
+      "firstFrameMs": 2.300000011920929,
+      "interpretationMs": 0.800000011920929,
+      "constructionMs": 1.5,
+      "modelMs": 0,
+      "source": "rules",
+      "program": null,
+      "within30s": true,
+      "glyphs": 513,
+      "renderCpuP95Ms": 1.800000011920929
+    },
+    {
+      "text": "表面 クラゲ",
+      "totalMs": 3926.5,
+      "firstFrameMs": 1.600000023841858,
+      "interpretationMs": 0.40000003576278687,
+      "constructionMs": 1.199999988079071,
+      "modelMs": 0,
+      "source": "rules",
+      "program": null,
+      "within30s": true,
+      "glyphs": 833,
+      "renderCpuP95Ms": 2.899999976158142
+    },
+    {
+      "text": "表面 鳥",
+      "totalMs": 3917.099999964237,
+      "firstFrameMs": 3.699999988079071,
+      "interpretationMs": 0.3999999761581421,
+      "constructionMs": 3.300000011920929,
+      "modelMs": 0,
+      "source": "rules",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1025,
+      "renderCpuP95Ms": 3.900000035762787
+    },
+    {
+      "text": "表面 魚",
+      "totalMs": 3936.800000011921,
+      "firstFrameMs": 1.199999988079071,
+      "interpretationMs": 0.30000001192092896,
+      "constructionMs": 0.8999999761581421,
+      "modelMs": 0,
+      "source": "rules",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1217,
+      "renderCpuP95Ms": 4.700000047683716
+    },
+    {
+      "text": "表面 蛇",
+      "totalMs": 3954.899999976158,
+      "firstFrameMs": 1.399999976158142,
+      "interpretationMs": 0.3999999761581421,
+      "constructionMs": 1,
+      "modelMs": 0,
+      "source": "rules",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1409,
+      "renderCpuP95Ms": 5.100000023841858
+    },
+    {
+      "text": "表面 メビウス",
+      "totalMs": 3935.300000011921,
+      "firstFrameMs": 2.400000035762787,
+      "interpretationMs": 0.5,
+      "constructionMs": 1.9000000357627869,
+      "modelMs": 0,
+      "source": "rules",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1793,
+      "renderCpuP95Ms": 5
+    },
+    {
+      "text": "棒の先端に球体",
+      "totalMs": 3969.699999988079,
+      "firstFrameMs": 12.699999988079071,
+      "interpretationMs": 9.199999988079071,
+      "constructionMs": 3.5,
+      "modelMs": 8.900000035762787,
+      "classifierMs": 2.600000023841858,
+      "guardMs": 6.300000011920929,
+      "source": "tiny-student",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "within30s": true,
+      "glyphs": 1800,
+      "renderCpuP95Ms": 5.5
+    },
+    {
+      "text": "立方体は作らないでください",
+      "totalMs": 3916.599999964237,
+      "firstFrameMs": 1.2999999523162842,
+      "interpretationMs": 0.2999999523162842,
+      "constructionMs": 1,
+      "modelMs": 0,
+      "classifierMs": 0,
+      "guardMs": 0,
+      "source": "tiny-student",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1813,
+      "renderCpuP95Ms": 5.700000047683716
+    },
+    {
+      "text": "表面 クラゲ",
+      "totalMs": 3904.100000023842,
+      "firstFrameMs": 1.300000011920929,
+      "interpretationMs": 0.40000003576278687,
+      "constructionMs": 0.8999999761581421,
+      "modelMs": 0.20000004768371582,
+      "classifierMs": 0.20000004768371582,
+      "guardMs": 0,
+      "source": "tiny-student",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1818,
+      "renderCpuP95Ms": 5.800000011920929
+    },
+    {
+      "text": "夕方の空を眺めて深呼吸した",
+      "totalMs": 3944.199999988079,
+      "firstFrameMs": 2.199999988079071,
+      "interpretationMs": 0.3999999761581421,
+      "constructionMs": 1.800000011920929,
+      "modelMs": 0.19999998807907104,
+      "classifierMs": 0.19999998807907104,
+      "guardMs": 0,
+      "source": "tiny-student",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1831,
+      "renderCpuP95Ms": 5.799999952316284
+    },
+    {
+      "text": "赤",
+      "totalMs": 3918.300000011921,
+      "firstFrameMs": 1.5999999642372131,
+      "interpretationMs": 0.3999999761581421,
+      "constructionMs": 1.199999988079071,
+      "modelMs": 0.09999996423721313,
+      "classifierMs": 0,
+      "guardMs": 0.09999996423721313,
+      "source": "tiny-student",
+      "program": null,
+      "within30s": true,
+      "glyphs": 1832,
+      "renderCpuP95Ms": 5.699999988079071
+    }
+  ],
+  "requests": [],
+  "exceptions": [],
+  "freezeSha256": {
+    "experiments/widget-student-v1/student-model.json": "dfc8be816ca9a53206ec41d44118db52e5f4ac694bd263efab1a64d5ca05d7dd",
+    "prototypes/glyph-creature/src/widget-student.ts": "30bd84b0dfe2f2ff7a9046a58362829323aad064f0c56e27f66481d9a447d9c4",
+    "prototypes/glyph-creature/src/widget-student-guard-v2.ts": "a9d0b382b6bbb8a1c604df7ff454974e00e400c8116e696b0f7580393ea41d7f"
+  },
+  "passed": false,
+  "failure": {
+    "message": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#text-input') to be visible\u001b[22m\n\u001b[2m    63 × locator resolved to hidden <input id=\"text-input\" aria-label=\"加える文字\" autocomplete=\"off\" spellcheck=\"false\" placeholder=\"enter word [enter]\"/>\u001b[22m\n",
+    "stack": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#text-input') to be visible\u001b[22m\n\u001b[2m    63 × locator resolved to hidden <input id=\"text-input\" aria-label=\"加える文字\" autocomplete=\"off\" spellcheck=\"false\" placeholder=\"enter word [enter]\"/>\u001b[22m\n\n    at openTerminal (<repo>/experiments/widget-atlas-student-v3/run-ui-regression.mjs:21:157)\n    at async help (<repo>/experiments/widget-atlas-student-v3/run-ui-regression.mjs:22:29)\n    at async file://<repo>/experiments/widget-atlas-student-v3/run-ui-regression.mjs:91:5"
+  }
+}

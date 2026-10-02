@@ -1,0 +1,1781 @@
+{
+  "schema_version": 1,
+  "creator": "AI/manual",
+  "human_validation": false,
+  "notes": [
+    "Authored prospectively without access to candidate corpus, calibration, thresholds, implementation, or outputs.",
+    "Expected intent and permitted box-family alternatives are subjective AI author judgments.",
+    "Unsupported object holds require the requested object; generic nearest-shape substitution is scored incorrect."
+  ],
+  "allowed_labels": [
+    "condense",
+    "vortex",
+    "orbit",
+    "mobius",
+    "ring",
+    "cube",
+    "cuboid",
+    "cross",
+    "triangle",
+    "square",
+    "fireworks",
+    "dango",
+    "flower",
+    "butterfly",
+    "jellyfish",
+    "tree",
+    "star",
+    "helix",
+    "hourglass",
+    "saturn",
+    "sword",
+    "vase",
+    "cone",
+    "cylinder",
+    "capsule",
+    "pyramid",
+    "diamond",
+    "octahedron",
+    "heart",
+    "egg",
+    "droplet",
+    "moon",
+    "cloud",
+    "mushroom",
+    "leaf",
+    "apple",
+    "pear",
+    "pumpkin",
+    "shell",
+    "fish",
+    "bird",
+    "snake",
+    "turtle",
+    "spider",
+    "lotus",
+    "rose",
+    "sun",
+    "snowflake",
+    "gear",
+    "bolt",
+    "bottle",
+    "cup",
+    "teapot",
+    "umbrella",
+    "bell",
+    "lantern",
+    "crown",
+    "knot",
+    "wave",
+    "ribbon"
+  ],
+  "rows": [
+    {
+      "id": "ja-P01",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "もじ、まるいビー玉っぽい立体にして。角はぜんぶなしで。",
+      "expected_label": "condense",
+      "permitted_labels": [
+        "condense"
+      ],
+      "primitive": "sphere",
+      "reason": "A round marble is judged a sphere analogue; condense is the allowed compact-sphere label."
+    },
+    {
+      "id": "ja-P02",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "辺の長さが全部同じ、さいころの立体を一個作って。目は要らない。",
+      "expected_label": "cube",
+      "permitted_labels": [
+        "cube",
+        "cuboid"
+      ],
+      "primitive": "box",
+      "reason": "Equal edges and a die specify a cube, without requiring die markings."
+    },
+    {
+      "id": "ja-P03",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "靴箱みたいに横へ長い、六つの平らな面がある立体にして。",
+      "expected_label": "cuboid",
+      "permitted_labels": [
+        "cuboid",
+        "cube"
+      ],
+      "primitive": "box",
+      "reason": "A long shoe box specifies a rectangular solid rather than an equal-sided cube."
+    },
+    {
+      "id": "ja-P04",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "上下が丸くて横がまっすぐな円とうを、文字で一本立てて。",
+      "expected_label": "cylinder",
+      "permitted_labels": [
+        "cylinder"
+      ],
+      "primitive": "tube",
+      "reason": "The described circular ends and straight wall specify a cylinder; 円とう is an intentional colloquial spelling."
+    },
+    {
+      "id": "ja-P05",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "まんなかに穴が空いた太めの輪っかを一個、文字で作ろ。",
+      "expected_label": "ring",
+      "permitted_labels": [
+        "ring"
+      ],
+      "primitive": "ring",
+      "reason": "A thick circular loop with a hole specifies an ordinary ring, without a twist."
+    },
+    {
+      "id": "ja-P06",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "柄を握れる、長くて薄い刃のけんを一本つくって。",
+      "expected_label": "sword",
+      "permitted_labels": [
+        "sword"
+      ],
+      "primitive": "blade",
+      "reason": "A hilt and long thin blade specify a sword analogue."
+    },
+    {
+      "id": "ja-P07",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "底は閉じていて口は開いた、花を生けるはなびんを一個作って。",
+      "expected_label": "vase",
+      "permitted_labels": [
+        "vase"
+      ],
+      "primitive": "vase",
+      "reason": "The flower vessel has a closed base and open mouth; はなびん is intentional informal spelling."
+    },
+    {
+      "id": "ja-P08",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "円い底から一点へ細くなる、パーティー帽みたいな立体にして。",
+      "expected_label": "cone",
+      "permitted_labels": [
+        "cone"
+      ],
+      "primitive": null,
+      "reason": "A circular base tapering to one point specifies a cone."
+    },
+    {
+      "id": "ja-P09",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "両端が半球で真ん中だけ真っすぐな、薬のカプセル形を出して。",
+      "expected_label": "capsule",
+      "permitted_labels": [
+        "capsule"
+      ],
+      "primitive": null,
+      "reason": "Rounded ends joined by a straight middle specify a capsule."
+    },
+    {
+      "id": "ja-P10",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "四角い底の四隅から頂点ひとつへ集まる、ピラミッドを作って。",
+      "expected_label": "pyramid",
+      "permitted_labels": [
+        "pyramid"
+      ],
+      "primitive": null,
+      "reason": "A square base and single top point specify a pyramid."
+    },
+    {
+      "id": "ja-P11",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "三角の面が八枚ある正八面体を、空間に一個置いて。",
+      "expected_label": "octahedron",
+      "permitted_labels": [
+        "octahedron"
+      ],
+      "primitive": null,
+      "reason": "Eight triangular faces explicitly specify an octahedron; diamond is not automatically equivalent."
+    },
+    {
+      "id": "ja-P12",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "真ん中だけくびれた、砂が上下を行き来する時計の形を作って。",
+      "expected_label": "hourglass",
+      "permitted_labels": [
+        "hourglass"
+      ],
+      "primitive": null,
+      "reason": "A narrow waist between two sand chambers specifies an hourglass analogue."
+    },
+    {
+      "id": "ja-P13",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "片側が少しとがって反対側が丸い、たまごの立体にして。",
+      "expected_label": "egg",
+      "permitted_labels": [
+        "egg"
+      ],
+      "primitive": null,
+      "reason": "Asymmetric round ends specify an egg analogue rather than a sphere."
+    },
+    {
+      "id": "ja-P14",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "上がとがって下がぷっくりした、落ちる水のしずくを一粒作って。",
+      "expected_label": "droplet",
+      "permitted_labels": [
+        "droplet"
+      ],
+      "primitive": null,
+      "reason": "A pointed top and bulbous lower body specify a droplet analogue."
+    },
+    {
+      "id": "ja-P15",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "上が二つにふくらんで下が尖る、ハートの立体を一個ください。",
+      "expected_label": "heart",
+      "permitted_labels": [
+        "heart"
+      ],
+      "primitive": null,
+      "reason": "Two upper lobes and a lower point specify a stylized heart."
+    },
+    {
+      "id": "ja-P16",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "中心のまわりに花びらが並ぶ、普通のお花を文字で咲かせて。",
+      "expected_label": "flower",
+      "permitted_labels": [
+        "flower"
+      ],
+      "primitive": null,
+      "reason": "A generic flower is requested; no rose or lotus-specific structure is stated."
+    },
+    {
+      "id": "ja-P17",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "細い胴から左右に大きな羽が開く、ちょうちょを一匹作って。",
+      "expected_label": "butterfly",
+      "permitted_labels": [
+        "butterfly"
+      ],
+      "primitive": null,
+      "reason": "A small body and paired broad wings specify a butterfly analogue."
+    },
+    {
+      "id": "ja-P18",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "丸い傘の下から何本も触手が垂れる、くらげの形にして。",
+      "expected_label": "jellyfish",
+      "permitted_labels": [
+        "jellyfish"
+      ],
+      "primitive": null,
+      "reason": "Bell and hanging tentacles specify a jellyfish analogue."
+    },
+    {
+      "id": "ja-P19",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "一本の幹から枝が分かれて上に葉が茂る、木を作って。",
+      "expected_label": "tree",
+      "permitted_labels": [
+        "tree"
+      ],
+      "primitive": null,
+      "reason": "A trunk, branches, and crown of leaves specify a tree analogue."
+    },
+    {
+      "id": "ja-P20",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "太い軸に丸い傘が乗った、きのこを一つ出して。",
+      "expected_label": "mushroom",
+      "permitted_labels": [
+        "mushroom"
+      ],
+      "primitive": null,
+      "reason": "Stem plus cap specify a mushroom analogue."
+    },
+    {
+      "id": "ja-P21",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "中央の筋から左右へ薄く広がる、一枚の葉っぱを立体で見せて。",
+      "expected_label": "leaf",
+      "permitted_labels": [
+        "leaf"
+      ],
+      "primitive": null,
+      "reason": "One thin botanical leaf is explicitly requested."
+    },
+    {
+      "id": "ja-P22",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "てっぺんが少しくぼんで短い軸がある、りんごを一個作って。",
+      "expected_label": "apple",
+      "permitted_labels": [
+        "apple"
+      ],
+      "primitive": null,
+      "reason": "A round fruit with top indentation and stem is judged an apple analogue."
+    },
+    {
+      "id": "ja-P23",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "上が細くてお尻が大きい、洋なしの立体を出して。",
+      "expected_label": "pear",
+      "permitted_labels": [
+        "pear"
+      ],
+      "primitive": null,
+      "reason": "A narrow upper body and broad bottom specify a pear analogue."
+    },
+    {
+      "id": "ja-P24",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "縦の筋が入った丸い胴と短いへたで、かぼちゃを作って。",
+      "expected_label": "pumpkin",
+      "permitted_labels": [
+        "pumpkin"
+      ],
+      "primitive": null,
+      "reason": "Ribbed round body and stalk specify a pumpkin analogue."
+    },
+    {
+      "id": "ja-P25",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "外へ広がる筋がある、扇みたいな貝がらを一枚作って。",
+      "expected_label": "shell",
+      "permitted_labels": [
+        "shell"
+      ],
+      "primitive": null,
+      "reason": "A fan-shaped ridged shell is judged a shell analogue; no animal body is requested."
+    },
+    {
+      "id": "ja-P26",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "泳ぐ魚の体にして。前に頭、後ろに尾びれ、横に小さいひれ。",
+      "expected_label": "fish",
+      "permitted_labels": [
+        "fish"
+      ],
+      "primitive": null,
+      "reason": "Head, fins, and tail specify a fish analogue."
+    },
+    {
+      "id": "ja-P27",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "くちばしと二枚の翼がある、鳥を一羽作って。",
+      "expected_label": "bird",
+      "permitted_labels": [
+        "bird"
+      ],
+      "primitive": null,
+      "reason": "Beak and two wings specify a bird analogue, without a species claim."
+    },
+    {
+      "id": "ja-P28",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "脚のない長い胴がくねる、へびを一匹出して。",
+      "expected_label": "snake",
+      "permitted_labels": [
+        "snake"
+      ],
+      "primitive": null,
+      "reason": "A long legless winding body specifies a snake analogue."
+    },
+    {
+      "id": "ja-P29",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "丸い甲羅から頭と四本足が出る、かめを作って。",
+      "expected_label": "turtle",
+      "permitted_labels": [
+        "turtle"
+      ],
+      "primitive": null,
+      "reason": "Shell, head, and four limbs specify a turtle analogue."
+    },
+    {
+      "id": "ja-P30",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "小さい胴から八本の脚が伸びる、くもを一匹作って。",
+      "expected_label": "spider",
+      "permitted_labels": [
+        "spider"
+      ],
+      "primitive": null,
+      "reason": "Eight legs disambiguate the animal spider from a cloud."
+    },
+    {
+      "id": "ja-P31",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "水に浮かぶ蓮の花みたいに、幅広い花びらが重なる形を作って。",
+      "expected_label": "lotus",
+      "permitted_labels": [
+        "lotus"
+      ],
+      "primitive": null,
+      "reason": "The request explicitly selects a lotus analogue rather than a generic flower."
+    },
+    {
+      "id": "ja-P32",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "花びらが中心を包んで何層にも巻く、ばらを一輪作って。",
+      "expected_label": "rose",
+      "permitted_labels": [
+        "rose"
+      ],
+      "primitive": null,
+      "reason": "Layered petals winding around the center specify a rose analogue."
+    },
+    {
+      "id": "ja-P33",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "真ん中に穴があって外周に等間隔の歯がある、歯車を作って。",
+      "expected_label": "gear",
+      "permitted_labels": [
+        "gear"
+      ],
+      "primitive": null,
+      "reason": "A hole and evenly spaced teeth specify a gear; ring is not equivalent."
+    },
+    {
+      "id": "ja-P34",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "六角の頭からねじ山のある棒が伸びる、ボルトを一本作って。",
+      "expected_label": "bolt",
+      "permitted_labels": [
+        "bolt"
+      ],
+      "primitive": null,
+      "reason": "Hexagonal head and threaded shaft specify a bolt analogue."
+    },
+    {
+      "id": "ja-P35",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "細い首と小さな口がある、飲み物のびんを一本作って。",
+      "expected_label": "bottle",
+      "permitted_labels": [
+        "bottle"
+      ],
+      "primitive": null,
+      "reason": "A narrow neck and mouth specify a bottle rather than a broad open vase."
+    },
+    {
+      "id": "ja-P36",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "上が大きく開いて取っ手が横にある、マグカップを一個作って。",
+      "expected_label": "cup",
+      "permitted_labels": [
+        "cup"
+      ],
+      "primitive": null,
+      "reason": "A broad mouth and handle specify a cup analogue."
+    },
+    {
+      "id": "ja-P37",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "ふたと取っ手と注ぎ口がついた、急須を一個作って。",
+      "expected_label": "teapot",
+      "permitted_labels": [
+        "teapot"
+      ],
+      "primitive": null,
+      "reason": "Lid, handle, and spout specify a teapot analogue."
+    },
+    {
+      "id": "ja-P38",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "中央の棒から丸い屋根が開く、傘を一本ひらいて。",
+      "expected_label": "umbrella",
+      "permitted_labels": [
+        "umbrella"
+      ],
+      "primitive": null,
+      "reason": "A central shaft and opened canopy specify an umbrella analogue."
+    },
+    {
+      "id": "ja-P39",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "下が広く開いて中に舌がある、鐘の形を文字で作って。",
+      "expected_label": "bell",
+      "permitted_labels": [
+        "bell"
+      ],
+      "primitive": null,
+      "reason": "A flared hollow body with clapper specifies a bell analogue."
+    },
+    {
+      "id": "ja-P40",
+      "lang": "ja",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "上から吊れる取っ手があって胴が光を囲む、提灯の立体を作って。",
+      "expected_label": "lantern",
+      "permitted_labels": [
+        "lantern"
+      ],
+      "primitive": null,
+      "reason": "A suspended light enclosure is judged a lantern analogue."
+    },
+    {
+      "id": "en-P01",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Please gather the letters into one smooth ball, like a glass marble.",
+      "expected_label": "condense",
+      "permitted_labels": [
+        "condense"
+      ],
+      "primitive": "sphere",
+      "reason": "A smooth ball is judged a sphere analogue; condense is the allowed compact-sphere label."
+    },
+    {
+      "id": "en-P02",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a solid like a die: six square faces, all its edges equal.",
+      "expected_label": "cube",
+      "permitted_labels": [
+        "cube",
+        "cuboid"
+      ],
+      "primitive": "box",
+      "reason": "Equal edges and square faces specify a cube."
+    },
+    {
+      "id": "en-P03",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Build one long rectangular shipping carton in space, with flat sides.",
+      "expected_label": "cuboid",
+      "permitted_labels": [
+        "cuboid",
+        "cube"
+      ],
+      "primitive": "box",
+      "reason": "A long rectangular carton specifies a cuboid."
+    },
+    {
+      "id": "en-P04",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Turn the words into a straight round can with parallel circular ends.",
+      "expected_label": "cylinder",
+      "permitted_labels": [
+        "cylinder"
+      ],
+      "primitive": "tube",
+      "reason": "A straight can with circular ends specifies a cylinder."
+    },
+    {
+      "id": "en-P05",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Give me one thick doughnut-shaped loop with an open hole in the middle.",
+      "expected_label": "ring",
+      "permitted_labels": [
+        "ring"
+      ],
+      "primitive": "ring",
+      "reason": "A thick closed loop specifies an ordinary ring; no twist is requested."
+    },
+    {
+      "id": "en-P06",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make one weapon with a long narrow blade, a guard, and a handle.",
+      "expected_label": "sword",
+      "permitted_labels": [
+        "sword"
+      ],
+      "primitive": "blade",
+      "reason": "Blade, guard, and handle specify a sword analogue."
+    },
+    {
+      "id": "en-P07",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Shape the letters as an open flower vessel with a swollen belly and narrow neck.",
+      "expected_label": "vase",
+      "permitted_labels": [
+        "vase"
+      ],
+      "primitive": "vase",
+      "reason": "An open vessel for flowers specifies a vase analogue."
+    },
+    {
+      "id": "en-P08",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Create a band with one half-turn, then join its two ends into a loop.",
+      "expected_label": "mobius",
+      "permitted_labels": [
+        "mobius"
+      ],
+      "primitive": null,
+      "reason": "A half-twisted joined band specifies a Möbius strip, not an ordinary ring."
+    },
+    {
+      "id": "en-P09",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Place one plus-sign-shaped solid here, with four equal arms.",
+      "expected_label": "cross",
+      "permitted_labels": [
+        "cross"
+      ],
+      "primitive": null,
+      "reason": "Four equal orthogonal arms specify a cross analogue; no six-way primitive equivalence is assumed."
+    },
+    {
+      "id": "en-P10",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make one thin plate whose outline has exactly three straight sides.",
+      "expected_label": "triangle",
+      "permitted_labels": [
+        "triangle"
+      ],
+      "primitive": null,
+      "reason": "A three-sided plate specifies the authored triangle shape."
+    },
+    {
+      "id": "en-P11",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a thin flat tile with four equal sides and four right angles.",
+      "expected_label": "square",
+      "permitted_labels": [
+        "square"
+      ],
+      "primitive": null,
+      "reason": "A thin equal-sided right-angle tile specifies the authored square rather than a 3D cube."
+    },
+    {
+      "id": "en-P12",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Please form a skewer holding three round dumplings in a row.",
+      "expected_label": "dango",
+      "permitted_labels": [
+        "dango"
+      ],
+      "primitive": null,
+      "reason": "The explicit skewer of dumplings is judged the dango shape; it is not a single sphere."
+    },
+    {
+      "id": "en-P13",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Create one five-pointed star ornament out of these letters.",
+      "expected_label": "star",
+      "permitted_labels": [
+        "star"
+      ],
+      "primitive": null,
+      "reason": "Five sharp points specify a stylized star; sun is not treated as equivalent."
+    },
+    {
+      "id": "en-P14",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a spring that winds around a straight vertical axis several times.",
+      "expected_label": "helix",
+      "permitted_labels": [
+        "helix"
+      ],
+      "primitive": null,
+      "reason": "Repeated winding around an axis specifies a helix."
+    },
+    {
+      "id": "en-P15",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Build a round planet encircled by one broad flat planetary belt.",
+      "expected_label": "saturn",
+      "permitted_labels": [
+        "saturn"
+      ],
+      "primitive": null,
+      "reason": "A sphere with a distinct planetary ring is judged Saturn, not a bare sphere or ring."
+    },
+    {
+      "id": "en-P16",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make an elongated jewel shape that tapers to a point at both ends.",
+      "expected_label": "diamond",
+      "permitted_labels": [
+        "diamond"
+      ],
+      "primitive": null,
+      "reason": "A pointed jewel analogue is judged diamond; octahedron is not automatically equivalent."
+    },
+    {
+      "id": "en-P17",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make one thin crescent like the moon a few nights after a new moon.",
+      "expected_label": "moon",
+      "permitted_labels": [
+        "moon"
+      ],
+      "primitive": null,
+      "reason": "A crescent explicitly specifies the moon analogue."
+    },
+    {
+      "id": "en-P18",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Form one puffy cloud from several soft lobes joined together.",
+      "expected_label": "cloud",
+      "permitted_labels": [
+        "cloud"
+      ],
+      "primitive": null,
+      "reason": "Joined puffy lobes specify a cloud analogue rather than a smooth sphere."
+    },
+    {
+      "id": "en-P19",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Build a circular sun emblem with rays sticking out all around it.",
+      "expected_label": "sun",
+      "permitted_labels": [
+        "sun"
+      ],
+      "primitive": null,
+      "reason": "A sun emblem with many surrounding rays is explicitly requested."
+    },
+    {
+      "id": "en-P20",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a delicate six-armed ice crystal with tiny branching arms.",
+      "expected_label": "snowflake",
+      "permitted_labels": [
+        "snowflake"
+      ],
+      "primitive": null,
+      "reason": "Six-armed branching crystal specifies a snowflake analogue."
+    },
+    {
+      "id": "en-P21",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Form a royal headpiece: an open circular band topped with tall points.",
+      "expected_label": "crown",
+      "permitted_labels": [
+        "crown"
+      ],
+      "primitive": null,
+      "reason": "A pointed royal headpiece specifies a crown, not an undecorated ring."
+    },
+    {
+      "id": "en-P22",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Tie one continuous cord into a trefoil-like knot and close the ends.",
+      "expected_label": "knot",
+      "permitted_labels": [
+        "knot"
+      ],
+      "primitive": null,
+      "reason": "A closed three-lobed knotted cord is judged the authored knot shape; ring is not equivalent."
+    },
+    {
+      "id": "en-P23",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Raise one curling ocean wave, with a crest leaning forward over its base.",
+      "expected_label": "wave",
+      "permitted_labels": [
+        "wave"
+      ],
+      "primitive": null,
+      "reason": "One curling ocean wave is explicitly requested; its mapping to authored wave is subjective."
+    },
+    {
+      "id": "en-P24",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make one long flat strip that curls through the air without joining its ends.",
+      "expected_label": "ribbon",
+      "permitted_labels": [
+        "ribbon"
+      ],
+      "primitive": null,
+      "reason": "An open curled strip is judged ribbon, without the closed half-twist of Möbius."
+    },
+    {
+      "id": "en-P25",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Arrange the letters as intersecting orbital tracks around one central atom.",
+      "expected_label": "orbit",
+      "permitted_labels": [
+        "orbit"
+      ],
+      "primitive": null,
+      "reason": "An atomic-orbit depiction selects orbit rather than a bare ring or sphere; the object is an abstract analogue."
+    },
+    {
+      "id": "en-P26",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a single swirling funnel that narrows toward its lowest point.",
+      "expected_label": "vortex",
+      "permitted_labels": [
+        "vortex"
+      ],
+      "primitive": null,
+      "reason": "A swirling funnel is judged vortex; this intent is an abstract shape analogue."
+    },
+    {
+      "id": "en-P27",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Create one firework bloom: bright trails radiating outward from a center.",
+      "expected_label": "fireworks",
+      "permitted_labels": [
+        "fireworks"
+      ],
+      "primitive": null,
+      "reason": "A single radial firework bloom explicitly selects fireworks, an event-shaped analogue."
+    },
+    {
+      "id": "en-P28",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Create a closed smooth surface with every point the same distance from its center.",
+      "expected_label": "condense",
+      "permitted_labels": [
+        "condense"
+      ],
+      "primitive": "sphere",
+      "reason": "The geometric periphrasis specifies a sphere."
+    },
+    {
+      "id": "en-P29",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Can you make a solid rectangular package that is wider than it is tall?",
+      "expected_label": "cuboid",
+      "permitted_labels": [
+        "cuboid",
+        "cube"
+      ],
+      "primitive": "box",
+      "reason": "Unequal rectangular dimensions specify a cuboid."
+    },
+    {
+      "id": "en-P30",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Gimme a straight tube-shaped body, round across and the same width all the way.",
+      "expected_label": "cylinder",
+      "permitted_labels": [
+        "cylinder"
+      ],
+      "primitive": "tube",
+      "reason": "Colloquial phrasing describes a uniform cylinder analogue."
+    },
+    {
+      "id": "en-P31",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Could ya make a chunky donut loop with nothing across its center?",
+      "expected_label": "ring",
+      "permitted_labels": [
+        "ring"
+      ],
+      "primitive": "ring",
+      "reason": "Colloquial donut phrasing specifies an ordinary ring."
+    },
+    {
+      "id": "en-P32",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a sowrd with a pointed blade and a small grip at one end.",
+      "expected_label": "sword",
+      "permitted_labels": [
+        "sword"
+      ],
+      "primitive": "blade",
+      "reason": "Sowrd is an intentional adjacent-letter typo; blade and grip make intent explicit."
+    },
+    {
+      "id": "en-P33",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Please make a vaz for flowers: hollow, bottom closed, mouth open at the top.",
+      "expected_label": "vase",
+      "permitted_labels": [
+        "vase"
+      ],
+      "primitive": "vase",
+      "reason": "Vaz is an intentional misspelling; the flower-vessel description specifies a vase."
+    },
+    {
+      "id": "en-P34",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make one perfectly round spehre with no corners or flat faces.",
+      "expected_label": "condense",
+      "permitted_labels": [
+        "condense"
+      ],
+      "primitive": "sphere",
+      "reason": "Spehre is an intentional letter transposition; roundness and no flat faces specify sphere."
+    },
+    {
+      "id": "en-P35",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Set up a little solid block with equal height, width, and depth.",
+      "expected_label": "cube",
+      "permitted_labels": [
+        "cube",
+        "cuboid"
+      ],
+      "primitive": "box",
+      "reason": "Equal solid dimensions specify cube; box family permits the authored cuboid alternative."
+    },
+    {
+      "id": "en-P36",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Build a straight hollow drainpipe standing upright, no bends or taper.",
+      "expected_label": "cylinder",
+      "permitted_labels": [
+        "cylinder"
+      ],
+      "primitive": "tube",
+      "reason": "The straight uniform circular pipe is judged cylinder; hollow rendering is not verified."
+    },
+    {
+      "id": "en-P37",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Put up a smooth circular loop, thick like a swim float, with its center empty.",
+      "expected_label": "ring",
+      "permitted_labels": [
+        "ring"
+      ],
+      "primitive": "ring",
+      "reason": "A swim-float loop specifies ordinary ring geometry."
+    },
+    {
+      "id": "en-P38",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Make a pot for a bouquet, bulging in the middle and open above a short neck.",
+      "expected_label": "vase",
+      "permitted_labels": [
+        "vase"
+      ],
+      "primitive": "vase",
+      "reason": "The bouquet vessel is judged vase; a cup or bottle is not permitted."
+    },
+    {
+      "id": "en-P39",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Shape a long cutting blade attached to a hilt, pointing upward.",
+      "expected_label": "sword",
+      "permitted_labels": [
+        "sword"
+      ],
+      "primitive": "blade",
+      "reason": "A cutting blade plus hilt specifies a sword analogue."
+    },
+    {
+      "id": "en-P40",
+      "lang": "en",
+      "group": "positive",
+      "subtype": "single_shape_request",
+      "text": "Create a rectangular prism whose length is twice its width.",
+      "expected_label": "cuboid",
+      "permitted_labels": [
+        "cuboid",
+        "cube"
+      ],
+      "primitive": "box",
+      "reason": "An explicitly unequal rectangular prism specifies cuboid."
+    },
+    {
+      "id": "ja-H01",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "球にはしないで。今の形のまま止めて。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Explicit prohibition and stop instruction demand no new shape."
+    },
+    {
+      "id": "ja-H02",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "さっき剣って言ったけど取り消す。何も作らなくていい。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The shape request is explicitly cancelled."
+    },
+    {
+      "id": "ja-H03",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "輪っかを生成する操作は禁止です。表示は変えないで。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The sentence prohibits ring generation and any display change."
+    },
+    {
+      "id": "ja-H04",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "花瓶の案はいったん無し。送信をやめます。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The vase idea and submission are withdrawn."
+    },
+    {
+      "id": "ja-H05",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "箱を作れ、という前の指示は撤回。待っていて。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The box instruction is explicitly revoked."
+    },
+    {
+      "id": "ja-H06",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "「球を作って」という例文の文法を説明して。実行は不要です。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A quoted example is for grammar explanation, not generation."
+    },
+    {
+      "id": "ja-H07",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "読書メモに剣と花瓶という単語が出た、と記録したいだけ。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The speaker explicitly limits intent to recording words."
+    },
+    {
+      "id": "ja-H08",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "この文章の題名は「輪の中の蝶」です。題名を読んでいるだけです。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The phrase is a title being read, not a shape request."
+    },
+    {
+      "id": "ja-H09",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "もし「立方体」と書かれていたら色を聞く、という手順を説明中です。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A conditional procedural example merely mentions cube."
+    },
+    {
+      "id": "ja-H10",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "「雪の結晶」という語を英訳してください。形を表示しないで。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Translation is requested and display is prohibited."
+    },
+    {
+      "id": "ja-H11",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "文字で自転車を一台作って。車輪二つとペダルも付けて。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Bicycle is not one of the supplied 60 authored labels; no label substitution is permitted."
+    },
+    {
+      "id": "ja-H12",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "高層ビルを一棟作って。窓がたくさん並ぶ建物が欲しい。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Skyscraper is unsupported; cuboid resemblance is insufficient for this exact-object request."
+    },
+    {
+      "id": "ja-H13",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "蒸気機関車を作って。煙突と車輪が見える列車にして。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Locomotive is unsupported rather than a generic cylinder."
+    },
+    {
+      "id": "ja-H14",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "旅客飛行機を一機作って。翼と胴と尾翼があるもの。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Airplane is unsupported; bird is not an acceptable substitute."
+    },
+    {
+      "id": "ja-H15",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "耳が立った犬を一匹作って。しっぽも付けて。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Dog is unsupported by the supplied authored labels."
+    },
+    {
+      "id": "ja-H16",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "一つだけ作って。完全な球か完全な立方体のどちらかだけど、どちらかは決めていない。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The speaker explicitly leaves the mutually exclusive single-shape choice unresolved."
+    },
+    {
+      "id": "ja-H17",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "穴のない球と、中心に穴のある輪を同時に、同じ一個の形にして。どちらも絶対に変えないで。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Incompatible requirements demand one exact shape; no single allowed label meets both."
+    },
+    {
+      "id": "ja-H18",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "立方体を作って、いや絶対に立方体にはしないで。別の形も指定しません。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The positive request is directly contradicted and no replacement is selected."
+    },
+    {
+      "id": "ja-H19",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "花瓶と剣のどっちか一つを出して。ただし勝手に選ぶのは禁止。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The choice is unresolved and automatic selection is explicitly forbidden."
+    },
+    {
+      "id": "ja-H20",
+      "lang": "ja",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "全部の辺が等しい箱にして、しかも横の辺だけ他の辺の三倍にして。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Equal edges and one triple-length edge conflict; neither exact cube nor cuboid satisfies all constraints."
+    },
+    {
+      "id": "en-H01",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "Do not turn this into a sphere. Leave the scene exactly as it is.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Explicit negation and leave-unchanged intent demand hold."
+    },
+    {
+      "id": "en-H02",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "I said sword a moment ago, but cancel that request and make nothing.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The previous sword request is cancelled."
+    },
+    {
+      "id": "en-H03",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "No ring, please. Stop generating shapes for now.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Generation is explicitly stopped."
+    },
+    {
+      "id": "en-H04",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "Forget the flower-vase idea; I am withdrawing that instruction.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The vase instruction is withdrawn."
+    },
+    {
+      "id": "en-H05",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "cancel_or_prohibit",
+      "text": "The command to build a box is revoked. Wait for my next message.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A previous box command is revoked."
+    },
+    {
+      "id": "en-H06",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "Explain the grammar of the sentence \"make a ball\" without carrying it out.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The quoted imperative is linguistic material, not an active request."
+    },
+    {
+      "id": "en-H07",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "My notebook contains the words blade and bottle; I am only listing vocabulary.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The speaker explicitly states vocabulary-list intent."
+    },
+    {
+      "id": "en-H08",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "The poem is titled \"The Ring and the Moon\"; this is only its title.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The words are a title, without generation intent."
+    },
+    {
+      "id": "en-H09",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "In our example, a user might type cube. I am describing a possible future input.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A hypothetical future input is mentioned, not issued."
+    },
+    {
+      "id": "en-H10",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "mention_or_quote",
+      "text": "Translate the phrase \"a snow crystal\" into Japanese; do not render it.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Translation is the task and rendering is prohibited."
+    },
+    {
+      "id": "en-H11",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "Create a bicycle with two wheels, pedals, and a seat.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Bicycle is not an allowed authored label; ring is not an acceptable substitute."
+    },
+    {
+      "id": "en-H12",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "Build a tall skyscraper with many rows of little windows.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Skyscraper is unsupported; box resemblance does not satisfy the requested object."
+    },
+    {
+      "id": "en-H13",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "Make a steam locomotive with a chimney and wheels.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Locomotive is unsupported rather than a cylinder."
+    },
+    {
+      "id": "en-H14",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "Form one passenger airplane with wings and a tail fin.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Airplane is unsupported; bird is not an acceptable substitution."
+    },
+    {
+      "id": "en-H15",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "unsupported_object",
+      "text": "Please make a dog with upright ears and a wagging tail.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Dog is unsupported by the allowed authored labels."
+    },
+    {
+      "id": "en-H16",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "Make exactly one shape, either a perfect ball or a perfect cube; I have not chosen which.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The single-shape choice is explicitly unresolved."
+    },
+    {
+      "id": "en-H17",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "Make one object that is both a hole-free sphere and a ring with an open central hole. Keep both requirements exact.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The exact geometric requirements are incompatible."
+    },
+    {
+      "id": "en-H18",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "Create a cube, but absolutely do not create a cube, and I give no replacement.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Direct contradictory intent provides no valid replacement."
+    },
+    {
+      "id": "en-H19",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "Show either a vase or a sword, but you are not allowed to choose between them for me.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The choice remains unresolved and automatic selection is prohibited."
+    },
+    {
+      "id": "en-H20",
+      "lang": "en",
+      "group": "hold",
+      "subtype": "conflicting_intent",
+      "text": "Make a box whose every edge is equal, while its horizontal edge must be three times the others.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Equal edges conflict with one triple-length edge; no exact permitted label satisfies both."
+    },
+    {
+      "id": "ja-A01",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "夜の雲は、眠った獣の背中みたいだった。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A poetic comparison describes a cloud but issues no clear 3D request."
+    },
+    {
+      "id": "ja-A02",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "言葉が輪になって、思い出のそばを回る。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A metaphorical ring image does not specify generation intent."
+    },
+    {
+      "id": "ja-A03",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "心の箱には、まだ名前のない音が入っている。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A metaphorical box is descriptive, without a rendering instruction."
+    },
+    {
+      "id": "ja-A04",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "雨のしずくが花びらの先で少しだけ光った。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A scene description mentions multiple objects without selecting a shape."
+    },
+    {
+      "id": "ja-A05",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "剣のように鋭い返事が、静かな部屋を切った。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Sword is used as a simile for a reply."
+    },
+    {
+      "id": "ja-A06",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "丸い気分と四角い気分が、今日は半分ずつ。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Abstract emotional geometry provides no clear requested object."
+    },
+    {
+      "id": "ja-A07",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "海の記憶は、貝がらの奥でほどけている。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A shell appears in poetic description, not a command."
+    },
+    {
+      "id": "ja-A08",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "冬の朝、窓の向こうには白い結晶の世界。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A descriptive winter image does not select a single authored shape."
+    },
+    {
+      "id": "ja-A09",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "花をしまう場所があると、机が少し静かになる。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "An implied flower vessel is indirect and lacks a clear generation request."
+    },
+    {
+      "id": "ja-A10",
+      "lang": "ja",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "ほどけない結び目みたいに、話が続いていく。",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Knot is a conversational metaphor, without a shape instruction."
+    },
+    {
+      "id": "en-A01",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "The clouds looked like sleeping animals above the empty street.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A poetic scene description provides no clear generation instruction."
+    },
+    {
+      "id": "en-A02",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "Words made a ring around a memory I could no longer name.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A metaphorical ring is descriptive rather than an explicit request."
+    },
+    {
+      "id": "en-A03",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "There is a box in my mind full of sounds without names.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A mental box metaphor does not establish 3D intent."
+    },
+    {
+      "id": "en-A04",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "A drop of rain shone on the tip of a flower petal.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Multiple scene objects are described without selecting one shape."
+    },
+    {
+      "id": "en-A05",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "Her reply was a blade that cut the silence in half.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Blade is a simile for a reply, without a generation command."
+    },
+    {
+      "id": "en-A06",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "Today feels half rounded and half square at the edges.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Abstract mood geometry does not specify one requested object."
+    },
+    {
+      "id": "en-A07",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "The sea kept its old story inside a broken shell.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "A poetic shell image provides no clear shape instruction."
+    },
+    {
+      "id": "en-A08",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "Morning frost turned the window into a world of tiny crystals.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "The description does not clearly ask for one snowflake or any object."
+    },
+    {
+      "id": "en-A09",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "Somewhere to keep flowers might make this desk feel calmer.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "An indirect suggestion of a vessel is not a clear single-shape request."
+    },
+    {
+      "id": "en-A10",
+      "lang": "en",
+      "group": "ambiguous",
+      "subtype": "description_without_clear_request",
+      "text": "The conversation continued like a knot nobody could untie.",
+      "expected_label": null,
+      "permitted_labels": [],
+      "primitive": null,
+      "reason": "Knot is a metaphor rather than an explicit object request."
+    }
+  ]
+}

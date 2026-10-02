@@ -1,0 +1,6015 @@
+{
+  "source": "calibration-predictions-v2.json",
+  "diagnosticsOnly": true,
+  "frozenThresholdsUnchanged": true,
+  "variants": {
+    "1024-float32": {
+      "shape": {
+        "rawTop1": {
+          "rows": 98,
+          "positiveRows": 60,
+          "negativeRows": 38,
+          "positiveAccepted": 60,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 55,
+          "exactAccuracy": 0.9166666666666666,
+          "acceptedExactPrecision": 0.9166666666666666,
+          "wrongPositive": 5,
+          "nearFamilyCorrect": 58,
+          "nearFamilyAccuracy": 0.9666666666666667,
+          "negativeFalsePositive": 37,
+          "negativeFalsePositiveRate": 0.9736842105263158,
+          "byCategory": {
+            "negation": {
+              "rows": 12,
+              "accepted": 12,
+              "exactCorrect": 0
+            },
+            "out_of_scope": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            },
+            "paraphrase": {
+              "rows": 60,
+              "accepted": 60,
+              "exactCorrect": 55
+            },
+            "unknown": {
+              "rows": 18,
+              "accepted": 18,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 46,
+          "rawCorrect": 43
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 47,
+            "positiveCoverage": 0.7833333333333333,
+            "exactCorrect": 47,
+            "exactAccuracy": 0.7833333333333333,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 47,
+            "nearFamilyAccuracy": 0.7833333333333333,
+            "negativeFalsePositive": 14,
+            "negativeFalsePositiveRate": 0.3684210526315789,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 11,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 3,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 47,
+                "exactCorrect": 47
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 42,
+            "positiveCoverage": 0.7,
+            "exactCorrect": 42,
+            "exactAccuracy": 0.7,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 42,
+            "nearFamilyAccuracy": 0.7,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.02631578947368421,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 0,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 42,
+                "exactCorrect": 42
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 0.9166666666666666,
+              "wrongPositive": 5,
+              "negativeFalsePositive": 37,
+              "exactCorrect": 55,
+              "totalAccepted": 97
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.95,
+              "acceptedExactPrecision": 0.9298245614035088,
+              "wrongPositive": 4,
+              "negativeFalsePositive": 20,
+              "exactCorrect": 53,
+              "totalAccepted": 77
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.8166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 17,
+              "exactCorrect": 49,
+              "totalAccepted": 66
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 40,
+              "totalAccepted": 54
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.9666666666666667,
+              "acceptedExactPrecision": 0.9137931034482759,
+              "wrongPositive": 5,
+              "negativeFalsePositive": 17,
+              "exactCorrect": 53,
+              "totalAccepted": 75
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.9333333333333333,
+              "acceptedExactPrecision": 0.9285714285714286,
+              "wrongPositive": 4,
+              "negativeFalsePositive": 17,
+              "exactCorrect": 52,
+              "totalAccepted": 73
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.8,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 48,
+              "totalAccepted": 64
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 40,
+              "totalAccepted": 54
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.9,
+              "acceptedExactPrecision": 0.9444444444444444,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 51,
+              "totalAccepted": 70
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.8833333333333333,
+              "acceptedExactPrecision": 0.9433962264150944,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 50,
+              "totalAccepted": 69
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.7666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 46,
+              "totalAccepted": 61
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.65,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 39,
+              "totalAccepted": 52
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.7666666666666667,
+              "acceptedExactPrecision": 0.9565217391304348,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 44,
+              "totalAccepted": 62
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 0.9555555555555556,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 43,
+              "totalAccepted": 61
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.6833333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 41,
+              "totalAccepted": 56
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 35,
+              "totalAccepted": 48
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 0.9705882352941176,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 33,
+              "totalAccepted": 48
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.55,
+              "acceptedExactPrecision": 0.9696969696969697,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 32,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.5166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 31,
+              "totalAccepted": 44
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 11,
+              "exactCorrect": 29,
+              "totalAccepted": 40
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.23333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 12,
+              "exactCorrect": 14,
+              "totalAccepted": 26
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.23333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 12,
+              "exactCorrect": 14,
+              "totalAccepted": 26
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.23333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 12,
+              "exactCorrect": 14,
+              "totalAccepted": 26
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.23333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 10,
+              "exactCorrect": 14,
+              "totalAccepted": 24
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 8,
+              "exactCorrect": 4,
+              "totalAccepted": 12
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 8,
+              "exactCorrect": 4,
+              "totalAccepted": 12
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 8,
+              "exactCorrect": 4,
+              "totalAccepted": 12
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 8,
+              "exactCorrect": 4,
+              "totalAccepted": 12
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.9,
+              "acceptedExactPrecision": 0.9074074074074074,
+              "wrongPositive": 5,
+              "negativeFalsePositive": 21,
+              "exactCorrect": 49,
+              "totalAccepted": 75
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.9215686274509803,
+              "wrongPositive": 4,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 47,
+              "totalAccepted": 55
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 43,
+              "totalAccepted": 45
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 35,
+              "totalAccepted": 36
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8666666666666667,
+              "acceptedExactPrecision": 0.9038461538461539,
+              "wrongPositive": 5,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 47,
+              "totalAccepted": 53
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 0.92,
+              "wrongPositive": 4,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 46,
+              "totalAccepted": 51
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.7,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 42,
+              "totalAccepted": 43
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 35,
+              "totalAccepted": 36
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.8,
+              "acceptedExactPrecision": 0.9375,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 45,
+              "totalAccepted": 49
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.7833333333333333,
+              "acceptedExactPrecision": 0.9361702127659575,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 44,
+              "totalAccepted": 48
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 40,
+              "totalAccepted": 41
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 34,
+              "totalAccepted": 35
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 0.95,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 38,
+              "totalAccepted": 41
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.65,
+              "acceptedExactPrecision": 0.9487179487179487,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 37,
+              "totalAccepted": 40
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 35,
+              "totalAccepted": 36
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 30,
+              "totalAccepted": 31
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 0.9655172413793104,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 28,
+              "totalAccepted": 29
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.4666666666666667,
+              "acceptedExactPrecision": 0.9642857142857143,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 27,
+              "totalAccepted": 28
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.43333333333333335,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 26,
+              "totalAccepted": 26
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.4166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 25,
+              "totalAccepted": 25
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.21666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 13,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.21666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 13,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.21666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 13,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.21666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 13,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.06666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      },
+      "primitive": {
+        "rawTop1": {
+          "rows": 14,
+          "positiveRows": 6,
+          "negativeRows": 8,
+          "positiveAccepted": 6,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 6,
+          "exactAccuracy": 1.0,
+          "acceptedExactPrecision": 1.0,
+          "wrongPositive": 0,
+          "nearFamilyCorrect": 6,
+          "nearFamilyAccuracy": 1.0,
+          "negativeFalsePositive": 7,
+          "negativeFalsePositiveRate": 0.875,
+          "byCategory": {
+            "paraphrase": {
+              "rows": 6,
+              "accepted": 6,
+              "exactCorrect": 6
+            },
+            "unknown": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 6,
+          "rawCorrect": 6
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 6,
+            "positiveCoverage": 1.0,
+            "exactCorrect": 6,
+            "exactAccuracy": 1.0,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 6,
+            "nearFamilyAccuracy": 1.0,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.125,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 6,
+                "exactCorrect": 6
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 5,
+            "positiveCoverage": 0.8333333333333334,
+            "exactCorrect": 5,
+            "exactAccuracy": 0.8333333333333334,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 5,
+            "nearFamilyAccuracy": 0.8333333333333334,
+            "negativeFalsePositive": 0,
+            "negativeFalsePositiveRate": 0.0,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 5,
+                "exactCorrect": 5
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 6,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 3,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 3,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 3,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 3,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 1,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 5,
+              "totalAccepted": 10
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      }
+    },
+    "128-float32": {
+      "shape": {
+        "rawTop1": {
+          "rows": 98,
+          "positiveRows": 60,
+          "negativeRows": 38,
+          "positiveAccepted": 60,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 52,
+          "exactAccuracy": 0.8666666666666667,
+          "acceptedExactPrecision": 0.8666666666666667,
+          "wrongPositive": 8,
+          "nearFamilyCorrect": 54,
+          "nearFamilyAccuracy": 0.9,
+          "negativeFalsePositive": 37,
+          "negativeFalsePositiveRate": 0.9736842105263158,
+          "byCategory": {
+            "negation": {
+              "rows": 12,
+              "accepted": 12,
+              "exactCorrect": 0
+            },
+            "out_of_scope": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            },
+            "paraphrase": {
+              "rows": 60,
+              "accepted": 60,
+              "exactCorrect": 52
+            },
+            "unknown": {
+              "rows": 18,
+              "accepted": 18,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 46,
+          "rawCorrect": 39
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 25,
+            "positiveCoverage": 0.4166666666666667,
+            "exactCorrect": 25,
+            "exactAccuracy": 0.4166666666666667,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 25,
+            "nearFamilyAccuracy": 0.4166666666666667,
+            "negativeFalsePositive": 11,
+            "negativeFalsePositiveRate": 0.2894736842105263,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 10,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 25,
+                "exactCorrect": 25
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 39,
+            "positiveCoverage": 0.65,
+            "exactCorrect": 39,
+            "exactAccuracy": 0.65,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 39,
+            "nearFamilyAccuracy": 0.65,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.02631578947368421,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 0,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 39,
+                "exactCorrect": 39
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 0.8666666666666667,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 37,
+              "exactCorrect": 52,
+              "totalAccepted": 97
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.9411764705882353,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 23,
+              "exactCorrect": 48,
+              "totalAccepted": 74
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9767441860465116,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 42,
+              "totalAccepted": 59
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.9833333333333333,
+              "acceptedExactPrecision": 0.864406779661017,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 19,
+              "exactCorrect": 51,
+              "totalAccepted": 78
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.9411764705882353,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 18,
+              "exactCorrect": 48,
+              "totalAccepted": 69
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9767441860465116,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 42,
+              "totalAccepted": 59
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.95,
+              "acceptedExactPrecision": 0.8771929824561403,
+              "wrongPositive": 7,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 50,
+              "totalAccepted": 73
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.8166666666666667,
+              "acceptedExactPrecision": 0.9591836734693877,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 47,
+              "totalAccepted": 65
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9767441860465116,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 42,
+              "totalAccepted": 58
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 0.94,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 47,
+              "totalAccepted": 66
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 45,
+              "totalAccepted": 61
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.7,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 42,
+              "totalAccepted": 57
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.65,
+              "acceptedExactPrecision": 0.9743589743589743,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 38,
+              "totalAccepted": 54
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.6,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 36,
+              "totalAccepted": 51
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 35,
+              "totalAccepted": 49
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 12,
+              "exactCorrect": 29,
+              "totalAccepted": 41
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 20,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 20,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 20,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.2833333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 11,
+              "exactCorrect": 17,
+              "totalAccepted": 28
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.9,
+              "acceptedExactPrecision": 0.8518518518518519,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 21,
+              "exactCorrect": 46,
+              "totalAccepted": 75
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 0.9333333333333333,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 8,
+              "exactCorrect": 42,
+              "totalAccepted": 53
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.6166666666666667,
+              "acceptedExactPrecision": 0.972972972972973,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 36,
+              "totalAccepted": 39
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8833333333333333,
+              "acceptedExactPrecision": 0.8490566037735849,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 45,
+              "totalAccepted": 57
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 0.9333333333333333,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 42,
+              "totalAccepted": 48
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.6166666666666667,
+              "acceptedExactPrecision": 0.972972972972973,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 36,
+              "totalAccepted": 39
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.8627450980392157,
+              "wrongPositive": 7,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 44,
+              "totalAccepted": 52
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9534883720930233,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 41,
+              "totalAccepted": 44
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.6166666666666667,
+              "acceptedExactPrecision": 0.972972972972973,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 36,
+              "totalAccepted": 38
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.7333333333333333,
+              "acceptedExactPrecision": 0.9318181818181818,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 41,
+              "totalAccepted": 45
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.65,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 39,
+              "totalAccepted": 40
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.6,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 36,
+              "totalAccepted": 37
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.55,
+              "acceptedExactPrecision": 0.9696969696969697,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 32,
+              "totalAccepted": 34
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 30,
+              "totalAccepted": 31
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.4,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 24,
+              "totalAccepted": 25
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.31666666666666665,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 19,
+              "totalAccepted": 19
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.31666666666666665,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 19,
+              "totalAccepted": 19
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.31666666666666665,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 19,
+              "totalAccepted": 19
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.2833333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 17,
+              "totalAccepted": 17
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      },
+      "primitive": {
+        "rawTop1": {
+          "rows": 14,
+          "positiveRows": 6,
+          "negativeRows": 8,
+          "positiveAccepted": 6,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 6,
+          "exactAccuracy": 1.0,
+          "acceptedExactPrecision": 1.0,
+          "wrongPositive": 0,
+          "nearFamilyCorrect": 6,
+          "nearFamilyAccuracy": 1.0,
+          "negativeFalsePositive": 7,
+          "negativeFalsePositiveRate": 0.875,
+          "byCategory": {
+            "paraphrase": {
+              "rows": 6,
+              "accepted": 6,
+              "exactCorrect": 6
+            },
+            "unknown": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 6,
+          "rawCorrect": 6
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 6,
+            "positiveCoverage": 1.0,
+            "exactCorrect": 6,
+            "exactAccuracy": 1.0,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 6,
+            "nearFamilyAccuracy": 1.0,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.125,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 6,
+                "exactCorrect": 6
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 5,
+            "positiveCoverage": 0.8333333333333334,
+            "exactCorrect": 5,
+            "exactAccuracy": 0.8333333333333334,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 5,
+            "nearFamilyAccuracy": 0.8333333333333334,
+            "negativeFalsePositive": 0,
+            "negativeFalsePositiveRate": 0.0,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 5,
+                "exactCorrect": 5
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 6,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 6,
+              "totalAccepted": 9
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 5,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 4,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 3,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 2,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 2,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 2,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 2,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 5,
+              "totalAccepted": 10
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 5,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      }
+    },
+    "128-float16": {
+      "shape": {
+        "rawTop1": {
+          "rows": 98,
+          "positiveRows": 60,
+          "negativeRows": 38,
+          "positiveAccepted": 60,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 52,
+          "exactAccuracy": 0.8666666666666667,
+          "acceptedExactPrecision": 0.8666666666666667,
+          "wrongPositive": 8,
+          "nearFamilyCorrect": 54,
+          "nearFamilyAccuracy": 0.9,
+          "negativeFalsePositive": 37,
+          "negativeFalsePositiveRate": 0.9736842105263158,
+          "byCategory": {
+            "negation": {
+              "rows": 12,
+              "accepted": 12,
+              "exactCorrect": 0
+            },
+            "out_of_scope": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            },
+            "paraphrase": {
+              "rows": 60,
+              "accepted": 60,
+              "exactCorrect": 52
+            },
+            "unknown": {
+              "rows": 18,
+              "accepted": 18,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 46,
+          "rawCorrect": 39
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 25,
+            "positiveCoverage": 0.4166666666666667,
+            "exactCorrect": 25,
+            "exactAccuracy": 0.4166666666666667,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 25,
+            "nearFamilyAccuracy": 0.4166666666666667,
+            "negativeFalsePositive": 11,
+            "negativeFalsePositiveRate": 0.2894736842105263,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 10,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 25,
+                "exactCorrect": 25
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 39,
+            "positiveCoverage": 0.65,
+            "exactCorrect": 39,
+            "exactAccuracy": 0.65,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 39,
+            "nearFamilyAccuracy": 0.65,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.02631578947368421,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 0,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 39,
+                "exactCorrect": 39
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 0.8666666666666667,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 37,
+              "exactCorrect": 52,
+              "totalAccepted": 97
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.9411764705882353,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 23,
+              "exactCorrect": 48,
+              "totalAccepted": 74
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9767441860465116,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 42,
+              "totalAccepted": 59
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.9833333333333333,
+              "acceptedExactPrecision": 0.864406779661017,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 19,
+              "exactCorrect": 51,
+              "totalAccepted": 78
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.9411764705882353,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 18,
+              "exactCorrect": 48,
+              "totalAccepted": 69
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9767441860465116,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 42,
+              "totalAccepted": 59
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.95,
+              "acceptedExactPrecision": 0.8771929824561403,
+              "wrongPositive": 7,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 50,
+              "totalAccepted": 73
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.8166666666666667,
+              "acceptedExactPrecision": 0.9591836734693877,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 47,
+              "totalAccepted": 65
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9767441860465116,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 42,
+              "totalAccepted": 58
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 0.94,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 47,
+              "totalAccepted": 66
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 16,
+              "exactCorrect": 45,
+              "totalAccepted": 61
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.7,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 42,
+              "totalAccepted": 57
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 34,
+              "totalAccepted": 47
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.65,
+              "acceptedExactPrecision": 0.9743589743589743,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 38,
+              "totalAccepted": 54
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.6,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 36,
+              "totalAccepted": 51
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 35,
+              "totalAccepted": 49
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 12,
+              "exactCorrect": 29,
+              "totalAccepted": 41
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 20,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 20,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 20,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.2833333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 11,
+              "exactCorrect": 17,
+              "totalAccepted": 28
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 6,
+              "totalAccepted": 15
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 0,
+              "totalAccepted": 4
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.9,
+              "acceptedExactPrecision": 0.8518518518518519,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 21,
+              "exactCorrect": 46,
+              "totalAccepted": 75
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 0.9333333333333333,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 8,
+              "exactCorrect": 42,
+              "totalAccepted": 53
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.6166666666666667,
+              "acceptedExactPrecision": 0.972972972972973,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 36,
+              "totalAccepted": 39
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8833333333333333,
+              "acceptedExactPrecision": 0.8490566037735849,
+              "wrongPositive": 8,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 45,
+              "totalAccepted": 57
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.75,
+              "acceptedExactPrecision": 0.9333333333333333,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 42,
+              "totalAccepted": 48
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.6166666666666667,
+              "acceptedExactPrecision": 0.972972972972973,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 36,
+              "totalAccepted": 39
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.85,
+              "acceptedExactPrecision": 0.8627450980392157,
+              "wrongPositive": 7,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 44,
+              "totalAccepted": 52
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.7166666666666667,
+              "acceptedExactPrecision": 0.9534883720930233,
+              "wrongPositive": 2,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 41,
+              "totalAccepted": 44
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.6166666666666667,
+              "acceptedExactPrecision": 0.972972972972973,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 36,
+              "totalAccepted": 38
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.7333333333333333,
+              "acceptedExactPrecision": 0.9318181818181818,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 41,
+              "totalAccepted": 45
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.65,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 39,
+              "totalAccepted": 40
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.6,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 36,
+              "totalAccepted": 37
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.55,
+              "acceptedExactPrecision": 0.9696969696969697,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 32,
+              "totalAccepted": 34
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 30,
+              "totalAccepted": 31
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.48333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 29,
+              "totalAccepted": 30
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.4,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 24,
+              "totalAccepted": 25
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.31666666666666665,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 19,
+              "totalAccepted": 19
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.31666666666666665,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 19,
+              "totalAccepted": 19
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.31666666666666665,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 19,
+              "totalAccepted": 19
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.2833333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 17,
+              "totalAccepted": 17
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.1,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 6,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      },
+      "primitive": {
+        "rawTop1": {
+          "rows": 14,
+          "positiveRows": 6,
+          "negativeRows": 8,
+          "positiveAccepted": 6,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 6,
+          "exactAccuracy": 1.0,
+          "acceptedExactPrecision": 1.0,
+          "wrongPositive": 0,
+          "nearFamilyCorrect": 6,
+          "nearFamilyAccuracy": 1.0,
+          "negativeFalsePositive": 7,
+          "negativeFalsePositiveRate": 0.875,
+          "byCategory": {
+            "paraphrase": {
+              "rows": 6,
+              "accepted": 6,
+              "exactCorrect": 6
+            },
+            "unknown": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 6,
+          "rawCorrect": 6
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 6,
+            "positiveCoverage": 1.0,
+            "exactCorrect": 6,
+            "exactAccuracy": 1.0,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 6,
+            "nearFamilyAccuracy": 1.0,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.125,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 6,
+                "exactCorrect": 6
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 5,
+            "positiveCoverage": 0.8333333333333334,
+            "exactCorrect": 5,
+            "exactAccuracy": 0.8333333333333334,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 5,
+            "nearFamilyAccuracy": 0.8333333333333334,
+            "negativeFalsePositive": 0,
+            "negativeFalsePositiveRate": 0.0,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 5,
+                "exactCorrect": 5
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 6,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 6,
+              "totalAccepted": 9
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 5,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 6,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 4,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 3,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 2,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 2,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 2,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 2,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 1,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 5,
+              "totalAccepted": 10
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 5,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 4,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 2,
+              "totalAccepted": 2
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      }
+    },
+    "chargram": {
+      "shape": {
+        "rawTop1": {
+          "rows": 98,
+          "positiveRows": 60,
+          "negativeRows": 38,
+          "positiveAccepted": 60,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 49,
+          "exactAccuracy": 0.8166666666666667,
+          "acceptedExactPrecision": 0.8166666666666667,
+          "wrongPositive": 11,
+          "nearFamilyCorrect": 53,
+          "nearFamilyAccuracy": 0.8833333333333333,
+          "negativeFalsePositive": 36,
+          "negativeFalsePositiveRate": 0.9473684210526315,
+          "byCategory": {
+            "negation": {
+              "rows": 12,
+              "accepted": 12,
+              "exactCorrect": 0
+            },
+            "out_of_scope": {
+              "rows": 8,
+              "accepted": 6,
+              "exactCorrect": 0
+            },
+            "paraphrase": {
+              "rows": 60,
+              "accepted": 60,
+              "exactCorrect": 49
+            },
+            "unknown": {
+              "rows": 18,
+              "accepted": 18,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 46,
+          "rawCorrect": 38
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 0,
+            "positiveCoverage": 0.0,
+            "exactCorrect": 0,
+            "exactAccuracy": 0.0,
+            "acceptedExactPrecision": 0.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 0,
+            "nearFamilyAccuracy": 0.0,
+            "negativeFalsePositive": 5,
+            "negativeFalsePositiveRate": 0.13157894736842105,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 3,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 2,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 0,
+                "exactCorrect": 0
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 98,
+            "positiveRows": 60,
+            "negativeRows": 38,
+            "positiveAccepted": 25,
+            "positiveCoverage": 0.4166666666666667,
+            "exactCorrect": 25,
+            "exactAccuracy": 0.4166666666666667,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 25,
+            "nearFamilyAccuracy": 0.4166666666666667,
+            "negativeFalsePositive": 1,
+            "negativeFalsePositiveRate": 0.02631578947368421,
+            "byCategory": {
+              "negation": {
+                "rows": 12,
+                "accepted": 0,
+                "exactCorrect": 0
+              },
+              "out_of_scope": {
+                "rows": 8,
+                "accepted": 1,
+                "exactCorrect": 0
+              },
+              "paraphrase": {
+                "rows": 60,
+                "accepted": 25,
+                "exactCorrect": 25
+              },
+              "unknown": {
+                "rows": 18,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 0.8166666666666667,
+              "wrongPositive": 11,
+              "negativeFalsePositive": 36,
+              "exactCorrect": 49,
+              "totalAccepted": 96
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 0.9,
+              "wrongPositive": 5,
+              "negativeFalsePositive": 21,
+              "exactCorrect": 45,
+              "totalAccepted": 71
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.6833333333333333,
+              "acceptedExactPrecision": 0.926829268292683,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 18,
+              "exactCorrect": 38,
+              "totalAccepted": 59
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 30,
+              "totalAccepted": 43
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.7333333333333333,
+              "acceptedExactPrecision": 0.8636363636363636,
+              "wrongPositive": 6,
+              "negativeFalsePositive": 18,
+              "exactCorrect": 38,
+              "totalAccepted": 62
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.6833333333333333,
+              "acceptedExactPrecision": 0.926829268292683,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 38,
+              "totalAccepted": 56
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 0.9714285714285714,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 15,
+              "exactCorrect": 34,
+              "totalAccepted": 50
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 30,
+              "totalAccepted": 43
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.4666666666666667,
+              "acceptedExactPrecision": 0.9642857142857143,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 14,
+              "exactCorrect": 27,
+              "totalAccepted": 42
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.45,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 27,
+              "totalAccepted": 40
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.43333333333333335,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 26,
+              "totalAccepted": 39
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.4166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 13,
+              "exactCorrect": 25,
+              "totalAccepted": 38
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.18333333333333332,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 10,
+              "exactCorrect": 11,
+              "totalAccepted": 21
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.18333333333333332,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 10,
+              "exactCorrect": 11,
+              "totalAccepted": 21
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.18333333333333332,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 10,
+              "exactCorrect": 11,
+              "totalAccepted": 21
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.18333333333333332,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 10,
+              "exactCorrect": 11,
+              "totalAccepted": 21
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.11666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 7,
+              "totalAccepted": 14
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.11666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 7,
+              "totalAccepted": 14
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.11666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 7,
+              "totalAccepted": 14
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.11666666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 7,
+              "totalAccepted": 14
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 0,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 0,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 0,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 0,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 0,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.9,
+              "acceptedExactPrecision": 0.7962962962962963,
+              "wrongPositive": 11,
+              "negativeFalsePositive": 20,
+              "exactCorrect": 43,
+              "totalAccepted": 74
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.7333333333333333,
+              "acceptedExactPrecision": 0.8863636363636364,
+              "wrongPositive": 5,
+              "negativeFalsePositive": 9,
+              "exactCorrect": 39,
+              "totalAccepted": 53
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.6,
+              "acceptedExactPrecision": 0.9166666666666666,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 6,
+              "exactCorrect": 33,
+              "totalAccepted": 42
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.4166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 25,
+              "totalAccepted": 26
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.6333333333333333,
+              "acceptedExactPrecision": 0.8421052631578947,
+              "wrongPositive": 6,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 32,
+              "totalAccepted": 41
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.5833333333333334,
+              "acceptedExactPrecision": 0.9142857142857143,
+              "wrongPositive": 3,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 32,
+              "totalAccepted": 38
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 0.9666666666666667,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 29,
+              "totalAccepted": 33
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.4166666666666667,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 25,
+              "totalAccepted": 26
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.38333333333333336,
+              "acceptedExactPrecision": 0.9565217391304348,
+              "wrongPositive": 1,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 22,
+              "totalAccepted": 24
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.36666666666666664,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 22,
+              "totalAccepted": 23
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.35,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 21,
+              "totalAccepted": 22
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.3333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 20,
+              "totalAccepted": 21
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.15,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 9,
+              "totalAccepted": 9
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.15,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 9,
+              "totalAccepted": 9
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.15,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 9,
+              "totalAccepted": 9
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.15,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 9,
+              "totalAccepted": 9
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.08333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.08333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.08333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.08333333333333333,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 5,
+              "totalAccepted": 5
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      },
+      "primitive": {
+        "rawTop1": {
+          "rows": 14,
+          "positiveRows": 6,
+          "negativeRows": 8,
+          "positiveAccepted": 6,
+          "positiveCoverage": 1.0,
+          "exactCorrect": 6,
+          "exactAccuracy": 1.0,
+          "acceptedExactPrecision": 1.0,
+          "wrongPositive": 0,
+          "nearFamilyCorrect": 6,
+          "nearFamilyAccuracy": 1.0,
+          "negativeFalsePositive": 7,
+          "negativeFalsePositiveRate": 0.875,
+          "byCategory": {
+            "paraphrase": {
+              "rows": 6,
+              "accepted": 6,
+              "exactCorrect": 6
+            },
+            "unknown": {
+              "rows": 8,
+              "accepted": 7,
+              "exactCorrect": 0
+            }
+          }
+        },
+        "noExactAliasPositives": {
+          "rows": 6,
+          "rawCorrect": 6
+        },
+        "frozenModes": {
+          "retrieval_only": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 3,
+            "positiveCoverage": 0.5,
+            "exactCorrect": 3,
+            "exactAccuracy": 0.5,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 3,
+            "nearFamilyAccuracy": 0.5,
+            "negativeFalsePositive": 0,
+            "negativeFalsePositiveRate": 0.0,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 3,
+                "exactCorrect": 3
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          },
+          "guarded": {
+            "rows": 14,
+            "positiveRows": 6,
+            "negativeRows": 8,
+            "positiveAccepted": 4,
+            "positiveCoverage": 0.6666666666666666,
+            "exactCorrect": 4,
+            "exactAccuracy": 0.6666666666666666,
+            "acceptedExactPrecision": 1.0,
+            "wrongPositive": 0,
+            "nearFamilyCorrect": 4,
+            "nearFamilyAccuracy": 0.6666666666666666,
+            "negativeFalsePositive": 0,
+            "negativeFalsePositiveRate": 0.0,
+            "byCategory": {
+              "paraphrase": {
+                "rows": 6,
+                "accepted": 4,
+                "exactCorrect": 4
+              },
+              "unknown": {
+                "rows": 8,
+                "accepted": 0,
+                "exactCorrect": 0
+              }
+            }
+          }
+        },
+        "riskCoverageDiagnostics": {
+          "retrieval_only": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 7,
+              "exactCorrect": 6,
+              "totalAccepted": 13
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 4,
+              "exactCorrect": 6,
+              "totalAccepted": 10
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 1.0,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 6,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 2,
+              "exactCorrect": 5,
+              "totalAccepted": 7
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ],
+          "guarded": [
+            {
+              "score": 0.0,
+              "margin": 0.0,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 5,
+              "exactCorrect": 5,
+              "totalAccepted": 10
+            },
+            {
+              "score": 0.0,
+              "margin": 0.04,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 3,
+              "exactCorrect": 5,
+              "totalAccepted": 8
+            },
+            {
+              "score": 0.0,
+              "margin": 0.08,
+              "positiveCoverage": 0.8333333333333334,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 1,
+              "exactCorrect": 5,
+              "totalAccepted": 6
+            },
+            {
+              "score": 0.0,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.3,
+              "margin": 0.0,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.3,
+              "margin": 0.04,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.3,
+              "margin": 0.08,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.3,
+              "margin": 0.15,
+              "positiveCoverage": 0.6666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 4,
+              "totalAccepted": 4
+            },
+            {
+              "score": 0.4,
+              "margin": 0.0,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.04,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.08,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.4,
+              "margin": 0.15,
+              "positiveCoverage": 0.5,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 3,
+              "totalAccepted": 3
+            },
+            {
+              "score": 0.5,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.5,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.5,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.5,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.0,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.04,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.08,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.6,
+              "margin": 0.15,
+              "positiveCoverage": 0.16666666666666666,
+              "acceptedExactPrecision": 1.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 1,
+              "totalAccepted": 1
+            },
+            {
+              "score": 0.7,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.7,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.8,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.0,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.04,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.08,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            },
+            {
+              "score": 0.9,
+              "margin": 0.15,
+              "positiveCoverage": 0.0,
+              "acceptedExactPrecision": 0.0,
+              "wrongPositive": 0,
+              "negativeFalsePositive": 0,
+              "exactCorrect": 0,
+              "totalAccepted": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

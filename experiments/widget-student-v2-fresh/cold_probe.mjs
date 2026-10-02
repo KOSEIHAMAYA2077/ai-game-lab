@@ -1,0 +1,16 @@
+import { dirname,resolve } from 'node:path';
+import { fileURLToPath,pathToFileURL } from 'node:url';
+import { performance } from 'node:perf_hooks';
+import {readFile} from 'node:fs/promises';
+const dir=dirname(fileURLToPath(import.meta.url)),kind=process.argv[2];
+const fixtures=JSON.parse(await readFile(resolve(dir,'fixture.frozen.json'),'utf8')).cases;
+const moduleName=kind==='v1'?'widget-student':kind==='guard_v2'?'widget-student-guard-v2':'program-rules';
+const fnName=kind==='v1'?'widgetStudentResolution':kind==='guard_v2'?'widgetStudentGuardV2Resolution':'ruleProgramResolution';
+const t=performance.now(),mod=await import(pathToFileURL(resolve(dir,`runtime/${moduleName}.mjs`))),importMs=performance.now()-t;
+const student=kind==='rules'?null:await import(pathToFileURL(resolve(dir,'runtime/widget-student.mjs')));
+const before=student?.inspectWidgetStudent();
+let s=performance.now(),first=mod[fnName](fixtures[0].text),firstSingletonMs=performance.now()-s;
+const afterSingleton=student?.inspectWidgetStudent();
+s=performance.now();const pair=mod[fnName](fixtures[48].text),firstPairMs=performance.now()-s;
+const afterPair=student?.inspectWidgetStudent();
+console.log(JSON.stringify({kind,importMs,firstSingletonMs,firstPairMs,firstSingletonId:fixtures[0].id,firstPairId:fixtures[48].id,firstSingletonAccepted:!!first.program,firstPairAccepted:!!pair.program,before,afterSingleton,afterPair,note:'Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler.'}));

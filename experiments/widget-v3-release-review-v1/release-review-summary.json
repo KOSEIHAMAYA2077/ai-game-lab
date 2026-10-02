@@ -1,0 +1,168 @@
+{
+  "reviewed_at_utc": "2026-10-02T17:50:07.123450+00:00",
+  "initial_commit_provided_by_coordinator": "8acd4f3",
+  "fixed_commit_provided_by_coordinator": "c016661",
+  "git_operations": "None; commit identity is coordinator-provided. Read stable isolated source copies and production files.",
+  "decision": "Accept R2 as the scoped experimental Web comparison candidate after reproduced P1/P2 fixes. This is not native UI/IME/resource-budget acceptance.",
+  "initial_product_findings": [
+    {
+      "severity": "P1",
+      "name": "Input lost when first glyph is new at1024kindcap",
+      "reproduction": "Input1023distinctCJKglyphs atrepeat1, then刀一; fieldcleared, no batch/save, apparent3.93s success.",
+      "root_cause": "widget-main.ts ignored Matter.add added0 result; model.ts only records batches with added>0.",
+      "r2_status": "Fixed; draft preserved, warning shown, shape/pause unchanged, no new success timing, busy false."
+    },
+    {
+      "severity": "P2",
+      "name": "Explicit selected color disagrees with input preview",
+      "reproduction": "Selectgreen, type青い花瓶の文字; previewblue but acceptedbatchgreen.",
+      "root_cause": "input listener prioritized parsed color over explicit selection; submit uses reverse priority.",
+      "r2_status": "Fixed; preview and acceptedbatch green."
+    }
+  ],
+  "harness_corrections": [
+    {
+      "initial_false_check": "OriginalUnicodewhitespace comparison",
+      "correction": "input[type=text] sanitized supplied newline duringfill. Followup compares full actual fieldvalue delivered atsubmit; preserved. Originalraw retained."
+    },
+    {
+      "initial_false_check": "RealWebGL canvas check",
+      "correction": "Initialharness read nonexistent renderedCount; actual scene exposes drawn/drawCalls/finite. Followup verifies these and screenshot. Originalraw retained."
+    }
+  ],
+  "r2_checks": [
+    {
+      "name": "initial-default-rules-no-student-or-worker",
+      "passed": true
+    },
+    {
+      "name": "dynamic-atlas-small-initial",
+      "passed": true
+    },
+    {
+      "name": "no-student-asset-request-at-default",
+      "passed": true
+    },
+    {
+      "name": "all60-canonical-authored-labels-retained",
+      "passed": true
+    },
+    {
+      "name": "artificial-body-reaches-1024-kinds",
+      "passed": true
+    },
+    {
+      "name": "new-glyph-at-kind-cap-retained-or-explicitly-rejected",
+      "passed": true
+    },
+    {
+      "name": "zero-add-preserves-shape-pause-and-no-success-measurement",
+      "passed": true
+    },
+    {
+      "name": "kind-cap-partial-add-keeps-full-original",
+      "passed": true
+    },
+    {
+      "name": "kind-cap-partial-original-reloads-intact",
+      "passed": true
+    },
+    {
+      "name": "default-preserves-mobius-rich-surface",
+      "passed": true
+    },
+    {
+      "name": "original-unicode-whitespace-preserved",
+      "passed": true
+    },
+    {
+      "name": "auto-blue-batch-ink-preserved",
+      "passed": true
+    },
+    {
+      "name": "explicit-color-applies-to-new-batch-only",
+      "passed": true
+    },
+    {
+      "name": "explicit-color-preview-matches-new-batch",
+      "passed": true
+    },
+    {
+      "name": "reload-original-batches-and-colors",
+      "passed": true
+    },
+    {
+      "name": "old-storage-keys-byte-identical",
+      "passed": true
+    },
+    {
+      "name": "tiny-opt-in-load-no-worker",
+      "passed": true
+    },
+    {
+      "name": "optional-tiny-finite-two-part-example",
+      "passed": true
+    },
+    {
+      "name": "tiny-hold-keeps-finite-shape-and-adds-original-color",
+      "passed": true
+    },
+    {
+      "name": "tiny-over-4000-input-retains-draft-and-body",
+      "passed": true
+    },
+    {
+      "name": "final-real-webgl-canvas",
+      "passed": true
+    },
+    {
+      "name": "no-unhandled-page-errors",
+      "passed": true
+    },
+    {
+      "name": "external-requests-never-sent",
+      "passed": true
+    }
+  ],
+  "all60_scope": "Real UI submissions to production dist. Inspected immediate authored shape selection and finite renderer state before resetting; not60separate completed absorption/visual quality judgements.",
+  "network": "All browserrequests constrained to owned127.0.0.1:4291 server. No external request attempt in R2. Artificial inputs only.",
+  "ui_scope": "InstalledChrome headless withSwiftShader requested. Source/state/realWebGL command and screenshot checks, not live native UI, realJapaneseIME, hardwareGPU, or enduserplay validation.",
+  "old_storage_scope": "Artificialv1/v2sentinel values in isolatedbrowsercontext unchanged byte-for-byte; no realuserdata accessed.",
+  "production_r1_unchanged_after_r2_review": true,
+  "production_r2_unchanged_after_review": true,
+  "source_hashes": {
+    "R1": {
+      "widget-main.ts": "c8f53bbc37e80a471a8e320f894ad7dad3a7a782da3c94c23dfa7b5d9ae103f5",
+      "widget-state.ts": "44d661849ee7a7938e586e7c8f089747c4e34ac35ecd3b904f7dab6b899f53da",
+      "widget-model-client.ts": "3fa9db45313c481e15041a2476ddf303b73afccc0ed0df8ec54841fd7934665c",
+      "widget-display.ts": "6b354484308a29e93fcea213e738927752c2395784b8dceacfc0de9c0ba4549a",
+      "widget-student.ts": "30bd84b0dfe2f2ff7a9046a58362829323aad064f0c56e27f66481d9a447d9c4",
+      "widget-student-guard-v2.ts": "a9d0b382b6bbb8a1c604df7ff454974e00e400c8116e696b0f7580393ea41d7f",
+      "scene.ts": "49523bbfcfd733900d05e7000b807913e3273d3a235f68632443d381884e652e",
+      "model.ts": "a6da7ab476a4258cf47408d782e1cd43b40c9e83d026d514aa4cfbf0c3096e9b",
+      "language.ts": "7e80b7853d79a5c3d198a2369b3e0ac0c2f87ca3c0a4546b5d7b7558792b31d3",
+      "shape-catalog.ts": "f7244468346bfdfd731753016290ba43250a89abe234225da6570640c1a97e42"
+    },
+    "R2": {
+      "widget-main.ts": "f672756de4b5b72bc4df353e424e9fe78990ebbaa56bf84557c3c8e9f49f3cca",
+      "widget-state.ts": "44d661849ee7a7938e586e7c8f089747c4e34ac35ecd3b904f7dab6b899f53da",
+      "widget-model-client.ts": "3fa9db45313c481e15041a2476ddf303b73afccc0ed0df8ec54841fd7934665c",
+      "widget-display.ts": "6b354484308a29e93fcea213e738927752c2395784b8dceacfc0de9c0ba4549a",
+      "widget-student.ts": "30bd84b0dfe2f2ff7a9046a58362829323aad064f0c56e27f66481d9a447d9c4",
+      "widget-student-guard-v2.ts": "a9d0b382b6bbb8a1c604df7ff454974e00e400c8116e696b0f7580393ea41d7f",
+      "scene.ts": "49523bbfcfd733900d05e7000b807913e3273d3a235f68632443d381884e652e",
+      "model.ts": "a6da7ab476a4258cf47408d782e1cd43b40c9e83d026d514aa4cfbf0c3096e9b",
+      "language.ts": "7e80b7853d79a5c3d198a2369b3e0ac0c2f87ca3c0a4546b5d7b7558792b31d3",
+      "shape-catalog.ts": "f7244468346bfdfd731753016290ba43250a89abe234225da6570640c1a97e42"
+    }
+  },
+  "raw_files": [
+    "production-review-raw.json",
+    "production-review-followup-raw.json",
+    "production-review-r2-raw.json",
+    "capture-review-r2-raw.json"
+  ],
+  "final_screenshot": "qa/r2-blue-mobius-dense.png",
+  "final_screenshot_sha256": "d9b4d7f85d6bd857337a1b7fe8e593b65f150b52c85092f8419b3bdb217ef315",
+  "ownership": "Only experiments/widget-v3-release-review-v1 was written; no sharedsource/native/Git changes. Owned browser/server closed after each run."
+}

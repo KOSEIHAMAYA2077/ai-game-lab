@@ -20,18 +20,40 @@ class Atlas {
   ctx: CanvasRenderingContext2D;
   texture: THREE.CanvasTexture;
   ids = new Map<string, number>();
-  constructor() {
-    this.canvas.width = this.canvas.height = CELL * COLUMNS;
+  rows: number;
+  constructor(readonly dynamic = false) {
+    this.rows = dynamic ? 1 : COLUMNS;
+    this.canvas.width = CELL * COLUMNS;
+    this.canvas.height = CELL * this.rows;
     this.ctx = this.canvas.getContext('2d')!;
-    this.texture = new THREE.CanvasTexture(this.canvas);
-    this.texture.minFilter = THREE.LinearFilter;
-    this.texture.magFilter = THREE.LinearFilter;
-    this.texture.generateMipmaps = false;
+    this.texture = this.createTexture();
+  }
+  private createTexture() {
+    const texture = new THREE.CanvasTexture(this.canvas);
+    texture.minFilter = THREE.LinearFilter;
+    texture.magFilter = THREE.LinearFilter;
+    texture.generateMipmaps = false;
+    return texture;
+  }
+  private resize(rows: number, preserve: boolean) {
+    const oldCanvas = this.canvas, oldTexture = this.texture;
+    // Changing canvas dimensions clears its pixels. Copy to a new canvas so old
+    // glyph IDs and their exact cell positions survive every capacity boundary.
+    this.canvas = document.createElement('canvas');
+    this.canvas.width = CELL * COLUMNS; this.canvas.height = CELL * rows;
+    this.ctx = this.canvas.getContext('2d')!;
+    if (preserve) this.ctx.drawImage(oldCanvas, 0, 0);
+    this.rows = rows;
+    this.texture = this.createTexture();
+    // Texture dimensions are immutable after their first GPU upload. Only the
+    // replaced GPU resource is released; no input history or user file is removed.
+    oldTexture.dispose();
   }
   add(text: string) {
     if (this.ids.has(text)) return this.ids.get(text)!;
     const id = this.ids.size;
     if (id >= MAX_KINDS) throw new Error('文字の種類数が上限に達しました');
+    if (this.dynamic && id >= this.rows * COLUMNS) this.resize(Math.min(COLUMNS, this.rows * 2), true);
     const x = (id % COLUMNS) * CELL;
     const y = Math.floor(id / COLUMNS) * CELL;
     this.ctx.fillStyle = '#ffffff';
@@ -41,17 +63,22 @@ class Atlas {
     this.ids.set(text, id); this.texture.needsUpdate = true;
     return id;
   }
-  clear() { this.ids.clear(); this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); this.texture.needsUpdate = true; }
+  clear() {
+    this.ids.clear();
+    if (this.dynamic && this.rows !== 1) this.resize(1, false);
+    else this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.texture.needsUpdate = true;
+  }
 }
 
-export type SceneOptions = { pixelRatio?: number; antialias?: boolean; preserveDrawingBuffer?: boolean; maxDrawnGlyphs?: number };
+export type SceneOptions = { pixelRatio?: number; antialias?: boolean; preserveDrawingBuffer?: boolean; maxDrawnGlyphs?: number; dynamicAtlas?: boolean };
 
 export class GlyphScene {
   displayedGlyphs: Glyph[] = [];
   renderer: THREE.WebGLRenderer;
   camera = new THREE.PerspectiveCamera(43, 1, 0.1, 100);
   scene = new THREE.Scene();
-  atlas = new Atlas();
+  atlas: Atlas;
   geometry = new THREE.InstancedBufferGeometry();
   readonly capacity: number;
   positions: Float32Array;
@@ -97,6 +124,7 @@ export class GlyphScene {
     // need these buffers; the original pages still allocate their full capacity.
     this.capacity = options.maxDrawnGlyphs
       ? Math.max(1, Math.min(MAX_GLYPHS, Math.floor(options.maxDrawnGlyphs))) : MAX_GLYPHS;
+    this.atlas = new Atlas(options.dynamicAtlas);
     this.positions = new Float32Array(this.capacity * 3);
     this.morphTargets = new Float32Array(this.capacity * 3);
     this.origins = new Float32Array(this.capacity * 3);
@@ -130,7 +158,7 @@ export class GlyphScene {
       uniforms: {
         atlas: { value: this.atlas.texture }, time: { value: 0 }, glyphSize: { value: 0.09 },
         distance: { value: 6.3 }, scale: { value: 1 }, testYaw: { value: 0 }, testPose: { value: false },
-        alignment: { value: 0 }, closedSurface: { value: 0 },
+        alignment: { value: 0 }, closedSurface: { value: 0 }, atlasRows: { value: this.atlas.rows },
       },
       vertexShader: `
         attribute vec2 atlasOffset;
@@ -138,7 +166,7 @@ export class GlyphScene {
         attribute float bornAt, phase, birthSize;
         attribute vec4 inkColor;
         attribute vec4 surfaceRotation;
-        uniform float time, glyphSize, distance, scale, testYaw, alignment, closedSurface;
+        uniform float time, glyphSize, distance, scale, testYaw, alignment, closedSurface, atlasRows;
         uniform bool testPose;
         varying vec2 atlasUV;
         varying float freshness;
@@ -166,7 +194,10 @@ export class GlyphScene {
           float settled = smoothstep(0.0, 3.8, time - bornAt);
           vec4 mv = modelViewMatrix * vec4(center, 1.0) + mix(vec4(position.xy * birthSize, 0.0, 0.0), modelViewMatrix * vec4(q, 0.0), settled);
           gl_Position = projectionMatrix * mv;
-          atlasUV = atlasOffset + uv / 32.0;
+          // Interpolate the same reference UV as the fixed atlas, then convert
+          // to the current texture height in the fragment shader. Varying the
+          // vertex UV span with row count can introduce visible rounding spikes.
+          atlasUV = ${options.dynamicAtlas ? 'vec2(atlasOffset.x, 1.0 - (1.0 - atlasOffset.y) * atlasRows / 32.0)' : 'atlasOffset'} + uv / 32.0;
           freshness = 1.0 - smoothstep(0.6, 7.6, time - bornAt);
           glyphColor = mix(vec3(0.94, 0.95, 0.94), inkColor.rgb, inkColor.a > 0.5 ? 1.0 : freshness);
           light = 0.30 + 0.70 * clamp((distance + 1.6 * scale + mv.z) / (3.2 * scale), 0.0, 1.0);
@@ -185,12 +216,13 @@ export class GlyphScene {
       `,
       fragmentShader: `
         uniform sampler2D atlas;
+        uniform float atlasRows;
         varying vec2 atlasUV;
         varying float freshness;
         varying float light;
         varying vec3 glyphColor;
         void main() {
-          float alpha = texture2D(atlas, atlasUV).a;
+          float alpha = texture2D(atlas, ${options.dynamicAtlas ? 'vec2(atlasUV.x, 1.0 - (1.0 - atlasUV.y) * (32.0 / atlasRows))' : 'atlasUV'}).a;
           if (alpha < 0.06) discard;
           gl_FragColor = vec4(glyphColor, alpha * light);
         }
@@ -230,6 +262,7 @@ export class GlyphScene {
   }
 
   sync(screenPoints?: { x: number; y: number }[], fontSize = 20) {
+    const previousRows = this.atlas.rows;
     const next = this.options.maxDrawnGlyphs ? displayGlyphs(this.matter.glyphs, this.options.maxDrawnGlyphs) : this.matter.glyphs;
     const sampled = Boolean(this.options.maxDrawnGlyphs && this.matter.glyphs.length > this.options.maxDrawnGlyphs);
     this.displayedGlyphs = next;
@@ -243,7 +276,7 @@ export class GlyphScene {
       const glyph = next[i];
       const tile = this.atlas.add(glyph.text);
       this.uv[i * 2] = (tile % COLUMNS) / COLUMNS;
-      this.uv[i * 2 + 1] = 1 - (Math.floor(tile / COLUMNS) + 1) / COLUMNS;
+      this.uv[i * 2 + 1] = 1 - (Math.floor(tile / COLUMNS) + 1) / this.atlas.rows;
       this.born[i] = glyph.born;
       // Keep the seed's familiar pose. Other letters rotate independently of
       // the golden-angle positions, which otherwise form synchronized ribs.
@@ -267,6 +300,18 @@ export class GlyphScene {
     }
     this.count = next.length;
     this.geometry.instanceCount = this.count;
+    // A row-count change renormalizes every retained UV, including new letters
+    // added before a later growth in this same deferred sync.
+    if (this.atlas.rows !== previousRows) {
+      for (let i = 0; i < next.length; i++) {
+        const tile = this.atlas.ids.get(next[i].text)!;
+        this.uv[i * 2] = (tile % COLUMNS) / COLUMNS;
+        this.uv[i * 2 + 1] = 1 - (Math.floor(tile / COLUMNS) + 1) / this.atlas.rows;
+      }
+      this.uploadRange('atlasOffset', 0, next.length);
+    }
+    this.material.uniforms.atlas.value = this.atlas.texture;
+    this.material.uniforms.atlasRows.value = this.atlas.rows;
     for (const name of ['atlasOffset', 'bornAt', 'phase', 'inkColor', 'birthSize']) this.uploadRange(name, start, next.length - start);
   }
 
@@ -418,6 +463,7 @@ export class GlyphScene {
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
       renderer: 'instanced-planes', testYaw: this.testYaw,
       viewRotation: this.planes.rotation.toArray().slice(0, 3), manualRotation: [this.turnX, this.turnY],
+      atlas: { dynamic: this.atlas.dynamic, columns: COLUMNS, rows: this.atlas.rows, kinds: this.atlas.ids.size, pixelBytes: this.atlas.canvas.width * this.atlas.canvas.height * 4 },
       program: this.program ? { spec: this.program.spec, effective: this.program.parts.map(p => ({...p.effective})), adjustments: this.program.adjustments, throughCheck: this.program.throughCheck ?? null, centerlines: this.program.centerlines, bounds: this.program.bounds, scale: this.program.scale } : null,
       rig: inspectCreatureRig(this.matter.spec.shape, this.matter.time), skeleton: this.skeleton ? { ...this.skeleton } : null };
   }

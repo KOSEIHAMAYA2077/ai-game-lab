@@ -1,0 +1,87 @@
+{
+  "status": "proposed safety wrapper; not included in independent frozenv2 accuracy results",
+  "reason": "own numerical edge case before viewing fresh evaluator results; Unigram token-unknown ratio misses merged unknown spans",
+  "policy": "4000characters/4000tokens; meaningful known token and <=.8 unknowncharactercoverage; all embeddings/captions/thresholds unchanged",
+  "cases": [
+    {
+      "case": "empty",
+      "characters": 0,
+      "strictStatus": {
+        "unknownCharacterSpanFraction": 0.0,
+        "knownMeaningfulTokenCount": 0,
+        "tokens": 0,
+        "hold": "unknown_or_empty_text"
+      },
+      "frozenV2Prediction": null,
+      "frozenV2Reason": "empty_vector"
+    },
+    {
+      "case": "spaces",
+      "characters": 4,
+      "strictStatus": {
+        "unknownCharacterSpanFraction": 0.0,
+        "knownMeaningfulTokenCount": 0,
+        "tokens": 4,
+        "hold": "unknown_or_empty_text"
+      },
+      "frozenV2Prediction": null,
+      "frozenV2Reason": "low_score_or_margin"
+    },
+    {
+      "case": "unknown_emoji",
+      "characters": 4000,
+      "strictStatus": {
+        "unknownCharacterSpanFraction": 1.0,
+        "knownMeaningfulTokenCount": 0,
+        "tokens": 2,
+        "hold": "unknown_or_empty_text"
+      },
+      "frozenV2Prediction": null,
+      "frozenV2Reason": "low_score_or_margin"
+    },
+    {
+      "case": "mixed_unknown",
+      "characters": 4000,
+      "strictStatus": {
+        "unknownCharacterSpanFraction": 0.99975,
+        "knownMeaningfulTokenCount": 1,
+        "tokens": 3,
+        "hold": "unknown_or_empty_text"
+      },
+      "frozenV2Prediction": "condense",
+      "frozenV2Reason": "cosine_and_margin"
+    },
+    {
+      "case": "known",
+      "characters": 3,
+      "strictStatus": {
+        "unknownCharacterSpanFraction": 0.0,
+        "knownMeaningfulTokenCount": 2,
+        "tokens": 3
+      },
+      "frozenV2Prediction": "condense",
+      "frozenV2Reason": "cosine_and_margin"
+    },
+    {
+      "case": "known_ascii",
+      "characters": 18,
+      "strictStatus": {
+        "unknownCharacterSpanFraction": 0.0,
+        "knownMeaningfulTokenCount": 5,
+        "tokens": 9
+      },
+      "frozenV2Prediction": "condense",
+      "frozenV2Reason": "cosine_and_margin"
+    },
+    {
+      "case": "too_long",
+      "characters": 4001,
+      "strictStatus": {
+        "hold": "input_limit"
+      },
+      "frozenV2Prediction": null,
+      "frozenV2Reason": "input_limit"
+    }
+  ],
+  "calibrationNonemptyAdditionalHolds": []
+}

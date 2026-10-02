@@ -1,0 +1,1035 @@
+{
+  "raw_top1_exact_vs_permitted_family": {
+    "1024-float32": {
+      "exact_correct": 52,
+      "permitted_family_correct": 54,
+      "n": 80
+    },
+    "128-float32": {
+      "exact_correct": 48,
+      "permitted_family_correct": 49,
+      "n": 80
+    },
+    "128-float16": {
+      "exact_correct": 48,
+      "permitted_family_correct": 49,
+      "n": 80
+    },
+    "chargram": {
+      "exact_correct": 40,
+      "permitted_family_correct": 41,
+      "n": 80
+    }
+  },
+  "matched_first_seven_labels_note": "JA/EN each7positives cover the same exactlabels(condense,cube,cuboid,cylinder,ring,sword,vase), with different independently authored sentences. Descriptive, not paired translations or a pure language-isolation study.",
+  "matched_first_seven_labels": {
+    "1024-float32": {
+      "retrieval_only": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 4,
+          "positive_exact_correct": 4,
+          "positive_family_correct": 4,
+          "positive_coverage": 0.5714285714285714,
+          "positive_exact_accuracy": 0.5714285714285714,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 1,
+          "positive_family_correct": 1,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.14285714285714285,
+          "positive_accepted_exact_precision": 0.5,
+          "positive_accepted_family_precision": 0.5,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 0.5,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      },
+      "guarded": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 4,
+          "positive_exact_correct": 4,
+          "positive_family_correct": 4,
+          "positive_coverage": 0.5714285714285714,
+          "positive_exact_accuracy": 0.5714285714285714,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": 0.0,
+          "positive_accepted_family_precision": 0.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 0.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      }
+    },
+    "128-float32": {
+      "retrieval_only": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 2,
+          "positive_family_correct": 2,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.2857142857142857,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 0,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.0,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": null,
+          "positive_accepted_family_precision": null,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": null,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      },
+      "guarded": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 2,
+          "positive_family_correct": 2,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.2857142857142857,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 0,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.0,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": null,
+          "positive_accepted_family_precision": null,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": null,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      }
+    },
+    "128-float16": {
+      "retrieval_only": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 2,
+          "positive_family_correct": 2,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.2857142857142857,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 0,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.0,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": null,
+          "positive_accepted_family_precision": null,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": null,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      },
+      "guarded": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 2,
+          "positive_family_correct": 2,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.2857142857142857,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 0,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.0,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": null,
+          "positive_accepted_family_precision": null,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": null,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      }
+    },
+    "chargram": {
+      "retrieval_only": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 0,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.0,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": null,
+          "positive_accepted_family_precision": null,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": null,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 0,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.0,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": null,
+          "positive_accepted_family_precision": null,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": null,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      },
+      "guarded": {
+        "ja": {
+          "positive_n": 7,
+          "positive_accepted": 2,
+          "positive_exact_correct": 2,
+          "positive_family_correct": 2,
+          "positive_coverage": 0.2857142857142857,
+          "positive_exact_accuracy": 0.2857142857142857,
+          "positive_accepted_exact_precision": 1.0,
+          "positive_accepted_family_precision": 1.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 1.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        },
+        "en": {
+          "positive_n": 7,
+          "positive_accepted": 1,
+          "positive_exact_correct": 0,
+          "positive_family_correct": 0,
+          "positive_coverage": 0.14285714285714285,
+          "positive_exact_accuracy": 0.0,
+          "positive_accepted_exact_precision": 0.0,
+          "positive_accepted_family_precision": 0.0,
+          "hold_n": 0,
+          "hold_false_activations": 0,
+          "accepted_unambiguous_exact_precision": 0.0,
+          "ambiguous_n": 0,
+          "ambiguous_accepted": 0,
+          "hold_by_subtype": {}
+        }
+      }
+    }
+  },
+  "caption_competition_examples": {
+    "1024-float32": [
+      {
+        "id": "ja-P30",
+        "actual_query": "小さい胴から八本の脚が伸びる、くもを一匹作って。",
+        "expected": "spider",
+        "expected_rank": 1,
+        "expected_score": 0.7030011415481567,
+        "raw_top10": [
+          {
+            "label": "spider",
+            "score": 0.7030011415481567,
+            "caption": "小さい胴体から八本の長い脚が伸びる蜘蛛。",
+            "margin": 0.3227682113647461
+          },
+          {
+            "label": "snake",
+            "score": 0.38023293018341064,
+            "caption": "脚のない長い胴体が曲がりくねる蛇。"
+          },
+          {
+            "label": "octahedron",
+            "score": 0.3744926154613495,
+            "caption": "八面体"
+          },
+          {
+            "label": "bird",
+            "score": 0.3178797960281372,
+            "caption": "胴体から翼とくちばしが伸びる鳥。空を飛ぶ動物。"
+          },
+          {
+            "label": "turtle",
+            "score": 0.27786093950271606,
+            "caption": "丸い硬い甲羅から頭と四本の足が出る亀。"
+          },
+          {
+            "label": "vase",
+            "score": 0.24382804334163666,
+            "caption": "ふくらんだ胴と細い首、開いた口を持つ花瓶。花を生ける器。"
+          },
+          {
+            "label": "pumpkin",
+            "score": 0.2375008910894394,
+            "caption": "縦の筋がある丸く扁平なかぼちゃ。上に太いへたがある。"
+          },
+          {
+            "label": "fish",
+            "score": 0.23344987630844116,
+            "caption": "流線型の胴と尾びれを持つ魚。水中を泳ぐ動物。"
+          },
+          {
+            "label": "sword",
+            "score": 0.22323986887931824,
+            "caption": "柄と鍔から長い平たい刃が伸びる剣。"
+          },
+          {
+            "label": "butterfly",
+            "score": 0.21544724702835083,
+            "caption": "細い胴体の左右に大きな二対の翅がある蝶。"
+          }
+        ]
+      },
+      {
+        "id": "ja-P32",
+        "actual_query": "花びらが中心を包んで何層にも巻く、ばらを一輪作って。",
+        "expected": "rose",
+        "expected_rank": 2,
+        "expected_score": 0.4013407230377197,
+        "raw_top10": [
+          {
+            "label": "flower",
+            "score": 0.5026161074638367,
+            "caption": "花びら",
+            "margin": 0.10127538442611694
+          },
+          {
+            "label": "rose",
+            "score": 0.4013407230377197,
+            "caption": "花びらが渦状に重なる薔薇。とげのある茎に咲く花。"
+          },
+          {
+            "label": "ring",
+            "score": 0.36545443534851074,
+            "caption": "輪っか"
+          },
+          {
+            "label": "mobius",
+            "score": 0.32201293110847473,
+            "caption": "メビウスの輪"
+          },
+          {
+            "label": "ribbon",
+            "score": 0.3064611554145813,
+            "caption": "平たい細い帯を左右の輪に結んだリボン。蝶結びの飾り。"
+          },
+          {
+            "label": "lotus",
+            "score": 0.301442950963974,
+            "caption": "水面に咲く蓮。大きな花びらが幾重にも重なった花。"
+          },
+          {
+            "label": "fireworks",
+            "score": 0.287985622882843,
+            "caption": "はなび"
+          },
+          {
+            "label": "knot",
+            "score": 0.2792683243751526,
+            "caption": "紐が絡み合ってつながる結び目。交差した輪を作る形。"
+          },
+          {
+            "label": "snake",
+            "score": 0.2776026427745819,
+            "caption": "へび"
+          },
+          {
+            "label": "vase",
+            "score": 0.2388795167207718,
+            "caption": "花瓶"
+          }
+        ]
+      },
+      {
+        "id": "en-P01",
+        "actual_query": "Please gather the letters into one smooth ball, like a glass marble.",
+        "expected": "condense",
+        "expected_rank": 2,
+        "expected_score": 0.2676844894886017,
+        "raw_top10": [
+          {
+            "label": "hourglass",
+            "score": 0.3618742525577545,
+            "caption": "hourglass",
+            "margin": 0.09418976306915283
+          },
+          {
+            "label": "condense",
+            "score": 0.2676844894886017,
+            "caption": "ball"
+          },
+          {
+            "label": "bottle",
+            "score": 0.17158079147338867,
+            "caption": "細い首と丸い口を持つ飲み物の瓶。胴体に液体を入れる。"
+          },
+          {
+            "label": "heart",
+            "score": 0.16943486034870148,
+            "caption": "上に二つの丸い膨らみ、下に尖った先を持つハート。愛を表す形。"
+          },
+          {
+            "label": "capsule",
+            "score": 0.14871691167354584,
+            "caption": "筒の両端が丸い半球になったカプセル。"
+          },
+          {
+            "label": "cube",
+            "score": 0.14253854751586914,
+            "caption": "六つの正方形の面からなる立方体。縦横高さが同じサイコロの形。"
+          },
+          {
+            "label": "saturn",
+            "score": 0.13306602835655212,
+            "caption": "丸い惑星を平たい環が取り囲む土星。"
+          },
+          {
+            "label": "turtle",
+            "score": 0.1311931312084198,
+            "caption": "かめ"
+          },
+          {
+            "label": "vase",
+            "score": 0.13095761835575104,
+            "caption": "vase"
+          },
+          {
+            "label": "crown",
+            "score": 0.11702395230531693,
+            "caption": "丸い輪の上に尖った飾りが並ぶ王冠。王が頭にかぶる。"
+          }
+        ]
+      },
+      {
+        "id": "en-P02",
+        "actual_query": "Make a solid like a die: six square faces, all its edges equal.",
+        "expected": "cube",
+        "expected_rank": 2,
+        "expected_score": 0.1631862372159958,
+        "raw_top10": [
+          {
+            "label": "square",
+            "score": 0.40587717294692993,
+            "caption": "square",
+            "margin": 0.24269093573093414
+          },
+          {
+            "label": "cube",
+            "score": 0.1631862372159958,
+            "caption": "cube"
+          },
+          {
+            "label": "hourglass",
+            "score": 0.14377304911613464,
+            "caption": "hourglass"
+          },
+          {
+            "label": "cone",
+            "score": 0.13987018167972565,
+            "caption": "cone"
+          },
+          {
+            "label": "diamond",
+            "score": 0.12153328955173492,
+            "caption": "gem"
+          },
+          {
+            "label": "octahedron",
+            "score": 0.1171165332198143,
+            "caption": "八つの三角形の面を持つ八面体。二つの四角錐を底面でつないだ立体。"
+          },
+          {
+            "label": "star",
+            "score": 0.11179500818252563,
+            "caption": "五つのとがった先端が放射状に伸びる星型の平面。"
+          },
+          {
+            "label": "gear",
+            "score": 0.10538825392723083,
+            "caption": "gear"
+          },
+          {
+            "label": "snake",
+            "score": 0.10343591868877411,
+            "caption": "snake"
+          },
+          {
+            "label": "mushroom",
+            "score": 0.09192213416099548,
+            "caption": "mushroom"
+          }
+        ]
+      },
+      {
+        "id": "en-P08",
+        "actual_query": "Create a band with one half-turn, then join its two ends into a loop.",
+        "expected": "mobius",
+        "expected_rank": 15,
+        "expected_score": 0.07454605400562286,
+        "raw_top10": [
+          {
+            "label": "saturn",
+            "score": 0.25987380743026733,
+            "caption": "saturn",
+            "margin": 0.0825672596693039
+          },
+          {
+            "label": "lotus",
+            "score": 0.17730654776096344,
+            "caption": "lotus"
+          },
+          {
+            "label": "fish",
+            "score": 0.12401171773672104,
+            "caption": "fish"
+          },
+          {
+            "label": "helix",
+            "score": 0.11732388287782669,
+            "caption": "螺旋"
+          },
+          {
+            "label": "apple",
+            "score": 0.11205904185771942,
+            "caption": "林檎"
+          },
+          {
+            "label": "bird",
+            "score": 0.11036740243434906,
+            "caption": "bird"
+          },
+          {
+            "label": "shell",
+            "score": 0.10572430491447449,
+            "caption": "shell"
+          },
+          {
+            "label": "butterfly",
+            "score": 0.09700998663902283,
+            "caption": "ちょうちょ"
+          },
+          {
+            "label": "moon",
+            "score": 0.0927814394235611,
+            "caption": "三日月"
+          },
+          {
+            "label": "egg",
+            "score": 0.09166525304317474,
+            "caption": "片側が細くもう片側が丸い卵の立体。鳥のたまごの形。"
+          }
+        ]
+      },
+      {
+        "id": "en-P33",
+        "actual_query": "Please make a vaz for flowers: hollow, bottom closed, mouth open at the top.",
+        "expected": "vase",
+        "expected_rank": 2,
+        "expected_score": 0.2493043839931488,
+        "raw_top10": [
+          {
+            "label": "flower",
+            "score": 0.43692708015441895,
+            "caption": "flower",
+            "margin": 0.18762269616127014
+          },
+          {
+            "label": "vase",
+            "score": 0.2493043839931488,
+            "caption": "花瓶"
+          },
+          {
+            "label": "rose",
+            "score": 0.2368164360523224,
+            "caption": "花びらが渦状に重なる薔薇。とげのある茎に咲く花。"
+          },
+          {
+            "label": "bottle",
+            "score": 0.1934708058834076,
+            "caption": "bottle"
+          },
+          {
+            "label": "lotus",
+            "score": 0.1587798297405243,
+            "caption": "水面に咲く蓮。大きな花びらが幾重にも重なった花。"
+          },
+          {
+            "label": "fireworks",
+            "score": 0.1318909227848053,
+            "caption": "中心から放射状に広がる花火。夜空に開く光の球。"
+          },
+          {
+            "label": "ribbon",
+            "score": 0.12478513270616531,
+            "caption": "平たい細い帯を左右の輪に結んだリボン。蝶結びの飾り。"
+          },
+          {
+            "label": "teapot",
+            "score": 0.1085314080119133,
+            "caption": "teapot"
+          },
+          {
+            "label": "butterfly",
+            "score": 0.10698802769184113,
+            "caption": "蝶"
+          },
+          {
+            "label": "snowflake",
+            "score": 0.10337968915700912,
+            "caption": "snowflake"
+          }
+        ]
+      }
+    ],
+    "128-float32": [
+      {
+        "id": "ja-P30",
+        "actual_query": "小さい胴から八本の脚が伸びる、くもを一匹作って。",
+        "expected": "spider",
+        "expected_rank": 1,
+        "expected_score": 0.6677564382553101,
+        "raw_top10": [
+          {
+            "label": "spider",
+            "score": 0.6677564382553101,
+            "caption": "小さい胴体から八本の長い脚が伸びる蜘蛛。",
+            "margin": 0.2503661811351776
+          },
+          {
+            "label": "octahedron",
+            "score": 0.41739025712013245,
+            "caption": "八面体"
+          },
+          {
+            "label": "bird",
+            "score": 0.4045529365539551,
+            "caption": "胴体から翼とくちばしが伸びる鳥。空を飛ぶ動物。"
+          },
+          {
+            "label": "snake",
+            "score": 0.3664869964122772,
+            "caption": "脚のない長い胴体が曲がりくねる蛇。"
+          },
+          {
+            "label": "fish",
+            "score": 0.31535741686820984,
+            "caption": "流線型の胴と尾びれを持つ魚。水中を泳ぐ動物。"
+          },
+          {
+            "label": "vase",
+            "score": 0.2958277761936188,
+            "caption": "ふくらんだ胴と細い首、開いた口を持つ花瓶。花を生ける器。"
+          },
+          {
+            "label": "cylinder",
+            "score": 0.29495933651924133,
+            "caption": "上下の丸い平面をまっすぐな側面がつなぐ円柱。"
+          },
+          {
+            "label": "turtle",
+            "score": 0.2903365194797516,
+            "caption": "丸い硬い甲羅から頭と四本の足が出る亀。"
+          },
+          {
+            "label": "star",
+            "score": 0.28607118129730225,
+            "caption": "五つのとがった先端が放射状に伸びる星型の平面。"
+          },
+          {
+            "label": "cloud",
+            "score": 0.2783978581428528,
+            "caption": "丸い膨らみが重なった柔らかい雲。空に浮く白い塊。"
+          }
+        ]
+      },
+      {
+        "id": "ja-P32",
+        "actual_query": "花びらが中心を包んで何層にも巻く、ばらを一輪作って。",
+        "expected": "rose",
+        "expected_rank": 1,
+        "expected_score": 0.5413064956665039,
+        "raw_top10": [
+          {
+            "label": "rose",
+            "score": 0.5413064956665039,
+            "caption": "花びらが渦状に重なる薔薇。とげのある茎に咲く花。",
+            "margin": 0.020158886909484863
+          },
+          {
+            "label": "flower",
+            "score": 0.521147608757019,
+            "caption": "花びら"
+          },
+          {
+            "label": "ring",
+            "score": 0.43922433257102966,
+            "caption": "輪っか"
+          },
+          {
+            "label": "mobius",
+            "score": 0.4390718638896942,
+            "caption": "メビウスの輪"
+          },
+          {
+            "label": "lotus",
+            "score": 0.3525936007499695,
+            "caption": "水面に咲く蓮。大きな花びらが幾重にも重なった花。"
+          },
+          {
+            "label": "dango",
+            "score": 0.33126264810562134,
+            "caption": "だんご"
+          },
+          {
+            "label": "ribbon",
+            "score": 0.3309284448623657,
+            "caption": "平たい細い帯を左右の輪に結んだリボン。蝶結びの飾り。"
+          },
+          {
+            "label": "knot",
+            "score": 0.3295895457267761,
+            "caption": "紐が絡み合ってつながる結び目。交差した輪を作る形。"
+          },
+          {
+            "label": "vase",
+            "score": 0.3173861801624298,
+            "caption": "ふくらんだ胴と細い首、開いた口を持つ花瓶。花を生ける器。"
+          },
+          {
+            "label": "crown",
+            "score": 0.26797187328338623,
+            "caption": "丸い輪の上に尖った飾りが並ぶ王冠。王が頭にかぶる。"
+          }
+        ]
+      },
+      {
+        "id": "en-P01",
+        "actual_query": "Please gather the letters into one smooth ball, like a glass marble.",
+        "expected": "condense",
+        "expected_rank": 2,
+        "expected_score": 0.3392965793609619,
+        "raw_top10": [
+          {
+            "label": "hourglass",
+            "score": 0.4090435802936554,
+            "caption": "hourglass",
+            "margin": 0.06974700093269348
+          },
+          {
+            "label": "condense",
+            "score": 0.3392965793609619,
+            "caption": "ball"
+          },
+          {
+            "label": "mushroom",
+            "score": 0.2877656817436218,
+            "caption": "細い柄の上に丸い傘が広がるきのこ。"
+          },
+          {
+            "label": "ribbon",
+            "score": 0.2870332896709442,
+            "caption": "平たい細い帯を左右の輪に結んだリボン。蝶結びの飾り。"
+          },
+          {
+            "label": "heart",
+            "score": 0.27946576476097107,
+            "caption": "上に二つの丸い膨らみ、下に尖った先を持つハート。愛を表す形。"
+          },
+          {
+            "label": "crown",
+            "score": 0.2687484622001648,
+            "caption": "丸い輪の上に尖った飾りが並ぶ王冠。王が頭にかぶる。"
+          },
+          {
+            "label": "egg",
+            "score": 0.2546994090080261,
+            "caption": "egg"
+          },
+          {
+            "label": "umbrella",
+            "score": 0.22833038866519928,
+            "caption": "長い柄の上に大きな傘が開く雨具。雨を避ける形。"
+          },
+          {
+            "label": "wave",
+            "score": 0.22417977452278137,
+            "caption": "上下に起伏する波。水面がなめらかにうねる形。"
+          },
+          {
+            "label": "knot",
+            "score": 0.22189193964004517,
+            "caption": "紐が絡み合ってつながる結び目。交差した輪を作る形。"
+          }
+        ]
+      },
+      {
+        "id": "en-P02",
+        "actual_query": "Make a solid like a die: six square faces, all its edges equal.",
+        "expected": "cube",
+        "expected_rank": 24,
+        "expected_score": 0.12757083773612976,
+        "raw_top10": [
+          {
+            "label": "square",
+            "score": 0.4590756595134735,
+            "caption": "square",
+            "margin": 0.19152238965034485
+          },
+          {
+            "label": "star",
+            "score": 0.26755326986312866,
+            "caption": "五つのとがった先端が放射状に伸びる星型の平面。"
+          },
+          {
+            "label": "wave",
+            "score": 0.24294084310531616,
+            "caption": "上下に起伏する波。水面がなめらかにうねる形。"
+          },
+          {
+            "label": "vase",
+            "score": 0.24231497943401337,
+            "caption": "ふくらんだ胴と細い首、開いた口を持つ花瓶。花を生ける器。"
+          },
+          {
+            "label": "lantern",
+            "score": 0.22577953338623047,
+            "caption": "提灯"
+          },
+          {
+            "label": "diamond",
+            "score": 0.2075144499540329,
+            "caption": "gem"
+          },
+          {
+            "label": "sword",
+            "score": 0.19825074076652527,
+            "caption": "剣"
+          },
+          {
+            "label": "crown",
+            "score": 0.19154322147369385,
+            "caption": "クラウン"
+          },
+          {
+            "label": "lotus",
+            "score": 0.18799510598182678,
+            "caption": "水面に咲く蓮。大きな花びらが幾重にも重なった花。"
+          },
+          {
+            "label": "gear",
+            "score": 0.18256908655166626,
+            "caption": "gear"
+          }
+        ]
+      },
+      {
+        "id": "en-P08",
+        "actual_query": "Create a band with one half-turn, then join its two ends into a loop.",
+        "expected": "mobius",
+        "expected_rank": 15,
+        "expected_score": 0.15174327790737152,
+        "raw_top10": [
+          {
+            "label": "saturn",
+            "score": 0.34672319889068604,
+            "caption": "saturn",
+            "margin": 0.06134137511253357
+          },
+          {
+            "label": "apple",
+            "score": 0.28538182377815247,
+            "caption": "りんご"
+          },
+          {
+            "label": "lotus",
+            "score": 0.23675662279129028,
+            "caption": "lotus"
+          },
+          {
+            "label": "bolt",
+            "score": 0.22092148661613464,
+            "caption": "いなずま"
+          },
+          {
+            "label": "helix",
+            "score": 0.2139430046081543,
+            "caption": "スプリング"
+          },
+          {
+            "label": "moon",
+            "score": 0.20374245941638947,
+            "caption": "moon"
+          },
+          {
+            "label": "tree",
+            "score": 0.18985159695148468,
+            "caption": "一本の幹から枝と葉が広がる樹木。"
+          },
+          {
+            "label": "diamond",
+            "score": 0.18670055270195007,
+            "caption": "多くの平らな面が光を反射するカットされた宝石。"
+          },
+          {
+            "label": "orbit",
+            "score": 0.18661236763000488,
+            "caption": "原子"
+          },
+          {
+            "label": "hourglass",
+            "score": 0.1754746437072754,
+            "caption": "砂時計"
+          }
+        ]
+      },
+      {
+        "id": "en-P33",
+        "actual_query": "Please make a vaz for flowers: hollow, bottom closed, mouth open at the top.",
+        "expected": "vase",
+        "expected_rank": 2,
+        "expected_score": 0.32966381311416626,
+        "raw_top10": [
+          {
+            "label": "flower",
+            "score": 0.4260592460632324,
+            "caption": "flower",
+            "margin": 0.09639543294906616
+          },
+          {
+            "label": "vase",
+            "score": 0.32966381311416626,
+            "caption": "花瓶"
+          },
+          {
+            "label": "pumpkin",
+            "score": 0.328885555267334,
+            "caption": "かぼちゃ"
+          },
+          {
+            "label": "apple",
+            "score": 0.2911089062690735,
+            "caption": "林檎"
+          },
+          {
+            "label": "fireworks",
+            "score": 0.2715022563934326,
+            "caption": "fireworks"
+          },
+          {
+            "label": "bottle",
+            "score": 0.2411826252937317,
+            "caption": "bottle"
+          },
+          {
+            "label": "rose",
+            "score": 0.23855479061603546,
+            "caption": "花びらが渦状に重なる薔薇。とげのある茎に咲く花。"
+          },
+          {
+            "label": "ribbon",
+            "score": 0.21733498573303223,
+            "caption": "リボン"
+          },
+          {
+            "label": "sun",
+            "score": 0.21296757459640503,
+            "caption": "sun"
+          },
+          {
+            "label": "lotus",
+            "score": 0.19748350977897644,
+            "caption": "水面に咲く蓮。大きな花びらが幾重にも重なった花。"
+          }
+        ]
+      }
+    ]
+  },
+  "method_note": "Each label takes the maximum across its own captions; same-label captions are collapsed before the top-two-label margin. Different labels/aliases can compete: square descriptions in cube requests, flowers inside a vase request, Japanese くも cloud versus spider, and incidental glass versus hourglass. Caption-count differences also mean maximum aggregation is not uniform across labels.",
+  "risk_vs_coverage": "Only the two pre-frozen operating modes are compared. Their thresholds differ as well as guard behavior; no post-hoc grid search or tuned operating point is selected."
+}

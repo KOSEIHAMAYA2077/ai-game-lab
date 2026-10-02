@@ -1,0 +1,470 @@
+{
+  "scope": "Node interpreter only. Complete resolution includes authored rules, and guard_v2 includes compilation. No rendering, animation absorption, UI, native-widget footprint or network.",
+  "warm": {
+    "v1": {
+      "wall": {
+        "count": 1200,
+        "medianMs": 0.029000000000053205,
+        "p95Ms": 0.08062499999999773,
+        "maxMs": 0.18304200000000037
+      }
+    },
+    "guard_v2": {
+      "wall": {
+        "count": 1200,
+        "medianMs": 0.06441700000004857,
+        "p95Ms": 0.6456660000000056,
+        "maxMs": 0.9271249999999895
+      },
+      "classifier": {
+        "count": 1200,
+        "medianMs": 0.02716600000002245,
+        "p95Ms": 0.07245900000003758,
+        "maxMs": 0.12508300000001782
+      },
+      "guard": {
+        "count": 1200,
+        "medianMs": 0.018416999999942618,
+        "p95Ms": 0.6191250000000537,
+        "maxMs": 0.8668329999999855
+      }
+    },
+    "rules": {
+      "wall": {
+        "count": 1200,
+        "medianMs": 0.0014999999999645297,
+        "p95Ms": 0.0025420000000622167,
+        "maxMs": 0.026250000000004547
+      }
+    }
+  },
+  "coldProcesses": {
+    "v1": [
+      {
+        "kind": "v1",
+        "importMs": 1.0806250000000013,
+        "firstSingletonMs": 2.0535829999999997,
+        "firstPairMs": 1.4640419999999992,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "before": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 0,
+          "decodedWeightBytes": 0,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterSingleton": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 1,
+          "decodedWeightBytes": 57856,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterPair": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 2,
+          "decodedWeightBytes": 91136,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      },
+      {
+        "kind": "v1",
+        "importMs": 1.0095410000000005,
+        "firstSingletonMs": 1.9295419999999996,
+        "firstPairMs": 1.4809999999999999,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "before": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 0,
+          "decodedWeightBytes": 0,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterSingleton": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 1,
+          "decodedWeightBytes": 57856,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterPair": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 2,
+          "decodedWeightBytes": 91136,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      },
+      {
+        "kind": "v1",
+        "importMs": 1.107584000000001,
+        "firstSingletonMs": 2.04725,
+        "firstPairMs": 1.5532079999999997,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "before": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 0,
+          "decodedWeightBytes": 0,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterSingleton": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 1,
+          "decodedWeightBytes": 57856,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterPair": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 2,
+          "decodedWeightBytes": 91136,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      }
+    ],
+    "guard_v2": [
+      {
+        "kind": "guard_v2",
+        "importMs": 1.3822910000000004,
+        "firstSingletonMs": 5.535375000000002,
+        "firstPairMs": 3.6757920000000013,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "before": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 0,
+          "decodedWeightBytes": 0,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterSingleton": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 1,
+          "decodedWeightBytes": 57856,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterPair": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 2,
+          "decodedWeightBytes": 91136,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      },
+      {
+        "kind": "guard_v2",
+        "importMs": 1.315417,
+        "firstSingletonMs": 5.5241250000000015,
+        "firstPairMs": 3.8127910000000007,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "before": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 0,
+          "decodedWeightBytes": 0,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterSingleton": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 1,
+          "decodedWeightBytes": 57856,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterPair": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 2,
+          "decodedWeightBytes": 91136,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      },
+      {
+        "kind": "guard_v2",
+        "importMs": 1.3087499999999999,
+        "firstSingletonMs": 5.441542000000002,
+        "firstPairMs": 3.5617090000000005,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "before": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 0,
+          "decodedWeightBytes": 0,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterSingleton": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 1,
+          "decodedWeightBytes": 57856,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "afterPair": {
+          "format": "glyph-char-student-v1",
+          "dimensions": 4096,
+          "headCount": 2,
+          "decodedWeightBytes": 91136,
+          "maxInputCodeUnits": 4000,
+          "transformer": false,
+          "externalRequests": false,
+          "thresholds": {
+            "primitiveScore": 0.8,
+            "primitiveMargin": 0.35,
+            "primitiveCoverage": 0.24,
+            "relationScore": 0.78,
+            "relationMargin": 0.3
+          }
+        },
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      }
+    ],
+    "rules": [
+      {
+        "kind": "rules",
+        "importMs": 0.243958000000001,
+        "firstSingletonMs": 0.8058750000000003,
+        "firstPairMs": 0.8517090000000014,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      },
+      {
+        "kind": "rules",
+        "importMs": 0.2692080000000008,
+        "firstSingletonMs": 0.8154170000000001,
+        "firstPairMs": 0.8246249999999993,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      },
+      {
+        "kind": "rules",
+        "importMs": 0.24704199999999865,
+        "firstSingletonMs": 0.8292910000000013,
+        "firstPairMs": 0.7538330000000002,
+        "firstSingletonId": "fresh-001",
+        "firstPairId": "fresh-049",
+        "firstSingletonAccepted": true,
+        "firstPairAccepted": true,
+        "note": "Fresh process; singleton first may decode primitive head, subsequent pair first may decode relation head. These wall times include corresponding authored rules; guard_v2 includes compiler."
+      }
+    ]
+  },
+  "scores": {
+    "primitive": {
+      "count": 600,
+      "medianMs": 0.022333000000003267,
+      "p95Ms": 0.05312500000002274,
+      "maxMs": 0.20458300000007057,
+      "note": "Full raw sentences sent directly to public score API, a cost probe rather than the actual noun/masked queries used by the pipeline."
+    },
+    "relation": {
+      "count": 600,
+      "medianMs": 0.02075000000002092,
+      "p95Ms": 0.05041700000003857,
+      "maxMs": 0.1229999999999336,
+      "note": "Full raw sentences sent directly to public score API, a cost probe rather than the actual noun/masked queries used by the pipeline."
+    }
+  },
+  "decode": {
+    "primitive": {
+      "count": 20,
+      "medianMs": 0.13387499999998909,
+      "p95Ms": 1.3112499999999727,
+      "maxMs": 1.3112499999999727,
+      "decodedBytes": 57856,
+      "note": "Standalone equivalent decode loop; excludes module import/JSON parse/features/softmax and is not additive to measured cold totals."
+    },
+    "relation": {
+      "count": 20,
+      "medianMs": 0.3874159999999165,
+      "p95Ms": 0.4930420000000595,
+      "maxMs": 0.4930420000000595,
+      "decodedBytes": 33280,
+      "note": "Standalone equivalent decode loop; excludes module import/JSON parse/features/softmax and is not additive to measured cold totals."
+    }
+  }
+}

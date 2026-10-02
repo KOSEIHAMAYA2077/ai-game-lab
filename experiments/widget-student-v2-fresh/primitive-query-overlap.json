@@ -1,0 +1,2869 @@
+{
+  "method": "Reconstruct frozen alias spans, or whole phrase when no alias; public scoring API output must exactly equal every stored candidate array. Primitive only; no claim about relation query overlap.",
+  "byPipeline": {
+    "v1": {
+      "queryCalls": 150,
+      "trainExactNormalized": 129,
+      "devExactNormalized": 0,
+      "casesWithAtLeastOneTrainQueryOverlap": 86
+    },
+    "guard_v2": {
+      "queryCalls": 132,
+      "trainExactNormalized": 112,
+      "devExactNormalized": 0,
+      "casesWithAtLeastOneTrainQueryOverlap": 71
+    }
+  },
+  "cases": [
+    {
+      "id": "fresh-001",
+      "text": "小さな球をひとつ、お願い。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-002",
+      "text": "色はどうでもいいので、大きい球形にして。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球形",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球形",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-003",
+      "text": "横に幅のある丸い球体。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-004",
+      "text": "A tiny orb, please.",
+      "queries": {
+        "v1": [
+          {
+            "query": "orb",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "orb",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-005",
+      "text": "I don't care about the color; make a sphere.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-006",
+      "text": "Stretch the ball vertically so it is tall.",
+      "queries": {
+        "v1": [
+          {
+            "query": "ball",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "ball",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-007",
+      "text": "奥行きの浅い直方体を作って。",
+      "queries": {
+        "v1": [
+          {
+            "query": "直方体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "直方体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-008",
+      "text": "横幅の狭い箱型。",
+      "queries": {
+        "v1": [
+          {
+            "query": "横幅の狭い箱型。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "横幅の狭い箱型。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-009",
+      "text": "説明はいらない、立方体を表示して。",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-010",
+      "text": "Give me a broad cuboid.",
+      "queries": {
+        "v1": [
+          {
+            "query": "cuboid",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "cuboid",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-011",
+      "text": "A short box with little height.",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-012",
+      "text": "No animation is needed. Please create one cube.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-013",
+      "text": "背が高い円柱を一本。",
+      "queries": {
+        "v1": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-014",
+      "text": "円柱を低く、ずんぐりした感じで。",
+      "queries": {
+        "v1": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-015",
+      "text": "細い筒の形にしてほしい。",
+      "queries": {
+        "v1": [
+          {
+            "query": "筒",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "筒",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-016",
+      "text": "A tall cylinder standing upright.",
+      "queries": {
+        "v1": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-017",
+      "text": "Make a squat cylinder.",
+      "queries": {
+        "v1": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-018",
+      "text": "Please form a slender cylindrical column.",
+      "queries": {
+        "v1": [
+          {
+            "query": "please form a slender cylindrical column.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "please form a slender cylindrical column.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-019",
+      "text": "ドーナツ状の輪を小さめに作って。",
+      "queries": {
+        "v1": [
+          {
+            "query": "ドーナツ",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "輪",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "ドーナツ",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "輪",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-020",
+      "text": "真ん中が抜けた丸い輪っかを大きく。",
+      "queries": {
+        "v1": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-021",
+      "text": "輪の太さが薄いトーラス。",
+      "queries": {
+        "v1": [
+          {
+            "query": "輪",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "輪",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-022",
+      "text": "A small doughnut shape, please.",
+      "queries": {
+        "v1": [
+          {
+            "query": "a small doughnut shape, please.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "a small doughnut shape, please.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-023",
+      "text": "Make the torus thick around its ring.",
+      "queries": {
+        "v1": [
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-024",
+      "text": "An oversized circular ring with a hole.",
+      "queries": {
+        "v1": [
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-025",
+      "text": "細長い刃の形を作って。",
+      "queries": {
+        "v1": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-026",
+      "text": "刀身を短くして表示。",
+      "queries": {
+        "v1": [
+          {
+            "query": "刀身を短くして表示。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "刀身を短くして表示。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-027",
+      "text": "刃の幅を広めにして。",
+      "queries": {
+        "v1": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-028",
+      "text": "Create a long, slender blade.",
+      "queries": {
+        "v1": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-029",
+      "text": "A short sword blade.",
+      "queries": {
+        "v1": [
+          {
+            "query": "sword",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "sword",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-030",
+      "text": "Give the blade a broad width.",
+      "queries": {
+        "v1": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-031",
+      "text": "背の高い花瓶を作って。",
+      "queries": {
+        "v1": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-032",
+      "text": "小ぶりな花器をひとつ。",
+      "queries": {
+        "v1": [
+          {
+            "query": "小ぶりな花器をひとつ。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "小ぶりな花器をひとつ。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-033",
+      "text": "花瓶の胴を横に広くして。",
+      "queries": {
+        "v1": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-034",
+      "text": "Create a tall flower vase.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-035",
+      "text": "A little vase for flowers, please.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-036",
+      "text": "Make a vase with a wide body.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-037",
+      "text": "箱の上に球を置いて。",
+      "queries": {
+        "v1": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-038",
+      "text": "球を上に、その下には箱を配置して。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-039",
+      "text": "輪っかの下に円柱をひとつ。",
+      "queries": {
+        "v1": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-040",
+      "text": "円柱が下、トーラスが上になるように。",
+      "queries": {
+        "v1": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-041",
+      "text": "花瓶の左側に刃を置く。",
+      "queries": {
+        "v1": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-042",
+      "text": "刃を左、花器を右。",
+      "queries": {
+        "v1": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-043",
+      "text": "球の右に花瓶を配置して。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-044",
+      "text": "花瓶を右側に、球体はその左へ。",
+      "queries": {
+        "v1": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-045",
+      "text": "トーラスの穴の中に球を入れて。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-046",
+      "text": "箱の内側に、小さな花瓶を置いて。",
+      "queries": {
+        "v1": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-047",
+      "text": "箱の手前に円柱を立てて。",
+      "queries": {
+        "v1": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-048",
+      "text": "刃の奥に輪っかを置いてほしい。",
+      "queries": {
+        "v1": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-049",
+      "text": "Put a sphere above a box.",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-050",
+      "text": "The box goes below the ball.",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ball",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ball",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-051",
+      "text": "A cylinder beneath the torus, please.",
+      "queries": {
+        "v1": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-052",
+      "text": "Place the ring over the cylinder.",
+      "queries": {
+        "v1": [
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-053",
+      "text": "Set a blade to the left of a vase.",
+      "queries": {
+        "v1": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-054",
+      "text": "The vase should be on the right, with the blade on its left.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-055",
+      "text": "Put the vase to the right of the sphere.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-056",
+      "text": "On the left is an orb; on the right is a flower vase.",
+      "queries": {
+        "v1": [
+          {
+            "query": "orb",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "orb",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-057",
+      "text": "Place the sphere inside the torus hole.",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-058",
+      "text": "A vase inside a box.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-059",
+      "text": "Stand the cylinder in front of the box.",
+      "queries": {
+        "v1": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-060",
+      "text": "Put the ring behind the blade.",
+      "queries": {
+        "v1": [
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-061",
+      "text": "球は作らないで。",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-062",
+      "text": "今回は箱を表示しない。",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-063",
+      "text": "円柱を出すのは禁止。",
+      "queries": {
+        "v1": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-064",
+      "text": "花瓶は要りません。",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-065",
+      "text": "Do not create a sphere.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-066",
+      "text": "Please avoid making a box.",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-067",
+      "text": "I don't want a cylinder.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-068",
+      "text": "No vase this time.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-069",
+      "text": "友人の案は「球を作る」だった。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-070",
+      "text": "「箱の上に球を置いて」という文を引用しているだけ。",
+      "queries": {
+        "v1": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-071",
+      "text": "メモ：円柱を作る、という提案。まだ決定していない。",
+      "queries": {
+        "v1": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-072",
+      "text": "誰かが「輪っかにしよう」と言っていた。",
+      "queries": {
+        "v1": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-073",
+      "text": "Someone suggested \"make a sphere\".",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-074",
+      "text": "The note says \"put a box above a vase\"; it is only a quotation.",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-075",
+      "text": "A proposal I read was to make a cylinder. No decision yet.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-076",
+      "text": "\"Create a torus\" is an example sentence, not a request.",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-077",
+      "text": "`shape = \"sphere\";` このコードを眺めている。",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-078",
+      "text": "```json\n{\"shape\":\"box\"}\n```",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-079",
+      "text": "関数名は createCylinder() です。",
+      "queries": {
+        "v1": [
+          {
+            "query": "関数名は createcylinder() です。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "関数名は createcylinder() です。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-080",
+      "text": "`createVase();` is a code snippet.",
+      "queries": {
+        "v1": [
+          {
+            "query": "`createvase();` is a code snippet.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-081",
+      "text": "```js\nconst shape = \"torus\";\n```",
+      "queries": {
+        "v1": [
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-082",
+      "text": "The variable is called blade_length.",
+      "queries": {
+        "v1": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-083",
+      "text": "ピラミッドを作って。",
+      "queries": {
+        "v1": [
+          {
+            "query": "ピラミッドを作って。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "ピラミッドを作って。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-084",
+      "text": "五芒星の立体がほしい。",
+      "queries": {
+        "v1": [
+          {
+            "query": "五芒星の立体がほしい。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "五芒星の立体がほしい。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-085",
+      "text": "うさぎの形を出して。",
+      "queries": {
+        "v1": [
+          {
+            "query": "うさぎの形を出して。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "うさぎの形を出して。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-086",
+      "text": "人間の手の模型を生成して。",
+      "queries": {
+        "v1": [
+          {
+            "query": "人間の手の模型を生成して。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "人間の手の模型を生成して。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-087",
+      "text": "Make a cone, please.",
+      "queries": {
+        "v1": [
+          {
+            "query": "make a cone, please.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "make a cone, please.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-088",
+      "text": "Create a realistic tree.",
+      "queries": {
+        "v1": [
+          {
+            "query": "create a realistic tree.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "create a realistic tree.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-089",
+      "text": "I want a triangular pyramid.",
+      "queries": {
+        "v1": [
+          {
+            "query": "i want a triangular pyramid.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "i want a triangular pyramid.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-090",
+      "text": "Build a human hand.",
+      "queries": {
+        "v1": [
+          {
+            "query": "build a human hand.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "build a human hand.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-091",
+      "text": "一個だけの物体を、球であり立方体でもある形にして。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "立方体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "立方体",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-092",
+      "text": "同じ花瓶を、背が高くて背が低い形に同時にして。",
+      "queries": {
+        "v1": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-093",
+      "text": "球を箱の左にも右にも同時に置いて。二つは作らないで。",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-094",
+      "text": "One single object must be both a sphere and a box at once.",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-095",
+      "text": "Make the same cylinder simultaneously tall and short.",
+      "queries": {
+        "v1": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-096",
+      "text": "Put the one blade both above and below the vase at the same time.",
+      "queries": {
+        "v1": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-097",
+      "text": "さっきの球の注文を取り消して。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-098",
+      "text": "花瓶の生成はキャンセル。何も追加しないで。",
+      "queries": {
+        "v1": [],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-099",
+      "text": "Cancel my earlier request for a box.",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": []
+      }
+    },
+    {
+      "id": "fresh-100",
+      "text": "Stop the torus request; add nothing.",
+      "queries": {
+        "v1": [
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "torus",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-101",
+      "text": "球か箱、どっちがいいかな。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-102",
+      "text": "円柱にするか花瓶にするか迷ってる。",
+      "queries": {
+        "v1": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "円柱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-103",
+      "text": "輪っかっぽい刃ってどういう形だろう。",
+      "queries": {
+        "v1": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "輪っか",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-104",
+      "text": "箱と球をいい感じに配置。",
+      "queries": {
+        "v1": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-105",
+      "text": "刃と花瓶を近くに、でも位置はまだ考え中。",
+      "queries": {
+        "v1": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "刃",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-106",
+      "text": "それを左に置いて。",
+      "queries": {
+        "v1": [
+          {
+            "query": "それを左に置いて。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "それを左に置いて。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-107",
+      "text": "あれを小さくして。",
+      "queries": {
+        "v1": [
+          {
+            "query": "あれを小さくして。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "あれを小さくして。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-108",
+      "text": "丸い気分の形が欲しい。",
+      "queries": {
+        "v1": [
+          {
+            "query": "丸い気分の形が欲しい。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "丸い気分の形が欲しい。",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-109",
+      "text": "花瓶みたいな、でも花瓶とは違う何か。",
+      "queries": {
+        "v1": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "花瓶",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-110",
+      "text": "球の上か下に箱を置こうかな。",
+      "queries": {
+        "v1": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "球",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "箱",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-111",
+      "text": "Maybe a sphere, maybe a cube.",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "cube",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "cube",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-112",
+      "text": "Should it be a cylinder or a vase?",
+      "queries": {
+        "v1": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "cylinder",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-113",
+      "text": "A blade that is sort of a ring?",
+      "queries": {
+        "v1": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ring",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-114",
+      "text": "Arrange the sphere and the box somehow.",
+      "queries": {
+        "v1": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "sphere",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-115",
+      "text": "The vase and blade should look good together; position undecided.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "blade",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-116",
+      "text": "Put it above that one.",
+      "queries": {
+        "v1": [
+          {
+            "query": "put it above that one.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "put it above that one.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-117",
+      "text": "Make that a little wider.",
+      "queries": {
+        "v1": [
+          {
+            "query": "make that a little wider.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "make that a little wider.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-118",
+      "text": "I feel round today; show that feeling.",
+      "queries": {
+        "v1": [
+          {
+            "query": "i feel round today; show that feeling.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "i feel round today; show that feeling.",
+            "trainExactNormalized": false,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-119",
+      "text": "Something vase-like but unlike an actual vase.",
+      "queries": {
+        "v1": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "vase",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "fresh-120",
+      "text": "A box either above or below a ball, perhaps.",
+      "queries": {
+        "v1": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ball",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ],
+        "guard_v2": [
+          {
+            "query": "box",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          },
+          {
+            "query": "ball",
+            "trainExactNormalized": true,
+            "devExactNormalized": false,
+            "scoresExactlyMatched": true
+          }
+        ]
+      }
+    }
+  ]
+}
