@@ -1,0 +1,25 @@
+{
+  "version": "native-response-boundary-correction-r2",
+  "knownFailure": "R1 native131072B sendguard throws for legal operation-local cluster body beforedisplay whileR3 already adds material. Original source/BuildR4/raw retained.",
+  "maxJSONBound": {
+    "maxBodyUnits": 256,
+    "maxUnitUTF16": 256,
+    "maxJSONBytesPerUTF16": 6,
+    "perUnitMetadataBudgetBytes": 64,
+    "aggregateAndOptionalShapeTokenBudgetBytes": 8192,
+    "boundBytes": 417792,
+    "newGuardBytes": 524288
+  },
+  "derivation": "readBody emits only id<=256,text<=256UTF16,ink4fixed names. Worst literal escaping uses6bytes/UTF16. Per-unit64bytes covers fixedkeys/separators/3digitID/ink<=6. Remaining8192 covers fixedaggregate plus bounded optional shape token/query<=128UTF16 and numeric fixedwatermarks. This is a schema payload bound, not whole-processRAM.",
+  "empiricalR1": {
+    "decodedViewReencodedBytes": 204985,
+    "firstFailedCycle": 164,
+    "bodyUnits": 256,
+    "bodyUTF16": 65536,
+    "sendFailures": 187
+  },
+  "probeByteScope": "R1 byte metric is JSONEncoder re-encoding of decoded nativeview, not byte-identical JavaScript JSON or full optional shapeToken. Response correction tests actual send/current gate and preserves full payload.",
+  "change": "New ReceiverBridge-r2 uses same524288B bound for send/current decode, no truncation/newID/segmentation. App now BridgeR2 + ProducerR2 / BuildR5. OtherJSON command8192B remains. Body source/threshold/shader unchanged.",
+  "expected": "Same previously fixed responseprobe succeeds with all256 exactunits65536UTF16/sequentialIDs, no send failure; same7 nativecallback regression passes. UI/IME/resource/GPU repeated0.",
+  "memory": "Each response has JS string + UTF8 Data + decoded model andvolatile rendercache; several copies exist.524288B is one response payload bound, not nativeprocessRAM/CPU or low-memory guarantee."
+}

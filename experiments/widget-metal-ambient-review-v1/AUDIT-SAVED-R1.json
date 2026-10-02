@@ -1,0 +1,67 @@
+{
+  "version": "saved-native-ambient-audit-r1",
+  "callbacks": {
+    "CALLBACKS-R2-FIRST-R1.json": {
+      "independent_boundary": {
+        "passed": 6,
+        "total": 6
+      },
+      "independent_callback": {
+        "passed": 12,
+        "total": 12
+      },
+      "known_cancel_regression": {
+        "passed": 1,
+        "total": 1
+      }
+    },
+    "CALLBACKS-EDITOR-R1-NEGATIVE-R1.json": {
+      "independent_boundary": {
+        "passed": 6,
+        "total": 6
+      },
+      "independent_callback": {
+        "passed": 10,
+        "total": 12
+      },
+      "known_cancel_regression": {
+        "passed": 0,
+        "total": 1
+      }
+    },
+    "CALLBACKS-BUILD-R5-REGRESSION-R1.json": {
+      "independent_boundary": {
+        "passed": 6,
+        "total": 6
+      },
+      "independent_callback": {
+        "passed": 12,
+        "total": 12
+      },
+      "known_cancel_regression": {
+        "passed": 1,
+        "total": 1
+      }
+    }
+  },
+  "pins": {
+    "SOURCE-PIN-R1.json": {
+      "sourceFiles": 27,
+      "appFiles": 6,
+      "compiledSwift": 10
+    },
+    "SOURCE-PIN-R2.json": {
+      "sourceFiles": 30,
+      "appFiles": 6,
+      "compiledSwift": 10,
+      "original-R3-readonly": 4
+    }
+  },
+  "knownGuardFailures": {
+    "old": 33,
+    "new": 0
+  },
+  "fixedSchemaBudgetBytes": 417792,
+  "teacherShaderByteMatch": true,
+  "recalculationFailures": 0
+}

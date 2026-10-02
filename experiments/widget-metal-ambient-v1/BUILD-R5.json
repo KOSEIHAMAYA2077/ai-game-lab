@@ -1,0 +1,25 @@
+{
+  "version": "native-producer-r2-bridge-r2-build-r5",
+  "command": [
+    "bash",
+    "desktop/glyph-metal-ambient-v1/build-r5.sh",
+    "--output",
+    "experiments/widget-metal-ambient-v1/work/GlyphMatter-Ambient-ProducerR2-BridgeR2-BuildR5.app"
+  ],
+  "exit": 0,
+  "privateRaw": [
+    {
+      "path": "experiments/widget-metal-ambient-v1/work/private/build-r5.stdout.txt",
+      "sha256": "2751305d6f484ad3a3abf1bdf55621605cc73e234f7e8a2272162bfd2a6aff61",
+      "excludedFromPublic": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/work/private/build-r5.stderr.txt",
+      "sha256": "30ad1e47dd9584d20e096d4b802425ad8f4d075be50043337658e4d2660f5a18",
+      "excludedFromPublic": true
+    }
+  ],
+  "publicConsole": "Built new immutable native ambient comparison app.\n<repo>/desktop/glyph-metal-ambient-v1/Sources/Renderer.swift:103:52: warning: 'fastMathEnabled' was deprecated in macOS 15.0: Use mathMode instead [#DeprecatedDeclaration]\n101 |         guard let device = MTLCreateSystemDefaultDevice(), let queue = device.makeCommandQueue() else { throw AmbientLabError.unavailableDevice }\n102 |         let started = ProcessInfo.processInfo.systemUptime\n103 |         let options = MTLCompileOptions(); options.fastMathEnabled = false\n    |                                                    `- warning: 'fastMathEnabled' was deprecated in macOS 15.0: Use mathMode instead [#DeprecatedDeclaration]\n104 |         let library = try device.makeLibrary(source: String(contentsOf: shaderURL, encoding: .utf8), options: options)\n105 |         let descriptor = MTLRenderPipelineDescriptor()\n\n[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>\n<repo>/experiments/widget-metal-ambient-v1/work/GlyphMatter-Ambient-ProducerR2-BridgeR2-BuildR5.app: replacing existing signature\n",
+  "redaction": "Only absolute repository path prefix becomes <repo>; status/error bytes otherwise unchanged.",
+  "actualWindowExecuted": false
+}

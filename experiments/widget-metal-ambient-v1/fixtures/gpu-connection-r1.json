@@ -1,0 +1,366 @@
+{
+  "version": "ambient-gpu-connection-fixtures-r1",
+  "authorship": "AI synthetic supplemental connection traces fixed after CPU R1 but before GPU implementation/run. No human/real field evidence.",
+  "manualCaseIDs": [
+    "A01",
+    "A03",
+    "A09",
+    "A12"
+  ],
+  "cases": [
+    {
+      "id": "sphere-white",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 1
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA",
+          "text": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 3
+        },
+        {
+          "op": "commit",
+          "at": 4,
+          "base": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA",
+          "value": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB字字",
+          "text": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB字字",
+          "range": [
+            224,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "shape": "sphere",
+        "bodyCount": 256,
+        "presented": 256,
+        "sequentialIDs": [
+          1,
+          256
+        ],
+        "oldInk": "white",
+        "oldCount": 224,
+        "newInk": "white",
+        "newCount": 32
+      },
+      "mixed": false
+    },
+    {
+      "id": "sphere-mixed",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 1
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA",
+          "text": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "ink": "blue",
+          "at": 3
+        },
+        {
+          "op": "commit",
+          "at": 4,
+          "base": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA",
+          "value": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB球ABAA球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB字字",
+          "text": "球AB球AB球AB球AB球AB球AB球AB球AB球AB球AB字字",
+          "range": [
+            224,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "shape": "sphere",
+        "bodyCount": 256,
+        "presented": 256,
+        "sequentialIDs": [
+          1,
+          256
+        ],
+        "oldInk": "white",
+        "oldCount": 224,
+        "newInk": "blue",
+        "newCount": 32
+      },
+      "mixed": true
+    },
+    {
+      "id": "box-white",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 1
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA",
+          "text": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 3
+        },
+        {
+          "op": "commit",
+          "at": 4,
+          "base": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA",
+          "value": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB字字",
+          "text": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB字字",
+          "range": [
+            224,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "shape": "box",
+        "bodyCount": 256,
+        "presented": 256,
+        "sequentialIDs": [
+          1,
+          256
+        ],
+        "oldInk": "white",
+        "oldCount": 224,
+        "newInk": "white",
+        "newCount": 32
+      },
+      "mixed": false
+    },
+    {
+      "id": "box-mixed",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 1
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA",
+          "text": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "ink": "blue",
+          "at": 3
+        },
+        {
+          "op": "commit",
+          "at": 4,
+          "base": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA",
+          "value": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱ABAA箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB字字",
+          "text": "箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB箱AB字字",
+          "range": [
+            224,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "shape": "box",
+        "bodyCount": 256,
+        "presented": 256,
+        "sequentialIDs": [
+          1,
+          256
+        ],
+        "oldInk": "white",
+        "oldCount": 224,
+        "newInk": "blue",
+        "newCount": 32
+      },
+      "mixed": true
+    },
+    {
+      "id": "ring-white",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 1
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA",
+          "text": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 3
+        },
+        {
+          "op": "commit",
+          "at": 4,
+          "base": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA",
+          "value": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB字字",
+          "text": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB字字",
+          "range": [
+            224,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "shape": "ring",
+        "bodyCount": 256,
+        "presented": 256,
+        "sequentialIDs": [
+          1,
+          256
+        ],
+        "oldInk": "white",
+        "oldCount": 224,
+        "newInk": "white",
+        "newCount": 32
+      },
+      "mixed": false
+    },
+    {
+      "id": "ring-mixed",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "ink": "white",
+          "at": 1
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA",
+          "text": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "ink": "blue",
+          "at": 3
+        },
+        {
+          "op": "commit",
+          "at": 4,
+          "base": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA",
+          "value": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪ABAA輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB字字",
+          "text": "輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB輪AB字字",
+          "range": [
+            224,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "shape": "ring",
+        "bodyCount": 256,
+        "presented": 256,
+        "sequentialIDs": [
+          1,
+          256
+        ],
+        "oldInk": "white",
+        "oldCount": 224,
+        "newInk": "blue",
+        "newCount": 32
+      },
+      "mixed": true
+    }
+  ]
+}

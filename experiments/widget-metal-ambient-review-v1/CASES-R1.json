@@ -1,0 +1,308 @@
+{
+  "version": "manual-source-unread-r1",
+  "cases": [
+    {
+      "id": "C01",
+      "group": "independent_callback",
+      "name": "empty baseline is no material",
+      "semanticSteps": [
+        "Fresh unattached NSTextView string empty; new bridge; init at0; current; build instances from body prefix"
+      ],
+      "expected": {
+        "bodyCount": 0,
+        "units": 0,
+        "instances": 0,
+        "initialAtSignIsNotMaterial": true
+      }
+    },
+    {
+      "id": "C02",
+      "group": "independent_callback",
+      "name": "plain local insert",
+      "semanticSteps": [
+        "init empty",
+        "insertText synthetic a, replacementRange NSNotFound0"
+      ],
+      "expected": {
+        "bodyCount": 1,
+        "uniqueIDs": 1,
+        "noDefaultGlyphAdded": true
+      }
+    },
+    {
+      "id": "C03",
+      "group": "independent_callback",
+      "name": "same text two genuine inserts",
+      "semanticSteps": [
+        "init empty",
+        "insertText x once",
+        "insertText x once again with updated ownfield state"
+      ],
+      "expected": {
+        "bodyCount": 2,
+        "uniqueIDs": 2,
+        "firstIDAndInkRetained": true,
+        "noContentBasedDeduplication": true
+      }
+    },
+    {
+      "id": "C04",
+      "group": "independent_callback",
+      "name": "marked updates then exact final insert",
+      "semanticSteps": [
+        "init empty",
+        "setMarkedText に selected1",
+        "setMarkedText にほ selected2",
+        "insertText 日本 final through ownfield"
+      ],
+      "expected": {
+        "markedBodyCounts": [
+          0,
+          0
+        ],
+        "finalBodyCount": 2,
+        "uniqueIDs": 2,
+        "finalAppendOnce": true
+      }
+    },
+    {
+      "id": "C05",
+      "group": "independent_callback",
+      "name": "general unmark conservative subset",
+      "semanticSteps": [
+        "init empty",
+        "setMarkedText 仮",
+        "unmarkText without explicit final insertText"
+      ],
+      "expected": {
+        "bodyCount": 0,
+        "note": "Prototype contract intentionally document-only0, although Apple permits ordinary commit. This is a potential realIME miss, not protocol conformance proof."
+      }
+    },
+    {
+      "id": "C06",
+      "group": "independent_callback",
+      "name": "unknown storage mutation is not commit",
+      "semanticSteps": [
+        "init empty",
+        "known insert a",
+        "direct textStorage/string mutation to 改; didChangeText"
+      ],
+      "expected": {
+        "bodyCount": 1,
+        "oldIDsAndInkRetained": true,
+        "unknownAdditionalMaterial": 0
+      }
+    },
+    {
+      "id": "C07",
+      "group": "independent_callback",
+      "name": "known replacement adds only replacement",
+      "semanticSteps": [
+        "init empty",
+        "known insert abc",
+        "select original range1,1",
+        "insertText X with replacementRange1,1"
+      ],
+      "expected": {
+        "bodyCount": 4,
+        "oldIDsAndInkRetained": true,
+        "newUnits": 1,
+        "noUnchangedPrefixSuffixDuplication": true
+      }
+    },
+    {
+      "id": "C08",
+      "group": "independent_callback",
+      "name": "attributed Japanese and emoji commit",
+      "semanticSteps": [
+        "init empty",
+        "insertText NSAttributedString 文🙂"
+      ],
+      "expected": {
+        "bodyCount": 2,
+        "uniqueIDs": 2,
+        "textsRetainedInVolatileUnitsOnly": true
+      }
+    },
+    {
+      "id": "C09",
+      "group": "independent_callback",
+      "name": "new batch ink only",
+      "semanticSteps": [
+        "init empty; inkwhite",
+        "known insert a",
+        "inkgreen",
+        "known insert b"
+      ],
+      "expected": {
+        "bodyCount": 2,
+        "inkCounts": {
+          "white": 1,
+          "green": 1
+        },
+        "firstIDAndInkRetained": true
+      }
+    },
+    {
+      "id": "C10",
+      "group": "independent_callback",
+      "name": "deletion keeps accumulated material",
+      "semanticSteps": [
+        "init empty",
+        "known insert ab",
+        "delete last character in textStorage; didChangeText"
+      ],
+      "expected": {
+        "bodyCount": 2,
+        "oldIDsAndInkRetained": true,
+        "newUnits": 0
+      }
+    },
+    {
+      "id": "C11",
+      "group": "independent_callback",
+      "name": "didChange echo is no second allocation",
+      "semanticSteps": [
+        "init empty",
+        "known insert a",
+        "didChangeText with unchanged string twice"
+      ],
+      "expected": {
+        "bodyCount": 1,
+        "uniqueIDs": 1,
+        "newUnitsAfterEcho": 0
+      }
+    },
+    {
+      "id": "C12",
+      "group": "independent_callback",
+      "name": "cancel through hide and continue own connection",
+      "semanticSteps": [
+        "init empty",
+        "known insert a",
+        "setMarkedText 未",
+        "cancelLocalComposition; visiblefalse; pause true",
+        "visibletrue; pausefalse",
+        "known insert b"
+      ],
+      "expected": {
+        "bodyBeforeResume": 1,
+        "bodyFinal": 2,
+        "oldIDsAndInkRetained": true,
+        "cancelledMarkedUnits": 0,
+        "note": "Artificial same ownfield continuation, not OS focus recovery or realIME."
+      }
+    },
+    {
+      "id": "B01",
+      "group": "independent_boundary",
+      "name": "pause/hide preserve authoritative old body",
+      "semanticSteps": [
+        "init empty; known insert ab",
+        "pause true; visiblefalse; advance later",
+        "current",
+        "visibletrue; pausefalse; current and instance projection"
+      ],
+      "expected": {
+        "bodyCount": 2,
+        "oldIDsAndInkRetained": true,
+        "projectionNoAdditionalIDAllocator": true,
+        "note": "No new hidden input and no realframe/presentation measurement."
+      }
+    },
+    {
+      "id": "B02",
+      "group": "independent_boundary",
+      "name": "whole body-capacity event hold",
+      "semanticSteps": [
+        "init empty",
+        "known insert synthetic255 ASCIIgraphemes",
+        "known insert two-character YZ"
+      ],
+      "expected": {
+        "bodyCount": 255,
+        "oldIDsAndInkRetained": true,
+        "overflowEventAdded": 0,
+        "noPartialAcceptance": true,
+        "consumptionACK": "true held, not lossless; canonical may advance"
+      }
+    },
+    {
+      "id": "B03",
+      "group": "independent_boundary",
+      "name": "single event text-limit held",
+      "semanticSteps": [
+        "init empty",
+        "known insert synthetic257 ASCIIcharacters in one callback"
+      ],
+      "expected": {
+        "bodyCount": 0,
+        "eventAdded": 0,
+        "noPartialAcceptance": true,
+        "consumptionACK": "true held, not noACK/lossless"
+      }
+    },
+    {
+      "id": "B04",
+      "group": "independent_boundary",
+      "name": "document limit from nonmaterial baseline",
+      "semanticSteps": [
+        "init ownfield with synthetic511 ASCIIcharacters, baseline only",
+        "known insert two-character YZ to reach513 UTF16"
+      ],
+      "expected": {
+        "baselineBodyCount": 0,
+        "bodyCount": 0,
+        "noTruncatedBodyAcceptance": true,
+        "note": "Fail-closed at canonical limit; do not equate unknown/currentdocument with retained baseline if API does not expose it."
+      }
+    },
+    {
+      "id": "B05",
+      "group": "independent_boundary",
+      "name": "destroy is terminal",
+      "semanticSteps": [
+        "init empty; known insert ab; capture scalar IDs/ink",
+        "bridge.destroy",
+        "attempt send and old field callback with error caught"
+      ],
+      "expected": {
+        "furtherAppends": 0,
+        "failureMayBeExplicitError": true,
+        "noRecreationOrImplicitRebase": true
+      }
+    },
+    {
+      "id": "B06",
+      "group": "independent_boundary",
+      "name": "off export has no document or material text",
+      "semanticSteps": [
+        "init empty; known insert artificial 本文情報",
+        "exportOff; parse allowed metadata"
+      ],
+      "expected": {
+        "rawDocumentStored": false,
+        "rawBodyOrGlyphTextsStored": false,
+        "noBatchTextOrAtlasPayload": true,
+        "note": "Inspect finite approved export keys from pinned source; do not require invented exact8keys. Callback logs must be aggregate only."
+      }
+    },
+    {
+      "id": "K01",
+      "group": "known_cancel_regression",
+      "name": "cancel reentrant AppKit insert is suppressed",
+      "semanticSteps": [
+        "init empty",
+        "setMarkedText 仮",
+        "cancelLocalComposition whose super.unmarkText may reenter insertText"
+      ],
+      "expected": {
+        "bodyCount": 0,
+        "preeditNotMaterialized": true,
+        "knownBeforeOwnFreeze": true,
+        "authorR1BugReportedBeforeOwnSourceRead": true
+      }
+    }
+  ]
+}

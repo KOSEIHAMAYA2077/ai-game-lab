@@ -1,0 +1,11 @@
+# Display-cache analysis only
+
+現Build R5は15fpsのadvanceごとに全R3 body prefixをJSON化し、Swiftへdecodeし、全prefixを再検算する。body256は有限でもidleの仕事が0ではなく、通常窓CPU/RAMの軽量達成を示していない。ここは次の別版候補の分析だけ。現source/appを変更しない。
+
+次案は「shape/status/presentation tick」と「素材view取得」を分ける。通常tickはaggregate、session identity、material generation、presented prefix count、shapeを返す。R3の唯一bodyからviewを読むのはmaterial/presentation watermarkが変わった時だけ。idleのdrawは既存Swift projectionと元shaderを使う。host cacheは受領ID由来のvolatile表示metadataであり、文字の追加・再分割・ID発行・canonical本文を所有しない。
+
+事前に、session identityが一致し、R3 nextId/bodyCountが単調、presented prefixが増える時だけ新しい連続IDのrangeを受理すると固定する。shape-only/status-only、永久heldでbody不変、色選択だけならbodyを読み直さない。body不変の旧ink/原文変更、ID欠落・重複・逆行はfail closed。session resetは旧cacheを明示破棄して別sessionのprefixを受ける。document-only resyncやfocus changeだけでappend-bodyが消えると仮定しない。birth metadataは初めてactive presentationへ入る時刻という現在の意味を保つ。
+
+比較は旧immutable bridgeとcache版へ同じ人工session/event/timeを渡し、描画instanceの全80B相当payload／旧ID／literal UTF-16／色／shape／原bodyを照合する。prefix増、held、reset、shape-only、色変更、不正IDを独立fixtureで先に固定する。serialization呼出数、検算数、local経過時間はcomponent値として比較し、whole-window CPU/RAMや快適性へ換算しない。
+
+取得rangeとcache APIは既存receiverへcastしない新bridge version。元R3sourceとmaterial authority、黒画面、元shader、saving-off、未知0の境界を維持する。rootのformal follow-upまで実装を開始しない。

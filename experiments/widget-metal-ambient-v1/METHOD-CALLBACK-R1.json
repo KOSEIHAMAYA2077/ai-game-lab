@@ -1,0 +1,50 @@
+{
+  "version": "own-editor-callback-probe-r1",
+  "scope": "Post-build supplemental synthetic AppKit method calls on unattached own NSTextView only. No actual keyboard/window/IME/OS hook. Fix expectations before implementation and execution. Separate from prospective manual12 and GPU regression.",
+  "cases": [
+    {
+      "id": "N01",
+      "actions": "init empty, own insertText A blue, ink green, own insertText B, advance300",
+      "expectedBody": "AB",
+      "expectedCount": 2,
+      "expectedInks": [
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "id": "N02",
+      "actions": "init empty, own setMarkedText 仮, then own insertText 輪 final, advance5004",
+      "expectedPreeditCount": 0,
+      "expectedBody": "輪",
+      "expectedCount": 1
+    },
+    {
+      "id": "N03",
+      "actions": "init empty, own marked 仮 then unmarkText, observe without confirmed insert, advance7000",
+      "expectedBody": "",
+      "expectedCount": 0
+    },
+    {
+      "id": "N04",
+      "actions": "known own insertText AB then simulated native delete via field string A/didChangeText; undo/redo via string AB/A didChangeText; advance300",
+      "expectedBody": "AB",
+      "expectedCount": 2
+    },
+    {
+      "id": "N05",
+      "actions": "own insertText 👩🏽‍💻 at UTF16 cursor0 then X at valid UTF16 end; advance300",
+      "expectedBody": "👩🏽‍💻X",
+      "expectedCount": 2
+    },
+    {
+      "id": "N06",
+      "actions": "baseline511 A not material, own insertText BB at selected end rejects before mutation",
+      "expectedBody": "",
+      "expectedCount": 0,
+      "expectedDocumentUtf16": 511,
+      "expectedHeld": true
+    }
+  ],
+  "failurePolicy": "Preserve R1 source/app and probe outputs. Any callback correction new source/app R2 with regression. No automatic adoption until root UI review."
+}

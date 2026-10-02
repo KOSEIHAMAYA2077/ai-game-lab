@@ -1,0 +1,34 @@
+{
+  "version": "ambient-offscreen-connection-r1",
+  "authoredBeforeExecution": true,
+  "scope": "Post-CPU bounded connection regression. Existing manual12 cases reused; supplemental synthetic dense traces below are not independent human/fresh semantic evidence. No native window, keyboard, IME, OS capture or resources measured.",
+  "inputs": {
+    "manual": "experiments/widget-metal-ambient-v1/fixtures/manual-r1.json",
+    "bundle": "experiments/widget-metal-ambient-v1/work/bundle-r1/Receiver.js",
+    "bundleSHA256": "11df7b55f1946676a526ac8093931169b82595e3923ae562a4acb5413cb017d1",
+    "app": "experiments/widget-metal-ambient-v1/work/GlyphMatter-Ambient-BuildR3.app",
+    "shader": "desktop/glyph-metal-ambient-v1/Sources/Glyphs.metal",
+    "shaderSHA256": "75a1aa21d61860483bc999fd4cd9c5e027d6aef71edcf3872192024573e3bd82"
+  },
+  "pipeline": "Actual Swift AmbientReceiverBridge -> frozen R3 only allocator/readBody -> actual AmbientProjection -> actual AmbientRenderer.rebuild/ambientInstances and atlas -> unmodified Geometry R3 MSL render/validateSurface kernels. No Matter.add, no extra glyph IDs or fake @ material. An unattached paused MTKView supplies dimensions only; no GUI event loop/drawable used.",
+  "cases": "4 existing manual states A01/A03/A09/A12 plus 3 lexical shapes x white/mixed supplemental connection fixtures. In supplemental fixtures old224 units white, new32 units white or blue. All events are declared artificial commits.",
+  "geometry": "sphere->sphere, box->cube, ring->Mobius display-only. Count256 cap. Time24, birth=first CPU read observation0, seed1, settled pose, frontal angles0. This excludes intake/morph/pause/hidden/UI resources.",
+  "gates": {
+    "bridgeExactBodyAndID": true,
+    "oldInkPrefixRetained": true,
+    "finiteInstancesUniformsAndGPUBaseFrames": true,
+    "instanceStride": 80,
+    "pixelWidth": 400,
+    "pixelHeight": 440,
+    "metalCompleted": true,
+    "emptyInstances": 0,
+    "emptyLitPixels": 0,
+    "nonemptyLitPixelsGreaterThan": 10,
+    "mixedBluePixelsGreaterThan": 0,
+    "whiteBluePixels": 0,
+    "boundsInsideTexture": true
+  },
+  "finiteScope": "CPU instance/uniform numeric payloads and unmodified validateSurface p/u/v base frames for actual receiver IDs. Does not inspect every raster/fragment intermediate, and not general geometry revalidation.",
+  "pixelScope": "BGRA8 readback maxRGB>8 lit; blue b>1.5g && b>2r && b>8. Pixel presence not readability, comfort, semantic accuracy or WebGL pixel equivalence. Bounds are diagnostic, only inside texture gate.",
+  "preservation": "Source/fixtures freeze before build/run. Refuse overwrite outputs. Failure stays R1; changes require new R2. Runtime payloads are artificial only. Normal app remains raw-saving-off."
+}

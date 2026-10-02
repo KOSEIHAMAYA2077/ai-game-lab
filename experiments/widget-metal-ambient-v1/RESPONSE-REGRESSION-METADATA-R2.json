@@ -1,0 +1,26 @@
+{
+  "version": "known-response-boundary-regression-r2",
+  "sameHarness": {
+    "path": "desktop/glyph-metal-ambient-v1/Tests/ResponseBoundary-r1.swift",
+    "sha256": "acc180a21af52f8db9cd71cf3f629060c4e421755c7c94b41dc602fc19e8b47f"
+  },
+  "rawVersionMarksHarnessNotBridgeCandidate": true,
+  "r1": {
+    "result": "JSON-BOUNDARY-RESULTS-R1.json",
+    "passed": false,
+    "bridge": "desktop/glyph-metal-ambient-v1/Sources/ReceiverBridge.swift"
+  },
+  "r2": {
+    "result": "JSON-BOUNDARY-RESULTS-R2.json",
+    "passed": true,
+    "bridge": "desktop/glyph-metal-ambient-v1/Sources/ReceiverBridge-r2.swift",
+    "sha256": "22d2da5ede5be1a14f721639fc3bcf81f1e54c027309e36dd527291c954c206e"
+  },
+  "additionalCallbackKnownRegression": {
+    "result": "CALLBACK-BRIDGE-R2-RESULTS.json",
+    "original6Passed": 6,
+    "supplemental1Passed": 1
+  },
+  "samePureJSBundle": true,
+  "GPURepeated": false
+}
