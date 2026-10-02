@@ -1,0 +1,32 @@
+{
+  "version": "surface-r2-before-regression",
+  "prior": "SOURCE-FREEZE-R1.json preserved",
+  "change": "15fps timeout interval ceil(1000/15)=67ms; import/entry/result paths use separate R2, no adapter/receiver/body/surface/shader changes",
+  "expectedCases": "CASES.json unchanged",
+  "files": [
+    {
+      "path": "projection-r2.mjs",
+      "sha256": "b43780478fe4ac09184a13a958087ce63915e03f7f4633df0917073c31ff1c93"
+    },
+    {
+      "path": "surface-scene-r2.ts",
+      "sha256": "1128980c1e3695df74d36f3e6e0a86652896bfa0b3c3448cb305f5d61f291582"
+    },
+    {
+      "path": "main-r2.ts",
+      "sha256": "f8e08f853a2ceff20b77e717238e11ca7a8b20d97bbb1915620540e991dd2f4f"
+    },
+    {
+      "path": "index-r2.html",
+      "sha256": "001df19cb4f7ad4a4891e38d4d313ef68412d33f9a6904467d056b098dda5ebe"
+    },
+    {
+      "path": "run-surface-r2.mjs",
+      "sha256": "4e6f417520b5b92a875d184c51f35c9666d9f0b690fe03e6ffc26a8d3b3716de"
+    },
+    {
+      "path": "build-surface-r2.mjs",
+      "sha256": "6cdbedb517aba63aad1ec02f5df3201af618107d6c1c4edec64c316542290d0a"
+    }
+  ]
+}

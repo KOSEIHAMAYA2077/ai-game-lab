@@ -1,0 +1,172 @@
+{
+  "version": "ambient-integration-fixtures-v1-r1",
+  "authorship": "AI manually authored expected results before implementation; synthetic only; no human annotation or OS/IME evidence.",
+  "notation": "Event blueprints receive grammar/session/epochs from the case header. at is artificial delivery time; observedAt defaults to at. op means an explicit serial and tuple-derived operationId. alias and answerLatest are fixture constructors only. unreadableData installs a throwing getter to test pre-payload rejection. textRepeat is an artificial fixture expansion. check steps read private test state. No old map expected/pass fields are imported.",
+  "defaults": {"focusEpoch":1,"policyEpoch":0,"field":"normal","shapeMode":"inline","horizon":7000},
+  "cases": [
+    {"id":"C01","maps":["I01"],"reason":"Key activity and unknown sources must not read or add text.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":10,"source":"keys","seq":1,"kind":"activity","data":{"class":"key","count":3}},
+      {"at":20,"source":"keys","seq":2,"kind":"activity","data":{"class":"shortcut","count":1}},
+      {"at":30,"source":"rogue","seq":1,"kind":"explicit-send","op":1,"unreadableData":true}
+    ],"expected":{"body":"","units":0,"document":null,"serial":0,"normalizedSeq":1,"queries":0,"shape":"sphere","activityKeys":3,"activityShortcuts":1,"payloadReads":0}},
+    {"id":"C02","maps":["I02"],"reason":"Exact document diff, a known claim from an incapable source and quiet time never establish IME confirmation.","horizon":10000,"events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"documentApi","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":"初"}},
+      {"at":100,"source":"documentApi","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"type","ink":"blue","changes":[{"offset":1,"deleteCount":0,"text":"箱"}]}}
+    ],"expected":{"body":"","units":0,"document":{"text":"初箱","version":1},"serial":0,"normalizedSeq":1,"queries":0,"shape":"sphere","windowUtf16":0}},
+    {"id":"C03","maps":["I03"],"reason":"Cancelled preedit adds nothing; declared final adds once even with an unreadable echo.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":""}},
+      {"at":10,"source":"editor","seq":2,"kind":"composition-start","data":{"compositionId":"imeA"}},
+      {"at":20,"source":"editor","seq":3,"kind":"composition-update","data":{"compositionId":"imeA","text":"k"}},
+      {"at":30,"source":"editor","seq":4,"kind":"composition-update","data":{"compositionId":"imeA","text":"か"}},
+      {"at":40,"source":"editor","seq":5,"kind":"composition-cancel","data":{"compositionId":"imeA"}},
+      {"at":50,"source":"editor","seq":6,"kind":"composition-start","data":{"compositionId":"imeB"}},
+      {"at":60,"source":"editor","seq":7,"kind":"composition-update","data":{"compositionId":"imeB","text":"漢"}},
+      {"at":100,"source":"editor","seq":8,"kind":"composition-final","evidence":"synthetic-commit","op":1,"data":{"compositionId":"imeB","documentId":"docA","baseVersion":0,"version":1,"reason":"type","ink":"blue","changes":[{"offset":0,"deleteCount":0,"text":"漢字"}]}},
+      {"at":120,"source":"echo","seq":1,"kind":"document-edit","evidence":"synthetic-commit","op":1,"unreadableData":true}
+    ],"expected":{"body":"漢字","units":2,"inks":["blue","blue"],"document":{"text":"漢字","version":1},"serial":1,"normalizedSeq":2,"queries":1,"shape":"sphere","composition":null,"operationDuplicates":1,"payloadReads":0}},
+    {"id":"C04","maps":["I04"],"reason":"Equal text in two new serials remains two units; transport and operation echoes are distinct dedupe paths.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"輪","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":100,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"輪","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":500,"alias":2},
+      {"at":600,"source":"echo","seq":1,"kind":"document-edit","evidence":"synthetic-commit","op":2,"unreadableData":true}
+    ],"expected":{"body":"輪輪","units":2,"inks":["blue","green"],"document":null,"serial":2,"normalizedSeq":3,"queries":1,"shape":"ring","shapeChanges":1,"shapeAt":5000,"transportDuplicates":1,"operationDuplicates":1,"payloadReads":0}},
+    {"id":"C05","maps":["I05"],"reason":"Explicit synthetic selection has no invented document baseline or range.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":100,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"創作👩‍💻 é","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}}
+    ],"expected":{"body":"創作👩‍💻 é","units":5,"inkCounts":{"blue":5},"document":null,"serial":1,"normalizedSeq":2,"queries":1,"shape":"sphere"}},
+    {"id":"C06","maps":["I06"],"reason":"Two same-base insertions use ascending original offsets for material; overlapping next revision is rejected atomically.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":"あ中う"}},
+      {"at":100,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"replace","ink":"green","changes":[{"offset":3,"deleteCount":0,"text":"B"},{"offset":0,"deleteCount":0,"text":"A"}]}},
+      {"at":200,"source":"editor","seq":3,"kind":"document-edit","evidence":"synthetic-commit","op":2,"data":{"documentId":"docA","baseVersion":1,"version":2,"reason":"replace","ink":"blue","changes":[{"offset":1,"deleteCount":2,"text":"X"},{"offset":2,"deleteCount":1,"text":"Y"}]}}
+    ],"expected":{"body":"AB","units":2,"inks":["green","green"],"document":{"text":"Aあ中うB","version":1},"serial":1,"normalizedSeq":2,"queries":1,"shape":"sphere","invalidChanges":1,"sourceSeq":{"editor":3}}},
+    {"id":"C07","maps":["I07"],"reason":"Undo, redo and deletion synchronize document but preserve append IDs/inks and invalidate pending shape.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":""}},
+      {"at":0,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"type","ink":"blue","changes":[{"offset":0,"deleteCount":0,"text":"box "}]}},
+      {"at":2500,"source":"editor","seq":3,"kind":"document-edit","evidence":"synthetic-commit","op":2,"data":{"documentId":"docA","baseVersion":1,"version":2,"reason":"undo","ink":"green","changes":[{"offset":0,"deleteCount":4,"text":""}]}},
+      {"at":3000,"source":"editor","seq":4,"kind":"document-edit","evidence":"synthetic-commit","op":3,"data":{"documentId":"docA","baseVersion":2,"version":3,"reason":"redo","ink":"green","changes":[{"offset":0,"deleteCount":0,"text":"box "}]}},
+      {"at":3500,"source":"editor","seq":5,"kind":"document-edit","evidence":"synthetic-commit","op":4,"data":{"documentId":"docA","baseVersion":3,"version":4,"reason":"delete","ink":"green","changes":[{"offset":0,"deleteCount":4,"text":""}]}}
+    ],"expected":{"body":"box ","units":4,"inkCounts":{"blue":4},"document":{"text":"","version":4},"serial":4,"normalizedSeq":5,"queries":1,"shape":"sphere","windowUtf16":0,"candidate":null}},
+    {"id":"C08","maps":["I08"],"reason":"One cooperative frozen retry adds before ACK; no-ACK has no canonical or material effects while activity proceeds.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":""}},
+      {"at":100,"source":"system","seq":2,"kind":"admission-ready","data":{"ready":false}},
+      {"at":100,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"paste","ink":"blue","changes":[{"offset":0,"deleteCount":0,"text":"追加"}]}},
+      {"at":110,"check":{"body":"","units":0,"document":{"text":"","version":0},"serial":0,"normalizedSeq":1,"sourceSeq":{"editor":1},"pendingSlots":1,"nextId":1}},
+      {"at":200,"source":"keys","seq":1,"kind":"activity","data":{"class":"key","count":7}},
+      {"at":300,"source":"system","seq":3,"kind":"admission-ready","data":{"ready":true}},
+      {"at":300,"alias":3}
+    ],"expected":{"body":"追加","units":2,"inkCounts":{"blue":2},"document":{"text":"追加","version":1},"serial":1,"normalizedSeq":2,"queries":1,"shape":"sphere","activityKeys":7,"deferrals":1,"pendingSlots":0,"sourceSeq":{"editor":2},"producerRetryPeak":1,"ackAddedAt":300}},
+    {"id":"C09","maps":["I09"],"reason":"Noncooperative newer source event during no-ACK cannot recover missing material; bounded preview may resynchronize separately.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":""}},
+      {"at":100,"source":"system","seq":2,"kind":"admission-ready","data":{"ready":false}},
+      {"at":100,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"type","ink":"blue","changes":[{"offset":0,"deleteCount":0,"text":"失"}]}},
+      {"at":200,"source":"editor","seq":3,"kind":"document-edit","evidence":"synthetic-commit","op":2,"unreadableData":true},
+      {"at":300,"source":"editor","seq":4,"kind":"baseline","data":{"documentId":"docA","version":2,"text":"失次"}},
+      {"at":400,"source":"system","seq":3,"kind":"admission-ready","data":{"ready":true}},
+      {"at":500,"alias":3}
+    ],"expected":{"body":"","units":0,"document":{"text":"失次","version":2},"serial":0,"queries":0,"shape":"sphere","gaps":1,"appendUnsupported":["editor"],"pendingSlots":0,"payloadReads":0,"sourceSeq":{"editor":4}}},
+    {"id":"C10","maps":["I10"],"reason":"Permanent whole-event limits ACK a reason; display draining never frees append capacity.","config":{"bodyLimit":3},"events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"AB","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":100,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"CD","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":1000,"alias":2},
+      {"at":1100,"source":"sender","seq":3,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":3,"data":{"textRepeat":{"text":"x","count":257},"ink":"purple","selectionDeclared":true,"documentId":null,"documentVersion":null}}
+    ],"expected":{"body":"AB","units":2,"inkCounts":{"blue":2},"document":null,"serial":3,"normalizedSeq":2,"queries":1,"shape":"sphere","permanentHolds":2,"holdReasons":["body-capacity","event-text-limit"],"nextId":3,"pendingSlots":0}},
+    {"id":"C11","maps":["I11"],"reason":"Saving-off export excludes all raw or ordered identity/color data and restart has no private material.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"VOLATILE_A箱","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":100,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"🙂","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}}
+    ],"expected":{"body":"VOLATILE_A箱🙂","units":12,"inkCounts":{"blue":11,"green":1},"serial":2,"normalizedSeq":3,"queries":1,"shape":"box","exportMode":"off","restartUnits":0,"restartWindowUtf16":0}},
+    {"id":"C12","maps":["I12"],"reason":"Insertion-local graphemes retain e and later combining mark as separate historical units; no NFC or UTF-16 surrogate split.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"e","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":10,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"́","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":20,"source":"sender","seq":3,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":3,"data":{"text":"👩‍💻","ink":"purple","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":30,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":"👩‍💻"}},
+      {"at":40,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":4,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"replace","ink":"green","changes":[{"offset":1,"deleteCount":0,"text":"x"}]}},
+      {"at":50,"source":"editor","seq":3,"kind":"document-edit","evidence":"synthetic-commit","op":4,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"type","ink":"green","changes":[{"offset":5,"deleteCount":0,"text":"🙂"}]}}
+    ],"expected":{"body":"é👩‍💻🙂","units":4,"inks":["blue","green","purple","green"],"unitTexts":["e","́","👩‍💻","🙂"],"document":{"text":"👩‍💻🙂","version":1},"serial":4,"normalizedSeq":5,"queries":1,"shape":"sphere","invalidChanges":1}},
+    {"id":"C13","maps":["I13"],"reason":"Hidden/paused admission is finite but no hidden interpretation or reveal; epoch-tagged old answers cannot apply.","config":{"shapeMode":"deferred"},"horizon":12000,"events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"box ","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":2500,"source":"system","seq":2,"kind":"visibility","data":{"visible":false}},
+      {"at":3000,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"輪🙂","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":3500,"source":"system","seq":3,"kind":"pause","data":{"paused":true}},
+      {"at":4000,"source":"system","seq":4,"kind":"focus","focusEpoch":2,"data":{"field":"normal","documentId":"docB"}},
+      {"at":4100,"source":"sender","seq":3,"kind":"explicit-send","focusEpoch":2,"evidence":"synthetic-explicit-send","op":1,"data":{"text":"箱","ink":"purple","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":4500,"source":"worker","seq":1,"kind":"shape-answer","focusEpoch":2,"data":{"requestId":1,"focusEpoch":1,"policyEpoch":0,"generation":1,"windowRevision":1,"shape":"box"}},
+      {"at":5000,"source":"system","seq":5,"kind":"visibility","focusEpoch":2,"data":{"visible":true}},
+      {"at":5500,"check":{"units":7,"queries":1,"presented":4,"shape":"sphere"}},
+      {"at":5500,"source":"system","seq":6,"kind":"pause","focusEpoch":2,"data":{"paused":false}},
+      {"at":5600,"check":{"presented":7}},
+      {"at":7600,"source":"worker","seq":2,"kind":"shape-answer","focusEpoch":2,"answerLatest":true}
+    ],"expected":{"body":"box 輪🙂箱","units":7,"inkCounts":{"blue":4,"green":2,"purple":1},"document":null,"serial":1,"queries":2,"shape":"box","shapeChanges":1,"shapeAt":9500,"staleAnswers":1,"acceptedAnswers":1,"hiddenWork":0,"queuePeak":4}},
+    {"id":"C14","maps":["I14"],"reason":"Initial baseline is not material; stable full-revision flags do not import existing text; document-sync remains separate and unsupported.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":4,"text":"以前の文"}},
+      {"at":100,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":4,"version":5,"reason":"type","ink":"blue","changes":[{"offset":4,"deleteCount":0,"text":"新"}]}},
+      {"at":200,"source":"editor","seq":3,"kind":"document-edit","evidence":"synthetic-commit","op":2,"data":{"documentId":"docA","baseVersion":5,"version":6,"reason":"type","stableWholeRevision":true,"ink":"green","changes":[{"offset":5,"deleteCount":0,"text":"🙂"}]}},
+      {"at":300,"source":"system","seq":2,"kind":"request-document-sync","data":{}}
+    ],"expected":{"body":"新🙂","units":2,"inks":["blue","green"],"document":{"text":"以前の文新🙂","version":6},"serial":2,"normalizedSeq":3,"queries":1,"shape":"sphere","unsupportedModes":1}},
+    {"id":"C15","maps":["I01","I02","I13"],"reason":"Secure/unknown fields, activity-only and capture-stop suppress body before payload access; raw key metadata is independent.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"secure","documentId":"docA"}},
+      {"at":10,"source":"sender","seq":1,"kind":"explicit-send","op":1,"unreadableData":true},
+      {"at":100,"source":"system","seq":2,"kind":"focus","focusEpoch":2,"data":{"field":"unknown","documentId":"docA"}},
+      {"at":110,"source":"editor","seq":1,"kind":"baseline","focusEpoch":2,"unreadableData":true},
+      {"at":200,"source":"system","seq":3,"kind":"focus","focusEpoch":3,"data":{"field":"normal","documentId":"docA"}},
+      {"at":210,"source":"system","seq":4,"kind":"policy","focusEpoch":3,"policyEpoch":1,"data":{"retention":"activity-only","captureEnabled":true}},
+      {"at":220,"source":"sender","seq":2,"kind":"explicit-send","focusEpoch":3,"policyEpoch":1,"op":1,"unreadableData":true},
+      {"at":300,"source":"system","seq":5,"kind":"policy","focusEpoch":3,"policyEpoch":2,"data":{"retention":"text","captureEnabled":false}},
+      {"at":310,"source":"sender","seq":3,"kind":"explicit-send","focusEpoch":3,"policyEpoch":2,"op":1,"unreadableData":true},
+      {"at":320,"source":"keys","seq":1,"kind":"activity","focusEpoch":3,"policyEpoch":2,"data":{"class":"key","count":2}},
+      {"at":400,"source":"system","seq":6,"kind":"policy","focusEpoch":3,"policyEpoch":3,"data":{"retention":"text","captureEnabled":true}},
+      {"at":410,"source":"editor","seq":2,"kind":"baseline","focusEpoch":3,"policyEpoch":3,"data":{"documentId":"docA","version":0,"text":""}},
+      {"at":420,"source":"sender","seq":4,"kind":"explicit-send","focusEpoch":3,"policyEpoch":3,"evidence":"synthetic-explicit-send","op":1,"data":{"text":"箱","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":430,"source":"sender","seq":5,"kind":"explicit-send","focusEpoch":3,"policyEpoch":2,"op":1,"unreadableData":true},
+      {"at":440,"source":"rogue","seq":1,"kind":"explicit-send","focusEpoch":3,"policyEpoch":3,"op":1,"unreadableData":true}
+    ],"expected":{"body":"箱","units":1,"inks":["green"],"document":{"text":"","version":0},"serial":1,"queries":1,"shape":"box","activityKeys":2,"payloadReads":0}},
+    {"id":"C16","maps":["I02","I09","I14"],"reason":"Document repair cannot invent a missing operation serial; only explicit synthetic primary rebase repairs it; legacy grammar is rejected before payload.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":"a"}},
+      {"at":10,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":1,"data":{"documentId":"docA","baseVersion":3,"version":4,"reason":"type","ink":"blue","changes":[{"offset":1,"deleteCount":0,"text":"X"}]}},
+      {"at":20,"source":"documentApi","seq":1,"kind":"baseline","data":{"documentId":"docA","version":4,"text":"a","operationSerialBaseline":2}},
+      {"at":30,"source":"editor","seq":3,"kind":"document-edit","evidence":"synthetic-commit","op":3,"data":{"documentId":"docA","baseVersion":4,"version":5,"reason":"type","ink":"blue","changes":[{"offset":1,"deleteCount":0,"text":"B"}]}},
+      {"at":40,"source":"editor","seq":4,"kind":"baseline","evidence":"synthetic-rebase","data":{"documentId":"docA","version":4,"text":"a","operationSerialBaseline":2}},
+      {"at":50,"source":"editor","seq":5,"kind":"document-edit","evidence":"synthetic-commit","op":3,"data":{"documentId":"docA","baseVersion":4,"version":5,"reason":"type","ink":"blue","changes":[{"offset":1,"deleteCount":0,"text":"B"}]}},
+      {"at":60,"source":"editor","seq":6,"kind":"document-edit","grammar":"ambient-artificial-v1","op":4,"unreadableData":true}
+    ],"expected":{"body":"B","units":1,"inks":["blue"],"document":{"text":"aB","version":5},"serial":3,"queries":1,"shape":"sphere","documentGaps":1,"serialGaps":1,"trustedRebases":1,"sourceSeq":{"editor":5},"payloadReads":0}},
+    {"id":"C17","maps":["I11"],"reason":"Saving ON requires explicit artificial opt-in and exports admitted bounded body only.","config":{"savingOff":false,"consent":"synthetic-opt-in"},"events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"保存🙂","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":100,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"輪","ink":"purple","selectionDeclared":true,"documentId":null,"documentVersion":null}}
+    ],"expected":{"body":"保存🙂輪","units":4,"inkCounts":{"blue":3,"purple":1},"document":null,"serial":2,"queries":1,"shape":"ring","exportMode":"on","optInRequired":true}},
+    {"id":"C18","maps":["I01","I02","I05"],"reason":"Forwarded seq excludes document preview/activity. Lexical matching of quoted negation is disclosed mechanism, not intent accuracy.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"keys","seq":1,"kind":"activity","data":{"class":"key","count":5}},
+      {"at":0,"source":"documentApi","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"text":"notes"}},
+      {"at":100,"source":"documentApi","seq":2,"kind":"document-edit","evidence":"document-only","data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"type","ink":"blue","changes":[{"offset":5,"deleteCount":0,"text":"箱"}]}},
+      {"at":200,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"引用「輪」ではない。","ink":"green","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":300,"source":"rogue","seq":1,"kind":"explicit-send","op":1,"unreadableData":true}
+    ],"expected":{"body":"引用「輪」ではない。","units":10,"inkCounts":{"green":10},"document":{"text":"notes箱","version":1},"serial":1,"normalizedSeq":2,"queries":1,"shape":"ring","shapeChanges":1,"shapeAt":5000,"payloadReads":0}},
+    {"id":"C19","maps":["I13"],"reason":"Delayed declared answer after original evidence expiry cannot refresh TTL or change shape.","config":{"shapeMode":"deferred"},"events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"text":"box","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":6100,"source":"worker","seq":1,"kind":"shape-answer","data":{"requestId":1,"focusEpoch":1,"policyEpoch":0,"generation":1,"windowRevision":1,"shape":"box"}}
+    ],"expected":{"body":"box","units":3,"serial":1,"queries":1,"shape":"sphere","shapeChanges":0,"staleAnswers":1,"acceptedAnswers":0,"candidate":null}},
+    {"id":"C20","maps":["I08","I10","I11"],"reason":"Bounded whole burst fills permanent body, truncates only lexical context and retains all original unit identities; oversized revision is rejected.","events":[
+      {"at":0,"source":"system","seq":1,"kind":"focus","data":{"field":"normal","documentId":"docA"}},
+      {"at":0,"source":"sender","seq":1,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":1,"data":{"textRepeat":{"text":"x","count":256},"ink":"purple","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":100,"check":{"units":256,"presented":4,"windowUtf16":128,"queuePeak":256}},
+      {"at":200,"source":"sender","seq":2,"kind":"explicit-send","evidence":"synthetic-explicit-send","op":2,"data":{"text":"箱","ink":"blue","selectionDeclared":true,"documentId":null,"documentVersion":null}},
+      {"at":300,"source":"editor","seq":1,"kind":"baseline","data":{"documentId":"docA","version":0,"textRepeat":{"text":"a","count":65}}},
+      {"at":400,"source":"editor","seq":2,"kind":"document-edit","evidence":"synthetic-commit","op":3,"data":{"documentId":"docA","baseVersion":0,"version":1,"reason":"replace","ink":"blue","changesRepeat":{"count":65,"text":"b"}}}
+    ],"expected":{"bodyRepeat":{"text":"x","count":256},"units":256,"inkCounts":{"purple":256},"document":{"textRepeat":{"text":"a","count":65},"version":0},"serial":2,"normalizedSeq":2,"queries":1,"shape":"sphere","permanentHolds":1,"invalidChanges":1,"queuePeak":256,"nextId":257,"pendingSlots":0,"exportMode":"off","restartUnits":0}}
+  ]
+}

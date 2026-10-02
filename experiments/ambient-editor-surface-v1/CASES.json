@@ -1,0 +1,65 @@
+{
+  "version": "ambient-editor-surface-v1-manual-expected-r1",
+  "cases": [
+    {
+      "id": "S01",
+      "scenario": "empty receiver view",
+      "expected": "body0, drawnMaterial0, placeholdertrue; no placeholder material id"
+    },
+    {
+      "id": "S02",
+      "scenario": "trusted blueA then greenB",
+      "expected": "bodyAB IDs1,2 inksblue,green; all visible unchanged in renderer projection"
+    },
+    {
+      "id": "S03",
+      "scenario": "composition preedit then trusted matchingfinal漢字 and unchanged echo",
+      "expected": "preedit body0/sphere; final body漢字 units2 IDs1,2 exactly once"
+    },
+    {
+      "id": "S04",
+      "scenario": "delete blueAB plus undo/redo",
+      "expected": "bodyAB IDs1,2 same inks through doc changes; renderer does not allocate"
+    },
+    {
+      "id": "S05",
+      "scenario": "initial ABC baseline selectedB replacedx",
+      "expected": "bodyx units1 ID1, no A/C baseline material"
+    },
+    {
+      "id": "S06",
+      "scenario": "trusted paste 👩🏽‍💻",
+      "expected": "one graphemeunit exactoriginalsequence ID1; no clipboard getter read"
+    },
+    {
+      "id": "S07",
+      "scenario": "two distinct same-character operations and echo",
+      "expected": "body輪輪 IDs1,2 not deduped by texture; echo adds0"
+    },
+    {
+      "id": "S08",
+      "scenario": "paste256A then extraB",
+      "expected": "body256 IDs1..256 retained, extraeventwholehold0, rendercapacity256 no sampling"
+    },
+    {
+      "id": "S09",
+      "scenario": "artificial15fps clock; pause/hidden; resume",
+      "expected": "at most15frames in[0,1000), inactivezero callbacks/render/time advance; resume no elapsed jump"
+    },
+    {
+      "id": "S10",
+      "scenario": "same units through sphere/box/ring views at t0/3/21",
+      "expected": "same IDs/text/ink; sphere radius1.2; cube sum(abs(position)^12)=1; finite orthonormalright-handed frames for3views"
+    },
+    {
+      "id": "S11",
+      "scenario": "off export afterknown and unknown",
+      "expected": "recursive strictoffallowlist valid; no text/IDorder/colororder/window/query/fingerprint"
+    },
+    {
+      "id": "S12",
+      "scenario": "deferredshape neveranswers, moreacceptedletters",
+      "expected": "second body append immediate, projection follows readBody whileshape stayscurrent"
+    }
+  ]
+}

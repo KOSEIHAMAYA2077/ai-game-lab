@@ -1,0 +1,176 @@
+{
+  "scope": "Synthetic CPU only: no browser, GPU, actualDOM/IME/OS/resource/human proof. Raw actual strings synthetic only.",
+  "casesSha256": "ed17617a0f86ea554614c3b1a919ebdae81fcbd25592ff0a95f430b2a129c32f",
+  "passed": 11,
+  "total": 12,
+  "rows": [
+    {
+      "id": "S01",
+      "pass": true,
+      "actual": {
+        "drawnMaterial": 0,
+        "placeholder": true,
+        "capacity": 256
+      },
+      "cpuMilliseconds": 1.016207999999999
+    },
+    {
+      "id": "S02",
+      "pass": true,
+      "actual": {
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "drawn": 2
+      },
+      "cpuMilliseconds": 0.7808330000000012
+    },
+    {
+      "id": "S03",
+      "pass": true,
+      "actual": {
+        "preeditMaterial": 0,
+        "final": "\u6f22\u5b57",
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "drawn": 2
+      },
+      "cpuMilliseconds": 0.2769580000000005
+    },
+    {
+      "id": "S04",
+      "pass": true,
+      "actual": {
+        "body": "AB",
+        "document": "A",
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "drawn": 2
+      },
+      "cpuMilliseconds": 0.22650000000000148
+    },
+    {
+      "id": "S05",
+      "pass": true,
+      "actual": {
+        "body": "x",
+        "ids": [
+          1
+        ],
+        "inks": [
+          "blue"
+        ],
+        "drawn": 1
+      },
+      "cpuMilliseconds": 0.10345800000000338
+    },
+    {
+      "id": "S06",
+      "pass": true,
+      "actual": {
+        "unit": "\ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb",
+        "ids": [
+          1
+        ],
+        "inks": [
+          "blue"
+        ],
+        "drawn": 1,
+        "clipboardReads": 0
+      },
+      "cpuMilliseconds": 0.11908300000000338
+    },
+    {
+      "id": "S07",
+      "pass": true,
+      "actual": {
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "drawn": 2,
+        "atlasKinds": 1
+      },
+      "cpuMilliseconds": 0.16716699999999918
+    },
+    {
+      "id": "S08",
+      "pass": true,
+      "actual": {
+        "bodyCount": 256,
+        "drawn": 256,
+        "extraWholeHold": true
+      },
+      "cpuMilliseconds": 0.5832499999999996
+    },
+    {
+      "id": "S09",
+      "pass": false,
+      "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(calls <= 15)\n\n    at file://[local-path-redacted]    at test (file://[local-path-redacted]    at file://[local-path-redacted]",
+      "cpuMilliseconds": 3.3796660000000003
+    },
+    {
+      "id": "S10",
+      "pass": true,
+      "actual": {
+        "samples": 2304,
+        "maxLengthError": 1.6653345369377348e-15,
+        "maxFrameError": 1.7208456881689926e-15,
+        "bodyUnchanged": true,
+        "ringViewOnly": "mobius"
+      },
+      "cpuMilliseconds": 7.886625000000002
+    },
+    {
+      "id": "S11",
+      "pass": true,
+      "actual": {
+        "validated": true,
+        "keys": [
+          "grammar",
+          "version",
+          "savingOff",
+          "seed",
+          "shape",
+          "now",
+          "count",
+          "presentedCount",
+          "inkCounts",
+          "counters"
+        ]
+      },
+      "cpuMilliseconds": 0.5684159999999991
+    },
+    {
+      "id": "S12",
+      "pass": true,
+      "actual": {
+        "bodyImmediately": 2,
+        "drawn": 2,
+        "shapeWithoutAnswer": "sphere"
+      },
+      "cpuMilliseconds": 0.2167920000000052
+    }
+  ]
+}

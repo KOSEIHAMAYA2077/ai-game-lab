@@ -1,0 +1,99 @@
+{
+  "recordedAt": "2026-10-02T21:28:45.708309+00:00",
+  "scope": "independent readonly source review + synthetic CPU only; no browser/GPU/build/OS/input monitoring/resource measurement",
+  "expectations": {
+    "frozen": 13,
+    "executable": 12,
+    "sourceDocOnly": 1
+  },
+  "r1": {
+    "executable": 12,
+    "passed": 12,
+    "failed": 0,
+    "sourceReviewOnly": 1
+  },
+  "r2KnownCorrectionRegression": {
+    "executable": 12,
+    "passed": 12,
+    "failed": 0,
+    "sourceReviewOnly": 1
+  },
+  "timerKnownDefectSensitivityR1": [
+    {
+      "name": "exact-fractional-simulation",
+      "expectedMax15": 15,
+      "observed": 16,
+      "passed": false,
+      "first": 0,
+      "last": 999
+    },
+    {
+      "name": "floor-setTimeout-simulation",
+      "expectedMax15": 15,
+      "observed": 16,
+      "passed": false,
+      "first": 0,
+      "last": 990
+    }
+  ],
+  "timerKnownCorrectionRegressionR2": [
+    {
+      "name": "exact-fractional-simulation",
+      "expectedMax15": 15,
+      "observed": 15,
+      "passed": true,
+      "first": 0,
+      "last": 938
+    },
+    {
+      "name": "floor-setTimeout-simulation",
+      "expectedMax15": 15,
+      "observed": 15,
+      "passed": true,
+      "first": 0,
+      "last": 938
+    }
+  ],
+  "shaderStringIdentity": {
+    "vertex": true,
+    "fragment": true,
+    "branch": "original GlyphScene dynamicAtlas=true",
+    "gpuCompilationOrPixels": false
+  },
+  "sourceUnchanged": {
+    "records": 28,
+    "mismatches": 0
+  },
+  "reviewDisposition": "No identified source blocker to root-owned actual dedicated-editor/canvas check. Use R2; preserve R1 timer failures. No final UI/performance/semantic/IME/OS integration acceptance.",
+  "textAuthority": "R2 adapter/R3 receiver readBody only, append history intentionally retained after undo/delete",
+  "viewMetadata": "Existing canonical IDs/ink plus drawing tile and first active observation birth; birth is not commit/ACK time",
+  "geometryLabels": {
+    "sphere": "condense",
+    "box": "cube",
+    "ring": "mobius"
+  },
+  "limits": {
+    "materialGraphemes": 256,
+    "documentUTF16": 512,
+    "singleEventUTF16": 256
+  },
+  "unverified": [
+    "actual browser events",
+    "real Japanese IME",
+    "GPU rendering/visual equivalence",
+    "canvas pause/hide/BFCache",
+    "context loss/draw exception recovery",
+    "long writing",
+    "low load/16GB/Windows/presentationFPS/human comfort",
+    "all-app OS capture",
+    "learned model or arbitrary semantics"
+  ],
+  "hashes": {
+    "METHOD-R1.json": "d8c2cbee2edabd5ea1ace91b6ca05c9aae762f57eed823abecceb47454be8a53",
+    "CASES-R1.json": "e917f0f9f2ed65712a71e70dad397e51c3dc4e6b892ea78b9f5c2696e2029bf2",
+    "results-r1.json": "023abdfc24fd912adf96ac6e472cb4f2de26c92b9c8ca7ec3abc1ba4770671de",
+    "results-r2.json": "d8a2de4e9a815df3cfa8b5be3bd208b98cdf7dd80f022a171b940e5ee29feb0f",
+    "TIMER-SUPPLEMENT-FREEZE-R1.json": "3fa758d050351e9c79832f5215d0e6de14e0ff2ff375442f1537e1a467e150d8",
+    "REPORT.md": "e995ba2f1181c7f6fc6a6a465e3ce9665f9a92bbeb3ee14bd28429e3fdc79bdf"
+  }
+}
