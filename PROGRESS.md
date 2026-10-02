@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-03 03:18 — サイドインテリアの入力方式と研究計画
+
+日常の入力から育つ用途を、[使用像と分析](research/side-interior-direction-20261003.md)へ整理。[一次資料30項目の入力API比較](research/ambient-input-platforms-v1/README.md)では、キー操作だけで全アプリの日本語確定本文を得る前提を置かず、活動量と対応editor本文を分ける。VS Codeの差分にIME確定フラグが無いことも記した。APIの存在や人工schemaを、OS監視の実装・実IME確認とは扱わない。
+
+[研究プロトコル案](research/widget-study-protocol-v1/README.md)は、保留付き既知6形の明示要求を同条件で比較する研究と、日常文章が穏やかに姿へ反映される体験の研究を分ける。件数、閾値、6人試遊、16GB実機・長期評価は将来の計画であり、実施済みではない。入力契約の人工実験とHCI本文調査は別担当で続行中。
+
+公開小窓v3のEnter→日本語paste→文字のメビウス表面→停止を実操作確認。旧版を含む7つのHTTP manifestは保存commitと全一致。[確認原票](experiments/widget-v3-release-verification-v1/public-manifests.json)。Metalの実時間2時間offscreenは04:35終了予定で継続中。全入力連動・実窓Metal資源・一般PC快適性は未実証。
+
 ## 2026-10-03 02:54 — 表面を保つ小窓v3と追加の使用像
 
 根性60形を保ち、段階atlasと約122KB分類器の任意選択を別版 `0.14.2-widget.3`へ統合。公開前の独立レビューで種類上限のdraft消失と色previewを修正し、別productionの23項目・60形選択・tiny遅延読込・旧保存key不変が成功。[独立review](experiments/widget-v3-release-review-v1/REPORT.md)。174単体・型・build、32k/1536容量復元、新native ZIPのhash/strict署名が成功。nativeの日本語paste・メビウス・再起動・pause/hide/復帰を短い実操作で確認。[配布確認](experiments/widget-v3-release-verification-v1/README.md)。全体CPU/RAM削減と実IMEは未検証。
