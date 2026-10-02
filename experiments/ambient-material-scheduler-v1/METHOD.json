@@ -1,0 +1,41 @@
+{
+  "version": "ambient-material-scheduler-v1-r1",
+  "authoredBeforeCases": true,
+  "scope": "Finite downstream scheduler of normalized artificial accepted-material events; no input acquisition or upstream commit verification",
+  "policies": ["per-word", "batch", "batch-hysteresis"],
+  "proposalValues": {
+    "batchIntervalMs": 2000,
+    "windowLookbackMs": 6000,
+    "windowMaxUtf16": 128,
+    "candidateTtlMs": 6000,
+    "consistentSamples": 2,
+    "minimumShapeHoldMs": 5000,
+    "revealTickMs": 100,
+    "revealUnitsPerTick": 4,
+    "maximumBodyUnits": 256,
+    "maximumEventUtf16": 256,
+    "maximumRecentChunks": 64,
+    "maximumMetadataHistory": 64,
+    "counterSaturation": 1000000
+  },
+  "lexicalGroups": {
+    "sphere": { "ja": ["球", "球体", "たま"], "en": ["sphere", "ball"] },
+    "box": { "ja": ["箱", "立方体"], "en": ["box", "cube"] },
+    "ring": { "ja": ["輪", "リング"], "en": ["ring", "torus"] }
+  },
+  "lexicalSelection": "Latest matching ending offset in bounded recent material window; longer match breaks a same-end tie; sphere/box/ring order breaks a remaining tie. English ASCII word boundaries, case insensitive; Japanese literal substring. Quotes and negation are not interpreted.",
+  "initialShape": "sphere",
+  "initialHoldStartsAtMs": 0,
+  "perWordSegmentation": "Intl.Segmenter ja word granularity; one lexical-analysis call per isWordLike incoming segment, using its incoming prefix and prior bounded window; no lookahead to later words in the same material batch",
+  "batchWork": "Analyze dirty bounded window at fixed 2000 ms points only. Idle does not repeatedly re-analyze an unchanged window.",
+  "hysteresis": "At least 2 consecutive timed matching observations plus 5000 ms since last actual shape change. Second observation can use the cached unchanged query result; it is temporal consistency, not independent semantic evidence. Cached sampling never refreshes evidence time/expiry. Changed window is analyzed anew.",
+  "candidateExpiry": "Evidence keyword's material timestamp + 6000 ms; expire before apply at equality. No stale candidate may be applied after focus/gap/hide/pause reset.",
+  "material": "Known normalized material appends logical body immediately after whole-event admission within capacity. Per-insertion grapheme units preserve unnormalized original sequence, fresh monotonic ID and batch ink. No shape analysis can delay admission.",
+  "presentation": "Independent artificial reveal cursor advances at most 4 units per 100 ms visible nonpaused tick; no duplicated text queue. Hidden/paused body admission remains finite and immediate, presentation cursor stops.",
+  "hidePauseResume": "No analysis, cached sampling, shape application or reveal while hidden/paused. Reset candidate/cache, retain bounded recent material. After both gates reopen, all policies schedule one bounded catchup at now+2000 ms; do not replay hidden words. Reveal resumes at now+100 ms in small steps.",
+  "focusGap": "Focus changes clear candidate/cache/recent window, keep append history/current shape/minimum-hold history. Global normalized seq gaps are disclosed, clear lexical context, and cannot reconstruct missing material. Stale epoch material is explicitly rejected.",
+  "overflow": "Whole event capacity hold without truncation; record rejected units. This downstream hold does not establish an upstream no-loss guarantee or implement a no-ACK replay adapter.",
+  "rawSavingOff": "Default true: bounded body/recent text are volatile; export is whitelist metadata/IDs/colors/counts/shape/times only, no body/query/window text or text fingerprint. Explicit false may export bounded committed body text only. Synthetic fixture text remains a separate reproducibility artifact.",
+  "metrics": ["actualShapeChanges", "retainedMaterialUnits", "retainedCodeUnits", "capacityRejectedUnits", "actualLexicalAnalysisCalls", "cachedConsistencySamples", "reflectionDelayMsFromKeywordMaterial", "candidateExpiryAndInvalidation", "presentationQueuePeak", "analysisPendingSlotPeak", "metadataDropped", "streamGapCount"],
+  "interpretation": "Mechanism comparison only, not classifier accuracy, command understanding, natural-language meaning, comfort or constant-app resource achievement. Any post-result parameter/code change requires R2 regression labeling."
+}

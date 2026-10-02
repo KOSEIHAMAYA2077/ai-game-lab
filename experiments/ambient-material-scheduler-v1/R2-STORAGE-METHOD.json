@@ -1,0 +1,15 @@
+{
+  "version": "ambient-material-scheduler-v1-r2-storage-regression",
+  "authoredAfterR1Results": true,
+  "purpose": "Stricter parent storage gate: no raw text, per-unit IDs, order, source linkage or fingerprints when rawSavingOff",
+  "schedulerChanged": false,
+  "parametersChanged": false,
+  "casesChanged": false,
+  "r1MethodSha256": "60038352b8eae2787cd3e8be92c4f8cf0412e1adf4c7cf0cccbd29cf5332719d",
+  "r1StreamsSha256": "99e59d16912d3ea3085049b10cc74fe565bc5fcd71fa928b8142825cc1edc6b6",
+  "r1SchedulerSha256": "78f2fb2b32a90e1bf712a2f4e2647f9ce4493ad5e5f3a033f7c6441ca64b1bc2",
+  "exportOff": "Counts, aggregate ink counts, fixed shape enums, times, delays and bounded aggregate mechanism metadata only. No body ID/ink sequence, origin sequence/epoch, raw text/query, dictionary or text fingerprint.",
+  "exportOn": "Explicit rawSavingOff=false may export bounded committed body ID/text/ink; this is not the no-saving path.",
+  "evaluation": "Replay exposed R1 streams; compare all scheduler metrics and state outcomes to preserved R1 results. This is regression, not new unseen evaluation.",
+  "adoptionLimit": "Candidate metadata serializer only; no authenticated privacy/IME/input adapter, no existing widget integration, no body-ID authority resolution."
+}

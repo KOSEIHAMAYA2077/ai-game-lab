@@ -1,0 +1,371 @@
+{
+  "version": "ambient-integration-map-v1-draft",
+  "authoredAtUtc": "2026-10-02T18:50:42.490694+00:00",
+  "status": "proposal-only-not-executed",
+  "syntheticOnly": true,
+  "fixtureForExistingSchemaOrReducer": false,
+  "schedulerSourceFixturesAndResultsRead": false,
+  "contractsChanged": false,
+  "implementationOrTestAdded": false,
+  "evidenceBoundary": "Cases specify future integration acceptance checks. Counts are proposed cases, not pass/fail results or user/OS measurements.",
+  "caseCount": 14,
+  "cases": [
+    {
+      "id": "I01-activity-only",
+      "given": "A declared synthetic activity source reports keys and shortcuts without text.",
+      "proposedInput": {
+        "signal": "activity",
+        "observedKeyUnits": 3,
+        "observedShortcutUnits": 1
+      },
+      "expectedFutureIntegration": {
+        "newBodyUnits": 0,
+        "semanticWindowAdditions": 0,
+        "textPayloadRead": false,
+        "activityChannelsSeparate": true
+      },
+      "gate": [
+        "G1",
+        "G2"
+      ]
+    },
+    {
+      "id": "I02-exact-diff-is-not-commit",
+      "given": "A document-only synthetic source supplies exact replacement text, then remains quiet.",
+      "proposedInput": {
+        "signal": "document-diff",
+        "text": "箱",
+        "commitEvidence": "absent",
+        "declaredCommittedText": false,
+        "quietMs": 6000
+      },
+      "expectedFutureIntegration": {
+        "newBodyUnits": 0,
+        "semanticWindowAdditions": 0,
+        "mayKeepBoundedPreview": true,
+        "quietDoesNotUpgradeCommit": true
+      },
+      "gate": [
+        "G1",
+        "G2"
+      ]
+    },
+    {
+      "id": "I03-composition-cancel-and-final",
+      "given": "First operation updates and cancels; a second explicitly confirmed synthetic operation finishes and echoes.",
+      "proposedInput": {
+        "draftOperation": "ime_a",
+        "draftTexts": [
+          "k",
+          "か"
+        ],
+        "cancel": true,
+        "finalOperation": "ime_b",
+        "finalText": "漢字",
+        "finalCommitSerial": 1,
+        "echoUsesSameCanonicalOperation": true
+      },
+      "expectedFutureIntegration": {
+        "cancelledOperationBodyUnits": 0,
+        "finalOperationMaterialAdmissions": 1,
+        "echoMaterialAdmissions": 0,
+        "requiresConfirmedSourceProvenance": true
+      },
+      "gate": [
+        "G1",
+        "G2",
+        "G3"
+      ]
+    },
+    {
+      "id": "I04-repeated-text-versus-echo",
+      "given": "Two legitimate commits contain the same text, and one has a duplicate transport/operation echo.",
+      "proposedInput": {
+        "text": "輪",
+        "legitimateCommitSerials": [
+          1,
+          2
+        ],
+        "echoCommitSerial": 2
+      },
+      "expectedFutureIntegration": {
+        "materialAdmissions": 2,
+        "newBodyUnits": 2,
+        "uniqueGlyphIds": true,
+        "dedupeByTextEquality": false
+      },
+      "gate": [
+        "G2",
+        "G3",
+        "G4"
+      ]
+    },
+    {
+      "id": "I05-explicit-send-no-document-version",
+      "given": "The person explicitly sends a bounded artificial selection. No document range/version is supplied.",
+      "proposedInput": {
+        "signal": "explicit-send",
+        "selectedText": "創作の断片",
+        "documentVersion": null,
+        "operationId": "send_a"
+      },
+      "expectedFutureIntegration": {
+        "requiresFutureSeparateMaterialSendGrammar": true,
+        "noInventedDocumentBaselineOrVersion": true,
+        "exactDocumentDiffClaim": false,
+        "oneAdmissionAfterAllGates": true
+      },
+      "currentInterfaceLimitation": "Existing reducer edit requires a baseline/range/version; this JSON is not a valid reducer event.",
+      "gate": [
+        "G1",
+        "G2",
+        "G3"
+      ]
+    },
+    {
+      "id": "I06-atomic-multi-edit",
+      "given": "Two nonoverlapping insertions share one source operation and base revision.",
+      "proposedInput": {
+        "baseVersion": 4,
+        "version": 5,
+        "changesUTF16": [
+          {
+            "offset": 0,
+            "deleteUnits": 0,
+            "insert": "A"
+          },
+          {
+            "offset": 5,
+            "deleteUnits": 0,
+            "insert": "B"
+          }
+        ],
+        "canonicalOperationId": "multi_a"
+      },
+      "expectedFutureIntegration": {
+        "oneAtomicDocumentRevision": true,
+        "newMaterialSegments": [
+          "A",
+          "B"
+        ],
+        "unchangedMiddleCopiedToMaterial": false,
+        "materialSegmentOrderRequiresPredeclaredRule": true,
+        "noInventedExtraCommitSerials": true
+      },
+      "currentInterfaceLimitation": "Existing reducer has one change, not a changes array. Future atomic grammar required.",
+      "gate": [
+        "G2",
+        "G3"
+      ]
+    },
+    {
+      "id": "I07-append-undo-redo",
+      "given": "Accepted history exists. A known undo/redo changes the document.",
+      "proposedInput": {
+        "mode": "append-only",
+        "historyText": "文字",
+        "documentReasonSequence": [
+          "undo",
+          "redo"
+        ]
+      },
+      "expectedFutureIntegration": {
+        "historyBodyRetained": true,
+        "newMaterialAdmissions": 0,
+        "proposalClearsSemanticCandidateAndWindow": true,
+        "rendererKeepsExistingIdsAndColors": true
+      },
+      "currentInterfaceLimitation": "Semantic-window cancellation on undo is a future product rule, not verified common behavior of existing artifacts.",
+      "gate": [
+        "G2",
+        "G5"
+      ]
+    },
+    {
+      "id": "I08-end-to-end-transient-no-ack",
+      "given": "A future finite handoff/admission slot is temporarily unavailable for one valid known event, while logical body still has sufficient permanent capacity. A cooperative producer owns one retry slot.",
+      "proposedInput": {
+        "originSourceSeq": 8,
+        "commitSerial": 3,
+        "wholeInsertion": "追加",
+        "producerRetainsSameEvent": true,
+        "producerRetrySlots": 1
+      },
+      "expectedFutureIntegration": {
+        "beforeCapacityAvailable": {
+          "ack": false,
+          "sourceSeqAdvance": false,
+          "commitSerialAdvance": false,
+          "newGlyphIds": 0,
+          "noPayloadInExtraUnboundedQueue": true
+        },
+        "afterSameEventRetry": {
+          "materialAdmissions": 1,
+          "ackAfterBodyAdmission": true,
+          "newNormalizedSequenceAssignedOnlyOnForward": true
+        },
+        "independentActivityCanContinue": true,
+        "presentationLagAloneBlocksLogicalAdmission": false,
+        "revealingLettersFreesPermanentBodyCapacity": false
+      },
+      "currentInterfaceLimitation": "Scheduler METHOD hold is not an upstream no-ACK/replay adapter.",
+      "gate": [
+        "G3"
+      ]
+    },
+    {
+      "id": "I09-noncooperative-producer-gap",
+      "given": "After no-ACK a producer sends a newer same-source edit and loses the refused event.",
+      "proposedInput": {
+        "refusedSourceSeq": 8,
+        "newerSourceSeq": 9,
+        "canReplayRefusedEvent": false
+      },
+      "expectedFutureIntegration": {
+        "losslessAppendSupported": false,
+        "gapDisclosed": true,
+        "inventMissingText": false,
+        "semanticContextInvalidated": true,
+        "routeRestrictedToSupportedActivityOrPreview": true
+      },
+      "gate": [
+        "G1",
+        "G3"
+      ]
+    },
+    {
+      "id": "I10-permanent-capacity-hold",
+      "given": "A whole insertion exceeds permanent body capacity or maximum single event.",
+      "proposedInput": {
+        "requestedUnits": 257,
+        "proposedMaximumBodyUnits": 256
+      },
+      "expectedFutureIntegration": {
+        "disposition": "explicit-capacity-hold",
+        "materialAdmissions": 0,
+        "semanticWindowAdditions": 0,
+        "partialTruncation": false,
+        "endlessRetry": false,
+        "ackConsumesAccordingToDeclaredPermanentHoldPolicy": true
+      },
+      "gate": [
+        "G3"
+      ]
+    },
+    {
+      "id": "I11-saving-off-export",
+      "given": "Artificial admitted body/query/IDs/colors exist only in volatile memory. Saving-off is enabled across the future pipeline.",
+      "proposedInput": {
+        "savingOff": true,
+        "artificialBodyText": "VOLATILE_MARKER",
+        "artificialGlyphIds": [
+          1,
+          2,
+          3
+        ],
+        "artificialColorSequence": [
+          "blue",
+          "green",
+          "purple"
+        ]
+      },
+      "expectedFutureIntegration": {
+        "forbiddenPersistentFields": [
+          "bodyText",
+          "glyphText",
+          "glyphIdSequence",
+          "glyphColorSequence",
+          "rawBatch",
+          "documentMirror",
+          "draft",
+          "query",
+          "recentWindow",
+          "textFingerprint",
+          "originDocumentIdSequence"
+        ],
+        "permittedPersistentSummary": [
+          "shape",
+          "seed",
+          "time",
+          "boundedAggregateCounts"
+        ],
+        "callsExistingSaveWidgetForAmbient": false,
+        "restartRestoresBodyFromSavingOff": false
+      },
+      "currentInterfaceLimitation": "Current widget persists raw batches. Scheduler METHOD allows IDs/colors export; future whitelist must exclude these sequences.",
+      "gate": [
+        "G4"
+      ]
+    },
+    {
+      "id": "I12-cross-commit-unicode",
+      "given": "One insertion commits e; a separate insertion commits U+0301. A ZWJ emoji is also supplied intact.",
+      "proposedInput": {
+        "insertionTexts": [
+          "e",
+          "́",
+          "👩‍💻"
+        ],
+        "normalization": "none",
+        "perInsertionSegmentation": true
+      },
+      "expectedFutureIntegration": {
+        "combiningHistoryUnits": 2,
+        "originalUtf16SequencePreserved": true,
+        "oldIdAndColorRetainedInAppend": true,
+        "normalizationNeverUsedForDocumentOffsets": true,
+        "visibleGlyphProjectionNeedsSeparateRendererCheck": true,
+        "renderedAppearanceAlreadyVerified": false
+      },
+      "gate": [
+        "G2",
+        "G4"
+      ]
+    },
+    {
+      "id": "I13-focus-hide-pause-stale-answer",
+      "given": "Material arrives while hidden or paused, then focus changes and an old shape answer arrives.",
+      "proposedInput": {
+        "hiddenOrPaused": true,
+        "boundedKnownMaterialAllowed": true,
+        "oldAnswerEpoch": 1,
+        "currentEpoch": 2
+      },
+      "expectedFutureIntegration": {
+        "materialAdmissionIndependentOfPresentation": true,
+        "hiddenRevealAndShapeWork": 0,
+        "captureStopIsSeparateControl": true,
+        "oldShapeAnswerApplied": false,
+        "reopenBoundedRevealAndSingleCatchup": true,
+        "noReplayOfEveryHiddenWord": true
+      },
+      "gate": [
+        "G2",
+        "G3",
+        "G5"
+      ]
+    },
+    {
+      "id": "I14-document-sync-baseline-scope",
+      "given": "A baseline contains pre-existing synthetic text; a later known revision confirms the whole document.",
+      "proposedInput": {
+        "baselineText": "既存本文",
+        "newInsertion": "新",
+        "stableWholeRevision": true,
+        "initialIntegrationMode": "append-only"
+      },
+      "expectedFutureIntegration": {
+        "initialAppendMaterial": "新",
+        "preexistingBaselineMaterialAdmissions": 0,
+        "docSyncRequiresSeparateExplicitScopeAndIdentityContract": true,
+        "feedWholeRevisionAsNewAppend": false
+      },
+      "currentInterfaceLimitation": "Document-sync can include baseline text and change middle IDs. Scheduler METHOD is append-based, not that reconciliation contract.",
+      "gate": [
+        "G1",
+        "G2",
+        "G4"
+      ]
+    }
+  ]
+}

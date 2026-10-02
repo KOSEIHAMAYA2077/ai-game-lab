@@ -1,6 +1,6 @@
 # サイドインテリアとしてのGlyph Matter — 追加の使用像
 
-更新: 2026-10-03 03:15 JST。ここでは使用像と分析計画を記録する。OS全体入力の取得機能を実装・起動した記録ではない。従来の黒い空間・文字の表面・蓄積した履歴・小窓は比較基準として保持する。常駐の資源予算は未達で、低負荷を実証済みとはしない。
+更新: 2026-10-03 04:42 JST。ここでは使用像と分析計画を記録する。OS全体入力の取得機能を実装・起動した記録ではない。従来の黒い空間・文字の表面・蓄積した履歴・小窓は比較基準として保持する。既定60形の常駐資源目標は未実証。別Metal3形の短時間結果を全体達成へ移さない。
 
 ## 使用中に起きてほしいこと
 
@@ -37,6 +37,10 @@ macOS/Windowsの具体的API・権限・IME・secure input・アプリ連携は�
 [人工入力契約](../experiments/ambient-input-contract-v1/README.md) は、確定・候補・活動、重複、undo、有限queue、保存を別々に試した独立reducerである。platform schemaとの変換や既存小窓への接続は未実装。現行小窓は解釈完了を待ってから文字を追加し、入力batchを保存する。解釈に失敗しても材料を即時に増やす経路と、原文保存offの経路は今後の接続課題。[境界レビュー](../experiments/ambient-boundary-review-v1/REPORT.md) に具体差を残す。
 
 [HCI本文調査](side-interior-hci-v1/README.md) は配置・更新頻度・長期利用の比較案を支える。物理展示やARの論文を、常時最前面のPC小窓の快適性へそのまま適用しない。人間による使用評価はまだ行っていない。
+
+追加の[材料と形判断の機構比較](../experiments/ambient-material-scheduler-v1/REPORT.md)は、同じ17人工stream×3方針で論理材料を一致させ、形変更166/21/13、実字句検索195/26/26を観測した。語burstが合計を支配するため日常使用へ外挿しない。単純な引用にも反応する3群の字句検索で一般意味モデルではない。表示を止めても有限材料受理は続け、保存offは文字・ID順・色順を一時状態にするR2候補を比較した。実小窓・上流無損失・全OS取得の実証ではない。
+
+[接続設計snapshot](../experiments/ambient-integration-map-v1/README.md)はcanonical gateとmaterialの二重body/IDを避け、全体受理後ACKにする将来境界を整理した。14 JSON例は未実行の提案。別の統合grammar／人工gateは現在検証中で、既存widgetに接続済みではない。[Windows移植案](widget-cross-platform-runtime-v1/README.md)は文字planeの描画を対象とし、本文取得・意味モデル・快適性とは別の計画である。
 
 ## 今回の8時間で残すもの
 

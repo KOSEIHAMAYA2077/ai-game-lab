@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "checked_on": "2026-10-03",
+  "status": "document_checks_only",
+  "documents_checked": 6,
+  "json_parse_failures": 0,
+  "relative_links_checked": 14,
+  "broken_links": [],
+  "local_reference_sha_drift": [],
+  "public_text_pattern_locations": [],
+  "windows_measurements": 0,
+  "program_builds": 0,
+  "library_or_model_downloads": 0,
+  "shared_source_edits": 0,
+  "os_capture_or_settings_actions": 0,
+  "scope": "リンク・JSON・参照SHA・公開文書の限定patternのみ。renderer/API/libraryの実装試験やWindows権限・配布確認ではない。",
+  "first_pass_note": "初回はこのcheckファイルの生成前に自己参照linkを検査したため未存在1件。生成後の再確認は下記結果。",
+  "links": [
+    {
+      "file": "EVALUATION_PLAN.md",
+      "target": "../widget-study-protocol-v1/RESOURCE_PLAN.md",
+      "exists": true
+    },
+    {
+      "file": "EVALUATION_PLAN.md",
+      "target": "../side-interior-hci-v1/EVALUATION.md",
+      "exists": true
+    },
+    {
+      "file": "PORT_PLAN.md",
+      "target": "../ambient-input-platforms-v1/README.md",
+      "exists": true
+    },
+    {
+      "file": "PORT_PLAN.md",
+      "target": "../../experiments/ambient-integration-map-v1/README.md",
+      "exists": true
+    },
+    {
+      "file": "PORT_PLAN.md",
+      "target": "EVALUATION_PLAN.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "../../desktop/glyph-metal-lab-v1/Sources/Renderer.swift",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "../../desktop/glyph-metal-lab-v1/Sources/Glyphs.metal",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "PORT_PLAN.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "EVALUATION_PLAN.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "SOURCES.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "LOCAL_REFERENCES.json",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "DOCUMENT_CHECKS.json",
+      "exists": true
+    },
+    {
+      "file": "SOURCES.md",
+      "target": "SOURCES.json",
+      "exists": true
+    },
+    {
+      "file": "SOURCES.md",
+      "target": "LOCAL_REFERENCES.json",
+      "exists": true
+    }
+  ],
+  "independent_read_only_review": {
+    "reviewer": "widget_metal_comparison",
+    "files": [
+      "README.md",
+      "PORT_PLAN.md",
+      "EVALUATION_PLAN.md"
+    ],
+    "finding": "確認した文書範囲で具体的な境界問題なし。Windows実測や全APIの実装検証ではない。",
+    "checked_boundaries": [
+      "Metal v1 1 body draw / 1536 instance",
+      "80B/176Bはcomponent layout算術",
+      "component payloadと全体RAMを分離",
+      "3形と60形/Programを分離",
+      "v2 cameraは将来再凍結・未移植",
+      "Windowsは計画のみ・予算未達成扱い"
+    ],
+    "reviewer_actions": "document reading only; no source edits/build/test/UI/OS/resource raw reads"
+  }
+}

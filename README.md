@@ -24,6 +24,8 @@ Mac標準の小窓で、別の作業の横に置く試作。通常15fps、入力
 
 **次の使用像は、創作・プログラミング・仕事の横に置くサイドインテリア。** 日常の入力を材料に育ち、内容から穏やかに形を変える構成を設計中です。全アプリの入力連動は未実装で、公開版では専用の入力欄を使います。[追加の使用像と分析](research/side-interior-direction-20261003.md) / [入力契約の人工実験](experiments/ambient-input-contract-v1/README.md) / [HCI本文と配置の比較案](research/side-interior-hci-v1/README.md) / [研究テーマ・比較・評価計画](research/widget-study-protocol-v1/README.md)。
 
+材料の追加と形の判断を分け、同じ人工入力で更新頻度を比較しました。低頻度化を快適性の実証とはせず、保存offの本文・ID列を出さない候補も別に検査。[機構比較と失敗・限界](experiments/ambient-material-scheduler-v1/REPORT.md) / [接続の設計snapshot](experiments/ambient-integration-map-v1/README.md) / [Windows小窓への移植案・一次資料30項目](research/widget-cross-platform-runtime-v1/README.md)。Windows実行・全アプリ取得は未実施です。
+
 **Codexのサブエージェントをフル稼働。** 先行研究の調査、実装、動きや設計のレビュー、検証を複数のエージェントで分担し、試作と比較を繰り返しています。
 
 [16GBノートPC向けの先行研究・実装方針](research/16gb-text-to-3d-20261002.md) · [0.8B / 2BのCPU実測と失敗](experiments/consumer-16gb-20261002/README.md)。小モデルは動いたものの意味精度が不足したため、次は形・属性・関係を分けて学ぶ方式を比較します。

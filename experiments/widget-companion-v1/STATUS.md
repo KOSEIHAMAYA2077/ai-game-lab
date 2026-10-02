@@ -1,6 +1,6 @@
 # 小窓版の継続状況
 
-## 最新: 2026-10-03 04:31 JST
+## 最新: 2026-10-03 04:45 JST
 
 最新の8時間分析は02:37〜10:37 JST、10:17以降新機能停止。専用caffeinate83393は期限付き、未知82495は触らない。heartbeat3d-5は20分、意味ある変化だけ通知。全アプリ入力という使用像を受け、人工契約・サイドインテリアの分析を継続。OS入力取得・権限／設定変更・有料API・実本文送信は未実行。
 
@@ -21,11 +21,11 @@ Metal v2は独立CPU射影35,763条件でR2画面/near/far切断0。R1far失敗�
 
 ### 新2時間offscreen r2
 
-旧PID83137/83230消失・約30分／finalなしを保存。旧記録を足し合わせない。新supervisor30秒preflightはexit0、14.996fps／MTL0、最初の誤path拒否も保存。凍結R5新r2は04:25:03開始、06:25:03予定。supervisor93048/engine93049/sampler93050、出力 .local/metal-soak-2h-r2/ と .local/metal-soak-2h-r2-attempt/ 。source SHA・stdout/stderr・exit/childidentityを突合。まだ完走ではなく、実窓／8時間／履歴保存試験ではない。所有だけを確認し、PID再利用や他プロセスは止めない。
+旧PID83137/83230消失・約30分／finalなしを保存。旧記録を足し合わせない。新supervisor30秒preflightはexit0、14.996fps／MTL0、最初の誤path拒否も保存。凍結R5新r2は04:25:03開始、06:25:03予定。supervisor93048/engine93049/sampler93050、出力 .local/metal-soak-2h-r2/ と .local/metal-soak-2h-r2-attempt/ 。source SHA・stdout/stderr・exit/childidentityを突合。04:45頃の約20分は17,910commit／約15fps、1回400文字追加、7pixel／105finite、MTL/timeout/skip0。まだ完走ではなく、実窓／8時間／履歴保存試験ではない。所有だけを確認し、PID再利用や他プロセスは止めない。
 
 ### 次の一実験
 
-Metal v2の公開source・画像・短時間原票をチェックして別PRへ保存。返却済みscheduler/map/Windows文書も別研究PRへ接続し、材料を先に足し形は低頻度で判断する統合gateの結果を待つ。Metal v3は形の表面・クラゲ動作を保持できてから実操作と資源比較へ。10:17以降新機能を止め、10:37までに結果／残る制限を公開、automation停止、所有caffeinate83393だけ終了。
+Metal v2はPR29（head7ac7cbe）をmainへmerge・タスク添付済み。通常履歴の人工261文字/20種類/青/メビウスも再起動で確認、青の暗さは次版改善へ残す。返却済みscheduler/map/Windows文書を新branch research/ambient-scheduler-platform-v1 の別研究PRへ接続し、材料を先に足し形は低頻度で判断する統合gateの結果を待つ。Metal v3は形の表面・クラゲ動作を保持できてから実操作と資源比較へ。10:17以降新機能を止め、10:37までに結果／残る制限を公開、automation停止、所有caffeinate83393だけ終了。
 
 
 以下は01:10時点の履歴。最新の判断は上の節を参照する。
