@@ -12,6 +12,10 @@
 
 次の生成目標は**入力確定から約10秒**。モデルが大まかな構造を決め、規定範囲の太さ・曲面を自前で肉付けする。[骨格からの生成案](research/skeleton-first-10s-v1.md)。
 
+### [▶ 小型モデルと文字表面の比較版](https://koseihamaya2077.github.io/glyph-matter/skeleton-v1/)
+
+6系統の形・首・縦横・曲がり・ねじれを文章から選び、文字が面を流れる。HELPの「小型モデルを準備」で無料モデルを取得し、ブラウザ内CPUで処理する。初回取得は約128MB、入力の外部送信なし。既知の曲面を制約内で作る版で、任意のtext-to-meshではない。[操作・実測・失敗・モデルとルールの区別](experiments/skeleton-surface-v1/README.md)。表示まで10秒を目安とし、演出を含め30秒まで許容する条件へ更新した。
+
 公開中の試遊版は、用意した60形と語彙・連想グラフ・限定した曖昧検索で動く「根性版」に、鳥・魚・蛇の骨格を追加した版です。試遊中のモデル推論は使いません。軽量モデルによる任意の3D形状生成は、まだ研究段階です。
 
 [公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/glyph-matter/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)
