@@ -32,8 +32,13 @@ final class WidgetMetrics: NSObject, WKScriptMessageHandler {
                 clean[key] = number
             }
         }
+        // A pause can be the last message before rendering stops. Do not lose
+        // its final state to the ordinary frame-counter write throttle.
+        let lifecycleChanged = booleanKeys.contains { key in
+            (counters[key] as? NSNumber)?.boolValue != (clean[key] as? NSNumber)?.boolValue
+        }
         counters = clean
-        save(force: false)
+        save(force: lifecycleChanged)
     }
 
     func save(force: Bool) {

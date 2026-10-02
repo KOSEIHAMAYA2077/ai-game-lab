@@ -1,0 +1,66 @@
+{
+  "windows": [
+    {
+      "source": "candidate-a-calm.json",
+      "source_sha256": "1745ebf8dd38e4609d207af3763f1afec5e6257c2bd63d9b09ab0f4a6eb9cb61",
+      "label": "candidate-a-calm",
+      "elapsed_seconds": 90.007273,
+      "samples": 181,
+      "explicit_pid_group": [
+        58062,
+        58064,
+        58065,
+        58066
+      ],
+      "coalition": [
+        60021,
+        60022
+      ],
+      "cpu_single_core_percent": 12.110117942357835,
+      "charged_footprint_mib": {
+        "first": 209.1282730102539,
+        "median": 207.5970230102539,
+        "peak": 209.1438980102539,
+        "last": 207.5032730102539
+      },
+      "frame_count_first": 1037,
+      "frame_count_last": 2369,
+      "frames_delta": 1332,
+      "frames_per_wall_second": 14.798804092198194,
+      "validation_passed": true,
+      "validation_errors": [],
+      "warning": "charged per-process footprint sum is not unique system RAM; CPU 100% means one logical core; telemetry frame sampling has about one second lag; GPU and power unmeasured"
+    },
+    {
+      "source": "candidate-a-hidden.json",
+      "source_sha256": "8ac413765694a0485cfd5f3365640e47f622d72a933778fe75cef72b7801ae38",
+      "label": "candidate-a-hidden",
+      "elapsed_seconds": 30.005035,
+      "samples": 61,
+      "explicit_pid_group": [
+        58062,
+        58064,
+        58065,
+        58066
+      ],
+      "coalition": [
+        60021,
+        60022
+      ],
+      "cpu_single_core_percent": 0.04718013493402024,
+      "charged_footprint_mib": {
+        "first": 163.5189437866211,
+        "median": 163.5658187866211,
+        "peak": 163.6283187866211,
+        "last": 163.6283187866211
+      },
+      "frame_count_first": 3549,
+      "frame_count_last": 3549,
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "validation_passed": true,
+      "validation_errors": [],
+      "warning": "charged per-process footprint sum is not unique system RAM; CPU 100% means one logical core; telemetry frame sampling has about one second lag; GPU and power unmeasured"
+    }
+  ]
+}

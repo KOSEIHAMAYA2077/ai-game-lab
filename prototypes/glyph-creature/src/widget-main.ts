@@ -91,9 +91,7 @@ async function submit(text: string, replay = false) {
     const parsed = interpret(text, matter.spec);
     const ink = replay ? lastInk : inkSelect.value === 'auto' ? parsed.ink : inkSelect.value as Ink;
     const chars = splitGlyphs(text).length, times = Math.max(1, Math.min(Number(repeat.value), Math.floor((32000 - matter.glyphs.length) / chars)));
-    // Limit by graphemes, not UTF-16 code units; retain the exact submitted glyphs.
-    const capacity = 32000 - matter.glyphs.length;
-    const safeText = chars > capacity ? splitGlyphs(text).slice(0, capacity).join('') : text;
+    // Matter bounds the visible body but records the full submitted text and accepted count.
     if (result.program) {
       if (scene.setProgram(result.program)) scene.setSpec({ ...matter.spec, shape: 'condense', mode: 'surface', count: 1, arrangement: 'single', deformation: 'gentle', motion: 'calm' });
       else result = { ...result, program: null, source: 'unchanged', reason: 'unsupported-relation-geometry' };
@@ -107,12 +105,12 @@ async function submit(text: string, replay = false) {
     }
     browserInfo = model.inspect().lastInfo ?? browserInfo;
     lastResolution = result;
-    matter.add(safeText, times, { ink, seed: crypto.getRandomValues(new Uint32Array(1))[0] });
+    matter.add(text, times, { ink, seed: crypto.getRandomValues(new Uint32Array(1))[0] });
     scene.sync(points, parseFloat(getComputedStyle(input).fontSize));
     scheduler.setTransient(true); scheduler.invalidate();
     const constructionMs = performance.now() - buildStart;
     pending = { start, readyAt: matter.time + 3.95, interpretationMs, constructionMs, result };
-    lastText = safeText; lastInk = ink; awakened = true; input.value = ''; close(); update(); saveWidget(matter, scene.program?.spec ?? null); reportNative();
+    lastText = text; lastInk = ink; awakened = true; input.value = ''; close(); update(); saveWidget(matter, scene.program?.spec ?? null); reportNative();
   } catch (error) {
     if (token !== sequence) return;
     busy = false; status.textContent = requestController.signal.aborted ? '時間内に形を作れませんでした。今の形は保持しています。' : '小型モデルを確認できませんでした。HELP から準備を再試行するか「根性」に切り替えられます。';

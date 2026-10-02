@@ -1,0 +1,97 @@
+{
+  "windows": [
+    {
+      "source": "baseline-r2-calm.json",
+      "source_sha256": "98a6add9c76ab1ab3db73c05844c93041b5530b642638cdcf77fb168fc95ba8a",
+      "label": "baseline-r2-calm",
+      "elapsed_seconds": 90.001113,
+      "samples": 181,
+      "explicit_pid_group": [
+        56781,
+        56856,
+        56857,
+        56858
+      ],
+      "coalition": [
+        59798,
+        59799
+      ],
+      "cpu_single_core_percent": 13.277661587362813,
+      "charged_footprint_mib": {
+        "first": 214.0970687866211,
+        "median": 218.9251937866211,
+        "peak": 223.8314437866211,
+        "last": 222.2064437866211
+      },
+      "frame_count_first": 440,
+      "frame_count_last": 1698,
+      "frames_delta": 1258,
+      "frames_per_wall_second": 13.977604921396916,
+      "validation_passed": true,
+      "validation_errors": [],
+      "warning": "charged per-process footprint sum is not unique system RAM; CPU 100% means one logical core; telemetry frame sampling has about one second lag; GPU and power unmeasured"
+    },
+    {
+      "source": "baseline-r2-paused.json",
+      "source_sha256": "75817a755a38acd04dd004b7706e67fec6c4b5bde971c0a44bd730896076f7b3",
+      "label": "baseline-r2-paused",
+      "elapsed_seconds": 30.007606,
+      "samples": 61,
+      "explicit_pid_group": [
+        56781,
+        56856,
+        56857,
+        56858
+      ],
+      "coalition": [
+        59798,
+        59799
+      ],
+      "cpu_single_core_percent": 0.6526543936893866,
+      "charged_footprint_mib": {
+        "first": 178.3939437866211,
+        "median": 176.7376937866211,
+        "peak": 178.3939437866211,
+        "last": 176.6908187866211
+      },
+      "frame_count_first": 2316,
+      "frame_count_last": 2316,
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "validation_passed": true,
+      "validation_errors": [],
+      "warning": "charged per-process footprint sum is not unique system RAM; CPU 100% means one logical core; telemetry frame sampling has about one second lag; GPU and power unmeasured"
+    },
+    {
+      "source": "baseline-r2-hidden.json",
+      "source_sha256": "a5604742e5a6e57441eefef2a471d4385c9f6dfce6e2f5404b1de55f0fa2d414",
+      "label": "baseline-r2-hidden",
+      "elapsed_seconds": 30.011581,
+      "samples": 61,
+      "explicit_pid_group": [
+        56781,
+        56856,
+        56857,
+        56858
+      ],
+      "coalition": [
+        59798,
+        59799
+      ],
+      "cpu_single_core_percent": 0.009924645422711986,
+      "charged_footprint_mib": {
+        "first": 223.3783187866211,
+        "median": 223.3470687866211,
+        "peak": 223.3783187866211,
+        "last": 223.3158187866211
+      },
+      "frame_count_first": 2385,
+      "frame_count_last": 2385,
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "validation_passed": true,
+      "validation_errors": [],
+      "warning": "charged per-process footprint sum is not unique system RAM; CPU 100% means one logical core; telemetry frame sampling has about one second lag; GPU and power unmeasured"
+    }
+  ]
+}

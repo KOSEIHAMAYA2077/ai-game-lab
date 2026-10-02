@@ -1,0 +1,97 @@
+{
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.4.0",
+    "thread": "single JS thread",
+    "browserNativeMeasured": false
+  },
+  "fixtures": [
+    {
+      "codeUnits": 5
+    },
+    {
+      "codeUnits": 12
+    },
+    {
+      "codeUnits": 20
+    },
+    {
+      "codeUnits": 6
+    },
+    {
+      "codeUnits": 21
+    },
+    {
+      "codeUnits": 32
+    },
+    {
+      "codeUnits": 22
+    },
+    {
+      "codeUnits": 2
+    },
+    {
+      "codeUnits": 7
+    },
+    {
+      "codeUnits": 2000
+    }
+  ],
+  "count": 2000,
+  "importMs": 1.0493330000000007,
+  "coldMs": 2.778500000000001,
+  "firstAccepted": true,
+  "warm": {
+    "medianMs": 0.03012499999999818,
+    "p95Ms": 0.7980000000000018,
+    "maxMs": 1.1282080000000008
+  },
+  "cpu": {
+    "userMs": 238.969,
+    "systemMs": 4.459,
+    "totalMs": 243.428
+  },
+  "memory": {
+    "before": {
+      "rss": 48791552,
+      "heapTotal": 5128192,
+      "heapUsed": 3898288,
+      "external": 1833677,
+      "arrayBuffers": 137467
+    },
+    "peak": {
+      "rss": 66715648,
+      "heapTotal": 15106048,
+      "heapUsed": 7709136,
+      "external": 1924833,
+      "arrayBuffers": 228619
+    },
+    "afterGC": {
+      "rss": 66633728,
+      "heapTotal": 14319616,
+      "heapUsed": 5030176,
+      "external": 1924833,
+      "arrayBuffers": 228619
+    },
+    "heapDeltaAfterGCBytes": 1131888,
+    "rssDeltaAfterGCBytes": 17842176,
+    "note": "Node harness runtime delta, not the whole Mac widget footprint; RSS not a heap size guarantee"
+  },
+  "model": {
+    "format": "glyph-char-student-v1",
+    "dimensions": 4096,
+    "headCount": 2,
+    "decodedWeightBytes": 91136,
+    "maxInputCodeUnits": 4000,
+    "transformer": false,
+    "externalRequests": false,
+    "thresholds": {
+      "primitiveScore": 0.8,
+      "primitiveMargin": 0.35,
+      "primitiveCoverage": 0.24,
+      "relationScore": 0.78,
+      "relationMargin": 0.3
+    }
+  }
+}

@@ -1,0 +1,1814 @@
+{
+  "version": 1,
+  "name": "widget-student-independent-90-v1",
+  "created_utc": "2026-10-02T15:56:39Z",
+  "origin": "Manually authored artificial inputs by an independent evaluation agent before seeing student source, training data, weights or thresholds.",
+  "scope": {
+    "primitives": [
+      "sphere",
+      "box",
+      "tube",
+      "blade",
+      "ring",
+      "vase"
+    ],
+    "maximum_parts": 2,
+    "relations": [
+      "end",
+      "above",
+      "through"
+    ],
+    "dimension_range": [
+      0.4,
+      1.8
+    ],
+    "bend_twist_range": [
+      -1,
+      1
+    ],
+    "definite_render_cases": 60,
+    "definite_hold_cases": 26,
+    "ambiguous_cases": 4
+  },
+  "categories": {
+    "single_nominal": 15,
+    "single_attribute": 15,
+    "relation_simple": 15,
+    "relation_scope": 15,
+    "hold_ordinary": 15,
+    "hold_negation_ambiguity": 15
+  },
+  "languages": {
+    "ja": 64,
+    "en": 26
+  },
+  "cases": [
+    {
+      "id": "s01",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "真珠みたいな玉",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s02",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "球状の物体",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s03",
+      "category": "single_nominal",
+      "language": "en",
+      "text": "a perfectly round orb",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s04",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "横に押しつぶされた球体",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "lt",
+                    "right": "width",
+                    "ratio": 0.9
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Flattened along the vertical axis; height must be smaller than width."
+    },
+    {
+      "id": "s05",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "縦に伸びた玉",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "gt",
+                    "right": "width",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Vertically elongated sphere."
+    },
+    {
+      "id": "s06",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "四角い箱",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s07",
+      "category": "single_nominal",
+      "language": "en",
+      "text": "rectangular block",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s08",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "さいころのような角張った塊",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s09",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "横に長い箱",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box",
+                "constraints": [
+                  {
+                    "left": "width",
+                    "operation": "gt",
+                    "right": "height",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Horizontally elongated box."
+    },
+    {
+      "id": "s10",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "ねじれた直方体",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box",
+                "constraints": [
+                  {
+                    "left": "abs_twist",
+                    "operation": "gte",
+                    "value": 0.2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "A nonzero physical section twist, not merely a changed surface coordinate."
+    },
+    {
+      "id": "s11",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "筒",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s12",
+      "category": "single_nominal",
+      "language": "en",
+      "text": "a straight rod",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s13",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "細長い円柱",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "gt",
+                    "right": "width",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Vertical axial dimension exceeds the width parameter."
+    },
+    {
+      "id": "s14",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "曲がった管",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube",
+                "constraints": [
+                  {
+                    "left": "abs_bend",
+                    "operation": "gte",
+                    "value": 0.2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Bend must affect the scaffold, not only the glyph motion."
+    },
+    {
+      "id": "s15",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "ねじれた太い棒",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube",
+                "constraints": [
+                  {
+                    "left": "abs_twist",
+                    "operation": "gte",
+                    "value": 0.2
+                  },
+                  {
+                    "left": "width",
+                    "operation": "gte",
+                    "value": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Twist plus a width larger than the neutral unit; both attributes apply to the same rod."
+    },
+    {
+      "id": "s16",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "剣",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s17",
+      "category": "single_nominal",
+      "language": "en",
+      "text": "a dagger",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s18",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "尖った刃",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s19",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "短く幅広い刀身",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "lte",
+                    "value": 0.9
+                  },
+                  {
+                    "left": "width",
+                    "operation": "gte",
+                    "value": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Short and wide relative to the unit parameters; two simultaneous attributes."
+    },
+    {
+      "id": "s20",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "湾曲した剣",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade",
+                "constraints": [
+                  {
+                    "left": "abs_bend",
+                    "operation": "gte",
+                    "value": 0.2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Curved blade."
+    },
+    {
+      "id": "s21",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "花瓶",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s22",
+      "category": "single_nominal",
+      "language": "en",
+      "text": "a ceramic vase",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s23",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "細長い口の開いた壺",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "gt",
+                    "right": "width",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Vase primitive supplies an open rim and hollow interior; no neck parameter exists in this Program schema. The axial dimension must exceed the width."
+    },
+    {
+      "id": "s24",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "背の高い花器",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "gt",
+                    "right": "width",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Tall vase."
+    },
+    {
+      "id": "s25",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "横に広いずんぐりした花瓶",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase",
+                "constraints": [
+                  {
+                    "left": "width",
+                    "operation": "gt",
+                    "right": "height",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Squat, wide vase; width and height have a relative condition."
+    },
+    {
+      "id": "s26",
+      "category": "single_nominal",
+      "language": "ja",
+      "text": "輪っか",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s27",
+      "category": "single_nominal",
+      "language": "en",
+      "text": "a closed loop",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Explicit physical noun within the six-primitive vocabulary."
+    },
+    {
+      "id": "s28",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "太い穴のある環",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring",
+                "constraints": [
+                  {
+                    "left": "depth",
+                    "operation": "gte",
+                    "value": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Depth controls this loop's tube thickness. Closed ring retains a hole; this is not the filled sphere primitive."
+    },
+    {
+      "id": "s29",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "縦長の輪",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring",
+                "constraints": [
+                  {
+                    "left": "height",
+                    "operation": "gt",
+                    "right": "width",
+                    "ratio": 1.1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Vertically elongated closed loop."
+    },
+    {
+      "id": "s30",
+      "category": "single_attribute",
+      "language": "ja",
+      "text": "ねじれた輪",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring",
+                "constraints": [
+                  {
+                    "left": "abs_twist",
+                    "operation": "gte",
+                    "value": 0.2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Twist parameter must be nonzero; its visual observability is reported separately."
+    },
+    {
+      "id": "r01",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "棒の先端に球を付ける",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "The rod is the parent and the ball is the attached child."
+    },
+    {
+      "id": "r02",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "球の先端に棒を付ける",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r01; a bag of nouns cannot distinguish these cases."
+    },
+    {
+      "id": "r03",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "花瓶の端に輪をつなぐ",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              },
+              {
+                "primitive": "ring"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "The ring is attached to the end of the vase."
+    },
+    {
+      "id": "r04",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "輪の端に花瓶をつなぐ",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              },
+              {
+                "primitive": "vase"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r03; geometry is restricted to the Program compiler."
+    },
+    {
+      "id": "r05",
+      "category": "relation_simple",
+      "language": "en",
+      "text": "Put a blade on the tip of a box.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "blade"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "The box is the parent despite appearing later in the sentence."
+    },
+    {
+      "id": "r06",
+      "category": "relation_simple",
+      "language": "en",
+      "text": "Put a box on the tip of a blade.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r05."
+    },
+    {
+      "id": "r07",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "箱の先端へ取り付けるのは球",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "A topicalized child phrase follows the relation phrase."
+    },
+    {
+      "id": "r08",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "球の先端へ取り付けるのは箱",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r07."
+    },
+    {
+      "id": "r09",
+      "category": "relation_scope",
+      "language": "en",
+      "text": "The rod is the base; attach a ring at its end.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "ring"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "The possessive pronoun refers to the first part across a clause boundary."
+    },
+    {
+      "id": "r10",
+      "category": "relation_scope",
+      "language": "en",
+      "text": "The ring is the base; attach a rod at its end.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "end"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r09."
+    },
+    {
+      "id": "r11",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "箱の上に球を置く",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Parent is lower, child is above."
+    },
+    {
+      "id": "r12",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "球の上に箱を置く",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r11."
+    },
+    {
+      "id": "r13",
+      "category": "relation_simple",
+      "language": "en",
+      "text": "A vase sits above a rod.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "vase"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Child is mentioned first."
+    },
+    {
+      "id": "r14",
+      "category": "relation_simple",
+      "language": "en",
+      "text": "A rod sits above a vase.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r13."
+    },
+    {
+      "id": "r15",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "刃を花瓶より上に置く",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              },
+              {
+                "primitive": "blade"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "The comparison target is the lower parent."
+    },
+    {
+      "id": "r16",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "花瓶を刃より上に置く",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade"
+              },
+              {
+                "primitive": "vase"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r15."
+    },
+    {
+      "id": "r17",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "球を置く。輪よりも上側に",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "One intended relation spans punctuation; the first part is the child."
+    },
+    {
+      "id": "r18",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "輪を置く。球よりも上側に",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "ring"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r17."
+    },
+    {
+      "id": "r19",
+      "category": "relation_scope",
+      "language": "en",
+      "text": "Below the sphere sits a box.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "A below phrase must be inverted into the supported above relation."
+    },
+    {
+      "id": "r20",
+      "category": "relation_scope",
+      "language": "en",
+      "text": "Below the box sits a sphere.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r19."
+    },
+    {
+      "id": "r21",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "箱を棒が貫く",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Parent is the pierced box; child is the rod crossing its material."
+    },
+    {
+      "id": "r22",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "棒を箱が貫く",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r21; semantic roles, not surface word order, govern orientation."
+    },
+    {
+      "id": "r23",
+      "category": "relation_simple",
+      "language": "en",
+      "text": "A blade passes through a sphere.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "blade"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "The blade is the passing child."
+    },
+    {
+      "id": "r24",
+      "category": "relation_simple",
+      "language": "en",
+      "text": "A sphere passes through a blade.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "blade"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r23."
+    },
+    {
+      "id": "r25",
+      "category": "relation_simple",
+      "language": "ja",
+      "text": "花瓶の壁を棒が貫通する",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Crossing the material wall, rather than only traversing the empty cavity, is required."
+    },
+    {
+      "id": "r26",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "棒を花瓶が貫通する",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "vase"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Reversed material role from r25; finite compiler may adjust dimensions."
+    },
+    {
+      "id": "r27",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "輪を貫くのは棒",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Topicalized crossing part follows the verb."
+    },
+    {
+      "id": "r28",
+      "category": "relation_scope",
+      "language": "ja",
+      "text": "棒を貫くのは輪",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "ring"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r27."
+    },
+    {
+      "id": "r29",
+      "category": "relation_scope",
+      "language": "en",
+      "text": "The box is pierced by a ring.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "ring"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Passive voice: the by phrase names the crossing child."
+    },
+    {
+      "id": "r30",
+      "category": "relation_scope",
+      "language": "en",
+      "text": "The ring is pierced by a box.",
+      "expected": {
+        "action": "render",
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Direction reversal of r29."
+    },
+    {
+      "id": "h01",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "今日もよく頑張った",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Ordinary diary text without a supported geometric referent."
+    },
+    {
+      "id": "h02",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "赤く光って，ゆっくり流れる",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Color and motion alone do not identify a new scaffold."
+    },
+    {
+      "id": "h03",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "触れていない世界への手紙",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Abstract metaphor without an agreed primitive."
+    },
+    {
+      "id": "h04",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "立方根を計算した",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "A mathematical root is not a box-shaped object."
+    },
+    {
+      "id": "h05",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "リングバッファは満杯だ",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "A software data structure is not a physical ring in this conservative benchmark."
+    },
+    {
+      "id": "h06",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "星はどうして光るの",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "A star is outside this six-primitive Program grammar."
+    },
+    {
+      "id": "h07",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "夕食にカレーを作る",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Food is outside the grammar; no unbounded imagined mesh should be emitted."
+    },
+    {
+      "id": "h08",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "幾何学について考えている",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Generic topic discussion without a requested shape."
+    },
+    {
+      "id": "h09",
+      "category": "hold_ordinary",
+      "language": "en",
+      "text": "The meeting starts at noon.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Ordinary scheduling text."
+    },
+    {
+      "id": "h10",
+      "category": "hold_ordinary",
+      "language": "en",
+      "text": "Turn the volume down.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "An instruction concerning sound, not geometry."
+    },
+    {
+      "id": "h11",
+      "category": "hold_ordinary",
+      "language": "en",
+      "text": "The database table is locked.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Software context; a physical table is not a supported primitive either."
+    },
+    {
+      "id": "h12",
+      "category": "hold_ordinary",
+      "language": "en",
+      "text": "I am thinking about tomorrow.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Ordinary abstract text."
+    },
+    {
+      "id": "h13",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "8個",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "A count without a shape cannot form a Program."
+    },
+    {
+      "id": "h14",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "青",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Color-only input retains the existing scaffold."
+    },
+    {
+      "id": "h15",
+      "category": "hold_ordinary",
+      "language": "ja",
+      "text": "地図の凡例",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "No supported physical primitive in this phrase."
+    },
+    {
+      "id": "h16",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "球は作らない",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Explicit negation of the only supported noun."
+    },
+    {
+      "id": "h17",
+      "category": "hold_negation_ambiguity",
+      "language": "en",
+      "text": "No sphere, no ring.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Both mentioned primitives are explicitly negated."
+    },
+    {
+      "id": "h18",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "箱でも筒でもない形",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "No positive primitive remains after both nouns are excluded."
+    },
+    {
+      "id": "h19",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "花瓶を取り消す",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Cancellation, not a new shape instruction."
+    },
+    {
+      "id": "h20",
+      "category": "hold_negation_ambiguity",
+      "language": "en",
+      "text": "Do not add a blade.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Negated addition of a blade."
+    },
+    {
+      "id": "h21",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "箱を出すな。",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Prohibition expressed after the shape noun."
+    },
+    {
+      "id": "h22",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "管のない形",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Absence of a tube does not specify another primitive."
+    },
+    {
+      "id": "h23",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "ねじれない",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Negated attribute and no shape noun; retain the prior scaffold."
+    },
+    {
+      "id": "h24",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "球か箱のどちらか",
+      "expected": {
+        "action": "any",
+        "allow_hold": true,
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "The author leaves the choice open; either named one-part scaffold or an explicit hold is acceptable. Report separately from definite accuracy."
+    },
+    {
+      "id": "h25",
+      "category": "hold_negation_ambiguity",
+      "language": "en",
+      "text": "A ring or a vase, either is fine.",
+      "expected": {
+        "action": "any",
+        "allow_hold": true,
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "ring"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "primitive": "vase"
+              }
+            ]
+          }
+        ]
+      },
+      "meaning_note": "Open alternative; no requirement to invent a relation or combine the nouns."
+    },
+    {
+      "id": "h26",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "球と箱",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Two nouns without a relation are underspecified; this Program requires a relation for two parts."
+    },
+    {
+      "id": "h27",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "棒の先に球を付けるか，棒を球に通すか",
+      "expected": {
+        "action": "any",
+        "allow_hold": true,
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "tube"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "end"
+          },
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "tube"
+              }
+            ],
+            "relation": "through"
+          }
+        ]
+      },
+      "meaning_note": "Two complete alternatives with different orientations. Accept one explicit alternative or hold; never collapse roles into a new third reading."
+    },
+    {
+      "id": "h28",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "箱の上か下に球",
+      "expected": {
+        "action": "any",
+        "allow_hold": true,
+        "alternatives": [
+          {
+            "parts": [
+              {
+                "primitive": "box"
+              },
+              {
+                "primitive": "sphere"
+              }
+            ],
+            "relation": "above"
+          },
+          {
+            "parts": [
+              {
+                "primitive": "sphere"
+              },
+              {
+                "primitive": "box"
+              }
+            ],
+            "relation": "above"
+          }
+        ]
+      },
+      "meaning_note": "Above or below is intentionally open; the below choice is the inverse supported above relation."
+    },
+    {
+      "id": "h29",
+      "category": "hold_negation_ambiguity",
+      "language": "ja",
+      "text": "長くて短い棒",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "Directly contradictory axial-size requests; conservative policy abstains."
+    },
+    {
+      "id": "h30",
+      "category": "hold_negation_ambiguity",
+      "language": "en",
+      "text": "A box that is both wider and narrower than itself.",
+      "expected": {
+        "action": "hold"
+      },
+      "meaning_note": "An impossible self-relative width constraint; abstain rather than silently discarding the conflict."
+    }
+  ]
+}

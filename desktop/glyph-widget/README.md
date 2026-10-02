@@ -18,6 +18,8 @@ open "$PWD/.local/Glyph Matter Widget.app"
 
 両引数は絶対パス。既存の出力先がある場合は停止するため、比較版は新しい出力先へ作る。既存アプリやWebのソースは削除・上書きしない。生成アプリはローカルのアドホック署名付きで、Appleの公証を受けた配布版ではない。現在のマシンのCPU向けにコンパイルするため、他のCPU向けの配布は別途ビルドと検証が必要。
 
+比較版のnative診断にも同じ版番号を出す場合は、`--app-version 0.14.1 --build-number 2`を追加する。指定しない場合は保存したInfo.plistの0.14.0/1を使う。版番号は数字3項、build numberは整数だけを受け付ける。既存アプリのmetadataを後から上書きする処理ではなく、新規出力の署名前に設定する。
+
 配布アプリには[ブラウザ依存のライセンスと第三者告知](licenses/README.md)を`Contents/Resources/ThirdPartyLicenses`へ同梱する。Web内のWordNet・KanjiVG等の告知も保つ。この処理は本プロジェクト独自コードのライセンスを新たに指定するものではない。
 
 最初は黒い400×440の小窓。タイトルバーをドラッグして移動、窓の端で大きさを変えられる。EnterやEscape、入力はこのアプリにフォーカスがある時だけ受ける。他アプリの文字入力を監視しない。
@@ -68,7 +70,7 @@ window.webkit?.messageHandlers.widgetMetrics.postMessage({
 });
 ```
 
-固定した数値・真偽値のキーだけを採用する。任意のオブジェクト、入力本文、文字列、認証情報は保存しない。Webのメッセージによる書き込みは最大毎秒1回。ネイティブの表示状態変更では即時更新する。ファイルには主PID、表示・最小化・最前面の状態も含む。
+固定した数値・真偽値のキーだけを採用する。任意のオブジェクト、入力本文、文字列、認証情報は保存しない。通常のフレームカウンターは毎秒1回まで。停止・表示・処理中などの真偽値が変わった時と、ネイティブの表示状態変更では即時更新する。停止直前の通知を間引き、その後の描画がないため記録が古いままになる問題を避ける。ファイルには主PID、表示・最小化・最前面の状態も含む。
 
 主PIDだけではアプリ全体のRAMにならない。WKWebViewのWebContent・Networking・GPUプロセスの帰属を起動前後と終了時に調べ、対象範囲を示す。RSS・physical footprint・GPUメモリ・ダウンロード量を混同しない。
 
@@ -83,3 +85,5 @@ window.webkit?.messageHandlers.widgetMetrics.postMessage({
 2026-10-03のこのMacではSwift 6.3.2でコンパイル、20項目に合格。WKWebView上でのWebGL・Worker・日本語IME・実際の停止負荷は、完成したWebビルドを同梱したアプリで別途確認する。Windows版と16GBノートPCの測定はこのネイティブ実装には含まれない。
 
 Appleの一次資料: [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)、[NWListener](https://developer.apple.com/documentation/network/nwlistener)、[requiredLocalEndpoint](https://developer.apple.com/documentation/network/nwparameters/requiredlocalendpoint)、[WKScriptMessage](https://developer.apple.com/documentation/webkit/wkscriptmessage)。
+
+比較版を日常的に使う場合は `--bundle-id dev.glyphmatter.companion.widget-v2` のように別IDを指定する。portと窓設定のUserDefaultsを分け、保存originも前版から引き継がない。ベンチマークA/R3は同じ人工身体を復元するため基準IDを使用したが、公開v2アプリは別IDで、旧アプリや文字履歴を変更しない。

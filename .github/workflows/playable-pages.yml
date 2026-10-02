@@ -19,6 +19,7 @@ env:
   PROGRAM_REF: glyph-matter-v0.13.0-program.1
   TWIST_REF: glyph-matter-v0.13.1-twist.1
   WIDGET_REF: glyph-matter-v0.14.0-widget.1
+  WIDGET_BUDGET_REF: glyph-matter-v0.14.1-widget.2
 
 jobs:
   build:
@@ -123,6 +124,24 @@ jobs:
           mkdir -p prototype-source/prototypes/glyph-creature/dist/widget-v1
           cp -R widget-source/prototypes/glyph-creature/dist/. prototype-source/prototypes/glyph-creature/dist/widget-v1/
           cp widget-source/prototypes/glyph-creature/dist/widget.html prototype-source/prototypes/glyph-creature/dist/widget-v1/index.html
+      - name: Check out the separate renderer-budget comparison
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.WIDGET_BUDGET_REF }}
+          path: widget-budget-source
+          persist-credentials: false
+      - name: Check and build the renderer-budget comparison
+        working-directory: widget-budget-source/prototypes/glyph-creature
+        run: |
+          npm ci --ignore-scripts
+          npm test
+          npm run build
+          SOURCE_SHA=$(git rev-parse HEAD) node -e 'const fs = require("node:fs"); const pkg = require("./package.json"); fs.writeFileSync("dist/version.json", JSON.stringify({ version: pkg.version, ref: process.env.WIDGET_BUDGET_REF, commit: process.env.SOURCE_SHA, model: "optional local MiniLM; bounded renderer buffers; raw text retained; tiny classifier evaluated separately" }, null, 2) + "\n");'
+      - name: Add renderer-budget comparison without replacing the five previous apps
+        run: |
+          mkdir -p prototype-source/prototypes/glyph-creature/dist/widget-v2
+          cp -R widget-budget-source/prototypes/glyph-creature/dist/. prototype-source/prototypes/glyph-creature/dist/widget-v2/
+          cp widget-budget-source/prototypes/glyph-creature/dist/widget.html prototype-source/prototypes/glyph-creature/dist/widget-v2/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload only built public files
