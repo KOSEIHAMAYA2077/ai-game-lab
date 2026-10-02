@@ -1,0 +1,1660 @@
+{
+  "evaluationUse": "First independent challenge frozen before WASM-specific head training completion. Old and new heads receive exactly the same recorded WASM batch-1 query vectors and batch-8 references.",
+  "fixtureSha256": "503ce6a94c40d803629889a21bc24dad5eea3a5eafad8dbf84a61503f4e7970c",
+  "newHeadSha256": "af2289c3bccb20d0186fa2770460ba50b2d08413209ab5f866c0ae2aeff1203d",
+  "oldHeadSha256": "2b5e212a7b8fec5cbf9683620ba7883c77e74140ccb65a1e91bc5ca1f5618a87",
+  "controllerHashes": {
+    "config.py": "4f83fbb6f002f77b4602eed844057315ef3bdc67396e2f5ea7b89ba30d26d620",
+    "predict.py": "39f5a192166bdfcee1fc49614737f02899a8aee36c78ffbad7056c789ece6d4e"
+  },
+  "embeddingsSha256": "33ff36a7b9c4e0c7f7d47e2cb8cd4a025c4ee4ca8b68887b6538463c9d478dd3",
+  "exactTextOverlap": {
+    "training.jsonl": 0,
+    "validation.jsonl": 0
+  },
+  "timingScope": "No performance claim: Python controller with prerecorded browser-WASM vectors, not live inference or app end-to-end.",
+  "groups": [
+    {
+      "head": "new",
+      "summary": {
+        "cases": 8,
+        "contractPass": 8,
+        "partCountPass": 8,
+        "partTypesPass": 8,
+        "rolesPass": 8,
+        "relationPass": 8,
+        "attributePass": 8,
+        "meaningPass": 8,
+        "requestedProgramCases": 7,
+        "correctProgramCases": 7,
+        "intendedHoldCases": 1,
+        "correctHoldCases": 1,
+        "attributeCases": 0,
+        "attributeCasePass": 0,
+        "attributeConditions": 0,
+        "attributeConditionPass": 0,
+        "wallP50Ms": null,
+        "wallP95Ms": null,
+        "groups": {
+          "above": {
+            "cases": 3,
+            "partCountPass": 3,
+            "partTypesPass": 3,
+            "rolesPass": 3,
+            "relationPass": 3,
+            "attributePass": 3,
+            "meaningPass": 3
+          },
+          "end": {
+            "cases": 2,
+            "partCountPass": 2,
+            "partTypesPass": 2,
+            "rolesPass": 2,
+            "relationPass": 2,
+            "attributePass": 2,
+            "meaningPass": 2
+          },
+          "through": {
+            "cases": 2,
+            "partCountPass": 2,
+            "partTypesPass": 2,
+            "rolesPass": 2,
+            "relationPass": 2,
+            "attributePass": 2,
+            "meaningPass": 2
+          },
+          "unsupported-relation": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 1,
+            "meaningPass": 1
+          }
+        }
+      },
+      "rows": [
+        {
+          "id": "head-challenge-end-ring-vase-ja",
+          "group": "end",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "輪の先端に花瓶を取り付けて、じっくり眺める。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 59.606,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-tip",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "ring",
+                "score": 0.993976
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "vase",
+                "score": 0.994225
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "end",
+                "score": 0.832011
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "end",
+                "score": 0.832011
+              },
+              {
+                "kind": "above",
+                "score": 0.126583
+              },
+              {
+                "kind": "through",
+                "score": 0.025053
+              },
+              {
+                "kind": "none",
+                "score": 0.016353
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-above-vase-blade-ja",
+          "group": "above",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "花瓶の上に刃を載せた形を見たい。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.459,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "vase",
+                "score": 0.994225
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "blade",
+                "score": 0.988279
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.729696
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.729696
+              },
+              {
+                "kind": "end",
+                "score": 0.124053
+              },
+              {
+                "kind": "none",
+                "score": 0.084166
+              },
+              {
+                "kind": "through",
+                "score": 0.062085
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-through-tube-ring-ja",
+          "group": "through",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "棒を輪が貫く、そんな立体を浮かべる。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1.4,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.724,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-through-object",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "tube",
+                "score": 0.996568
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "ring",
+                "score": 0.993976
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "through",
+                "score": 0.8105
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "through",
+                "score": 0.8105
+              },
+              {
+                "kind": "above",
+                "score": 0.091871
+              },
+              {
+                "kind": "end",
+                "score": 0.059733
+              },
+              {
+                "kind": "none",
+                "score": 0.037896
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-above-box-ring-ja",
+          "group": "above",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "箱の上に輪、という構造をお願いします。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.308,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "box",
+                "score": 0.993483
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "ring",
+                "score": 0.993976
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.888828
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.888828
+              },
+              {
+                "kind": "none",
+                "score": 0.063975
+              },
+              {
+                "kind": "through",
+                "score": 0.034609
+              },
+              {
+                "kind": "end",
+                "score": 0.012587
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-end-blade-vase-en",
+          "group": "end",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "A vase is joined at the tip of a blade.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.497,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-tip",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "blade",
+                "score": 0.990605
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "vase",
+                "score": 0.994065
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "end",
+                "score": 0.900156
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "end",
+                "score": 0.900156
+              },
+              {
+                "kind": "through",
+                "score": 0.043624
+              },
+              {
+                "kind": "above",
+                "score": 0.042133
+              },
+              {
+                "kind": "none",
+                "score": 0.014088
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-above-blade-vase-en",
+          "group": "above",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "Put a vase above a blade, then let it remain still.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.87,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "blade",
+                "score": 0.990605
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "vase",
+                "score": 0.994065
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.851538
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.851538
+              },
+              {
+                "kind": "end",
+                "score": 0.07355
+              },
+              {
+                "kind": "through",
+                "score": 0.047956
+              },
+              {
+                "kind": "none",
+                "score": 0.026955
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-through-sphere-blade-en",
+          "group": "through",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "A blade passes through a sphere.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.65
+                },
+                {
+                  "id": "1",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.455,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-through",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "sphere",
+                "score": 0.99264
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-descriptor",
+                "part": "0",
+                "attribute": "twist"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "blade",
+                "score": 0.990605
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "through",
+                "score": 0.991935
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "through",
+                "score": 0.991935
+              },
+              {
+                "kind": "end",
+                "score": 0.005294
+              },
+              {
+                "kind": "above",
+                "score": 0.001451
+              },
+              {
+                "kind": "none",
+                "score": 0.00132
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-unsupported-placement-en",
+          "group": "unsupported-relation",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "Place a vase next to a ring.",
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 0.225,
+            "reason": "primitive-uncertain",
+            "evidence": [
+              {
+                "kind": "ambiguous-part-guard",
+                "part": "0"
+              }
+            ]
+          },
+          "requestedProgram": false,
+          "contractPass": true,
+          "holdPass": true,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        }
+      ]
+    },
+    {
+      "head": "old",
+      "summary": {
+        "cases": 8,
+        "contractPass": 8,
+        "partCountPass": 8,
+        "partTypesPass": 8,
+        "rolesPass": 8,
+        "relationPass": 8,
+        "attributePass": 8,
+        "meaningPass": 8,
+        "requestedProgramCases": 7,
+        "correctProgramCases": 7,
+        "intendedHoldCases": 1,
+        "correctHoldCases": 1,
+        "attributeCases": 0,
+        "attributeCasePass": 0,
+        "attributeConditions": 0,
+        "attributeConditionPass": 0,
+        "wallP50Ms": null,
+        "wallP95Ms": null,
+        "groups": {
+          "above": {
+            "cases": 3,
+            "partCountPass": 3,
+            "partTypesPass": 3,
+            "rolesPass": 3,
+            "relationPass": 3,
+            "attributePass": 3,
+            "meaningPass": 3
+          },
+          "end": {
+            "cases": 2,
+            "partCountPass": 2,
+            "partTypesPass": 2,
+            "rolesPass": 2,
+            "relationPass": 2,
+            "attributePass": 2,
+            "meaningPass": 2
+          },
+          "through": {
+            "cases": 2,
+            "partCountPass": 2,
+            "partTypesPass": 2,
+            "rolesPass": 2,
+            "relationPass": 2,
+            "attributePass": 2,
+            "meaningPass": 2
+          },
+          "unsupported-relation": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 1,
+            "meaningPass": 1
+          }
+        }
+      },
+      "rows": [
+        {
+          "id": "head-challenge-end-ring-vase-ja",
+          "group": "end",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "輪の先端に花瓶を取り付けて、じっくり眺める。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 58.346,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-tip",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "ring",
+                "score": 0.993976
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "vase",
+                "score": 0.994225
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "end",
+                "score": 0.985073
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "end",
+                "score": 0.985073
+              },
+              {
+                "kind": "above",
+                "score": 0.012732
+              },
+              {
+                "kind": "through",
+                "score": 0.00176
+              },
+              {
+                "kind": "none",
+                "score": 0.000434
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-above-vase-blade-ja",
+          "group": "above",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "花瓶の上に刃を載せた形を見たい。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.386,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "vase",
+                "score": 0.994225
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "blade",
+                "score": 0.988279
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.899992
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.899992
+              },
+              {
+                "kind": "none",
+                "score": 0.054654
+              },
+              {
+                "kind": "through",
+                "score": 0.025034
+              },
+              {
+                "kind": "end",
+                "score": 0.02032
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-through-tube-ring-ja",
+          "group": "through",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "棒を輪が貫く、そんな立体を浮かべる。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1.4,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.314,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-through-object",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "tube",
+                "score": 0.996568
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "ring",
+                "score": 0.993976
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "through",
+                "score": 0.972573
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "through",
+                "score": 0.972573
+              },
+              {
+                "kind": "above",
+                "score": 0.015399
+              },
+              {
+                "kind": "none",
+                "score": 0.007383
+              },
+              {
+                "kind": "end",
+                "score": 0.004645
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-above-box-ring-ja",
+          "group": "above",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "箱の上に輪、という構造をお願いします。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.279,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "box",
+                "score": 0.993483
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "ring",
+                "score": 0.993976
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.957995
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.957995
+              },
+              {
+                "kind": "none",
+                "score": 0.033063
+              },
+              {
+                "kind": "through",
+                "score": 0.007214
+              },
+              {
+                "kind": "end",
+                "score": 0.001728
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-end-blade-vase-en",
+          "group": "end",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "A vase is joined at the tip of a blade.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.458,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-tip",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "blade",
+                "score": 0.990605
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "vase",
+                "score": 0.994065
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "end",
+                "score": 0.979732
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "end",
+                "score": 0.979732
+              },
+              {
+                "kind": "through",
+                "score": 0.014003
+              },
+              {
+                "kind": "above",
+                "score": 0.005227
+              },
+              {
+                "kind": "none",
+                "score": 0.001038
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-above-blade-vase-en",
+          "group": "above",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "Put a vase above a blade, then let it remain still.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.571,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "blade",
+                "score": 0.990605
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "vase",
+                "score": 0.994065
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.976559
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.976559
+              },
+              {
+                "kind": "through",
+                "score": 0.011124
+              },
+              {
+                "kind": "end",
+                "score": 0.007884
+              },
+              {
+                "kind": "none",
+                "score": 0.004434
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-through-sphere-blade-en",
+          "group": "through",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "A blade passes through a sphere.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.65
+                },
+                {
+                  "id": "1",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 0.991,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-through",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "sphere",
+                "score": 0.99264
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-descriptor",
+                "part": "0",
+                "attribute": "twist"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "blade",
+                "score": 0.990605
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "through",
+                "score": 0.999759
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "through",
+                "score": 0.999759
+              },
+              {
+                "kind": "end",
+                "score": 0.000163
+              },
+              {
+                "kind": "none",
+                "score": 4.4e-05
+              },
+              {
+                "kind": "above",
+                "score": 3.4e-05
+              }
+            ]
+          },
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "head-challenge-unsupported-placement-en",
+          "group": "unsupported-relation",
+          "wallMs": null,
+          "error": null,
+          "output": {
+            "text": "Place a vase next to a ring.",
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 0.247,
+            "reason": "primitive-uncertain",
+            "evidence": [
+              {
+                "kind": "ambiguous-part-guard",
+                "part": "0"
+              }
+            ]
+          },
+          "requestedProgram": false,
+          "contractPass": true,
+          "holdPass": true,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Finite parts/relations only. No new app model or geometry is deployed by this test.",
+    "Per-case modelMs is lookup controller time and must not be cited as generation latency.",
+    "This fixture is now observed by development agents; any re-use after changes is regression.",
+    "Zero raw string overlap does not establish unseen relation templates."
+  ]
+}

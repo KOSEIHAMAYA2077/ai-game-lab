@@ -1,0 +1,672 @@
+{
+  "runId": "followup-cpu-1",
+  "evaluationUse": "First independent followup on frozen parser revision",
+  "controllerHashes": {
+    "config.py": "5e5edd1632b0e3c0391deb123ec3a46d6040a225957dac04c6297bdeb905f672",
+    "predict.py": "57e340d2b97acbc1c7a12dcef1e6e80ff78c321f3a3b70a7713872b711639f4c",
+    "relation-head.json": "2b5e212a7b8fec5cbf9683620ba7883c77e74140ccb65a1e91bc5ca1f5618a87"
+  },
+  "controllerUnchangedDuringRun": true,
+  "exactTextOverlap": {
+    "followup-fixture.json": {
+      "training.jsonl": [],
+      "validation.jsonl": []
+    }
+  },
+  "preparationMs": 674.1225420264527,
+  "selfProcessPeakRssMiB": 712.890625,
+  "provider": "CPUExecutionProvider",
+  "inputStoresOrExternalSending": false,
+  "timingScope": "Model controller only: interpretation and finite Program. Geometry construction, glyph placement, rendering and absorption excluded. Model preparation measured separately. M5 32GB, not a 16GB laptop test.",
+  "fixtures": [
+    {
+      "fixture": "followup-fixture.json",
+      "fixtureSha256": "785366877917488ef3eaaba5cd8e347107bec7dd24fd8bbe6c92111239f301a4",
+      "summary": {
+        "cases": 8,
+        "contractPass": 8,
+        "partCountPass": 5,
+        "partTypesPass": 5,
+        "rolesPass": 5,
+        "relationPass": 5,
+        "attributePass": 5,
+        "meaningPass": 4,
+        "requestedProgramCases": 6,
+        "correctProgramCases": 2,
+        "intendedHoldCases": 2,
+        "correctHoldCases": 2,
+        "attributeCases": 3,
+        "attributeCasePass": 0,
+        "attributeConditions": 8,
+        "attributeConditionPass": 1,
+        "wallP50Ms": 4.510875005507842,
+        "wallP95Ms": 35.5110295000486,
+        "groups": {
+          "above": {
+            "cases": 1,
+            "partCountPass": 0,
+            "partTypesPass": 0,
+            "rolesPass": 0,
+            "relationPass": 0,
+            "attributePass": 0,
+            "meaningPass": 0
+          },
+          "end": {
+            "cases": 2,
+            "partCountPass": 0,
+            "partTypesPass": 0,
+            "rolesPass": 0,
+            "relationPass": 0,
+            "attributePass": 1,
+            "meaningPass": 0
+          },
+          "negation-hold": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 1,
+            "meaningPass": 1
+          },
+          "ordinary": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 1,
+            "meaningPass": 1
+          },
+          "same-type": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 0,
+            "meaningPass": 0
+          },
+          "through": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 1,
+            "meaningPass": 1
+          },
+          "through-geometry-unsupported": {
+            "cases": 1,
+            "partCountPass": 1,
+            "partTypesPass": 1,
+            "rolesPass": 1,
+            "relationPass": 1,
+            "attributePass": 1,
+            "meaningPass": 1
+          }
+        }
+      },
+      "rows": [
+        {
+          "id": "fresh-tip-ja",
+          "group": "end",
+          "wallMs": 28.06316700298339,
+          "output": {
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 28.043,
+            "reason": "primitive-uncertain",
+            "evidence": [
+              {
+                "kind": "ambiguous-part-guard",
+                "part": "0"
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": false,
+          "partTypesPass": false,
+          "rolesPass": false,
+          "relationPass": false,
+          "attributePass": false,
+          "attributeChecks": [
+            {
+              "partIndex": 0,
+              "primitive": "tube",
+              "attribute": "height",
+              "actual": null,
+              "expected": {
+                "min": 1.2
+              },
+              "pass": false
+            },
+            {
+              "partIndex": 1,
+              "primitive": "box",
+              "attribute": "height",
+              "actual": null,
+              "expected": {
+                "max": 0.8
+              },
+              "pass": false
+            },
+            {
+              "partIndex": 1,
+              "primitive": "box",
+              "attribute": "width",
+              "actual": null,
+              "expected": {
+                "max": 0.8
+              },
+              "pass": false
+            },
+            {
+              "partIndex": 1,
+              "primitive": "box",
+              "attribute": "depth",
+              "actual": null,
+              "expected": {
+                "max": 0.8
+              },
+              "pass": false
+            }
+          ],
+          "meaningPass": false
+        },
+        {
+          "id": "fresh-tip-en",
+          "group": "end",
+          "wallMs": 0.44529204024001956,
+          "output": {
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 0.442,
+            "reason": "primitive-uncertain",
+            "evidence": [
+              {
+                "kind": "ambiguous-part-guard",
+                "part": "0"
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": false,
+          "partTypesPass": false,
+          "rolesPass": false,
+          "relationPass": false,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": false
+        },
+        {
+          "id": "fresh-above-direction-ja",
+          "group": "above",
+          "wallMs": 1.831584027968347,
+          "output": {
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 1.828,
+            "reason": "primitive-uncertain",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-object-top",
+                "parts": 2
+              },
+              {
+                "kind": "primitive-uncertain",
+                "part": "0"
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": false,
+          "partTypesPass": false,
+          "rolesPass": false,
+          "relationPass": false,
+          "attributePass": false,
+          "attributeChecks": [
+            {
+              "partIndex": 0,
+              "primitive": "box",
+              "attribute": "width",
+              "actual": null,
+              "expected": {
+                "min": 1.2
+              },
+              "pass": false
+            },
+            {
+              "partIndex": 1,
+              "primitive": "tube",
+              "attribute": "width",
+              "actual": null,
+              "expected": {
+                "max": 0.8
+              },
+              "pass": false
+            }
+          ],
+          "meaningPass": false
+        },
+        {
+          "id": "fresh-same-rings-en",
+          "group": "same-type",
+          "wallMs": 39.52141699846834,
+          "output": {
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "ring",
+                  "height": 0.65,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "above",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 39.519,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-top",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "ring",
+                "score": 0.998938
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-descriptor",
+                "part": "0",
+                "attribute": "height"
+              },
+              {
+                "kind": "embedding-descriptor",
+                "part": "0",
+                "attribute": "width"
+              },
+              {
+                "kind": "explicit-attribute-rule",
+                "part": "0",
+                "attribute": "width"
+              },
+              {
+                "kind": "explicit-attribute-rule",
+                "part": "0",
+                "attribute": "depth"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "ring",
+                "score": 0.998938
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "above",
+                "score": 0.915336
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "above",
+                "score": 0.915336
+              },
+              {
+                "kind": "none",
+                "score": 0.081764
+              },
+              {
+                "kind": "through",
+                "score": 0.00289
+              },
+              {
+                "kind": "end",
+                "score": 9e-06
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": false,
+          "attributeChecks": [
+            {
+              "partIndex": 0,
+              "primitive": "ring",
+              "attribute": "width",
+              "actual": 0.4,
+              "expected": {
+                "max": 0.8
+              },
+              "pass": true
+            },
+            {
+              "partIndex": 1,
+              "primitive": "ring",
+              "attribute": "width",
+              "actual": 1.0,
+              "expected": {
+                "min": 1.2
+              },
+              "pass": false
+            }
+          ],
+          "meaningPass": false
+        },
+        {
+          "id": "fresh-through-sphere-ring-ja",
+          "group": "through",
+          "wallMs": 6.972125032916665,
+          "output": {
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "ring",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 6.969,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-through-object",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "sphere",
+                "score": 0.998732
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "ring",
+                "score": 0.998007
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "through",
+                "score": 0.788804
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "through",
+                "score": 0.788804
+              },
+              {
+                "kind": "end",
+                "score": 0.121996
+              },
+              {
+                "kind": "above",
+                "score": 0.086637
+              },
+              {
+                "kind": "none",
+                "score": 0.002563
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "fresh-unsupported-through-sphere-en",
+          "group": "through-geometry-unsupported",
+          "wallMs": 8.098999969661236,
+          "output": {
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                },
+                {
+                  "id": "1",
+                  "primitive": "sphere",
+                  "height": 1.0,
+                  "width": 1.0,
+                  "depth": 1.0,
+                  "bend": 0.0,
+                  "twist": 0.0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "semantic-model",
+            "modelMs": 8.096,
+            "reason": "selected",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "en-through",
+                "parts": 2
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "0",
+                "primitive": "box",
+                "score": 0.999079
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "0"
+              },
+              {
+                "kind": "embedding-primitive",
+                "part": "1",
+                "primitive": "sphere",
+                "score": 0.998743
+              },
+              {
+                "kind": "noun-focus-rule",
+                "part": "1"
+              },
+              {
+                "kind": "relation-input-mask-rule"
+              },
+              {
+                "kind": "learned-relation-head",
+                "label": "through",
+                "score": 0.999784
+              }
+            ],
+            "relationCandidates": [
+              {
+                "kind": "through",
+                "score": 0.999784
+              },
+              {
+                "kind": "end",
+                "score": 0.000149
+              },
+              {
+                "kind": "none",
+                "score": 4e-05
+              },
+              {
+                "kind": "above",
+                "score": 2.7e-05
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": true,
+          "contractPass": true,
+          "holdPass": false,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "fresh-negated-two-ja",
+          "group": "negation-hold",
+          "wallMs": 0.16291695646941662,
+          "output": {
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 0.159,
+            "reason": "negated-operation",
+            "evidence": [
+              {
+                "kind": "negation-rule"
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": false,
+          "contractPass": true,
+          "holdPass": true,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        },
+        {
+          "id": "fresh-ordinary-ja",
+          "group": "ordinary",
+          "wallMs": 2.0496249780990183,
+          "output": {
+            "program": null,
+            "source": "unchanged",
+            "modelMs": 2.047,
+            "reason": "primitive-uncertain",
+            "evidence": [
+              {
+                "kind": "part-extraction-rule",
+                "pattern": "jp-coordination",
+                "parts": 2
+              },
+              {
+                "kind": "primitive-uncertain",
+                "part": "0"
+              }
+            ]
+          },
+          "error": null,
+          "requestedProgram": false,
+          "contractPass": true,
+          "holdPass": true,
+          "partCountPass": true,
+          "partTypesPass": true,
+          "rolesPass": true,
+          "relationPass": true,
+          "attributePass": true,
+          "attributeChecks": [],
+          "meaningPass": true
+        }
+      ]
+    }
+  ]
+}

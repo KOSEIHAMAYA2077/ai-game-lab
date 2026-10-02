@@ -1,0 +1,446 @@
+{
+  "frozenConfigSha256": "5e5edd1632b0e3c0391deb123ec3a46d6040a225957dac04c6297bdeb905f672",
+  "frozenPredictSha256": "57e340d2b97acbc1c7a12dcef1e6e80ff78c321f3a3b70a7713872b711639f4c",
+  "datasets": {
+    "training.jsonl": {
+      "samples": 1103,
+      "uniqueQueries": 57
+    },
+    "validation.jsonl": {
+      "samples": 288,
+      "uniqueQueries": 12
+    }
+  },
+  "fixtures": [
+    {
+      "fixture": "fixture.json",
+      "cases": 30,
+      "requestedRelationCases": 17,
+      "exactMaskedTrainingMatches": 0,
+      "exactMaskedValidationMatches": 0,
+      "casefoldMaskedTrainingMatches": 0,
+      "casefoldMaskedValidationMatches": 0,
+      "rows": [
+        {
+          "id": "single-sphere",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "滑らかな物体が一つほしい。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "single-box",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "箱型の立体を一つだけ見せて。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "single-tube",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "円筒の物体を単体で浮かべたい。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "single-blade",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "a single object with no extra components.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "single-ring",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "穴の開いた物体だけにする。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "single-vase",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "display one vessel for arranging cut flowers.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "end-tube-sphere-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の先端に物体をつなげた構造",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "end-blade-sphere-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の末端には物体を取り付ける",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "end-tube-box-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "add object to the end of object",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "end-tube-ring-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "object is joined at the tip of object",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "above-box-sphere-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の上方に物体を置く",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "above-vase-ring-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "put object above object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "above-box-sphere-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "place object on top of object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "above-sphere-tube-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の上に物体を置き",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "through-box-tube-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体を貫く物体を組み合わせて",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "through-sphere-blade-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の内部を物体が通り抜ける形",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "through-box-tube-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "object passes through object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "through-box-ring-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "pass object through the object-shaped body.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "scope-thick-body-thin-neck",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の上に 物体をつける",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "scope-thin-body-thick-neck",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の上に 物体を置く",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "scope-thin-blade-wide-box",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "object passes through object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "scope-long-tube-small-sphere",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の先端に、 物体を接続する。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "negation-single-box",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "物体に変える。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "negation-single-sphere",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "。物体だけ作る。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "negation-single-blade-en",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": ": object instead.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "negation-end-tube-box",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体を、物体の先端へつなぐ",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "ordinary-ja",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "首をかしげて考えたが、まだ答えは出ない。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "ordinary-en",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "i will return tomorrow and finish the story.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "unsupported-violin",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "四本の弦を持つヴァイオリンを浮かべて。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "unsupported-three-parts",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "物体の先に物体を付け、その物体の上に物体を載せる",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        }
+      ]
+    },
+    {
+      "fixture": "same-type-fixture.json",
+      "cases": 6,
+      "requestedRelationCases": 6,
+      "exactMaskedTrainingMatches": 0,
+      "exactMaskedValidationMatches": 0,
+      "casefoldMaskedTrainingMatches": 0,
+      "casefoldMaskedValidationMatches": 0,
+      "rows": [
+        {
+          "id": "same-spheres-above-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の上に、 物体を置く。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "same-spheres-above-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "place object above object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "same-tubes-end-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の先端に、 物体を接続する。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "same-tubes-end-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "attach object to the end of object",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "same-boxes-above-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の上に、幅の狭い物体を載せる。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "same-boxes-above-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "object sits above object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        }
+      ]
+    },
+    {
+      "fixture": "followup-fixture.json",
+      "cases": 8,
+      "requestedRelationCases": 6,
+      "exactMaskedTrainingMatches": 0,
+      "exactMaskedValidationMatches": 0,
+      "casefoldMaskedTrainingMatches": 0,
+      "casefoldMaskedValidationMatches": 0,
+      "rows": [
+        {
+          "id": "fresh-tip-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体の先っぽに 物体を取り付けたい。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-tip-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "at the very tip of object, attach object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-above-direction-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体を下にして、その上に 物体を載せる",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-same-rings-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "a broad object sits above object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-through-sphere-ring-ja",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "物体を物体が横切って貫く姿にして",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-unsupported-through-sphere-en",
+          "requestedRelation": true,
+          "effectiveMaskedRelationQuery": "object passes through object.",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-negated-two-ja",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "物体も物体も付けないで、そのままにして。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        },
+        {
+          "id": "fresh-ordinary-ja",
+          "requestedRelation": false,
+          "effectiveMaskedRelationQuery": "その日の日記を読み返すと、昔の気持ちが少し戻ってきた。",
+          "trainingExact": false,
+          "validationExact": false,
+          "trainingCasefold": false,
+          "validationCasefold": false
+        }
+      ]
+    }
+  ],
+  "scope": "Exact input-string overlap after the same rule preprocessing. Zero raw fixture sentence overlap does not imply unseen relation templates. These are synthetic finite-grammar evaluations."
+}

@@ -8,6 +8,7 @@ import { composedPosition, intakePosition, randomUnit } from './shapes';
 import { createSurfaceFrame, normalizeSurfaceFrame, surfaceFrame } from './surface-frame';
 import { applyMotionFrame, prepareMotion, MOTION_EXTENT } from './motions';
 import { skeletonSurface, type SkeletonSpec } from './skeleton-surface';
+import { compileScaffoldProgram, programSurface, type Program, type CompiledProgram } from './scaffold-program';
 
 const CELL = 64;
 const COLUMNS = 32;
@@ -81,6 +82,7 @@ export class GlyphScene {
   // The comparison controller supplies a bounded scaffold. The original page
   // leaves this null, so its existing surfaces and creature rigs remain intact.
   skeleton: SkeletonSpec | null = null;
+  program: CompiledProgram | null = null;
 
   constructor(readonly host: HTMLElement, readonly matter: Matter) {
     this.renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
@@ -215,7 +217,9 @@ export class GlyphScene {
         (1 - (screen.y - rect.top) / this.height * 2) * this.distance / projectionScale * this.height / 2, 0,
       ).applyMatrix4(inverse).toArray() as Vec3 : [0, -1.9 / this.scale, 0];
       this.sources.set(source, i * 3);
-      const target = this.skeleton
+      const target = this.program
+        ? programSurface(this.program, i, this.matter.time, this.matter.seed, this.movedPoint)
+        : this.skeleton
         ? skeletonSurface(this.skeleton, i, this.matter.time, this.matter.seed, this.movedPoint)
         : composedPosition(this.matter.spec, i, this.matter.time, this.matter.seed, motion);
       this.origins.set(target, i * 3); this.morphTargets.set(target, i * 3);
@@ -247,10 +251,21 @@ export class GlyphScene {
     this.skeleton = spec ? { ...spec } : null;
   }
 
+  setProgram(spec: Program | null) {
+    if (JSON.stringify(spec) === JSON.stringify(this.program?.spec ?? null)) return true;
+    const compiled = spec ? compileScaffoldProgram(spec) : null;
+    if (spec && !compiled) return false;
+    this.origins.set(this.morphTargets);
+    this.switchedAt = this.matter.time;
+    this.program = compiled;
+    this.skeleton = null;
+    return true;
+  }
+
   reset() {
     this.atlas.clear(); this.count = 0; this.switchedAt = -100;
     this.testYaw = null;
-    this.skeleton = null;
+    this.skeleton = null; this.program = null;
     this.distance = 3.8; this.scale = 1; this.formation = 0; this.seedFocus = 1; this.zoom = 1; this.turnX = 0.12; this.turnY = -0.25;
     this.sync();
   }
@@ -268,20 +283,22 @@ export class GlyphScene {
     const aspectFit = Math.max(1, 0.93 / this.camera.aspect);
     // Fit the largest breath once; following its current scale would cancel the visible motion.
     const motionFit = 1 + (MOTION_EXTENT[motion.kind] - 1) * this.formation;
-    const formFit = 1 + (this.matter.spec.shape === 'jellyfish' ? .32
+    const formFit = 1 + (this.program ? .16 : this.matter.spec.shape === 'jellyfish' ? .32
       : (isWordSurface(this.matter.spec.shape) || isExpandedSurface(this.matter.spec.shape)) ? .25
       : this.matter.spec.shape === 'mobius' ? .2 : this.matter.spec.shape === 'fireworks' ? .1 : 0) * this.formation;
     const targetDistance = (cameraDistance(this.count) + .7 * this.formation + (this.matter.spec.count > 1 ? 1.8 : 0)) * this.zoom * aspectFit * motionFit * formFit;
     this.distance += (targetDistance - this.distance) * lerp;
     const blend = smooth((t - this.switchedAt) / 1.6);
-    const aligned = Boolean(this.skeleton) || surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
+    const aligned = (Boolean(this.program) || Boolean(this.skeleton)) || surfaceFrame(this.matter.spec, 0, t, this.matter.seed, this.frameScratch) !== null;
     const alignment = aligned ? .98 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
-    const sharedSurface = alignment > 0 && (Boolean(this.skeleton) || ['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape) || (isWordSurface(this.matter.spec.shape) || isExpandedSurface(this.matter.spec.shape)));
+    const sharedSurface = alignment > 0 && ((Boolean(this.program) || Boolean(this.skeleton)) || ['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape) || (isWordSurface(this.matter.spec.shape) || isExpandedSurface(this.matter.spec.shape)));
     for (let i = 0; i < this.count; i++) {
       const glyph = this.matter.glyphs[i];
       const p = this.count === 1
         ? this.testYaw === null ? [0.018 * Math.sin(t * 1.3), 0.024 * Math.sin(t * 0.9), 0.012 * Math.sin(t)] : [0, 0, 0]
-        : (this.skeleton
+        : (this.program
+          ? programSurface(this.program, i, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
+          : this.skeleton
           ? skeletonSurface(this.skeleton, i, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
           : composedPosition(this.matter.spec, i, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined)).map(v => v * this.formation);
       const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
@@ -320,7 +337,7 @@ export class GlyphScene {
     this.material.uniforms.distance.value = this.distance;
     this.material.uniforms.scale.value = this.scale;
     this.material.uniforms.alignment.value = alignment;
-    this.material.uniforms.closedSurface.value = this.skeleton ? Number(this.skeleton.family !== 'mobius')
+    this.material.uniforms.closedSurface.value = this.program ? 1 : this.skeleton ? Number(this.skeleton.family !== 'mobius')
       : ['condense', 'cube', 'cuboid', 'dango', ...CLOSED_WORD_SURFACES, ...CLOSED_EXPANDED_SURFACES].includes(this.matter.spec.shape) ? 1 : 0;
     this.material.uniforms.testPose.value = this.testYaw !== null;
     this.material.uniforms.testYaw.value = this.testYaw ?? 0;
@@ -357,6 +374,7 @@ export class GlyphScene {
       drawCalls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
       renderer: 'instanced-planes', testYaw: this.testYaw,
       viewRotation: this.planes.rotation.toArray().slice(0, 3), manualRotation: [this.turnX, this.turnY],
+      program: this.program ? { spec: this.program.spec, effective: this.program.parts.map(p => ({...p.effective})), adjustments: this.program.adjustments, centerlines: this.program.centerlines, bounds: this.program.bounds, scale: this.program.scale } : null,
       rig: inspectCreatureRig(this.matter.spec.shape, this.matter.time), skeleton: this.skeleton ? { ...this.skeleton } : null };
   }
 }

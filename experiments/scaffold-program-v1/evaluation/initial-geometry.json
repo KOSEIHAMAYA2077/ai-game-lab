@@ -1,0 +1,6966 @@
+{
+  "sourceFile": "prototypes/glyph-creature/src/scaffold-program.ts",
+  "geometrySha256": "1c548c6a203839949ab2a27122d2e82ecc44643d7d23617899dbb78f21fba733",
+  "inputFile": "initial-cpu.json",
+  "timingScope": "CPU compile and numerical surface sampling; browser render excluded",
+  "summary": {
+    "modelDerived": {
+      "requested": 23,
+      "compileAccepted": 23,
+      "finiteSurface": 23,
+      "aboveActualContactCases": 8,
+      "aboveActualContactPass": 8,
+      "throughActualSurfaceCases": 4,
+      "throughActualSurfacePass": 4,
+      "endEndpointCases": 3,
+      "endEndpointPass": 3
+    },
+    "expectedNominal": {
+      "requested": 32,
+      "compileAccepted": 32,
+      "finiteSurface": 32,
+      "aboveActualContactCases": 10,
+      "aboveActualContactPass": 10,
+      "throughActualSurfaceCases": 5,
+      "throughActualSurfacePass": 5,
+      "endEndpointCases": 8,
+      "endEndpointPass": 8
+    }
+  },
+  "limitations": [
+    "End check confirms centerline endpoint arrangement; only sphere/box children additionally receive an analytic inside test.",
+    "Through uses child-surface samples crossing the real implicit parent volume, not just overlapping bounds. Only straight sphere/box parents are scored analytically.",
+    "Above means material contact in this compiler, not a configurable floating gap.",
+    "Nominal expected programs bypass language; they evaluate geometry independently and are not controller successes."
+  ],
+  "rows": [
+    {
+      "id": "single-sphere",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 4.003917000000001,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.856356858606622,
+          "bounds": {
+            "min": [
+              -0.856356858606622,
+              -0.856356858606622,
+              -0.856356858606622
+            ],
+            "max": [
+              0.856356858606622,
+              0.856356858606622,
+              0.856356858606622
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.42925000000000324,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.856356858606622,
+          "bounds": {
+            "min": [
+              -0.856356858606622,
+              -0.856356858606622,
+              -0.856356858606622
+            ],
+            "max": [
+              0.856356858606622,
+              0.856356858606622,
+              0.856356858606622
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "single-box",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.8786660000000026,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.856356858606622,
+          "bounds": {
+            "min": [
+              -0.856356858606622,
+              -0.856356858606622,
+              -0.856356858606622
+            ],
+            "max": [
+              0.856356858606622,
+              0.856356858606622,
+              0.856356858606622
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.35445800000000816,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.856356858606622,
+          "bounds": {
+            "min": [
+              -0.856356858606622,
+              -0.856356858606622,
+              -0.856356858606622
+            ],
+            "max": [
+              0.856356858606622,
+              0.856356858606622,
+              0.856356858606622
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "single-tube",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 2.527708000000004,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 1.0625946441419447,
+          "bounds": {
+            "min": [
+              -0.10200908583762669,
+              -1.4876325017987224,
+              -0.10200908583762669
+            ],
+            "max": [
+              0.10200908583762669,
+              1.4876325017987224,
+              0.10200908583762669
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4876325017987224,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4876325017987224,
+                  0
+                ],
+                "top": [
+                  0.10200908583762669,
+                  1.4876325017987224,
+                  0
+                ],
+                "bottom": [
+                  0.10200908583762669,
+                  -1.4876325017987224,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.6919579999999996,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 1.383887201056795,
+          "bounds": {
+            "min": [
+              -0.33213292825363083,
+              -1.383887201056795,
+              -0.33213292825363083
+            ],
+            "max": [
+              0.33213292825363083,
+              1.383887201056795,
+              0.33213292825363083
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.383887201056795,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.383887201056795,
+                  0
+                ],
+                "top": [
+                  0.33213292825363083,
+                  1.383887201056795,
+                  0
+                ],
+                "bottom": [
+                  0.33213292825363083,
+                  -1.383887201056795,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "single-blade",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.9253749999999883,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 1.0639789056627935,
+          "bounds": {
+            "min": [
+              -0.1329973632078492,
+              -1.489570467927911,
+              -0.029791409358558223
+            ],
+            "max": [
+              0.1329973632078492,
+              1.489570467927911,
+              0.029791409358558223
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.5,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.5,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.489570467927911,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.489570467927911,
+                  0
+                ],
+                "top": [
+                  0.004255915622651174,
+                  1.489570467927911,
+                  0
+                ],
+                "bottom": [
+                  0.1329973632078492,
+                  -1.489570467927911,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.7068330000000032,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 1.4195264180405243,
+          "bounds": {
+            "min": [
+              -0.35488160451013107,
+              -1.4195264180405243,
+              -0.0993668492628367
+            ],
+            "max": [
+              0.35488160451013107,
+              1.4195264180405243,
+              0.0993668492628367
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4195264180405243,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4195264180405243,
+                  0
+                ],
+                "top": [
+                  0.011356211344324194,
+                  1.4195264180405243,
+                  0
+                ],
+                "bottom": [
+                  0.35488160451013107,
+                  -1.4195264180405243,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "single-ring",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 2.371416999999994,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.8141202089161097,
+          "bounds": {
+            "min": [
+              -1.0420738674126204,
+              -1.0420738674126204,
+              -0.23772310100350405
+            ],
+            "max": [
+              1.0420738674126204,
+              1.0420738674126204,
+              0.23772310100350405
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  -2.259637501878269e-17
+                ],
+                "start": [
+                  0.8141202089161097,
+                  0,
+                  -2.259637501878269e-17
+                ],
+                "end": [
+                  0.8141202089161097,
+                  0,
+                  -2.7382021617040075e-17
+                ],
+                "top": [
+                  6.774590140525182e-17,
+                  1.0420738674126204,
+                  -2.1399963369218345e-17
+                ],
+                "bottom": [
+                  -1.8534228820901808e-16,
+                  -1.0420738674126204,
+                  -1.9007140070089654e-17
+                ]
+              },
+              "position": [
+                0,
+                0,
+                -2.259637501878269e-17
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.2058329999999984,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.8141202089161097,
+          "bounds": {
+            "min": [
+              -1.0420738674126204,
+              -1.0420738674126204,
+              -0.23772310100350405
+            ],
+            "max": [
+              1.0420738674126204,
+              1.0420738674126204,
+              0.23772310100350405
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  -2.259637501878269e-17
+                ],
+                "start": [
+                  0.8141202089161097,
+                  0,
+                  -2.259637501878269e-17
+                ],
+                "end": [
+                  0.8141202089161097,
+                  0,
+                  -2.7382021617040075e-17
+                ],
+                "top": [
+                  6.774590140525182e-17,
+                  1.0420738674126204,
+                  -2.1399963369218345e-17
+                ],
+                "bottom": [
+                  -1.8534228820901808e-16,
+                  -1.0420738674126204,
+                  -1.9007140070089654e-17
+                ]
+              },
+              "position": [
+                0,
+                0,
+                -2.259637501878269e-17
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "single-vase",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 2.5572079999999886,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.9142899678781008,
+          "bounds": {
+            "min": [
+              -0.8218887443449343,
+              -0.9142899678781008,
+              -0.8218887443449343
+            ],
+            "max": [
+              0.8218887443449343,
+              0.9142899678781008,
+              0.8218887443449343
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.9142899678781008,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.9142899678781008,
+                  0
+                ],
+                "top": [
+                  0.3108585890785543,
+                  0.9142899678781008,
+                  0
+                ],
+                "bottom": [
+                  0.25600119100586827,
+                  -0.9142899678781008,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.711749999999995,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.9142899678781008,
+          "bounds": {
+            "min": [
+              -0.8218887443449343,
+              -0.9142899678781008,
+              -0.8218887443449343
+            ],
+            "max": [
+              0.8218887443449343,
+              0.9142899678781008,
+              0.8218887443449343
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.9142899678781008,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.9142899678781008,
+                  0
+                ],
+                "top": [
+                  0.3108585890785543,
+                  0.9142899678781008,
+                  0
+                ],
+                "bottom": [
+                  0.25600119100586827,
+                  -0.9142899678781008,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "end-tube-sphere-ja",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.6003330000000062,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0.1474371965799559,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0.1474371965799559,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination.",
+          "childImplicitAtParentTip": {
+            "value": 1,
+            "insideOrBoundary": true
+          }
+        }
+      }
+    },
+    {
+      "id": "end-blade-sphere-ja",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 3.179084000000003,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0.004914573219331864,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0.15358041310412074,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination.",
+          "childImplicitAtParentTip": {
+            "value": 1,
+            "insideOrBoundary": true
+          }
+        }
+      }
+    },
+    {
+      "id": "end-tube-box-en",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.1588339999999988,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0.1474371965799559,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0.1474371965799559,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination.",
+          "childImplicitAtParentTip": {
+            "value": 1,
+            "insideOrBoundary": true
+          }
+        }
+      }
+    },
+    {
+      "id": "end-tube-ring-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.8341670000000079,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6216723597671627,
+          "bounds": {
+            "min": [
+              -0.7957406205019685,
+              -1.268211613925012,
+              -0.18152832905201155
+            ],
+            "max": [
+              0.7957406205019684,
+              1.268211613925012,
+              0.18152832905201155
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0.6216723597671627,
+                  -0.39787031025098407,
+                  -1.7254874189663947e-17
+                ],
+                "start": [
+                  0.6216723597671627,
+                  -1.268211613925012,
+                  -1.7254874189663947e-17
+                ],
+                "end": [
+                  0.6216723597671627,
+                  0.47247099342304366,
+                  -1.7254874189663947e-17
+                ],
+                "top": [
+                  0.6813529063048104,
+                  0.47247099342304366,
+                  -1.7254874189663947e-17
+                ],
+                "bottom": [
+                  0.6813529063048104,
+                  -1.268211613925012,
+                  -1.7254874189663947e-17
+                ]
+              },
+              "position": [
+                0.6216723597671627,
+                -0.39787031025098407,
+                -1.7254874189663947e-17
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.47247099342304366,
+                  -1.7254874189663947e-17
+                ],
+                "start": [
+                  0.6216723597671627,
+                  0.47247099342304366,
+                  -1.7254874189663947e-17
+                ],
+                "end": [
+                  0.6216723597671627,
+                  0.47247099342304366,
+                  -2.0909253704098688e-17
+                ],
+                "top": [
+                  6.901949675865579e-17,
+                  1.268211613925012,
+                  -1.6341279311055263e-17
+                ],
+                "bottom": [
+                  -1.3803899351731158e-16,
+                  -0.32326962707892465,
+                  -1.4514089553837893e-17
+                ]
+              },
+              "position": [
+                0,
+                0.47247099342304366,
+                -1.7254874189663947e-17
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination."
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.829291000000012,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.7143221981515752,
+          "bounds": {
+            "min": [
+              -0.9143324136340164,
+              -1.1714884049685834,
+              -0.20858208186025998
+            ],
+            "max": [
+              0.9143324136340162,
+              1.1714884049685834,
+              0.20858208186025998
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0.7143221981515752,
+                  -0.4571662068170082,
+                  -1.9826423784718304e-17
+                ],
+                "start": [
+                  0.7143221981515752,
+                  -1.1714884049685834,
+                  -1.9826423784718304e-17
+                ],
+                "end": [
+                  0.7143221981515752,
+                  0.25715599133456696,
+                  -1.9826423784718304e-17
+                ],
+                "top": [
+                  0.8857595257079532,
+                  0.25715599133456696,
+                  -1.9826423784718304e-17
+                ],
+                "bottom": [
+                  0.8857595257079532,
+                  -1.1714884049685834,
+                  -1.9826423784718304e-17
+                ]
+              },
+              "position": [
+                0.7143221981515752,
+                -0.4571662068170082,
+                -1.9826423784718304e-17
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.25715599133456696,
+                  -1.9826423784718304e-17
+                ],
+                "start": [
+                  0.7143221981515752,
+                  0.25715599133456696,
+                  -1.9826423784718304e-17
+                ],
+                "end": [
+                  0.7143221981515752,
+                  0.25715599133456696,
+                  -2.40254272736442e-17
+                ],
+                "top": [
+                  7.930569513887322e-17,
+                  1.1714884049685834,
+                  -1.877667291248683e-17
+                ],
+                "bottom": [
+                  -1.5861139027774644e-16,
+                  -0.6571764222994493,
+                  -1.6677171168023884e-17
+                ]
+              },
+              "position": [
+                0,
+                0.25715599133456696,
+                -1.9826423784718304e-17
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination."
+        }
+      }
+    },
+    {
+      "id": "above-box-sphere-ja",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.5822079999999943,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "above-vase-ring-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 1.1155830000000009,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5462263312708047,
+          "bounds": {
+            "min": [
+              -0.69916970402663,
+              -1.2453960352974347,
+              -0.49102285851194755
+            ],
+            "max": [
+              0.69916970402663,
+              1.2453960352974347,
+              0.49102285851194755
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.18571695263207375,
+                  -0.6991697040266301,
+                  0
+                ],
+                "start": [
+                  -0.18571695263207375,
+                  -1.2453960352974347,
+                  0
+                ],
+                "end": [
+                  -0.18571695263207375,
+                  -0.15294337275582545,
+                  0
+                ],
+                "top": [
+                  -1.5160826240834386e-16,
+                  -0.15294337275582545,
+                  0
+                ],
+                "bottom": [
+                  -0.03277357987624843,
+                  -1.2453960352974347,
+                  0
+                ]
+              },
+              "position": [
+                -0.18571695263207375,
+                -0.6991697040266301,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -3.0321652481668774e-17,
+                  0.5462263312708047,
+                  -2.4081635815228536e-18
+                ],
+                "start": [
+                  0.5462263312708047,
+                  0.5462263312708047,
+                  -2.4081635815228536e-18
+                ],
+                "end": [
+                  0.5462263312708047,
+                  0.5462263312708047,
+                  -5.619048356886658e-18
+                ],
+                "top": [
+                  0,
+                  1.2453960352974347,
+                  -1.6054423876819025e-18
+                ],
+                "bottom": [
+                  -1.5160826240834386e-16,
+                  -0.1529433727558253,
+                  0
+                ]
+              },
+              "position": [
+                -3.0321652481668774e-17,
+                0.5462263312708047,
+                -2.4081635815228536e-18
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 1.5897447250601416e-17,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 5.690787206045109e-17,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.0324999999999989,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5462263312708047,
+          "bounds": {
+            "min": [
+              -0.69916970402663,
+              -1.2453960352974347,
+              -0.49102285851194755
+            ],
+            "max": [
+              0.69916970402663,
+              1.2453960352974347,
+              0.49102285851194755
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "vase",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.18571695263207375,
+                  -0.6991697040266301,
+                  0
+                ],
+                "start": [
+                  -0.18571695263207375,
+                  -1.2453960352974347,
+                  0
+                ],
+                "end": [
+                  -0.18571695263207375,
+                  -0.15294337275582545,
+                  0
+                ],
+                "top": [
+                  -1.5160826240834386e-16,
+                  -0.15294337275582545,
+                  0
+                ],
+                "bottom": [
+                  -0.03277357987624843,
+                  -1.2453960352974347,
+                  0
+                ]
+              },
+              "position": [
+                -0.18571695263207375,
+                -0.6991697040266301,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -3.0321652481668774e-17,
+                  0.5462263312708047,
+                  -2.4081635815228536e-18
+                ],
+                "start": [
+                  0.5462263312708047,
+                  0.5462263312708047,
+                  -2.4081635815228536e-18
+                ],
+                "end": [
+                  0.5462263312708047,
+                  0.5462263312708047,
+                  -5.619048356886658e-18
+                ],
+                "top": [
+                  0,
+                  1.2453960352974347,
+                  -1.6054423876819025e-18
+                ],
+                "bottom": [
+                  -1.5160826240834386e-16,
+                  -0.1529433727558253,
+                  0
+                ]
+              },
+              "position": [
+                -3.0321652481668774e-17,
+                0.5462263312708047,
+                -2.4081635815228536e-18
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 1.5897447250601416e-17,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 5.690787206045109e-17,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "above-box-sphere-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.9331659999999999,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.797040999999993,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "above-sphere-tube-ja",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.0309579999999983,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.1474371965799559,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  -0.1474371965799559,
+                  0,
+                  0
+                ],
+                "end": [
+                  -0.1474371965799559,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                -0.1474371965799559,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 3.100479561221095e-17,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "through-box-tube-ja",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.9007079999999945,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.8155551199768825,
+          "bounds": {
+            "min": [
+              -0.9378883879734148,
+              -0.8155551199768825,
+              -0.8155551199768825
+            ],
+            "max": [
+              0.9378883879734148,
+              0.8155551199768825,
+              0.8155551199768825
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.15
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.8155551199768825,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.8155551199768825,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.8155551199768825,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.8155551199768825,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.15,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -0.9378883879734148,
+                  0,
+                  0
+                ],
+                "end": [
+                  0.9378883879734148,
+                  0,
+                  0
+                ],
+                "top": [
+                  -0.9378883879734148,
+                  0.1957332287944518,
+                  -2.397040721299019e-17
+                ],
+                "bottom": [
+                  -0.9378883879734148,
+                  -0.1957332287944518,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1622,
+          "outsideParent": 426,
+          "minImplicit": 1.141369016950018e-9,
+          "maxImplicit": 5.350250138783794,
+          "surfaceCrossesParent": true
+        }
+      }
+    },
+    {
+      "id": "through-sphere-blade-ja",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 1.13816700000001,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.7499153856792813,
+          "bounds": {
+            "min": [
+              -1.0498815399509938,
+              -0.7499153856792813,
+              -0.7499153856792813
+            ],
+            "max": [
+              1.0498815399509938,
+              0.7499153856792813,
+              0.7499153856792813
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.4
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.7499153856792813,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.7499153856792813,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.7499153856792813,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.7499153856792813,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.5,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.5,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -1.0498815399509938,
+                  0,
+                  0
+                ],
+                "end": [
+                  1.0498815399509938,
+                  0,
+                  0
+                ],
+                "top": [
+                  -1.0498815399509938,
+                  0.09373942320991016,
+                  -2.5714681347697574e-18
+                ],
+                "bottom": [
+                  -1.0498815399509938,
+                  -0.09373942320991016,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1571,
+          "outsideParent": 477,
+          "minImplicit": 0.0006391314794334991,
+          "maxImplicit": 1.9753918205748455,
+          "surfaceCrossesParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.7405420000000049,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.8155551199768825,
+          "bounds": {
+            "min": [
+              -0.9378883879734148,
+              -0.8155551199768825,
+              -0.8155551199768825
+            ],
+            "max": [
+              0.9378883879734148,
+              0.8155551199768825,
+              0.8155551199768825
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.15
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.8155551199768825,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.8155551199768825,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.8155551199768825,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.8155551199768825,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1.15,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -0.9378883879734148,
+                  0,
+                  0
+                ],
+                "end": [
+                  0.9378883879734148,
+                  0,
+                  0
+                ],
+                "top": [
+                  -0.9378883879734148,
+                  0.20388877999422061,
+                  -6.991368770455474e-18
+                ],
+                "bottom": [
+                  -0.9378883879734148,
+                  -0.20388877999422061,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1765,
+          "outsideParent": 282,
+          "minImplicit": 0.003322581556095508,
+          "maxImplicit": 1.3850059447953873,
+          "surfaceCrossesParent": true
+        }
+      }
+    },
+    {
+      "id": "through-box-tube-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.7026249999999976,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.7499153856792813,
+          "bounds": {
+            "min": [
+              -1.0498815399509938,
+              -0.7499153856792813,
+              -0.7499153856792813
+            ],
+            "max": [
+              1.0498815399509938,
+              0.7499153856792813,
+              0.7499153856792813
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.4
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.7499153856792813,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.7499153856792813,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.7499153856792813,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.7499153856792813,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -1.0498815399509938,
+                  0,
+                  0
+                ],
+                "end": [
+                  1.0498815399509938,
+                  0,
+                  0
+                ],
+                "top": [
+                  -1.0498815399509938,
+                  0.07199187702521101,
+                  -8.816462176353454e-18
+                ],
+                "bottom": [
+                  -1.0498815399509938,
+                  -0.07199187702521101,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1410,
+          "outsideParent": 638,
+          "minImplicit": 1.9249425307376906e-14,
+          "maxImplicit": 56.693912375296506,
+          "surfaceCrossesParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.0687080000000009,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.8155551199768825,
+          "bounds": {
+            "min": [
+              -0.9378883879734148,
+              -0.8155551199768825,
+              -0.8155551199768825
+            ],
+            "max": [
+              0.9378883879734148,
+              0.8155551199768825,
+              0.8155551199768825
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.15
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.8155551199768825,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.8155551199768825,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.8155551199768825,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.8155551199768825,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.15,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -0.9378883879734148,
+                  0,
+                  0
+                ],
+                "end": [
+                  0.9378883879734148,
+                  0,
+                  0
+                ],
+                "top": [
+                  -0.9378883879734148,
+                  0.1957332287944518,
+                  -2.397040721299019e-17
+                ],
+                "bottom": [
+                  -0.9378883879734148,
+                  -0.1957332287944518,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1622,
+          "outsideParent": 426,
+          "minImplicit": 1.141369016950018e-9,
+          "maxImplicit": 5.350250138783794,
+          "surfaceCrossesParent": true
+        }
+      }
+    },
+    {
+      "id": "through-box-ring-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 1.005791000000002,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6679747032969217,
+          "bounds": {
+            "min": [
+              -0.9485240786816288,
+              -0.9485240786816288,
+              -0.6679747032969217
+            ],
+            "max": [
+              0.9485240786816288,
+              0.9485240786816288,
+              0.6679747032969217
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "width": 1.1400000000000001,
+              "height": 1.1400000000000001
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.6679747032969217,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.6679747032969217,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.6679747032969217,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.6679747032969217,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1.1400000000000001,
+                "width": 1.1400000000000001,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0.7614911617584907,
+                  0,
+                  0
+                ],
+                "end": [
+                  0.7614911617584907,
+                  0,
+                  -3.926558795059095e-18
+                ],
+                "top": [
+                  5.950766518196921e-17,
+                  0.9485240786816288,
+                  9.816396987647737e-19
+                ],
+                "bottom": [
+                  -1.6564321605526518e-16,
+                  -0.9485240786816288,
+                  2.9449190962943205e-18
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 984,
+          "outsideParent": 1064,
+          "minImplicit": 0.005120757750803893,
+          "maxImplicit": 67.15767176075784,
+          "surfaceCrossesParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.5339579999999842,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6679747032969217,
+          "bounds": {
+            "min": [
+              -0.9485240786816288,
+              -0.9485240786816288,
+              -0.6679747032969217
+            ],
+            "max": [
+              0.9485240786816288,
+              0.9485240786816288,
+              0.6679747032969217
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "width": 1.1400000000000001,
+              "height": 1.1400000000000001
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.6679747032969217,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.6679747032969217,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.6679747032969217,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.6679747032969217,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "ring",
+                "height": 1.1400000000000001,
+                "width": 1.1400000000000001,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0.7614911617584907,
+                  0,
+                  0
+                ],
+                "end": [
+                  0.7614911617584907,
+                  0,
+                  -3.926558795059095e-18
+                ],
+                "top": [
+                  5.950766518196921e-17,
+                  0.9485240786816288,
+                  9.816396987647737e-19
+                ],
+                "bottom": [
+                  -1.6564321605526518e-16,
+                  -0.9485240786816288,
+                  2.9449190962943205e-18
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "loop",
+              "profile": "constant"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 984,
+          "outsideParent": 1064,
+          "minImplicit": 0.005120757750803893,
+          "maxImplicit": 67.15767176075784,
+          "surfaceCrossesParent": true
+        }
+      }
+    },
+    {
+      "id": "scope-thick-body-thin-neck",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 1.7689579999999978,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.4659452551140303,
+          "bounds": {
+            "min": [
+              -0.7222151454267469,
+              -1.1182686122736727,
+              -0.7222151454267469
+            ],
+            "max": [
+              0.7222151454267469,
+              1.1182686122736727,
+              0.7222151454267469
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.6523233571596424,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.1182686122736727,
+                  0
+                ],
+                "end": [
+                  0,
+                  -0.1863781020456121,
+                  0
+                ],
+                "top": [
+                  0,
+                  -0.1863781020456121,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.1182686122736727,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.6523233571596424,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.04473074449094691,
+                  0.4659452551140303,
+                  0
+                ],
+                "start": [
+                  -0.04473074449094691,
+                  -0.1863781020456121,
+                  0
+                ],
+                "end": [
+                  -0.04473074449094691,
+                  1.1182686122736727,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.1182686122736727,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.1863781020456121,
+                  0
+                ]
+              },
+              "position": [
+                -0.04473074449094691,
+                0.4659452551140303,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 6.057273734005805e-19,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.4559580000000096,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5712570587101606,
+          "bounds": {
+            "min": [
+              -0.7997598821942249,
+              -1.1425141174203213,
+              -0.5712570587101606
+            ],
+            "max": [
+              0.7997598821942249,
+              1.1425141174203213,
+              0.5712570587101606
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.08226101645426312,
+                  0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  -0.08226101645426312,
+                  0,
+                  0
+                ],
+                "end": [
+                  -0.08226101645426312,
+                  1.1425141174203213,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                -0.08226101645426312,
+                0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 9.301845215302621e-17,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "scope-thin-body-thick-neck",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.9722910000000127,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6053238003587266,
+          "bounds": {
+            "min": [
+              -0.34624521380519163,
+              -1.4527771208609437,
+              -0.24212952014349065
+            ],
+            "max": [
+              0.34624521380519163,
+              1.4527771208609437,
+              0.24212952014349065
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0.10411569366170097,
+                  -0.8474533205022171,
+                  0
+                ],
+                "start": [
+                  0.10411569366170097,
+                  -1.4527771208609437,
+                  0
+                ],
+                "end": [
+                  0.10411569366170097,
+                  -0.24212952014349057,
+                  0
+                ],
+                "top": [
+                  0.10411569366170097,
+                  -0.24212952014349057,
+                  0
+                ],
+                "bottom": [
+                  0.10411569366170097,
+                  -1.4527771208609437,
+                  0
+                ]
+              },
+              "position": [
+                0.10411569366170097,
+                -0.8474533205022171,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.12106476007174533,
+                  0.6053238003587266,
+                  0
+                ],
+                "start": [
+                  -0.12106476007174533,
+                  -0.24212952014349057,
+                  0
+                ],
+                "end": [
+                  -0.12106476007174533,
+                  1.4527771208609437,
+                  0
+                ],
+                "top": [
+                  0.10411569366170097,
+                  1.4527771208609437,
+                  0
+                ],
+                "bottom": [
+                  0.10411569366170097,
+                  -0.24212952014349057,
+                  0
+                ]
+              },
+              "position": [
+                -0.12106476007174533,
+                0.6053238003587266,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 1.3877787807814457e-17,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 2.7755575615628914e-17,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.1766250000000014,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6470808969159232,
+          "bounds": {
+            "min": [
+              -0.4115434504385271,
+              -1.2941617938318464,
+              -0.6470808969159232
+            ],
+            "max": [
+              0.4115434504385271,
+              1.2941617938318464,
+              0.6470808969159232
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0.023294912288973218,
+                  -0.6470808969159232,
+                  0
+                ],
+                "start": [
+                  0.023294912288973218,
+                  -1.2941617938318464,
+                  0
+                ],
+                "end": [
+                  0.023294912288973218,
+                  0,
+                  0
+                ],
+                "top": [
+                  0.023294912288973218,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0.023294912288973218,
+                  -1.2941617938318464,
+                  0
+                ]
+              },
+              "position": [
+                0.023294912288973218,
+                -0.6470808969159232,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  -0.19412426907477695,
+                  0.6470808969159232,
+                  0
+                ],
+                "start": [
+                  -0.19412426907477695,
+                  0,
+                  0
+                ],
+                "end": [
+                  -0.19412426907477695,
+                  1.2941617938318464,
+                  0
+                ],
+                "top": [
+                  0.023294912288973218,
+                  1.2941617938318464,
+                  0
+                ],
+                "bottom": [
+                  0.023294912288973218,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                -0.19412426907477695,
+                0.6470808969159232,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 1.0408340855860843e-17,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 9.827445922728208e-18,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "scope-thin-blade-wide-box",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.8088750000000005,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5996647556870636,
+          "bounds": {
+            "min": [
+              -1.019430084668008,
+              -0.5996647556870636,
+              -0.9294803713149485
+            ],
+            "max": [
+              1.019430084668008,
+              0.5996647556870636,
+              0.9294803713149485
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.7
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.5996647556870636,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.5996647556870636,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.5996647556870636,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.5996647556870636,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1.7,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -1.019430084668008,
+                  0,
+                  0
+                ],
+                "end": [
+                  1.019430084668008,
+                  0,
+                  0
+                ],
+                "top": [
+                  -1.019430084668008,
+                  0.05996647556870636,
+                  -2.056257066118198e-18
+                ],
+                "bottom": [
+                  -1.019430084668008,
+                  -0.05996647556870636,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1902,
+          "outsideParent": 146,
+          "minImplicit": 8.570345484159327e-23,
+          "maxImplicit": 3.0297491931959035,
+          "surfaceCrossesParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.9660000000000082,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.7128358278647062,
+          "bounds": {
+            "min": [
+              -1.1048955331902945,
+              -0.7128358278647062,
+              -0.7128358278647062
+            ],
+            "max": [
+              1.1048955331902945,
+              0.7128358278647062,
+              0.7128358278647062
+            ]
+          },
+          "adjustments": [
+            {
+              "part": "1",
+              "reason": "surface-intersection",
+              "height": 1.5499999999999998
+            }
+          ],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.7128358278647062,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.7128358278647062,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.7128358278647062,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.7128358278647062,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "blade",
+                "height": 1.5499999999999998,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  -1.1048955331902945,
+                  0,
+                  0
+                ],
+                "end": [
+                  1.1048955331902945,
+                  0,
+                  0
+                ],
+                "top": [
+                  -1.1048955331902945,
+                  0.10692537417970593,
+                  -6.110804804384464e-18
+                ],
+                "bottom": [
+                  -1.1048955331902945,
+                  -0.10692537417970593,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        },
+        "intersection": {
+          "tested": true,
+          "sampledChildSurfacePoints": 2048,
+          "insideParent": 1865,
+          "outsideParent": 183,
+          "minImplicit": 9.063890954697019e-16,
+          "maxImplicit": 3.391907107375215,
+          "surfaceCrossesParent": true
+        }
+      }
+    },
+    {
+      "id": "scope-long-tube-small-sphere",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.8633749999999907,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6095999384295213,
+          "bounds": {
+            "min": [
+              -0.39623995997918887,
+              -1.4020798583878988,
+              -0.39623995997918887
+            ],
+            "max": [
+              0.39623995997918887,
+              1.4020798583878988,
+              0.39623995997918887
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.65,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.65,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.3962399599791888,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4020798583878988,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.6095999384295213,
+                  0
+                ],
+                "top": [
+                  0.05852159408923405,
+                  0.6095999384295213,
+                  0
+                ],
+                "bottom": [
+                  0.05852159408923405,
+                  -1.4020798583878988,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.3962399599791888,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 0.65,
+                "width": 0.65,
+                "depth": 0.65,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 0.65,
+                "width": 0.65,
+                "depth": 0.65,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  1.00583989840871,
+                  0
+                ],
+                "start": [
+                  0,
+                  0.6095999384295213,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4020798583878988,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.4020798583878988,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0.6095999384295213,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                1.00583989840871,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination.",
+          "childImplicitAtParentTip": {
+            "value": 0.9999999999999996,
+            "insideOrBoundary": true
+          }
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 2.101708000000002,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.6922074756905141,
+          "bounds": {
+            "min": [
+              -0.41532448541430844,
+              -1.3844149513810282,
+              -0.41532448541430844
+            ],
+            "max": [
+              0.41532448541430844,
+              1.3844149513810282,
+              0.41532448541430844
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.41532448541430855,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.3844149513810282,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.5537659805524111,
+                  0
+                ],
+                "top": [
+                  0.16612979416572338,
+                  0.5537659805524111,
+                  0
+                ],
+                "bottom": [
+                  0.16612979416572338,
+                  -1.3844149513810282,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.41532448541430855,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 0.6,
+                "width": 0.6,
+                "depth": 0.6,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 0.6,
+                "width": 0.6,
+                "depth": 0.6,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.9690904659667197,
+                  0
+                ],
+                "start": [
+                  0,
+                  0.5537659805524111,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.3844149513810282,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.3844149513810282,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0.5537659805524111,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.9690904659667197,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination.",
+          "childImplicitAtParentTip": {
+            "value": 1.0000000000000004,
+            "insideOrBoundary": true
+          }
+        }
+      }
+    },
+    {
+      "id": "negation-single-box",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.3009999999999877,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.856356858606622,
+          "bounds": {
+            "min": [
+              -0.856356858606622,
+              -0.856356858606622,
+              -0.856356858606622
+            ],
+            "max": [
+              0.856356858606622,
+              0.856356858606622,
+              0.856356858606622
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "negation-single-sphere",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.24733399999999506,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.856356858606622,
+          "bounds": {
+            "min": [
+              -0.856356858606622,
+              -0.856356858606622,
+              -0.856356858606622
+            ],
+            "max": [
+              0.856356858606622,
+              0.856356858606622,
+              0.856356858606622
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.856356858606622,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.856356858606622,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "negation-single-blade-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.7183339999999987,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 1.0639789056627935,
+          "bounds": {
+            "min": [
+              -0.1329973632078492,
+              -1.489570467927911,
+              -0.029791409358558223
+            ],
+            "max": [
+              0.1329973632078492,
+              1.489570467927911,
+              0.029791409358558223
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.5,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1.4,
+                "width": 0.5,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.489570467927911,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.489570467927911,
+                  0
+                ],
+                "top": [
+                  0.004255915622651174,
+                  1.489570467927911,
+                  0
+                ],
+                "bottom": [
+                  0.1329973632078492,
+                  -1.489570467927911,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.7460829999999987,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 1.4195264180405243,
+          "bounds": {
+            "min": [
+              -0.35488160451013107,
+              -1.4195264180405243,
+              -0.0993668492628367
+            ],
+            "max": [
+              0.35488160451013107,
+              1.4195264180405243,
+              0.0993668492628367
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "blade",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4195264180405243,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4195264180405243,
+                  0
+                ],
+                "top": [
+                  0.011356211344324194,
+                  1.4195264180405243,
+                  0
+                ],
+                "bottom": [
+                  0.35488160451013107,
+                  -1.4195264180405243,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "knots"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "negation-end-tube-box",
+      "modelMeaningPass": false,
+      "modelDerived": null,
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.0834159999999997,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.614321652416483,
+          "bounds": {
+            "min": [
+              -0.614321652416483,
+              -1.228643304832966,
+              -0.614321652416483
+            ],
+            "max": [
+              0.614321652416483,
+              1.228643304832966,
+              0.614321652416483
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.228643304832966,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0.1474371965799559,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0.1474371965799559,
+                  -1.228643304832966,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.614321652416483,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.228643304832966,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.614321652416483,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination.",
+          "childImplicitAtParentTip": {
+            "value": 1,
+            "insideOrBoundary": true
+          }
+        }
+      }
+    },
+    {
+      "id": "same-spheres-above-ja",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.7778329999999869,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.48704405189070454,
+          "bounds": {
+            "min": [
+              -0.7549182804305921,
+              -1.07149691415955,
+              -0.7549182804305921
+            ],
+            "max": [
+              0.7549182804305921,
+              1.07149691415955,
+              0.7549182804305921
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1.55,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1.55,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.31657863372895795,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.07149691415955,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.4383396467016341,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.4383396467016341,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.07149691415955,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.31657863372895795,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 0.65,
+                "width": 0.65,
+                "depth": 0.65,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 0.65,
+                "width": 0.65,
+                "depth": 0.65,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.7549182804305922,
+                  0
+                ],
+                "start": [
+                  0,
+                  0.4383396467016342,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.07149691415955,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.07149691415955,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0.4383396467016342,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.7549182804305922,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.5036670000000072,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5712570587101606,
+          "bounds": {
+            "min": [
+              -0.7997598821942249,
+              -1.1425141174203213,
+              -0.5712570587101606
+            ],
+            "max": [
+              0.7997598821942249,
+              1.1425141174203213,
+              0.5712570587101606
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "same-spheres-above-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.5471249999999941,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.48704405189070454,
+          "bounds": {
+            "min": [
+              -0.7549182804305921,
+              -1.07149691415955,
+              -0.7549182804305921
+            ],
+            "max": [
+              0.7549182804305921,
+              1.07149691415955,
+              0.7549182804305921
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 0.65,
+                "width": 0.65,
+                "depth": 0.65,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 0.65,
+                "width": 0.65,
+                "depth": 0.65,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.7549182804305921,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.07149691415955,
+                  0
+                ],
+                "end": [
+                  0,
+                  -0.4383396467016341,
+                  0
+                ],
+                "top": [
+                  0,
+                  -0.4383396467016341,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.07149691415955,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.7549182804305921,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1.55,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1.55,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.316578633728958,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.43833964670163406,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.07149691415955,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.07149691415955,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.43833964670163406,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.316578633728958,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.1190829999999892,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5712570587101606,
+          "bounds": {
+            "min": [
+              -0.7997598821942249,
+              -1.1425141174203213,
+              -0.5712570587101606
+            ],
+            "max": [
+              0.7997598821942249,
+              1.1425141174203213,
+              0.5712570587101606
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "sphere",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "ellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "same-tubes-end-ja",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 1.4850840000000005,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.533475023970532,
+          "bounds": {
+            "min": [
+              -0.19845270891703792,
+              -1.4937300671174896,
+              -0.19845270891703792
+            ],
+            "max": [
+              0.19845270891703792,
+              1.4937300671174896,
+              0.19845270891703792
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.7468650335587447,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4937300671174896,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.184552509349084e-16,
+                  0
+                ],
+                "top": [
+                  0.05121360230117108,
+                  1.184552509349084e-16,
+                  0
+                ],
+                "bottom": [
+                  0.05121360230117108,
+                  -1.4937300671174896,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.7468650335587447,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.7468650335587449,
+                  0
+                ],
+                "start": [
+                  0,
+                  1.184552509349084e-16,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4937300671174896,
+                  0
+                ],
+                "top": [
+                  0.19845270891703792,
+                  1.4937300671174896,
+                  0
+                ],
+                "bottom": [
+                  0.19845270891703792,
+                  1.184552509349084e-16,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.7468650335587449,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination."
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.2284170000000074,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.7382282483415846,
+          "bounds": {
+            "min": [
+              -0.2480446914427724,
+              -1.4764564966831693,
+              -0.1771747796019803
+            ],
+            "max": [
+              0.2480446914427724,
+              1.4764564966831693,
+              0.1771747796019803
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.7382282483415846,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4764564966831693,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0.10630486776118818,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0.10630486776118818,
+                  -1.4764564966831693,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.7382282483415846,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.7382282483415846,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4764564966831693,
+                  0
+                ],
+                "top": [
+                  0.2480446914427724,
+                  1.4764564966831693,
+                  0
+                ],
+                "bottom": [
+                  0.2480446914427724,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.7382282483415846,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination."
+        }
+      }
+    },
+    {
+      "id": "same-tubes-end-en",
+      "modelMeaningPass": false,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.4443330000000003,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.9081912938954652,
+          "bounds": {
+            "min": [
+              -0.08718636421396465,
+              -1.4985156349275175,
+              -0.08718636421396465
+            ],
+            "max": [
+              0.08718636421396465,
+              1.4985156349275175,
+              0.08718636421396465
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.65,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.65,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4985156349275175,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4985156349275175,
+                  0
+                ],
+                "top": [
+                  0.08718636421396465,
+                  1.4985156349275175,
+                  0
+                ],
+                "bottom": [
+                  0.08718636421396465,
+                  -1.4985156349275175,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 1.1647909999999797,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.7436405218213328,
+          "bounds": {
+            "min": [
+              -0.17847372523711985,
+              -1.4872810436426656,
+              -0.17847372523711985
+            ],
+            "max": [
+              0.17847372523711985,
+              1.4872810436426656,
+              0.17847372523711985
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "tube",
+                "height": 1.4,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.4461843130927997,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.4872810436426656,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.5949124174570661,
+                  0
+                ],
+                "top": [
+                  0.17847372523711985,
+                  0.5949124174570661,
+                  0
+                ],
+                "bottom": [
+                  0.17847372523711985,
+                  -1.4872810436426656,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.4461843130927997,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 0.6,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "tube",
+                "height": 0.6,
+                "width": 1,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  1.0410967305498657,
+                  0
+                ],
+                "start": [
+                  0,
+                  0.5949124174570661,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.4872810436426656,
+                  0
+                ],
+                "top": [
+                  0.17847372523711985,
+                  1.4872810436426656,
+                  0
+                ],
+                "bottom": [
+                  0.17847372523711985,
+                  0.5949124174570661,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                1.0410967305498657,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "constant"
+            }
+          ]
+        },
+        "attachment": {
+          "centerlineEndpointDistance": 0,
+          "pass": true,
+          "scope": "Endpoint arrangement only. Does not prove watertight material contact for every primitive combination."
+        }
+      }
+    },
+    {
+      "id": "same-boxes-above-ja",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.7792499999999905,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5090847343181186,
+          "bounds": {
+            "min": [
+              -0.7890813381930839,
+              -1.0181694686362373,
+              -0.7890813381930839
+            ],
+            "max": [
+              0.7890813381930839,
+              1.0181694686362373,
+              0.7890813381930839
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5090847343181186,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.0181694686362373,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.0181694686362373,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5090847343181186,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 0.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 0.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.5090847343181186,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.0181694686362373,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.0181694686362373,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.5090847343181186,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.6905000000000143,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5712570587101606,
+          "bounds": {
+            "min": [
+              -0.7997598821942249,
+              -1.1425141174203213,
+              -0.5712570587101606
+            ],
+            "max": [
+              0.7997598821942249,
+              1.1425141174203213,
+              0.5712570587101606
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    },
+    {
+      "id": "same-boxes-above-en",
+      "modelMeaningPass": true,
+      "modelDerived": {
+        "compileAccepted": true,
+        "compileMs": 0.6632089999999948,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5493458404868939,
+          "bounds": {
+            "min": [
+              -0.8514860527546856,
+              -0.9064206368033749,
+              -0.8514860527546856
+            ],
+            "max": [
+              0.8514860527546856,
+              0.9064206368033749,
+              0.8514860527546856
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 0.65,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 0.65,
+                "width": 0.4,
+                "depth": 0.4,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5493458404868939,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.9064206368033749,
+                  0
+                ],
+                "end": [
+                  0,
+                  -0.19227104417041288,
+                  0
+                ],
+                "top": [
+                  0,
+                  -0.19227104417041288,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.9064206368033749,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5493458404868939,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.55,
+                "depth": 1.55,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.35707479631648104,
+                  0
+                ],
+                "start": [
+                  0,
+                  -0.19227104417041294,
+                  0
+                ],
+                "end": [
+                  0,
+                  0.9064206368033749,
+                  0
+                ],
+                "top": [
+                  0,
+                  0.9064206368033749,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -0.19227104417041294,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.35707479631648104,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      },
+      "expectedNominal": {
+        "compileAccepted": true,
+        "compileMs": 0.7344170000000076,
+        "finiteSurface": true,
+        "compiled": {
+          "scale": 0.5712570587101606,
+          "bounds": {
+            "min": [
+              -0.7997598821942249,
+              -1.1425141174203213,
+              -0.5712570587101606
+            ],
+            "max": [
+              0.7997598821942249,
+              1.1425141174203213,
+              0.5712570587101606
+            ]
+          },
+          "adjustments": [],
+          "parts": [
+            {
+              "source": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "0",
+                "primitive": "box",
+                "height": 1,
+                "width": 0.6,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  -0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ],
+                "end": [
+                  0,
+                  0,
+                  0
+                ],
+                "top": [
+                  0,
+                  0,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  -1.1425141174203213,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                -0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            },
+            {
+              "source": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "effective": {
+                "id": "1",
+                "primitive": "box",
+                "height": 1,
+                "width": 1.4,
+                "depth": 1,
+                "bend": 0,
+                "twist": 0
+              },
+              "anchors": {
+                "center": [
+                  0,
+                  0.5712570587101606,
+                  0
+                ],
+                "start": [
+                  0,
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "top": [
+                  0,
+                  1.1425141174203213,
+                  0
+                ],
+                "bottom": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "position": [
+                0,
+                0.5712570587101606,
+                0
+              ],
+              "centerlineKind": "bezier",
+              "profile": "superellipse"
+            }
+          ]
+        },
+        "contact": {
+          "kind": "actual-top-bottom-material-contact",
+          "atTimes": [
+            {
+              "time": 0,
+              "distance": 0,
+              "pass": true
+            },
+            {
+              "time": 30,
+              "distance": 0,
+              "pass": true
+            }
+          ],
+          "childCenterAboveParent": true
+        }
+      }
+    }
+  ]
+}

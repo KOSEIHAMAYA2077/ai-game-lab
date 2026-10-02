@@ -1,0 +1,369 @@
+{
+  "label": "User-operated failure diagnosis only; no tuning",
+  "rows": [
+    {
+      "text": "棒の先に球",
+      "phrases": [
+        [
+          "棒",
+          "球"
+        ],
+        "jp-tip"
+      ],
+      "headInput": "物体の先に物体",
+      "headCandidates": [
+        {
+          "kind": "end",
+          "score": 0.925533
+        },
+        {
+          "kind": "none",
+          "score": 0.061161
+        },
+        {
+          "kind": "through",
+          "score": 0.009384
+        },
+        {
+          "kind": "above",
+          "score": 0.003922
+        }
+      ],
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 48.311,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-tip",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "tube",
+          "score": 0.998664
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "sphere",
+          "score": 0.998732
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "end",
+          "score": 0.925533
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "end",
+          "score": 0.925533
+        },
+        {
+          "kind": "none",
+          "score": 0.061161
+        },
+        {
+          "kind": "through",
+          "score": 0.009384
+        },
+        {
+          "kind": "above",
+          "score": 0.003922
+        }
+      ]
+    },
+    {
+      "text": "細い棒の先に大きな球",
+      "phrases": [
+        [
+          "細い棒",
+          "大きな球"
+        ],
+        "jp-tip"
+      ],
+      "headInput": "物体の先に 物体",
+      "headCandidates": [
+        {
+          "kind": "end",
+          "score": 0.798327
+        },
+        {
+          "kind": "none",
+          "score": 0.19355
+        },
+        {
+          "kind": "through",
+          "score": 0.005375
+        },
+        {
+          "kind": "above",
+          "score": 0.002749
+        }
+      ],
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1.55,
+            "width": 1.55,
+            "depth": 1.55,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 8.114,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-tip",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "tube",
+          "score": 0.998664
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "0",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "0",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "0",
+          "attribute": "depth"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "sphere",
+          "score": 0.998732
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "height"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "depth"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "end",
+          "score": 0.798327
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "end",
+          "score": 0.798327
+        },
+        {
+          "kind": "none",
+          "score": 0.19355
+        },
+        {
+          "kind": "through",
+          "score": 0.005375
+        },
+        {
+          "kind": "above",
+          "score": 0.002749
+        }
+      ]
+    },
+    {
+      "text": "白い細い棒の先に大きな球",
+      "phrases": [
+        [
+          "白い細い棒",
+          "大きな球"
+        ],
+        "jp-tip"
+      ],
+      "headInput": "白い 物体の先に 物体",
+      "headCandidates": [
+        {
+          "kind": "none",
+          "score": 0.895246
+        },
+        {
+          "kind": "end",
+          "score": 0.056448
+        },
+        {
+          "kind": "above",
+          "score": 0.040221
+        },
+        {
+          "kind": "through",
+          "score": 0.008085
+        }
+      ],
+      "program": null,
+      "source": "unchanged",
+      "modelMs": 8.439,
+      "reason": "relation-uncertain",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-tip",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "tube",
+          "score": 0.998664
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "0",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "0",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "0",
+          "attribute": "depth"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "sphere",
+          "score": 0.998732
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "height"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "depth"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "none",
+          "score": 0.895246
+        }
+      ]
+    }
+  ]
+}

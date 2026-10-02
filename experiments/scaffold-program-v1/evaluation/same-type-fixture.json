@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-02T09:18:13.927056+00:00",
+  "purpose": "Additional independent evaluation for two instances of the same primitive, frozen before head completion.",
+  "cases": [
+    {
+      "id": "same-spheres-above-ja",
+      "group": "same-type",
+      "text": "大きな球体の上に、小さな球体を置く。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          },
+          {
+            "primitive": "sphere",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "same-spheres-above-en",
+      "group": "same-type",
+      "text": "Place a large sphere above a small sphere.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          },
+          {
+            "primitive": "sphere",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "same-tubes-end-ja",
+      "group": "same-type",
+      "text": "細い管の先端に、太い管を接続する。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          },
+          {
+            "primitive": "tube",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "same-tubes-end-en",
+      "group": "same-type",
+      "text": "Attach a short tube to the end of a long tube.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube",
+            "attributes": {
+              "height": {
+                "min": 1.2
+              }
+            }
+          },
+          {
+            "primitive": "tube",
+            "attributes": {
+              "height": {
+                "max": 0.8
+              }
+            }
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "same-boxes-above-ja",
+      "group": "same-type",
+      "text": "幅広い箱の上に、幅の狭い箱を載せる。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          },
+          {
+            "primitive": "box",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "same-boxes-above-en",
+      "group": "same-type",
+      "text": "A wide box sits above a narrow box.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box",
+            "attributes": {
+              "width": {
+                "max": 0.8
+              }
+            }
+          },
+          {
+            "primitive": "box",
+            "attributes": {
+              "width": {
+                "min": 1.2
+              }
+            }
+          }
+        ],
+        "relation": "above"
+      }
+    }
+  ]
+}
