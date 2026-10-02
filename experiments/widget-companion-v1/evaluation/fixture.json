@@ -1,0 +1,13 @@
+{
+  "frozen_before_ui": "2026-10-03",
+  "purpose": "lifecycle, retained ink and grammar regression; not unrestricted semantic accuracy",
+  "inputs": [
+    {"id":"white-rod-ball","text":"白い細い棒の先に大きな球","expected":"two parts: tube + sphere; end relation; white new ink"},
+    {"id":"blue-twist-box","text":"青いねじれた箱","expected":"box with physical twist; earlier white words remain; blue new ink"},
+    {"id":"yellow-vase","text":"黄色い花瓶","expected":"vase; earlier words and inks remain; yellow new ink"},
+    {"id":"red-above","text":"赤い箱の上に球","expected":"box + sphere; above relation; red new ink"},
+    {"id":"purple-through","text":"紫の箱を細い棒が貫く","expected":"box + tube; through relation if geometric guard accepts"},
+    {"id":"ordinary-preserve","text":"今日は穏やかな朝です","expected":"keep prior accepted Program and add text"},
+    {"id":"reset-reinput","text":"青いねじれた箱","expected":"repeat result from new Worker after reset"}
+  ]
+}

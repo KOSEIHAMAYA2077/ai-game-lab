@@ -1,0 +1,7 @@
+{
+  "test": "navigation_check.mjs first run on R2",
+  "failure": "goBack waitUntil domcontentloaded timed out while URL had already returned to widget.html",
+  "classification": "test wait did not accommodate a BFCache restoration; scheduler state was not captured",
+  "correction": "Wait for navigation commit / URL, then read hook and actual persisted pageshow probe. No app source change was made by evaluator.",
+  "app_verdict": "not determined by this failed harness run"
+}

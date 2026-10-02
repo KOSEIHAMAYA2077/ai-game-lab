@@ -1,0 +1,5250 @@
+{
+  "label": "native-at-calm",
+  "elapsed_seconds": 30.002188,
+  "sampling_interval_seconds": 0.5,
+  "per_process": [
+    {
+      "pid": 52339,
+      "cpu_single_core_percent": 2.956970451621728,
+      "peak_footprint_bytes": 26903608,
+      "first_footprint_bytes": 26641464,
+      "last_footprint_bytes": 26870840,
+      "lifetime_max_footprint_bytes": 29082680,
+      "missing_samples": 0
+    },
+    {
+      "pid": 52361,
+      "cpu_single_core_percent": 1.8032683449620408,
+      "peak_footprint_bytes": 77136760,
+      "first_footprint_bytes": 77103992,
+      "last_footprint_bytes": 77087608,
+      "lifetime_max_footprint_bytes": 101401440,
+      "missing_samples": 0
+    },
+    {
+      "pid": 52362,
+      "cpu_single_core_percent": 0.00502588344556737,
+      "peak_footprint_bytes": 7537312,
+      "first_footprint_bytes": 7537312,
+      "last_footprint_bytes": 7488160,
+      "lifetime_max_footprint_bytes": 11567776,
+      "missing_samples": 0
+    },
+    {
+      "pid": 52363,
+      "cpu_single_core_percent": 5.307203344636065,
+      "peak_footprint_bytes": 173523880,
+      "first_footprint_bytes": 156648336,
+      "last_footprint_bytes": 172704680,
+      "lifetime_max_footprint_bytes": 174441384,
+      "missing_samples": 0
+    }
+  ],
+  "peak_sum_charged_footprint_bytes": 284937720,
+  "first_sum_charged_footprint_bytes": 267931104,
+  "last_sum_charged_footprint_bytes": 284151288,
+  "sum_per_process_lifetime_max_footprint_bytes": 316493280,
+  "cpu_single_core_percent": 10.072468024665401,
+  "state_summary": {
+    "native-at-calm": {
+      "samples": 61,
+      "peak_sum_charged_footprint_bytes": 284937720,
+      "cpu_seconds": 3.0219607930000008,
+      "elapsed_valid_seconds": 30.002187999999997,
+      "incomplete_cpu_intervals": 0,
+      "cpu_single_core_percent": 10.072468024665405
+    }
+  },
+  "warning": "Explicit PID group, per-process charged footprint sum; not unique system RAM. The sum of per-process lifetime peaks is an upper envelope, not a coincident app peak. Missing process samples make CPU sum incomplete. GPU utilization and power are not measured.",
+  "samples": [
+    {
+      "monotonic_ns": 2437899031179000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3315892208,
+          "system_ns": 2366339541,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17584,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2928539416,
+          "system_ns": 2434907041,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1105,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6749672083,
+          "system_ns": 2564442333,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3887,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:10Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4336,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4336,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4335,
+          "uptimeSeconds": 291.844,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437899540568000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3320842458,
+          "system_ns": 2370076250,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17602,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2934234583,
+          "system_ns": 2439568416,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1106,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6771322916,
+          "system_ns": 2569589083,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3892,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:10Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4336,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4336,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4335,
+          "uptimeSeconds": 291.844,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437900038930000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3325366125,
+          "system_ns": 2373463458,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17627,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2939651625,
+          "system_ns": 2444230583,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1109,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6791226750,
+          "system_ns": 2574464250,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3896,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:10Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4336,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4336,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4335,
+          "uptimeSeconds": 291.844,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437900537576000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3330383833,
+          "system_ns": 2377198083,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17647,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2944884583,
+          "system_ns": 2449211750,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1111,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6811762083,
+          "system_ns": 2579346416,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3902,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:10Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4336,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4336,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4335,
+          "uptimeSeconds": 291.844,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437901036220000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3335628541,
+          "system_ns": 2381186833,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17665,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2950337416,
+          "system_ns": 2453701708,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1111,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6832342166,
+          "system_ns": 2584316500,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3907,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:10Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4336,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4336,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4335,
+          "uptimeSeconds": 291.844,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437901535199000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3339700750,
+          "system_ns": 2384583666,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17683,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2955012208,
+          "system_ns": 2457976958,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1113,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6851377500,
+          "system_ns": 2588938458,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3910,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:10Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4336,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4336,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4335,
+          "uptimeSeconds": 291.844,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437902037254000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3345728833,
+          "system_ns": 2389337833,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17707,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2960832958,
+          "system_ns": 2462778916,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1114,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6874329083,
+          "system_ns": 2594648916,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3917,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437902534531000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3350828666,
+          "system_ns": 2392877375,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17726,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2967243125,
+          "system_ns": 2467699208,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1115,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6904595875,
+          "system_ns": 2600303416,
+          "footprint_bytes": 156648336,
+          "resident_bytes": 163299328,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3922,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437903039323000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3355682000,
+          "system_ns": 2396463625,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17747,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2972367416,
+          "system_ns": 2471543958,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1115,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6924119750,
+          "system_ns": 2605226166,
+          "footprint_bytes": 156664720,
+          "resident_bytes": 163315712,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3926,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437903538835000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3360112458,
+          "system_ns": 2399786916,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17771,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2977989125,
+          "system_ns": 2476214666,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1119,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6943129708,
+          "system_ns": 2609795291,
+          "footprint_bytes": 156664720,
+          "resident_bytes": 163315712,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3930,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437904039773000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3364932541,
+          "system_ns": 2403544166,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17798,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2984080166,
+          "system_ns": 2481185958,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1121,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6966301875,
+          "system_ns": 2615250125,
+          "footprint_bytes": 156664720,
+          "resident_bytes": 163315712,
+          "lifetime_max_footprint_bytes": 157320080,
+          "package_idle_wakeups": 3935,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437904538665000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3369806958,
+          "system_ns": 2407126750,
+          "footprint_bytes": 26641464,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17808,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2989049583,
+          "system_ns": 2485345000,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1121,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 6984347375,
+          "system_ns": 2619640291,
+          "footprint_bytes": 156664720,
+          "resident_bytes": 163315712,
+          "lifetime_max_footprint_bytes": 157352848,
+          "package_idle_wakeups": 3937,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437905039630000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3377700291,
+          "system_ns": 2411608541,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17810,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 2997051916,
+          "system_ns": 2490858083,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1122,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7009330500,
+          "system_ns": 2625902250,
+          "footprint_bytes": 156681104,
+          "resident_bytes": 163332096,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3937,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437905539796000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3384821625,
+          "system_ns": 2416560625,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17810,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3003670333,
+          "system_ns": 2496060625,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1122,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7033631000,
+          "system_ns": 2631533958,
+          "footprint_bytes": 156664720,
+          "resident_bytes": 163315712,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3937,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437906040912000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3389689708,
+          "system_ns": 2420020541,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17823,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3009535416,
+          "system_ns": 2500823041,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1123,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7051386208,
+          "system_ns": 2636262208,
+          "footprint_bytes": 156566416,
+          "resident_bytes": 163217408,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3937,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437906536137000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3394897166,
+          "system_ns": 2423718916,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17838,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3015916958,
+          "system_ns": 2505779875,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1125,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7074807666,
+          "system_ns": 2642373541,
+          "footprint_bytes": 156566416,
+          "resident_bytes": 163217408,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3943,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:15Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4410,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4410,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4409,
+          "uptimeSeconds": 296.875,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437907038382000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3400312000,
+          "system_ns": 2427823708,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17860,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3021113458,
+          "system_ns": 2509900208,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1128,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7094915458,
+          "system_ns": 2647912333,
+          "footprint_bytes": 156566416,
+          "resident_bytes": 163217408,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3950,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437907538174000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3405073958,
+          "system_ns": 2431274541,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17876,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3026451791,
+          "system_ns": 2514411041,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1130,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7124049125,
+          "system_ns": 2654224166,
+          "footprint_bytes": 156582800,
+          "resident_bytes": 163233792,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3951,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437908039071000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3411337083,
+          "system_ns": 2435664291,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17895,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3033262666,
+          "system_ns": 2519693583,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1133,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7146961625,
+          "system_ns": 2659748375,
+          "footprint_bytes": 156582800,
+          "resident_bytes": 163233792,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3955,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437908536249000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3415946083,
+          "system_ns": 2439254416,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17902,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3038898416,
+          "system_ns": 2524496041,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1133,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7168797208,
+          "system_ns": 2664964791,
+          "footprint_bytes": 156582800,
+          "resident_bytes": 163233792,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3958,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437909036309000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3420697833,
+          "system_ns": 2442692833,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17921,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3044657875,
+          "system_ns": 2528754000,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1134,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7188733500,
+          "system_ns": 2670168041,
+          "footprint_bytes": 156582800,
+          "resident_bytes": 163233792,
+          "lifetime_max_footprint_bytes": 157369232,
+          "package_idle_wakeups": 3960,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437909534776000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3424938708,
+          "system_ns": 2445765875,
+          "footprint_bytes": 26690616,
+          "resident_bytes": 108396544,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17941,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3049490958,
+          "system_ns": 2532341875,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1137,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7259622083,
+          "system_ns": 2677307916,
+          "footprint_bytes": 164234128,
+          "resident_bytes": 171442176,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3964,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437910036601000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3429744791,
+          "system_ns": 2449382666,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17960,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3054805958,
+          "system_ns": 2536716250,
+          "footprint_bytes": 77103992,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1137,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7282154458,
+          "system_ns": 2682594125,
+          "footprint_bytes": 164250512,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3968,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437910535874000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3434667583,
+          "system_ns": 2452810041,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17980,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3060659958,
+          "system_ns": 2541695583,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1137,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7305895416,
+          "system_ns": 2688251958,
+          "footprint_bytes": 159712144,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3972,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437911040037000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3439339708,
+          "system_ns": 2456159041,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 17996,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3065789375,
+          "system_ns": 2545857833,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1137,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7328341666,
+          "system_ns": 2693585125,
+          "footprint_bytes": 157320080,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3973,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437911539469000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3443875833,
+          "system_ns": 2459517791,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18015,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3070504000,
+          "system_ns": 2549873041,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1140,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7351402333,
+          "system_ns": 2698724833,
+          "footprint_bytes": 157320080,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3975,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:20Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4484,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4484,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4483,
+          "uptimeSeconds": 301.908,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437912037891000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3449795000,
+          "system_ns": 2464115208,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18032,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3075413500,
+          "system_ns": 2554185208,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1141,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7373948708,
+          "system_ns": 2703178500,
+          "footprint_bytes": 157320080,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3979,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437912539357000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3455336541,
+          "system_ns": 2468091208,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18047,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3083055000,
+          "system_ns": 2560136375,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1143,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7406991833,
+          "system_ns": 2710382291,
+          "footprint_bytes": 157320080,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3981,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437913038784000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3460271083,
+          "system_ns": 2471941041,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18071,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3088141291,
+          "system_ns": 2564189666,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1143,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7430229458,
+          "system_ns": 2715242458,
+          "footprint_bytes": 157270928,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3987,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437913538878000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3465342625,
+          "system_ns": 2475549458,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18089,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3094711666,
+          "system_ns": 2569152666,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1144,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7457155083,
+          "system_ns": 2720537375,
+          "footprint_bytes": 157287312,
+          "resident_bytes": 171474944,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3990,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437914040137000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3470683958,
+          "system_ns": 2479525708,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18107,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3100052541,
+          "system_ns": 2573750875,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1145,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7479759125,
+          "system_ns": 2725707333,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3992,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437914537812000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3474950708,
+          "system_ns": 2482783250,
+          "footprint_bytes": 26592312,
+          "resident_bytes": 108347392,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18123,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3105377125,
+          "system_ns": 2578160291,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1145,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7501444208,
+          "system_ns": 2730288166,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3993,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437915038935000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3479626791,
+          "system_ns": 2486263000,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18145,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3110922000,
+          "system_ns": 2582953500,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1145,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7525213041,
+          "system_ns": 2735396166,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 3997,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437915538194000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3484249541,
+          "system_ns": 2489824333,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18166,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3116457250,
+          "system_ns": 2587744791,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1149,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7548750666,
+          "system_ns": 2740068833,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4002,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437916039099000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3488567166,
+          "system_ns": 2493148875,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18184,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3121351500,
+          "system_ns": 2591788458,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1150,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7570924625,
+          "system_ns": 2744524625,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4006,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437916539353000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3493949708,
+          "system_ns": 2497065208,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18200,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3127371916,
+          "system_ns": 2597011333,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1150,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7598693333,
+          "system_ns": 2750378458,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4012,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:25Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4558,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4558,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4557,
+          "uptimeSeconds": 306.94,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437917040147000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3499402708,
+          "system_ns": 2501527375,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18218,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3132449625,
+          "system_ns": 2601508250,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1151,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7621034708,
+          "system_ns": 2755349958,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4018,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437917539115000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3503653125,
+          "system_ns": 2504968166,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18239,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3138145666,
+          "system_ns": 2606477166,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1153,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7654826958,
+          "system_ns": 2761788375,
+          "footprint_bytes": 157221776,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4024,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437918032406000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3511684791,
+          "system_ns": 2509753791,
+          "footprint_bytes": 26575928,
+          "resident_bytes": 108331008,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18257,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3144162250,
+          "system_ns": 2610692375,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1153,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7675862166,
+          "system_ns": 2766462750,
+          "footprint_bytes": 157205392,
+          "resident_bytes": 171409408,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4025,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437918538702000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3532118083,
+          "system_ns": 2517453958,
+          "footprint_bytes": 26608696,
+          "resident_bytes": 108412928,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18282,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3147519833,
+          "system_ns": 2613430666,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1157,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32012666,
+          "system_ns": 25395375,
+          "footprint_bytes": 7537312,
+          "resident_bytes": 24117248,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 21,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7692668541,
+          "system_ns": 2771243083,
+          "footprint_bytes": 157238160,
+          "resident_bytes": 171458560,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4029,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437919038260000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3552656541,
+          "system_ns": 2526892333,
+          "footprint_bytes": 26674232,
+          "resident_bytes": 108494848,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18297,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3152365375,
+          "system_ns": 2616978041,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1158,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32222000,
+          "system_ns": 25602708,
+          "footprint_bytes": 7520928,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 22,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7713744208,
+          "system_ns": 2777854500,
+          "footprint_bytes": 157254544,
+          "resident_bytes": 171474944,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4033,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437919538368000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3572060666,
+          "system_ns": 2539584458,
+          "footprint_bytes": 26723384,
+          "resident_bytes": 108544000,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18317,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3156614125,
+          "system_ns": 2620101125,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1159,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32303666,
+          "system_ns": 25656166,
+          "footprint_bytes": 7520928,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 24,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7734547750,
+          "system_ns": 2785614458,
+          "footprint_bytes": 157369232,
+          "resident_bytes": 171589632,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4038,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437920037132000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3595044166,
+          "system_ns": 2552519500,
+          "footprint_bytes": 26739768,
+          "resident_bytes": 108560384,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18343,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3161495583,
+          "system_ns": 2623212541,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1161,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32480916,
+          "system_ns": 25746500,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 27,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7757177250,
+          "system_ns": 2792901833,
+          "footprint_bytes": 157418384,
+          "resident_bytes": 171638784,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4044,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437920538147000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3612728583,
+          "system_ns": 2564451208,
+          "footprint_bytes": 26788920,
+          "resident_bytes": 108609536,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18375,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3167588500,
+          "system_ns": 2627749416,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1164,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32517708,
+          "system_ns": 25770208,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 29,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7781401458,
+          "system_ns": 2801115791,
+          "footprint_bytes": 157451152,
+          "resident_bytes": 171671552,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4051,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437921032972000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3631208250,
+          "system_ns": 2571862500,
+          "footprint_bytes": 26739768,
+          "resident_bytes": 108609536,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18394,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3173822291,
+          "system_ns": 2633055500,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91340800,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1165,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32517708,
+          "system_ns": 25770208,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 29,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7806927458,
+          "system_ns": 2808535333,
+          "footprint_bytes": 159171472,
+          "resident_bytes": 173391872,
+          "lifetime_max_footprint_bytes": 165495696,
+          "package_idle_wakeups": 4056,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437921538360000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3652251333,
+          "system_ns": 2583630208,
+          "footprint_bytes": 26756152,
+          "resident_bytes": 108625920,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18426,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3177745833,
+          "system_ns": 2635890166,
+          "footprint_bytes": 77120376,
+          "resident_bytes": 91357184,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1166,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32517708,
+          "system_ns": 25770208,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 29,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7827546166,
+          "system_ns": 2816007166,
+          "footprint_bytes": 165200784,
+          "resident_bytes": 179437568,
+          "lifetime_max_footprint_bytes": 165823376,
+          "package_idle_wakeups": 4062,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:30Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4632,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4632,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4631,
+          "uptimeSeconds": 311.971,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437922036696000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3669768166,
+          "system_ns": 2597018583,
+          "footprint_bytes": 26788920,
+          "resident_bytes": 108658688,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18451,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3184492875,
+          "system_ns": 2640893541,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1170,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32678916,
+          "system_ns": 25897791,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 30,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7857000708,
+          "system_ns": 2826412541,
+          "footprint_bytes": 172999592,
+          "resident_bytes": 187219968,
+          "lifetime_max_footprint_bytes": 173605800,
+          "package_idle_wakeups": 4069,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437922531755000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3686605250,
+          "system_ns": 2604053416,
+          "footprint_bytes": 26788920,
+          "resident_bytes": 108658688,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18474,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3189258958,
+          "system_ns": 2644404708,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1171,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32760083,
+          "system_ns": 25952166,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 30,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7883895458,
+          "system_ns": 2832448333,
+          "footprint_bytes": 173523880,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4075,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437923034541000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3698652458,
+          "system_ns": 2609748208,
+          "footprint_bytes": 26772536,
+          "resident_bytes": 108658688,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18498,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3191448875,
+          "system_ns": 2645921875,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1171,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32875750,
+          "system_ns": 26005958,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7890335375,
+          "system_ns": 2834286041,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4082,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437923536054000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3718192791,
+          "system_ns": 2616870166,
+          "footprint_bytes": 26772536,
+          "resident_bytes": 108675072,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18527,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3194113166,
+          "system_ns": 2647951208,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1175,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7900658208,
+          "system_ns": 2837648000,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4086,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437924038831000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3738385041,
+          "system_ns": 2624920083,
+          "footprint_bytes": 26788920,
+          "resident_bytes": 108691456,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18539,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3196704375,
+          "system_ns": 2650078041,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1177,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7912060416,
+          "system_ns": 2841849500,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4088,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437924537998000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3756386000,
+          "system_ns": 2634711041,
+          "footprint_bytes": 26854456,
+          "resident_bytes": 108756992,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18558,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3199956500,
+          "system_ns": 2652262583,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1180,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7921252000,
+          "system_ns": 2844651958,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4092,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437925033126000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3778642208,
+          "system_ns": 2644141458,
+          "footprint_bytes": 26887224,
+          "resident_bytes": 108822528,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18577,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3202841958,
+          "system_ns": 2654265833,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1180,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7929397875,
+          "system_ns": 2847173750,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4095,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437925536671000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3798537916,
+          "system_ns": 2652600125,
+          "footprint_bytes": 26903608,
+          "resident_bytes": 108871680,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18587,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3204974208,
+          "system_ns": 2655754750,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1180,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7935907166,
+          "system_ns": 2849179916,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4098,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437926038100000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3815008875,
+          "system_ns": 2660020291,
+          "footprint_bytes": 26903608,
+          "resident_bytes": 108871680,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18600,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3207013333,
+          "system_ns": 2657435583,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1180,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7942102958,
+          "system_ns": 2851090750,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4100,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437926537123000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3833877041,
+          "system_ns": 2668313833,
+          "footprint_bytes": 26903608,
+          "resident_bytes": 108904448,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18605,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3209711833,
+          "system_ns": 2659138333,
+          "footprint_bytes": 77136760,
+          "resident_bytes": 91373568,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1181,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7948977875,
+          "system_ns": 2853165750,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4100,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:35Z",
+        "web": {
+          "busy": false,
+          "fps": 30,
+          "frames": 4738,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4738,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4737,
+          "uptimeSeconds": 316.993,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437927035823000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3849544541,
+          "system_ns": 2675596666,
+          "footprint_bytes": 26903608,
+          "resident_bytes": 108904448,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18620,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3213690375,
+          "system_ns": 2661854333,
+          "footprint_bytes": 77087608,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1181,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7962437791,
+          "system_ns": 2856469791,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4104,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:40Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4817,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4817,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4816,
+          "uptimeSeconds": 322.015,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437927531239000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3854972000,
+          "system_ns": 2679116583,
+          "footprint_bytes": 26870840,
+          "resident_bytes": 108904448,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18634,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3218448000,
+          "system_ns": 2665901791,
+          "footprint_bytes": 77087608,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1182,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 7991836000,
+          "system_ns": 2862127458,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4107,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:40Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4817,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4817,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4816,
+          "uptimeSeconds": 322.015,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437928034467000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3858586125,
+          "system_ns": 2682015791,
+          "footprint_bytes": 26870840,
+          "resident_bytes": 108904448,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18655,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3222103458,
+          "system_ns": 2669190250,
+          "footprint_bytes": 77087608,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1183,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 8006899250,
+          "system_ns": 2866085875,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4109,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:40Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4817,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4817,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4816,
+          "uptimeSeconds": 322.015,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437928540140000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3862069333,
+          "system_ns": 2684943666,
+          "footprint_bytes": 26870840,
+          "resident_bytes": 108904448,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18672,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3225928333,
+          "system_ns": 2672865541,
+          "footprint_bytes": 77087608,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1184,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 8022873916,
+          "system_ns": 2870118708,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4113,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:40Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4817,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4817,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4816,
+          "uptimeSeconds": 322.015,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    },
+    {
+      "monotonic_ns": 2437929033367000,
+      "mach_timebase": {
+        "numer": 125,
+        "denom": 3
+      },
+      "processes": [
+        {
+          "pid": 52339,
+          "start_abstime": 9875184318418,
+          "user_ns": 3877482750,
+          "system_ns": 2691904833,
+          "footprint_bytes": 26870840,
+          "resident_bytes": 108904448,
+          "lifetime_max_footprint_bytes": 29082680,
+          "package_idle_wakeups": 18692,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52361,
+          "start_abstime": 9875200763305,
+          "user_ns": 3229263416,
+          "system_ns": 2675203000,
+          "footprint_bytes": 77087608,
+          "resident_bytes": 91324416,
+          "lifetime_max_footprint_bytes": 101401440,
+          "package_idle_wakeups": 1187,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52362,
+          "start_abstime": 9875201057676,
+          "user_ns": 32893250,
+          "system_ns": 26022666,
+          "footprint_bytes": 7488160,
+          "resident_bytes": 24150016,
+          "lifetime_max_footprint_bytes": 11567776,
+          "package_idle_wakeups": 33,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        },
+        {
+          "pid": 52363,
+          "start_abstime": 9875202066747,
+          "user_ns": 8033366083,
+          "system_ns": 2873025458,
+          "footprint_bytes": 172704680,
+          "resident_bytes": 187793408,
+          "lifetime_max_footprint_bytes": 174441384,
+          "package_idle_wakeups": 4115,
+          "coalition_resource_id": 59568,
+          "coalition_jetsam_id": 59569
+        }
+      ],
+      "state": "native-at-calm",
+      "native": {
+        "appVersion": "0.14.0",
+        "nativeAlwaysOnTop": true,
+        "nativeHidden": false,
+        "nativeMiniaturized": false,
+        "nativeOccluded": false,
+        "nativeVisible": true,
+        "pid": 52339,
+        "port": 55702,
+        "recordedAt": "2026-10-02T15:24:40Z",
+        "web": {
+          "busy": false,
+          "fps": 15,
+          "frames": 4817,
+          "glyphCount": 385,
+          "modelLoaded": false,
+          "paused": false,
+          "renderCount": 4817,
+          "renderedGlyphs": 385,
+          "storedGlyphs": 385,
+          "updates": 4816,
+          "uptimeSeconds": 322.015,
+          "visible": true,
+          "workerActive": false,
+          "workerCount": 0
+        }
+      }
+    }
+  ],
+  "label_correction": "Provisional filename/label says at; all sampled telemetry shows a385glyph white sphere, not an @ benchmark.",
+  "actual_stored_glyph_counts_observed": [
+    385
+  ]
+}
