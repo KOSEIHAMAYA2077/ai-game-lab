@@ -1,6 +1,6 @@
 # ブラウザで試す
 
-[文字のかたちを開く](https://koseihamaya2077.github.io/ai-game-lab/) / [執筆モード](https://koseihamaya2077.github.io/ai-game-lab/?write)。インストールやアカウントは不要。WebGL2対応ブラウザで動く静的Web版です。
+[文字のかたちを開く](https://koseihamaya2077.github.io/glyph-matter/) / [執筆モード](https://koseihamaya2077.github.io/glyph-matter/?write)。インストールやアカウントは不要。WebGL2対応ブラウザで動く静的Web版です。
 
 ## 操作
 
@@ -8,7 +8,7 @@ Enterで入力欄を開き、文字や文章を入れてEnter。少なければ�
 
 ## 公開した版
 
-公開元は保存済みのタグ[`glyph-creature-p0-v0.11.0-rigs.1`](https://github.com/KOSEIHAMAYA2077/ai-game-lab/tree/glyph-creature-p0-v0.11.0-rigs.1)、コミット`67f7a30e2e01a142ba092b4cd2e756bcf3d5757f`です。60形の根性版に鳥・魚・蛇の骨格を追加した試作で、モデル推論や外部生成APIは使いません。[実装と確認記録](https://github.com/KOSEIHAMAYA2077/ai-game-lab/blob/glyph-creature-p0-v0.11.0-rigs.1/experiments/creature-rigs-v1/README.md)。公開中の版はWebサイトの[`version.json`](https://koseihamaya2077.github.io/ai-game-lab/version.json)でも確認できます。
+公開元は保存済みのタグ[`glyph-creature-p0-v0.11.0-rigs.1`](https://github.com/KOSEIHAMAYA2077/glyph-matter/tree/glyph-creature-p0-v0.11.0-rigs.1)、コミット`67f7a30e2e01a142ba092b4cd2e756bcf3d5757f`です。60形の根性版に鳥・魚・蛇の骨格を追加した試作で、モデル推論や外部生成APIは使いません。[実装と確認記録](https://github.com/KOSEIHAMAYA2077/glyph-matter/blob/glyph-creature-p0-v0.11.0-rigs.1/experiments/creature-rigs-v1/README.md)。公開中の版はWebサイトの[`version.json`](https://koseihamaya2077.github.io/glyph-matter/version.json)でも確認できます。
 
 今後の目標は、軽量モデルを使って曖昧な文章からその場で3Dの形を作り、蓄積した文字を表面へ流すことです。任意の形の生成を達成した版ではありません。Codexの複数サブエージェントで研究調査・実装・レビュー・検証を分担しています。
 
@@ -25,3 +25,7 @@ Enterで入力欄を開き、文字や文章を入れてEnter。少なければ�
 更新時は新しいタグを保存し、`PLAYABLE_REF`とこの文書の公開版を新しいコミットで更新します。以前のタグとブランチは保持します。手動の再公開はGitHub Actionsの「Publish playable prototype」から行えます。
 
 参照: [GitHub Pages公式の公開ワークフロー](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
+
+## 名称の変更 — 2026-10-02
+
+リポジトリ名を `glyph-matter`、作品名を **Glyph Matter** に変更しました。GitHubの履歴・タグ・ブランチと公開元の版は保持しています。ローカルの以前のフォルダ名は変更していません。Web版のURLは上記の新しいURLです。旧GitHub URLは転送されますが、GitHub Pagesの旧URLは転送対象ではありません。[GitHub公式の改名説明](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)。
