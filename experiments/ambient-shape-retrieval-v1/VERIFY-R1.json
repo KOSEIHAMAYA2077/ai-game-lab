@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "checks": [
+    "current-shape-hold",
+    "non-string",
+    "513-rejected-no-crop",
+    "512-allowed",
+    "surrogate-513",
+    "nfkc-expansion-limit",
+    "empty-hold",
+    "code-guard",
+    "quote-mask-retains-outside",
+    "negation-hold",
+    "multi-object-hold",
+    "unclosed-quote",
+    "longest-leaf",
+    "substring-word-safety",
+    "raw-ranking60",
+    "finite-norm",
+    "weight-budget",
+    "all-60-name-smoke",
+    "bounded-deterministic-finite"
+  ],
+  "passed": 19,
+  "randomArtificial": 400,
+  "info": {
+    "weightSchema": 1,
+    "shapes": 60,
+    "terms": 845,
+    "features": 1937,
+    "profiles": 60,
+    "graphNodes": 20,
+    "maxUTF16": 512,
+    "thresholds": {
+      "anchorScore": 0.85,
+      "anchorMargin": 0.1,
+      "sparseCosine": 0.32,
+      "sparseMargin": 0.1,
+      "sparseMatched": 3,
+      "sparseRare": 2
+    }
+  }
+}

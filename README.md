@@ -20,6 +20,8 @@
 
 魚・鳥・蛇を骨格付きの文字表面として加えた16形の別候補も保存。元Webの面・骨格・重みを移し、旧13形の同条件offscreen PNGは完全一致しました。[実装と原表現の由来](desktop/glyph-metal-lab-v4/README.md) / [数値・描画結果と保持した失敗](experiments/widget-metal-authored-v4/REPORT.md)。Macがロック状態のため新16形の実窓操作・通常窓資源は未確認で、配布・採用済みの13形版とは区別します。[root起動attempt](experiments/widget-metal-authored-v4-root-attempt/README.md)。
 
+文章から既知60形を選ぶ約200KiBのCPU候補も固定比較しました。独立した人工120文では、意図した形の受理14/60、形を出さない文への誤反応2/40。説明文は3/36、物語は1/12に留まり、自然な文章を理解する既定機能への採用を見送りました。[方式・重量・採否](experiments/ambient-shape-retrieval-v1/REPORT.md) / [独立評価と全原票](experiments/ambient-shape-retrieval-evaluation-v1/REPORT.md)。辞書・作者の連想グラフ・疎な類似度検索であり、新しい3Dモデルを生成する学習器ではありません。
+
 ### Metalの小窓・3形の独立比較版
 
 球・箱・メビウスの文字表面をMac標準の描画へ移した候補。回転中の端切れを新v2で修正しました。実小窓の白い球・1,536描画・90秒ではCPU2.661%／charged peak68.298MiBですが、60形版との機能差があり既定版は維持します。反復WKの描画周期gate失敗も原票ごと保存。[作成・操作](desktop/glyph-metal-lab-v2/README.md) / [画面と射影](experiments/widget-metal-framing-v2/README.md) / [実窓比較・制限](experiments/widget-metal-native-evaluation-v2/REPORT.md)。

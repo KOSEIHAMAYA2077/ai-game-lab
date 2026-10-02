@@ -1,0 +1,15 @@
+# 主張できる範囲
+
+この候補は「既知の語彙・作者の視覚連想・選別synsetの疎い記述featureへ近いか」を検査する。全文章の意味・人の意図・未知名詞の正確な解釈を推論しない。exact aliasのscore1は確率100%ではない。仕事/プログラム中で同じ文字列が出る多義性、作者が形に対応させなかった物体、時間的文脈は残る。原作者graphの近い複数形は狭いmarginで保留し、分類器を学習して解消したとしない。
+
+guardはliteral/nonliteralを理解していない。日本語の「ない/なく」やtechnical markerで全文を保留するので、実物の描写まで抑えるfalse holdが起こり得る。引用maskも正規表現であり、引用の入れ子や英語apostropheを完全にparseしない。日本語のboundaryはparticle heuristicで、Intl形態素分割やpart-of-speech解析ではない。文脈が必要な短い字・名詞/動詞の同形・日時/数字の表記を網羅しない。
+
+疎fallbackはWordNet English definitionによる既存記述語や日本語bigramを利用する。未知featureを無視するため一部knownfeatureに偏り得る。matched/rare feature数のgateで一般文章の誤反応を抑えることを試すが、semantic certaintyや未見の保証ではない。English filtered word bigramはstop word除去後の隣接で、文の論理や順序を表すsyntax modelではない。
+
+fullと各ablationは同じ数値gateを使う。結果が小標本やmanual intentに依存するため、accepted-positive precisionとclear hold false activationを別に報告する。ambiguous比率を隠さず、保持を常に成功/誤りと決めない。生産性・comfort・注意の改善、身体の見やすさ、長期利用は未検証。全入力素材化の実装とは無接続なので、本文蓄積の速さ・undo・IME・OS trust・入力漏れを評価したとしない。
+
+入力拒否はshape query窓の拒否であり、全入力文字素材を捨てる要求ではない。将来scheduler/adapterは本文保存のoff、glyph/IDのvolatile、commit/diff/undoの契約を別に満たす必要がある。この実験は人工本文のみを返し、履歴やprivate本文を常駐保存しない。
+
+weight-R1 204,333Bはserialized size。NodeのGC後heap増分はrawJSON文字列、parsedweight、compiledMap、コードを含むprocess比較で、weight専用allocationの厳密な計測ではない。JSCのweight常駐bytesは単独未測定。Mac CPUの短い人工batchで数ms目標へ収まっても、全widget RAM、8時間の長期常駐、電力、Windows16GB laptopを証明しない。warm測定はcold起動やI/O/OS/描画/bridgeを含まない。
+
+既定は60shapeの既存根性resolver/geometryを維持。native13/16はこの60shape語彙との別母数で、候補に接続していない。人工fixtureでよい判定が出てもdefault採用や任意text-to-meshを宣言しない。評価後の120文を回帰資料に再利用する場合、次版の新しい独立評価を別に作る。

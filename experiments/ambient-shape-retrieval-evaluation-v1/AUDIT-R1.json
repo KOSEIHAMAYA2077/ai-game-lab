@@ -1,0 +1,1063 @@
+{
+  "version": "post-result-readonly-arithmetic-r1",
+  "createdAt": "2026-10-02T22:12:57.616265+00:00",
+  "checks": [
+    {
+      "mode": "baseline",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    },
+    {
+      "mode": "alias",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    },
+    {
+      "mode": "alias_wordnet",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    },
+    {
+      "mode": "alias_wordnet_graph",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    },
+    {
+      "mode": "sparse_only",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    },
+    {
+      "mode": "unguarded",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    },
+    {
+      "mode": "full",
+      "savedOutputIndependentArithmeticMatches": true,
+      "modelCalls": 0
+    }
+  ],
+  "candidateCalls": 0,
+  "details": {
+    "baseline": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 29,
+          "hit": 19,
+          "abstained": 31,
+          "falsePositive": 0,
+          "wrongShape": 10
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 20,
+          "hit": 20,
+          "abstained": 20,
+          "falsePositive": 20,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 10,
+          "hit": 10,
+          "abstained": 10,
+          "falsePositive": 10,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 13,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 8,
+          "abstained": 23
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 11,
+          "hit": 11,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 1
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 5,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 2,
+          "abstained": 7
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 3,
+          "hit": 2,
+          "falsePositive": 3,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 6,
+          "hit": 2,
+          "falsePositive": 6,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 5,
+          "hit": 1,
+          "falsePositive": 5,
+          "wrongShape": 0,
+          "abstained": 1
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 6,
+          "hit": 0,
+          "falsePositive": 6,
+          "wrongShape": 0,
+          "abstained": 0
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 1,
+          "hit": 2,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 4,
+          "hit": 0,
+          "falsePositive": 4,
+          "wrongShape": 0,
+          "abstained": 0
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 3,
+          "hit": 3,
+          "falsePositive": 3,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 2,
+          "hit": 0,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "abstained": 0
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": null,
+      "posthocNonzeroTop3Diagnostic": null
+    },
+    "alias": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 21,
+          "hit": 13,
+          "abstained": 39,
+          "falsePositive": 0,
+          "wrongShape": 8
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 1,
+          "hit": 19,
+          "abstained": 19,
+          "falsePositive": 1,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 10,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 7,
+          "abstained": 26
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 10,
+          "hit": 10,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 1,
+          "hit": 0,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 11
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 1,
+          "hit": 4,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 4
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 1,
+          "hit": 7,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 7
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 0,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 1,
+          "hit": 3,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 0,
+          "hit": 2,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": 13,
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 13,
+        "total": 60,
+        "zeroOnlyHitCaseIds": [
+          "P01",
+          "P02",
+          "P03",
+          "P05"
+        ],
+        "note": "After-result diagnostic; original top3 metric unchanged. Full60ranking includes0-score inventory-order entries."
+      }
+    },
+    "alias_wordnet": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 13,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 9
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 1,
+          "hit": 19,
+          "abstained": 19,
+          "falsePositive": 1,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 10,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 7,
+          "abstained": 26
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 11,
+          "hit": 10,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 1
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 1,
+          "hit": 0,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 11
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 1,
+          "hit": 4,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 4
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 1,
+          "hit": 7,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 7
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 0,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 1,
+          "hit": 3,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 0,
+          "hit": 2,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": 13,
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 13,
+        "total": 60,
+        "zeroOnlyHitCaseIds": [
+          "P01",
+          "P02",
+          "P03",
+          "P05"
+        ],
+        "note": "After-result diagnostic; original top3 metric unchanged. Full60ranking includes0-score inventory-order entries."
+      }
+    },
+    "alias_wordnet_graph": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 14,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 8
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 2,
+          "hit": 18,
+          "abstained": 18,
+          "falsePositive": 2,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 10,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 7,
+          "abstained": 26
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 10,
+          "hit": 10,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 2,
+          "hit": 1,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 10
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 1,
+          "hit": 4,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 4
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 1,
+          "hit": 7,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 7
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 0,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 1,
+          "hit": 3,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 1,
+          "hit": 5,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 5
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 0,
+          "hit": 2,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": 18,
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 18,
+        "total": 60,
+        "zeroOnlyHitCaseIds": [
+          "P01",
+          "P02",
+          "P03",
+          "P05"
+        ],
+        "note": "After-result diagnostic; original top3 metric unchanged. Full60ranking includes0-score inventory-order entries."
+      }
+    },
+    "sparse_only": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 1,
+          "hit": 0,
+          "abstained": 59,
+          "falsePositive": 0,
+          "wrongShape": 1
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 0,
+          "hit": 40,
+          "abstained": 40,
+          "falsePositive": 0,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 0,
+          "hit": 20,
+          "abstained": 20,
+          "falsePositive": 0,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 1,
+          "hit": 0,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 35
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 0,
+          "hit": 0,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 12
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 0,
+          "hit": 0,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 12
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 0,
+          "hit": 8,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 8
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 0,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 0,
+          "hit": 4,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 4
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 0,
+          "hit": 2,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": 24,
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 35,
+        "total": 60,
+        "zeroOnlyHitCaseIds": [],
+        "note": "After-result diagnostic; original top3 metric unchanged. Full60ranking includes0-score inventory-order entries."
+      }
+    },
+    "unguarded": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 14,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 8
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 17,
+          "hit": 23,
+          "abstained": 23,
+          "falsePositive": 17,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 2,
+          "hit": 18,
+          "abstained": 18,
+          "falsePositive": 2,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 10,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 7,
+          "abstained": 26
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 10,
+          "hit": 10,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 2,
+          "hit": 1,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 10
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 3,
+          "hit": 2,
+          "falsePositive": 3,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 5,
+          "hit": 3,
+          "falsePositive": 5,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 5,
+          "hit": 1,
+          "falsePositive": 5,
+          "wrongShape": 0,
+          "abstained": 1
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 4,
+          "hit": 2,
+          "falsePositive": 4,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 0,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 1,
+          "hit": 3,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 1,
+          "hit": 5,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 5
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 0,
+          "hit": 2,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": 30,
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 41,
+        "total": 60,
+        "zeroOnlyHitCaseIds": [],
+        "note": "After-result diagnostic; original top3 metric unchanged. Full60ranking includes0-score inventory-order entries."
+      }
+    },
+    "full": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 14,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 8
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 2,
+          "hit": 18,
+          "abstained": 18,
+          "falsePositive": 2,
+          "wrongShape": 0
+        }
+      },
+      "sourceKinds": {
+        "positive:description": {
+          "total": 36,
+          "accepted": 10,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 7,
+          "abstained": 26
+        },
+        "positive:explicit_request": {
+          "total": 12,
+          "accepted": 10,
+          "hit": 10,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "positive:narrative": {
+          "total": 12,
+          "accepted": 2,
+          "hit": 1,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "abstained": 10
+        },
+        "no_shape:cancellation": {
+          "total": 5,
+          "accepted": 1,
+          "hit": 4,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 4
+        },
+        "no_shape:code": {
+          "total": 8,
+          "accepted": 1,
+          "hit": 7,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 7
+        },
+        "no_shape:negation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "no_shape:ordinary": {
+          "total": 15,
+          "accepted": 0,
+          "hit": 15,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 15
+        },
+        "no_shape:quotation": {
+          "total": 6,
+          "accepted": 0,
+          "hit": 6,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 6
+        },
+        "unresolved:abstract": {
+          "total": 3,
+          "accepted": 0,
+          "hit": 3,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:hybrid": {
+          "total": 4,
+          "accepted": 1,
+          "hit": 3,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 3
+        },
+        "unresolved:metaphor": {
+          "total": 6,
+          "accepted": 1,
+          "hit": 5,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "abstained": 5
+        },
+        "unresolved:multiple_directions": {
+          "total": 2,
+          "accepted": 0,
+          "hit": 2,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 2
+        },
+        "unresolved:out_of_inventory": {
+          "total": 5,
+          "accepted": 0,
+          "hit": 5,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "abstained": 5
+        }
+      },
+      "rawTop1Positive": 30,
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 41,
+        "total": 60,
+        "zeroOnlyHitCaseIds": [],
+        "note": "After-result diagnostic; original top3 metric unchanged. Full60ranking includes0-score inventory-order entries."
+      }
+    }
+  },
+  "supportManifestSHA256": "7b14874ca8888e273f04b86b235efc9f1853cd56762931423e40cf09b3294969",
+  "supportFiles": [
+    {
+      "path": "experiments/ambient-shape-retrieval-v1/freeze.mjs",
+      "bytes": 3245,
+      "sha256": "f8d3a09da0cf6c357dc621b4d3bc57a2a8789ef716617c92074228aa4e548ed4",
+      "currentMatches": true
+    },
+    {
+      "path": "prototypes/glyph-creature/node_modules/rolldown/dist/shared/binding-BY0qR5iS.mjs",
+      "bytes": 35114,
+      "sha256": "8c571a4e4ac9561df9d6d7370d6c0d506922b6c106fd693cb2b75b47c3ab028a",
+      "currentMatches": true
+    },
+    {
+      "path": "prototypes/glyph-creature/node_modules/rolldown/dist/shared/error-C7pxws0W.mjs",
+      "bytes": 2926,
+      "sha256": "cc23a45ba8a60c4980f6486590829fe3ad8fef5dfeb31b0fa2686142dbc4b051",
+      "currentMatches": true
+    }
+  ],
+  "supportTiming": "Support manifest received after first evaluation and verified now. Initial41-file candidate pin +3fixturechecks are separate; no retrospective assertion that these3supportfiles had been pinned before execution."
+}
