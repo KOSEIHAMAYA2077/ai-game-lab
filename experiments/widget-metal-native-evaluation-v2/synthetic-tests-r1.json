@@ -1,0 +1,244 @@
+{
+  "scope": "synthetic-JSON-only-not-live-measurement",
+  "cases": 27,
+  "passed": 27,
+  "results": [
+    {
+      "name": "metal-calm",
+      "passed": true,
+      "expected_validation": true,
+      "actual_validation": true,
+      "errors": []
+    },
+    {
+      "name": "metal-paused",
+      "passed": true,
+      "expected_validation": true,
+      "actual_validation": true,
+      "errors": []
+    },
+    {
+      "name": "metal-hidden",
+      "passed": true,
+      "expected_validation": true,
+      "actual_validation": true,
+      "errors": []
+    },
+    {
+      "name": "wk-calm",
+      "passed": true,
+      "expected_validation": true,
+      "actual_validation": true,
+      "errors": []
+    },
+    {
+      "name": "wk-paused",
+      "passed": true,
+      "expected_validation": true,
+      "actual_validation": true,
+      "errors": []
+    },
+    {
+      "name": "wk-hidden",
+      "passed": true,
+      "expected_validation": true,
+      "actual_validation": true,
+      "errors": []
+    },
+    {
+      "name": "missing-pid",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: missing PID 101"
+      ]
+    },
+    {
+      "name": "reused-pid",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: PID 101 identity start_abstime differs/unavailable"
+      ]
+    },
+    {
+      "name": "coalition-mismatch",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: PID 101 identity coalition_resource_id differs/unavailable"
+      ]
+    },
+    {
+      "name": "duplicate-pid",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "CPU aggregate missing or differs from recomputed counters",
+        "sample 3: explicit PID set changed/duplicated"
+      ]
+    },
+    {
+      "name": "unexpected-pid",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: explicit PID set changed/duplicated"
+      ]
+    },
+    {
+      "name": "counter-decreased",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "CPU aggregate missing or differs from recomputed counters",
+        "PID 101: CPU counter decreased"
+      ]
+    },
+    {
+      "name": "negative-footprint",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: PID 101 invalid footprint_bytes"
+      ]
+    },
+    {
+      "name": "cpu-sum-wrong",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "CPU aggregate missing or differs from recomputed counters"
+      ]
+    },
+    {
+      "name": "footprint-peak-wrong",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sampler charged peak differs from coincident sum"
+      ]
+    },
+    {
+      "name": "monotonic-reversed",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "monotonic sample interval invalid or >1.5s"
+      ]
+    },
+    {
+      "name": "renderer-wrong",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: renderer mismatch/missing"
+      ]
+    },
+    {
+      "name": "viewport-wrong",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: width mismatch/missing"
+      ]
+    },
+    {
+      "name": "model-work-proof-missing",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "root condition proof missing: heavy_work_absent"
+      ]
+    },
+    {
+      "name": "frame-boolean",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "calm frame-counter cadence outside 14..16/s",
+        "sample 3: invalid frame counter"
+      ]
+    },
+    {
+      "name": "body-wrong",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: storedGlyphs mismatch/missing"
+      ]
+    },
+    {
+      "name": "zoom-below-one",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: manualZoom mismatch/missing"
+      ]
+    },
+    {
+      "name": "empty-samples",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "CPU aggregate missing or differs from recomputed counters",
+        "at least two samples are required",
+        "calm frame-counter cadence outside 14..16/s",
+        "sample interval duration outside fixed window"
+      ]
+    },
+    {
+      "name": "wk-paused-still-draws",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "paused/hidden frame counter advanced or unavailable"
+      ]
+    },
+    {
+      "name": "wk-hidden-still-draws",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "paused/hidden frame counter advanced or unavailable"
+      ]
+    },
+    {
+      "name": "wk-worker",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: workerActive mismatch/missing"
+      ]
+    },
+    {
+      "name": "wk-occluded",
+      "passed": true,
+      "expected_validation": false,
+      "actual_validation": false,
+      "errors": [
+        "sample 3: native nativeOccluded mismatch"
+      ]
+    }
+  ]
+}

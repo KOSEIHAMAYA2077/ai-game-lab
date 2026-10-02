@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-03 04:31 — Metalの端切れと実小窓比較
+
+別[Metal v2](desktop/glyph-metal-lab-v2/README.md)でメビウスの画面端・縦長のfar切断を修正。旧v1/R1を保持し、独立CPU射影35,763条件はR2切断0、CPU1,213・GPU581確認、実日本語paste・旧白＋追加青・pause/Hide/終了を確認。[画面と原票](experiments/widget-metal-framing-v2/README.md)。初期@は近いまま、遠くすることで文字が小さくなる交換も残す。
+
+[実窓の短時間比較](experiments/widget-metal-native-evaluation-v2/REPORT.md)は白い球1,537保存／1,536描画、400×440、通常90秒。WK v3はCPU8.858%／charged peak173.253MiB、Metal v2は2.661%／68.298MiB。反復WKは7.681%／124.253MiBだが、末尾の診断鮮度が低くframe counter/wall gateを外れてFAIL。原票・閾値を保持し、後付けのweb uptime診断をPASSに混ぜない。全3形対60形の機能差、字体・camera・ID差があり、方式だけの因果や16GB laptop／8時間性能は未実証。既定60形を保持する。
+
+旧2時間予定offscreenは約30分で中断。新supervisorの30秒preflight後、凍結R5の別r2を04:25〜06:25予定で開始。完走前で、実窓比較と別条件。[回復記録](experiments/widget-metal-soak-recovery-v1/REPORT.md)。入力材料と形判断の分離・保存offの人工統合gate、Windows移植案、Metal表現の段階拡張も別担当で続ける。OS入力監視や設定変更は行わない。
+
 ## 2026-10-03 03:50 — サイドインテリアの入力方式と研究計画
 
 日常の入力から育つ用途を、[使用像と分析](research/side-interior-direction-20261003.md)へ整理。[一次資料30項目の入力API比較](research/ambient-input-platforms-v1/README.md)では、キー操作だけで全アプリの日本語確定本文を得る前提を置かず、活動量と対応editor本文を分ける。VS Codeの差分にIME確定フラグが無いことも記した。APIの存在や人工schemaを、OS監視の実装・実IME確認とは扱わない。

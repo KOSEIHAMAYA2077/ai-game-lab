@@ -1,0 +1,71 @@
+{
+  "app_bundle": "dev.glyphmatter.companion.native-compare-v1",
+  "owned_main_pid": 90619,
+  "roles": {
+    "90619": "app",
+    "90631": "GPU",
+    "90633": "Networking",
+    "90634": "WebContent"
+  },
+  "usage": {
+    "monotonic_ns": 2450622504857000,
+    "mach_timebase": {
+      "numer": 125,
+      "denom": 3
+    },
+    "processes": [
+      {
+        "pid": 90619,
+        "start_abstime": 10184142951948,
+        "user_ns": 1991780125,
+        "system_ns": 1286303250,
+        "footprint_bytes": 28787720,
+        "resident_bytes": 97779712,
+        "lifetime_max_footprint_bytes": 29852656,
+        "package_idle_wakeups": 3921,
+        "coalition_resource_id": 61262,
+        "coalition_jetsam_id": 61263
+      },
+      {
+        "pid": 90631,
+        "start_abstime": 10184157456559,
+        "user_ns": 1402811833,
+        "system_ns": 899469750,
+        "footprint_bytes": 65897312,
+        "resident_bytes": 35700736,
+        "lifetime_max_footprint_bytes": 73827168,
+        "package_idle_wakeups": 177,
+        "coalition_resource_id": 61262,
+        "coalition_jetsam_id": 61263
+      },
+      {
+        "pid": 90633,
+        "start_abstime": 10184157695351,
+        "user_ns": 37074250,
+        "system_ns": 27057291,
+        "footprint_bytes": 8815216,
+        "resident_bytes": 15630336,
+        "lifetime_max_footprint_bytes": 10371696,
+        "package_idle_wakeups": 23,
+        "coalition_resource_id": 61262,
+        "coalition_jetsam_id": 61263
+      },
+      {
+        "pid": 90634,
+        "start_abstime": 10184158607860,
+        "user_ns": 6661797958,
+        "system_ns": 1310422625,
+        "footprint_bytes": 78169000,
+        "resident_bytes": 67715072,
+        "lifetime_max_footprint_bytes": 85967784,
+        "package_idle_wakeups": 636,
+        "coalition_resource_id": 61262,
+        "coalition_jetsam_id": 61263
+      }
+    ]
+  },
+  "observed_utc": "2026-10-02T18:55:37Z",
+  "source_commit": "c0166616c9000c03caa03ffd4bc6cfe90e0287f5",
+  "before_snapshot_missing": true,
+  "proof": "Known newly launched isolated main PID; three nearby platform child services share its exact coalition and start before first warm observation; all four exits will be checked"
+}

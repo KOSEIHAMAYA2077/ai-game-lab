@@ -1,0 +1,733 @@
+{
+  "scope": "independent-read-only-native-audit-posthoc-not-new-measurement",
+  "all_existing_gate_results_preserved": true,
+  "no_gate_threshold_changed": true,
+  "identity_and_arithmetic_disagreements": 0,
+  "phases": [
+    {
+      "name": "wk-r1-calm",
+      "saved_gate_validation_passed": true,
+      "saved_gate_validation_errors": [],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 90.008791,
+      "samples": 181,
+      "per_pid_cpu": [
+        {
+          "pid": 90619,
+          "single_core_percent": 1.9123871844917903
+        },
+        {
+          "pid": 90631,
+          "single_core_percent": 1.5190216720053489
+        },
+        {
+          "pid": 90633,
+          "single_core_percent": 0.0016858542183951788
+        },
+        {
+          "pid": 90634,
+          "single_core_percent": 5.424410341207672
+        }
+      ],
+      "cpu_single_core_percent": 8.857505051923207,
+      "charged_footprint_bytes": {
+        "first": 181669248,
+        "median": 181521792,
+        "peak": 181669248,
+        "last": 181505408
+      },
+      "RSS_bytes": {
+        "first": 216825856,
+        "median": 216891392,
+        "peak": 217399296,
+        "last": 217333760
+      },
+      "frames_delta": 1332,
+      "frames_per_wall_second": 14.798554510081132,
+      "native_unique_packets": 19,
+      "last_packet_first_sample_index": 175,
+      "tail_identical_packet_samples": 6,
+      "tail_identical_packet_wall_seconds": 2.503649,
+      "first_metrics": {
+        "busy": false,
+        "fps": 15,
+        "frames": 2124,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": false,
+        "renderCount": 2124,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 2123,
+        "uptimeSeconds": 140.925,
+        "visible": true,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "last_metrics": {
+        "busy": false,
+        "fps": 15,
+        "frames": 3456,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": false,
+        "renderCount": 3456,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 3455,
+        "uptimeSeconds": 231.502,
+        "visible": true,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": true,
+      "missing_shutdown_publication": false,
+      "posthoc_telemetry_diagnostic": {
+        "is_gate_replacement": false,
+        "web_uptime_delta_seconds": 90.577,
+        "wall_minus_web_uptime_delta_seconds": -0.568208999999996,
+        "frames_per_web_uptime_delta": 14.705719995142255,
+        "recordedAt_delta_seconds": 91.0,
+        "packet_uptime_delta_min": 5.030000000000001,
+        "packet_uptime_delta_max": 5.03400000000002,
+        "last_recordedAt": "2026-10-02T18:57:43Z"
+      }
+    },
+    {
+      "name": "wk-r1-paused",
+      "saved_gate_validation_passed": true,
+      "saved_gate_validation_errors": [],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 30.007369,
+      "samples": 61,
+      "per_pid_cpu": [
+        {
+          "pid": 90619,
+          "single_core_percent": 0.0023634461255167025
+        },
+        {
+          "pid": 90631,
+          "single_core_percent": 0.0020515793970474383
+        },
+        {
+          "pid": 90633,
+          "single_core_percent": 0.0
+        },
+        {
+          "pid": 90634,
+          "single_core_percent": 0.0008184089714763064
+        }
+      ],
+      "cpu_single_core_percent": 0.005233434494040447,
+      "charged_footprint_bytes": {
+        "first": 134827392,
+        "median": 134811008,
+        "peak": 134827392,
+        "last": 134794624
+      },
+      "RSS_bytes": {
+        "first": 218480640,
+        "median": 218464256,
+        "peak": 218480640,
+        "last": 218464256
+      },
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "native_unique_packets": 1,
+      "last_packet_first_sample_index": 0,
+      "tail_identical_packet_samples": 61,
+      "tail_identical_packet_wall_seconds": 30.007369,
+      "first_metrics": {
+        "busy": false,
+        "fps": 0,
+        "frames": 4483,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": true,
+        "renderCount": 4483,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 4482,
+        "uptimeSeconds": 301.357,
+        "visible": true,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "last_metrics": {
+        "busy": false,
+        "fps": 0,
+        "frames": 4483,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": true,
+        "renderCount": 4483,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 4482,
+        "uptimeSeconds": 301.357,
+        "visible": true,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": true,
+      "missing_shutdown_publication": false,
+      "posthoc_telemetry_diagnostic": {
+        "is_gate_replacement": false,
+        "web_uptime_delta_seconds": 0.0,
+        "wall_minus_web_uptime_delta_seconds": 30.007369,
+        "frames_per_web_uptime_delta": null,
+        "recordedAt_delta_seconds": 0.0,
+        "packet_uptime_delta_min": null,
+        "packet_uptime_delta_max": null,
+        "last_recordedAt": "2026-10-02T18:58:53Z"
+      }
+    },
+    {
+      "name": "wk-r1-hidden",
+      "saved_gate_validation_passed": true,
+      "saved_gate_validation_errors": [],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 30.009546,
+      "samples": 61,
+      "per_pid_cpu": [
+        {
+          "pid": 90619,
+          "single_core_percent": 0.006527229702175434
+        },
+        {
+          "pid": 90631,
+          "single_core_percent": 0.08118874907337818
+        },
+        {
+          "pid": 90633,
+          "single_core_percent": 0.0
+        },
+        {
+          "pid": 90634,
+          "single_core_percent": 0.090791526802838
+        }
+      ],
+      "cpu_single_core_percent": 0.17850750557839162,
+      "charged_footprint_bytes": {
+        "first": 135007616,
+        "median": 135007616,
+        "peak": 135007616,
+        "last": 135007616
+      },
+      "RSS_bytes": {
+        "first": 222707712,
+        "median": 222707712,
+        "peak": 222724096,
+        "last": 222724096
+      },
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "native_unique_packets": 1,
+      "last_packet_first_sample_index": 0,
+      "tail_identical_packet_samples": 61,
+      "tail_identical_packet_wall_seconds": 30.009546,
+      "first_metrics": {
+        "busy": false,
+        "fps": 0,
+        "frames": 4489,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": false,
+        "renderCount": 4489,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 4487,
+        "uptimeSeconds": 427.6550000000001,
+        "visible": false,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "last_metrics": {
+        "busy": false,
+        "fps": 0,
+        "frames": 4489,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": false,
+        "renderCount": 4489,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 4487,
+        "uptimeSeconds": 427.6550000000001,
+        "visible": false,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": true,
+      "missing_shutdown_publication": false,
+      "posthoc_telemetry_diagnostic": {
+        "is_gate_replacement": false,
+        "web_uptime_delta_seconds": 0.0,
+        "wall_minus_web_uptime_delta_seconds": 30.009546,
+        "frames_per_web_uptime_delta": null,
+        "recordedAt_delta_seconds": 0.0,
+        "packet_uptime_delta_min": null,
+        "packet_uptime_delta_max": null,
+        "last_recordedAt": "2026-10-02T19:00:59Z"
+      }
+    },
+    {
+      "name": "metal-r1-calm",
+      "saved_gate_validation_passed": true,
+      "saved_gate_validation_errors": [],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 90.00406,
+      "samples": 181,
+      "per_pid_cpu": [
+        {
+          "pid": 91567,
+          "single_core_percent": 2.661116620739109
+        }
+      ],
+      "cpu_single_core_percent": 2.661116620739109,
+      "charged_footprint_bytes": {
+        "first": 71615400,
+        "median": 71599016,
+        "peak": 71615400,
+        "last": 71599016
+      },
+      "RSS_bytes": {
+        "first": 89260032,
+        "median": 89325568,
+        "peak": 89325568,
+        "last": 89325568
+      },
+      "frames_delta": 1358,
+      "frames_per_wall_second": 15.088208243050369,
+      "native_unique_packets": 88,
+      "last_packet_first_sample_index": 180,
+      "tail_identical_packet_samples": 1,
+      "tail_identical_packet_wall_seconds": 0.0,
+      "first_metrics": {
+        "atlasKinds": 22,
+        "atlasRGBABytes": 524288,
+        "atlasRows": 1,
+        "cameraDistance": 8.88720703125,
+        "drawCalls": 1432,
+        "drawnGlyphs": 1536,
+        "frames": 1432,
+        "framingMinimum": 8.434593200683594,
+        "frustumFar": 100,
+        "height": 440,
+        "hidden": false,
+        "instanceBytes": 122880,
+        "kinds": 22,
+        "manualZoom": 1,
+        "metalErrorCount": 0,
+        "paused": false,
+        "pid": 91567,
+        "preferredFPS": 15,
+        "renderer": "metal-lab-v2",
+        "scheduled": true,
+        "schema": 1,
+        "shaderCompileMS": 1.211083377711475,
+        "shape": 0,
+        "storedGlyphs": 1537,
+        "submitElapsedMaximumMS": 1.8948332872241735,
+        "submitElapsedP95MS": 0.3309999592602253,
+        "time": 119.4326858749846,
+        "uniformBytes": 176,
+        "width": 400
+      },
+      "last_metrics": {
+        "atlasKinds": 22,
+        "atlasRGBABytes": 524288,
+        "atlasRows": 1,
+        "cameraDistance": 8.88720703125,
+        "drawCalls": 2790,
+        "drawnGlyphs": 1536,
+        "frames": 2790,
+        "framingMinimum": 8.434593200683594,
+        "frustumFar": 100,
+        "height": 440,
+        "hidden": false,
+        "instanceBytes": 122880,
+        "kinds": 22,
+        "manualZoom": 1,
+        "metalErrorCount": 0,
+        "paused": false,
+        "pid": 91567,
+        "preferredFPS": 15,
+        "renderer": "metal-lab-v2",
+        "scheduled": true,
+        "schema": 1,
+        "shaderCompileMS": 1.211083377711475,
+        "shape": 0,
+        "storedGlyphs": 1537,
+        "submitElapsedMaximumMS": 1.8948332872241735,
+        "submitElapsedP95MS": 0.4707082989625633,
+        "time": 209.96543616661802,
+        "uniformBytes": 176,
+        "width": 400
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": false,
+      "missing_shutdown_publication": false
+    },
+    {
+      "name": "metal-r1-paused",
+      "saved_gate_validation_passed": true,
+      "saved_gate_validation_errors": [],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 30.00567,
+      "samples": 61,
+      "per_pid_cpu": [
+        {
+          "pid": 91567,
+          "single_core_percent": 0.0013572434809820946
+        }
+      ],
+      "cpu_single_core_percent": 0.0013572434809820946,
+      "charged_footprint_bytes": {
+        "first": 25314216,
+        "median": 25314216,
+        "peak": 25314216,
+        "last": 25314216
+      },
+      "RSS_bytes": {
+        "first": 88899584,
+        "median": 88899584,
+        "peak": 88899584,
+        "last": 88899584
+      },
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "native_unique_packets": 1,
+      "last_packet_first_sample_index": 0,
+      "tail_identical_packet_samples": 61,
+      "tail_identical_packet_wall_seconds": 30.00567,
+      "first_metrics": {
+        "atlasKinds": 22,
+        "atlasRGBABytes": 524288,
+        "atlasRows": 1,
+        "cameraDistance": 8.88720703125,
+        "drawCalls": 4480,
+        "drawnGlyphs": 1536,
+        "frames": 4480,
+        "framingMinimum": 8.434593200683594,
+        "frustumFar": 100,
+        "height": 440,
+        "hidden": false,
+        "instanceBytes": 122880,
+        "kinds": 22,
+        "manualZoom": 1,
+        "metalErrorCount": 0,
+        "paused": true,
+        "pid": 91567,
+        "preferredFPS": 15,
+        "renderer": "metal-lab-v2",
+        "scheduled": false,
+        "schema": 1,
+        "shaderCompileMS": 1.211083377711475,
+        "shape": 0,
+        "storedGlyphs": 1537,
+        "submitElapsedMaximumMS": 1.8948332872241735,
+        "submitElapsedP95MS": 0.5037083756178617,
+        "time": 322.63140095828567,
+        "uniformBytes": 176,
+        "width": 400
+      },
+      "last_metrics": {
+        "atlasKinds": 22,
+        "atlasRGBABytes": 524288,
+        "atlasRows": 1,
+        "cameraDistance": 8.88720703125,
+        "drawCalls": 4480,
+        "drawnGlyphs": 1536,
+        "frames": 4480,
+        "framingMinimum": 8.434593200683594,
+        "frustumFar": 100,
+        "height": 440,
+        "hidden": false,
+        "instanceBytes": 122880,
+        "kinds": 22,
+        "manualZoom": 1,
+        "metalErrorCount": 0,
+        "paused": true,
+        "pid": 91567,
+        "preferredFPS": 15,
+        "renderer": "metal-lab-v2",
+        "scheduled": false,
+        "schema": 1,
+        "shaderCompileMS": 1.211083377711475,
+        "shape": 0,
+        "storedGlyphs": 1537,
+        "submitElapsedMaximumMS": 1.8948332872241735,
+        "submitElapsedP95MS": 0.5037083756178617,
+        "time": 322.63140095828567,
+        "uniformBytes": 176,
+        "width": 400
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": false,
+      "missing_shutdown_publication": false
+    },
+    {
+      "name": "metal-r1-hidden",
+      "saved_gate_validation_passed": true,
+      "saved_gate_validation_errors": [],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 30.01005,
+      "samples": 61,
+      "per_pid_cpu": [
+        {
+          "pid": 91567,
+          "single_core_percent": 0.0019532356660518723
+        }
+      ],
+      "cpu_single_core_percent": 0.0019532356660518723,
+      "charged_footprint_bytes": {
+        "first": 26379176,
+        "median": 26379176,
+        "peak": 26379176,
+        "last": 26379176
+      },
+      "RSS_bytes": {
+        "first": 91963392,
+        "median": 91963392,
+        "peak": 91963392,
+        "last": 91963392
+      },
+      "frames_delta": 0,
+      "frames_per_wall_second": 0.0,
+      "native_unique_packets": 1,
+      "last_packet_first_sample_index": 0,
+      "tail_identical_packet_samples": 61,
+      "tail_identical_packet_wall_seconds": 30.01005,
+      "first_metrics": {
+        "atlasKinds": 22,
+        "atlasRGBABytes": 524288,
+        "atlasRows": 1,
+        "cameraDistance": 8.88720703125,
+        "drawCalls": 4487,
+        "drawnGlyphs": 1536,
+        "frames": 4487,
+        "framingMinimum": 8.434593200683594,
+        "frustumFar": 100,
+        "height": 440,
+        "hidden": true,
+        "instanceBytes": 122880,
+        "kinds": 22,
+        "manualZoom": 1,
+        "metalErrorCount": 0,
+        "paused": false,
+        "pid": 91567,
+        "preferredFPS": 15,
+        "renderer": "metal-lab-v2",
+        "scheduled": false,
+        "schema": 1,
+        "shaderCompileMS": 1.211083377711475,
+        "shape": 0,
+        "storedGlyphs": 1537,
+        "submitElapsedMaximumMS": 1.8948332872241735,
+        "submitElapsedP95MS": 0.504541618283838,
+        "time": 323.0312616666197,
+        "uniformBytes": 176,
+        "width": 400
+      },
+      "last_metrics": {
+        "atlasKinds": 22,
+        "atlasRGBABytes": 524288,
+        "atlasRows": 1,
+        "cameraDistance": 8.88720703125,
+        "drawCalls": 4487,
+        "drawnGlyphs": 1536,
+        "frames": 4487,
+        "framingMinimum": 8.434593200683594,
+        "frustumFar": 100,
+        "height": 440,
+        "hidden": true,
+        "instanceBytes": 122880,
+        "kinds": 22,
+        "manualZoom": 1,
+        "metalErrorCount": 0,
+        "paused": false,
+        "pid": 91567,
+        "preferredFPS": 15,
+        "renderer": "metal-lab-v2",
+        "scheduled": false,
+        "schema": 1,
+        "shaderCompileMS": 1.211083377711475,
+        "shape": 0,
+        "storedGlyphs": 1537,
+        "submitElapsedMaximumMS": 1.8948332872241735,
+        "submitElapsedP95MS": 0.504541618283838,
+        "time": 323.0312616666197,
+        "uniformBytes": 176,
+        "width": 400
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": false,
+      "missing_shutdown_publication": false
+    },
+    {
+      "name": "wk-repeat-r1-calm",
+      "saved_gate_validation_passed": false,
+      "saved_gate_validation_errors": [
+        "calm frame-counter cadence outside 14..16/s"
+      ],
+      "arithmetic_and_identity_errors": [],
+      "elapsed_seconds": 90.004209,
+      "samples": 181,
+      "per_pid_cpu": [
+        {
+          "pid": 92146,
+          "single_core_percent": 1.365201755175694
+        },
+        {
+          "pid": 92147,
+          "single_core_percent": 1.1890474011054304
+        },
+        {
+          "pid": 92148,
+          "single_core_percent": 0.0003116065383120027
+        },
+        {
+          "pid": 92149,
+          "single_core_percent": 5.126517748742173
+        }
+      ],
+      "cpu_single_core_percent": 7.681078511561609,
+      "charged_footprint_bytes": {
+        "first": 130272568,
+        "median": 130125112,
+        "peak": 130288952,
+        "last": 130092344
+      },
+      "RSS_bytes": {
+        "first": 241860608,
+        "median": 241500160,
+        "peak": 241860608,
+        "last": 241500160
+      },
+      "frames_delta": 1258,
+      "frames_per_wall_second": 13.977124114273366,
+      "native_unique_packets": 18,
+      "last_packet_first_sample_index": 171,
+      "tail_identical_packet_samples": 10,
+      "tail_identical_packet_wall_seconds": 4.496461,
+      "first_metrics": {
+        "busy": false,
+        "fps": 15,
+        "frames": 2073,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": false,
+        "renderCount": 2073,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 2072,
+        "uptimeSeconds": 140.956,
+        "visible": true,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "last_metrics": {
+        "busy": false,
+        "fps": 15,
+        "frames": 3331,
+        "glyphCount": 1537,
+        "modelLoaded": false,
+        "paused": false,
+        "renderCount": 3331,
+        "renderedGlyphs": 1536,
+        "storedGlyphs": 1537,
+        "updates": 3330,
+        "uptimeSeconds": 226.501,
+        "visible": true,
+        "workerActive": false,
+        "workerCount": 0
+      },
+      "comparison_observations_in_expectation": {
+        "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+      },
+      "before_snapshot_missing_in_attribution": false,
+      "missing_shutdown_publication": false,
+      "posthoc_telemetry_diagnostic": {
+        "is_gate_replacement": false,
+        "web_uptime_delta_seconds": 85.54500000000002,
+        "wall_minus_web_uptime_delta_seconds": 4.459208999999987,
+        "frames_per_web_uptime_delta": 14.705710444795134,
+        "recordedAt_delta_seconds": 85.0,
+        "packet_uptime_delta_min": 5.030000000000001,
+        "packet_uptime_delta_max": 5.033999999999992,
+        "last_recordedAt": "2026-10-02T19:16:07Z"
+      }
+    }
+  ],
+  "root_reported_shutdown_records": {
+    "wk-r1": {
+      "owned_pid": 90619,
+      "start_abstime": 10184142951948,
+      "shutdown": "SIGTERM after completed sampling",
+      "native_quit_verified": false,
+      "reason": "CUA could not target the hidden WK window for Cmd-Q; optional launch_app API unavailable",
+      "only_own_main_targeted": true,
+      "explicit_group_to_check": [
+        90619,
+        90631,
+        90633,
+        90634
+      ],
+      "all_attributed_pids_absent_after_shutdown": true
+    },
+    "metal-r1": {
+      "owned_pid": 91567,
+      "method": "actual CUA Cmd-Q from hidden own Metal app",
+      "pid_absent": true
+    },
+    "wk-repeat-r1": {
+      "observed_at_utc": "2026-10-02T19:23:09.158204+00:00",
+      "action": "CUA native super+q while visible",
+      "actual_native_quit_invoked": true,
+      "pid_observations": [
+        {
+          "pid": 92146,
+          "present": false,
+          "ps_returncode": 1
+        },
+        {
+          "pid": 92147,
+          "present": false,
+          "ps_returncode": 1
+        },
+        {
+          "pid": 92148,
+          "present": false,
+          "ps_returncode": 1
+        },
+        {
+          "pid": 92149,
+          "present": false,
+          "ps_returncode": 1
+        }
+      ],
+      "all_attributed_pids_absent": true
+    }
+  },
+  "limitations": [
+    "Root attribution/UI/quiet/warmup evidence is not independently observed by this saved-file reviewer",
+    "No exact-body or pixel equivalence, causal backend isolation, 60-shape total performance, GPU/power or 16GB laptop claim",
+    "Posthoc telemetry clock diagnostic does not turn a saved FAIL into PASS"
+  ]
+}

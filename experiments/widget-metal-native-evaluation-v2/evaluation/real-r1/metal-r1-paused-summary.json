@@ -1,0 +1,150 @@
+{
+  "schema": 2,
+  "renderer": "metal",
+  "phase": "paused",
+  "samples": 61,
+  "elapsed_seconds": 30.00567,
+  "explicit_pid_group": [
+    91567
+  ],
+  "body_expectation": {
+    "stored": 1537,
+    "drawn": 1536,
+    "shape": 0,
+    "label": "white sphere"
+  },
+  "viewport_expectation": {
+    "width": 400,
+    "height": 440,
+    "proof": "requested; actual Metal telemetry checked, WK requires root inspection"
+  },
+  "frames_first": 4480,
+  "frames_last": 4480,
+  "frames_delta": 0,
+  "frames_per_wall_second": 0.0,
+  "cpu_single_core_percent": 0.0013572434809820946,
+  "per_process": [
+    {
+      "pid": 91567,
+      "role": "Metal AppKit app",
+      "cpu_single_core_percent": 0.0013572434809820946,
+      "process_lifetime_max_footprint_bytes": 71877544
+    }
+  ],
+  "charged_footprint_bytes": {
+    "first": 25314216,
+    "median": 25314216,
+    "peak": 25314216,
+    "last": 25314216
+  },
+  "RSS_bytes": {
+    "first": 88899584,
+    "median": 88899584,
+    "peak": 88899584,
+    "last": 88899584
+  },
+  "declared_fixture_differences": {
+    "perfect_body_or_pixel_equivalence": false,
+    "declared": [
+      "WK24types / Metal22types",
+      "ID/seed/rawbatch grouping",
+      "font/rasterizer/color management",
+      "dynamic camera/time trajectories"
+    ],
+    "history": "Artificial input only in new WK bundle and fixture history-off Metal",
+    "Metal_kinds": 22,
+    "WK_kinds": 24
+  },
+  "comparison_observations": {
+    "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+  },
+  "validation_passed": true,
+  "validation_errors": [],
+  "warnings": [
+    "charged footprint sum is not unique system RAM; frame telemetry is not presentation FPS; shader/submit ms is wall elapsed; UI/ownership proof is root supplied; no GPU/power/laptop measurement"
+  ],
+  "candidate_budget": {
+    "cpu_limit_single_core_percent": 5,
+    "charged_peak_limit_MiB": 200,
+    "within_values": true,
+    "eligible_only_if_validation_passed_and_phase_calm": false
+  },
+  "metal_diagnostics": {
+    "atlasKinds": {
+      "first": 22,
+      "last": 22,
+      "minimum": 22,
+      "maximum": 22
+    },
+    "atlasRows": {
+      "first": 1,
+      "last": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "atlasRGBABytes": {
+      "first": 524288,
+      "last": 524288,
+      "minimum": 524288,
+      "maximum": 524288
+    },
+    "instanceBytes": {
+      "first": 122880,
+      "last": 122880,
+      "minimum": 122880,
+      "maximum": 122880
+    },
+    "uniformBytes": {
+      "first": 176,
+      "last": 176,
+      "minimum": 176,
+      "maximum": 176
+    },
+    "cameraDistance": {
+      "first": 8.88720703125,
+      "last": 8.88720703125,
+      "minimum": 8.88720703125,
+      "maximum": 8.88720703125
+    },
+    "framingMinimum": {
+      "first": 8.434593200683594,
+      "last": 8.434593200683594,
+      "minimum": 8.434593200683594,
+      "maximum": 8.434593200683594
+    },
+    "manualZoom": {
+      "first": 1,
+      "last": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "frustumFar": {
+      "first": 100,
+      "last": 100,
+      "minimum": 100,
+      "maximum": 100
+    },
+    "shaderCompileMS": {
+      "first": 1.211083377711475,
+      "last": 1.211083377711475,
+      "minimum": 1.211083377711475,
+      "maximum": 1.211083377711475
+    },
+    "submitElapsedP95MS": {
+      "first": 0.5037083756178617,
+      "last": 0.5037083756178617,
+      "minimum": 0.5037083756178617,
+      "maximum": 0.5037083756178617
+    },
+    "submitElapsedMaximumMS": {
+      "first": 1.8948332872241735,
+      "last": 1.8948332872241735,
+      "minimum": 1.8948332872241735,
+      "maximum": 1.8948332872241735
+    }
+  },
+  "source": "metal-r1-paused.json",
+  "source_sha256": "9887a04fe0b8bb353c09adbc6b04d553ece0f8660987a71b4143c6e3a4cc5917",
+  "expectation": "metal-r1-expectation.json",
+  "expectation_sha256": "b6b33506f70069ec209295160e79094bd075487a3191567c3989ab1bc364fadd"
+}

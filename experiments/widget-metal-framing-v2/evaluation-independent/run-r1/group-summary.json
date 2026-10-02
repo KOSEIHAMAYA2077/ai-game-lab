@@ -1,0 +1,59 @@
+{
+  "scope": "derived-from-R1-CSV-not-additional-rendering",
+  "groups": {
+    "settled": {
+      "cases": 19440,
+      "v1_viewport_bad_cases": 482,
+      "v2_viewport_bad_cases": 0,
+      "v2_far_bad_cases": 0,
+      "v2_far_bad_vertices": 0,
+      "v2_near_bad_vertices": 0,
+      "v2_nonfinite_vertices": 0,
+      "v2_min_horizontal_px": 31.12498,
+      "v2_min_vertical_px": 47.8230918,
+      "v1_worst_margin_px": -33.9313796,
+      "v2_worst_margin_px": 31.12498
+    },
+    "morph": {
+      "cases": 15552,
+      "v1_viewport_bad_cases": 489,
+      "v2_viewport_bad_cases": 0,
+      "v2_far_bad_cases": 0,
+      "v2_far_bad_vertices": 0,
+      "v2_near_bad_vertices": 0,
+      "v2_nonfinite_vertices": 0,
+      "v2_min_horizontal_px": 24.12451,
+      "v2_min_vertical_px": 40.3570248,
+      "v1_worst_margin_px": -48.8779303,
+      "v2_worst_margin_px": 24.12451
+    },
+    "easing-state": {
+      "cases": 675,
+      "v1_viewport_bad_cases": 5,
+      "v2_viewport_bad_cases": 0,
+      "v2_far_bad_cases": 12,
+      "v2_far_bad_vertices": 20590,
+      "v2_near_bad_vertices": 0,
+      "v2_nonfinite_vertices": 0,
+      "v2_min_horizontal_px": 54.5130387,
+      "v2_min_vertical_px": 71.3164329,
+      "v1_worst_margin_px": -27.1966453,
+      "v2_worst_margin_px": 54.5130387
+    },
+    "extreme-tall-diagnostic": {
+      "cases": 96,
+      "v1_viewport_bad_cases": 20,
+      "v2_viewport_bad_cases": 0,
+      "v2_far_bad_cases": 96,
+      "v2_far_bad_vertices": 399429,
+      "v2_near_bad_vertices": 0,
+      "v2_nonfinite_vertices": 0,
+      "v2_min_horizontal_px": 36.2862807,
+      "v2_min_vertical_px": 971.253339,
+      "v1_worst_margin_px": -12.0954393,
+      "v2_worst_margin_px": 36.2862807
+    }
+  },
+  "source_sha256": "267428141aabf290b551eec27f9e6ba5bceb137203417f0a61cf1df0e5eca352",
+  "note": "easing-state is uncorrelated scalar stress; reachable application state was not established. extreme-tall is a separate diagnostic."
+}

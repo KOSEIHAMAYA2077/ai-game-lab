@@ -1,0 +1,81 @@
+{
+  "owned_main_pid": 92146,
+  "app_bundle": "dev.glyphmatter.companion.native-compare-v1",
+  "new": [
+    {
+      "pid": 92146,
+      "role": "app"
+    },
+    {
+      "pid": 92147,
+      "role": "GPU"
+    },
+    {
+      "pid": 92148,
+      "role": "Networking"
+    },
+    {
+      "pid": 92149,
+      "role": "WebContent"
+    }
+  ],
+  "usage": {
+    "monotonic_ns": 2451626183659000,
+    "mach_timebase": {
+      "numer": 125,
+      "denom": 3
+    },
+    "processes": [
+      {
+        "pid": 92146,
+        "start_abstime": 10210792233296,
+        "user_ns": 470370958,
+        "system_ns": 282165916,
+        "footprint_bytes": 24085488,
+        "resident_bytes": 99287040,
+        "lifetime_max_footprint_bytes": 28886000,
+        "package_idle_wakeups": 521,
+        "coalition_resource_id": 61314,
+        "coalition_jetsam_id": 61315
+      },
+      {
+        "pid": 92147,
+        "start_abstime": 10210795362445,
+        "user_ns": 318877333,
+        "system_ns": 211984916,
+        "footprint_bytes": 59917200,
+        "resident_bytes": 38895616,
+        "lifetime_max_footprint_bytes": 68502416,
+        "package_idle_wakeups": 65,
+        "coalition_resource_id": 61314,
+        "coalition_jetsam_id": 61315
+      },
+      {
+        "pid": 92148,
+        "start_abstime": 10210795599594,
+        "user_ns": 26549750,
+        "system_ns": 20164416,
+        "footprint_bytes": 7373424,
+        "resident_bytes": 23707648,
+        "lifetime_max_footprint_bytes": 11387504,
+        "package_idle_wakeups": 7,
+        "coalition_resource_id": 61314,
+        "coalition_jetsam_id": 61315
+      },
+      {
+        "pid": 92149,
+        "start_abstime": 10210796603514,
+        "user_ns": 2224315916,
+        "system_ns": 343611250,
+        "footprint_bytes": 41419592,
+        "resident_bytes": 79118336,
+        "lifetime_max_footprint_bytes": 56165192,
+        "package_idle_wakeups": 218,
+        "coalition_resource_id": 61314,
+        "coalition_jetsam_id": 61315
+      }
+    ]
+  },
+  "source_commit": "c0166616c9000c03caa03ffd4bc6cfe90e0287f5",
+  "proof": "Isolated new app PID, exact matching coalition services; first app group already exited; UI restored own synthetic 1537 body"
+}

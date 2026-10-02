@@ -36,7 +36,7 @@
 | 小型解釈器freeze-1 | char n-gramをハッシュした線形softmax、int16重み。JSON122,601 bytes、明示的展開buffer91,136 bytes。形・関係は分類、範囲・親子順・属性・否定は手作業規則 | 初回90人工文は、短い形名等の10文が訓練と完全一致。除外後の確定76文でstudent54/76、規則46/76。否定等の誤受理5例、属性5例・親子逆転2例の誤り。標準採用を見送る。[方式とfreeze](../experiments/widget-student-v1/README.md) / [独立評価](../experiments/widget-student-v1-independent/REPORT.md) |
 | 小型解釈器guard-v2 | freeze-1の同じ重みへ、保留・方向属性・親子順・有限geometryの手作業規則を追加 | 90文を見た後の回帰評価。確定86文72正解、訓練完全一致を除外した76文62正解。誤受理5→0だが、意味がある60文の保留は10→14。独立汎化の証明とはしない。[回帰・失敗](../experiments/widget-student-v1-independent/REGRESSION-GUARD-V2.md) |
 | 段階atlas B | 固定2,048²から必要な行へ1→2→4→8→16→32と成長。48 GPU条件、Canvas全一致・GPU最大2/255以内。旧ID・色・座標を保持 | 最初の最大11不合格と修正を保持。画像の論理容量削減と全体RAMを区別し、native資源効果は未測定。[候補と回帰](../experiments/widget-atlas-budget-v3/README.md) |
-| Metal 3形 | AppKit/Core Text、文字planeのinstance、GPUで面・接線・変形を評価。CPU1,213/GPU581確認、元TSと504地点を比較、8時間後の時刻を含む | 球・箱・メビウスだけ。骨格・60形・モデルは未移植。ロック中は通常frame0、実UI/CPU/RAM比較は延期し採用保留。[技術・原票・画像](../experiments/widget-metal-lab-v1/README.md) |
+| Metal 3形 | AppKit/Core Text、文字planeのinstance、GPUで面・接線・変形を評価。CPU1,213/GPU581確認、元TSと504地点を比較。新v2は端切れ修正、R2射影35,763条件、実UI/pause/Hide確認 | 白い球の実窓90秒はCPU2.661%／charged peak68.298MiB。WK v3は8.858%／173.253MiB、反復7.681%／124.253MiBだがframe gate FAIL。機能・camera・字体・ID差があり、方式だけの因果・全60形・16GB性能は未実証。既定採用保留。[画面と幾何](../experiments/widget-metal-framing-v2/README.md) / [実窓原票・限界](../experiments/widget-metal-native-evaluation-v2/REPORT.md) |
 
 guard-v2を新しい120合成文で測ると、全文の厳密意図一致79/120、表現可能な要求21/44、明確な保留の誤発火2/40だった。全文のtrain/dev完全一致は0だが、切り出すprimitive分類クエリ132回中112回は学習例と正規化一致した。重みを変えないv2の改善15件は、手作業規則による保留13件・寸法修正2件。評価担当AIの合成意図ラベルで、人間の注釈や二重確認は未実施。**全文未見と分類クエリ未見を分けることを評価設計に加える。** [凍結の順序・原票・採点・クエリ監査](../experiments/widget-student-v2-fresh/REPORT.md)。
 
