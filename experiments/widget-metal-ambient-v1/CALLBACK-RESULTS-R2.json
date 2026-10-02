@@ -1,0 +1,706 @@
+{
+  "actualNativeIME" : false,
+  "actualNativeWindow" : false,
+  "artificialMethodCallsOnly" : true,
+  "failures" : [
+
+  ],
+  "passed" : 7,
+  "runs" : [
+    {
+      "body" : "AB",
+      "document" : "AB",
+      "errors" : [
+
+      ],
+      "held" : false,
+      "id" : "N01",
+      "passed" : true,
+      "traces" : [
+        {
+          "command" : {
+            "at" : 1,
+            "base" : "",
+            "fromComposition" : false,
+            "op" : "commit",
+            "postMarked" : false,
+            "range" : [
+              0,
+              0
+            ],
+            "text" : "A",
+            "value" : "A"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 1,
+              "composing" : false,
+              "now" : 1,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "whole-add-before-ack",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "accepted",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "A"
+              }
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 3,
+            "base" : "A",
+            "fromComposition" : false,
+            "op" : "commit",
+            "postMarked" : false,
+            "range" : [
+              1,
+              0
+            ],
+            "text" : "B",
+            "value" : "AB"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 2,
+              "composing" : false,
+              "now" : 3,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "whole-add-before-ack",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "accepted",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "A"
+              },
+              {
+                "id" : 2,
+                "ink" : "green",
+                "text" : "B"
+              }
+            ]
+          }
+        }
+      ],
+      "units" : 2
+    },
+    {
+      "body" : "輪",
+      "document" : "輪",
+      "errors" : [
+
+      ],
+      "held" : false,
+      "id" : "N02",
+      "passed" : true,
+      "traces" : [
+        {
+          "command" : {
+            "at" : 1,
+            "base" : "",
+            "op" : "mark-start",
+            "range" : [
+              0,
+              0
+            ]
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : true,
+              "now" : 1,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "preedit-only",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "composition",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 2,
+            "op" : "mark-update",
+            "text" : "仮"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : true,
+              "now" : 2,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "preedit-only",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "composition",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 3,
+            "base" : "",
+            "fromComposition" : true,
+            "op" : "commit",
+            "postMarked" : false,
+            "range" : [
+              0,
+              0
+            ],
+            "text" : "輪",
+            "value" : "輪"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 1,
+              "composing" : false,
+              "now" : 3,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "whole-add-before-ack",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "accepted",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "輪"
+              }
+            ]
+          }
+        }
+      ],
+      "units" : 1
+    },
+    {
+      "body" : "",
+      "document" : "仮",
+      "errors" : [
+
+      ],
+      "held" : false,
+      "id" : "N03",
+      "passed" : true,
+      "traces" : [
+        {
+          "command" : {
+            "at" : 1,
+            "base" : "",
+            "op" : "mark-start",
+            "range" : [
+              0,
+              0
+            ]
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : true,
+              "now" : 1,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "preedit-only",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "composition",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 2,
+            "op" : "mark-update",
+            "text" : "仮"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : true,
+              "now" : 2,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "preedit-only",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "composition",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 3,
+            "op" : "mark-cancel",
+            "value" : "仮"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : false,
+              "now" : 3,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "unmark-is-not-confirmation",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "unknown",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        }
+      ],
+      "units" : 0
+    },
+    {
+      "body" : "AB",
+      "document" : "A",
+      "errors" : [
+
+      ],
+      "held" : false,
+      "id" : "N04",
+      "passed" : true,
+      "traces" : [
+        {
+          "command" : {
+            "at" : 1,
+            "base" : "",
+            "fromComposition" : false,
+            "op" : "commit",
+            "postMarked" : false,
+            "range" : [
+              0,
+              0
+            ],
+            "text" : "AB",
+            "value" : "AB"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 2,
+              "composing" : false,
+              "now" : 1,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "whole-add-before-ack",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "accepted",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "A"
+              },
+              {
+                "id" : 2,
+                "ink" : "blue",
+                "text" : "B"
+              }
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 2,
+            "op" : "observe",
+            "value" : "A"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 2,
+              "composing" : false,
+              "now" : 2,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "unknown-native-input",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "unknown",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "A"
+              },
+              {
+                "id" : 2,
+                "ink" : "blue",
+                "text" : "B"
+              }
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 3,
+            "op" : "observe",
+            "value" : "AB"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 2,
+              "composing" : false,
+              "now" : 3,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "unknown-native-input",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "unknown",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "A"
+              },
+              {
+                "id" : 2,
+                "ink" : "blue",
+                "text" : "B"
+              }
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 4,
+            "op" : "observe",
+            "value" : "A"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 2,
+              "composing" : false,
+              "now" : 4,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "unknown-native-input",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "unknown",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "A"
+              },
+              {
+                "id" : 2,
+                "ink" : "blue",
+                "text" : "B"
+              }
+            ]
+          }
+        }
+      ],
+      "units" : 2
+    },
+    {
+      "body" : "👩🏽‍💻X",
+      "document" : "👩🏽‍💻X",
+      "errors" : [
+
+      ],
+      "held" : false,
+      "id" : "N05",
+      "passed" : true,
+      "traces" : [
+        {
+          "command" : {
+            "at" : 1,
+            "base" : "",
+            "fromComposition" : false,
+            "op" : "commit",
+            "postMarked" : false,
+            "range" : [
+              0,
+              0
+            ],
+            "text" : "👩🏽‍💻",
+            "value" : "👩🏽‍💻"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 1,
+              "composing" : false,
+              "now" : 1,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "whole-add-before-ack",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "accepted",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "👩🏽‍💻"
+              }
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 2,
+            "base" : "👩🏽‍💻",
+            "fromComposition" : false,
+            "op" : "commit",
+            "postMarked" : false,
+            "range" : [
+              7,
+              0
+            ],
+            "text" : "X",
+            "value" : "👩🏽‍💻X"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 2,
+              "composing" : false,
+              "now" : 2,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "whole-add-before-ack",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "accepted",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+              {
+                "id" : 1,
+                "ink" : "blue",
+                "text" : "👩🏽‍💻"
+              },
+              {
+                "id" : 2,
+                "ink" : "blue",
+                "text" : "X"
+              }
+            ]
+          }
+        }
+      ],
+      "units" : 2
+    },
+    {
+      "body" : "",
+      "document" : "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "errors" : [
+
+      ],
+      "held" : true,
+      "id" : "N06",
+      "passed" : true,
+      "traces" : [
+
+      ],
+      "units" : 0
+    },
+    {
+      "body" : "",
+      "document" : "仮",
+      "errors" : [
+
+      ],
+      "held" : false,
+      "id" : "N07",
+      "passed" : true,
+      "traces" : [
+        {
+          "command" : {
+            "at" : 1,
+            "base" : "",
+            "op" : "mark-start",
+            "range" : [
+              0,
+              0
+            ]
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : true,
+              "now" : 1,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "preedit-only",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "composition",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 2,
+            "op" : "mark-update",
+            "text" : "仮"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : true,
+              "now" : 2,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "preedit-only",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "composition",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        },
+        {
+          "command" : {
+            "at" : 3,
+            "op" : "mark-cancel",
+            "value" : "仮"
+          },
+          "view" : {
+            "aggregate" : {
+              "bodyCount" : 0,
+              "composing" : false,
+              "now" : 3,
+              "paused" : false,
+              "pending" : false,
+              "presentedCount" : 0,
+              "reason" : "unmark-is-not-confirmation",
+              "savingOff" : true,
+              "shape" : "sphere",
+              "status" : "unknown",
+              "version" : "metal-ambient-v1-r1",
+              "visible" : true
+            },
+            "presentedCount" : 0,
+            "shape" : "sphere",
+            "units" : [
+
+            ]
+          }
+        }
+      ],
+      "units" : 0
+    }
+  ],
+  "version" : "own-editor-callback-r2"
+}

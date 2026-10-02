@@ -1,0 +1,546 @@
+{
+  "version": "native-ambient-return-v1",
+  "ownershipReturned": [
+    "desktop/glyph-metal-ambient-v1/",
+    "experiments/widget-metal-ambient-v1/"
+  ],
+  "sourceEditingAfterReturn": false,
+  "currentCandidate": "ProducerR2/BridgeR2/BuildR5",
+  "appManifest": {
+    "path": "experiments/widget-metal-ambient-v1/APP-PRODUCER-R2-BRIDGE-R2-BUILD-R5.json",
+    "sha256": "34a01d4ab2c5be666f5feb1dd47772838b8a3c77b7a81ba0d6d43572879d25b6"
+  },
+  "candidateApp": "experiments/widget-metal-ambient-v1/work/GlyphMatter-Ambient-ProducerR2-BridgeR2-BuildR5.app",
+  "samePureR3SourceSHA256": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d",
+  "newIncrementalIIFESHA256": "11df7b55f1946676a526ac8093931169b82595e3923ae562a4acb5413cb017d1",
+  "sameOldIIFEBytes": false,
+  "sameGeometryMSLSHA256": "75a1aa21d61860483bc999fd4cd9c5e027d6aef71edcf3872192024573e3bd82",
+  "authoredBeforeImplementationManual12": {
+    "Node": 12,
+    "JSC": 12,
+    "exactSemanticOutput": true,
+    "humanAuthoredOrValidated": false
+  },
+  "oldR3Regression20": {
+    "Node": 20,
+    "JSC": 20,
+    "oldJSCEqual": true,
+    "notFresh": true
+  },
+  "actualInstanceBuilderCPU": {
+    "instances": 278,
+    "basisFrames": 2304,
+    "instanceStride": 80,
+    "failures": 0
+  },
+  "GPUConnectionRegression": {
+    "manual4": 4,
+    "supplementalDense6": 6,
+    "passed": 10,
+    "baseFramesFinite": 1545,
+    "allRasterIntermediatesDirectlyMeasured": false,
+    "notActualWindow": true
+  },
+  "ownEditorCallback": {
+    "artificialOnly": true,
+    "R1Original6Passed": 5,
+    "R2Same6Passed": 6,
+    "R2SupplementaryCancel1Passed": 1,
+    "BridgeR2Same7Passed": 7
+  },
+  "responseBoundary": {
+    "R1SendFailures": 187,
+    "BridgeR2SendFailures": 0,
+    "units": 256,
+    "bodyUTF16": 65536,
+    "nativeDecodedViewReencodedBytes": 204985,
+    "responseGuard": 524288,
+    "schemaBound": 417792,
+    "notFullProcessMemoryBound": true
+  },
+  "allOriginalSourcePinsMatch": true,
+  "pinnedChecks": 88,
+  "normalRawSaving": false,
+  "privateRawBuildLogExcludedBy": "experiments/widget-metal-ambient-v1/.gitignore work/",
+  "historicalFullR1R2StderrOriginalNotFileRetained": true,
+  "historicalFailureRawIsSeparatelyLabelledReplay": true,
+  "actualNativeUI": false,
+  "actualNativeIME": false,
+  "OSCapture": false,
+  "resourceMeasured": false,
+  "humanStudy": false,
+  "independentReview": "Separate root-owned reviewer, fixed R4 and R5 notified; not yet counted into author results",
+  "futureCache": "Analysis only; implementation not started pending formal root followup",
+  "files": [
+    {
+      "path": "experiments/widget-metal-ambient-v1/.gitignore",
+      "sha256": "61f65dd9598c7421870bf4918332637f83f34abe1f9fc7cc095852ef7a1b44f7",
+      "bytes": 6
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/APP-BUILD-R3.json",
+      "sha256": "4c3422c080322e47820081c0975b10ea3e7f4f5b40bd71a73c7d5401366bd435",
+      "bytes": 3701
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/APP-PRODUCER-R2-BRIDGE-R2-BUILD-R5.json",
+      "sha256": "34a01d4ab2c5be666f5feb1dd47772838b8a3c77b7a81ba0d6d43572879d25b6",
+      "bytes": 10816
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/APP-PRODUCER-R2-BUILD-R4.json",
+      "sha256": "57f7028b2fd257a62468cf04f1a9984c45dd7b087f2fd0bd50f6b82013320e1b",
+      "bytes": 9710
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/BUILD-FAILURE-R1.json",
+      "sha256": "3dd56e6703829745e320d51c2e1f61a4784315d461671d01c7fc2f109ea6faf7",
+      "bytes": 488
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/BUILD-FAILURE-R2.json",
+      "sha256": "e6a58c034d89e7cb37b759635283af6921a5a16c6f7e1e2a093dd2cf075a09a7",
+      "bytes": 338
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/BUILD-FAILURE-REPLAY-PUBLIC-R1.json",
+      "sha256": "7722f634ae9ae777da33d47769d8c015e0bdd204769f85fca13c144dc2294297",
+      "bytes": 12339
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/BUILD-R4.json",
+      "sha256": "a76a3e4436e7ca4e5233fb0bc63557fd2ff9af780f94c0b038a1787b3d0ef20d",
+      "bytes": 2008
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/BUILD-R5.json",
+      "sha256": "b011547a8573e7e6194cd1ad5df183f3617e62500b2ffa718d7b5a829357a3a3",
+      "bytes": 2009
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/BUNDLE-R1.json",
+      "sha256": "1a43a2ce769e5e8136afd85fee6bc1ba985153dfa46d4583991de3751b8fdd5b",
+      "bytes": 4199
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/CALLBACK-BRIDGE-R2-RESULTS.json",
+      "sha256": "8c791c98c0528c850d92ef1ca53eb5f10b6ae88bfbce90858075a801cdd51a77",
+      "bytes": 18015
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/CALLBACK-RESULTS-R1.json",
+      "sha256": "0cd583ac2f6b1d6c9e9f7d9cea64596bddd35a278ffe180924a40039a2812829",
+      "bytes": 17531
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/CALLBACK-RESULTS-R2.json",
+      "sha256": "8c791c98c0528c850d92ef1ca53eb5f10b6ae88bfbce90858075a801cdd51a77",
+      "bytes": 18015
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/CALLBACK-SOURCE-FREEZE-R1.json",
+      "sha256": "1dd98f798db5a8edb16ec24af220afba4fda86bde3712542b62b725734323a5a",
+      "bytes": 1266
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/CPU-COMPARISON.json",
+      "sha256": "6620162577d6a1b60eb1b71dfb452370d06329a43dcfa2094ce1ea83417fb983",
+      "bytes": 924
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/CPU-RESULTS-R1.json",
+      "sha256": "541929ca3b72530b47fde6e113be46b15c61fbd4695a68f5ebf4e1f503104bf0",
+      "bytes": 360
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/FUTURE-CACHE-NOTES.md",
+      "sha256": "2a99802ac541003ded63d6dc8ddc238bac0e38ebb101e4ca6edd807e42203660",
+      "bytes": 2119
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/GPU-EXECUTABLE-R1.json",
+      "sha256": "f24aaf587fe129c64a5c0ae31bbb7dfd0b7743075bdbd31ed9461c6818de8afa",
+      "bytes": 309
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/GPU-SOURCE-FREEZE-R1.json",
+      "sha256": "8b18db916fefcf4a61bb986661d83f839f73cbc37361f9bde0253c317b3f5c6b",
+      "bytes": 8566
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/JSON-BOUNDARY-RESULTS-R1.json",
+      "sha256": "8ff0a647762ce266df9741d4f5797ea5e83ed6a92a71323887080d5a78c2474b",
+      "bytes": 17136
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/JSON-BOUNDARY-RESULTS-R2.json",
+      "sha256": "c49e8262c1bedac74abda43d4f9bbac4856968d7d13dbc89ebce75b735131720",
+      "bytes": 400
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/JSON-BOUNDARY-SOURCE-FREEZE-R1.json",
+      "sha256": "db004231f70ba6c4846734198e557fe5ddb8e51cc8c271f44767b881e99e4c33",
+      "bytes": 1101
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/METHOD-CALLBACK-R1.json",
+      "sha256": "603c0277a865b7ad280c58bcb0a86aac13c0c16b3b0ae3f8d075b923c01bb203",
+      "bytes": 1840
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/METHOD-CANCELLATION-R2.json",
+      "sha256": "7c48fd08a204d381d72ffdfb9417136f459375228e821ca22f85b3e7f32f76bc",
+      "bytes": 1063
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/METHOD-GPU-R1.json",
+      "sha256": "4617a3e8775792c515a209dc5ada35d24de2114145b121031d74feea28eb92ac",
+      "bytes": 2746
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/METHOD-JSON-BOUNDARY-R1.json",
+      "sha256": "cd113ea9b5e45bb1b21b83c5da516041ae390617ba7c891f58cace03c14bb463",
+      "bytes": 1354
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/METHOD-JSON-BOUNDARY-R2.json",
+      "sha256": "cc6e44ec71aefd1d887c9fb70e71192c8480a580c6b31e227035f820bd64f64a",
+      "bytes": 1869
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/METHOD.json",
+      "sha256": "87466cc744a17aaec542c90fe599f41e28bcb8fca97cd819f8d74795f1d96654",
+      "bytes": 7551
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/README.md",
+      "sha256": "27d959ef917f522789ce16718bdc220458d0ed4218a474d70cafabd6031603ec",
+      "bytes": 2133
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/REPORT.md",
+      "sha256": "2bfcd0708830b78b7b6305adeffa0f6822a11849fabbef5919985ee220aba40d",
+      "bytes": 11406
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/REPRODUCE.md",
+      "sha256": "94ff32ab5a40d86f64bc7fae63c3ccd43152fc1d2eaa8b56988b585ad60963cb",
+      "bytes": 5224
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/RESPONSE-REGRESSION-METADATA-R2.json",
+      "sha256": "1ac75ac7c611788bb7153c1d21b606339b7fd6eec8eae7c8d84283bacaa84efb",
+      "bytes": 896
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/RETURN-CHECKS.json",
+      "sha256": "b08504bce956b9998b9f5fa5168f257ee44816dc7f42bd9f5a4c3c51b64801ec",
+      "bytes": 13843
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/SOURCE-FREEZE-BUILD-R2.json",
+      "sha256": "51a2b368718e89bb32e5c2756afc3920eff45f5d4e393ad02574bc761043804f",
+      "bytes": 618
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/SOURCE-FREEZE-BUILD-R3.json",
+      "sha256": "2eaf03dea459ab9e31d73028a60320f1600d429452f49bcfd66c036791f91b05",
+      "bytes": 516
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/SOURCE-FREEZE-CANCELLATION-R2.json",
+      "sha256": "c88e3191c603bc523b6c5ee974f97bf3772df6587ce6e50df2c8802f05c57e43",
+      "bytes": 1114
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/SOURCE-FREEZE-R1.json",
+      "sha256": "3854eab11e91c967721418b77f53e99aa7df1d00c6d2513d2af27959b767bc55",
+      "bytes": 4608
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/SOURCE-FREEZE-RESPONSE-R2.json",
+      "sha256": "af65361cdb1c3b78c78e6f1960cc893f4c1eef8d7cd4de167a6187a329d8f749",
+      "bytes": 1478
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/build-bridge.mjs",
+      "sha256": "652d2d186d526e36ac2526feb1d18353a7eb30fdeff5f5bb0567bc09cff6c462",
+      "bytes": 1833
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/compare-results.mjs",
+      "sha256": "b7232261ad557cb269bce962981c40910f0442561b0750892e59e63e1843ef3f",
+      "bytes": 1746
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/A01.png",
+      "sha256": "18ea04747d067c4200ad63b0dee92188fcf2b5d10e29461529085c559e1caf6a",
+      "bytes": 4108
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/A03.png",
+      "sha256": "f45b68e344d935eba34cf41f3c4215b6cdcf06b95d2988627c924b0aa62e7080",
+      "bytes": 11894
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/A09.png",
+      "sha256": "cb699bec7d9c58ad54aa77975eb05b1f53ccda91f3f0d839b27a6bf9425683ed",
+      "bytes": 20104
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/A12.png",
+      "sha256": "5cc9247fe4fd6090f125e7ad08098ac01c192bee59839ff7c63ca3943c25df58",
+      "bytes": 11044
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/box-mixed.png",
+      "sha256": "7bb724be56b4149843ed58c7373c30094d566edb79a6f3725ee8488843d4598e",
+      "bytes": 18506
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/box-white.png",
+      "sha256": "ba701e9fe8f10cff3d4295dc812c8da746dd9b223c8097354311a10c516d7e98",
+      "bytes": 18031
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/gpu-frame-raw-r1.json",
+      "sha256": "e06290bfb32949e3046c6d38a24116d2d15dcf70fd6796a01bd0165009ffaef7",
+      "bytes": 818330
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/gpu-report-r1.json",
+      "sha256": "265bc7278bbb1f0fc0b01e9cf4414a481098988894d685a1763bb1c8afc0f2ba",
+      "bytes": 5936
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/receiver-traces-r1.json",
+      "sha256": "089c1874c8aea92f22573a9d5ab805999fc0672714169ec48faee4332b0836ff",
+      "bytes": 776764
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/ring-mixed.png",
+      "sha256": "dca1eb5d19695c0d4c7e3bdd823c52449d22beee31060e4bb1faf67bcbf568d3",
+      "bytes": 18500
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/ring-white.png",
+      "sha256": "618ca807983b048459a404760faacb8763b692ffe93cee0858a814beb96053ff",
+      "bytes": 18086
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/sphere-mixed.png",
+      "sha256": "dca3e1bc11bd331f6faf252f62dfff0e25d813a7351cb2f909492e1ab23af334",
+      "bytes": 22683
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/evidence/gpu-r1/sphere-white.png",
+      "sha256": "5e6a555d04a906be31dac6569a64877485ac8b6474564393bbea14329d6c84bc",
+      "bytes": 22170
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/fixtures/gpu-connection-r1.json",
+      "sha256": "9b16a2f700301c4d5638aef370ac52406699f8a53b76830c57eb41caa600437e",
+      "bytes": 16248
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/fixtures/manual-r1.json",
+      "sha256": "9cf9b8aacdcf6cb9a86f87634e34db743531c27b3dc08997ba017cdfccaa1829",
+      "bytes": 11783
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/replay-bridge.mjs",
+      "sha256": "e9404d2ae26e85e2b7f783b8e170f055969d07c8253f7513545c7375bc4cddeb",
+      "bytes": 1799
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/replay-node.mjs",
+      "sha256": "b8699b6b506caf6530574bd841d03d5ca07e924074bcfc121a82aa80b88204cd",
+      "bytes": 1570
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/results-native-r1/manual12.json",
+      "sha256": "e185ff88691bc533c1a64c8dace207330e8da7b01fbbe2d6c4a1277067cdcc1f",
+      "bytes": 83524
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/results-native-r1/original20.json",
+      "sha256": "3f1509e6a1f9aa25e000c4abfe354a2375fb1d5d01db0c2bf50dc15a5317b265",
+      "bytes": 276982
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/results-native-r1/summary.json",
+      "sha256": "aae801dffe9ca239781452b25fd9a9bb2ec2a0388ca875f5afa220044944cd1d",
+      "bytes": 290
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/results-node-r1/manual12.json",
+      "sha256": "02c3ace16577b5290a5591604fa61db4a0f1339b6529b5654c95c3c97289cbfd",
+      "bytes": 218531
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/results-node-r1/original20.json",
+      "sha256": "a99314eb25329b723c24e8c55d87d628f8b99d39dc20d606a79d0f76ae0fc367",
+      "bytes": 651589
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/results-node-r1/summary.json",
+      "sha256": "56fcf94cb87a6cbbd2b29575d5fd32c16dde67c0e34e3e5cd982994696ff84a2",
+      "bytes": 193
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/run-node.mjs",
+      "sha256": "7ef85052db1b30225452194a2f445529f429af7920d23ea0b64ffdd813cd2ef1",
+      "bytes": 2324
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Info.plist",
+      "sha256": "42443891369fb94959a5c0a664e54bf5bf1cf905d45f3ea84f9eb43d23496f41",
+      "bytes": 760
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/README.md",
+      "sha256": "638869ed458c91527e71d3e088e1607a3718d9bf56261c04bc9181fffd90ef11",
+      "bytes": 3408
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/AppMain-r3.swift",
+      "sha256": "856fcf63d4b7cfee3290c3fc8dbd6d39091c5d20377010f6e40726cd859e2d04",
+      "bytes": 14218
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/CameraFraming.swift",
+      "sha256": "3ce849093e570284bf16b3dec922f7725954ec179cc58e8a8f9df45ca09f54c9",
+      "bytes": 4099
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/CreatureGeometry.metal.inc",
+      "sha256": "32643d5c4af7623068047fcd17b550fd823fbec1865c7c907704b3f00053c5c6",
+      "bytes": 7962
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/CreatureRigReference.swift",
+      "sha256": "337bb9c4f65971c78080cbfc143b40e273ea0c1b1b7ef6a904264b5f78e31163",
+      "bytes": 11715
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/GeometryTypes.swift",
+      "sha256": "3c010e2d75d363f1a2c9083204b3af4f2e9762aa65d13c60ef7a9a08a4c1c023",
+      "bytes": 1880
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/Glyphs.metal",
+      "sha256": "75a1aa21d61860483bc999fd4cd9c5e027d6aef71edcf3872192024573e3bd82",
+      "bytes": 23850
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/OwnEditor-r2.swift",
+      "sha256": "308abb62af852e2046d1f24f6a512b857baac568361089fb0a7bee645f93b3d8",
+      "bytes": 4182
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/OwnEditor.swift",
+      "sha256": "3742c87eccb1c4d7a8e5490b277746f85d68d3151b47b6d52d3d479c0e770211",
+      "bytes": 3765
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/Projection.swift",
+      "sha256": "3fac1e7fc7d2e4715553280c034adc22ad2bf8377eda05f6b9fd41a021273f92",
+      "bytes": 3663
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/ReceiverBridge-r2.swift",
+      "sha256": "22d2da5ede5be1a14f721639fc3bcf81f1e54c027309e36dd527291c954c206e",
+      "bytes": 2426
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/ReceiverBridge.swift",
+      "sha256": "bead8425f418eab5b955bdfb9136985b6effe8c2f94e1c742fe0c00213cdfb9d",
+      "bytes": 2265
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/Renderer.swift",
+      "sha256": "4e84d4695a7daf9886d91a2b6bcb94d04ec1e2345eb65ef3ebc8f4d3d7e71e12",
+      "bytes": 14946
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/SurfaceReference.swift",
+      "sha256": "844c8945f68e45576112b39a8d31c80c36f019d5aa48af3b6ab32d0d874aa818",
+      "bytes": 4174
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/WordSurfaceReference.swift",
+      "sha256": "cc84018fe791b422239feb62d9195f0f4f8d36452871853e9fb5bc0477ff59d3",
+      "bytes": 7326
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/main-r2.swift",
+      "sha256": "ce5aba87fd2546db417c05be73aa3d3d2c4b10aeadbd92e3db07c45cf16ae365",
+      "bytes": 14120
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/main.swift",
+      "sha256": "f651b07d0ce5993e29bd43fb74911bcd05f24318466e16f76e3ef3a0f40784eb",
+      "bytes": 14112
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Sources/receiver-bridge.mjs",
+      "sha256": "220fe2fd1c63a22bd4ad8d4d3b17e1ef49ce207fa2685b3b825200c550d4d053",
+      "bytes": 12011
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Tests/GPUConnection-r1.swift",
+      "sha256": "8bf6e290dedbf22bd7ce7b0d4bd722dead0fe176c7d340245625c17d09913acd",
+      "bytes": 14857
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Tests/LegacyMath.swift",
+      "sha256": "e7fb09582b0e0f06a809d11e932a839b573458809f35e6ca87c202f9ec879461",
+      "bytes": 741
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Tests/OwnEditorCallbacks-r1.swift",
+      "sha256": "34a60df05d95570fa4061831355130d3fcbf4c8f241c11566d89ea31fa4b753f",
+      "bytes": 4117
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Tests/OwnEditorCallbacks-r2.swift",
+      "sha256": "f7568c92e82af32faf090febaa8b0c39c008c6a222e33a8cc456eb6d65d0dcf7",
+      "bytes": 4433
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Tests/ResponseBoundary-r1.swift",
+      "sha256": "acc180a21af52f8db9cd71cf3f629060c4e421755c7c94b41dc602fc19e8b47f",
+      "bytes": 2295
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/Tests/main.swift",
+      "sha256": "0e1c9cdda30918879ee23b1119082f3973e68f6e5e5ac9dcd8f987499bbff6d8",
+      "bytes": 5128
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/build-r2.sh",
+      "sha256": "7da3f60c31a8b467f33f0f55be16fafb15cdc6ff6aa5d92a1553444df1623a00",
+      "bytes": 2890
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/build-r3.sh",
+      "sha256": "e1a19873e7051cabd5033c7930745a8d9120fbc5d8b6a02d354e17e2107b3987",
+      "bytes": 2893
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/build-r4.sh",
+      "sha256": "e7ade7cb992049c1c1dc4d10dab5715d0e46d52ef9314862da6c8c1c81935075",
+      "bytes": 2908
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/build-r5.sh",
+      "sha256": "73e3900549d178089175b5157f39e5f3576cbb99195a53856e1da723753b62a2",
+      "bytes": 2921
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-v1/build.sh",
+      "sha256": "6d52ccbc5fd8ce6dbe4864b024d46ceb615704304a6b326d7f09a6616ed3e256",
+      "bytes": 2881
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "native-own-editor-cancellation-r2",
+  "knownFailure": "R1 supplemental N03 unmark calls AppKit super, which re-enters insertText and confirms preedit. Original source/app/results remain unchanged.",
+  "proposal": "New OwnEditor-r2 adds cancellation scope. Reentrant setMarkedText/insertText/didChange callbacks may update own control but emit no source confirmation while explicit unmark/cancelLocalComposition tears down. Final poststate forwarded only as mark-cancel/document-only. Normal confirmed insertText remains unchanged.",
+  "regression": "Same 6 previously frozen N01..N06 expectations, known correction regression. Separate N07 artificial cancelLocalComposition from preedit requires 0 body and no commit event.",
+  "expectedN07": {
+    "markedText": "仮",
+    "operation": "cancelLocalComposition",
+    "bodyCount": 0,
+    "body": "",
+    "commitCommands": 0
+  },
+  "scope": "Unattached artificial NSTextView method calls only. No real native window/IME. R3source/bundle/renderer/shader unchanged. No threshold or fixture tuning."
+}

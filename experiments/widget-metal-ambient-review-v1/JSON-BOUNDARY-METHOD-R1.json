@@ -1,0 +1,32 @@
+{
+  "version": "known-json-response-boundary-review-r1",
+  "frozenAt": "2026-10-02T22:42:59.015649+00:00",
+  "afterAuthorFailureNotification": true,
+  "knownRegressionNotIndependent18": true,
+  "candidateSourceNoChange": true,
+  "scope": "No GPU/window/IME. Direct native bridge own synthetic command loop.",
+  "fixture": {
+    "bodyUnits": 256,
+    "cluster": "ASCII a plus255 U+0301 combining acute marks",
+    "clusterUTF16": 256,
+    "expectedGraphemeUnitsPerCommit": 1,
+    "afterEachCommit": "document-only observe empty; oldmaterial persists",
+    "ink": "native defaultblue",
+    "commands": 512,
+    "finalIds": "1..256",
+    "expectedOldInkAndTextRetainedTransiently": true
+  },
+  "oldR4Expectation": "send response cap131072 may fail after R3material already added. Record first error and continue synthetic commands with explicit catch; current has no response cap in oldsource, so record finalbody separately fromsenderrors.",
+  "newR5Expectation": "Same frozen stress:0senderrors,body256,65536 totalUTF16,IDs1..256,oldink/text unchanged; send/current common524288 guard, no truncation.",
+  "analyticalCheck": {
+    "unitCountMax": 256,
+    "unitTextUTF16Max": 256,
+    "JSONWorstBytesPerUTF16": 6,
+    "unitNonTextBudget": 64,
+    "aggregateAndTopLevelShapeTokenBudget": 8192,
+    "boundBytes": 417792,
+    "guardBytes": 524288,
+    "note": "Budgets include commas/quotes/keys/3digitID/fourinkstrings. Remainingmetadata finite booleans/strings and safeint16digit fields; source reasoning required. Component JSONbyte bound, not wholeappRAM."
+  },
+  "output": "aggregate only units/UTF16/idrange/inkcount/bytes/failureindices. No text/document/body payload."
+}

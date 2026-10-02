@@ -1,0 +1,620 @@
+{
+  "version": "native-ambient-manual12-r1",
+  "authorship": "AI manually authored artificial producer expected before implementation; not realNSTextView/IME/humantrace.",
+  "cases": [
+    {
+      "id": "A01",
+      "reason": "Empty has visualplaceholder but no material or identity",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        }
+      ],
+      "expected": {
+        "body": "",
+        "ids": [],
+        "inks": [],
+        "shape": "sphere",
+        "document": "",
+        "placeholder": true
+      }
+    },
+    {
+      "id": "A02",
+      "reason": "Continuous committedletter immediatebody, nextinkonly",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "commit",
+          "base": "",
+          "value": "A",
+          "text": "A",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 2,
+          "op": "ink",
+          "ink": "green"
+        },
+        {
+          "at": 3,
+          "op": "commit",
+          "base": "A",
+          "value": "AB",
+          "text": "B",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "at": 300,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "AB",
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "shape": "sphere",
+        "document": "AB",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A03",
+      "reason": "Preedit0, finaldeclaredexactappendonce andunchangedecho0",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "mark-start",
+          "base": "",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 2,
+          "op": "mark-update",
+          "text": "か"
+        },
+        {
+          "at": 3,
+          "op": "checkpoint",
+          "expectedBodyCount": 0
+        },
+        {
+          "at": 4,
+          "op": "commit",
+          "base": "",
+          "value": "漢字",
+          "text": "漢字",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 5,
+          "op": "observe",
+          "value": "漢字"
+        },
+        {
+          "at": 300,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "漢字",
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "document": "漢字",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A04",
+      "reason": "Unmark/cancel cannotestablishconfirmation",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "mark-start",
+          "base": "",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 2,
+          "op": "mark-update",
+          "text": "仮"
+        },
+        {
+          "at": 3,
+          "op": "mark-cancel",
+          "value": ""
+        },
+        {
+          "at": 4,
+          "op": "observe",
+          "value": "未知箱"
+        },
+        {
+          "at": 7000,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "",
+        "ids": [],
+        "inks": [],
+        "shape": "sphere",
+        "document": "未知箱",
+        "placeholder": true
+      }
+    },
+    {
+      "id": "A05",
+      "reason": "Delete/undo/redo doconly preserveappendIDandink",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "commit",
+          "base": "",
+          "value": "AB",
+          "text": "AB",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 2,
+          "op": "observe",
+          "value": "A"
+        },
+        {
+          "at": 3,
+          "op": "observe",
+          "value": "AB"
+        },
+        {
+          "at": 4,
+          "op": "observe",
+          "value": "A"
+        },
+        {
+          "at": 300,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "AB",
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "document": "A",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A06",
+      "reason": "Baselineexistingnotmaterial, exactreplacementonly",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init",
+          "value": "ABC"
+        },
+        {
+          "at": 1,
+          "op": "commit",
+          "base": "ABC",
+          "value": "AxC",
+          "text": "x",
+          "range": [
+            1,
+            1
+          ]
+        },
+        {
+          "at": 200,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "x",
+        "ids": [
+          1
+        ],
+        "inks": [
+          "blue"
+        ],
+        "shape": "sphere",
+        "document": "AxC",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A07",
+      "reason": "Emojioneunit, combiningmarksoperationlocalnoNFC",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "commit",
+          "base": "",
+          "value": "e",
+          "text": "e",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 2,
+          "op": "ink",
+          "ink": "green"
+        },
+        {
+          "at": 3,
+          "op": "commit",
+          "base": "e",
+          "value": "é",
+          "text": "́",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "at": 4,
+          "op": "ink",
+          "ink": "purple"
+        },
+        {
+          "at": 5,
+          "op": "commit",
+          "base": "é",
+          "value": "é👩🏽‍💻",
+          "text": "👩🏽‍💻",
+          "range": [
+            2,
+            0
+          ]
+        },
+        {
+          "at": 300,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "é👩🏽‍💻",
+        "unitTexts": [
+          "e",
+          "́",
+          "👩🏽‍💻"
+        ],
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "inks": [
+          "blue",
+          "green",
+          "purple"
+        ],
+        "shape": "sphere",
+        "document": "é👩🏽‍💻",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A08",
+      "reason": "Invalidsurrogatesplit/rangedmismatchnotknown",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init",
+          "value": "🙂"
+        },
+        {
+          "at": 1,
+          "op": "commit",
+          "base": "🙂",
+          "value": "🙂x",
+          "text": "x",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "at": 300,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "",
+        "ids": [],
+        "inks": [],
+        "shape": "sphere",
+        "document": "🙂x",
+        "placeholder": true
+      }
+    },
+    {
+      "id": "A09",
+      "reason": "Shape3lexicalboxthenunknownretains, viewidentityunchanged",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "commit",
+          "base": "",
+          "value": "箱",
+          "text": "箱",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 5001,
+          "op": "advance"
+        },
+        {
+          "at": 6000,
+          "op": "commit",
+          "base": "箱",
+          "value": "箱知らない物",
+          "text": "知らない物",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "at": 12000,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "箱知らない物",
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "inks": [
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "shape": "box",
+        "document": "箱知らない物",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A10",
+      "reason": "Hidden/paused admissionbounded whilepresentationwaits; activecatchup",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "visible",
+          "value": false
+        },
+        {
+          "at": 2,
+          "op": "commit",
+          "base": "",
+          "value": "輪AB",
+          "text": "輪AB",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 7000,
+          "op": "advance"
+        },
+        {
+          "at": 7001,
+          "op": "checkpoint",
+          "expectedBodyCount": 3,
+          "expectedPresented": 0,
+          "expectedQueries": 0
+        },
+        {
+          "at": 7100,
+          "op": "visible",
+          "value": true
+        },
+        {
+          "at": 7400,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "輪AB",
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "inks": [
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "document": "輪AB",
+        "placeholder": false
+      }
+    },
+    {
+      "id": "A11",
+      "reason": "Body256wholeeventholdwithoutnewallocator",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "commit-repeat",
+          "text": "A",
+          "count": 256
+        },
+        {
+          "at": 2,
+          "op": "commit-after-current",
+          "text": "B"
+        },
+        {
+          "at": 7000,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "bodyRepeat": {
+          "text": "A",
+          "count": 256
+        },
+        "idsRange": [
+          1,
+          256
+        ],
+        "inkRepeat": {
+          "ink": "blue",
+          "count": 256
+        },
+        "shape": "sphere",
+        "documentRepeat": {
+          "text": "A",
+          "count": 256,
+          "suffix": "B"
+        },
+        "placeholder": false,
+        "lastHoldReason": "body-capacity"
+      }
+    },
+    {
+      "id": "A12",
+      "reason": "Markbegininkretained despiteinkchange, preservingoffexport",
+      "commands": [
+        {
+          "at": 0,
+          "op": "init"
+        },
+        {
+          "at": 1,
+          "op": "mark-start",
+          "base": "",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 2,
+          "op": "mark-update",
+          "text": "輪"
+        },
+        {
+          "at": 3,
+          "op": "ink",
+          "ink": "green"
+        },
+        {
+          "at": 4,
+          "op": "commit",
+          "base": "",
+          "value": "輪",
+          "text": "輪",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "at": 5004,
+          "op": "advance"
+        }
+      ],
+      "expected": {
+        "body": "輪",
+        "ids": [
+          1
+        ],
+        "inks": [
+          "blue"
+        ],
+        "shape": "ring",
+        "document": "輪",
+        "placeholder": false,
+        "offExportAggregateOnly": true
+      }
+    }
+  ]
+}

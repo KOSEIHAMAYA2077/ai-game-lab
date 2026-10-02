@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-03 — 専用native入力と唯一の文字材料を接続
+
+独立担当はsourceを読む前に12callback＋6境界を固定しR4で18/18、R5同期待の回帰も18/18。既知取消1と別の大きいcluster応答は分け、独立の旧33send失敗→新0を確認した。[独立の原票・source/署名監査・制限](experiments/widget-metal-ambient-review-v1/REPORT.md)。実GUI/IME/GPUの独立実行は0。
+
+別labのAppKit専用欄→JavaScriptCoreの固定R3→読み取り投影→既存Metal表面を接続。manual12/旧20は別母数でNodeとJSC一致、実offscreen接続10条件を確認。専用NSTextViewの人工取消で仮文字が素材化された旧5/6と、256個の長いgraphemeでJSON応答が拒まれた旧版を保持し、ProducerR2/BridgeR2/BuildR5で修正回帰した。一般unmarkを保守的に素材0とする方針は、実IMEの取りこぼしを解消した証拠ではない。
+
+[実装・人工原票・保持した失敗](experiments/widget-metal-ambient-v1/REPORT.md)。実UIはMac lockのため未確認、OS入力取得・常駐CPU/RAM・人間評価0。身体256の有限labで容量holdの消費ACKを無損失取得と呼ばない。通常frameごとに全bodyをJSON転送する現候補を軽量常駐の達成とせず、次は別版の表示cacheと既存日本語特徴のnative配備を比較する。[現在の層別判断](research/side-interior-current-decision-20261003.md)。既定60形、旧13/16形、保存・URL・Releaseは保持。
+
 ## 2026-10-03 — 文章から既知形を選ぶCPU候補の初回独立評価
 
 辞書・WordNet同義語・作者20nodeの連想グラフ・疎なTF-IDFを組み合わせ、既知60形か保留を返す約200KiB候補を別保存。独立担当が先に固定した人工120文へ初回840callを実行し、以後候補・閾値を変更しなかった。fullは正例の受理22/60中14正解・8誤形、従来baselineは受理29/60中19正解。誤反応は20/40→2/40だが、正例の受理精度も網羅率も改善しなかった。説明3/36・物語1/12で、サイドインテリアの意味理解へ既定採用しない。

@@ -24,6 +24,10 @@
 
 ### Metalの小窓・3形の独立比較版
 
+[専用native入力の独立監査](experiments/widget-metal-ambient-review-v1/REPORT.md)では人工callback12＋境界6を先に固定し、接続の初回18/18と修正後の同期待回帰を確認しました。IME・実窓・全アプリの取得とは区別します。
+
+Macの専用編集欄から同じ文字材料をMetalへ渡す比較も保存。入力取消と、大きい文字のまとまりによる応答上限の不具合を旧版ごと残し、別候補で修正しました。[接続の実装・回帰・限界](experiments/widget-metal-ambient-v1/REPORT.md)。実IME・実窓・常駐資源は未確認です。[サイドインテリアへの現在の実装判断](research/side-interior-current-decision-20261003.md)では、材料の蓄積、形の提案、入力経路、描画を分けています。
+
 球・箱・メビウスの文字表面をMac標準の描画へ移した候補。回転中の端切れを新v2で修正しました。実小窓の白い球・1,536描画・90秒ではCPU2.661%／charged peak68.298MiBですが、60形版との機能差があり既定版は維持します。反復WKの描画周期gate失敗も原票ごと保存。[作成・操作](desktop/glyph-metal-lab-v2/README.md) / [画面と射影](experiments/widget-metal-framing-v2/README.md) / [実窓比較・制限](experiments/widget-metal-native-evaluation-v2/REPORT.md)。
 
 ### [▶ 小窓・形の保持と小型分類器の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/)

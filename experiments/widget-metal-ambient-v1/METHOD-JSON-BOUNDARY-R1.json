@@ -1,0 +1,18 @@
+{
+  "version": "native-json-response-boundary-r1",
+  "authoredBeforeProbeImplementationAndExecution": true,
+  "scope": "Post-freeze suspected boundary. Actual pure R3 plus actual Swift bridge; no UI/IME/real text. Separate from manual12/callback6/7 and independent reviewer fixtures.",
+  "stream": "256 cycles: exact synthetic commit of A +255 U+20D0 combining marks (256 UTF16, one expected operation-local grapheme) into empty dedicated document, then document-only delete to empty. Times monotonic. Final advance to10000. No raw input logging needed.",
+  "fixedExpected": {
+    "bodyUnits": 256,
+    "idsSequential": true,
+    "eachUnitUtf16": 256,
+    "bodyUtf16": 65536,
+    "canonicalDocumentUtf16": 0,
+    "allValidCommitsReturnView": true,
+    "maxResponseBytesMustFitFiniteReceiverBound": true,
+    "noNativeReadBodyTruncation": true
+  },
+  "suspectedFailure": "Existing131072B guard may throw after R3 already adds material. Preserve failure and last successful view metadata. current() lacks same guard; use only diagnostic to measure actual snapshot bytes in this artificial probe.",
+  "failurePolicy": "R2 app/source stays unchanged. Any correction new receiver-bridge native source/app, old method/results unchanged. Compute conservative JSON bound before choosing next guard. Never trim glyph payload or silently count hold as success."
+}

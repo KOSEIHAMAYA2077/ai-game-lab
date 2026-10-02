@@ -1,0 +1,22 @@
+import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
+import { createContext, runInContext } from 'node:vm';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+const here = dirname(fileURLToPath(import.meta.url)), repo = resolve(here, '../..');
+const out = resolve(here, 'results-node-r1');
+try { await access(out); throw new Error('preserve results'); } catch (e) { if (e.code !== 'ENOENT') throw e; }
+await mkdir(out);
+const text = await readFile(resolve(here, 'work/bundle-r1/Receiver.js'), 'utf8');
+const context = createContext({}); runInContext(text, context, { timeout: 10000 });
+const evaluate = (fn, data) => { context.artificialJSON = data; const result = JSON.parse(runInContext(`AmbientNativeReceiver.${fn}(artificialJSON)`, context, { timeout: 10000 })); delete context.artificialJSON; return result; };
+const old = evaluate('evaluateOriginal20JSON', await readFile(resolve(repo, 'experiments/ambient-javascriptcore-v1/CASES-R3.json'), 'utf8'));
+const oldR1 = JSON.parse(await readFile(resolve(repo, 'experiments/ambient-javascriptcore-v1/results-r1/node.json'), 'utf8')).result;
+const fresh = evaluate('evaluateManualJSON', await readFile(resolve(here, 'fixtures/manual-r1.json'), 'utf8'));
+const normalize = value => Array.isArray(value) ? value.map(normalize) : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(k => [k, normalize(value[k])])) : value;
+const oldExact = JSON.stringify(normalize(old)) === JSON.stringify(normalize(oldR1));
+await writeFile(resolve(out, 'original20.json'), JSON.stringify(old, null, 2) + '\n');
+await writeFile(resolve(out, 'manual12.json'), JSON.stringify(fresh, null, 2) + '\n');
+await writeFile(resolve(out, 'summary.json'), JSON.stringify({ original20Passed: old.passed, original20ExactWithOldR1: oldExact, manual12Passed: fresh.passed, bundleSha256: createHash('sha256').update(text).digest('hex'), failures: fresh.runs.filter(r => !r.passed) }, null, 2) + '\n');
+console.log(JSON.stringify({ original20Passed: old.passed, oldExact, manual12Passed: fresh.passed, failures: fresh.runs.filter(r => !r.passed).map(r => ({ id: r.id, failures: r.failures })) }));
+if (!oldExact || old.passed !== 20 || fresh.passed !== 12) process.exitCode = 1;

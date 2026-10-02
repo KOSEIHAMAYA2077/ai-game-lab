@@ -1,0 +1,181 @@
+{
+  "version": "independent-native-ambient-summary-r1",
+  "scope": "Unattached artificial NSTextView callbacks and CPU/JSC source review only",
+  "createdAt": "2026-10-02T23:00:59.030090+00:00",
+  "actualWindow": false,
+  "actualNativeIME": false,
+  "OSCapture": false,
+  "GPUOperations": 0,
+  "callbackGroups": {
+    "CALLBACKS-R2-FIRST-R1.json": {
+      "groups": {
+        "independent_boundary": {
+          "total": 6,
+          "passed": 6
+        },
+        "independent_callback": {
+          "total": 12,
+          "passed": 12
+        },
+        "known_cancel_regression": {
+          "total": 1,
+          "passed": 1
+        }
+      },
+      "failedIDs": [],
+      "zeroCallbackBridgeErrors": true,
+      "aggregateMatchesSaved": true
+    },
+    "CALLBACKS-EDITOR-R1-NEGATIVE-R1.json": {
+      "groups": {
+        "independent_boundary": {
+          "total": 6,
+          "passed": 6
+        },
+        "independent_callback": {
+          "total": 12,
+          "passed": 10
+        },
+        "known_cancel_regression": {
+          "total": 1,
+          "passed": 0
+        }
+      },
+      "failedIDs": [
+        "C05",
+        "C12",
+        "K01"
+      ],
+      "zeroCallbackBridgeErrors": true,
+      "aggregateMatchesSaved": true
+    },
+    "CALLBACKS-BUILD-R5-REGRESSION-R1.json": {
+      "groups": {
+        "independent_boundary": {
+          "total": 6,
+          "passed": 6
+        },
+        "independent_callback": {
+          "total": 12,
+          "passed": 12
+        },
+        "known_cancel_regression": {
+          "total": 1,
+          "passed": 1
+        }
+      },
+      "failedIDs": [],
+      "zeroCallbackBridgeErrors": true,
+      "aggregateMatchesSaved": true
+    }
+  },
+  "sourceChecks": {
+    "SOURCE-PIN-R1.json": {
+      "checkedFiles": 43,
+      "groups": {
+        "sourceFiles": 27,
+        "appFiles": 6,
+        "compiledSwift": 10
+      },
+      "allStillMatch": true
+    },
+    "SOURCE-PIN-R2.json": {
+      "checkedFiles": 50,
+      "groups": {
+        "sourceFiles": 30,
+        "appFiles": 6,
+        "compiledSwift": 10,
+        "original-R3-readonly": 4
+      },
+      "allStillMatch": true
+    }
+  },
+  "knownResponseBoundary": {
+    "JSON-BOUNDARY-OLD-R2.json": {
+      "bodyCount": 256,
+      "bodyUTF16": 65536,
+      "nativeDecodedViewReencodedBytes": 139704,
+      "sendErrorCount": 33,
+      "firstSendError": {
+        "commandIndex": 481,
+        "op": "commit"
+      },
+      "idsCorrect": true,
+      "prefixChecks": true,
+      "inkPreserved": true,
+      "textsPreserved": true,
+      "passed": true
+    },
+    "JSON-BOUNDARY-NEW-R2.json": {
+      "bodyCount": 256,
+      "bodyUTF16": 65536,
+      "nativeDecodedViewReencodedBytes": 139704,
+      "sendErrorCount": 0,
+      "firstSendError": {},
+      "idsCorrect": true,
+      "prefixChecks": true,
+      "inkPreserved": true,
+      "textsPreserved": true,
+      "passed": true
+    }
+  },
+  "teacherShaderByteMatch": {
+    "path": "desktop/glyph-metal-lab-v4/Sources/Glyphs.metal",
+    "sha256": "75a1aa21d61860483bc999fd4cd9c5e027d6aef71edcf3872192024573e3bd82",
+    "bytes": 23850,
+    "matches": true,
+    "GPUReplay": false
+  },
+  "codesignVerify": [
+    {
+      "path": "experiments/widget-metal-ambient-v1/work/GlyphMatter-Ambient-ProducerR2-BuildR4.app",
+      "exitCode": 0,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "path": "experiments/widget-metal-ambient-v1/work/GlyphMatter-Ambient-ProducerR2-BridgeR2-BuildR5.app",
+      "exitCode": 0,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    }
+  ],
+  "JSONGuardArithmetic": {
+    "perUnitUTF16Max": 256,
+    "maxUnits": 256,
+    "worstJSONBytesPerUTF16": 6,
+    "fixedPerUnitBudgetBytes": 64,
+    "fixedFrameMetadataBudgetBytes": 8192,
+    "totalBudgetBytes": 417792,
+    "newGuardBytes": 524288,
+    "marginBytes": 106496,
+    "conditionalOnFrozenSchema": true,
+    "rawFrameExactMeasurement": false,
+    "wholeAppRAMClaim": false
+  },
+  "conservativeUnmarkPolicyNotGeneralIME": true,
+  "permanentCapacityACKConsumedNotLossless": true,
+  "hidePathsNotAllExplicitlyCancelPreedit": true,
+  "frameJSONIsFullBodyReadViewNotDelta": true,
+  "initialHelperFailure": {
+    "version": "first-helper-compile-r1",
+    "compileExitCode": 1,
+    "compilerMessage": "IndependentJSONBoundary-r1.swift:30:17 missing whitespace between || and ! operators",
+    "followingLaunchExitCode": 127,
+    "probeCalls": 0,
+    "productSourceChanges": 0,
+    "expectedMethodChanges": 0,
+    "preservedSource": "IndependentJSONBoundary-r1.swift",
+    "repair": "New r2helper only adds operator whitespace and outputversion, before actual probe."
+  },
+  "sourceTeacherScopeDifference": {
+    "preResultMethod": "old3shapeR5teacher",
+    "receivedShaderComparedTo": "desktop/glyph-metal-lab-v4/Sources/Glyphs.metal",
+    "oldR5ThreeShapeByteIdentityClaim": false
+  },
+  "replayShell": {
+    "syntaxExitCode": 0,
+    "additionalFullReplayExecutions": 0,
+    "reason": "Initial callbacks and known regressions already saved; no extra product testing warranted."
+  }
+}

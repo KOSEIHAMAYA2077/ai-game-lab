@@ -1,5 +1,29 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 08:09 JST
+
+期限10:37、10:17以降新機能停止。PR37有限検索R1/独立120文はmain1730dbfへmerge・添付済み。rootはexperiment/ambient-native-r2で作者94/独立39返却とmanifest自身/共有文書を検査、公開選択141＋公開記録2をPR38へ準備中。実compiled10/source30/app6一致、strict署名・保存算術・JSON/リンク/具体privatepathに問題0。Mac lockのため新native実UI/IMEは未確認、全アプリ取得なし。
+
+R5取消・応答guardは旧失敗を保持して修正回帰。独立callback12＋境界6は初回18/18、R5同期待18/18、既知取消1と旧guard33→0は分離。通常15fpsの全body JSON転送・hide全経路・一般unmarkの取りこぼし・容量ACK消費を制限として残す。旧60形/13形Release/16形候補と保存・URLは保持。
+
+static_fresh_evaluationは新desktop/glyph-metal-ambient-cache-v1＋experiments/widget-metal-ambient-cache-v1のみ所有。14 native/3core/8不正wire、warm/cold同fixtureの局所転送・CPU比較を事前固定して実装中。
+
+static_japanese_retrievalはnative-static-japanese-v1のみ所有。R5は固定709旧oracleのIDs/順位一致（R3失敗は保持、同集合回帰）、lean1382callは最大45.65MB process peak、shortqueryp95.0438ms。wholewidget/16GB/意味精度の結果ではない。私的検査語を含む旧FINAL-QA-R5はlocal保持/public除外、newQA/manifestを準備。widget_metal_comparisonは新native-static-japanese-review-v1のみで20手書き＋source-informed4補助を別に固定し、oldoracleを先に計算、candidate返却後の初回callを待つ。ownedcaffeinate83393は期限管理、未知82495触らない。OS設定変更・実本文外部送信なし。
+
+以下は前の状態の履歴。
+
+## 最新: 2026-10-03 07:53 JST
+
+期限10:37、10:17以降新機能停止。PR37（有限検索R1と独立120文、既定不採用）は1730dbfへmerge・添付済み。rootはexperiment/ambient-native-r2で返却native95公開file/実compiled10/source30/app6をSHA・署名・JSON・具体privatepath・リンク検査し、独立reviewの返却を待ってPR38へ公開する。新しい層別判断をresearch/side-interior-current-decision-20261003.mdに整理。
+
+返却native R5は唯一R3body→Metal、作者manual12/旧20/GPU10を別母数で確認。取消旧5/6→同6＋追加1、応答guard旧187send失敗→別bridge0。独立12callback＋6境界＋known1は固定R4/R5で合格、別の長いclusterではR4の33send失敗→R5の0。実IME/実窓/OS取得/常駐資源は未確認、Mac lockを解除しない。通常15fpsで全body JSON転送する現候補は軽量常駐の達成としない。
+
+static_fresh_evaluationは新desktop/glyph-metal-ambient-cache-v1＋experiments/widget-metal-ambient-cache-v1のみ所有し、材料変化時の読み取り表示cacheを事前METHOD/fixtureから比較中。旧native-v1は返却済みroot所有。widget_metal_comparisonはwidget-metal-ambient-review-v1のみでR5最終監査をまとめ中。
+
+static_japanese_retrievalはnative-static-japanese-v1のみ所有。固定709oracleでR3の正規化1件失敗を保持しR4全IDs/順位一致の既知回帰に通過、leanCLI資源を別process測定中。これは意味品質改善ではなく、旧8MiB静的特徴の配備比較。次の独立配備境界20をreview返却後に予定。旧版・保存・URL・Release、owned caffeinate83393を保持、未知82495触らない。実本文の外部送信・設定変更・OS監視なし。
+
+以下は前の状態の履歴。
+
 ## 最新: 2026-10-03 07:31 JST
 
 期限10:37、10:17以降新機能停止。PR33専用DOM/R2、PR34独立2h offscreen完走、PR35文字表面R2/実ASCII画面、PR36骨格native16はmainへmerge・タスク添付済み。旧60形Web・URL・保存・Releaseは保持。native13実窓の4形資源とnative16のoffscreen/locked attemptを分ける。Mac lockを解除せず、新nativeの実窓は未確認。
