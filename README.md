@@ -1,8 +1,8 @@
-# 文字のかたち — AI Game Lab
+# Glyph Matter — 文字のかたち
 
-### [▶ ブラウザで試す](https://koseihamaya2077.github.io/ai-game-lab/)
+### [▶ ブラウザで試す](https://koseihamaya2077.github.io/glyph-matter/)
 
-ダウンロード・インストール不要。Enterで入力欄を開き、好きな文章を加えると、その文字が3Dの形を作って流れます。`表面 鳥`、`表面 魚`、`表面 蛇`、`表面 メビウスの輪`などを試せます。[執筆モード](https://koseihamaya2077.github.io/ai-game-lab/?write) / [公開版と保存について](docs/WEB_DEMO.md)。
+ダウンロード・インストール不要。Enterで入力欄を開き、好きな文章を加えると、その文字が3Dの形を作って流れます。`表面 鳥`、`表面 魚`、`表面 蛇`、`表面 メビウスの輪`などを試せます。[執筆モード](https://koseihamaya2077.github.io/glyph-matter/?write) / [公開版と保存について](docs/WEB_DEMO.md)。
 
 **軽量モデルで、曖昧な言葉からその場で3Dの形を作る表現を研究・試作中。** 一般的なPCで動き、蓄積した文字を形の表面へ流せることを目標にしています。
 
@@ -10,7 +10,7 @@
 
 公開中の試遊版は、用意した60形と語彙・連想グラフ・限定した曖昧検索で動く「根性版」に、鳥・魚・蛇の骨格を追加した版です。試遊中のモデル推論は使いません。軽量モデルによる任意の3D形状生成は、まだ研究段階です。
 
-[公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/ai-game-lab/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
+[公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/glyph-matter/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)
 
 ---
 
@@ -22,7 +22,7 @@
 
 **現在地: 制作方法の設計は完了。文字の集合P0に、導入・HELP・花火・筆画実験・執筆と日記を追加。v0.5.0を試せる。**
 
-[進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/ai-game-lab/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/ai-game-lab/releases)
+[進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/glyph-matter/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)
 
 **目的は、思いついた遊びを少ない手間で実際に触れる形にし、次の判断ができるようにすること。** 素材の独自制作、細かな手触り、販売用の完成度を先に追わない。無料で使える既存素材と図形・文字を活用する。
 
