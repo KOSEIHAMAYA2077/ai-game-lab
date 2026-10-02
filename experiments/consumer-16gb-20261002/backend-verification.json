@@ -1,0 +1,30 @@
+{
+  "cpu": [
+    "0.00.194.740 I load_tensors: offloading 0 repeating layers to GPU",
+    "0.00.194.740 I load_tensors: offloaded 0/25 layers to GPU",
+    "0.00.194.741 I load_tensors:          CPU model buffer size =     0.00 MiB",
+    "0.00.195.702 I llama_kv_cache:        CPU KV buffer size =     0.00 MiB",
+    "0.00.198.261 I sched_reserve:        CPU compute buffer size =    12.65 MiB",
+    "0.00.198.261 I sched_reserve:        CPU compute buffer size =    12.65 MiB",
+    "0.00.398.853 I load_tensors: offloading 0 repeating layers to GPU",
+    "0.00.398.854 I load_tensors: offloaded 0/25 layers to GPU",
+    "0.01.018.042 I llama_kv_cache:        CPU KV buffer size =    24.00 MiB",
+    "0.01.023.433 I sched_reserve:        CPU compute buffer size =    12.65 MiB",
+    "0.01.140.568 D ~llama_context:        CPU compute buffer size is  12.6451 MiB, matches expectation of  12.6451 MiB",
+    "0.01.140.569 D ~llama_context:        CPU compute buffer size is   0.0000 MiB, matches expectation of   0.0000 MiB"
+  ],
+  "metal": [
+    "0.00.194.582 I load_tensors: offloading output layer to GPU",
+    "0.00.194.583 I load_tensors: offloading 23 repeating layers to GPU",
+    "0.00.194.583 I load_tensors: offloaded 25/25 layers to GPU",
+    "0.00.194.583 I load_tensors:          CPU model buffer size =     0.00 MiB",
+    "0.00.200.474 I sched_reserve:        CPU compute buffer size =     2.50 MiB",
+    "0.00.200.474 I sched_reserve:        CPU compute buffer size =     2.50 MiB",
+    "0.00.409.245 I load_tensors: offloading output layer to GPU",
+    "0.00.409.246 I load_tensors: offloading 23 repeating layers to GPU",
+    "0.00.409.247 I load_tensors: offloaded 25/25 layers to GPU",
+    "0.00.418.201 I sched_reserve:        CPU compute buffer size =     2.50 MiB",
+    "0.00.509.164 D ~llama_context:        CPU compute buffer size is   2.5045 MiB, matches expectation of   2.5045 MiB",
+    "0.00.509.164 D ~llama_context:        CPU compute buffer size is   0.0000 MiB, matches expectation of   0.0000 MiB"
+  ]
+}
