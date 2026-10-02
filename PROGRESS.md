@@ -2,6 +2,8 @@
 
 ## 2026-10-02 — 断面のねじれと色の構造分離
 
+19:55 JSTに公開確認まで完了。延長作業約2時間22分、専用スリープ防止と期限付き自動作業は停止。[Release](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases/tag/glyph-matter-v0.13.1-twist.1) / [PR21](https://github.com/KOSEIHAMAYA2077/glyph-matter/pull/21)。
+
 `0.13.1-twist.1`で箱/刃の実体をねじり、文字の位相移動と分けた。色語を構造解析のコピーから除き、元の文字と入力の色を保つ。モデル重み・閾値・captionは固定。CPU/実Workerで186色付き文の全Programが色なしと一致。
 
 太管が小球を包む等の貫通反例を保留へ落とす。通常18組合せを維持し、54例中39受理、受理39は0〜120秒の独立10時刻で実材質交差。有限の数値確認で連続時間保証ではない。132単体・type/build、実UI62操作は例外/入力外部要求0、既知44例に退行なし。[比較・残る範囲](experiments/physical-twist-v1/README.md)。試遊入口は[twist-v1](https://koseihamaya2077.github.io/glyph-matter/twist-v1/)。旧3公開入口は保持。 冷初回は取得・演出を含め12.213秒、準備後は3.970〜4.027秒。30秒以内だが冷初回10秒目標は未達。一般的な16GB機は未測定。[独立評価](experiments/physical-twist-v1/evaluation/REPORT.md)。
