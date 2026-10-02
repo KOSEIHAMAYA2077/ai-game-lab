@@ -1,0 +1,98 @@
+{
+  "schema": 2,
+  "renderer": "wk",
+  "phase": "hidden",
+  "samples": 61,
+  "elapsed_seconds": 30.009546,
+  "explicit_pid_group": [
+    90619,
+    90631,
+    90633,
+    90634
+  ],
+  "body_expectation": {
+    "stored": 1537,
+    "drawn": 1536,
+    "shape": 0,
+    "label": "white sphere"
+  },
+  "viewport_expectation": {
+    "width": 400,
+    "height": 440,
+    "proof": "requested; actual Metal telemetry checked, WK requires root inspection"
+  },
+  "frames_first": 4489,
+  "frames_last": 4489,
+  "frames_delta": 0,
+  "frames_per_wall_second": 0.0,
+  "cpu_single_core_percent": 0.17850750557839162,
+  "per_process": [
+    {
+      "pid": 90619,
+      "role": "root-attributed",
+      "cpu_single_core_percent": 0.006527229702175434,
+      "process_lifetime_max_footprint_bytes": 29852656
+    },
+    {
+      "pid": 90631,
+      "role": "root-attributed",
+      "cpu_single_core_percent": 0.08118874907337818,
+      "process_lifetime_max_footprint_bytes": 73827168
+    },
+    {
+      "pid": 90633,
+      "role": "root-attributed",
+      "cpu_single_core_percent": 0.0,
+      "process_lifetime_max_footprint_bytes": 10371696
+    },
+    {
+      "pid": 90634,
+      "role": "root-attributed",
+      "cpu_single_core_percent": 0.090791526802838,
+      "process_lifetime_max_footprint_bytes": 85967784
+    }
+  ],
+  "charged_footprint_bytes": {
+    "first": 135007616,
+    "median": 135007616,
+    "peak": 135007616,
+    "last": 135007616
+  },
+  "RSS_bytes": {
+    "first": 222707712,
+    "median": 222707712,
+    "peak": 222724096,
+    "last": 222724096
+  },
+  "declared_fixture_differences": {
+    "perfect_body_or_pixel_equivalence": false,
+    "declared": [
+      "WK24types / Metal22types",
+      "ID/seed/rawbatch grouping",
+      "font/rasterizer/color management",
+      "dynamic camera/time trajectories"
+    ],
+    "history": "Artificial input only in new WK bundle and fixture history-off Metal",
+    "Metal_kinds": 22,
+    "WK_kinds": 24
+  },
+  "comparison_observations": {
+    "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+  },
+  "validation_passed": true,
+  "validation_errors": [],
+  "warnings": [
+    "WK shape/camera/viewport/atlas bytes rely on root sidecar inspection; absent from native telemetry",
+    "charged footprint sum is not unique system RAM; frame telemetry is not presentation FPS; shader/submit ms is wall elapsed; UI/ownership proof is root supplied; no GPU/power/laptop measurement"
+  ],
+  "candidate_budget": {
+    "cpu_limit_single_core_percent": 5,
+    "charged_peak_limit_MiB": 200,
+    "within_values": true,
+    "eligible_only_if_validation_passed_and_phase_calm": false
+  },
+  "source": "wk-r1-hidden.json",
+  "source_sha256": "73c1a2cd5bbf4fc20cf204719709dfd677aa251a59fe1e27ed6e36d5e24cbb01",
+  "expectation": "wk-r1-expectation.json",
+  "expectation_sha256": "b3621b9036bcba470eca2731278cb218b99a8113246bc59d98ff14ef5c8edebe"
+}

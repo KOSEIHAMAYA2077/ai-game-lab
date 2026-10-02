@@ -1,28 +1,31 @@
 # 小窓版の継続状況
 
-## 最新: 2026-10-03 03:50 JST
+## 最新: 2026-10-03 04:31 JST
 
-追加の使用像は、創作・プログラミング・仕事中の入力を材料に育つサイドインテリア。既存の改良を継続し、02:37から8時間の設計分析を追加。新期限10:37 JST（2026-10-03 01:37 UTC）、10:17から新機能を止めまとめる。専用caffeinateはPID83393へ置換（8時間限定、旧専用52785だけ終了）。同タスク20分継続3d-5も更新済み。今回の追加は使用想定と分析であり、OS全体入力監視を開始・設定変更していない。Macロック時は解除を求めずoffscreen/コード/資料を続け、通常窓の計測としない。02:48頃にはR2 nativeを実操作可能になり短いsmokeを行った。8時間の実窓資源測定ではない。
+最新の8時間分析は02:37〜10:37 JST、10:17以降新機能停止。専用caffeinate83393は期限付き、未知82495は触らない。heartbeat3d-5は20分、意味ある変化だけ通知。全アプリ入力という使用像を受け、人工契約・サイドインテリアの分析を継続。OS入力取得・権限／設定変更・有料API・実本文送信は未実行。
 
-### 保存した区切り
+### 公開済み
 
-- A v0.14.1 / tag `glyph-matter-v0.14.1-widget.2` / commit `ca65073` / PR #25はmainへmerge。Pages run37037565082成功、旧5版と新widget-v2の6manifestを確認。macOS Release ZIPの新展開先strict署名成功。関連4PIDの基準→A→基準CPU13.278→12.110→11.798%から全CPU改善は未確認、RAM低い観測値でも200MiB/5%未達。
-- Bはbranch `experiment/widget-atlas-student-v3`、統合commit `8acd4f3`。段階atlasをwidgetだけON、根性60形・メビウス・生き物を保持、guard-v2 tinyを約122KBの実験選択肢へ遅延読込。旧保存を触らないkeyv3 / bundleIDv3。23実WebGL UI回帰、15吸収完了最長3.95秒、174単体成功。atlas48GPU条件のCanvas全一致/GPU最大2/255以内は論理画像比較でnativeRAM未測定。
-- exact8acd sourceを隔離production buildし、32k/1536・全文/旧色・reload容量回帰成功。native0.14.2 R1新アプリはBuildInfo source/web全hash・strict署名成功、実nativeUI未確認。公開前の独立reviewで、kind1024上限で追加0の入力が消える不具合と入力previewの選択色不一致を再現。rootは追加0でdraft/shape/pauseを保持、previewと送信の色優先順位をそろえる修正を行い、型/174単体成功。修正commit c016661の再production・独立23項目/60形の選択が成功。新R2 ZIPのstrict署名/hash照合と、native日本語paste/表面/再起動/pause/hide/復帰の短いsmokeも成功。R1と失敗原票は保存。PR #26をmainへmergeしtag `glyph-matter-v0.14.2-widget.3` / widget-v3 / macOS arm64 Releaseへ公開。Pages37044049023成功、旧6版と新v3の7manifestを同時照合して全一致。追加の研究分析は新branch `research/ambient-side-interior-v1` で続ける。
-- tiny fresh120: guard-v2全体79/120、表現可能21/44、明確な保留の誤反応2/40。全文訓練一致0でも分類クエリに大量一致。AI合成意図、人間評価なし。既定60形を置き換えない。
-- static retrievalとfresh140は所有返却済み。全1024guard正解30/80・要求受理34/80・保留誤反応5/40、128guard23/80・受理23/80・誤反応3/40。日本語21/40、英語2/40。1024mmap独立PythonRSS約90MiB/p95約0.136msは窓全体ではない。128f16は最終判断一致、生top1 139/140一致。未知文字span失敗を別v3診断へ保持。既定採用見送り、研究比較に保持。
-- Metal R5は別AppKit/Metal/CoreTextアプリの球/箱/メビウス。CPU1213/GPU581確認と3offscreen画像、BuildInfo/strict署名成功。ロック中startupはframe0で通常資源測定から除外。60形/rig/model/実IMEは未移植/未検証。
+- widget-v3、tag glyph-matter-v0.14.2-widget.3、PR26 merge、macOS arm64 Release・Pages成功。根性60形既定、tiny約122KBは任意比較。旧7公開manifest全一致。174単体・type/build・23独立UI／60形選択・容量復元・新ZIP hash/strict署名・native短いsmoke成功。全IME/16GB性能は未検証。
+- PR27 ambient API30一次資料・研究プロトコル、PR28入力契約／HCI本文／境界レビューはmainへmerge・タスク添付。人工28fixture/51run・10probe・7mutationはroot replay済み。OS連動や既存widget接続とはしない。
+- tinyfresh120 guard79/120、表現可能21/44、保留誤反応2/40。staticfresh140要求1024guard30/80・128guard23/80、英語2/40。合成ラベル・分類クエリ重複・人間評価なし。既定不採用。
 
-### 進行中と所有
+### 現在の所有と原票
 
-1. root: 版管理・公開・状態文書、新しいMetal v2描画候補と実UI。PR #27の入力API/研究計画をmainへ公開済み。返却済み入力契約・HCI本文・境界レビューを独立して公開準備。Metal v1のメビウスが回転中に切れる問題を新v2へ修正し、CPU射影35,763条件はR2で切断0、実GPU/入力直後/手動寄りは別評価。旧ソースとアプリを保持する。
-2. `static_fresh_evaluation`: 入力契約を返却。人工28fixture/51run・probe10・mutation7成功、rootも同じrunを再実行。新 `experiments/ambient-material-scheduler-v1/` のみ所有し、材料蓄積と形判断の低頻度化を人工streamで比較中。上流契約/既存widgetとの接続は未実装。
-3. `static_japanese_retrieval`: HCI本文8論文と境界レビューを返却。新 `experiments/ambient-integration-map-v1/` のみ所有し、adapter/schema→canonical→materialの将来変換と保存offを整理。実OS取得はしない。
-4. `widget_metal_comparison`: R1/R2の独立射影評価を返却。新 `experiments/widget-metal-soak-recovery-v1/` のみ所有し、中断の記録と再走行条件をread-onlyレビュー。旧2時間soakは約30分の記録で止まりfinalなし、03:43で2PID不在を確認。原票を保持し、2時間完走とは報告しない。
+1. root: branch experiment/metal-framing-v2-r2（base origin/main d1fcefe）。新desktop/glyph-metal-lab-v2、framing／native評価／soak／回復、返却済みscheduler/map/Windows文書、公開と共有docsを所有。旧v1/アプリ/タグ/保存を保持。
+2. static_fresh_evaluation: experiments/ambient-integration-contract-v1/のみ。20人工casesとMETHODを04:24頃事前freezeし、唯一material body/ID・全体add後ACK・保存off allowlist等を独立実装中。返却済みschedulerは51人工streams×3方針、R2保存off退行確認。実OS/人間ではない。
+3. static_japanese_retrieval: Windows文書 research/widget-cross-platform-runtime-v1/ は返却（公式30資料、Windows実測0）。新desktop/glyph-metal-lab-v3/とexperiments/widget-metal-authored-v3/のみ所有。v2を保持し剣/花瓶/クラゲの既存Web式をGPU/CPUへ段階移植、実UIはrootが担当。
+4. widget_metal_comparison: experiments/widget-metal-native-evaluation-v2/review-real-r1/のみ。既存原票の独立read-only数値監査。原票/閾値/共有source/UI/processへ書かない。
+
+Metal v2は独立CPU射影35,763条件でR2画面/near/far切断0。R1far失敗を保存、CPU1,213/GPU581成功。新R2実窓で近い初期@・日本語paste・3形・旧白/新青・pause/Hide/実Quit確認。新通常比較は .local/widget-metal-native-v2-r1/ 、全28原票/BuildInfo/画像byte一致公開copy。WK→Metal→WK反復: CPU8.858→2.661→7.681%、charged peak173.253→68.298→124.253MiB。最初の6phaseはvalidatorPASS、反復WK通常は13.977counter/wall-sでFAIL。約5秒の診断更新差による可能性を独立調査、後付けweb uptimeは原FAILを変えない。機能60形対3形／camera/字体/seed違い、一般PC/電力/長期未実証。全計測appは終了済み。初回WKのHide後終了はtimeout後own主PID終了、実Quit成功とはしない。
+
+### 新2時間offscreen r2
+
+旧PID83137/83230消失・約30分／finalなしを保存。旧記録を足し合わせない。新supervisor30秒preflightはexit0、14.996fps／MTL0、最初の誤path拒否も保存。凍結R5新r2は04:25:03開始、06:25:03予定。supervisor93048/engine93049/sampler93050、出力 .local/metal-soak-2h-r2/ と .local/metal-soak-2h-r2-attempt/ 。source SHA・stdout/stderr・exit/childidentityを突合。まだ完走ではなく、実窓／8時間／履歴保存試験ではない。所有だけを確認し、PID再利用や他プロセスは止めない。
 
 ### 次の一実験
 
-B公開・全旧manifest不変を確認済み。新しい分析の主軸は他アプリ入力連動で、キーイベントとIME確定文字・貼付・編集差分を分け、macOS/Windows一次APIと権限/制約から方式を選ぶ。命令入力の解釈と、通常文を低頻度で視覚へ反映するモードを分ける。人工イベントで蓄積・重複・取消・負荷・情報を保存しない経路を比較し、実入力の監視はまだ開始しない。研究文書には実装済み/未実装、AI合成/人手、未見/回帰、offscreen/窓、取得量/RAMを分けて残す。
+Metal v2の公開source・画像・短時間原票をチェックして別PRへ保存。返却済みscheduler/map/Windows文書も別研究PRへ接続し、材料を先に足し形は低頻度で判断する統合gateの結果を待つ。Metal v3は形の表面・クラゲ動作を保持できてから実操作と資源比較へ。10:17以降新機能を止め、10:37までに結果／残る制限を公開、automation停止、所有caffeinate83393だけ終了。
 
 
 以下は01:10時点の履歴。最新の判断は上の節を参照する。

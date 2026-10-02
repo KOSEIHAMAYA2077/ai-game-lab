@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "renderer": "wk",
+  "main_pid": 92146,
+  "processes": [
+    {
+      "pid": 92146,
+      "start_abstime": 10210792233296,
+      "coalition_resource_id": 61314,
+      "coalition_jetsam_id": 61315,
+      "role": "app"
+    },
+    {
+      "pid": 92147,
+      "start_abstime": 10210795362445,
+      "coalition_resource_id": 61314,
+      "coalition_jetsam_id": 61315,
+      "role": "GPU"
+    },
+    {
+      "pid": 92148,
+      "start_abstime": 10210795599594,
+      "coalition_resource_id": 61314,
+      "coalition_jetsam_id": 61315,
+      "role": "Networking"
+    },
+    {
+      "pid": 92149,
+      "start_abstime": 10210796603514,
+      "coalition_resource_id": 61314,
+      "coalition_jetsam_id": 61315,
+      "role": "WebContent"
+    }
+  ],
+  "app_version": "0.14.2",
+  "body": {
+    "stored": 1537,
+    "drawn": 1536,
+    "shape": 0,
+    "label": "white sphere"
+  },
+  "viewport": {
+    "width": 400,
+    "height": 440,
+    "proof": "requested; actual Metal telemetry checked, WK requires root inspection"
+  },
+  "conditions": {
+    "ui_confirmed": true,
+    "heavy_work_absent": true,
+    "settled_body_confirmed": true,
+    "proof": "root supplied; not independently verified by this helper"
+  },
+  "expected_native_bytes": {},
+  "fixture_differences": {
+    "perfect_body_or_pixel_equivalence": false,
+    "declared": [
+      "WK24types / Metal22types",
+      "ID/seed/rawbatch grouping",
+      "font/rasterizer/color management",
+      "dynamic camera/time trajectories"
+    ],
+    "history": "Artificial input only in new WK bundle and fixture history-off Metal",
+    "Metal_kinds": 22,
+    "WK_kinds": 24
+  },
+  "comparison_observations": {
+    "camera_font_and_WK_bytes": "Add root scene snapshot observations separately; not exposed by native WK telemetry"
+  },
+  "source": {
+    "attribution": "wk-repeat-r1-attribution.json",
+    "attribution_sha256": "5c7dbea2ab85b968f90a717af84ee56bb0e309580e15817b5be32f3845d0c484",
+    "method": "METHOD-ROOT.json",
+    "method_sha256": "e0ee2c415bd3ad324d3bacda3072fe3659531822044543aafec15383754a81ee"
+  }
+}

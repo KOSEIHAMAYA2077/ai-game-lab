@@ -1,5 +1,9 @@
 # Glyph Matter — 文字のかたち
 
+### Metalの小窓・3形の独立比較版
+
+球・箱・メビウスの文字表面をMac標準の描画へ移した候補。回転中の端切れを新v2で修正しました。実小窓の白い球・1,536描画・90秒ではCPU2.661%／charged peak68.298MiBですが、60形版との機能差があり既定版は維持します。反復WKの描画周期gate失敗も原票ごと保存。[作成・操作](desktop/glyph-metal-lab-v2/README.md) / [画面と射影](experiments/widget-metal-framing-v2/README.md) / [実窓比較・制限](experiments/widget-metal-native-evaluation-v2/REPORT.md)。
+
 ### [▶ 小窓・形の保持と小型分類器の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/)
 
 根性の60形を標準にし、メビウスが単純な輪へ縮退する経路を修正。文字用画像は必要な行数だけ確保します。HELPで約122KBの小型分類器を選べますが、6形・最大2部位の実験用で、自由文の取りこぼしが残ります。[表現・操作・回帰](experiments/widget-atlas-student-v3/README.md) / [新しい120文の意味評価と限界](experiments/widget-student-v2-fresh/REPORT.md)。旧版のURLと文字履歴は保持します。

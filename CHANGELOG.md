@@ -1,5 +1,12 @@
 # 変更履歴
 
+## Metal 0.2.0・実窓比較 — 2026-10-03
+
+- 独立AppKit/Metal版で、身体・文字quad・FOVに応じたカメラ下限とfarを追加。元shaderは保持。近い初期@、球/箱/メビウス、文字・色・流れを確認。
+- R1の縦長far失敗を保存し、R2射影35,763条件・実GPU581・実UI/pause/Hide/終了を比較。吸収途中・手動寄り・全時刻の保証はしない。
+- WK v3／Metal v2の実小窓90/30/30秒とWK通常反復の明示PID原票を保存。反復のframe cadence FAIL、footprint変動、初回WK終了操作timeoutも記録。60形の既定採用・16GB性能・電力改善としない。
+- 旧soak中断原票を保存し、終了コード付き別supervisorの短期確認と新2時間走行を開始。窓の値とoffscreenの値を混ぜない。
+
 ## サイドインテリアの入力契約・HCI本文 — 2026-10-03
 
 - 人工入力の確定/候補/活動、undo・重複・有限queue・保存を独立reducerで比較。51run・10probe・7mutationをrootも再実行。OS取得や既存widgetへの接続は未実装。
