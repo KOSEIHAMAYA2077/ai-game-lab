@@ -1,0 +1,210 @@
+{
+  "model": "hotchpotch/static-embedding-japanese",
+  "revision": "95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3",
+  "sourceFiles": [
+    {
+      "path": "0_StaticEmbedding/model.safetensors",
+      "url": "https://huggingface.co/hotchpotch/static-embedding-japanese/resolve/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/0_StaticEmbedding/model.safetensors",
+      "bytes": 134217824,
+      "sha256": "f0c60b3d2952fb89e67a063ac4aa558ff4b02facaac5fd674d637b9e2c52ccca",
+      "upstreamHash": "f0c60b3d2952fb89e67a063ac4aa558ff4b02facaac5fd674d637b9e2c52ccca",
+      "upstreamAlgorithm": "sha256"
+    },
+    {
+      "path": "0_StaticEmbedding/tokenizer.json",
+      "url": "https://huggingface.co/hotchpotch/static-embedding-japanese/resolve/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/0_StaticEmbedding/tokenizer.json",
+      "bytes": 2127941,
+      "sha256": "833add01c9eb44e78ffb2d9195caace320de0fcf64d1f4d95bc541b6e30a9fc9",
+      "upstreamHash": "2e8ed6acb7b0779518ac6da8ea260aa4c2f03a56",
+      "upstreamAlgorithm": "gitblob"
+    },
+    {
+      "path": "README.md",
+      "url": "https://huggingface.co/hotchpotch/static-embedding-japanese/resolve/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/README.md",
+      "bytes": 28860,
+      "sha256": "d9d7c3b7cbe1020bb5d91e76a36514aef623e5d008dba12026730aeeadd58376",
+      "upstreamHash": "aa889bba0ca3dae3ad1a5a50afe80b167ed037d2",
+      "upstreamAlgorithm": "gitblob"
+    },
+    {
+      "path": "config_sentence_transformers.json",
+      "url": "https://huggingface.co/hotchpotch/static-embedding-japanese/resolve/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/config_sentence_transformers.json",
+      "bytes": 205,
+      "sha256": "e31e6204c64b3418e2c6166acb193e03e9f51898b586bbf1a4e0537fc45ccc12",
+      "upstreamHash": "d79e53e7906c4b0c432f2a176f3f813b2e7b2ff2",
+      "upstreamAlgorithm": "gitblob"
+    },
+    {
+      "path": "modules.json",
+      "url": "https://huggingface.co/hotchpotch/static-embedding-japanese/resolve/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/modules.json",
+      "bytes": 134,
+      "sha256": "84886d97ff5a6a536565e2a7ef8bbc91c7d6f5d1285cf18019a658b85a60ff54",
+      "upstreamHash": "ccc0b0011980186beef71c058f8fc41ae008fa13",
+      "upstreamAlgorithm": "gitblob"
+    }
+  ],
+  "safetensorsHeader": {
+    "embedding.weight": {
+      "dtype": "F32",
+      "shape": [
+        32768,
+        1024
+      ],
+      "data_offsets": [
+        0,
+        134217728
+      ]
+    }
+  },
+  "tables": [
+    {
+      "file": "table-1024-float32.bin",
+      "shape": [
+        32768,
+        1024
+      ],
+      "dtype": "float32",
+      "bytes": 134217728,
+      "sha256": "d24991e734292b66056d8056c55b7bd12e874045d0a7137159ecb0d6c174a4c3",
+      "method": "first dimensions of original embedding.weight; no retraining"
+    },
+    {
+      "file": "table-128-float32.bin",
+      "shape": [
+        32768,
+        128
+      ],
+      "dtype": "float32",
+      "bytes": 16777216,
+      "sha256": "6a1c57408b17f154c30ddb916319925a953de54c7c1f491b0b49433080c5e0d7",
+      "method": "first dimensions of original embedding.weight; no retraining"
+    },
+    {
+      "file": "table-128-float16.bin",
+      "shape": [
+        32768,
+        128
+      ],
+      "dtype": "float16",
+      "bytes": 8388608,
+      "sha256": "65122d239d6c9fd804deee853736446415dc815134277c87adb9978f7b9e2201",
+      "method": "first dimensions of original embedding.weight; no retraining"
+    }
+  ],
+  "tokenizer": {
+    "normalizer": {
+      "type": "Sequence",
+      "normalizers": [
+        {
+          "type": "Nmt"
+        },
+        {
+          "type": "NFKC"
+        },
+        {
+          "type": "Lowercase"
+        }
+      ]
+    },
+    "pre_tokenizer": {
+      "type": "Metaspace",
+      "replacement": "▁",
+      "prepend_scheme": "always",
+      "split": true
+    },
+    "post_processor": {
+      "type": "TemplateProcessing",
+      "single": [
+        {
+          "SpecialToken": {
+            "id": "<s>",
+            "type_id": 0
+          }
+        },
+        {
+          "Sequence": {
+            "id": "A",
+            "type_id": 0
+          }
+        },
+        {
+          "SpecialToken": {
+            "id": "</s>",
+            "type_id": 0
+          }
+        }
+      ],
+      "pair": [
+        {
+          "SpecialToken": {
+            "id": "<s>",
+            "type_id": 0
+          }
+        },
+        {
+          "Sequence": {
+            "id": "A",
+            "type_id": 0
+          }
+        },
+        {
+          "SpecialToken": {
+            "id": "</s>",
+            "type_id": 0
+          }
+        },
+        {
+          "SpecialToken": {
+            "id": "</s>",
+            "type_id": 0
+          }
+        },
+        {
+          "Sequence": {
+            "id": "B",
+            "type_id": 0
+          }
+        },
+        {
+          "SpecialToken": {
+            "id": "</s>",
+            "type_id": 0
+          }
+        }
+      ],
+      "special_tokens": {
+        "</s>": {
+          "id": "</s>",
+          "ids": [
+            2
+          ],
+          "tokens": [
+            "</s>"
+          ]
+        },
+        "<s>": {
+          "id": "<s>",
+          "ids": [
+            0
+          ],
+          "tokens": [
+            "<s>"
+          ]
+        }
+      }
+    },
+    "padding": null,
+    "truncation": null
+  },
+  "tokenizerModel": {
+    "type": "Unigram",
+    "unk_id": 3,
+    "byte_fallback": false
+  },
+  "tokenizerVocabSize": 32702,
+  "license": {
+    "metadata": "MIT",
+    "authorStatement": "model weights and training code are MIT",
+    "standaloneLicenseFile": false
+  }
+}

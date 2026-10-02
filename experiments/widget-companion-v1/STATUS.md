@@ -1,28 +1,29 @@
 # 小窓版の継続状況
 
-## 最新: 2026-10-03 02:10 JST
+## 最新: 2026-10-03 02:43 JST
 
-終了期限08:25 JST（前20分は公開とまとめ）は継続。期限付きcaffeinate PID52785と20分間隔の同タスク継続は有効。現在branch `experiment/widget-atlas-student-v3`。Macが01:52頃からロックされ、CUA実操作はできない。本人へ解除を求めず、OS設定や解除操作をせず、実装・オフスクリーン回帰・研究を続ける。ロック中の値を通常表示の資源測定にしない。
+追加の使用像は、創作・プログラミング・仕事中の入力を材料に育つサイドインテリア。既存の改良を継続し、02:37から8時間の設計分析を追加。新期限10:37 JST（2026-10-03 01:37 UTC）、10:17から新機能を止めまとめる。専用caffeinateはPID83393へ置換（8時間限定、旧専用52785だけ終了）。同タスク20分継続3d-5も更新済み。今回の追加は使用想定と分析であり、OS全体入力監視を開始・設定変更していない。Macロック時は解除を求めずoffscreen/コード/資料を続け、通常窓の計測としない。
 
 ### 保存した区切り
 
-- 基準v0.14.0と旧4版を保持し、描画A・保存修正をtag `glyph-matter-v0.14.1-widget.2` / commit `ca65073` / PR #25へ保存してmainへmerge。Pages run37037565082成功、新URL `widget-v2/` とmacOS arm64 Releaseを追加した。
-- Aは989frame・6,766,826成分最大差0、7形の実WebGL画素一致。実macOSの基準→A→基準再測定はCPU13.278→12.110→11.798%、charged footprint中央値218.93→207.60→215.39MiB。RAMは低い観測値だがCPU削減は再確認できず、200MiB/5%未達。停止の失敗2窓も原票へ保持。
-- 容量末尾でも送信原文全文を保存し、32,000保存/1,536描画・全原文/旧色のreload復元を実UI回帰で確認。公開commitを隔離して174単体・型・production build成功。Web保存key v2とnative bundle ID v2を分けて旧履歴を触らない。native停止診断の最終状態保存はR3実操作5秒smokeで確認。
-- v2配布最終R5はZIP SHA256 `e69a8dd47a79f64f3ec939dcaeee0858ac69b7f0d3fa4cd25b90ebf317d0c474`、別新規展開先でstrict署名成功。保存key変更後の最終R5はMacロック後なので再操作未確認。旧Desktopアプリの属性問題は以前の記録通りで、既存アプリを変更していない。
-- tiny freeze-1はJSON122,601B/展開91,136Bのchar n-gram線形分類。初回90文は訓練完全一致10文を除外して54/76、guard-v2は同重みに保留等の規則を加えた回帰62/76。新しい120合成文ではv1 64/120、guard79/120、規則58/120。表現可能正例44ではguard21/44、誤発火2/40が残る。全文訓練一致0でも切り出す分類クエリには多数一致。評価AIの合成ラベルで人間評価ではない。標準60形を置き換えない。
+- A v0.14.1 / tag `glyph-matter-v0.14.1-widget.2` / commit `ca65073` / PR #25はmainへmerge。Pages run37037565082成功、旧5版と新widget-v2の6manifestを確認。macOS Release ZIPの新展開先strict署名成功。関連4PIDの基準→A→基準CPU13.278→12.110→11.798%から全CPU改善は未確認、RAM低い観測値でも200MiB/5%未達。
+- Bはbranch `experiment/widget-atlas-student-v3`、統合commit `8acd4f3`。段階atlasをwidgetだけON、根性60形・メビウス・生き物を保持、guard-v2 tinyを約122KBの実験選択肢へ遅延読込。旧保存を触らないkeyv3 / bundleIDv3。23実WebGL UI回帰、15吸収完了最長3.95秒、174単体成功。atlas48GPU条件のCanvas全一致/GPU最大2/255以内は論理画像比較でnativeRAM未測定。
+- exact8acd sourceを隔離production buildし、32k/1536・全文/旧色・reload容量回帰成功。native0.14.2 R1新アプリはBuildInfo source/web全hash・strict署名成功、実nativeUI未確認。公開前の独立reviewで、kind1024上限で追加0の入力が消える不具合と入力previewの選択色不一致を再現。rootは追加0でdraft/shape/pauseを保持、previewと送信の色優先順位をそろえる修正を行い、型/174単体成功。再production/独立UI確認後に新R2を公開する。R1と失敗原票は保存。
+- tiny fresh120: guard-v2全体79/120、表現可能21/44、明確な保留の誤反応2/40。全文訓練一致0でも分類クエリに大量一致。AI合成意図、人間評価なし。既定60形を置き換えない。
+- static retrievalとfresh140は所有返却済み。全1024guard正解30/80・要求受理34/80・保留誤反応5/40、128guard23/80・受理23/80・誤反応3/40。日本語21/40、英語2/40。1024mmap独立PythonRSS約90MiB/p95約0.136msは窓全体ではない。128f16は最終判断一致、生top1 139/140一致。未知文字span失敗を別v3診断へ保持。既定採用見送り、研究比較に保持。
+- Metal R5は別AppKit/Metal/CoreTextアプリの球/箱/メビウス。CPU1213/GPU581確認と3offscreen画像、BuildInfo/strict署名成功。ロック中startupはframe0で通常資源測定から除外。60形/rig/model/実IMEは未移植/未検証。
 
 ### 進行中と所有
 
-1. `widget_render_budget`担当は `widget-main.ts` と新 `widget-atlas-student-v3/`。段階atlasをwidgetだけ有効にし、guard-v2を遅延読込の実験選択肢へつなぐ。tiny保留は形を保持して文字だけ追加し、60形へ救済しない。メビウスが有限programのringへ縮退する経路を別版で修正する。共有sourceへrootが同時編集しない。
-2. sceneの段階atlas Bは所有返却済み、現在unstaged差分。default OFF、1→2→4→8→16→32行。48 GPU条件合格、Canvas全一致/GPU最大2/255以内。最初の最大11不合格と修正を `widget-atlas-budget-v3/` に保持。native RAM効果は未測定。
-3. `widget_metal_comparison`担当は `desktop/glyph-metal-lab-v1/` と新実験だけ。AppKit/Metal/CoreTextで球/箱/メビウスを別アプリへ移植、GPUで位置と接線を計算。最終R5をCPU/GPU/offscreen検証・原文1MiB上限・排他的保存・BuildInfo SHAとともに準備中。UI/全CPU/RAMは未測定、60形/モデル未移植。
-4. `static_japanese_retrieval`担当は新 `static-japanese-retrieval-v1/` とignored localのみ。公式の日本語StaticEmbeddingを固定revision/安全なsafetensorsで取得し、1024→128次元のlookup+meanで60形の意味検索を比較する。約136MB取得、128次元表約16MiB候補。閾値/候補を固定してから独立評価を行う。資料値をアプリ資源や正確さの達成にしない。
-5. fresh120担当は所有返却済み、未commitの `widget-student-v2-fresh/` にREPORT/原票/freeze/クエリ重複の監査あり。native比較担当はロックにより新 `widget-metal-native-evaluation-v1/` の計画・集計コードだけ作成して所有返却。実測未実施。
+1. root: widget-main/state/版管理/研究map/STATUS/公開。追加0・色修正後のB production確認と独立reviewを受け、新tag/URL/Releaseへ保存する。R1は上書きしない。
+2. `static_fresh_evaluation`: `experiments/widget-v3-release-review-v1/`だけ所有。凍結8acd productionの独立source/UIレビュー、不具合原票と修正後回帰。共有sourceはrootだけ編集。
+3. `static_japanese_retrieval`: `research/widget-study-protocol-v1/`だけ所有。既知形・保留付き解釈のRQ、比較/分割/少人数人間評価/資源制約を設計。最新サイドインテリア像と命令/ambientの差を反映。
+4. `widget_metal_comparison`: `experiments/widget-metal-soak-v1/`だけ所有。frozenR5から2時間offscreen実時間表示、PID83137/session36101、02:35:33〜04:35:33 JST。explicitPID sampler session1218、5秒周期。1536文字400x440/15fps、10分毎の3形切替・人工入力/atlas成長・旧ID/色保持を記録。offscreen一process資源で窓全体のRAM/CPUではない。原文/旧アプリにアクセスしない。
 
 ### 次の一実験
 
-Atlas+tiny統合担当のUI回帰完了を受け取り、rootで保存key v3/packageの別version・BuildInfo・原文保持を整え、新URL/tag/native appへ保存する。rootは現在の担当が所有するwidget-mainを触らない。Metalの初回表示比較はMac解除が可能な時へ延期し、原票なしの資源削減を報告しない。静的埋め込みの独立fixtureはモデル担当のcalibrator/閾値を読む前に別担当が作って固定する。研究地図へ最新評価と各方式の境界を反映し、採用/不採用/未実測を分ける。
+Bを安全に公開し、全旧manifestが同じことを確認。新しい分析の主軸は他アプリ入力連動で、キーイベントとIME確定文字・貼付・編集差分を分け、macOS/Windows一次APIと権限/制約から方式を選ぶ。命令入力の解釈と、通常文を低頻度で視覚へ反映するモードを分ける。人工イベントで蓄積・重複・取消・負荷・情報を保存しない経路を比較し、実入力の監視はまだ開始しない。研究文書には実装済み/未実装、AI合成/人手、未見/回帰、offscreen/窓、取得量/RAMを分けて残す。
+
 
 以下は01:10時点の履歴。最新の判断は上の節を参照する。
 

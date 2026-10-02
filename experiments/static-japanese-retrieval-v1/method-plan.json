@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "frozenBeforeFirstCalibrationRun": true,
+  "captionScore": "maximum cosine across each label's fixed name/alias/description captions",
+  "pooling": "tokenizer encode without special tokens or padding; float32 token lookup mean; L2 normalize only for cosine; 128 uses first dimensions",
+  "registries": ["shape", "primitive"],
+  "variants": ["1024-float32", "128-float32", "128-float16", "chargram"],
+  "baseline": "same fixed captions, Unicode NFKC lowercase 1-3 character TF-IDF cosine retrieval; not the existing trained tiny student",
+  "scoreThresholds": [0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
+  "marginThresholds": [0.0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.15],
+  "selection": "per variant/registry and guard mode maximize correct positives - 5*wrong-positive - 5*negative-accept; ties choose fewer mistakes then more correct then larger thresholds",
+  "guardMode": "authored broad negation veto; reject multiple distinct explicit labels, conjunctions and compositional relations; direct single explicit alias wins; otherwise retrieval thresholds. Scope is one object/category only, no order/relation inference",
+  "guardNegation": "ない|ません|不要|使わず|除い|やめ|ではなく|じゃなく or standalone English not/without/dont/never/no",
+  "guardComposition": "multiple explicit labels or standalone Japanese と/および/そして, English and/plus/with; relative composition 上に/下に/先に/端に/貫く/through/above/below",
+  "limits": {"characters": 4000, "tokens": 4000, "maximumUnknownFraction": 0.8, "emptyOrZeroVector": "hold"},
+  "metrics": "positive accepted coverage, accepted exact precision, exact correct/all positives, near family/all positives; negative false positive with unknown/negation/scope separate",
+  "heldoutPolicy": "freeze captions, method, thresholds and selected candidate hashes before seeing fresh independent evaluator inputs; existing tiny heldout excluded"
+}

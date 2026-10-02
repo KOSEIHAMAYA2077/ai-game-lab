@@ -1,0 +1,52 @@
+{
+  "variant": "128-float16",
+  "storage": "read-only mmap",
+  "tableOwnedArrayBytes": 0,
+  "tableVirtualMappedBytes": 8388608,
+  "captionIndexArrayBytes": 175616,
+  "tokenizerFileBytes": 2127941,
+  "processRSSBytesAfterWarmAndStress": 87179264,
+  "processPeakRSSBytes": 87179264,
+  "peakRSSUnits": "bytes on macOS",
+  "setupMsIncludesStreamingSHAAndTokenizerAndCaptionIndex": 31.513167000000003,
+  "warmEncodeRankMs": {
+    "n": 240,
+    "median": 0.06591699999999867,
+    "p95": 0.08050384999999242,
+    "max": 0.12574999999999392
+  },
+  "stress": {
+    "128": {
+      "elapsedMs": 0.13570899999999775,
+      "encoding": {
+        "tokens": 91,
+        "unknownFraction": 0.0
+      },
+      "rankingReturned": true
+    },
+    "1024": {
+      "elapsedMs": 0.467375000000006,
+      "encoding": {
+        "tokens": 711,
+        "unknownFraction": 0.0
+      },
+      "rankingReturned": true
+    },
+    "4000": {
+      "elapsedMs": 1.654957999999998,
+      "encoding": {
+        "tokens": 2771,
+        "unknownFraction": 0.0
+      },
+      "rankingReturned": true
+    },
+    "4001": {
+      "elapsedMs": 0.0015000000000015001,
+      "encoding": {
+        "hold": "input_limit"
+      },
+      "rankingReturned": false
+    }
+  },
+  "scope": "same frozenv2 data, tokenization and math; cache state uncontrolled; short locked-screen multi-agent CPU run; no app memory or calm idle claim"
+}

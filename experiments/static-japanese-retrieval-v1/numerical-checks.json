@@ -1,0 +1,265 @@
+{
+  "implementation": "NumPy direct mean checked against scalar float64 sums; no PyTorch installed in system/base-conda/zero-dl, so EmbeddingBag live parity not claimed",
+  "tokenizerBaseVocab": 32702,
+  "tokenizerAddedTokens": 66,
+  "tokenizerTotalVocab": 32768,
+  "sourceShape": [
+    32768,
+    1024
+  ],
+  "samples": [
+    {
+      "text": "球",
+      "ids": [
+        32462,
+        1859
+      ],
+      "tokens": [
+        "▁",
+        "球"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 3.948807716369629e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.003147125244140625,
+      "encoding": {
+        "tokens": 2,
+        "unknownFraction": 0.0
+      }
+    },
+    {
+      "text": "花を生ける器",
+      "ids": [
+        32462,
+        543,
+        9,
+        304,
+        5673,
+        1167
+      ],
+      "tokens": [
+        "▁",
+        "花",
+        "を",
+        "生",
+        "ける",
+        "器"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 3.557652235031128e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0008096694946289062,
+      "encoding": {
+        "tokens": 6,
+        "unknownFraction": 0.0
+      }
+    },
+    {
+      "text": "a solid round ball",
+      "ids": [
+        32462,
+        90,
+        32462,
+        7144,
+        2352,
+        32462,
+        19517,
+        32462,
+        11005
+      ],
+      "tokens": [
+        "▁",
+        "a",
+        "▁",
+        "sol",
+        "id",
+        "▁",
+        "round",
+        "▁",
+        "ball"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 3.9570861387616674e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0006295442581176758,
+      "encoding": {
+        "tokens": 9,
+        "unknownFraction": 0.0
+      }
+    },
+    {
+      "text": "箱ではない",
+      "ids": [
+        32462,
+        3519,
+        10,
+        7,
+        126
+      ],
+      "tokens": [
+        "▁",
+        "箱",
+        "で",
+        "は",
+        "ない"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 3.2782554626464844e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0013751983642578125,
+      "encoding": {
+        "tokens": 5,
+        "unknownFraction": 0.0
+      }
+    },
+    {
+      "text": "😀🧠💧",
+      "ids": [
+        32462,
+        3
+      ],
+      "tokens": [
+        "▁",
+        "😀🧠💧"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 1.1920928955078125e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0008883476257324219,
+      "encoding": {
+        "tokens": 2,
+        "unknownFraction": 0.5
+      }
+    },
+    {
+      "text": "",
+      "ids": [],
+      "tokens": [],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 0.0,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0,
+      "encoding": {
+        "tokens": 0,
+        "unknownFraction": 0.0
+      }
+    },
+    {
+      "text": "　ＡＢＣ１２３　",
+      "ids": [
+        32462,
+        6378,
+        68,
+        35,
+        32462
+      ],
+      "tokens": [
+        "▁",
+        "abc",
+        "12",
+        "3",
+        "▁"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 5.960464477539062e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0015964508056640625,
+      "encoding": {
+        "tokens": 5,
+        "unknownFraction": 0.0
+      }
+    },
+    {
+      "text": "葉っぱが落ちた",
+      "ids": [
+        32462,
+        838,
+        9699,
+        12,
+        14331
+      ],
+      "tokens": [
+        "▁",
+        "葉",
+        "っぱ",
+        "が",
+        "落ちた"
+      ],
+      "sameTokenIDsAllVariants": true,
+      "manualFloat64MeanMaxAbsoluteError": 4.4405460375429584e-07,
+      "truncateFullMeanVsPrefixTableMeanMaxAbsoluteError": 0.0,
+      "halfVsFloatMeanMaxAbsoluteError": 0.0010673999786376953,
+      "encoding": {
+        "tokens": 5,
+        "unknownFraction": 0.0
+      }
+    }
+  ],
+  "allCalibrationAndCaptionTokenIDsIdentical": true,
+  "pairedTextCount": 455,
+  "uniqueCalibrationTokenIDs": 380,
+  "perTokenPrefixMaxAbsoluteError": 0.0,
+  "publishedExampleParity": {
+    "1024-float32": {
+      "computedCosines": [
+        0.10401761531829834,
+        0.2520867586135864,
+        0.4834601879119873,
+        0.3198903203010559
+      ],
+      "authorRoundedCosines": [
+        0.104,
+        0.2521,
+        0.4835,
+        0.3199
+      ],
+      "maxAbsoluteDifference": 3.981208801268066e-05,
+      "source": "pinned model card published example; 4decimal rounding tolerance1e-4"
+    },
+    "128-float32": {
+      "computedCosines": [
+        0.14642715454101562,
+        0.30939429998397827,
+        0.592307984828949,
+        0.34052905440330505
+      ],
+      "authorRoundedCosines": [
+        0.1464,
+        0.3094,
+        0.5923,
+        0.3405
+      ],
+      "maxAbsoluteDifference": 2.9054403305028842e-05,
+      "source": "pinned model card published example; 4decimal rounding tolerance1e-4"
+    }
+  },
+  "safety": {
+    "empty_vector": {
+      "passed": true,
+      "characters": 0,
+      "encoding": {
+        "tokens": 0,
+        "unknownFraction": 0.0,
+        "hold": "empty_vector"
+      },
+      "rankingReturned": false
+    },
+    "input_limit": {
+      "passed": true,
+      "characters": 4001,
+      "encoding": {
+        "hold": "input_limit"
+      },
+      "rankingReturned": false
+    },
+    "unknown_tokens": {
+      "passed": false,
+      "characters": 4000,
+      "encoding": {
+        "tokens": 2,
+        "unknownFraction": 0.5
+      },
+      "rankingReturned": true
+    }
+  }
+}

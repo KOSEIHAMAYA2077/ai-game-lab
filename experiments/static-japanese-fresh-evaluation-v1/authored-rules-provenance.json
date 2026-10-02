@@ -1,0 +1,12 @@
+{
+  "language_sha256": "7e80b7853d79a5c3d198a2369b3e0ac0c2f87ca3c0a4546b5d7b7558792b31d3",
+  "shape_catalog_sha256": "f7244468346bfdfd731753016290ba43250a89abe234225da6570640c1a97e42",
+  "bundle_sha256": "9a67b6a42aba853807defb261a097af3b6c0507da6e42d0564cd029b2a37af8c",
+  "evaluator_sha256": "f526691f9801ff4a0ceed99c251f843c2e9ba1687be4369d020c2be58e87d803",
+  "fixture_sha256": "1f0d971a19adbba9551799f5543bb2e42b9e144c6fdf8028d428d4c7f0affb1e",
+  "interface": "shapeChoices(full_text) and interpret(full_text, DEFAULT_SPEC), default first-candidate selection; no callback/random sampling",
+  "score_scope": "Shape-only baseline accepts when shapeChoices is nonempty and uses interpreted.spec.shape. Full recognized-scene response is diagnostic because counts/colors/motion may retain default sphere without choosing a shape.",
+  "default_shape": "condense",
+  "choice_handling": "All candidates recorded; ambiguity is not silently converted to a hold. No model/rules/fixture mutation.",
+  "network": "No network; bundles existing local Vite dependency and source."
+}

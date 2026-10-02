@@ -110,7 +110,7 @@ async function submit(text: string, replay = false) {
   const selectedProvider = provider.value;
   if (selectedProvider !== 'rules' && text.length > 4000) { status.textContent = 'モデルの入力は4,000文字までです。分けて送ってください。'; return; }
   if (matter.glyphs.length >= 32000) { status.textContent = 'この比較版は保存する文字は32,000文字までです。「最初へ」で再開できます。'; return; }
-  const start = performance.now(), token = ++sequence;
+  const start = performance.now(), token = ++sequence, wasPaused = paused;
   busy = true; paused = false; scheduler.setPaused(false); update(); status.textContent = '…';
   const requestController = new AbortController(); controller = requestController;
   const timeout = setTimeout(() => requestController.abort(), 30_000);
@@ -133,6 +133,17 @@ async function submit(text: string, replay = false) {
     if (selectedProvider === 'rules' && !replay && result.program?.parts.length === 1 && shapeChoices(text).length) {
       result = { ...result, program: null, reason: 'authored-surface' };
     }
+    // Accept material before changing geometry. At the kind limit Matter can
+    // reject the entire batch; preserve the draft and current shape in that case.
+    const addition = matter.add(text, times, { ink, seed: crypto.getRandomValues(new Uint32Array(1))[0] });
+    if (!addition.added) {
+      busy = false; paused = wasPaused; scheduler.setPaused(paused);
+      status.textContent = addition.reason === 'kinds'
+        ? '文字の種類は1,024種類までです。入力は残しています。'
+        : '文字を追加できませんでした。入力は残しています。';
+      scheduler.setTransient(false); update(); reportNative();
+      return;
+    }
     // Matter bounds the visible body but records the full submitted text and accepted count.
     if (result.program) {
       if (scene.setProgram(result.program)) scene.setSpec({ ...matter.spec, shape: 'condense', mode: 'surface', count: 1, arrangement: 'single', deformation: 'gentle', motion: 'calm' });
@@ -147,7 +158,6 @@ async function submit(text: string, replay = false) {
     }
     browserInfo = model.inspect().lastInfo ?? browserInfo;
     lastResolution = result;
-    matter.add(text, times, { ink, seed: crypto.getRandomValues(new Uint32Array(1))[0] });
     scene.sync(points, parseFloat(getComputedStyle(input).fontSize));
     scheduler.setTransient(true); scheduler.invalidate();
     const constructionMs = performance.now() - buildStart;
@@ -167,7 +177,9 @@ async function start() {
   input.addEventListener('compositionstart', () => { composing = true; });
   input.addEventListener('compositionend', () => { composing = false; ended = performance.now(); });
   input.addEventListener('keydown', event => { if (event.key === 'Enter') { event.stopPropagation(); if (event.isComposing || event.keyCode === 229 || composing) return; event.preventDefault(); if (!event.repeat) void submit(input.value); } });
-  input.addEventListener('input', () => { const ink = interpret(input.value, matter.spec).ink ?? (inkSelect.value === 'auto' ? 'red' : inkSelect.value as Ink); input.style.color = `rgb(${COLORS[ink].map(value => value * 255).join(',')})`; });
+  const previewInk = () => { const ink = inkSelect.value === 'auto' ? interpret(input.value, matter.spec).ink ?? 'red' : inkSelect.value as Ink; input.style.color = `rgb(${COLORS[ink].map(value => value * 255).join(',')})`; };
+  input.addEventListener('input', previewInk);
+  inkSelect.addEventListener('change', previewInk);
   el('#feed-form').addEventListener('submit', event => { event.preventDefault(); void submit(input.value); });
   document.addEventListener('keydown', event => { if (event.isComposing || composing || event.repeat || event.ctrlKey || event.metaKey || event.altKey || event.keyCode === 229) return; if (event.key === 'Enter' && terminal.hidden && !(event.target instanceof HTMLElement && event.target.closest('button,a,select'))) { event.preventDefault(); open(); } if (event.key === 'Escape') close(); });
   el('#start-prompt').addEventListener('click', open); el('#write-word').addEventListener('click', open); el('#scene').addEventListener('open-terminal', open);
