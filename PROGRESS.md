@@ -1,5 +1,9 @@
 # 進捗
 
+## 2026-10-03 — 骨格付きのnative16形を別保存
+
+13形比較を残し、元Webの魚4骨・鳥7骨・蛇9骨を別v4へ移した。CPU6,045/GPU792、settled密度・姿勢288条件を確認。旧13形の白1536/time24/400×440 offscreen PNGは全13がbyte完全一致。GPU R1方向失敗と、吸収をsettledと誤って試した密度R1のinvalidも保持した。rootコピーは署名/5ファイル一致で起動したがMac lockで実UI不可、relative診断引数では原票なし、own PIDだけSIGTERM終了。実窓・通常窓資源は未確認、一般16GB機・快適性・モデル生成とは扱わない。[数値と境界](experiments/widget-metal-authored-v4/REPORT.md) / [root未完attempt](experiments/widget-metal-authored-v4-root-attempt/README.md)。
+
 ## 2026-10-03 06:53 JST — 専用入力と文字表面のR2
 
 R3の唯一bodyをrendererへ読み取りviewとして渡す別実験。旧dynamicAtlas shader文字列を保持し、15fps上限の人工timer R1の16tick失敗をR2の67ms gateで修正、旧失敗を残した。rootはproduction3assetを専用配信しASCII追加・色・PAUSE/RESUME・容量超過の保留・削除/undo・INPUT閉・再読込を実操作。停止画面上部は2枚で全画素一致。read-only realmからQA hookを直接読めず、frame/body counterやexportOffは実測扱いにしない。[実画面と限界](experiments/ambient-editor-surface-root-ui-v1/README.md)。Mac lockのためnative16の実窓確認は保留、解除/設定変更はなし。
