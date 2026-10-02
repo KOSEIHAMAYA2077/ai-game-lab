@@ -1,0 +1,170 @@
+{
+  "version": "independent-native-static-manual20-r1",
+  "createdAt": "2026-10-02T23:04:08.265699+00:00",
+  "sourceReadBeforeFreeze": false,
+  "author709ReadBeforeFreeze": false,
+  "humanAnnotations": 0,
+  "annotation": "AI manual deployment boundary fixtures, not semantic relevance labels. Known halfwidth correction region deliberately retained; additional != historically novel.",
+  "cases": [
+    {
+      "id": "N01",
+      "category": "empty",
+      "text": "",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 0
+    },
+    {
+      "id": "N02",
+      "category": "whitespace-only",
+      "text": " \t\r\n 　",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 6
+    },
+    {
+      "id": "N03",
+      "category": "Nmt-control",
+      "text": "球\u0000体\u000b​箱‍輪",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 8
+    },
+    {
+      "id": "N04",
+      "category": "halfwidth-dakuten-known-region",
+      "text": "ｳﾞｧｰｽﾞとｶﾞﾗｽのｹｰｽ",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 15
+    },
+    {
+      "id": "N05",
+      "category": "combining-kana",
+      "text": "がらすのぱねとガラス",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 12
+    },
+    {
+      "id": "N06",
+      "category": "Unicode-lowercase",
+      "text": "İIı ſΣσς STRASSE Straße Sphere",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 30
+    },
+    {
+      "id": "N07",
+      "category": "canonical-accent",
+      "text": "café café Å Å",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 15
+    },
+    {
+      "id": "N08",
+      "category": "NFKC-compatibility",
+      "text": "⑫ⅣＡＢＣ㍑㌀ 𝐬𝐩𝐡𝐞𝐫𝐞 ²㎤",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 23
+    },
+    {
+      "id": "N09",
+      "category": "emoji-ZWJ-modifier",
+      "text": "👩🏽‍💻と🧑‍🚀、🏳️‍🌈、🇯🇵",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 25
+    },
+    {
+      "id": "N10",
+      "category": "added-special-literal",
+      "text": "[CLS]球[SEP]立方体[MASK][UNK][PAD]",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 30
+    },
+    {
+      "id": "N11",
+      "category": "special-adjacent-casing",
+      "text": "pre[SEP]post [cls] SPHERE[MASK]sphere",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 37
+    },
+    {
+      "id": "N12",
+      "category": "normalized-special-lookalike",
+      "text": "［ＣＬＳ］球［ＳＥＰ］ [ＭＡＳＫ] 箱",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 20
+    },
+    {
+      "id": "N13",
+      "category": "Metaspace-mixed-lines",
+      "text": "  球\n\n  sphere\t箱\r\nring  ",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 23
+    },
+    {
+      "id": "N14",
+      "category": "programming-text",
+      "text": "let sphere_count = 2; // 箱は後で\nconsole.log(\"輪\");",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 47
+    },
+    {
+      "id": "N15",
+      "category": "unseen-codepoints",
+      "text": "𰻞𰻞𰻞🜁🜂🜃🜄 ゑゐヿ",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 18
+    },
+    {
+      "id": "N16",
+      "category": "punctuation-noise",
+      "text": "...---___!?※◇∞\\ / {} <> @@@",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 27
+    },
+    {
+      "id": "N17",
+      "category": "mixed-script-numbers",
+      "text": "球体sphere42、BOX_2、三角形3D、v1.2.0",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 29
+    },
+    {
+      "id": "N18",
+      "category": "length-512-ascii",
+      "text": "sphere xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 512
+    },
+    {
+      "id": "N19",
+      "category": "length-513-ascii",
+      "text": "sphere xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "registry": "primitive",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 513
+    },
+    {
+      "id": "N20",
+      "category": "length-1024-combining",
+      "text": "á́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́́",
+      "registry": "shape",
+      "manualIntent": "Exact reference tokenizer IDs; same hold decision, F16 mean/vector and raw caption ranks within frozen tolerances.",
+      "utf16": 1024
+    }
+  ]
+}

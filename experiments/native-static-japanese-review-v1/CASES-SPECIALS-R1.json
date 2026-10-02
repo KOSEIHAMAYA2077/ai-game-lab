@@ -1,0 +1,31 @@
+{
+  "version": "artifact-informed-specials4-r1",
+  "createdAt": "2026-10-02T23:06:21.915072+00:00",
+  "population": 4,
+  "independent20Denominator": false,
+  "sourceRead": "Only trusted original tokenizer artifact after manual20freeze; candidate source/results not read.",
+  "nativeCalls": 0,
+  "cases": [
+    {
+      "id": "S01",
+      "text": "<s>球</s>",
+      "registry": "shape"
+    },
+    {
+      "id": "S02",
+      "text": "  <mask>sphere[unused65]",
+      "registry": "primitive"
+    },
+    {
+      "id": "S03",
+      "text": "x<unk><pad>y",
+      "registry": "shape"
+    },
+    {
+      "id": "S04",
+      "text": "＜ｍａｓｋ＞ <MASK> <mask>",
+      "registry": "primitive"
+    }
+  ],
+  "gate": "Same fixed tokenIDs/embedding/hold/rank gates as METHOD-R1; actualspecial lstrip and normalizedfalse in original artifact. No semanticlabels."
+}

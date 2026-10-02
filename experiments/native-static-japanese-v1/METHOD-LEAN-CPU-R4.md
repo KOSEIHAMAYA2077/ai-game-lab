@@ -1,0 +1,9 @@
+# Lean CLI CPU/footprint計測 R4
+
+初回709のR4回帰parity合格後、source/binary/EXPECTED変更なしで新processを測る。元calibration112の人工textを200warmcall、同112を10回＝1120 timed call。各queryはCLI既存single-pass encode→rank、内側elapsedMsだけを集計する。JSON読み取り/書き出しとprocess起動はquery latencyに入らない。RPC roundtripは別に記録。kindや旧targetは読み込まず、新しい意味品質評価をしない。
+
+4000scalarの人工worst3種（日本語反復、ASCII反復、emojiUNK反復）を各20call。4001scalarの境界拒否は別に1call。input/gate4000とsource版R4を動かさない。これで4000のすべての文の最大時間を保証しない。native sourceには無制限cacheなし。
+
+stdin/stdoutは人工JSONLのみ、python標準libraryはdriverとして使うがnative processのruntimeとpeakに含まない。time -lはnativeの子processだけを測る。cold first responseのelapsedMsと親から起動してfirst responseまでのtimeを別にする。nativetask_info resident/physicalFootprintはprocess全体、ru_maxrss(Darwin bytes)はhigh-water mark。time-l終了peakはJSON出力を含む。weight8MiB mappingはfile/virtual size、常駐pageを8MiBとみなさない。CLIはcaption343index175616Bを持つが、これはwhole RAMではない。
+
+開始/最初のresponse/200warm後/1120timed後/worst後のresident/physicalFootprintとpeakを原票へ。1320normal＋60worstという短期batchだけで、8h常駐/OS入力/電力/16GBWindows/全widgetRAMを主張しない。将来adapterや保存には接続しない。CPU競合は統制していない。parityharnessは7MB oracle/全case出力を含むためlean CLIと別測定とする。

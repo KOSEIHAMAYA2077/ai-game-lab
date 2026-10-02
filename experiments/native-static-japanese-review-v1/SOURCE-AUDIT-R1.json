@@ -1,0 +1,450 @@
+{
+  "version": "independent-native-static-source-audit-r1",
+  "createdAt": "2026-10-02T23:19:54.433060+00:00",
+  "readOnly": true,
+  "candidateCallsAfterFirst24": 0,
+  "model": {
+    "tableBytes": 8388608,
+    "rows": 32768,
+    "dims": 128,
+    "littleEndianF16": true,
+    "readOnlyMmap": true,
+    "ownedFloatArrayOfWholeTable": false,
+    "runtimeSHA": true,
+    "tableSHA": "65122d239d6c9fd804deee853736446415dc815134277c87adb9978f7b9e2201",
+    "mmapBytesAreResidentRAM": false,
+    "captionFloatPayloadBytes": 175616
+  },
+  "tokenizer": {
+    "version": "0.22.1",
+    "officialSourceCommit": "afaae088837b277c19f90604a1111a272838857b",
+    "baseVocab": 32702,
+    "addedRecords": 71,
+    "totalTableRows": 32768,
+    "pipeline": [
+      "literal-nonnormalized-special-extract",
+      "Nmt",
+      "FoundationNFKC-plus-NFC",
+      "scalar-lowercase",
+      "Metaspacealwayssplit",
+      "UnigramFloat64ViterbiStrictGreater",
+      "scalarUNKfallback-fuse"
+    ],
+    "dynamicSchemaSupported": false,
+    "offsetAlignmentParity": false,
+    "allUnicodeVersionsParity": false
+  },
+  "JSONL": {
+    "oneReplyPerArtificialRequest": 24,
+    "explicitFlush": true,
+    "autoreleasepoolPerRequest": true,
+    "decodedScalarLimit": 4000,
+    "tokenLimit": 4000,
+    "normalizedUTF8Limit": 262144,
+    "outerLineByteBound": false,
+    "preJSONAllocationBound": false,
+    "responseByteBound": false,
+    "errorTerminatesProcess": true,
+    "untrustedProducerProtocolReady": false,
+    "actualStdinNonTTY": true,
+    "actualTrailingStdoutBytes": 0,
+    "actualStderrBytes": 0
+  },
+  "policy": {
+    "unknownFractionIsUNKTokenCountNotCharacterCoverage": true,
+    "longCombiningN20": {
+      "tokenCount": 1024,
+      "unknownFraction": 0,
+      "hold": null,
+      "UTF16": 1024
+    },
+    "whitespaceN02": {
+      "tokenCount": 6,
+      "hold": null,
+      "notAutomaticallyRejectedForBlankMeaning": true
+    },
+    "retrievalRankIsNotShapeMeaningAcceptance": true,
+    "noNegativeAmbiguityConfidenceGuardInCLI": true
+  },
+  "license": {
+    "model": "MIT metadata and pinnedauthorREADMEstatement; independentLICENSEfilenotpresent",
+    "tokenizerArtifact": "PinnedstaticmodelJSON; author tokenizer metadataMITfromoldprovenance",
+    "algorithm": "Apache2.0 officialRustsource/license retainedseparately",
+    "sourceAlgorithmAdaptationAttribution": true,
+    "newLegalCertification": false
+  },
+  "runtime": {
+    "binaryFormat": "Mach-O64arm64",
+    "compiledSwiftSource": "NativeStaticR5.swift",
+    "dependencies": [
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+      "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftIOKit.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Builtin_float.dylib",
+      "/usr/lib/swift/libswift_DarwinFoundation2.dylib"
+    ],
+    "PythonRuntimeDependency": false,
+    "PyTorchRuntimeDependency": false,
+    "GPURequired": false,
+    "OSCapture": false,
+    "windowUI": false,
+    "observedHost": "RootauthorHOST-R5 AppleM5/32GiBmacOS26.5.1, not16GB/Windows",
+    "selfTaskInfoFields": [
+      "resident_size",
+      "phys_footprint"
+    ],
+    "selfRusageMaxRSSUnits": "bytes-on-macOS",
+    "measurementFailureTaskInfoWouldReportZero": true,
+    "componentNotWholeWidget": true
+  },
+  "provenance": {
+    "returnPublicFilesCheckedIncludingPublicManifest": 66,
+    "rootPublicManifestEntriesExcludingItself": 65,
+    "returnManifestSeparate": true,
+    "inputFilesChecked": 17,
+    "postRunChecks": [
+      {
+        "path": "experiments/native-static-japanese-v1/BRIEF.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/BUILD-R1.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/BUILD-R2.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/BUILD-R3.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/BUILD-R4.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/BUILD-R5.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/EXPECTED-FREEZE-R1.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/EXPECTED-R1.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/FINAL-QA-R6.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/HOST-R5.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/LEAN-CPU-R5.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/LEAN-R4-BLOCKED.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/LEAN-R4.time.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/LEAN-R5.time.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/METHOD-LEAN-CPU-R4.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/METHOD-LEAN-CPU-R5.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/METHOD-R1.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NATIVE-R3.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NATIVE-R4.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NATIVE-R5.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NORMALIZATION-CORRECTION-R4.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NativeStaticR1.swift",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NativeStaticR2.swift",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NativeStaticR3.swift",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NativeStaticR4.swift",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/NativeStaticR5.swift",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PARITY-R3.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PARITY-R4.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PARITY-R5.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PRE-RUN-ADDENDUM-R1.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PROVENANCE.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PUBLIC-README-R6.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/README.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/REPORT.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/REPRO.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RETURN-NOTES-R6.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R2-FAILURE.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R3.stderr.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R3.stdout.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R4.stderr.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R4.stdout.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R5.stderr.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/RUNTIME-R5.stdout.log",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/SOURCE-PRE-RUN-R2.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/SOURCE-PRE-RUN-R3.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/SOURCE-PRE-RUN-R4.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/SOURCE-PRE-RUN-R5.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/TOKENIZER-SCHEMA-CORRECTION-R3.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/bench_lean.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/bench_lean_r5.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/compare.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/freeze_expected.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/native-static-r2",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/native-static-r3",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/native-static-r4",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/native-static-r5",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/LICENSE",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/MANIFEST.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__models__unigram__model.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__models__unigram__trie.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__normalizers__unicode.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__normalizers__utils.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__pre_tokenizers__metaspace.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__tokenizer__added_vocabulary.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/tokenizers__src__tokenizer__normalizer.rs",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/PUBLIC-MANIFEST-R6.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": ".local/static-japanese-v1/source/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/0_StaticEmbedding/tokenizer.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": ".local/static-japanese-v1/tables/table-128-float16.bin",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/requirements-lock.txt",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/captions.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/calibration.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/retrieval_v2.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/mmap_benchmark.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/model-manifest.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/numerical-checks.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/tokenizer-author-provenance.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/static-japanese-retrieval-v1/static-implementation-source.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": ".local/static-japanese-v1/venv/lib/python3.9/site-packages/tokenizers/tokenizers.abi3.so",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/METHOD-R1.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/BRIEF.md",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/freeze_expected.py",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/upstream/MANIFEST.json",
+        "shaStillMatches": true
+      },
+      {
+        "path": "experiments/native-static-japanese-v1/EXPECTED-R1.json",
+        "shaStillMatches": true
+      }
+    ],
+    "postRunDrift": 0,
+    "privateExcludedQARead": false
+  }
+}

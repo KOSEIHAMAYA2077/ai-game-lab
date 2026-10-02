@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "phase": "Successful optimized Swift R2 build; frozen before first runtime",
+  "build": [
+    "swiftc",
+    "-O",
+    "NativeStaticR2.swift",
+    "-o",
+    "native-static-r2"
+  ],
+  "files": [
+    {
+      "path": "experiments/native-static-japanese-v1/NativeStaticR2.swift",
+      "bytes": 16309,
+      "sha256": "0eca1a6a0eed652a076ac07fd8ba4d4d8f5b5a8f2047aa34a59dcee73d4f3ca5"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/native-static-r2",
+      "bytes": 378048,
+      "sha256": "b142b5d54b5b67d9a0d210b94cfa5f13db4cff0857687677d43251a7bd9cb34c"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/EXPECTED-FREEZE-R1.json",
+      "bytes": 3733,
+      "sha256": "ccaeb4fe2c28b6359b9ee9036b3812f94655de6880b5228676eb4497c38e7c86"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/PRE-RUN-ADDENDUM-R1.md",
+      "bytes": 836,
+      "sha256": "a4b11e28dd1ff81c631740cd53720a39056c862d21632db7d5956346d6935b0f"
+    }
+  ]
+}

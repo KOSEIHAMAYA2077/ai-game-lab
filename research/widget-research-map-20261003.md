@@ -4,6 +4,8 @@
 
 文章から形を選ぶ新しい[有限60形検索R1](../experiments/ambient-shape-retrieval-v1/REPORT.md)も既定採用を見送った。約200KiBの辞書・作者グラフ・TF-IDFで、初回独立人工120文は正例受理22/60中14正解・8誤形、明確な保留への誤反応2/40。従来baselineの正例19/60に対し取りこぼしが増え、説明3/36・物語1/12だった。誤反応の減少は主に引用・否定・コード・取消を保留する規則によるもので、意味理解の向上とはしない。[独立評価・方法・原票](../experiments/ambient-shape-retrieval-evaluation-v1/REPORT.md)。
 
+[静的日本語特徴のnative CPU候補R5](../experiments/native-static-japanese-v1/PUBLIC-README-R6.md)は、8MiBのF16表をread-only mmapし、Unigram tokenizer・mean・cosineをSwiftで実行する。既知709の修正回帰と、source未読で固定した独立20件・artifact-informed補助4件で元処理と一致した。[独立配備確認](../experiments/native-static-japanese-review-v1/REPORT.md)。作者CLIの短batch1382callはpeak43.53MiB・query内p95約0.044ms。PyTorch/Python/WebKitをnative子processに載せない候補だが、全widget・Windows16GB・長期資源・意味精度はこの値では示さない。外側frame制限と本文を含まない応答、形の受理policyが未整備なので、既定接続は保留する。
+
 この結果から、常駐時の形変更は「分からないなら現在の形を保つ」候補提案として扱う。材料の追加を意味推定の成功に依存させない方針は維持する。モデル・tokenizerをnative実行へ移すこと、未知文で正しく形を選ぶこと、入力から文字表面までつなぐことを別々に評価する。人の作業中の注意・快適性は未実施であり、この人工評価から製品の更新周期を決めない。
 
 [Metal 13形の独立候補](../desktop/glyph-metal-lab-v3/README.md)では、元Webの手続き表面をGPU側へ移し、固定文字plane/atlasを保つ。4形の実小窓90秒はCPU約1.6〜2.0%（1コア基準）/charged peak約70〜72MiB、停止/非表示の提出差0。[原票・方法・制限](../experiments/widget-metal-native-evaluation-v3/REPORT.md)。M5/32GiBでの限定条件であり、一般16GB機・全13/60形・OS入力連動・人間の快適性の実証ではない。
@@ -151,7 +153,7 @@ CPUとiGPUは同じfixtureと品質条件で比べる。WASM/CPUを共通基準�
 
 ## 6. 推論時の小ささを変える比較候補
 
-同じMiniLMへさらにheadを足すだけでは、上の初期化ピークの主因を除けない。次は、以下を**同じ未見入力・同じ有限Program**で比較する。文字n-gramと静的日本語埋め込みは上の比較実験へ実装した。局所属性head・構造decoder・教師からの用途限定蒸留・native推論は未実装案である。
+同じMiniLMへさらにheadを足すだけでは、上の初期化ピークの主因を除けない。次は、以下を**同じ未見入力・同じ有限Program**で比較する。文字n-gramと静的日本語埋め込みは上の比較実験へ実装した。局所属性head・構造decoder・教師からの用途限定蒸留・Transformerのnative推論は未実装案である。静的特徴のSwift CPU CLIは上の別実験で実装・配備確認したが、アプリへは接続していない。
 
 | 候補 | 根拠と実装案 | 特に調べる失敗 |
 | --- | --- | --- |

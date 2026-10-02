@@ -1,0 +1,13 @@
+{
+  "version": "saved-known709-helper-failure-r1",
+  "createdAt": "2026-10-02T23:18:05.227541+00:00",
+  "helper": "audit_known709_r1.py",
+  "exitCode": 1,
+  "failure": "KeyError:normalization; reused oracle omits this optional field for input-limit. Initial helper required key rather than mapping missing-to-None.",
+  "nativeCalls": 0,
+  "productModelChanges": 0,
+  "manual20GateChanges": 0,
+  "known709OutputFileCreated": false,
+  "repair": "new audit_known709_r2.py uses .get for optional encoding fields only, old source preserved.",
+  "firstHelperSHA": "4cb8b298feee14c6dfb36fc4248c9a9879d229fc418736f76ceb2259918cdf2b"
+}

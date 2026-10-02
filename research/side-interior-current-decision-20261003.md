@@ -38,6 +38,8 @@ flowchart LR
 
 正本: [13形の実窓測定](../experiments/widget-metal-native-evaluation-v3/REPORT.md)、[16形の面と骨格](../experiments/widget-metal-authored-v4/REPORT.md)、[専用欄から文字表面への実操作](../experiments/ambient-editor-surface-root-ui-v1/README.md)、[検索R1の独立評価](../experiments/ambient-shape-retrieval-evaluation-v1/REPORT.md)、[静的日本語特徴の固定比較](../experiments/static-japanese-retrieval-v1/README.md)。
 
+日本語の特徴を軽く実行する部分は、別の[Swift CPU候補](../experiments/native-static-japanese-v1/PUBLIC-README-R6.md)で進んだ。作者の既知709回帰と独立20・別補助4のtokenizer/数値/順位一致を確認し、短batchの単独CLI peakは43.53MiBだった。これは配備の確認で、曖昧な文章の意味精度を更新する結果ではない。本文を出さない応答、外側frame制限、形の受理policyを整えるまで、材料と小窓へ接続しない。[独立レビュー](../experiments/native-static-japanese-review-v1/REPORT.md)。
+
 ## 全入力の使用像に向かう順序
 
 最初は自分の編集欄から、次に明示的に接続する執筆・開発アプリから確実な差分を受ける。広い互換経路では取れない本文を推測せず、活動量だけの反応に留める。どこから届いたか、確定か候補か、入力元を切り替えた後の古い通知ではないかを記録し、本文を読む前に除外・許可範囲を判定する。[macOS/Windows/編集アプリの一次資料と適用範囲](ambient-input-platforms-v1/README.md)。
@@ -49,7 +51,7 @@ Mac標準の `unmarkText` は、印を外した文字を通常挿入として受
 ## 研究として次に確認すること
 
 1. 同じ材料・姿勢・時刻で、通常描画の表示キャッシュと既存の全量転送を比較する。得られる局所処理時間と、実小窓全体のCPU/RAMを分ける。
-2. 固定した日本語特徴をnative CPUへ移せるか検証する。tokenizer・特徴・順位の一致は配備の正しさであり、新しい意味精度とはしない。
+2. 固定した日本語特徴のnative CPU移植は上の候補で一致を確認した。次は外側入力境界と本文なしの応答を整え、アプリ全体の資源を別に測る。配備の一致を新しい意味精度とはしない。
 3. 未見の文章に対し、形・修飾対象・否定・保留を別に評価する。モデル名だけで優劣を決めず、同じ教師・入力・形状ライブラリで比較する。
 4. 実IMEと対応アプリの少数経路を確認してから、本人が作業中に置ける版へ進む。機構の正しさと、邪魔にならないか・愛着があるかは別の確認にする。
 

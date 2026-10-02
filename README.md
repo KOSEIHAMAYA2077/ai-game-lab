@@ -4,6 +4,10 @@
 
 [▶ ブラウザで試す・60形](https://koseihamaya2077.github.io/glyph-matter/) / [小窓Web版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/) / [研究の技術・課題・先行研究](research/widget-research-map-20261003.md)。全アプリ入力との連動はまだ実装していません。
 
+### 日本語の意味特徴を小さく配備する比較
+
+日本語の固定特徴を、約8MiBの表とMac標準CPU処理へ移しました。単独CLIの短い人工試験ではpeak43.53MiB、処理内p95約0.044ms。独立した追加20件と別枠の特殊token4件で、元の処理との一致を確認しました。曖昧な文章から正しい形を選ぶ精度は別課題で、既定の60形版へは接続していません。[候補・原票・失敗](experiments/native-static-japanese-v1/PUBLIC-README-R6.md) / [独立配備確認と未整備の入力境界](experiments/native-static-japanese-review-v1/REPORT.md)。全widget・16GB Windows・消費電力の値ではありません。
+
 ### Macの小窓・13形のMetal比較版
 
 球・箱・メビウスに剣・花瓶・クラゲ・花・蝶・木・星・螺旋・砂時計・土星を追加。既存の文字表面式をMac標準描画へ移した別版です。M5/32GiBの4形・各90秒ではCPU約1.6〜2.0%（1コア基準）、charged peak約70〜72MiB、停止/非表示は提出数0。一般16GBノートPC・GPU負荷・8時間の実窓は未検証です。

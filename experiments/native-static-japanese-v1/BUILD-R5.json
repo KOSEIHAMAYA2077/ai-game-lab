@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "build": [
+    "swiftc",
+    "-O",
+    "NativeStaticR5.swift",
+    "-o",
+    "native-static-r5"
+  ],
+  "sdk": "AppleSwift6.3.2 arm64-macos26",
+  "beforeNativeR5Results": true,
+  "files": [
+    {
+      "path": "experiments/native-static-japanese-v1/NativeStaticR5.swift",
+      "bytes": 16386,
+      "sha256": "fb99669e9afc3287dab7706d00fe89d4b52f2d10f7cf22bd37d1f97fa06a4be4"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/native-static-r5",
+      "bytes": 379856,
+      "sha256": "52b7ea7fc00d5413fe79ad85e56743e890c36ae2800b7095b7c47a853dde4c74"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/SOURCE-PRE-RUN-R5.json",
+      "bytes": 340,
+      "sha256": "13d8b38833efbc13d1ae92b639c7b8b3b5eeb283a301ed0f03fb586a3287d701"
+    }
+  ]
+}

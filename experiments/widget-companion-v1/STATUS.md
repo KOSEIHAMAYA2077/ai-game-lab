@@ -125,3 +125,7 @@ Metal v2はPR29（head7ac7cbe）をmainへmerge・タスク添付済み。通常
 3. 次の改善は別版として、面の近似補間・atlas容量・origin独立保存などから測定結果を根拠に一つずつ試す。未実装/未検証を達成と書かない。
 
 native R2の初回署名でDesktopのFinderInfo属性によりエラーが出た。今回新規生成したアプリのその属性だけを除き、再署名とstrict検査を通したが、Desktop側が後に同属性を再付与し、その場所での再検査は失敗した。Release ZIPはresource fork/拡張属性を含めず、別の新規場所への展開とstrict署名検査が成功。公開ZIPとDesktopの属性状態を混同しない。旧アプリやデータ・OS設定は変更していない。基準R1原票に加え、同bodyでのR2資源再測定をこれから行う。
+
+### 2026-10-02T23:28:12.320521+00:00 — native Static配備候補の公開準備
+
+PR38をmainへ保存。native R5と独立配備20/20・別特殊token4/4の保存監査を完了。709は既知回帰、意味品質を更新せず既定接続なし。rootの別固定CLI100分観測は23:23:30UTC開始、01:03:30UTC頃EOF終了予定、native14760。cache候補は局所timing完了・独立12session/14wireの確認待ち。実新native UIはlockで未確認のまま。

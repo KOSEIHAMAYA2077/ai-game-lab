@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "sourceVersion": "R5",
+  "sourceSHA256": "fb99669e9afc3287dab7706d00fe89d4b52f2d10f7cf22bd37d1f97fa06a4be4",
+  "binarySHA256": "52b7ea7fc00d5413fe79ad85e56743e890c36ae2800b7095b7c47a853dde4c74",
+  "methodSHA256": "8eb30a13d14c6c5315be94f2b15eed2cedca494d66332fa45cc1d8c6b4c555a1",
+  "inputSourceSHA256": "8c52dfdd8268ea224f30e2c79e13f53884755f1ae7827531b28f9cfc5128429e",
+  "responseTimeoutSeconds": 15,
+  "overallTimeoutSeconds": 300,
+  "status": "passed",
+  "calls": 1382,
+  "normalTimedCalls": 1120,
+  "warmCalls": 200,
+  "coldFirstQueryInnerMs": 0.057916998863220215,
+  "coldProcessToFirstResponseMs": 44.465042,
+  "coldFirstRoundtripMs": 42.121541,
+  "latency": {
+    "n": 1120,
+    "p50Ms": 0.0355830192565918,
+    "p95Ms": 0.043792009353637695,
+    "p99Ms": 0.05529099702835083,
+    "maxMs": 0.1300410032272339,
+    "meanMs": 0.03560341325189386
+  },
+  "driverRoundtrip": {
+    "n": 1120,
+    "p50Ms": 0.14912499999999995,
+    "p95Ms": 0.1739580000000296,
+    "p99Ms": 0.24774999999999103,
+    "maxMs": 0.44762500000000705,
+    "meanMs": 0.15074716071428576
+  },
+  "worst": [
+    {
+      "name": "ja4000",
+      "scalars": 4000,
+      "UTF16Units": 4000,
+      "tokens": 2001,
+      "hold": null,
+      "latency": {
+        "n": 20,
+        "p50Ms": 0.9083330035209656,
+        "p95Ms": 1.027625024318695,
+        "p99Ms": 1.027625024318695,
+        "maxMs": 1.0601249933242798,
+        "meanMs": 0.9351480066776275
+      },
+      "memory": {
+        "maxRSSBytes": 45006848,
+        "residentBytes": 45006848,
+        "physicalFootprintBytes": 35062264
+      }
+    },
+    {
+      "name": "ascii4000",
+      "scalars": 4000,
+      "UTF16Units": 4000,
+      "tokens": 1335,
+      "hold": null,
+      "latency": {
+        "n": 20,
+        "p50Ms": 0.5115410089492798,
+        "p95Ms": 0.6184999942779541,
+        "p99Ms": 0.6184999942779541,
+        "maxMs": 0.6456670165061951,
+        "meanMs": 0.5273187041282654
+      },
+      "memory": {
+        "maxRSSBytes": 45252608,
+        "residentBytes": 45252608,
+        "physicalFootprintBytes": 35291640
+      }
+    },
+    {
+      "name": "emoji4000",
+      "scalars": 4000,
+      "UTF16Units": 8000,
+      "tokens": 2,
+      "hold": null,
+      "latency": {
+        "n": 20,
+        "p50Ms": 1.026582956314087,
+        "p95Ms": 1.151582956314087,
+        "p99Ms": 1.151582956314087,
+        "maxMs": 1.1517910361289978,
+        "meanMs": 1.040851992368698
+      },
+      "memory": {
+        "maxRSSBytes": 45645824,
+        "residentBytes": 45645824,
+        "physicalFootprintBytes": 35684856
+      }
+    }
+  ],
+  "memory": {
+    "firstResponse": {
+      "maxRSSBytes": 43008000,
+      "physicalFootprintBytes": 33620472,
+      "residentBytes": 43008000
+    },
+    "afterWarm200": {
+      "maxRSSBytes": 44105728,
+      "residentBytes": 44105728,
+      "physicalFootprintBytes": 34177528
+    },
+    "afterTimed1120": {
+      "maxRSSBytes": 44171264,
+      "residentBytes": 44171264,
+      "physicalFootprintBytes": 34243064
+    },
+    "afterWorst": {
+      "maxRSSBytes": 45645824,
+      "residentBytes": 45645824,
+      "physicalFootprintBytes": 35684856
+    }
+  },
+  "timeExitPeakResidentBytes": 45645824,
+  "exitCode": 0,
+  "checksumRankItems": 81540,
+  "holdCounts": {
+    "vector": 1100,
+    "empty_vector": 20
+  },
+  "tableMappedFileBytes": 8388608,
+  "captionIndexPayloadBytes": 175616,
+  "limit4001Held": true,
+  "limits": "Mac optimized Swift CLI only; driver is not runtime, no UI/GPU/OS capture. JSONL I/O/serialization/startup excluded from inner query latency. Short batch, not long-term/16GBWindows/wholewidget/energy evidence."
+}

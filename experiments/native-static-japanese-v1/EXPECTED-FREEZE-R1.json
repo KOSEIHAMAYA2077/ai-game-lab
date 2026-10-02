@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "oldCases": 455,
+  "edgeCases": 254,
+  "oracle": {
+    "tokenizers": "0.22.1",
+    "numpy": "2.0.2"
+  },
+  "allBeforeNativeResults": true,
+  "gate": {
+    "IDs": "exact",
+    "pieces": "exact",
+    "meanAbs": 1e-05,
+    "unitAbs": 1e-05,
+    "cosineAbs": 1e-05,
+    "top1": "exact",
+    "scoreSeparatedPair": 2e-05
+  },
+  "files": [
+    {
+      "path": ".local/static-japanese-v1/source/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/0_StaticEmbedding/tokenizer.json",
+      "bytes": 2127941,
+      "sha256": "833add01c9eb44e78ffb2d9195caace320de0fcf64d1f4d95bc541b6e30a9fc9"
+    },
+    {
+      "path": ".local/static-japanese-v1/tables/table-128-float16.bin",
+      "bytes": 8388608,
+      "sha256": "65122d239d6c9fd804deee853736446415dc815134277c87adb9978f7b9e2201"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/requirements-lock.txt",
+      "bytes": 432,
+      "sha256": "0a825dac53c043050834c6a6f747dc8a072cbf773f944096ff1d665ca702348d"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/captions.json",
+      "bytes": 27220,
+      "sha256": "00a0483a29f2afa11d85d5019ac867d14c6b0d8ee71ac020da2bacb92ff587a8"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/calibration.json",
+      "bytes": 19808,
+      "sha256": "8c52dfdd8268ea224f30e2c79e13f53884755f1ae7827531b28f9cfc5128429e"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/retrieval_v2.py",
+      "bytes": 18993,
+      "sha256": "43e20b2b090778a303e9ea690a5a618886540b90c6ac4d6f99940a3c9d1e765a"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/mmap_benchmark.py",
+      "bytes": 4500,
+      "sha256": "fc1cfe2bcbf84ab610c0c24a08695d6e2a923480b8e422a0a8a95420df198482"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/model-manifest.json",
+      "bytes": 5543,
+      "sha256": "e2e32fb1005315c1d6c0b102e0b11810180112025b8a40b8cda48bb179e7fd8f"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/numerical-checks.json",
+      "bytes": 6163,
+      "sha256": "182ee008d19c2e6f8fe6ccc13acac56dc54dae554519e57887a53454d6755c1e"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/tokenizer-author-provenance.json",
+      "bytes": 377,
+      "sha256": "7ae38251a3deadb2ff441433527a2caaa44c3a849476122364f1095d654c0d87"
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/static-implementation-source.json",
+      "bytes": 362,
+      "sha256": "9f09c74d3a7807c409e641a4ca7556f8d346f510e651559e4133cb06f186b41d"
+    },
+    {
+      "path": ".local/static-japanese-v1/venv/lib/python3.9/site-packages/tokenizers/tokenizers.abi3.so",
+      "bytes": 8490736,
+      "sha256": "db587e22313ce974c459ec52b2fe49f15b227c7e27ed05d9f3f00e7390102c6a"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/METHOD-R1.md",
+      "bytes": 6501,
+      "sha256": "30f350d48a7e6b03d7eacc473060e117b7c7de61cf37d0d11679865a59993c6e"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/BRIEF.md",
+      "bytes": 835,
+      "sha256": "c377cb4b46e8d5d6d0b211201644f95e5d4fa836da2077a57f36ffe53c07e3d5"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/freeze_expected.py",
+      "bytes": 5811,
+      "sha256": "1e895473a3ab66de0e9b7f4dea7af7f339c660b2fcfba23ddcaa7b8f8b0938bb"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/upstream/MANIFEST.json",
+      "bytes": 3437,
+      "sha256": "9a076e5214dae79859c066bb488c58a816dc277051349cb58cfa1c3cfc02c6c5"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/EXPECTED-R1.json",
+      "bytes": 7048673,
+      "sha256": "2db43f972725130a84a7e33c020bfa1846e881ed11031480cf24c008533217c4"
+    }
+  ]
+}

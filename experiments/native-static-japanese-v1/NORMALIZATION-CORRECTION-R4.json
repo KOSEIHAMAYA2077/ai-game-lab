@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "failurePreserved": [
+    "NATIVE-R3.json",
+    "PARITY-R3.json"
+  ],
+  "cause": "On this Foundation SDK the compatibility mapping returned U+30AB U+3099 U+30CF U+309A for halfwidth dakuten; explicit canonical composition produces U+30AC U+30D1 required by NFKC. Scalar lowercase unchanged. One edge failed; old455 and other253 IDs matched.",
+  "probe": {
+    "input": "halfwidth ga/pa",
+    "compatScalars": [
+      12459,
+      12441,
+      12495,
+      12442
+    ],
+    "compatThenCanonicalScalars": [
+      12460,
+      12497
+    ]
+  },
+  "changedFormula": "Compatibility normalization followed by explicit NFC before scalar lowercase",
+  "gateChanges": 0,
+  "oracleChanges": 0,
+  "sourceSHA256": "1998734c243b06d5fc4875a3845e6f13ce062aa0f23ab63df31af4e2eacd936a"
+}
