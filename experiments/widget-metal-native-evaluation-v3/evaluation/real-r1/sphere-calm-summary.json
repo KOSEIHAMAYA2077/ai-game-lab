@@ -1,0 +1,139 @@
+{
+  "schema": 2,
+  "renderer": "metal",
+  "phase": "calm",
+  "samples": 181,
+  "elapsed_seconds": 90.004423,
+  "explicit_pid_group": [
+    1289
+  ],
+  "body_expectation": {
+    "stored": 1537,
+    "drawn": 1536,
+    "shape": 0
+  },
+  "viewport_expectation": {
+    "width": 400,
+    "height": 440
+  },
+  "frames_first": 1103,
+  "frames_last": 2457,
+  "frames_delta": 1354,
+  "frames_per_wall_second": 15.043705129913448,
+  "cpu_single_core_percent": 2.0126469240295,
+  "per_process": [
+    {
+      "pid": 1289,
+      "role": "root-attributed-single-native-process",
+      "cpu_single_core_percent": 2.0126469240295,
+      "process_lifetime_max_footprint_bytes": 73335792
+    }
+  ],
+  "charged_footprint_bytes": {
+    "first": 73139184,
+    "median": 73221104,
+    "peak": 73221104,
+    "last": 73221104
+  },
+  "RSS_bytes": {
+    "first": 87719936,
+    "median": 87818240,
+    "peak": 87818240,
+    "last": 87818240
+  },
+  "declared_fixture_differences": {
+    "no_inference": true,
+    "no_history": true,
+    "concurrent_R5": true
+  },
+  "comparison_observations": {},
+  "validation_passed": true,
+  "validation_errors": [],
+  "warnings": [
+    "charged footprint sum is not unique system RAM; frame telemetry is not presentation FPS; shader/submit ms is wall elapsed; UI/ownership proof is root supplied; no GPU/power/laptop measurement"
+  ],
+  "candidate_budget": {
+    "cpu_limit_single_core_percent": 5,
+    "charged_peak_limit_MiB": 200,
+    "within_values": true,
+    "eligible_only_if_validation_passed_and_phase_calm": true
+  },
+  "metal_diagnostics": {
+    "atlasKinds": {
+      "first": 22,
+      "last": 22,
+      "minimum": 22,
+      "maximum": 22
+    },
+    "atlasRows": {
+      "first": 1,
+      "last": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "atlasRGBABytes": {
+      "first": 524288,
+      "last": 524288,
+      "minimum": 524288,
+      "maximum": 524288
+    },
+    "instanceBytes": {
+      "first": 122880,
+      "last": 122880,
+      "minimum": 122880,
+      "maximum": 122880
+    },
+    "uniformBytes": {
+      "first": 336,
+      "last": 336,
+      "minimum": 336,
+      "maximum": 336
+    },
+    "cameraDistance": {
+      "first": 8.88720703125,
+      "last": 8.88720703125,
+      "minimum": 8.88720703125,
+      "maximum": 8.88720703125
+    },
+    "framingMinimum": {
+      "first": 8.434593200683594,
+      "last": 8.434593200683594,
+      "minimum": 8.434593200683594,
+      "maximum": 8.434593200683594
+    },
+    "manualZoom": {
+      "first": 1,
+      "last": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "frustumFar": {
+      "first": 100,
+      "last": 100,
+      "minimum": 100,
+      "maximum": 100
+    },
+    "shaderCompileMS": {
+      "first": 1.5552083496004343,
+      "last": 1.5552083496004343,
+      "minimum": 1.5552083496004343,
+      "maximum": 1.5552083496004343
+    },
+    "submitElapsedP95MS": {
+      "first": 0.30224997317418456,
+      "last": 0.28304167790338397,
+      "minimum": 0.28304167790338397,
+      "maximum": 0.3022917080670595
+    },
+    "submitElapsedMaximumMS": {
+      "first": 1.5638333279639482,
+      "last": 1.5638333279639482,
+      "minimum": 1.5638333279639482,
+      "maximum": 1.5638333279639482
+    }
+  },
+  "source": "sphere-calm.json",
+  "source_sha256": "e64ddca159ab4f191071f52db6e09ef549e65638c6b2035bbc74acf70d665864",
+  "expectation": "sphere-calm-expectation.json",
+  "expectation_sha256": "aaa0bb57c243d14349de15a792ac81afbfaa0b8d32dcc9f1372754eb8e3a2c73"
+}

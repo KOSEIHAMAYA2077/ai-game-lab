@@ -1,0 +1,139 @@
+{
+  "schema": 2,
+  "renderer": "metal",
+  "phase": "calm",
+  "samples": 181,
+  "elapsed_seconds": 90.005169,
+  "explicit_pid_group": [
+    1289
+  ],
+  "body_expectation": {
+    "stored": 1537,
+    "drawn": 1536,
+    "shape": 12
+  },
+  "viewport_expectation": {
+    "width": 400,
+    "height": 440
+  },
+  "frames_first": 8071,
+  "frames_last": 9419,
+  "frames_delta": 1348,
+  "frames_per_wall_second": 14.976917603476751,
+  "cpu_single_core_percent": 1.9031667136806332,
+  "per_process": [
+    {
+      "pid": 1289,
+      "role": "root-attributed-single-native-process",
+      "cpu_single_core_percent": 1.9031667136806332,
+      "process_lifetime_max_footprint_bytes": 75826160
+    }
+  ],
+  "charged_footprint_bytes": {
+    "first": 75695112,
+    "median": 75695112,
+    "peak": 75744264,
+    "last": 75744264
+  },
+  "RSS_bytes": {
+    "first": 96288768,
+    "median": 96288768,
+    "peak": 96337920,
+    "last": 96337920
+  },
+  "declared_fixture_differences": {
+    "no_inference": true,
+    "no_history": true,
+    "concurrent_R5": true
+  },
+  "comparison_observations": {},
+  "validation_passed": true,
+  "validation_errors": [],
+  "warnings": [
+    "charged footprint sum is not unique system RAM; frame telemetry is not presentation FPS; shader/submit ms is wall elapsed; UI/ownership proof is root supplied; no GPU/power/laptop measurement"
+  ],
+  "candidate_budget": {
+    "cpu_limit_single_core_percent": 5,
+    "charged_peak_limit_MiB": 200,
+    "within_values": true,
+    "eligible_only_if_validation_passed_and_phase_calm": true
+  },
+  "metal_diagnostics": {
+    "atlasKinds": {
+      "first": 22,
+      "last": 22,
+      "minimum": 22,
+      "maximum": 22
+    },
+    "atlasRows": {
+      "first": 1,
+      "last": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "atlasRGBABytes": {
+      "first": 524288,
+      "last": 524288,
+      "minimum": 524288,
+      "maximum": 524288
+    },
+    "instanceBytes": {
+      "first": 122880,
+      "last": 122880,
+      "minimum": 122880,
+      "maximum": 122880
+    },
+    "uniformBytes": {
+      "first": 336,
+      "last": 336,
+      "minimum": 336,
+      "maximum": 336
+    },
+    "cameraDistance": {
+      "first": 10.541692733764648,
+      "last": 10.541692733764648,
+      "minimum": 10.541692733764648,
+      "maximum": 10.541692733764648
+    },
+    "framingMinimum": {
+      "first": 10.541690826416016,
+      "last": 10.541690826416016,
+      "minimum": 10.541690826416016,
+      "maximum": 10.541690826416016
+    },
+    "manualZoom": {
+      "first": 1,
+      "last": 1,
+      "minimum": 1,
+      "maximum": 1
+    },
+    "frustumFar": {
+      "first": 100,
+      "last": 100,
+      "minimum": 100,
+      "maximum": 100
+    },
+    "shaderCompileMS": {
+      "first": 1.5552083496004343,
+      "last": 1.5552083496004343,
+      "minimum": 1.5552083496004343,
+      "maximum": 1.5552083496004343
+    },
+    "submitElapsedP95MS": {
+      "first": 0.2353749587200582,
+      "last": 0.2519999979995191,
+      "minimum": 0.2353749587200582,
+      "maximum": 0.2519999979995191
+    },
+    "submitElapsedMaximumMS": {
+      "first": 1.5638333279639482,
+      "last": 1.5638333279639482,
+      "minimum": 1.5638333279639482,
+      "maximum": 1.5638333279639482
+    }
+  },
+  "source": "saturn-calm.json",
+  "source_sha256": "239c44b491009c0643eafd9362ec973e6189733b61b4c54a2c5c4a8479f0037e",
+  "expectation": "saturn-calm-expectation.json",
+  "expectation_sha256": "4bb4eb733331c9d89552c34b881a2b2b241679b66ea04247fbaff5a5957dd685"
+}

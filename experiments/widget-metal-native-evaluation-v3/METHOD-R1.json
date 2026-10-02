@@ -1,0 +1,84 @@
+{
+  "version": "metal-native-v3-method-r1",
+  "frozenBeforeRealV3ResourceSamples": true,
+  "scope": "Native 13-authored-shape candidate; four settled shapes only, not default 60/full OS input/16GB/power/GPU utilization or eight-hour app soak",
+  "machine": "Apple M5 32 GiB arm64 macOS, actual run to record OS build",
+  "viewport": [
+    400,
+    440
+  ],
+  "body": {
+    "stored": 1537,
+    "drawn": 1536,
+    "fixture": "same count/code-defined seed and character template per native app",
+    "ink": "white",
+    "targetFPS": 15,
+    "noHistoryReadsOrWrites": true,
+    "noInference": true
+  },
+  "candidateSelection": "After source returns; record exact BuildInfo/SHA and strict ad-hoc verification before launch; no choose after resource result",
+  "order": [
+    {
+      "shape": 0,
+      "label": "sphere",
+      "phase": "calm",
+      "warmSeconds": 60,
+      "sampleSeconds": 90
+    },
+    {
+      "shape": 5,
+      "label": "jellyfish",
+      "phase": "calm",
+      "warmSeconds": 10,
+      "sampleSeconds": 90
+    },
+    {
+      "shape": 7,
+      "label": "butterfly",
+      "phase": "calm",
+      "warmSeconds": 10,
+      "sampleSeconds": 90
+    },
+    {
+      "shape": 12,
+      "label": "saturn",
+      "phase": "calm",
+      "warmSeconds": 10,
+      "sampleSeconds": 90
+    },
+    {
+      "shape": 12,
+      "label": "saturn",
+      "phase": "paused",
+      "warmSeconds": 2,
+      "sampleSeconds": 30
+    },
+    {
+      "shape": 12,
+      "label": "saturn",
+      "phase": "hidden",
+      "paused": false,
+      "warmSeconds": 2,
+      "sampleSeconds": 30
+    }
+  ],
+  "sampleIntervalSeconds": 0.5,
+  "attribution": "Explicit main PID/start_abstime/coalition identity; native single process. No automatic global process discovery or other-app private data. Actual show/shape/pause/hide/reopen/quit observed by root CUA. Counter is draw submission, not presentation FPS.",
+  "quiet": "Pause root/agent builds and tests while sampling; do not close unrelated user apps. Existing R5 offscreen soak may run concurrently and is an explicit condition, not counted in candidate PID footprint/CPU. Record its identity and completion time.",
+  "reporting": {
+    "cpu": "Native helper user+system deltas divided by Mach monotonic elapsed; 100 percent means one logical core",
+    "memory": "charged footprint and resident bytes separately, byte-to-MiB exact; not system unique RAM",
+    "candidateBudget": {
+      "calmOneCoreCPUPercentMax": 5,
+      "calmChargedFootprintMiBMax": 200
+    },
+    "validation": "Existing v2 numeric validator preserved as source reference; v3 copy changes only renderer expected name; every phase explicit body/shape/uniform bytes from frozen BuildInfo/source. Never fix thresholds after seeing values; FAIL retained.",
+    "causalComparison": "Old v2 sphere run differs in time/session/fixture and source; descriptive only, not isolated backend or 13-vs60 effect"
+  },
+  "references": {
+    "experiments/widget-companion-v1/evaluation/sample_native.py": "092705eeef7860140cf42a338a16cbafa8a4bd22bf0031a3c12e86d9624a132c",
+    "experiments/widget-companion-v1/evaluation/native_metrics.c": "e60d5bd07b557c4d58467b561d7491e9e4b7ae5413804fc3bf2a6d8a09df9ab7",
+    "experiments/widget-metal-native-evaluation-v2/validate.py": "7dfe29a088798d1bb879aea6b5362a81d361adf2b285aee0fe63f0f46d3ff593"
+  },
+  "validatorV3Sha256": "b79d96e0b755d4c8f7f49f9ec21958493d60d02198e10ca5db185895b87e93ff"
+}

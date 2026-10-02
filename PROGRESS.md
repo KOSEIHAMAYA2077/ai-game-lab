@@ -1,5 +1,15 @@
 # 進捗
 
+## 2026-10-03 06:10 — Metalの13形と実小窓資源
+
+別namespaceの[13形候補](desktop/glyph-metal-lab-v3/README.md)へWebの作者定義10形を移植。旧3形の式は保持。CPU 4,953検査、GPU 605の凍結geometry対応、13形offscreen、40,560収まり条件と757,760元TS頂点を別母数で確認。蝶の退化点・Float候補失敗と旧原票を保持した。
+
+[実小窓](experiments/widget-metal-native-evaluation-v3/REPORT.md)は白1,537保存/1,536描画/400×440、M5/32GiBで4形各90秒。CPU1.591〜2.013%（1コア基準）/charged peak69.829〜72.235MiB、停止/非表示各30秒の提出差0、6数値gate合格。R5 offscreenが並走し、16GB・GPU負荷・電力・8時間実窓の証明ではない。独立算術監査は27原票のbyte/帰属/値に不一致0。
+
+[実操作](experiments/widget-metal-authored-v3-root-ui/README.md)では旧白/追加青・未知文の材料追加・pause/Hide・C候補の同PID復帰を確認。Aの復帰timeoutは保持。通常起動の近い@→Enter→人工日本語paste→花瓶、再起動でbatch/seed/色/形/257文字が一致。通常保存と入力契約の保存offは別実装。既定60形は維持する。
+
+次は別v4へ元Webの魚・鳥・蛇の骨格を段階移植し、専用textareaのR2入力契約から文字表面へつなぐ独立labを試す。OS全体の入力取得・設定変更は行わない。R5の2時間offscreenは06:25終了予定で継続中。
+
 ## 2026-10-03 05:09 — 材料の唯一所有と入力の割込みを統合
 
 [人工統合R3](experiments/ambient-integration-contract-v1/REPORT.md)は元20ケース20/20、補助8/8、追加gap4/4、実mutant6/6検出。独立behavior11/11と追加5/5も別に確認し、rootは20・独立11/5を再現した。R1/R2の並列producerとactivity gap不具合、harness修正前の原票を保持する。既知ケースの回帰で、実OS・IME・快適性ではない。唯一body/ID、追加後ACK、保存off allowlistが専用編集欄の接続候補となった。[公開確認](experiments/ambient-integration-publication-v1/README.md)。

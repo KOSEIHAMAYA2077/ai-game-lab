@@ -1,5 +1,17 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 05:48 JST
+
+期限10:37、10:17以降新機能停止。PR31 merge f24c7e5・添付済み（人工統合R3）。rootはexperiment/metal-authored-v3で13形Metal別版/原票を所有。Final Floor30/0.3.0/namespace v3を返却freezeし、実窓A/B/C/Eを確認。AのHide復帰timeout終了は保持、Cは同PID復帰/停止状態保持/actualQuit成功。青のfloor45明るさ候補は小差で、floor30を維持。新resource R1の4形90s＋pause/hide30sは事前METHODに従いPID1289で進行、heavy tasks休止・R5並走を明記。既定60形Webは維持。
+
+専用editor R2は31作者/42review返却。独立17/17＋destroy1/1、retired callback10/10＋stale shape1/1は人工の回帰/追加母数。root実ブラウザでbox→削除→ring→緑sphere、旧7青/new7緑/14素材、reload0確認。IME/OS連動/日常快適さは未確認。実UI tabを閉じ、own server645をcommand確認後終了。実UI原票はexperiments/ambient-editor-root-ui-v1/。
+
+static_fresh_evaluationはresearch/ambient-study-questions-v1/のみ所有してdocs/一次研究の評価設計。widget_metal_comparisonはexperiments/widget-metal-native-evaluation-v3/review-real-r1/のみ所有、実測終了後に独立監査。static_japanese_retrievalは13形返却済み。測定中はCPU/GPU/build/testsなし。
+
+R5新2時間r2 supervisor93048/engine93049/sampler93050は06:25:03予定で継続。ownedcaffeinate83393のみ管理、未知82495触らない。入力のOS取得/設定変更/実本文外部送信はなし。13形公開PRとeditor独立PRを実確認・private scan後に作成予定。
+
+以下は前の状態の履歴。
+
 ## 最新: 2026-10-03 05:09 JST
 
 期限10:37、10:17以降新機能停止。PR30 merge f43f7b8・タスク添付済み。rootはresearch/ambient-integrated-contract-v1で返却済み人工統合R3/reviewの公開を担当。59+42 SHA一致、root元20/独立11+5再現成功、旧R1/R2/失敗保持。次の専用textareaはstatic_fresh_evaluationがexperiments/ambient-editor-adapter-v1/、独立reviewはwidget_metal_comparisonがexperiments/ambient-editor-adapter-review-v1/のみ所有。OS取得/設定/実本文送信なし。
