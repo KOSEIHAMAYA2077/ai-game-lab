@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-02T09:52:40.928672+00:00",
+  "purpose": "New independent fixture frozen before browser-encoder relation head training is complete. No fixture text shared with trainer before first evaluation. Finite program meaning, not an arbitrary geometry generalization claim.",
+  "cases": [
+    {
+      "id": "head-challenge-end-ring-vase-ja",
+      "group": "end",
+      "text": "輪の先端に花瓶を取り付けて、じっくり眺める。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "ring"
+          },
+          {
+            "primitive": "vase"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "head-challenge-above-vase-blade-ja",
+      "group": "above",
+      "text": "花瓶の上に刃を載せた形を見たい。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "vase"
+          },
+          {
+            "primitive": "blade"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "head-challenge-through-tube-ring-ja",
+      "group": "through",
+      "text": "棒を輪が貫く、そんな立体を浮かべる。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "tube"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "head-challenge-above-box-ring-ja",
+      "group": "above",
+      "text": "箱の上に輪、という構造をお願いします。",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "box"
+          },
+          {
+            "primitive": "ring"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "head-challenge-end-blade-vase-en",
+      "group": "end",
+      "text": "A vase is joined at the tip of a blade.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "blade"
+          },
+          {
+            "primitive": "vase"
+          }
+        ],
+        "relation": "end"
+      }
+    },
+    {
+      "id": "head-challenge-above-blade-vase-en",
+      "group": "above",
+      "text": "Put a vase above a blade, then let it remain still.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "blade"
+          },
+          {
+            "primitive": "vase"
+          }
+        ],
+        "relation": "above"
+      }
+    },
+    {
+      "id": "head-challenge-through-sphere-blade-en",
+      "group": "through",
+      "text": "A blade passes through a sphere.",
+      "expected": {
+        "parts": [
+          {
+            "primitive": "sphere"
+          },
+          {
+            "primitive": "blade"
+          }
+        ],
+        "relation": "through"
+      }
+    },
+    {
+      "id": "head-challenge-unsupported-placement-en",
+      "group": "unsupported-relation",
+      "text": "Place a vase next to a ring.",
+      "expected": null
+    }
+  ]
+}

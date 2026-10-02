@@ -1,0 +1,330 @@
+{
+  "label": "WASM batch-1 embedding lookup interpretation; inference time is not live end-to-end time",
+  "head": "relation-head.json",
+  "rows": [
+    {
+      "text": "花瓶の先端へ細い刃を固定する",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 60.866,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-tip",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "vase",
+          "score": 0.994225
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "blade",
+          "score": 0.988279
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "depth"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "end",
+          "score": 0.896603
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "end",
+          "score": 0.896603
+        },
+        {
+          "kind": "above",
+          "score": 0.067946
+        },
+        {
+          "kind": "through",
+          "score": 0.020244
+        },
+        {
+          "kind": "none",
+          "score": 0.015207
+        }
+      ]
+    },
+    {
+      "text": "短い棒の上に大きな棒を置く",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 0.65,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.55,
+            "width": 1.55,
+            "depth": 1.55,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.437,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-top",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "tube",
+          "score": 0.996568
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "0",
+          "attribute": "height"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "0",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "0",
+          "attribute": "height"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "tube",
+          "score": 0.996568
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "height"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "width"
+        },
+        {
+          "kind": "explicit-attribute-rule",
+          "part": "1",
+          "attribute": "depth"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "above",
+          "score": 0.880187
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "above",
+          "score": 0.880187
+        },
+        {
+          "kind": "end",
+          "score": 0.063614
+        },
+        {
+          "kind": "none",
+          "score": 0.037838
+        },
+        {
+          "kind": "through",
+          "score": 0.018361
+        }
+      ]
+    },
+    {
+      "text": "円環の中心を管が通る",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.317,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-through-center",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "ring",
+          "score": 0.988338
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "tube",
+          "score": 0.988867
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "through",
+          "score": 0.972505
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "through",
+          "score": 0.972505
+        },
+        {
+          "kind": "end",
+          "score": 0.016816
+        },
+        {
+          "kind": "above",
+          "score": 0.006226
+        },
+        {
+          "kind": "none",
+          "score": 0.004453
+        }
+      ]
+    },
+    {
+      "text": "今日は晴れた。",
+      "program": null,
+      "source": "unchanged",
+      "modelMs": 0.142,
+      "reason": "primitive-uncertain",
+      "evidence": [
+        {
+          "kind": "primitive-uncertain",
+          "part": "0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1782 @@
+{
+  "label": "Training/validation only; separate WASM batch-1 head, CPU head preserved",
+  "headSha256": "af2289c3bccb20d0186fa2770460ba50b2d08413209ab5f866c0ae2aeff1203d",
+  "headTrainingMs": 459.5797919901088,
+  "encoderPreparationMs": 7346.099999964237,
+  "embeddingMs": 804.4000000357628,
+  "selectedEpoch": 12,
+  "selectedAcceptedCorrectQuality": 0.875,
+  "trainingRows": 1103,
+  "validationRows": 288,
+  "trainingMaskedUnique": 57,
+  "validationMaskedUnique": 12,
+  "maskedOverlap": 0,
+  "independentEvaluationRead": false,
+  "learningCurve": [
+    {
+      "epoch": 1,
+      "trainingAccuracy": 0.9610154125113327,
+      "validationAccuracy": 1.0,
+      "trainingAcceptedCorrect": 0.1958295557570263,
+      "validationAcceptedCorrect": 0.25
+    },
+    {
+      "epoch": 100,
+      "trainingAccuracy": 1.0,
+      "validationAccuracy": 0.875,
+      "trainingAcceptedCorrect": 1.0,
+      "validationAcceptedCorrect": 0.875
+    },
+    {
+      "epoch": 300,
+      "trainingAccuracy": 1.0,
+      "validationAccuracy": 0.875,
+      "trainingAcceptedCorrect": 1.0,
+      "validationAcceptedCorrect": 0.875
+    },
+    {
+      "epoch": 600,
+      "trainingAccuracy": 1.0,
+      "validationAccuracy": 0.875,
+      "trainingAcceptedCorrect": 1.0,
+      "validationAcceptedCorrect": 0.875
+    },
+    {
+      "epoch": 1200,
+      "trainingAccuracy": 1.0,
+      "validationAccuracy": 0.875,
+      "trainingAcceptedCorrect": 1.0,
+      "validationAcceptedCorrect": 0.875
+    }
+  ],
+  "validation": [
+    {
+      "text": "丸い玉の片端に丸い玉を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "丸い玉の片端に四角い箱を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "丸い玉の片端に円柱の棒を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "丸い玉の片端に長い刃を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.7385783346771002
+    },
+    {
+      "text": "丸い玉の片端に円環を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "丸い玉の片端に花入れを置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "四角い箱の片端に丸い玉を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "四角い箱の片端に四角い箱を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "四角い箱の片端に円柱の棒を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "四角い箱の片端に長い刃を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.7385783346771002
+    },
+    {
+      "text": "四角い箱の片端に円環を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "四角い箱の片端に花入れを置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円柱の棒の片端に丸い玉を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円柱の棒の片端に四角い箱を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円柱の棒の片端に円柱の棒を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円柱の棒の片端に長い刃を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.7385783346771002
+    },
+    {
+      "text": "円柱の棒の片端に円環を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円柱の棒の片端に花入れを置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "長い刃の片端に丸い玉を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "長い刃の片端に四角い箱を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "長い刃の片端に円柱の棒を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "長い刃の片端に長い刃を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.7385783346771002
+    },
+    {
+      "text": "長い刃の片端に円環を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "長い刃の片端に花入れを置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円環の片端に丸い玉を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円環の片端に四角い箱を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円環の片端に円柱の棒を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円環の片端に長い刃を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.7385783346771002
+    },
+    {
+      "text": "円環の片端に円環を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "円環の片端に花入れを置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "花入れの片端に丸い玉を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "花入れの片端に四角い箱を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "花入れの片端に円柱の棒を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "花入れの片端に長い刃を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.7385783346771002
+    },
+    {
+      "text": "花入れの片端に円環を置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "花入れの片端に花入れを置く",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.8060909656562791
+    },
+    {
+      "text": "a sphere with a sphere attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a sphere with a cube attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a sphere with a rod attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a sphere with a blade attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a sphere with a ring attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a sphere with a vase attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a cube with a sphere attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a cube with a cube attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a cube with a rod attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a cube with a blade attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a cube with a ring attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a cube with a vase attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a rod with a sphere attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a rod with a cube attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a rod with a rod attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a rod with a blade attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a rod with a ring attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a rod with a vase attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a blade with a sphere attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a blade with a cube attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a blade with a rod attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a blade with a blade attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a blade with a ring attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a blade with a vase attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a ring with a sphere attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a ring with a cube attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a ring with a rod attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a ring with a blade attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a ring with a ring attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a ring with a vase attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a vase with a sphere attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a vase with a cube attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a vase with a rod attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a vase with a blade attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a vase with a ring attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "a vase with a vase attached to one end",
+      "relation": "end",
+      "predicted": "end",
+      "confidence": 0.825659976909059
+    },
+    {
+      "text": "丸い玉の上へ丸い玉を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "丸い玉の上へ四角い箱を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "丸い玉の上へ円柱の棒を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "丸い玉の上へ長い刃を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9775660772426549
+    },
+    {
+      "text": "丸い玉の上へ円環を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "丸い玉の上へ花入れを置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "四角い箱の上へ丸い玉を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "四角い箱の上へ四角い箱を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "四角い箱の上へ円柱の棒を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "四角い箱の上へ長い刃を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9775660772426549
+    },
+    {
+      "text": "四角い箱の上へ円環を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "四角い箱の上へ花入れを置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円柱の棒の上へ丸い玉を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円柱の棒の上へ四角い箱を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円柱の棒の上へ円柱の棒を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円柱の棒の上へ長い刃を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9775660772426549
+    },
+    {
+      "text": "円柱の棒の上へ円環を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円柱の棒の上へ花入れを置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "長い刃の上へ丸い玉を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "長い刃の上へ四角い箱を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "長い刃の上へ円柱の棒を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "長い刃の上へ長い刃を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9775660772426549
+    },
+    {
+      "text": "長い刃の上へ円環を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "長い刃の上へ花入れを置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円環の上へ丸い玉を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円環の上へ四角い箱を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円環の上へ円柱の棒を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円環の上へ長い刃を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9775660772426549
+    },
+    {
+      "text": "円環の上へ円環を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "円環の上へ花入れを置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "花入れの上へ丸い玉を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "花入れの上へ四角い箱を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "花入れの上へ円柱の棒を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "花入れの上へ長い刃を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9775660772426549
+    },
+    {
+      "text": "花入れの上へ円環を置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "花入れの上へ花入れを置いてみる",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.9699304153192617
+    },
+    {
+      "text": "put a sphere over a sphere",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a cube over a sphere",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a rod over a sphere",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a blade over a sphere",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a ring over a sphere",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a vase over a sphere",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a sphere over a cube",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a cube over a cube",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a rod over a cube",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a blade over a cube",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a ring over a cube",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a vase over a cube",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a sphere over a rod",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a cube over a rod",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a rod over a rod",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a blade over a rod",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a ring over a rod",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a vase over a rod",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a sphere over a blade",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a cube over a blade",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a rod over a blade",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a blade over a blade",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a ring over a blade",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a vase over a blade",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a sphere over a ring",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a cube over a ring",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a rod over a ring",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a blade over a ring",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a ring over a ring",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a vase over a ring",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a sphere over a vase",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a cube over a vase",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a rod over a vase",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a blade over a vase",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a ring over a vase",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "put a vase over a vase",
+      "relation": "above",
+      "predicted": "above",
+      "confidence": 0.5132445107314177
+    },
+    {
+      "text": "丸い玉の穴に丸い玉を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "丸い玉の穴に四角い箱を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "丸い玉の穴に円柱の棒を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "丸い玉の穴に長い刃を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9568689799404227
+    },
+    {
+      "text": "丸い玉の穴に円環を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "丸い玉の穴に花入れを通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "四角い箱の穴に丸い玉を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "四角い箱の穴に四角い箱を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "四角い箱の穴に円柱の棒を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "四角い箱の穴に長い刃を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9568689799404227
+    },
+    {
+      "text": "四角い箱の穴に円環を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "四角い箱の穴に花入れを通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円柱の棒の穴に丸い玉を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円柱の棒の穴に四角い箱を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円柱の棒の穴に円柱の棒を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円柱の棒の穴に長い刃を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9568689799404227
+    },
+    {
+      "text": "円柱の棒の穴に円環を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円柱の棒の穴に花入れを通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "長い刃の穴に丸い玉を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "長い刃の穴に四角い箱を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "長い刃の穴に円柱の棒を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "長い刃の穴に長い刃を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9568689799404227
+    },
+    {
+      "text": "長い刃の穴に円環を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "長い刃の穴に花入れを通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円環の穴に丸い玉を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円環の穴に四角い箱を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円環の穴に円柱の棒を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円環の穴に長い刃を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9568689799404227
+    },
+    {
+      "text": "円環の穴に円環を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "円環の穴に花入れを通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "花入れの穴に丸い玉を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "花入れの穴に四角い箱を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "花入れの穴に円柱の棒を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "花入れの穴に長い刃を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9568689799404227
+    },
+    {
+      "text": "花入れの穴に円環を通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "花入れの穴に花入れを通す",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9571803513976987
+    },
+    {
+      "text": "pass a sphere through a sphere",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a cube through a sphere",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a rod through a sphere",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a blade through a sphere",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a ring through a sphere",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a vase through a sphere",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a sphere through a cube",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a cube through a cube",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a rod through a cube",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a blade through a cube",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a ring through a cube",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a vase through a cube",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a sphere through a rod",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a cube through a rod",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a rod through a rod",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a blade through a rod",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a ring through a rod",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a vase through a rod",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a sphere through a blade",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a cube through a blade",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a rod through a blade",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a blade through a blade",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a ring through a blade",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a vase through a blade",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a sphere through a ring",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a cube through a ring",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a rod through a ring",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a blade through a ring",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a ring through a ring",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a vase through a ring",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a sphere through a vase",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a cube through a vase",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a rod through a vase",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a blade through a vase",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a ring through a vase",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "pass a vase through a vase",
+      "relation": "through",
+      "predicted": "through",
+      "confidence": 0.9876746508164747
+    },
+    {
+      "text": "丸い玉の近くに丸い玉がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "丸い玉の近くに四角い箱がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "丸い玉の近くに円柱の棒がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "丸い玉の近くに長い刃がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.7572488137494735
+    },
+    {
+      "text": "丸い玉の近くに円環がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "丸い玉の近くに花入れがある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "四角い箱の近くに丸い玉がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "四角い箱の近くに四角い箱がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "四角い箱の近くに円柱の棒がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "四角い箱の近くに長い刃がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.7572488137494735
+    },
+    {
+      "text": "四角い箱の近くに円環がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "四角い箱の近くに花入れがある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円柱の棒の近くに丸い玉がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円柱の棒の近くに四角い箱がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円柱の棒の近くに円柱の棒がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円柱の棒の近くに長い刃がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.7572488137494735
+    },
+    {
+      "text": "円柱の棒の近くに円環がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円柱の棒の近くに花入れがある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "長い刃の近くに丸い玉がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "長い刃の近くに四角い箱がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "長い刃の近くに円柱の棒がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "長い刃の近くに長い刃がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.7572488137494735
+    },
+    {
+      "text": "長い刃の近くに円環がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "長い刃の近くに花入れがある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円環の近くに丸い玉がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円環の近くに四角い箱がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円環の近くに円柱の棒がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円環の近くに長い刃がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.7572488137494735
+    },
+    {
+      "text": "円環の近くに円環がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "円環の近くに花入れがある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "花入れの近くに丸い玉がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "花入れの近くに四角い箱がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "花入れの近くに円柱の棒がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "花入れの近くに長い刃がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.7572488137494735
+    },
+    {
+      "text": "花入れの近くに円環がある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "花入れの近くに花入れがある",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.6328886212957018
+    },
+    {
+      "text": "look at a sphere and a sphere",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a sphere and a cube",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a sphere and a rod",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a sphere and a blade",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a sphere and a ring",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a sphere and a vase",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a cube and a sphere",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a cube and a cube",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a cube and a rod",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a cube and a blade",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a cube and a ring",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a cube and a vase",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a rod and a sphere",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a rod and a cube",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a rod and a rod",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a rod and a blade",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a rod and a ring",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a rod and a vase",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a blade and a sphere",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a blade and a cube",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a blade and a rod",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a blade and a blade",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a blade and a ring",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a blade and a vase",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a ring and a sphere",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a ring and a cube",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a ring and a rod",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a ring and a blade",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a ring and a ring",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a ring and a vase",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a vase and a sphere",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a vase and a cube",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a vase and a rod",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a vase and a blade",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a vase and a ring",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    },
+    {
+      "text": "look at a vase and a vase",
+      "relation": "none",
+      "predicted": "none",
+      "confidence": 0.9146751512581028
+    }
+  ]
+}

@@ -16,6 +16,7 @@ concurrency:
 env:
   PLAYABLE_REF: glyph-creature-p0-v0.11.0-rigs.1
   SKELETON_REF: glyph-matter-v0.12.0-skeleton.1
+  PROGRAM_REF: glyph-matter-v0.13.0-program.1
 
 jobs:
   build:
@@ -66,6 +67,24 @@ jobs:
           mkdir -p prototype-source/prototypes/glyph-creature/dist/skeleton-v1
           cp -R skeleton-source/prototypes/glyph-creature/dist/. prototype-source/prototypes/glyph-creature/dist/skeleton-v1/
           cp skeleton-source/prototypes/glyph-creature/dist/skeleton.html prototype-source/prototypes/glyph-creature/dist/skeleton-v1/index.html
+      - name: Check out the separate part-program comparison
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.PROGRAM_REF }}
+          path: program-source
+          persist-credentials: false
+      - name: Check and build the part-program comparison
+        working-directory: program-source/prototypes/glyph-creature
+        run: |
+          npm ci --ignore-scripts
+          npm test
+          npm run build
+          SOURCE_SHA=$(git rev-parse HEAD) node -e 'const fs = require("node:fs"); const pkg = require("./package.json"); fs.writeFileSync("dist/version.json", JSON.stringify({ version: pkg.version, ref: process.env.PROGRAM_REF, commit: process.env.SOURCE_SHA, model: "local browser MiniLM plus learned relation head, bounded two-part surface compiler" }, null, 2) + "\n");'
+      - name: Add part-program comparison while retaining both previous apps
+        run: |
+          mkdir -p prototype-source/prototypes/glyph-creature/dist/program-v1
+          cp -R program-source/prototypes/glyph-creature/dist/. prototype-source/prototypes/glyph-creature/dist/program-v1/
+          cp program-source/prototypes/glyph-creature/dist/program.html prototype-source/prototypes/glyph-creature/dist/program-v1/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload only built public files

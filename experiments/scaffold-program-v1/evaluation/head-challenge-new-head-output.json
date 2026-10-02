@@ -1,0 +1,633 @@
+{
+  "label": "WASM batch-1 embedding lookup interpretation; inference time is not live end-to-end time",
+  "head": "relation-head.json",
+  "rows": [
+    {
+      "text": "輪の先端に花瓶を取り付けて、じっくり眺める。",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "vase",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 59.606,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-tip",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "ring",
+          "score": 0.993976
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "vase",
+          "score": 0.994225
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "end",
+          "score": 0.832011
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "end",
+          "score": 0.832011
+        },
+        {
+          "kind": "above",
+          "score": 0.126583
+        },
+        {
+          "kind": "through",
+          "score": 0.025053
+        },
+        {
+          "kind": "none",
+          "score": 0.016353
+        }
+      ]
+    },
+    {
+      "text": "花瓶の上に刃を載せた形を見たい。",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.4,
+            "width": 0.5,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.459,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-top",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "vase",
+          "score": 0.994225
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "blade",
+          "score": 0.988279
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "above",
+          "score": 0.729696
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "above",
+          "score": 0.729696
+        },
+        {
+          "kind": "end",
+          "score": 0.124053
+        },
+        {
+          "kind": "none",
+          "score": 0.084166
+        },
+        {
+          "kind": "through",
+          "score": 0.062085
+        }
+      ]
+    },
+    {
+      "text": "棒を輪が貫く、そんな立体を浮かべる。",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1.4,
+            "width": 0.4,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.724,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-through-object",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "tube",
+          "score": 0.996568
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "ring",
+          "score": 0.993976
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "through",
+          "score": 0.8105
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "through",
+          "score": 0.8105
+        },
+        {
+          "kind": "above",
+          "score": 0.091871
+        },
+        {
+          "kind": "end",
+          "score": 0.059733
+        },
+        {
+          "kind": "none",
+          "score": 0.037896
+        }
+      ]
+    },
+    {
+      "text": "箱の上に輪、という構造をお願いします。",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.308,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "jp-top",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "box",
+          "score": 0.993483
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "ring",
+          "score": 0.993976
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "above",
+          "score": 0.888828
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "above",
+          "score": 0.888828
+        },
+        {
+          "kind": "none",
+          "score": 0.063975
+        },
+        {
+          "kind": "through",
+          "score": 0.034609
+        },
+        {
+          "kind": "end",
+          "score": 0.012587
+        }
+      ]
+    },
+    {
+      "text": "A vase is joined at the tip of a blade.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1.4,
+            "width": 0.5,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "vase",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.497,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "en-tip",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "blade",
+          "score": 0.990605
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "vase",
+          "score": 0.994065
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "end",
+          "score": 0.900156
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "end",
+          "score": 0.900156
+        },
+        {
+          "kind": "through",
+          "score": 0.043624
+        },
+        {
+          "kind": "above",
+          "score": 0.042133
+        },
+        {
+          "kind": "none",
+          "score": 0.014088
+        }
+      ]
+    },
+    {
+      "text": "Put a vase above a blade, then let it remain still.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1.4,
+            "width": 0.5,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          },
+          {
+            "id": "1",
+            "primitive": "vase",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.87,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "en-top",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "blade",
+          "score": 0.990605
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "vase",
+          "score": 0.994065
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "above",
+          "score": 0.851538
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "above",
+          "score": 0.851538
+        },
+        {
+          "kind": "end",
+          "score": 0.07355
+        },
+        {
+          "kind": "through",
+          "score": 0.047956
+        },
+        {
+          "kind": "none",
+          "score": 0.026955
+        }
+      ]
+    },
+    {
+      "text": "A blade passes through a sphere.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1.0,
+            "width": 1.0,
+            "depth": 1.0,
+            "bend": 0.0,
+            "twist": 0.65
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1.4,
+            "width": 0.5,
+            "depth": 0.4,
+            "bend": 0.0,
+            "twist": 0.0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "semantic-model",
+      "modelMs": 0.455,
+      "reason": "selected",
+      "evidence": [
+        {
+          "kind": "part-extraction-rule",
+          "pattern": "en-through",
+          "parts": 2
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "0",
+          "primitive": "sphere",
+          "score": 0.99264
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "0"
+        },
+        {
+          "kind": "embedding-descriptor",
+          "part": "0",
+          "attribute": "twist"
+        },
+        {
+          "kind": "embedding-primitive",
+          "part": "1",
+          "primitive": "blade",
+          "score": 0.990605
+        },
+        {
+          "kind": "noun-focus-rule",
+          "part": "1"
+        },
+        {
+          "kind": "relation-input-mask-rule"
+        },
+        {
+          "kind": "learned-relation-head",
+          "label": "through",
+          "score": 0.991935
+        }
+      ],
+      "relationCandidates": [
+        {
+          "kind": "through",
+          "score": 0.991935
+        },
+        {
+          "kind": "end",
+          "score": 0.005294
+        },
+        {
+          "kind": "above",
+          "score": 0.001451
+        },
+        {
+          "kind": "none",
+          "score": 0.00132
+        }
+      ]
+    },
+    {
+      "text": "Place a vase next to a ring.",
+      "program": null,
+      "source": "unchanged",
+      "modelMs": 0.225,
+      "reason": "primitive-uncertain",
+      "evidence": [
+        {
+          "kind": "ambiguous-part-guard",
+          "part": "0"
+        }
+      ]
+    }
+  ]
+}

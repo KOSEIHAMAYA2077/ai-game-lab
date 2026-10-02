@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-02 — 部位と関係から文字の面を作る別版
+
+`0.13.0-program.1`で、sphere/box/tube/blade/ring/vaseを最大2部位、学習した関係分類器と制約付き幾何で組み合わせる。元の根性版、v0.12骨格版は保存済みタグとURLを保持。新しい試遊入口は[program-v1](https://koseihamaya2077.github.io/glyph-matter/program-v1/)。
+
+128単体テスト・型・build、新UI2ケース、旧骨格6ケースを確認。独立初回21/30、実UI修正後28/30（同種6/6、追加4/8）は回帰。モデル初回準備9.225秒、準備後の全工程3.970〜4.015秒をこのMacで実測。16GB CPU/iGPU実機は未測定。実際の幾何では32生成の有限面、above接触11/11、through交差5/5を確認。[結果・制限・再現](experiments/scaffold-program-v1/evaluation/REPORT.md)。
+
+20:33 JSTまでの許可された作業を継続中。次は現在の版を固定し、文字座標の移動から断面自体のねじれへ分けて比較する。[次の研究](experiments/scaffold-program-v1/RESEARCH_NEXT.md)。
+
 ## 2026-10-01 — インストール不要のWeb試遊版
 
 GitHubのREADMEトップからGitHub Pagesの試遊版へ直接進む導線を追加。公開元は保存済みの骨格版`glyph-creature-p0-v0.11.0-rigs.1`。以前のコードをmainへまとめて統合せず、公開ワークフローが指定タグをビルドする。トップへ軽量モデルによる曖昧な言葉からの3D形状生成を研究・試作中であること、Codexのサブエージェントによる分担を明記。公開中の根性版はモデル推論なし。[公開版・操作・保存・更新](docs/WEB_DEMO.md)。以下は以前の記録。
