@@ -4,6 +4,8 @@ import * as THREE from 'three';
 import { inspectCreatureRig } from './creature-rig';
 import { Matter, MAX_GLYPHS, MAX_KINDS, growth, cameraDistance, smooth, type Form, type Vec3 } from './model';
 import { COLORS, type SceneSpec } from './language';
+import { displayGlyphs } from './widget-display';
+import type { Glyph } from './model';
 import { composedPosition, intakePosition, randomUnit } from './shapes';
 import { createSurfaceFrame, normalizeSurfaceFrame, surfaceFrame } from './surface-frame';
 import { applyMotionFrame, prepareMotion, MOTION_EXTENT } from './motions';
@@ -42,7 +44,10 @@ class Atlas {
   clear() { this.ids.clear(); this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); this.texture.needsUpdate = true; }
 }
 
+export type SceneOptions = { pixelRatio?: number; antialias?: boolean; preserveDrawingBuffer?: boolean; maxDrawnGlyphs?: number };
+
 export class GlyphScene {
+  displayedGlyphs: Glyph[] = [];
   renderer: THREE.WebGLRenderer;
   camera = new THREE.PerspectiveCamera(43, 1, 0.1, 100);
   scene = new THREE.Scene();
@@ -84,9 +89,9 @@ export class GlyphScene {
   skeleton: SkeletonSpec | null = null;
   program: CompiledProgram | null = null;
 
-  constructor(readonly host: HTMLElement, readonly matter: Matter) {
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  constructor(readonly host: HTMLElement, readonly matter: Matter, readonly options: SceneOptions = {}) {
+    this.renderer = new THREE.WebGLRenderer({ antialias: options.antialias ?? true, preserveDrawingBuffer: options.preserveDrawingBuffer ?? true });
+    this.renderer.setPixelRatio(options.pixelRatio ?? Math.min(window.devicePixelRatio, 2));
     this.renderer.setClearColor(0x000000, 1);
     this.renderer.domElement.setAttribute('aria-label', '入力した文字が流れて形を作る立体表示');
     this.renderer.domElement.setAttribute('role', 'img');
@@ -193,13 +198,16 @@ export class GlyphScene {
   }
 
   sync(screenPoints?: { x: number; y: number }[], fontSize = 20) {
+    const next = this.options.maxDrawnGlyphs ? displayGlyphs(this.matter.glyphs, this.options.maxDrawnGlyphs) : this.matter.glyphs;
+    const sampled = Boolean(this.options.maxDrawnGlyphs && this.matter.glyphs.length > this.options.maxDrawnGlyphs);
+    this.displayedGlyphs = next;
     this.planes.updateMatrixWorld();
     const inverse = this.planes.matrixWorld.clone().invert();
     const rect = this.host.getBoundingClientRect();
     const projectionScale = this.height / (2 * Math.tan(THREE.MathUtils.degToRad(43 / 2)));
     const motion = prepareMotion(this.matter.spec.motion ?? 'calm', this.matter.time, this.motionScratch);
-    for (let i = this.count; i < this.matter.glyphs.length; i++) {
-      const glyph = this.matter.glyphs[i];
+    for (let i = sampled ? 0 : this.count; i < next.length; i++) {
+      const glyph = next[i];
       const tile = this.atlas.add(glyph.text);
       this.uv[i * 2] = (tile % COLUMNS) / COLUMNS;
       this.uv[i * 2 + 1] = 1 - (Math.floor(tile / COLUMNS) + 1) / COLUMNS;
@@ -218,13 +226,13 @@ export class GlyphScene {
       ).applyMatrix4(inverse).toArray() as Vec3 : [0, -1.9 / this.scale, 0];
       this.sources.set(source, i * 3);
       const target = this.program
-        ? programSurface(this.program, i, this.matter.time, this.matter.seed, this.movedPoint)
+        ? programSurface(this.program, glyph.id, this.matter.time, this.matter.seed, this.movedPoint)
         : this.skeleton
-        ? skeletonSurface(this.skeleton, i, this.matter.time, this.matter.seed, this.movedPoint)
-        : composedPosition(this.matter.spec, i, this.matter.time, this.matter.seed, motion);
+        ? skeletonSurface(this.skeleton, glyph.id, this.matter.time, this.matter.seed, this.movedPoint)
+        : composedPosition(this.matter.spec, glyph.id, this.matter.time, this.matter.seed, motion);
       this.origins.set(target, i * 3); this.morphTargets.set(target, i * 3);
     }
-    this.count = this.matter.glyphs.length;
+    this.count = next.length;
     this.geometry.instanceCount = this.count;
     this.geometry.getAttribute('atlasOffset').needsUpdate = true;
     this.geometry.getAttribute('bornAt').needsUpdate = true;
@@ -293,14 +301,14 @@ export class GlyphScene {
     const alignment = aligned ? .98 * smooth((Math.log2(this.count) - 4) / 5) * blend : 0;
     const sharedSurface = alignment > 0 && ((Boolean(this.program) || Boolean(this.skeleton)) || ['condense', 'cube', 'cuboid', 'dango', 'mobius'].includes(this.matter.spec.shape) || (isWordSurface(this.matter.spec.shape) || isExpandedSurface(this.matter.spec.shape)));
     for (let i = 0; i < this.count; i++) {
-      const glyph = this.matter.glyphs[i];
+      const glyph = this.displayedGlyphs[i];
       const p = this.count === 1
         ? this.testYaw === null ? [0.018 * Math.sin(t * 1.3), 0.024 * Math.sin(t * 0.9), 0.012 * Math.sin(t)] : [0, 0, 0]
         : (this.program
-          ? programSurface(this.program, i, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
+          ? programSurface(this.program, glyph.id, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
           : this.skeleton
-          ? skeletonSurface(this.skeleton, i, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
-          : composedPosition(this.matter.spec, i, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined)).map(v => v * this.formation);
+          ? skeletonSurface(this.skeleton, glyph.id, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
+          : composedPosition(this.matter.spec, glyph.id, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined)).map(v => v * this.formation);
       const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
       const target = p.map((v, axis) => this.origins[i * 3 + axis] * (1 - blend) + v * blend) as Vec3;
       this.morphTargets.set(target, i * 3);
@@ -311,7 +319,7 @@ export class GlyphScene {
       }
       if (alignment > 0) {
         const frame = sharedSurface ? normalizeSurfaceFrame(this.frameScratch)
-          : surfaceFrame(this.matter.spec, i, t, this.matter.seed, this.frameScratch)!;
+          : surfaceFrame(this.matter.spec, glyph.id, t, this.matter.seed, this.frameScratch)!;
         if (motion.kind !== 'calm') {
           applyMotionFrame(motion, this.localPoint, frame.x, frame.y, this.movedPoint, frame.x, frame.y);
           normalizeSurfaceFrame(frame);
