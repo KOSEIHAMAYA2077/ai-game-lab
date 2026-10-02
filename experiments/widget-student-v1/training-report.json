@@ -1,0 +1,4627 @@
+{
+  "primitive": {
+    "train": {
+      "count": 1495,
+      "correct": 1495,
+      "accuracy": 1.0,
+      "confusion": {
+        "sphere": {
+          "sphere": 144,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 0
+        },
+        "box": {
+          "sphere": 0,
+          "box": 168,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 0
+        },
+        "tube": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 176,
+          "blade": 0,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 0
+        },
+        "blade": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 0,
+          "blade": 159,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 0
+        },
+        "ring": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 184,
+          "vase": 0,
+          "unknown": 0
+        },
+        "vase": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 152,
+          "unknown": 0
+        },
+        "unknown": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 512
+        }
+      },
+      "failures": [],
+      "predictions": []
+    },
+    "dev": {
+      "count": 368,
+      "correct": 315,
+      "accuracy": 0.8559782608695652,
+      "confusion": {
+        "sphere": {
+          "sphere": 40,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 8
+        },
+        "box": {
+          "sphere": 0,
+          "box": 44,
+          "tube": 0,
+          "blade": 0,
+          "ring": 1,
+          "vase": 0,
+          "unknown": 3
+        },
+        "tube": {
+          "sphere": 8,
+          "box": 0,
+          "tube": 29,
+          "blade": 1,
+          "ring": 4,
+          "vase": 0,
+          "unknown": 6
+        },
+        "blade": {
+          "sphere": 1,
+          "box": 0,
+          "tube": 0,
+          "blade": 41,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 6
+        },
+        "ring": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 35,
+          "vase": 0,
+          "unknown": 13
+        },
+        "vase": {
+          "sphere": 2,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 46,
+          "unknown": 0
+        },
+        "unknown": {
+          "sphere": 0,
+          "box": 0,
+          "tube": 0,
+          "blade": 0,
+          "ring": 0,
+          "vase": 0,
+          "unknown": 80
+        }
+      },
+      "failures": [
+        {
+          "text": "ころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.6473066210746765,
+          "margin": 0.4496603012084961
+        },
+        {
+          "text": "ころころした玉を作る",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.385497510433197,
+          "margin": 0.0965208113193512
+        },
+        {
+          "text": "形はころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.4011218249797821,
+          "margin": 0.07976540923118591
+        },
+        {
+          "text": "小さなころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.6658290028572083,
+          "margin": 0.5014013051986694
+        },
+        {
+          "text": "大きなころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.75637286901474,
+          "margin": 0.6533238887786865
+        },
+        {
+          "text": "細いころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.6877866983413696,
+          "margin": 0.5633390545845032
+        },
+        {
+          "text": "ねじれたころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.75958251953125,
+          "margin": 0.597902774810791
+        },
+        {
+          "text": "球のような形にしたい",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.4048258662223816,
+          "margin": 0.014837175607681274
+        },
+        {
+          "text": "形は六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "ring",
+          "score": 0.6942952871322632,
+          "margin": 0.5221529603004456
+        },
+        {
+          "text": "小さな六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "unknown",
+          "score": 0.42184966802597046,
+          "margin": 0.06507065892219543
+        },
+        {
+          "text": "細い六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "unknown",
+          "score": 0.39288634061813354,
+          "margin": 0.07756584882736206
+        },
+        {
+          "text": "ねじれた六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "unknown",
+          "score": 0.41010206937789917,
+          "margin": 0.06837710738182068
+        },
+        {
+          "text": "筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.41693273186683655,
+          "margin": 0.014928430318832397
+        },
+        {
+          "text": "筒のような形にしたい",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "blade",
+          "score": 0.36173832416534424,
+          "margin": 0.061551451683044434
+        },
+        {
+          "text": "形は筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.30879348516464233,
+          "margin": 0.0025916099548339844
+        },
+        {
+          "text": "小さな筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.3628274202346802,
+          "margin": 0.07148832082748413
+        },
+        {
+          "text": "大きな筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.4692128002643585,
+          "margin": 0.17948967218399048
+        },
+        {
+          "text": "細い筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.5206452012062073,
+          "margin": 0.21325770020484924
+        },
+        {
+          "text": "管の形にしたい",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.30367136001586914,
+          "margin": 0.024406224489212036
+        },
+        {
+          "text": "形は管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.4684278070926666,
+          "margin": 0.18478572368621826
+        },
+        {
+          "text": "小さな管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.39784175157546997,
+          "margin": 0.028025180101394653
+        },
+        {
+          "text": "大きな管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.4281572699546814,
+          "margin": 0.05452448129653931
+        },
+        {
+          "text": "tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.5403664112091064,
+          "margin": 0.30898475646972656
+        },
+        {
+          "text": "a tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.43197888135910034,
+          "margin": 0.17796579003334045
+        },
+        {
+          "text": "please make tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.3028002381324768,
+          "margin": 0.03848963975906372
+        },
+        {
+          "text": "draw tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.35618239641189575,
+          "margin": 0.10611945390701294
+        },
+        {
+          "text": "small tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.44949597120285034,
+          "margin": 0.2220986783504486
+        },
+        {
+          "text": "large tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.38722220063209534,
+          "margin": 0.09827855229377747
+        },
+        {
+          "text": "thin tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.3836536109447479,
+          "margin": 0.10969623923301697
+        },
+        {
+          "text": "twisted tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.33051082491874695,
+          "margin": 0.06842133402824402
+        },
+        {
+          "text": "pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.3625904321670532,
+          "margin": 0.051008790731430054
+        },
+        {
+          "text": "細い先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.49227604269981384,
+          "margin": 0.016885578632354736
+        },
+        {
+          "text": "ねじれた先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.5555919408798218,
+          "margin": 0.15654423832893372
+        },
+        {
+          "text": "切れそうな刃を作る",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.481437087059021,
+          "margin": 0.035060882568359375
+        },
+        {
+          "text": "切れそうな刃にしたい",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.49835699796676636,
+          "margin": 0.1342569887638092
+        },
+        {
+          "text": "sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.5800201296806335,
+          "margin": 0.21970567107200623
+        },
+        {
+          "text": "draw sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.48873043060302734,
+          "margin": 0.056287020444869995
+        },
+        {
+          "text": "blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "sphere",
+          "score": 0.33826255798339844,
+          "margin": 0.09742167592048645
+        },
+        {
+          "text": "わっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.8175541758537292,
+          "margin": 0.7370222806930542
+        },
+        {
+          "text": "わっかを作る",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.5534792542457581,
+          "margin": 0.3680874705314636
+        },
+        {
+          "text": "わっかにしたい",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.5946372151374817,
+          "margin": 0.4886443614959717
+        },
+        {
+          "text": "形はわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.4147261083126068,
+          "margin": 0.05493083596229553
+        },
+        {
+          "text": "小さなわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.8037882447242737,
+          "margin": 0.741633951663971
+        },
+        {
+          "text": "大きなわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.7438600659370422,
+          "margin": 0.6399334669113159
+        },
+        {
+          "text": "細いわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.6573277711868286,
+          "margin": 0.4955132007598877
+        },
+        {
+          "text": "ねじれたわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.8195485472679138,
+          "margin": 0.7779402732849121
+        },
+        {
+          "text": "loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.719487726688385,
+          "margin": 0.47032755613327026
+        },
+        {
+          "text": "a loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.7053254842758179,
+          "margin": 0.4529111385345459
+        },
+        {
+          "text": "please make loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.473222017288208,
+          "margin": 0.04718467593193054
+        },
+        {
+          "text": "draw loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.49282512068748474,
+          "margin": 0.07946014404296875
+        },
+        {
+          "text": "small loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.6417109370231628,
+          "margin": 0.3546505272388458
+        },
+        {
+          "text": "vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "sphere",
+          "score": 0.347049355506897,
+          "margin": 0.0714465081691742
+        },
+        {
+          "text": "draw vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "sphere",
+          "score": 0.332759827375412,
+          "margin": 0.008886247873306274
+        }
+      ],
+      "predictions": [
+        {
+          "text": "丸みのある塊",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.39834120869636536,
+          "margin": 0.1578039824962616
+        },
+        {
+          "text": "丸みのある塊を作る",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.26821261644363403,
+          "margin": 0.013405025005340576
+        },
+        {
+          "text": "丸みのある塊にしたい",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.45827293395996094,
+          "margin": 0.3286380171775818
+        },
+        {
+          "text": "形は丸みのある塊",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.3212054967880249,
+          "margin": 0.07643435895442963
+        },
+        {
+          "text": "小さな丸みのある塊",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.38367360830307007,
+          "margin": 0.21478232741355896
+        },
+        {
+          "text": "大きな丸みのある塊",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.3179333806037903,
+          "margin": 0.1264420598745346
+        },
+        {
+          "text": "細い丸みのある塊",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.4439641833305359,
+          "margin": 0.27610158920288086
+        },
+        {
+          "text": "ねじれた丸みのある塊",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.5599014163017273,
+          "margin": 0.439889520406723
+        },
+        {
+          "text": "ころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.6473066210746765,
+          "margin": 0.4496603012084961
+        },
+        {
+          "text": "ころころした玉を作る",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.385497510433197,
+          "margin": 0.0965208113193512
+        },
+        {
+          "text": "ころころした玉にしたい",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.4289162755012512,
+          "margin": 0.09516641497612
+        },
+        {
+          "text": "形はころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.4011218249797821,
+          "margin": 0.07976540923118591
+        },
+        {
+          "text": "小さなころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.6658290028572083,
+          "margin": 0.5014013051986694
+        },
+        {
+          "text": "大きなころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.75637286901474,
+          "margin": 0.6533238887786865
+        },
+        {
+          "text": "細いころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.6877866983413696,
+          "margin": 0.5633390545845032
+        },
+        {
+          "text": "ねじれたころころした玉",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.75958251953125,
+          "margin": 0.597902774810791
+        },
+        {
+          "text": "球のような形",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.5610865354537964,
+          "margin": 0.23979848623275757
+        },
+        {
+          "text": "球のような形を作る",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.53923100233078,
+          "margin": 0.15188294649124146
+        },
+        {
+          "text": "球のような形にしたい",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "unknown",
+          "score": 0.4048258662223816,
+          "margin": 0.014837175607681274
+        },
+        {
+          "text": "形は球のような形",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.5317033529281616,
+          "margin": 0.29020267724990845
+        },
+        {
+          "text": "小さな球のような形",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.8477837443351746,
+          "margin": 0.7564889192581177
+        },
+        {
+          "text": "大きな球のような形",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.7828179001808167,
+          "margin": 0.6604506373405457
+        },
+        {
+          "text": "細い球のような形",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.5054619312286377,
+          "margin": 0.20277976989746094
+        },
+        {
+          "text": "ねじれた球のような形",
+          "family": "sphere/dev-round-ja",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.464189350605011,
+          "margin": 0.07168319821357727
+        },
+        {
+          "text": "spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.6239358186721802,
+          "margin": 0.4577564597129822
+        },
+        {
+          "text": "a spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.76301509141922,
+          "margin": 0.6224325299263
+        },
+        {
+          "text": "please make spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.6527351140975952,
+          "margin": 0.48156097531318665
+        },
+        {
+          "text": "draw spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.720674455165863,
+          "margin": 0.5655953884124756
+        },
+        {
+          "text": "small spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.7438164949417114,
+          "margin": 0.595282793045044
+        },
+        {
+          "text": "large spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.7027368545532227,
+          "margin": 0.5624741315841675
+        },
+        {
+          "text": "thin spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.840181827545166,
+          "margin": 0.7719742655754089
+        },
+        {
+          "text": "twisted spherical object",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.7910332083702087,
+          "margin": 0.6796144247055054
+        },
+        {
+          "text": "rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9997413754463196,
+          "margin": 0.9996264576911926
+        },
+        {
+          "text": "a rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9997797608375549,
+          "margin": 0.9996600151062012
+        },
+        {
+          "text": "please make rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9982419013977051,
+          "margin": 0.9973413944244385
+        },
+        {
+          "text": "draw rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.999554455280304,
+          "margin": 0.9993231892585754
+        },
+        {
+          "text": "small rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9991381168365479,
+          "margin": 0.9987730383872986
+        },
+        {
+          "text": "large rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9992541670799255,
+          "margin": 0.9988307356834412
+        },
+        {
+          "text": "thin rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.999530553817749,
+          "margin": 0.9992861747741699
+        },
+        {
+          "text": "twisted rounded sphere",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9991996884346008,
+          "margin": 0.9987857937812805
+        },
+        {
+          "text": "globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9638773202896118,
+          "margin": 0.9371318221092224
+        },
+        {
+          "text": "a globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9562303423881531,
+          "margin": 0.9291958808898926
+        },
+        {
+          "text": "please make globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.881661057472229,
+          "margin": 0.8250051140785217
+        },
+        {
+          "text": "draw globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9224543571472168,
+          "margin": 0.8786106109619141
+        },
+        {
+          "text": "small globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9003534913063049,
+          "margin": 0.8353148698806763
+        },
+        {
+          "text": "large globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9383097290992737,
+          "margin": 0.9085552096366882
+        },
+        {
+          "text": "thin globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9355646967887878,
+          "margin": 0.9051878452301025
+        },
+        {
+          "text": "twisted globular ball",
+          "family": "sphere/dev-round-en",
+          "label": "sphere",
+          "prediction": "sphere",
+          "score": 0.9038405418395996,
+          "margin": 0.8626815676689148
+        },
+        {
+          "text": "角がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9208024740219116,
+          "margin": 0.8599355816841125
+        },
+        {
+          "text": "角がある箱を作る",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8897014260292053,
+          "margin": 0.8081355094909668
+        },
+        {
+          "text": "角がある箱にしたい",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8138723373413086,
+          "margin": 0.6779633164405823
+        },
+        {
+          "text": "形は角がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7749901413917542,
+          "margin": 0.641821563243866
+        },
+        {
+          "text": "小さな角がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.861696720123291,
+          "margin": 0.774273157119751
+        },
+        {
+          "text": "大きな角がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8725456595420837,
+          "margin": 0.7892758846282959
+        },
+        {
+          "text": "細い角がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.5121105909347534,
+          "margin": 0.05480062961578369
+        },
+        {
+          "text": "ねじれた角がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8046422600746155,
+          "margin": 0.6675227880477905
+        },
+        {
+          "text": "四角の塊",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9502230286598206,
+          "margin": 0.9142797589302063
+        },
+        {
+          "text": "四角の塊を作る",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8855743408203125,
+          "margin": 0.8153017163276672
+        },
+        {
+          "text": "四角の塊にしたい",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8051827549934387,
+          "margin": 0.7173327803611755
+        },
+        {
+          "text": "形は四角の塊",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8930738568305969,
+          "margin": 0.825870156288147
+        },
+        {
+          "text": "小さな四角の塊",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8810255527496338,
+          "margin": 0.8110592365264893
+        },
+        {
+          "text": "大きな四角の塊",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.889542281627655,
+          "margin": 0.8135180473327637
+        },
+        {
+          "text": "細い四角の塊",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8455848693847656,
+          "margin": 0.7298752665519714
+        },
+        {
+          "text": "ねじれた四角の塊",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.8361855149269104,
+          "margin": 0.7234222292900085
+        },
+        {
+          "text": "六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.43130841851234436,
+          "margin": 0.12286806106567383
+        },
+        {
+          "text": "六つの面がある箱を作る",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.4643426537513733,
+          "margin": 0.19233936071395874
+        },
+        {
+          "text": "六つの面がある箱にしたい",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.3690667450428009,
+          "margin": 0.051079779863357544
+        },
+        {
+          "text": "形は六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "ring",
+          "score": 0.6942952871322632,
+          "margin": 0.5221529603004456
+        },
+        {
+          "text": "小さな六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "unknown",
+          "score": 0.42184966802597046,
+          "margin": 0.06507065892219543
+        },
+        {
+          "text": "大きな六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.4330558478832245,
+          "margin": 0.10360980033874512
+        },
+        {
+          "text": "細い六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "unknown",
+          "score": 0.39288634061813354,
+          "margin": 0.07756584882736206
+        },
+        {
+          "text": "ねじれた六つの面がある箱",
+          "family": "box/dev-angular-ja",
+          "label": "box",
+          "prediction": "unknown",
+          "score": 0.41010206937789917,
+          "margin": 0.06837710738182068
+        },
+        {
+          "text": "box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.5336036086082458,
+          "margin": 0.3350176513195038
+        },
+        {
+          "text": "a box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7508898377418518,
+          "margin": 0.6249246597290039
+        },
+        {
+          "text": "please make box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7428140044212341,
+          "margin": 0.6366137266159058
+        },
+        {
+          "text": "draw box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7042862772941589,
+          "margin": 0.5669072866439819
+        },
+        {
+          "text": "small box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7816843390464783,
+          "margin": 0.685303807258606
+        },
+        {
+          "text": "large box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7418309450149536,
+          "margin": 0.5959195494651794
+        },
+        {
+          "text": "thin box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7729266285896301,
+          "margin": 0.6772294044494629
+        },
+        {
+          "text": "twisted box-shaped object",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.7322009801864624,
+          "margin": 0.5587928295135498
+        },
+        {
+          "text": "cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9794967174530029,
+          "margin": 0.972815990447998
+        },
+        {
+          "text": "a cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9878532886505127,
+          "margin": 0.9819952249526978
+        },
+        {
+          "text": "please make cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9834595322608948,
+          "margin": 0.9789746403694153
+        },
+        {
+          "text": "draw cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9898226261138916,
+          "margin": 0.9860965609550476
+        },
+        {
+          "text": "small cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9838056564331055,
+          "margin": 0.978657066822052
+        },
+        {
+          "text": "large cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9873284101486206,
+          "margin": 0.9834820628166199
+        },
+        {
+          "text": "thin cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9924159049987793,
+          "margin": 0.9900063872337341
+        },
+        {
+          "text": "twisted cube-like solid",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9882679581642151,
+          "margin": 0.9842087030410767
+        },
+        {
+          "text": "rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9999004602432251,
+          "margin": 0.9998507499694824
+        },
+        {
+          "text": "a rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9997941851615906,
+          "margin": 0.9996955990791321
+        },
+        {
+          "text": "please make rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9983543157577515,
+          "margin": 0.9977190494537354
+        },
+        {
+          "text": "draw rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9993736147880554,
+          "margin": 0.9990436434745789
+        },
+        {
+          "text": "small rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9993219375610352,
+          "margin": 0.9990454912185669
+        },
+        {
+          "text": "large rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9993624091148376,
+          "margin": 0.9991093277931213
+        },
+        {
+          "text": "thin rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9993711113929749,
+          "margin": 0.9989816546440125
+        },
+        {
+          "text": "twisted rectangular box",
+          "family": "box/dev-angular-en",
+          "label": "box",
+          "prediction": "box",
+          "score": 0.9989537000656128,
+          "margin": 0.9984593987464905
+        },
+        {
+          "text": "筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.41693273186683655,
+          "margin": 0.014928430318832397
+        },
+        {
+          "text": "筒のような形を作る",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.5342095494270325,
+          "margin": 0.3857276439666748
+        },
+        {
+          "text": "筒のような形にしたい",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "blade",
+          "score": 0.36173832416534424,
+          "margin": 0.061551451683044434
+        },
+        {
+          "text": "形は筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.30879348516464233,
+          "margin": 0.0025916099548339844
+        },
+        {
+          "text": "小さな筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.3628274202346802,
+          "margin": 0.07148832082748413
+        },
+        {
+          "text": "大きな筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.4692128002643585,
+          "margin": 0.17948967218399048
+        },
+        {
+          "text": "細い筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "ring",
+          "score": 0.5206452012062073,
+          "margin": 0.21325770020484924
+        },
+        {
+          "text": "ねじれた筒のような形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.35994285345077515,
+          "margin": 0.07228308916091919
+        },
+        {
+          "text": "まっすぐな円柱",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.844828188419342,
+          "margin": 0.7618366479873657
+        },
+        {
+          "text": "まっすぐな円柱を作る",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6634945273399353,
+          "margin": 0.4635183811187744
+        },
+        {
+          "text": "まっすぐな円柱にしたい",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6738846898078918,
+          "margin": 0.4911605715751648
+        },
+        {
+          "text": "形はまっすぐな円柱",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7914904356002808,
+          "margin": 0.6865326166152954
+        },
+        {
+          "text": "小さなまっすぐな円柱",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.5927649736404419,
+          "margin": 0.325168639421463
+        },
+        {
+          "text": "大きなまっすぐな円柱",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6576107144355774,
+          "margin": 0.43988269567489624
+        },
+        {
+          "text": "細いまっすぐな円柱",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6828451752662659,
+          "margin": 0.44962888956069946
+        },
+        {
+          "text": "ねじれたまっすぐな円柱",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.694923996925354,
+          "margin": 0.5383288860321045
+        },
+        {
+          "text": "管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.5510576963424683,
+          "margin": 0.3946606516838074
+        },
+        {
+          "text": "管の形を作る",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.30905482172966003,
+          "margin": 0.04058381915092468
+        },
+        {
+          "text": "管の形にしたい",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.30367136001586914,
+          "margin": 0.024406224489212036
+        },
+        {
+          "text": "形は管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.4684278070926666,
+          "margin": 0.18478572368621826
+        },
+        {
+          "text": "小さな管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.39784175157546997,
+          "margin": 0.028025180101394653
+        },
+        {
+          "text": "大きな管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.4281572699546814,
+          "margin": 0.05452448129653931
+        },
+        {
+          "text": "細い管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.327759325504303,
+          "margin": 0.06866547465324402
+        },
+        {
+          "text": "ねじれた管の形",
+          "family": "tube/dev-tube-ja",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.45398014783859253,
+          "margin": 0.23812295496463776
+        },
+        {
+          "text": "tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.5403664112091064,
+          "margin": 0.30898475646972656
+        },
+        {
+          "text": "a tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.43197888135910034,
+          "margin": 0.17796579003334045
+        },
+        {
+          "text": "please make tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.3028002381324768,
+          "margin": 0.03848963975906372
+        },
+        {
+          "text": "draw tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.35618239641189575,
+          "margin": 0.10611945390701294
+        },
+        {
+          "text": "small tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.44949597120285034,
+          "margin": 0.2220986783504486
+        },
+        {
+          "text": "large tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.38722220063209534,
+          "margin": 0.09827855229377747
+        },
+        {
+          "text": "thin tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.3836536109447479,
+          "margin": 0.10969623923301697
+        },
+        {
+          "text": "twisted tubular shape",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "sphere",
+          "score": 0.33051082491874695,
+          "margin": 0.06842133402824402
+        },
+        {
+          "text": "rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.5675694346427917,
+          "margin": 0.34856468439102173
+        },
+        {
+          "text": "a rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7652973532676697,
+          "margin": 0.6642013192176819
+        },
+        {
+          "text": "please make rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7194491624832153,
+          "margin": 0.5738893151283264
+        },
+        {
+          "text": "draw rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7169173359870911,
+          "margin": 0.5788567662239075
+        },
+        {
+          "text": "small rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7941449880599976,
+          "margin": 0.6981275677680969
+        },
+        {
+          "text": "large rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7691267132759094,
+          "margin": 0.6602607369422913
+        },
+        {
+          "text": "thin rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7111799716949463,
+          "margin": 0.5318233966827393
+        },
+        {
+          "text": "twisted rod-like object",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.5617560744285583,
+          "margin": 0.3286833167076111
+        },
+        {
+          "text": "pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "unknown",
+          "score": 0.3625904321670532,
+          "margin": 0.051008790731430054
+        },
+        {
+          "text": "a pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6098636984825134,
+          "margin": 0.3704230785369873
+        },
+        {
+          "text": "please make pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6288710832595825,
+          "margin": 0.44789183139801025
+        },
+        {
+          "text": "draw pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7910816669464111,
+          "margin": 0.714573860168457
+        },
+        {
+          "text": "small pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.6258987784385681,
+          "margin": 0.39764320850372314
+        },
+        {
+          "text": "large pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.5967255234718323,
+          "margin": 0.38390815258026123
+        },
+        {
+          "text": "thin pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.7144432067871094,
+          "margin": 0.6168845295906067
+        },
+        {
+          "text": "twisted pipe-shaped solid",
+          "family": "tube/dev-tube-en",
+          "label": "tube",
+          "prediction": "tube",
+          "score": 0.540657639503479,
+          "margin": 0.31202244758605957
+        },
+        {
+          "text": "先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.7640178203582764,
+          "margin": 0.5494397878646851
+        },
+        {
+          "text": "先が尖る剣を作る",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.49195483326911926,
+          "margin": 0.007651984691619873
+        },
+        {
+          "text": "先が尖る剣にしたい",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.7847114205360413,
+          "margin": 0.6205825805664062
+        },
+        {
+          "text": "形は先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5047566294670105,
+          "margin": 0.0373629629611969
+        },
+        {
+          "text": "小さな先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.8144530057907104,
+          "margin": 0.6572992205619812
+        },
+        {
+          "text": "大きな先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9066922664642334,
+          "margin": 0.829768717288971
+        },
+        {
+          "text": "細い先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.49227604269981384,
+          "margin": 0.016885578632354736
+        },
+        {
+          "text": "ねじれた先が尖る剣",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.5555919408798218,
+          "margin": 0.15654423832893372
+        },
+        {
+          "text": "切れそうな刃",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.6474106907844543,
+          "margin": 0.35901156067848206
+        },
+        {
+          "text": "切れそうな刃を作る",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.481437087059021,
+          "margin": 0.035060882568359375
+        },
+        {
+          "text": "切れそうな刃にしたい",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.49835699796676636,
+          "margin": 0.1342569887638092
+        },
+        {
+          "text": "形は切れそうな刃",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5670271515846252,
+          "margin": 0.2148723006248474
+        },
+        {
+          "text": "小さな切れそうな刃",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.6640611886978149,
+          "margin": 0.4407740533351898
+        },
+        {
+          "text": "大きな切れそうな刃",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.7386246919631958,
+          "margin": 0.5904967188835144
+        },
+        {
+          "text": "細い切れそうな刃",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5853665471076965,
+          "margin": 0.30293649435043335
+        },
+        {
+          "text": "ねじれた切れそうな刃",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.6898593902587891,
+          "margin": 0.4556705951690674
+        },
+        {
+          "text": "刀のような形",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.7165911793708801,
+          "margin": 0.5338695645332336
+        },
+        {
+          "text": "刀のような形を作る",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.651174783706665,
+          "margin": 0.550085186958313
+        },
+        {
+          "text": "刀のような形にしたい",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9577965140342712,
+          "margin": 0.9438013434410095
+        },
+        {
+          "text": "形は刀のような形",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.49599623680114746,
+          "margin": 0.27205583453178406
+        },
+        {
+          "text": "小さな刀のような形",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.6308128833770752,
+          "margin": 0.420964777469635
+        },
+        {
+          "text": "大きな刀のような形",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.6454941034317017,
+          "margin": 0.4520479440689087
+        },
+        {
+          "text": "細い刀のような形",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.7525818943977356,
+          "margin": 0.609903872013092
+        },
+        {
+          "text": "ねじれた刀のような形",
+          "family": "blade/dev-blade-ja",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.6555688381195068,
+          "margin": 0.5090239644050598
+        },
+        {
+          "text": "sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.5800201296806335,
+          "margin": 0.21970567107200623
+        },
+        {
+          "text": "a sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5332257747650146,
+          "margin": 0.1055615246295929
+        },
+        {
+          "text": "please make sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5554654598236084,
+          "margin": 0.2094886600971222
+        },
+        {
+          "text": "draw sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "unknown",
+          "score": 0.48873043060302734,
+          "margin": 0.056287020444869995
+        },
+        {
+          "text": "small sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5621142983436584,
+          "margin": 0.24802792072296143
+        },
+        {
+          "text": "large sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5139101147651672,
+          "margin": 0.0995858907699585
+        },
+        {
+          "text": "thin sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.8763888478279114,
+          "margin": 0.8034433722496033
+        },
+        {
+          "text": "twisted sword-like shape",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.5966511964797974,
+          "margin": 0.2752997577190399
+        },
+        {
+          "text": "blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "sphere",
+          "score": 0.33826255798339844,
+          "margin": 0.09742167592048645
+        },
+        {
+          "text": "a blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.41984251141548157,
+          "margin": 0.1706879436969757
+        },
+        {
+          "text": "please make blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.3860989511013031,
+          "margin": 0.14860190451145172
+        },
+        {
+          "text": "draw blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.3750724494457245,
+          "margin": 0.059828221797943115
+        },
+        {
+          "text": "small blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.36066192388534546,
+          "margin": 0.09142366051673889
+        },
+        {
+          "text": "large blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.3543480336666107,
+          "margin": 0.07789689302444458
+        },
+        {
+          "text": "thin blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.4110993444919586,
+          "margin": 0.14041665196418762
+        },
+        {
+          "text": "twisted blade-shaped object",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.30388540029525757,
+          "margin": 0.024741142988204956
+        },
+        {
+          "text": "pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9737496972084045,
+          "margin": 0.9586353898048401
+        },
+        {
+          "text": "a pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9832566380500793,
+          "margin": 0.9746862649917603
+        },
+        {
+          "text": "please make pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.8693253397941589,
+          "margin": 0.8019257187843323
+        },
+        {
+          "text": "draw pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9769856929779053,
+          "margin": 0.9646684527397156
+        },
+        {
+          "text": "small pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9403090476989746,
+          "margin": 0.9125503301620483
+        },
+        {
+          "text": "large pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.956319272518158,
+          "margin": 0.9329489469528198
+        },
+        {
+          "text": "thin pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9595409035682678,
+          "margin": 0.9315693378448486
+        },
+        {
+          "text": "twisted pointy saber",
+          "family": "blade/dev-blade-en",
+          "label": "blade",
+          "prediction": "blade",
+          "score": 0.9395642280578613,
+          "margin": 0.9055047631263733
+        },
+        {
+          "text": "わっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.8175541758537292,
+          "margin": 0.7370222806930542
+        },
+        {
+          "text": "わっかを作る",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.5534792542457581,
+          "margin": 0.3680874705314636
+        },
+        {
+          "text": "わっかにしたい",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.5946372151374817,
+          "margin": 0.4886443614959717
+        },
+        {
+          "text": "形はわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.4147261083126068,
+          "margin": 0.05493083596229553
+        },
+        {
+          "text": "小さなわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.8037882447242737,
+          "margin": 0.741633951663971
+        },
+        {
+          "text": "大きなわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.7438600659370422,
+          "margin": 0.6399334669113159
+        },
+        {
+          "text": "細いわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.6573277711868286,
+          "margin": 0.4955132007598877
+        },
+        {
+          "text": "ねじれたわっか",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.8195485472679138,
+          "margin": 0.7779402732849121
+        },
+        {
+          "text": "ぐるっと閉じる輪",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.8556550145149231,
+          "margin": 0.7314322590827942
+        },
+        {
+          "text": "ぐるっと閉じる輪を作る",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6945701241493225,
+          "margin": 0.5367333889007568
+        },
+        {
+          "text": "ぐるっと閉じる輪にしたい",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6706972718238831,
+          "margin": 0.41755566000938416
+        },
+        {
+          "text": "形はぐるっと閉じる輪",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9237864017486572,
+          "margin": 0.8795581459999084
+        },
+        {
+          "text": "小さなぐるっと閉じる輪",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.7192550301551819,
+          "margin": 0.4925689697265625
+        },
+        {
+          "text": "大きなぐるっと閉じる輪",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.7782573103904724,
+          "margin": 0.6017239093780518
+        },
+        {
+          "text": "細いぐるっと閉じる輪",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.7285824418067932,
+          "margin": 0.48814672231674194
+        },
+        {
+          "text": "ねじれたぐるっと閉じる輪",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.7236196398735046,
+          "margin": 0.49059778451919556
+        },
+        {
+          "text": "輪のような形",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9943378567695618,
+          "margin": 0.9905287623405457
+        },
+        {
+          "text": "輪のような形を作る",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9419587254524231,
+          "margin": 0.9066691398620605
+        },
+        {
+          "text": "輪のような形にしたい",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.8951221108436584,
+          "margin": 0.8492329120635986
+        },
+        {
+          "text": "形は輪のような形",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9848101735115051,
+          "margin": 0.9759465456008911
+        },
+        {
+          "text": "小さな輪のような形",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9873046278953552,
+          "margin": 0.9783487915992737
+        },
+        {
+          "text": "大きな輪のような形",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.991584062576294,
+          "margin": 0.9871416091918945
+        },
+        {
+          "text": "細い輪のような形",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9829844236373901,
+          "margin": 0.9710522890090942
+        },
+        {
+          "text": "ねじれた輪のような形",
+          "family": "ring/dev-ring-ja",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9865853786468506,
+          "margin": 0.9788450002670288
+        },
+        {
+          "text": "ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.37469056248664856,
+          "margin": 0.04825785756111145
+        },
+        {
+          "text": "a ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.7709040641784668,
+          "margin": 0.6777135729789734
+        },
+        {
+          "text": "please make ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6801945567131042,
+          "margin": 0.5640142560005188
+        },
+        {
+          "text": "draw ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6315358877182007,
+          "margin": 0.4663724899291992
+        },
+        {
+          "text": "small ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6515477299690247,
+          "margin": 0.5177352428436279
+        },
+        {
+          "text": "large ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6739458441734314,
+          "margin": 0.508694589138031
+        },
+        {
+          "text": "thin ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.5333606600761414,
+          "margin": 0.25447168946266174
+        },
+        {
+          "text": "twisted ring-shaped object",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.6120659112930298,
+          "margin": 0.44454076886177063
+        },
+        {
+          "text": "loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.719487726688385,
+          "margin": 0.47032755613327026
+        },
+        {
+          "text": "a loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.7053254842758179,
+          "margin": 0.4529111385345459
+        },
+        {
+          "text": "please make loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.473222017288208,
+          "margin": 0.04718467593193054
+        },
+        {
+          "text": "draw loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.49282512068748474,
+          "margin": 0.07946014404296875
+        },
+        {
+          "text": "small loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "unknown",
+          "score": 0.6417109370231628,
+          "margin": 0.3546505272388458
+        },
+        {
+          "text": "large loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.5187762975692749,
+          "margin": 0.1164313554763794
+        },
+        {
+          "text": "thin loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.5918717384338379,
+          "margin": 0.28075239062309265
+        },
+        {
+          "text": "twisted loop-like shape",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.5620068311691284,
+          "margin": 0.2049245536327362
+        },
+        {
+          "text": "toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9941699504852295,
+          "margin": 0.9903423190116882
+        },
+        {
+          "text": "a toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9946263432502747,
+          "margin": 0.9908877015113831
+        },
+        {
+          "text": "please make toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9826473593711853,
+          "margin": 0.9739405512809753
+        },
+        {
+          "text": "draw toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9897446036338806,
+          "margin": 0.9823892712593079
+        },
+        {
+          "text": "small toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.991865336894989,
+          "margin": 0.9868781566619873
+        },
+        {
+          "text": "large toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9898265600204468,
+          "margin": 0.9850666522979736
+        },
+        {
+          "text": "thin toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9844064712524414,
+          "margin": 0.9737431406974792
+        },
+        {
+          "text": "twisted toroidal ring",
+          "family": "ring/dev-ring-en",
+          "label": "ring",
+          "prediction": "ring",
+          "score": 0.9836944937705994,
+          "margin": 0.9742900729179382
+        },
+        {
+          "text": "花を飾る花瓶",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9244469404220581,
+          "margin": 0.8537140488624573
+        },
+        {
+          "text": "花を飾る花瓶を作る",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.7681564688682556,
+          "margin": 0.5572525858879089
+        },
+        {
+          "text": "花を飾る花瓶にしたい",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.8358488082885742,
+          "margin": 0.6888922452926636
+        },
+        {
+          "text": "形は花を飾る花瓶",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9524713754653931,
+          "margin": 0.9150059223175049
+        },
+        {
+          "text": "小さな花を飾る花瓶",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.8744600415229797,
+          "margin": 0.76264488697052
+        },
+        {
+          "text": "大きな花を飾る花瓶",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9142235517501831,
+          "margin": 0.8418056964874268
+        },
+        {
+          "text": "細い花を飾る花瓶",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9487767815589905,
+          "margin": 0.9056321382522583
+        },
+        {
+          "text": "ねじれた花を飾る花瓶",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9139362573623657,
+          "margin": 0.8430052399635315
+        },
+        {
+          "text": "壺のような器",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9519117474555969,
+          "margin": 0.9338071942329407
+        },
+        {
+          "text": "壺のような器を作る",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9201566576957703,
+          "margin": 0.8945315480232239
+        },
+        {
+          "text": "壺のような器にしたい",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.8403434753417969,
+          "margin": 0.7598515152931213
+        },
+        {
+          "text": "形は壺のような器",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.7391947507858276,
+          "margin": 0.5366467237472534
+        },
+        {
+          "text": "小さな壺のような器",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9177571535110474,
+          "margin": 0.8914549946784973
+        },
+        {
+          "text": "大きな壺のような器",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9084978699684143,
+          "margin": 0.8590354323387146
+        },
+        {
+          "text": "細い壺のような器",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9258331060409546,
+          "margin": 0.8850761651992798
+        },
+        {
+          "text": "ねじれた壺のような器",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9017530083656311,
+          "margin": 0.861283540725708
+        },
+        {
+          "text": "花瓶型の形",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9836006760597229,
+          "margin": 0.9762073755264282
+        },
+        {
+          "text": "花瓶型の形を作る",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9682435989379883,
+          "margin": 0.9535114765167236
+        },
+        {
+          "text": "花瓶型の形にしたい",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9297688603401184,
+          "margin": 0.9028505682945251
+        },
+        {
+          "text": "形は花瓶型の形",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9527332782745361,
+          "margin": 0.9339323043823242
+        },
+        {
+          "text": "小さな花瓶型の形",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9760144352912903,
+          "margin": 0.9670036435127258
+        },
+        {
+          "text": "大きな花瓶型の形",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9777121543884277,
+          "margin": 0.9685238003730774
+        },
+        {
+          "text": "細い花瓶型の形",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9824184775352478,
+          "margin": 0.9749823212623596
+        },
+        {
+          "text": "ねじれた花瓶型の形",
+          "family": "vase/dev-vase-ja",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9730215072631836,
+          "margin": 0.961184024810791
+        },
+        {
+          "text": "vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "sphere",
+          "score": 0.347049355506897,
+          "margin": 0.0714465081691742
+        },
+        {
+          "text": "a vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.4835520088672638,
+          "margin": 0.28453999757766724
+        },
+        {
+          "text": "please make vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.3211350739002228,
+          "margin": 0.09379717707633972
+        },
+        {
+          "text": "draw vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "sphere",
+          "score": 0.332759827375412,
+          "margin": 0.008886247873306274
+        },
+        {
+          "text": "small vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.414475679397583,
+          "margin": 0.1489325761795044
+        },
+        {
+          "text": "large vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.46327733993530273,
+          "margin": 0.2306494563817978
+        },
+        {
+          "text": "thin vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.5755069255828857,
+          "margin": 0.41229790449142456
+        },
+        {
+          "text": "twisted vase-shaped object",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.32025861740112305,
+          "margin": 0.04071488976478577
+        },
+        {
+          "text": "urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.926098108291626,
+          "margin": 0.9031075835227966
+        },
+        {
+          "text": "a urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9712215065956116,
+          "margin": 0.9632815718650818
+        },
+        {
+          "text": "please make urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9595650434494019,
+          "margin": 0.9485800862312317
+        },
+        {
+          "text": "draw urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9654940366744995,
+          "margin": 0.9562551975250244
+        },
+        {
+          "text": "small urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9634706974029541,
+          "margin": 0.952673614025116
+        },
+        {
+          "text": "large urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9539365768432617,
+          "margin": 0.9376567602157593
+        },
+        {
+          "text": "thin urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9667184948921204,
+          "margin": 0.9553483724594116
+        },
+        {
+          "text": "twisted urn-like container",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9518012404441833,
+          "margin": 0.937568187713623
+        },
+        {
+          "text": "vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.975548505783081,
+          "margin": 0.9557148814201355
+        },
+        {
+          "text": "a vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9943163990974426,
+          "margin": 0.9898941516876221
+        },
+        {
+          "text": "please make vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9776449203491211,
+          "margin": 0.9634673595428467
+        },
+        {
+          "text": "draw vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9883014559745789,
+          "margin": 0.9792113304138184
+        },
+        {
+          "text": "small vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9888637065887451,
+          "margin": 0.9813993573188782
+        },
+        {
+          "text": "large vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9923073649406433,
+          "margin": 0.9869331121444702
+        },
+        {
+          "text": "thin vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9875954389572144,
+          "margin": 0.9774381518363953
+        },
+        {
+          "text": "twisted vase for flowers",
+          "family": "vase/dev-vase-en",
+          "label": "vase",
+          "prediction": "vase",
+          "score": 0.9885243773460388,
+          "margin": 0.9815473556518555
+        },
+        {
+          "text": "今日の勉強を振り返る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9201831817626953,
+          "margin": 0.8876772522926331
+        },
+        {
+          "text": "今日の勉強を振り返るを作る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9031499028205872,
+          "margin": 0.8694735765457153
+        },
+        {
+          "text": "今日の勉強を振り返るにしたい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8937413692474365,
+          "margin": 0.8526367545127869
+        },
+        {
+          "text": "形は今日の勉強を振り返る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8867429494857788,
+          "margin": 0.8444433808326721
+        },
+        {
+          "text": "小さな今日の勉強を振り返る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8181827068328857,
+          "margin": 0.731616199016571
+        },
+        {
+          "text": "大きな今日の勉強を振り返る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8325837850570679,
+          "margin": 0.7728782892227173
+        },
+        {
+          "text": "細い今日の勉強を振り返る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.886522114276886,
+          "margin": 0.8504312038421631
+        },
+        {
+          "text": "ねじれた今日の勉強を振り返る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.825404703617096,
+          "margin": 0.7675611972808838
+        },
+        {
+          "text": "眠たい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5733689665794373,
+          "margin": 0.3818916082382202
+        },
+        {
+          "text": "眠たいを作る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7027892470359802,
+          "margin": 0.6050974130630493
+        },
+        {
+          "text": "眠たいにしたい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7441081404685974,
+          "margin": 0.6474813222885132
+        },
+        {
+          "text": "形は眠たい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7596127986907959,
+          "margin": 0.6730077266693115
+        },
+        {
+          "text": "小さな眠たい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.38753440976142883,
+          "margin": 0.22164800763130188
+        },
+        {
+          "text": "大きな眠たい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5625450015068054,
+          "margin": 0.41617336869239807
+        },
+        {
+          "text": "細い眠たい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.615587592124939,
+          "margin": 0.5293411016464233
+        },
+        {
+          "text": "ねじれた眠たい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6719785332679749,
+          "margin": 0.5708397626876831
+        },
+        {
+          "text": "星空を眺める",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6854115724563599,
+          "margin": 0.590351939201355
+        },
+        {
+          "text": "星空を眺めるを作る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5532180070877075,
+          "margin": 0.40673181414604187
+        },
+        {
+          "text": "星空を眺めるにしたい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5598411560058594,
+          "margin": 0.4637221097946167
+        },
+        {
+          "text": "形は星空を眺める",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7227213978767395,
+          "margin": 0.6591924428939819
+        },
+        {
+          "text": "小さな星空を眺める",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6187992691993713,
+          "margin": 0.4700580835342407
+        },
+        {
+          "text": "大きな星空を眺める",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6746170520782471,
+          "margin": 0.5396242141723633
+        },
+        {
+          "text": "細い星空を眺める",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6725518107414246,
+          "margin": 0.5406451225280762
+        },
+        {
+          "text": "ねじれた星空を眺める",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8148186206817627,
+          "margin": 0.7603634595870972
+        },
+        {
+          "text": "犬が走る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7833317518234253,
+          "margin": 0.6983720064163208
+        },
+        {
+          "text": "犬が走るを作る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.758915364742279,
+          "margin": 0.6873745322227478
+        },
+        {
+          "text": "犬が走るにしたい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.4617230296134949,
+          "margin": 0.34213340282440186
+        },
+        {
+          "text": "形は犬が走る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6885130405426025,
+          "margin": 0.6043673157691956
+        },
+        {
+          "text": "小さな犬が走る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5644276142120361,
+          "margin": 0.42430585622787476
+        },
+        {
+          "text": "大きな犬が走る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7319102883338928,
+          "margin": 0.6400012373924255
+        },
+        {
+          "text": "細い犬が走る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8952592611312866,
+          "margin": 0.8374411463737488
+        },
+        {
+          "text": "ねじれた犬が走る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7568932175636292,
+          "margin": 0.7073066234588623
+        },
+        {
+          "text": "存在とは何か",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9843414425849915,
+          "margin": 0.9763162136077881
+        },
+        {
+          "text": "存在とは何かを作る",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9810305833816528,
+          "margin": 0.9735023379325867
+        },
+        {
+          "text": "存在とは何かにしたい",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9339253306388855,
+          "margin": 0.914750874042511
+        },
+        {
+          "text": "形は存在とは何か",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.8902860283851624,
+          "margin": 0.7969774007797241
+        },
+        {
+          "text": "小さな存在とは何か",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9702395796775818,
+          "margin": 0.9577083587646484
+        },
+        {
+          "text": "大きな存在とは何か",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9570855498313904,
+          "margin": 0.9384205937385559
+        },
+        {
+          "text": "細い存在とは何か",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9853432178497314,
+          "margin": 0.980270504951477
+        },
+        {
+          "text": "ねじれた存在とは何か",
+          "family": "unknown/dev-daily-ja",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9520444273948669,
+          "margin": 0.9334836006164551
+        },
+        {
+          "text": "the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9411800503730774,
+          "margin": 0.8900984525680542
+        },
+        {
+          "text": "a the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9778270125389099,
+          "margin": 0.958736777305603
+        },
+        {
+          "text": "please make the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9455198645591736,
+          "margin": 0.9015326499938965
+        },
+        {
+          "text": "draw the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9862571358680725,
+          "margin": 0.974545955657959
+        },
+        {
+          "text": "small the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9668871164321899,
+          "margin": 0.9404900670051575
+        },
+        {
+          "text": "large the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9162219762802124,
+          "margin": 0.8439018726348877
+        },
+        {
+          "text": "thin the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9418119788169861,
+          "margin": 0.8944987058639526
+        },
+        {
+          "text": "twisted the dog is sleeping",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9343605041503906,
+          "margin": 0.879645586013794
+        },
+        {
+          "text": "I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9248919486999512,
+          "margin": 0.8931007981300354
+        },
+        {
+          "text": "a I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9407433271408081,
+          "margin": 0.9177955985069275
+        },
+        {
+          "text": "please make I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7525650262832642,
+          "margin": 0.6433080434799194
+        },
+        {
+          "text": "draw I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9165634512901306,
+          "margin": 0.8809247016906738
+        },
+        {
+          "text": "small I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.832907497882843,
+          "margin": 0.7717658281326294
+        },
+        {
+          "text": "large I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9059152007102966,
+          "margin": 0.8615313172340393
+        },
+        {
+          "text": "thin I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.926109790802002,
+          "margin": 0.8995603919029236
+        },
+        {
+          "text": "twisted I wonder about tomorrow",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.921274721622467,
+          "margin": 0.892072319984436
+        },
+        {
+          "text": "a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9820996522903442,
+          "margin": 0.9744872450828552
+        },
+        {
+          "text": "a a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9893410801887512,
+          "margin": 0.9847800731658936
+        },
+        {
+          "text": "please make a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9858673214912415,
+          "margin": 0.9796298742294312
+        },
+        {
+          "text": "draw a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9865236878395081,
+          "margin": 0.9808846712112427
+        },
+        {
+          "text": "small a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9824042916297913,
+          "margin": 0.9760475754737854
+        },
+        {
+          "text": "large a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9833667278289795,
+          "margin": 0.9763575196266174
+        },
+        {
+          "text": "thin a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9912976026535034,
+          "margin": 0.9877350330352783
+        },
+        {
+          "text": "twisted a pleasant afternoon",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9791429042816162,
+          "margin": 0.9689174294471741
+        },
+        {
+          "text": "novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9741150140762329,
+          "margin": 0.9589411616325378
+        },
+        {
+          "text": "a novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9912582039833069,
+          "margin": 0.987718403339386
+        },
+        {
+          "text": "please make novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9771312475204468,
+          "margin": 0.9669101238250732
+        },
+        {
+          "text": "draw novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9889084696769714,
+          "margin": 0.9843154549598694
+        },
+        {
+          "text": "small novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9757062196731567,
+          "margin": 0.9674185514450073
+        },
+        {
+          "text": "large novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9794796109199524,
+          "margin": 0.97104412317276
+        },
+        {
+          "text": "thin novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9837973713874817,
+          "margin": 0.9776179790496826
+        },
+        {
+          "text": "twisted novel thought",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.9882601499557495,
+          "margin": 0.9843546152114868
+        },
+        {
+          "text": "unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.576826810836792,
+          "margin": 0.43829184770584106
+        },
+        {
+          "text": "a unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.6832350492477417,
+          "margin": 0.5500124096870422
+        },
+        {
+          "text": "please make unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5293111801147461,
+          "margin": 0.37399357557296753
+        },
+        {
+          "text": "draw unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.48313480615615845,
+          "margin": 0.2672986090183258
+        },
+        {
+          "text": "small unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.44148921966552734,
+          "margin": 0.2519585192203522
+        },
+        {
+          "text": "large unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5640113353729248,
+          "margin": 0.42531710863113403
+        },
+        {
+          "text": "thin unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.7992374897003174,
+          "margin": 0.7226444482803345
+        },
+        {
+          "text": "twisted unseen creature",
+          "family": "unknown/dev-daily-en",
+          "label": "unknown",
+          "prediction": "unknown",
+          "score": 0.5328578948974609,
+          "margin": 0.3623751699924469
+        }
+      ]
+    },
+    "loss": [
+      [
+        1,
+        1.1271829442176078
+      ],
+      [
+        40,
+        0.01800379809877205
+      ],
+      [
+        80,
+        0.011490760385236942
+      ],
+      [
+        120,
+        0.00924173975236994
+      ],
+      [
+        160,
+        0.008064200414692151
+      ]
+    ]
+  },
+  "relation": {
+    "train": {
+      "count": 320,
+      "correct": 320,
+      "accuracy": 1.0,
+      "confusion": {
+        "end": {
+          "end": 75,
+          "above": 0,
+          "through": 0,
+          "none": 0
+        },
+        "above": {
+          "end": 0,
+          "above": 65,
+          "through": 0,
+          "none": 0
+        },
+        "through": {
+          "end": 0,
+          "above": 0,
+          "through": 75,
+          "none": 0
+        },
+        "none": {
+          "end": 0,
+          "above": 0,
+          "through": 0,
+          "none": 105
+        }
+      },
+      "failures": [],
+      "predictions": []
+    },
+    "dev": {
+      "count": 110,
+      "correct": 97,
+      "accuracy": 0.8818181818181818,
+      "confusion": {
+        "end": {
+          "end": 20,
+          "above": 0,
+          "through": 0,
+          "none": 5
+        },
+        "above": {
+          "end": 0,
+          "above": 24,
+          "through": 0,
+          "none": 1
+        },
+        "through": {
+          "end": 0,
+          "above": 0,
+          "through": 25,
+          "none": 0
+        },
+        "none": {
+          "end": 2,
+          "above": 0,
+          "through": 5,
+          "none": 28
+        }
+      },
+      "failures": [
+        {
+          "text": "物体の端っこに物体を置く",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.592383861541748,
+          "margin": 0.3633913993835449
+        },
+        {
+          "text": "物体の端っこに物体を置くにする",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.6617556810379028,
+          "margin": 0.4958530068397522
+        },
+        {
+          "text": "物体の端っこに物体を置くを作る",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.5778205394744873,
+          "margin": 0.3607270121574402
+        },
+        {
+          "text": "物体の端っこに物体を置く。",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.7603170275688171,
+          "margin": 0.6237933039665222
+        },
+        {
+          "text": "できれば物体の端っこに物体を置く",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.5936728715896606,
+          "margin": 0.38922232389450073
+        },
+        {
+          "text": "please object rests atop object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "none",
+          "score": 0.41675934195518494,
+          "margin": 0.034725069999694824
+        },
+        {
+          "text": "物体の後ろに物体",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "end",
+          "score": 0.4102017283439636,
+          "margin": 0.09762027859687805
+        },
+        {
+          "text": "できれば物体の後ろに物体",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "end",
+          "score": 0.361246258020401,
+          "margin": 0.015439212322235107
+        },
+        {
+          "text": "object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.6108796000480652,
+          "margin": 0.3242625892162323
+        },
+        {
+          "text": "please object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5226748585700989,
+          "margin": 0.1577467918395996
+        },
+        {
+          "text": "draw object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5860130786895752,
+          "margin": 0.26964300870895386
+        },
+        {
+          "text": "make object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5564590096473694,
+          "margin": 0.24204298853874207
+        },
+        {
+          "text": "I want object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5067877769470215,
+          "margin": 0.17482131719589233
+        }
+      ],
+      "predictions": [
+        {
+          "text": "物体の端っこに物体を置く",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.592383861541748,
+          "margin": 0.3633913993835449
+        },
+        {
+          "text": "物体の端っこに物体を置くにする",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.6617556810379028,
+          "margin": 0.4958530068397522
+        },
+        {
+          "text": "物体の端っこに物体を置くを作る",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.5778205394744873,
+          "margin": 0.3607270121574402
+        },
+        {
+          "text": "物体の端っこに物体を置く。",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.7603170275688171,
+          "margin": 0.6237933039665222
+        },
+        {
+          "text": "できれば物体の端っこに物体を置く",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "none",
+          "score": 0.5936728715896606,
+          "margin": 0.38922232389450073
+        },
+        {
+          "text": "物体の先っぽに物体がある",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.5887281894683838,
+          "margin": 0.3734869956970215
+        },
+        {
+          "text": "物体の先っぽに物体があるにする",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.4659895598888397,
+          "margin": 0.25630325078964233
+        },
+        {
+          "text": "物体の先っぽに物体があるを作る",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.5052290558815002,
+          "margin": 0.27661868929862976
+        },
+        {
+          "text": "物体の先っぽに物体がある。",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.48671504855155945,
+          "margin": 0.22745996713638306
+        },
+        {
+          "text": "できれば物体の先っぽに物体がある",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.49800339341163635,
+          "margin": 0.2663213610649109
+        },
+        {
+          "text": "物体の終端へ物体を付ける",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.5611658692359924,
+          "margin": 0.38429123163223267
+        },
+        {
+          "text": "物体の終端へ物体を付けるにする",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.4845174252986908,
+          "margin": 0.2346189022064209
+        },
+        {
+          "text": "物体の終端へ物体を付けるを作る",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.5259709358215332,
+          "margin": 0.33658239245414734
+        },
+        {
+          "text": "物体の終端へ物体を付ける。",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.6064447164535522,
+          "margin": 0.4142710268497467
+        },
+        {
+          "text": "できれば物体の終端へ物体を付ける",
+          "family": "end/dev-jp-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.4995073080062866,
+          "margin": 0.2942865788936615
+        },
+        {
+          "text": "object fitted to the tip of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9901437759399414,
+          "margin": 0.9835035800933838
+        },
+        {
+          "text": "please object fitted to the tip of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.980015218257904,
+          "margin": 0.9671633243560791
+        },
+        {
+          "text": "draw object fitted to the tip of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9825270771980286,
+          "margin": 0.9707505702972412
+        },
+        {
+          "text": "make object fitted to the tip of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.985148549079895,
+          "margin": 0.9752429127693176
+        },
+        {
+          "text": "I want object fitted to the tip of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9810000658035278,
+          "margin": 0.9681552052497864
+        },
+        {
+          "text": "object joined at the end of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9927171468734741,
+          "margin": 0.9863499999046326
+        },
+        {
+          "text": "please object joined at the end of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9876403212547302,
+          "margin": 0.9775094985961914
+        },
+        {
+          "text": "draw object joined at the end of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9890592098236084,
+          "margin": 0.9800534844398499
+        },
+        {
+          "text": "make object joined at the end of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9897762537002563,
+          "margin": 0.9811514019966125
+        },
+        {
+          "text": "I want object joined at the end of object",
+          "family": "end/dev-en-end",
+          "label": "end",
+          "prediction": "end",
+          "score": 0.9878495335578918,
+          "margin": 0.977681040763855
+        },
+        {
+          "text": "物体の頭上に物体",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.8073561191558838,
+          "margin": 0.6611168384552002
+        },
+        {
+          "text": "物体の頭上に物体にする",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.7347403168678284,
+          "margin": 0.5436089038848877
+        },
+        {
+          "text": "物体の頭上に物体を作る",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.6418585181236267,
+          "margin": 0.3733671009540558
+        },
+        {
+          "text": "物体の頭上に物体。",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.786938488483429,
+          "margin": 0.6251605749130249
+        },
+        {
+          "text": "できれば物体の頭上に物体",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.7291103005409241,
+          "margin": 0.5372979044914246
+        },
+        {
+          "text": "物体の真上に物体がある",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.8251043558120728,
+          "margin": 0.716399610042572
+        },
+        {
+          "text": "物体の真上に物体があるにする",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.7092376947402954,
+          "margin": 0.5329977869987488
+        },
+        {
+          "text": "物体の真上に物体があるを作る",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.7593870759010315,
+          "margin": 0.6228660941123962
+        },
+        {
+          "text": "物体の真上に物体がある。",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.8095347285270691,
+          "margin": 0.6842794418334961
+        },
+        {
+          "text": "できれば物体の真上に物体がある",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.730400025844574,
+          "margin": 0.5619893074035645
+        },
+        {
+          "text": "物体のてっぺんへ物体を載せる",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9684302806854248,
+          "margin": 0.9471936821937561
+        },
+        {
+          "text": "物体のてっぺんへ物体を載せるにする",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9516326785087585,
+          "margin": 0.9235446453094482
+        },
+        {
+          "text": "物体のてっぺんへ物体を載せるを作る",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9585884213447571,
+          "margin": 0.9340256452560425
+        },
+        {
+          "text": "物体のてっぺんへ物体を載せる。",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.963290810585022,
+          "margin": 0.9383344054222107
+        },
+        {
+          "text": "できれば物体のてっぺんへ物体を載せる",
+          "family": "above/dev-jp-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9321101307868958,
+          "margin": 0.8903976678848267
+        },
+        {
+          "text": "object rests atop object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.4189540445804596,
+          "margin": 0.05803075432777405
+        },
+        {
+          "text": "please object rests atop object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "none",
+          "score": 0.41675934195518494,
+          "margin": 0.034725069999694824
+        },
+        {
+          "text": "draw object rests atop object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.39235562086105347,
+          "margin": 0.006753146648406982
+        },
+        {
+          "text": "make object rests atop object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.41607144474983215,
+          "margin": 0.05232268571853638
+        },
+        {
+          "text": "I want object rests atop object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.4483627676963806,
+          "margin": 0.09705466032028198
+        },
+        {
+          "text": "object positioned above object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9219407439231873,
+          "margin": 0.8852973580360413
+        },
+        {
+          "text": "please object positioned above object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.8905547261238098,
+          "margin": 0.8362647294998169
+        },
+        {
+          "text": "draw object positioned above object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9089220762252808,
+          "margin": 0.8600572943687439
+        },
+        {
+          "text": "make object positioned above object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9046838879585266,
+          "margin": 0.858473539352417
+        },
+        {
+          "text": "I want object positioned above object",
+          "family": "above/dev-en-upper",
+          "label": "above",
+          "prediction": "above",
+          "score": 0.9052883982658386,
+          "margin": 0.8600172996520996
+        },
+        {
+          "text": "物体を物体が貫通する",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9614779949188232,
+          "margin": 0.9297925233840942
+        },
+        {
+          "text": "物体を物体が貫通するにする",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9285427331924438,
+          "margin": 0.8722952604293823
+        },
+        {
+          "text": "物体を物体が貫通するを作る",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9320797920227051,
+          "margin": 0.8836362361907959
+        },
+        {
+          "text": "物体を物体が貫通する。",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.944989025592804,
+          "margin": 0.8982799053192139
+        },
+        {
+          "text": "できれば物体を物体が貫通する",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9199998378753662,
+          "margin": 0.8529995679855347
+        },
+        {
+          "text": "物体の中央を物体が突き抜ける",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.989988386631012,
+          "margin": 0.9861574172973633
+        },
+        {
+          "text": "物体の中央を物体が突き抜けるにする",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9817991852760315,
+          "margin": 0.9749816060066223
+        },
+        {
+          "text": "物体の中央を物体が突き抜けるを作る",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9806338548660278,
+          "margin": 0.9725304841995239
+        },
+        {
+          "text": "物体の中央を物体が突き抜ける。",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9842250347137451,
+          "margin": 0.9758058190345764
+        },
+        {
+          "text": "できれば物体の中央を物体が突き抜ける",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9788427352905273,
+          "margin": 0.9703014492988586
+        },
+        {
+          "text": "物体の穴を物体が通り抜ける",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9669899940490723,
+          "margin": 0.9483175277709961
+        },
+        {
+          "text": "物体の穴を物体が通り抜けるにする",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9507311582565308,
+          "margin": 0.9235857725143433
+        },
+        {
+          "text": "物体の穴を物体が通り抜けるを作る",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9456061124801636,
+          "margin": 0.9132418036460876
+        },
+        {
+          "text": "物体の穴を物体が通り抜ける。",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9571030139923096,
+          "margin": 0.9294067621231079
+        },
+        {
+          "text": "できれば物体の穴を物体が通り抜ける",
+          "family": "through/dev-jp-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9391703009605408,
+          "margin": 0.9048033952713013
+        },
+        {
+          "text": "object runs through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9793866276741028,
+          "margin": 0.9612143039703369
+        },
+        {
+          "text": "please object runs through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9624051451683044,
+          "margin": 0.9305590987205505
+        },
+        {
+          "text": "draw object runs through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9666951298713684,
+          "margin": 0.9379939436912537
+        },
+        {
+          "text": "make object runs through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9681757688522339,
+          "margin": 0.9409682154655457
+        },
+        {
+          "text": "I want object runs through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9705523252487183,
+          "margin": 0.9458997845649719
+        },
+        {
+          "text": "object extends through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9413644671440125,
+          "margin": 0.8873741626739502
+        },
+        {
+          "text": "please object extends through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9125944375991821,
+          "margin": 0.8343291282653809
+        },
+        {
+          "text": "draw object extends through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9383152723312378,
+          "margin": 0.884209930896759
+        },
+        {
+          "text": "make object extends through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9211075305938721,
+          "margin": 0.849801778793335
+        },
+        {
+          "text": "I want object extends through object",
+          "family": "through/dev-en-penetrate",
+          "label": "through",
+          "prediction": "through",
+          "score": 0.9300386309623718,
+          "margin": 0.8678327202796936
+        },
+        {
+          "text": "物体の隣に物体",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.49273404479026794,
+          "margin": 0.2052117884159088
+        },
+        {
+          "text": "物体の隣に物体にする",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.5108182430267334,
+          "margin": 0.2571425437927246
+        },
+        {
+          "text": "物体の隣に物体を作る",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.6100273728370667,
+          "margin": 0.42123693227767944
+        },
+        {
+          "text": "物体の隣に物体。",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.5474259853363037,
+          "margin": 0.27929988503456116
+        },
+        {
+          "text": "できれば物体の隣に物体",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.5084317326545715,
+          "margin": 0.2829078435897827
+        },
+        {
+          "text": "物体の後ろに物体",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "end",
+          "score": 0.4102017283439636,
+          "margin": 0.09762027859687805
+        },
+        {
+          "text": "物体の後ろに物体にする",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.36460593342781067,
+          "margin": 0.0055145323276519775
+        },
+        {
+          "text": "物体の後ろに物体を作る",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.3828163146972656,
+          "margin": 0.05400499701499939
+        },
+        {
+          "text": "物体の後ろに物体。",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.37436941266059875,
+          "margin": 0.013416141271591187
+        },
+        {
+          "text": "できれば物体の後ろに物体",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "end",
+          "score": 0.361246258020401,
+          "margin": 0.015439212322235107
+        },
+        {
+          "text": "物体を物体の下へ置く",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.39058539271354675,
+          "margin": 0.13906913995742798
+        },
+        {
+          "text": "物体を物体の下へ置くにする",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.5156160593032837,
+          "margin": 0.31786060333251953
+        },
+        {
+          "text": "物体を物体の下へ置くを作る",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.4666225016117096,
+          "margin": 0.1680501401424408
+        },
+        {
+          "text": "物体を物体の下へ置く。",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.5432853698730469,
+          "margin": 0.3142174482345581
+        },
+        {
+          "text": "できれば物体を物体の下へ置く",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.458050012588501,
+          "margin": 0.24213379621505737
+        },
+        {
+          "text": "物体と物体を並べる",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9732455611228943,
+          "margin": 0.9497946500778198
+        },
+        {
+          "text": "物体と物体を並べるにする",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9173511266708374,
+          "margin": 0.8455581665039062
+        },
+        {
+          "text": "物体と物体を並べるを作る",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9439559578895569,
+          "margin": 0.8970245122909546
+        },
+        {
+          "text": "物体と物体を並べる。",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9832308292388916,
+          "margin": 0.9686493873596191
+        },
+        {
+          "text": "できれば物体と物体を並べる",
+          "family": "none/dev-jp-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9431480765342712,
+          "margin": 0.8943098187446594
+        },
+        {
+          "text": "object adjacent to object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9091572761535645,
+          "margin": 0.8723533749580383
+        },
+        {
+          "text": "please object adjacent to object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.8692403435707092,
+          "margin": 0.8184604644775391
+        },
+        {
+          "text": "draw object adjacent to object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.8671747446060181,
+          "margin": 0.8101075291633606
+        },
+        {
+          "text": "make object adjacent to object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.8843333125114441,
+          "margin": 0.8373658061027527
+        },
+        {
+          "text": "I want object adjacent to object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.883864164352417,
+          "margin": 0.8387307524681091
+        },
+        {
+          "text": "object beneath object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9838646650314331,
+          "margin": 0.9753208756446838
+        },
+        {
+          "text": "please object beneath object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9616259336471558,
+          "margin": 0.9402145147323608
+        },
+        {
+          "text": "draw object beneath object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9777096509933472,
+          "margin": 0.9649813175201416
+        },
+        {
+          "text": "make object beneath object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9747295379638672,
+          "margin": 0.9623967409133911
+        },
+        {
+          "text": "I want object beneath object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "none",
+          "score": 0.9679433107376099,
+          "margin": 0.9509986639022827
+        },
+        {
+          "text": "object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.6108796000480652,
+          "margin": 0.3242625892162323
+        },
+        {
+          "text": "please object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5226748585700989,
+          "margin": 0.1577467918395996
+        },
+        {
+          "text": "draw object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5860130786895752,
+          "margin": 0.26964300870895386
+        },
+        {
+          "text": "make object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5564590096473694,
+          "margin": 0.24204298853874207
+        },
+        {
+          "text": "I want object plus object",
+          "family": "none/dev-en-unsupported",
+          "label": "none",
+          "prediction": "through",
+          "score": 0.5067877769470215,
+          "margin": 0.17482131719589233
+        }
+      ]
+    },
+    "loss": [
+      [
+        1,
+        0.8775931200067676
+      ],
+      [
+        40,
+        0.018126448169490026
+      ],
+      [
+        80,
+        0.011600375548183262
+      ],
+      [
+        120,
+        0.009330405749063903
+      ],
+      [
+        160,
+        0.008138707550567732
+      ]
+    ]
+  },
+  "meta": {
+    "seed": 231003,
+    "dimensions": 4096,
+    "epochs": 160,
+    "trainingSeconds": 2.2575983340000003,
+    "modelBytes": 122601,
+    "corpusSha256": "17e859a26f56fe50c4e6070f8e49cadfe4157d497f221f224c212a34f75ec303",
+    "modelSha256": "dfc8be816ca9a53206ec41d44118db52e5f4ac694bd263efab1a64d5ca05d7dd",
+    "split": "whole semantic/phrase family; no random row split",
+    "teacher": "author-defined six-shape grammar labels, not a neural teacher"
+  }
+}

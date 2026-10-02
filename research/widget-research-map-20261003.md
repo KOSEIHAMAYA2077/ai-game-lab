@@ -24,6 +24,19 @@
 
 モデルの公式取得ファイルは合計127,494,442 bytes、関係headの学習対象は1,540数値。**約128MBは取得量で、常駐RAMではない。** headを小さくしてもエンコーダー、tokenizer、推論作業領域、文字atlas、WebKit・GPUの資源は別に必要。[固定revision・SHA・出所](../experiments/scaffold-program-v1/model/README.md#出所取得安全確認)。
 
+### 8時間の比較実験で追加した候補
+
+候補を増やしたことと、採用できたことを分ける。基準の小窓v0.14.0は独立tag・公開Web・macOS arm64 Releaseへ保存済み。
+
+| 候補 | 実装・観測 | 採否と次の確認 |
+| --- | --- | --- |
+| 描画A | 表示容量の配列、部分転送、定着文字の一時計算削減。989フレーム・6,766,826成分は基準と最大差0。7形の実WebGL画素一致。描画関数の短時間mean24〜36%短縮 | 同じ人工身体でnative全4PIDを再測定中。JS測定の改善率を実CPU/RAMの削減率とはしない。[条件・原票](../experiments/widget-render-budget-v2/README.md) |
+| 小型解釈器freeze-1 | char n-gramをハッシュした線形softmax、int16重み。JSON122,601 bytes、明示的展開buffer91,136 bytes。形・関係は分類、範囲・親子順・属性・否定は手作業規則 | 初回90人工文は、短い形名等の10文が訓練と完全一致。除外後の確定76文でstudent54/76、規則46/76。否定等の誤受理5例、属性5例・親子逆転2例の誤り。標準採用を見送る。[方式とfreeze](../experiments/widget-student-v1/README.md) / [独立評価](../experiments/widget-student-v1-independent/REPORT.md) |
+
+freeze-1の初回90文では、直接Node呼出のp50約0.055ms・p95約0.459ms。重複込みの確定文は意味64/86（正例43/60、保留21/26）、意味と描画可能性を含む完走60/86。55受理出力のうち4件を幾何コンパイラが拒否した。学習担当が評価を未閲覧でも、短い人工文の偶然一致は起こる。重複除外の値を主結果にし、規則とstudentでは属性・語彙・既定値も異なるため学習効果だけの優位とはしない。小ささや推論速度だけでは意味の正しさを保証しない。アプリ内の入力から吸収完了までの時間、全RAM、一般PCは別の未測定事項。評価集合を見た後に加える規則は別版へ保存し、同集合での結果を**回帰評価**と記す。
+
+この方式の基礎として[fastText / Bag of Tricks for Efficient Text Classification, EACL 2017](https://aclanthology.org/E17-2068/)を確認した。今回は公式fastText実装や階層softmaxの再現ではない。[Model2Vec公式実装](https://github.com/MinishLab/model2vec)のstatic embeddingは別候補で、まだ導入・蒸留していない。受理と保留を同時に評価する根拠は後述のSelectiveNetにあるが、本実験は固定閾値の分類器であり、同研究の学習方式を実装したものではない。
+
 ## 2. 先行研究から借りる考え方
 
 以下は論文本文・著者ページ・公式文書を確認したもの。研究の主張と、この作品への応用案を分ける。論文を読めることと、実装・重みを再配布できることは別である。

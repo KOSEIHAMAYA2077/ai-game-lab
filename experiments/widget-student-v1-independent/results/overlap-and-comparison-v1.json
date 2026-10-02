@@ -1,0 +1,6622 @@
+{
+  "fixture_sha256": "77c46e0a966af39b7501c5d1d00530056fa53413c39a9e5dccf23956d9fb893b",
+  "corpus_sha256": "17e859a26f56fe50c4e6070f8e49cadfe4157d497f221f224c212a34f75ec303",
+  "corpus_inspected_only_after_first_run": true,
+  "normalized_function": "NFKC, lowercase, whitespace collapse, trim; Python implementation for this artificial JA/EN set.",
+  "raw_overlap_case_count": 10,
+  "normalized_overlap_case_count": 10,
+  "overlap_cases": [
+    {
+      "id": "s06",
+      "category": "single_nominal",
+      "text": "四角い箱",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 232,
+          "head": "primitive",
+          "family": "box/angular-ja",
+          "split": "train",
+          "label": "box"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "category": "single_nominal",
+      "text": "rectangular block",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 344,
+          "head": "primitive",
+          "family": "box/angular-en",
+          "split": "train",
+          "label": "box"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "category": "single_attribute",
+      "text": "ねじれた直方体",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 207,
+          "head": "primitive",
+          "family": "box/explicit-ja",
+          "split": "train",
+          "label": "box"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "category": "single_nominal",
+      "text": "筒",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 424,
+          "head": "primitive",
+          "family": "tube/explicit-ja",
+          "split": "train",
+          "label": "tube"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "category": "single_nominal",
+      "text": "剣",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 632,
+          "head": "primitive",
+          "family": "blade/explicit-ja",
+          "split": "train",
+          "label": "blade"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "category": "single_nominal",
+      "text": "花瓶",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 1071,
+          "head": "primitive",
+          "family": "vase/explicit-ja",
+          "split": "train",
+          "label": "vase"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "category": "single_nominal",
+      "text": "輪っか",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 847,
+          "head": "primitive",
+          "family": "ring/explicit-ja",
+          "split": "train",
+          "label": "ring"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "category": "single_nominal",
+      "text": "a closed loop",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 992,
+          "head": "primitive",
+          "family": "ring/hole-en",
+          "split": "train",
+          "label": "ring"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "category": "single_attribute",
+      "text": "ねじれた輪",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 846,
+          "head": "primitive",
+          "family": "ring/explicit-ja",
+          "split": "train",
+          "label": "ring"
+        }
+      ]
+    },
+    {
+      "id": "h26",
+      "category": "hold_negation_ambiguity",
+      "text": "球と箱",
+      "exact": true,
+      "normalized": true,
+      "matches": [
+        {
+          "corpus_index": 1671,
+          "head": "primitive",
+          "family": "unknown/ambiguous-ja",
+          "split": "train",
+          "label": "unknown"
+        }
+      ]
+    }
+  ],
+  "note": "Exact-match exclusion is not a guarantee of semantic-family or near-duplicate separation. The six primitive vocabulary is intentionally shared.",
+  "models": {
+    "student-freeze-1": {
+      "scored_summary": {
+        "cases": 90,
+        "definite_cases": 86,
+        "definite_semantic_successes": 64,
+        "definite_semantic_accuracy": 0.7441860465116279,
+        "render_cases": 60,
+        "render_successes": 43,
+        "positive_abstentions": 10,
+        "hold_cases": 26,
+        "hold_successes": 21,
+        "false_activations": 5,
+        "invalid_programs": 0,
+        "ambiguous_cases": 4,
+        "ambiguous_acceptable": 4,
+        "reversed_role_pairs": 15,
+        "both_directions_correct_pairs": 10,
+        "both_directions_correct_pair_ids": [
+          [
+            "r01",
+            "r02"
+          ],
+          [
+            "r03",
+            "r04"
+          ],
+          [
+            "r07",
+            "r08"
+          ],
+          [
+            "r11",
+            "r12"
+          ],
+          [
+            "r13",
+            "r14"
+          ],
+          [
+            "r21",
+            "r22"
+          ],
+          [
+            "r23",
+            "r24"
+          ],
+          [
+            "r25",
+            "r26"
+          ],
+          [
+            "r27",
+            "r28"
+          ],
+          [
+            "r29",
+            "r30"
+          ]
+        ],
+        "geometry_measured_outputs": 55,
+        "geometry_safe_outputs": 51,
+        "pipeline_measured_definite_cases": 86,
+        "pipeline_successes_on_measured_definite_cases": 60,
+        "failure_taxonomy": {
+          "attribute": 5,
+          "abstained_positive": 10,
+          "roles_reversed": 2,
+          "false_activation": 5
+        },
+        "geometry_failures": {
+          "geometry_rejected": 4
+        },
+        "categories": {
+          "single_nominal": {
+            "count": 15,
+            "successes": 14,
+            "failures": {
+              "abstained_positive": 1
+            }
+          },
+          "single_attribute": {
+            "count": 15,
+            "successes": 9,
+            "failures": {
+              "attribute": 5,
+              "abstained_positive": 1
+            }
+          },
+          "relation_simple": {
+            "count": 15,
+            "successes": 13,
+            "failures": {
+              "roles_reversed": 2
+            }
+          },
+          "relation_scope": {
+            "count": 15,
+            "successes": 7,
+            "failures": {
+              "abstained_positive": 8
+            }
+          },
+          "hold_ordinary": {
+            "count": 15,
+            "successes": 15,
+            "failures": {}
+          },
+          "hold_negation_ambiguity": {
+            "count": 15,
+            "successes": 10,
+            "failures": {
+              "false_activation": 5
+            }
+          }
+        },
+        "model_only_latency_ms": {
+          "count": 90,
+          "p50": 0.05535399999999768,
+          "p95": 0.458547800000001,
+          "max": 2.5749169999999992
+        }
+      },
+      "accepted_definite_outputs": 55,
+      "accepted_definite_output_successes": 43,
+      "accepted_definite_precision": 0.7818181818181819,
+      "positive_program_coverage_count": 50,
+      "positive_program_coverage": 0.8333333333333334,
+      "positive_accepted_precision": 0.86,
+      "negation_cancellation_conflict_hold_successes": 6,
+      "negation_cancellation_conflict_hold_cases": 11,
+      "ambiguous_held": 4,
+      "normalized_overlap_excluded": {
+        "definite_count": 76,
+        "definite_semantic_successes": 54,
+        "definite_accuracy": 0.7105263157894737,
+        "positive_count": 51,
+        "positive_semantic_successes": 34
+      },
+      "failures": [
+        {
+          "id": "s04",
+          "category": "single_attribute",
+          "text": "横に押しつぶされた球体",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "lt",
+                        "right": "width",
+                        "ratio": 0.9
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s04",
+            "text": "横に押しつぶされた球体",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.0538749999999979,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9998197373087545
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9998197373087545,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00011516413404220528,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 5.397497896893887e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 3.6458763617139423e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 2.5567708392132977e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 2.5386578623751744e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 2.3822731710045666e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.05491599999999863,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s04",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "height",
+                  "operation": "lt",
+                  "right": "width",
+                  "ratio": 0.9
+                },
+                "actual": {
+                  "height": 1,
+                  "twist": 0,
+                  "depth": 1,
+                  "bend": 0,
+                  "width": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.05491599999999863
+          }
+        },
+        {
+          "id": "s05",
+          "category": "single_attribute",
+          "text": "縦に伸びた玉",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "gt",
+                        "right": "width",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s05",
+            "text": "縦に伸びた玉",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.0449169999999981,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9988618400667071
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9988618400667071,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0006683928857295728,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.00016267768205092305,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00010853892730145011,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 7.20978903165765e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 6.348820607672207e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 6.296434181767101e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.04579199999999872,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s05",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "height",
+                  "operation": "gt",
+                  "right": "width",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "height": 1,
+                  "twist": 0,
+                  "depth": 1,
+                  "bend": 0,
+                  "width": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.04579199999999872
+          }
+        },
+        {
+          "id": "s09",
+          "category": "single_attribute",
+          "text": "横に長い箱",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box",
+                    "constraints": [
+                      {
+                        "left": "width",
+                        "operation": "gt",
+                        "right": "height",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s09",
+            "text": "横に長い箱",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1.65,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.06841699999999662,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975100404485319
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975100404485319,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0024036051476805974,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 3.3439853066120364e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.7797266516730562e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.220436278553816e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.1501784561871975e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1411136857198491e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.07124999999999915,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s09",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "width",
+                  "operation": "gt",
+                  "right": "height",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "height": 1.65,
+                  "twist": 0,
+                  "depth": 1,
+                  "bend": 0,
+                  "width": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.07124999999999915
+          }
+        },
+        {
+          "id": "s17",
+          "category": "single_nominal",
+          "text": "a dagger",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s17",
+            "text": "a dagger",
+            "program": null,
+            "reason": "primitive-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.048458000000003665,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "unknown",
+                "score": 0.735045288289677
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "unknown",
+                  "score": 0.735045288289677,
+                  "coverage": 0.975
+                },
+                {
+                  "label": "vase",
+                  "score": 0.14881287578519656,
+                  "coverage": 0.975
+                },
+                {
+                  "label": "blade",
+                  "score": 0.05189022888407943,
+                  "coverage": 0.975
+                },
+                {
+                  "label": "ring",
+                  "score": 0.027260946647771307,
+                  "coverage": 0.975
+                },
+                {
+                  "label": "tube",
+                  "score": 0.025315226261829086,
+                  "coverage": 0.975
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.009668068824612637,
+                  "coverage": 0.975
+                },
+                {
+                  "label": "box",
+                  "score": 0.0020073653068340487,
+                  "coverage": 0.975
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.04912499999999653,
+            "error": null
+          },
+          "scored": {
+            "id": "s17",
+            "category": "single_nominal",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.04912499999999653
+          }
+        },
+        {
+          "id": "s19",
+          "category": "single_attribute",
+          "text": "短く幅広い刀身",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "lte",
+                        "value": 0.9
+                      },
+                      {
+                        "left": "width",
+                        "operation": "gte",
+                        "value": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s19",
+            "text": "短く幅広い刀身",
+            "program": null,
+            "reason": "primitive-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.045166000000001816,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "blade",
+                "score": 0.38343923687367426
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "blade",
+                  "score": 0.38343923687367426,
+                  "coverage": 0.9714285714285714
+                },
+                {
+                  "label": "vase",
+                  "score": 0.2607536661206151,
+                  "coverage": 0.9714285714285714
+                },
+                {
+                  "label": "tube",
+                  "score": 0.09324492636643206,
+                  "coverage": 0.9714285714285714
+                },
+                {
+                  "label": "box",
+                  "score": 0.08022906284368697,
+                  "coverage": 0.9714285714285714
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.07098026062828172,
+                  "coverage": 0.9714285714285714
+                },
+                {
+                  "label": "ring",
+                  "score": 0.057099904569973575,
+                  "coverage": 0.9714285714285714
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.05425294259733618,
+                  "coverage": 0.9714285714285714
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.045750000000005286,
+            "error": null
+          },
+          "scored": {
+            "id": "s19",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.045750000000005286
+          }
+        },
+        {
+          "id": "s25",
+          "category": "single_attribute",
+          "text": "横に広いずんぐりした花瓶",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "vase",
+                    "constraints": [
+                      {
+                        "left": "width",
+                        "operation": "gt",
+                        "right": "height",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s25",
+            "text": "横に広いずんぐりした花瓶",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "vase",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.03237500000000182,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "vase",
+                "score": 0.9992088300098984
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "vase",
+                  "score": 0.9992088300098984,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0007361147049027742,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.770643267732317e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1693880899377048e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.0438153696613019e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 7.625511608621218e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 7.5913063169601755e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.03295800000000071,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 624,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s25",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "width",
+                  "operation": "gt",
+                  "right": "height",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "height": 1,
+                  "twist": 0,
+                  "depth": 1,
+                  "bend": 0,
+                  "width": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.03295800000000071
+          }
+        },
+        {
+          "id": "s29",
+          "category": "single_attribute",
+          "text": "縦長の輪",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "gt",
+                        "right": "width",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s29",
+            "text": "縦長の輪",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "ring",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.027999999999998693,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "ring",
+                "score": 0.9997962677253821
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "ring",
+                  "score": 0.9997962677253821,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00013030407685731669,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 2.534285552084623e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.949368194433913e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1637277221269778e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.1358098747874451e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 5.596284326299863e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.02845800000000054,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s29",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "height",
+                  "operation": "gt",
+                  "right": "width",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "height": 1,
+                  "twist": 0,
+                  "depth": 1,
+                  "bend": 0,
+                  "width": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.02845800000000054
+          }
+        },
+        {
+          "id": "r05",
+          "category": "relation_simple",
+          "text": "Put a blade on the tip of a box.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  },
+                  {
+                    "primitive": "blade"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r05",
+            "text": "Put a blade on the tip of a box.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.6661670000000015,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "blade",
+                "score": 0.9979817838174333
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975089406854789
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "end",
+                "score": 0.9526112394442886
+              },
+              {
+                "kind": "explicit-part-order-and-attribute-scope",
+                "detail": "forward"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "blade",
+                  "score": 0.9979817838174333,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0005617256946448756,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0005578512358359612,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 0.00042484312661508544,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 0.00029228599526946145,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.0001563560987583703,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 2.5154031443017464e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975089406854789,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.001161762749089757,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0009830908265626636,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00018714673300172238,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.622204431281721e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 3.690169514726116e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 3.593526640682862e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "end",
+                "score": 0.9526112394442886,
+                "coverage": 0.9590163934426229
+              },
+              {
+                "label": "above",
+                "score": 0.04375514579868798,
+                "coverage": 0.9590163934426229
+              },
+              {
+                "label": "none",
+                "score": 0.0024214625314896198,
+                "coverage": 0.9590163934426229
+              },
+              {
+                "label": "through",
+                "score": 0.0012121522255337293,
+                "coverage": 0.9590163934426229
+              }
+            ],
+            "elapsed_ms": 0.6677080000000046,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 1008,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "r05",
+            "category": "relation_simple",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "roles_reversed",
+            "failures": [
+              "roles_reversed"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": false,
+            "relation_correct": true,
+            "structure_correct": false,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.6677080000000046
+          }
+        },
+        {
+          "id": "r06",
+          "category": "relation_simple",
+          "text": "Put a box on the tip of a blade.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r06",
+            "text": "Put a box on the tip of a blade.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.11870800000000514,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975089406854789
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "blade",
+                "score": 0.9979817838174333
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "end",
+                "score": 0.9526112394442886
+              },
+              {
+                "kind": "explicit-part-order-and-attribute-scope",
+                "detail": "forward"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975089406854789,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.001161762749089757,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0009830908265626636,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00018714673300172238,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.622204431281721e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 3.690169514726116e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 3.593526640682862e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "blade",
+                  "score": 0.9979817838174333,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0005617256946448756,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0005578512358359612,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 0.00042484312661508544,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 0.00029228599526946145,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.0001563560987583703,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 2.5154031443017464e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "end",
+                "score": 0.9526112394442886,
+                "coverage": 0.9590163934426229
+              },
+              {
+                "label": "above",
+                "score": 0.04375514579868798,
+                "coverage": 0.9590163934426229
+              },
+              {
+                "label": "none",
+                "score": 0.0024214625314896198,
+                "coverage": 0.9590163934426229
+              },
+              {
+                "label": "through",
+                "score": 0.0012121522255337293,
+                "coverage": 0.9590163934426229
+              }
+            ],
+            "elapsed_ms": 0.1198750000000004,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 1008,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "r06",
+            "category": "relation_simple",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "roles_reversed",
+            "failures": [
+              "roles_reversed"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": false,
+            "relation_correct": true,
+            "structure_correct": false,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.1198750000000004
+          }
+        },
+        {
+          "id": "r09",
+          "category": "relation_scope",
+          "text": "The rod is the base; attach a ring at its end.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube"
+                  },
+                  {
+                    "primitive": "ring"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r09",
+            "text": "The rod is the base; attach a ring at its end.",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.10383300000000162,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "tube",
+                "score": 0.9940254833905077
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "ring",
+                "score": 0.9910418038412093
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "none",
+                "score": 0.7387265796830506
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "tube",
+                  "score": 0.9940254833905077,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.0019042048266647367,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0012973290650744,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 0.0009878040049415113,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.0008223276707990398,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 0.0005642257797654093,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 0.00039862526224723516,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "ring",
+                  "score": 0.9910418038412093,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.008592748906588432,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0002021693476634074,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 9.415948282885606e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.71110584996153e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 2.7083237268551213e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.4924125941918066e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "none",
+                "score": 0.7387265796830506,
+                "coverage": 0.764367816091954
+              },
+              {
+                "label": "end",
+                "score": 0.23165383287897856,
+                "coverage": 0.764367816091954
+              },
+              {
+                "label": "through",
+                "score": 0.018173485249578306,
+                "coverage": 0.764367816091954
+              },
+              {
+                "label": "above",
+                "score": 0.01144610218839256,
+                "coverage": 0.764367816091954
+              }
+            ],
+            "elapsed_ms": 0.10437499999999744,
+            "error": null
+          },
+          "scored": {
+            "id": "r09",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.10437499999999744
+          }
+        },
+        {
+          "id": "r10",
+          "category": "relation_scope",
+          "text": "The ring is the base; attach a rod at its end.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  },
+                  {
+                    "primitive": "tube"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r10",
+            "text": "The ring is the base; attach a rod at its end.",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.07750000000000057,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "ring",
+                "score": 0.9910418038412093
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "tube",
+                "score": 0.9940254833905077
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "none",
+                "score": 0.7387265796830506
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "ring",
+                  "score": 0.9910418038412093,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.008592748906588432,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0002021693476634074,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 9.415948282885606e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.71110584996153e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 2.7083237268551213e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.4924125941918066e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "tube",
+                  "score": 0.9940254833905077,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.0019042048266647367,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0012973290650744,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 0.0009878040049415113,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.0008223276707990398,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 0.0005642257797654093,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 0.00039862526224723516,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "none",
+                "score": 0.7387265796830506,
+                "coverage": 0.764367816091954
+              },
+              {
+                "label": "end",
+                "score": 0.23165383287897856,
+                "coverage": 0.764367816091954
+              },
+              {
+                "label": "through",
+                "score": 0.018173485249578306,
+                "coverage": 0.764367816091954
+              },
+              {
+                "label": "above",
+                "score": 0.01144610218839256,
+                "coverage": 0.764367816091954
+              }
+            ],
+            "elapsed_ms": 0.078125,
+            "error": null
+          },
+          "scored": {
+            "id": "r10",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.078125
+          }
+        },
+        {
+          "id": "r15",
+          "category": "relation_scope",
+          "text": "刃を花瓶より上に置く",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "vase"
+                  },
+                  {
+                    "primitive": "blade"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r15",
+            "text": "刃を花瓶より上に置く",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.15458299999999525,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "blade",
+                "score": 0.9998210463030194
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "vase",
+                "score": 0.9992088300098984
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "above",
+                "score": 0.5771020924146034
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "blade",
+                  "score": 0.9998210463030194,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 7.472659017783828e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 4.225458030610544e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.1497400890736912e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.5463507195913396e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.3387435812163085e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1624182597868457e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "vase",
+                  "score": 0.9992088300098984,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0007361147049027742,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.770643267732317e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1693880899377048e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.0438153696613019e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 7.625511608621218e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 7.5913063169601755e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "above",
+                "score": 0.5771020924146034,
+                "coverage": 0.7058823529411765
+              },
+              {
+                "label": "through",
+                "score": 0.3054955935263711,
+                "coverage": 0.7058823529411765
+              },
+              {
+                "label": "none",
+                "score": 0.09816592477683353,
+                "coverage": 0.7058823529411765
+              },
+              {
+                "label": "end",
+                "score": 0.0192363892821919,
+                "coverage": 0.7058823529411765
+              }
+            ],
+            "elapsed_ms": 0.16712499999999864,
+            "error": null
+          },
+          "scored": {
+            "id": "r15",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.16712499999999864
+          }
+        },
+        {
+          "id": "r16",
+          "category": "relation_scope",
+          "text": "花瓶を刃より上に置く",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  },
+                  {
+                    "primitive": "vase"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r16",
+            "text": "花瓶を刃より上に置く",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.11454200000000014,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "vase",
+                "score": 0.9992088300098984
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "blade",
+                "score": 0.9998210463030194
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "above",
+                "score": 0.5771020924146034
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "vase",
+                  "score": 0.9992088300098984,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0007361147049027742,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.770643267732317e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1693880899377048e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.0438153696613019e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 7.625511608621218e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 7.5913063169601755e-06,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "blade",
+                  "score": 0.9998210463030194,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 7.472659017783828e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 4.225458030610544e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.1497400890736912e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.5463507195913396e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.3387435812163085e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1624182597868457e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "above",
+                "score": 0.5771020924146034,
+                "coverage": 0.7058823529411765
+              },
+              {
+                "label": "through",
+                "score": 0.3054955935263711,
+                "coverage": 0.7058823529411765
+              },
+              {
+                "label": "none",
+                "score": 0.09816592477683353,
+                "coverage": 0.7058823529411765
+              },
+              {
+                "label": "end",
+                "score": 0.0192363892821919,
+                "coverage": 0.7058823529411765
+              }
+            ],
+            "elapsed_ms": 0.11749999999999972,
+            "error": null
+          },
+          "scored": {
+            "id": "r16",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.11749999999999972
+          }
+        },
+        {
+          "id": "r17",
+          "category": "relation_scope",
+          "text": "球を置く。輪よりも上側に",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  },
+                  {
+                    "primitive": "sphere"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r17",
+            "text": "球を置く。輪よりも上側に",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.07620800000000116,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9999085651018849
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "ring",
+                "score": 0.9997962677253821
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "none",
+                "score": 0.7765577792871756
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9999085651018849,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 5.6829174960087977e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.624527486775458e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 8.026946597554485e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 6.167388688031448e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 2.1763648939451414e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.9897481079638057e-06,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "ring",
+                  "score": 0.9997962677253821,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00013030407685731669,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 2.534285552084623e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.949368194433913e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1637277221269778e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.1358098747874451e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 5.596284326299863e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "none",
+                "score": 0.7765577792871756,
+                "coverage": 0.6060606060606061
+              },
+              {
+                "label": "through",
+                "score": 0.13681044915167193,
+                "coverage": 0.6060606060606061
+              },
+              {
+                "label": "above",
+                "score": 0.07176918496868977,
+                "coverage": 0.6060606060606061
+              },
+              {
+                "label": "end",
+                "score": 0.014862586592462809,
+                "coverage": 0.6060606060606061
+              }
+            ],
+            "elapsed_ms": 0.07712500000000233,
+            "error": null
+          },
+          "scored": {
+            "id": "r17",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.07712500000000233
+          }
+        },
+        {
+          "id": "r18",
+          "category": "relation_scope",
+          "text": "輪を置く。球よりも上側に",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere"
+                  },
+                  {
+                    "primitive": "ring"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r18",
+            "text": "輪を置く。球よりも上側に",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.06837499999999608,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "ring",
+                "score": 0.9997962677253821
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9999085651018849
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "none",
+                "score": 0.7765577792871756
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "ring",
+                  "score": 0.9997962677253821,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00013030407685731669,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 2.534285552084623e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.949368194433913e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1637277221269778e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.1358098747874451e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 5.596284326299863e-06,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9999085651018849,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 5.6829174960087977e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.624527486775458e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 8.026946597554485e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 6.167388688031448e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 2.1763648939451414e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.9897481079638057e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "none",
+                "score": 0.7765577792871756,
+                "coverage": 0.6060606060606061
+              },
+              {
+                "label": "through",
+                "score": 0.13681044915167193,
+                "coverage": 0.6060606060606061
+              },
+              {
+                "label": "above",
+                "score": 0.07176918496868977,
+                "coverage": 0.6060606060606061
+              },
+              {
+                "label": "end",
+                "score": 0.014862586592462809,
+                "coverage": 0.6060606060606061
+              }
+            ],
+            "elapsed_ms": 0.06908299999999912,
+            "error": null
+          },
+          "scored": {
+            "id": "r18",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.06908299999999912
+          }
+        },
+        {
+          "id": "r19",
+          "category": "relation_scope",
+          "text": "Below the sphere sits a box.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  },
+                  {
+                    "primitive": "sphere"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r19",
+            "text": "Below the sphere sits a box.",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.14000000000000057,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9978700611622817
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975089406854789
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "none",
+                "score": 0.8727989205324813
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9978700611622817,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0016361786527674354,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00019684433267839083,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0001419648109871829,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.171181115350834e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 5.1177279265005145e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.2061950866587255e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975089406854789,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.001161762749089757,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0009830908265626636,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00018714673300172238,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.622204431281721e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 3.690169514726116e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 3.593526640682862e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "none",
+                "score": 0.8727989205324813,
+                "coverage": 0.8541666666666666
+              },
+              {
+                "label": "above",
+                "score": 0.06007964146493452,
+                "coverage": 0.8541666666666666
+              },
+              {
+                "label": "through",
+                "score": 0.056156142575508244,
+                "coverage": 0.8541666666666666
+              },
+              {
+                "label": "end",
+                "score": 0.010965295427075859,
+                "coverage": 0.8541666666666666
+              }
+            ],
+            "elapsed_ms": 0.14154200000000117,
+            "error": null
+          },
+          "scored": {
+            "id": "r19",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.14154200000000117
+          }
+        },
+        {
+          "id": "r20",
+          "category": "relation_scope",
+          "text": "Below the box sits a sphere.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r20",
+            "text": "Below the box sits a sphere.",
+            "program": null,
+            "reason": "relation-uncertain",
+            "source": "tiny-student",
+            "modelMs": 0.27104200000000134,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975089406854789
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9978700611622817
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "none",
+                "score": 0.8727989205324813
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975089406854789,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.001161762749089757,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0009830908265626636,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00018714673300172238,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.622204431281721e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 3.690169514726116e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 3.593526640682862e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9978700611622817,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0016361786527674354,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00019684433267839083,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0001419648109871829,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.171181115350834e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 5.1177279265005145e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.2061950866587255e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "none",
+                "score": 0.8727989205324813,
+                "coverage": 0.8541666666666666
+              },
+              {
+                "label": "above",
+                "score": 0.06007964146493452,
+                "coverage": 0.8541666666666666
+              },
+              {
+                "label": "through",
+                "score": 0.056156142575508244,
+                "coverage": 0.8541666666666666
+              },
+              {
+                "label": "end",
+                "score": 0.010965295427075859,
+                "coverage": 0.8541666666666666
+              }
+            ],
+            "elapsed_ms": 0.2721659999999986,
+            "error": null
+          },
+          "scored": {
+            "id": "r20",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.2721659999999986
+          }
+        },
+        {
+          "id": "r22",
+          "category": "relation_simple",
+          "text": "棒を箱が貫く",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r22",
+            "text": "棒を箱が貫く",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1.4,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.06620900000000063,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "tube",
+                "score": 0.999612994041151
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975100404485319
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "through",
+                "score": 0.9963933036576286
+              },
+              {
+                "kind": "explicit-part-order-and-attribute-scope",
+                "detail": "forward"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "tube",
+                  "score": 0.999612994041151,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00024938961691136106,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 4.514516817536797e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 3.0187078779942314e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.663613048998307e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.4288489392269414e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1359475099767434e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975100404485319,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0024036051476805974,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 3.3439853066120364e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.7797266516730562e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.220436278553816e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.1501784561871975e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1411136857198491e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "through",
+                "score": 0.9963933036576286,
+                "coverage": 1
+              },
+              {
+                "label": "none",
+                "score": 0.0023874610287488466,
+                "coverage": 1
+              },
+              {
+                "label": "above",
+                "score": 0.0007343879245757848,
+                "coverage": 1
+              },
+              {
+                "label": "end",
+                "score": 0.00048484738904674735,
+                "coverage": 1
+              }
+            ],
+            "elapsed_ms": 0.06687499999999602,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r22",
+            "category": "relation_simple",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.06687499999999602
+          }
+        },
+        {
+          "id": "r24",
+          "category": "relation_simple",
+          "text": "A sphere passes through a blade.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  },
+                  {
+                    "primitive": "sphere"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r24",
+            "text": "A sphere passes through a blade.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1.4,
+                  "width": 0.5,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.06670799999999844,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "sphere",
+                "score": 0.9978700611622817
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "blade",
+                "score": 0.9979817838174333
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "through",
+                "score": 0.9994397775561951
+              },
+              {
+                "kind": "explicit-part-order-and-attribute-scope",
+                "detail": "reverse"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "sphere",
+                  "score": 0.9978700611622817,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0016361786527674354,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00019684433267839083,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0001419648109871829,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.171181115350834e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 5.1177279265005145e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.2061950866587255e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "blade",
+                  "score": 0.9979817838174333,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0005617256946448756,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0005578512358359612,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 0.00042484312661508544,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 0.00029228599526946145,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 0.0001563560987583703,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 2.5154031443017464e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "through",
+                "score": 0.9994397775561951,
+                "coverage": 0.957983193277311
+              },
+              {
+                "label": "none",
+                "score": 0.00035822413924006493,
+                "coverage": 0.957983193277311
+              },
+              {
+                "label": "end",
+                "score": 0.0001182126459512318,
+                "coverage": 0.957983193277311
+              },
+              {
+                "label": "above",
+                "score": 8.378565861353941e-05,
+                "coverage": 0.957983193277311
+              }
+            ],
+            "elapsed_ms": 0.06724999999999426,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r24",
+            "category": "relation_simple",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.06724999999999426
+          }
+        },
+        {
+          "id": "r26",
+          "category": "relation_scope",
+          "text": "棒を花瓶が貫通する",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube"
+                  },
+                  {
+                    "primitive": "vase"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r26",
+            "text": "棒を花瓶が貫通する",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1.4,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.04137500000000216,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "tube",
+                "score": 0.999612994041151
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "vase",
+                "score": 0.9992088300098984
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "through",
+                "score": 0.9614780126732942
+              },
+              {
+                "kind": "explicit-part-order-and-attribute-scope",
+                "detail": "forward"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "tube",
+                  "score": 0.999612994041151,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00024938961691136106,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 4.514516817536797e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 3.0187078779942314e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.663613048998307e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.4288489392269414e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1359475099767434e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "vase",
+                  "score": 0.9992088300098984,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0007361147049027742,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.770643267732317e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1693880899377048e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.0438153696613019e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 7.625511608621218e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 7.5913063169601755e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "through",
+                "score": 0.9614780126732942,
+                "coverage": 0.8043478260869565
+              },
+              {
+                "label": "none",
+                "score": 0.03168541787415769,
+                "coverage": 0.8043478260869565
+              },
+              {
+                "label": "above",
+                "score": 0.0038198234425692677,
+                "coverage": 0.8043478260869565
+              },
+              {
+                "label": "end",
+                "score": 0.0030167460099788435,
+                "coverage": 0.8043478260869565
+              }
+            ],
+            "elapsed_ms": 0.04183400000000148,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r26",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.04183400000000148
+          }
+        },
+        {
+          "id": "r30",
+          "category": "relation_scope",
+          "text": "The ring is pierced by a box.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r30",
+            "text": "The ring is pierced by a box.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "ring",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.06733399999999534,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "ring",
+                "score": 0.9910418038412093
+              },
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975089406854789
+              },
+              {
+                "kind": "explicit-noun-and-color-mask"
+              },
+              {
+                "kind": "learned-char-relation",
+                "detail": "through",
+                "score": 0.9901540981800616
+              },
+              {
+                "kind": "explicit-part-order-and-attribute-scope",
+                "detail": "forward"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "ring",
+                  "score": 0.9910418038412093,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.008592748906588432,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0002021693476634074,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 9.415948282885606e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.71110584996153e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 2.7083237268551213e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 1.4924125941918066e-05,
+                  "coverage": 1
+                }
+              ],
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975089406854789,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.001161762749089757,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0009830908265626636,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00018714673300172238,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.622204431281721e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 3.690169514726116e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 3.593526640682862e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [
+              {
+                "label": "through",
+                "score": 0.9901540981800616,
+                "coverage": 0.8956521739130435
+              },
+              {
+                "label": "none",
+                "score": 0.007787110499276382,
+                "coverage": 0.8956521739130435
+              },
+              {
+                "label": "above",
+                "score": 0.0016207735637147065,
+                "coverage": 0.8956521739130435
+              },
+              {
+                "label": "end",
+                "score": 0.0004380177569473941,
+                "coverage": 0.8956521739130435
+              }
+            ],
+            "elapsed_ms": 0.06800000000000495,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r30",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.06800000000000495
+          }
+        },
+        {
+          "id": "h19",
+          "category": "hold_negation_ambiguity",
+          "text": "花瓶を取り消す",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h19",
+            "text": "花瓶を取り消す",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "vase",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.02674999999999983,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "vase",
+                "score": 0.9992088300098984
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "vase",
+                  "score": 0.9992088300098984,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0007361147049027742,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.770643267732317e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 1.1693880899377048e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.0438153696613019e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 7.625511608621218e-06,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 7.5913063169601755e-06,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.027208000000001675,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 624,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h19",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.027208000000001675
+          }
+        },
+        {
+          "id": "h21",
+          "category": "hold_negation_ambiguity",
+          "text": "箱を出すな。",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h21",
+            "text": "箱を出すな。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.0297079999999994,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975100404485319
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975100404485319,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.0024036051476805974,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 3.3439853066120364e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 1.7797266516730562e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 1.220436278553816e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 1.1501784561871975e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1411136857198491e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.030249999999995225,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h21",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.030249999999995225
+          }
+        },
+        {
+          "id": "h22",
+          "category": "hold_negation_ambiguity",
+          "text": "管のない形",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h22",
+            "text": "管のない形",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1.4,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.02575000000000216,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "tube",
+                "score": 0.9995263822629118
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "tube",
+                  "score": 0.9995263822629118,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00021877932641380468,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 0.00010442391758591374,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 4.7305825039771347e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 4.34823536060855e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 3.514191824718961e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.4484396195530147e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.02629200000000509,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 564,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h22",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.02629200000000509
+          }
+        },
+        {
+          "id": "h29",
+          "category": "hold_negation_ambiguity",
+          "text": "長くて短い棒",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h29",
+            "text": "長くて短い棒",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 0.65,
+                  "width": 0.4,
+                  "depth": 0.4,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.02966700000000344,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "tube",
+                "score": 0.999612994041151
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "tube",
+                  "score": 0.999612994041151,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.00024938961691136106,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 4.514516817536797e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 3.0187078779942314e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 2.663613048998307e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "box",
+                  "score": 2.4288489392269414e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 1.1359475099767434e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.03008299999999764,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 564,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h29",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.03008299999999764
+          }
+        },
+        {
+          "id": "h30",
+          "category": "hold_negation_ambiguity",
+          "text": "A box that is both wider and narrower than itself.",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h30",
+            "text": "A box that is both wider and narrower than itself.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "reason": "selected",
+            "source": "tiny-student",
+            "modelMs": 0.030291999999995767,
+            "evidence": [
+              {
+                "kind": "learned-char-primitive",
+                "detail": "box",
+                "score": 0.9975089406854789
+              },
+              {
+                "kind": "explicit-attribute-scope"
+              }
+            ],
+            "primitiveCandidates": [
+              [
+                {
+                  "label": "box",
+                  "score": 0.9975089406854789,
+                  "coverage": 1
+                },
+                {
+                  "label": "unknown",
+                  "score": 0.001161762749089757,
+                  "coverage": 1
+                },
+                {
+                  "label": "tube",
+                  "score": 0.0009830908265626636,
+                  "coverage": 1
+                },
+                {
+                  "label": "blade",
+                  "score": 0.00018714673300172238,
+                  "coverage": 1
+                },
+                {
+                  "label": "vase",
+                  "score": 8.622204431281721e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "ring",
+                  "score": 3.690169514726116e-05,
+                  "coverage": 1
+                },
+                {
+                  "label": "sphere",
+                  "score": 3.593526640682862e-05,
+                  "coverage": 1
+                }
+              ]
+            ],
+            "relationCandidates": [],
+            "elapsed_ms": 0.030791999999998154,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h30",
+            "category": "hold_negation_ambiguity",
+            "language": "en",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.030791999999998154
+          }
+        }
+      ]
+    },
+    "rules-preserved": {
+      "scored_summary": {
+        "cases": 90,
+        "definite_cases": 86,
+        "definite_semantic_successes": 53,
+        "definite_semantic_accuracy": 0.6162790697674418,
+        "render_cases": 60,
+        "render_successes": 33,
+        "positive_abstentions": 19,
+        "hold_cases": 26,
+        "hold_successes": 20,
+        "false_activations": 6,
+        "invalid_programs": 0,
+        "ambiguous_cases": 4,
+        "ambiguous_acceptable": 4,
+        "reversed_role_pairs": 15,
+        "both_directions_correct_pairs": 9,
+        "both_directions_correct_pair_ids": [
+          [
+            "r01",
+            "r02"
+          ],
+          [
+            "r03",
+            "r04"
+          ],
+          [
+            "r07",
+            "r08"
+          ],
+          [
+            "r11",
+            "r12"
+          ],
+          [
+            "r13",
+            "r14"
+          ],
+          [
+            "r21",
+            "r22"
+          ],
+          [
+            "r23",
+            "r24"
+          ],
+          [
+            "r25",
+            "r26"
+          ],
+          [
+            "r27",
+            "r28"
+          ]
+        ],
+        "geometry_measured_outputs": 48,
+        "geometry_safe_outputs": 45,
+        "pipeline_measured_definite_cases": 86,
+        "pipeline_successes_on_measured_definite_cases": 50,
+        "failure_taxonomy": {
+          "attribute": 6,
+          "abstained_positive": 19,
+          "roles_reversed": 2,
+          "false_activation": 6
+        },
+        "geometry_failures": {
+          "geometry_rejected": 3
+        },
+        "categories": {
+          "single_nominal": {
+            "count": 15,
+            "successes": 10,
+            "failures": {
+              "abstained_positive": 5
+            }
+          },
+          "single_attribute": {
+            "count": 15,
+            "successes": 5,
+            "failures": {
+              "attribute": 6,
+              "abstained_positive": 4
+            }
+          },
+          "relation_simple": {
+            "count": 15,
+            "successes": 13,
+            "failures": {
+              "roles_reversed": 2
+            }
+          },
+          "relation_scope": {
+            "count": 15,
+            "successes": 5,
+            "failures": {
+              "abstained_positive": 10
+            }
+          },
+          "hold_ordinary": {
+            "count": 15,
+            "successes": 15,
+            "failures": {}
+          },
+          "hold_negation_ambiguity": {
+            "count": 15,
+            "successes": 9,
+            "failures": {
+              "false_activation": 6
+            }
+          }
+        },
+        "model_only_latency_ms": {
+          "count": 90,
+          "p50": 0.0037710000000039656,
+          "p95": 0.13310029999999934,
+          "max": 0.8860000000000028
+        }
+      },
+      "accepted_definite_outputs": 47,
+      "accepted_definite_output_successes": 33,
+      "accepted_definite_precision": 0.7021276595744681,
+      "positive_program_coverage_count": 41,
+      "positive_program_coverage": 0.6833333333333333,
+      "positive_accepted_precision": 0.8048780487804879,
+      "negation_cancellation_conflict_hold_successes": 5,
+      "negation_cancellation_conflict_hold_cases": 11,
+      "ambiguous_held": 3,
+      "normalized_overlap_excluded": {
+        "definite_count": 76,
+        "definite_semantic_successes": 46,
+        "definite_accuracy": 0.6052631578947368,
+        "positive_count": 51,
+        "positive_semantic_successes": 27
+      },
+      "failures": [
+        {
+          "id": "s04",
+          "category": "single_attribute",
+          "text": "横に押しつぶされた球体",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "lt",
+                        "right": "width",
+                        "ratio": 0.9
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s04",
+            "text": "横に押しつぶされた球体",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.015000000000000568,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s04",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "height",
+                  "operation": "lt",
+                  "right": "width",
+                  "ratio": 0.9
+                },
+                "actual": {
+                  "width": 1,
+                  "twist": 0,
+                  "bend": 0,
+                  "height": 1,
+                  "depth": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.015000000000000568
+          }
+        },
+        {
+          "id": "s05",
+          "category": "single_attribute",
+          "text": "縦に伸びた玉",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "gt",
+                        "right": "width",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s05",
+            "text": "縦に伸びた玉",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.005791999999999575,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s05",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "height",
+                  "operation": "gt",
+                  "right": "width",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "width": 1,
+                  "twist": 0,
+                  "bend": 0,
+                  "height": 1,
+                  "depth": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.005791999999999575
+          }
+        },
+        {
+          "id": "s06",
+          "category": "single_nominal",
+          "text": "四角い箱",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s06",
+            "text": "四角い箱",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.09120899999999921,
+            "error": null
+          },
+          "scored": {
+            "id": "s06",
+            "category": "single_nominal",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.09120899999999921
+          }
+        },
+        {
+          "id": "s07",
+          "category": "single_nominal",
+          "text": "rectangular block",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s07",
+            "text": "rectangular block",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.005457999999997298,
+            "error": null
+          },
+          "scored": {
+            "id": "s07",
+            "category": "single_nominal",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.005457999999997298
+          }
+        },
+        {
+          "id": "s08",
+          "category": "single_nominal",
+          "text": "さいころのような角張った塊",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s08",
+            "text": "さいころのような角張った塊",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.0045000000000001705,
+            "error": null
+          },
+          "scored": {
+            "id": "s08",
+            "category": "single_nominal",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0045000000000001705
+          }
+        },
+        {
+          "id": "s09",
+          "category": "single_attribute",
+          "text": "横に長い箱",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box",
+                    "constraints": [
+                      {
+                        "left": "width",
+                        "operation": "gt",
+                        "right": "height",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s09",
+            "text": "横に長い箱",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1.65,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.010167000000002702,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s09",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "width",
+                  "operation": "gt",
+                  "right": "height",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "width": 1,
+                  "twist": 0,
+                  "bend": 0,
+                  "height": 1.65,
+                  "depth": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.010167000000002702
+          }
+        },
+        {
+          "id": "s13",
+          "category": "single_attribute",
+          "text": "細長い円柱",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "gt",
+                        "right": "width",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s13",
+            "text": "細長い円柱",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.0033749999999983515,
+            "error": null
+          },
+          "scored": {
+            "id": "s13",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0033749999999983515
+          }
+        },
+        {
+          "id": "s17",
+          "category": "single_nominal",
+          "text": "a dagger",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s17",
+            "text": "a dagger",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.003208999999998241,
+            "error": null
+          },
+          "scored": {
+            "id": "s17",
+            "category": "single_nominal",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.003208999999998241
+          }
+        },
+        {
+          "id": "s19",
+          "category": "single_attribute",
+          "text": "短く幅広い刀身",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "lte",
+                        "value": 0.9
+                      },
+                      {
+                        "left": "width",
+                        "operation": "gte",
+                        "value": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s19",
+            "text": "短く幅広い刀身",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1,
+                  "width": 1.5,
+                  "depth": 1.5,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.004374999999996021,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 564,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s19",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "height",
+                  "operation": "lte",
+                  "value": 0.9
+                },
+                "actual": {
+                  "width": 1.5,
+                  "twist": 0,
+                  "bend": 0,
+                  "height": 1,
+                  "depth": 1.5
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.004374999999996021
+          }
+        },
+        {
+          "id": "s20",
+          "category": "single_attribute",
+          "text": "湾曲した剣",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade",
+                    "constraints": [
+                      {
+                        "left": "abs_bend",
+                        "operation": "gte",
+                        "value": 0.2
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s20",
+            "text": "湾曲した剣",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.003500000000002501,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 564,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s20",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "abs_bend",
+                  "operation": "gte",
+                  "value": 0.2
+                },
+                "actual": {
+                  "width": 1,
+                  "twist": 0,
+                  "bend": 0,
+                  "height": 1,
+                  "depth": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.003500000000002501
+          }
+        },
+        {
+          "id": "s23",
+          "category": "single_attribute",
+          "text": "細長い口の開いた壺",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "vase",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "gt",
+                        "right": "width",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s23",
+            "text": "細長い口の開いた壺",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.007041999999998438,
+            "error": null
+          },
+          "scored": {
+            "id": "s23",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.007041999999998438
+          }
+        },
+        {
+          "id": "s24",
+          "category": "single_attribute",
+          "text": "背の高い花器",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "vase",
+                    "constraints": [
+                      {
+                        "left": "height",
+                        "operation": "gt",
+                        "right": "width",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s24",
+            "text": "背の高い花器",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.017208000000003665,
+            "error": null
+          },
+          "scored": {
+            "id": "s24",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.017208000000003665
+          }
+        },
+        {
+          "id": "s25",
+          "category": "single_attribute",
+          "text": "横に広いずんぐりした花瓶",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "vase",
+                    "constraints": [
+                      {
+                        "left": "width",
+                        "operation": "gt",
+                        "right": "height",
+                        "ratio": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s25",
+            "text": "横に広いずんぐりした花瓶",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "vase",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.005875000000003183,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 624,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "s25",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "attribute",
+            "failures": [
+              "attribute"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [
+              {
+                "part_index": 0,
+                "condition": {
+                  "left": "width",
+                  "operation": "gt",
+                  "right": "height",
+                  "ratio": 1.1
+                },
+                "actual": {
+                  "width": 1,
+                  "twist": 0,
+                  "bend": 0,
+                  "height": 1,
+                  "depth": 1
+                }
+              }
+            ],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.005875000000003183
+          }
+        },
+        {
+          "id": "s27",
+          "category": "single_nominal",
+          "text": "a closed loop",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s27",
+            "text": "a closed loop",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.0033749999999983515,
+            "error": null
+          },
+          "scored": {
+            "id": "s27",
+            "category": "single_nominal",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0033749999999983515
+          }
+        },
+        {
+          "id": "s28",
+          "category": "single_attribute",
+          "text": "太い穴のある環",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring",
+                    "constraints": [
+                      {
+                        "left": "depth",
+                        "operation": "gte",
+                        "value": 1.1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "prediction": {
+            "id": "s28",
+            "text": "太い穴のある環",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "形の指定なし、または2部位超過",
+            "elapsed_ms": 0.002874999999995964,
+            "error": null
+          },
+          "scored": {
+            "id": "s28",
+            "category": "single_attribute",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.002874999999995964
+          }
+        },
+        {
+          "id": "r05",
+          "category": "relation_simple",
+          "text": "Put a blade on the tip of a box.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  },
+                  {
+                    "primitive": "blade"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r05",
+            "text": "Put a blade on the tip of a box.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語と関係規則",
+            "elapsed_ms": 0.16737499999999983,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 1008,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "r05",
+            "category": "relation_simple",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "roles_reversed",
+            "failures": [
+              "roles_reversed"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": false,
+            "relation_correct": true,
+            "structure_correct": false,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.16737499999999983
+          }
+        },
+        {
+          "id": "r06",
+          "category": "relation_simple",
+          "text": "Put a box on the tip of a blade.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r06",
+            "text": "Put a box on the tip of a blade.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "blade",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "end",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語と関係規則",
+            "elapsed_ms": 0.005666000000005056,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 1008,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "r06",
+            "category": "relation_simple",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "roles_reversed",
+            "failures": [
+              "roles_reversed"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": false,
+            "relation_correct": true,
+            "structure_correct": false,
+            "matched_alternative": 0,
+            "pipeline_success": false,
+            "elapsed_ms": 0.005666000000005056
+          }
+        },
+        {
+          "id": "r09",
+          "category": "relation_scope",
+          "text": "The rod is the base; attach a ring at its end.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube"
+                  },
+                  {
+                    "primitive": "ring"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r09",
+            "text": "The rod is the base; attach a ring at its end.",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0048340000000024475,
+            "error": null
+          },
+          "scored": {
+            "id": "r09",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0048340000000024475
+          }
+        },
+        {
+          "id": "r10",
+          "category": "relation_scope",
+          "text": "The ring is the base; attach a rod at its end.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  },
+                  {
+                    "primitive": "tube"
+                  }
+                ],
+                "relation": "end"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r10",
+            "text": "The ring is the base; attach a rod at its end.",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0037090000000006285,
+            "error": null
+          },
+          "scored": {
+            "id": "r10",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0037090000000006285
+          }
+        },
+        {
+          "id": "r15",
+          "category": "relation_scope",
+          "text": "刃を花瓶より上に置く",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "vase"
+                  },
+                  {
+                    "primitive": "blade"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r15",
+            "text": "刃を花瓶より上に置く",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0028750000000030695,
+            "error": null
+          },
+          "scored": {
+            "id": "r15",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0028750000000030695
+          }
+        },
+        {
+          "id": "r16",
+          "category": "relation_scope",
+          "text": "花瓶を刃より上に置く",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  },
+                  {
+                    "primitive": "vase"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r16",
+            "text": "花瓶を刃より上に置く",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.002375000000000682,
+            "error": null
+          },
+          "scored": {
+            "id": "r16",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.002375000000000682
+          }
+        },
+        {
+          "id": "r17",
+          "category": "relation_scope",
+          "text": "球を置く。輪よりも上側に",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  },
+                  {
+                    "primitive": "sphere"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r17",
+            "text": "球を置く。輪よりも上側に",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0025410000000007926,
+            "error": null
+          },
+          "scored": {
+            "id": "r17",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0025410000000007926
+          }
+        },
+        {
+          "id": "r18",
+          "category": "relation_scope",
+          "text": "輪を置く。球よりも上側に",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere"
+                  },
+                  {
+                    "primitive": "ring"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r18",
+            "text": "輪を置く。球よりも上側に",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0022080000000030964,
+            "error": null
+          },
+          "scored": {
+            "id": "r18",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0022080000000030964
+          }
+        },
+        {
+          "id": "r19",
+          "category": "relation_scope",
+          "text": "Below the sphere sits a box.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  },
+                  {
+                    "primitive": "sphere"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r19",
+            "text": "Below the sphere sits a box.",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0030000000000001137,
+            "error": null
+          },
+          "scored": {
+            "id": "r19",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0030000000000001137
+          }
+        },
+        {
+          "id": "r20",
+          "category": "relation_scope",
+          "text": "Below the box sits a sphere.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "sphere"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "above"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r20",
+            "text": "Below the box sits a sphere.",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.002834000000000003,
+            "error": null
+          },
+          "scored": {
+            "id": "r20",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.002834000000000003
+          }
+        },
+        {
+          "id": "r22",
+          "category": "relation_simple",
+          "text": "棒を箱が貫く",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r22",
+            "text": "棒を箱が貫く",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語と関係規則",
+            "elapsed_ms": 0.002625000000001876,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r22",
+            "category": "relation_simple",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.002625000000001876
+          }
+        },
+        {
+          "id": "r24",
+          "category": "relation_simple",
+          "text": "A sphere passes through a blade.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "blade"
+                  },
+                  {
+                    "primitive": "sphere"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r24",
+            "text": "A sphere passes through a blade.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "blade",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語と関係規則",
+            "elapsed_ms": 0.005916999999996619,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r24",
+            "category": "relation_simple",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.005916999999996619
+          }
+        },
+        {
+          "id": "r26",
+          "category": "relation_scope",
+          "text": "棒を花瓶が貫通する",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "tube"
+                  },
+                  {
+                    "primitive": "vase"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r26",
+            "text": "棒を花瓶が貫通する",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                },
+                {
+                  "id": "1",
+                  "primitive": "vase",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ],
+              "relation": {
+                "kind": "through",
+                "parent": "0",
+                "child": "1"
+              }
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語と関係規則",
+            "elapsed_ms": 0.003667000000000087,
+            "error": null,
+            "geometry": {
+              "compiled": false,
+              "finite": false,
+              "sample_count": 0
+            }
+          },
+          "scored": {
+            "id": "r26",
+            "category": "relation_scope",
+            "language": "ja",
+            "expected_action": "render",
+            "actual_action": "render",
+            "semantic_success": true,
+            "failure": null,
+            "failures": [],
+            "safe_program": true,
+            "geometry_success": false,
+            "attribute_failures": [],
+            "part_count_correct": true,
+            "ordered_primitives_correct": true,
+            "relation_correct": true,
+            "structure_correct": true,
+            "matched_alternative": 0,
+            "geometry_failure": "geometry_rejected",
+            "pipeline_success": false,
+            "elapsed_ms": 0.003667000000000087
+          }
+        },
+        {
+          "id": "r29",
+          "category": "relation_scope",
+          "text": "The box is pierced by a ring.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "box"
+                  },
+                  {
+                    "primitive": "ring"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r29",
+            "text": "The box is pierced by a ring.",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.0032910000000043738,
+            "error": null
+          },
+          "scored": {
+            "id": "r29",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0032910000000043738
+          }
+        },
+        {
+          "id": "r30",
+          "category": "relation_scope",
+          "text": "The ring is pierced by a box.",
+          "expected": {
+            "action": "render",
+            "alternatives": [
+              {
+                "parts": [
+                  {
+                    "primitive": "ring"
+                  },
+                  {
+                    "primitive": "box"
+                  }
+                ],
+                "relation": "through"
+              }
+            ]
+          },
+          "prediction": {
+            "id": "r30",
+            "text": "The ring is pierced by a box.",
+            "program": null,
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "関係の指定なし",
+            "elapsed_ms": 0.002625000000001876,
+            "error": null
+          },
+          "scored": {
+            "id": "r30",
+            "category": "relation_scope",
+            "language": "en",
+            "expected_action": "render",
+            "actual_action": "hold",
+            "semantic_success": false,
+            "failure": "abstained_positive",
+            "failures": [
+              "abstained_positive"
+            ],
+            "safe_program": true,
+            "geometry_success": null,
+            "pipeline_success": false,
+            "elapsed_ms": 0.002625000000001876
+          }
+        },
+        {
+          "id": "h16",
+          "category": "hold_negation_ambiguity",
+          "text": "球は作らない",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h16",
+            "text": "球は作らない",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "sphere",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.005583999999998923,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h16",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.005583999999998923
+          }
+        },
+        {
+          "id": "h19",
+          "category": "hold_negation_ambiguity",
+          "text": "花瓶を取り消す",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h19",
+            "text": "花瓶を取り消す",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "vase",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.0024999999999977263,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 624,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h19",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.0024999999999977263
+          }
+        },
+        {
+          "id": "h21",
+          "category": "hold_negation_ambiguity",
+          "text": "箱を出すな。",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h21",
+            "text": "箱を出すな。",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.00216700000000003,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h21",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.00216700000000003
+          }
+        },
+        {
+          "id": "h22",
+          "category": "hold_negation_ambiguity",
+          "text": "管のない形",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h22",
+            "text": "管のない形",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.002291999999997074,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 564,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h22",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.002291999999997074
+          }
+        },
+        {
+          "id": "h29",
+          "category": "hold_negation_ambiguity",
+          "text": "長くて短い棒",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h29",
+            "text": "長くて短い棒",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "tube",
+                  "height": 1.65,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.002666000000004942,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 564,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h29",
+            "category": "hold_negation_ambiguity",
+            "language": "ja",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.002666000000004942
+          }
+        },
+        {
+          "id": "h30",
+          "category": "hold_negation_ambiguity",
+          "text": "A box that is both wider and narrower than itself.",
+          "expected": {
+            "action": "hold"
+          },
+          "prediction": {
+            "id": "h30",
+            "text": "A box that is both wider and narrower than itself.",
+            "program": {
+              "version": 1,
+              "parts": [
+                {
+                  "id": "0",
+                  "primitive": "box",
+                  "height": 1,
+                  "width": 1,
+                  "depth": 1,
+                  "bend": 0,
+                  "twist": 0
+                }
+              ]
+            },
+            "source": "rules",
+            "modelMs": 0,
+            "reason": "指定語",
+            "elapsed_ms": 0.00462500000000432,
+            "error": null,
+            "geometry": {
+              "compiled": true,
+              "finite": true,
+              "sample_count": 444,
+              "adjustments": []
+            }
+          },
+          "scored": {
+            "id": "h30",
+            "category": "hold_negation_ambiguity",
+            "language": "en",
+            "expected_action": "hold",
+            "actual_action": "render",
+            "semantic_success": false,
+            "failure": "false_activation",
+            "failures": [
+              "false_activation"
+            ],
+            "safe_program": true,
+            "geometry_success": true,
+            "pipeline_success": false,
+            "elapsed_ms": 0.00462500000000432
+          }
+        }
+      ]
+    }
+  }
+}

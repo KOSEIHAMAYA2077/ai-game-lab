@@ -1,0 +1,2318 @@
+{
+  "version": 1,
+  "model_name": "preserved-program-rules-0.13-independent-90",
+  "created_utc": "2026-10-02T16:12:26.956Z",
+  "frozen_manifest": {
+    "rules_source_sha256": "1f10423d53cfdbbd384279804dd1430fa384ac746ac137dff6d61ba5a1d8cd01",
+    "rules_source_last_commit": "50b12b6de0e9a27b4f93a9910aad1582071a43de",
+    "compiler_source_sha256": "699e0ec1d3f5ec16b8ab19a8b5fe498d09a625395b3a739052aa9d542a5e6aa8",
+    "fixture_sha256": "77c46e0a966af39b7501c5d1d00530056fa53413c39a9e5dccf23956d9fb893b",
+    "scorer_sha256": "54b26ac35fa1d562e45efdb08caa30ea8ba104571beb14568cf09ab5609408e5",
+    "compiler_runtime_sha256": "3ac7cf0a2c1d407e04c6e20cec47f2c193d535d599bef783d01d31cc0db621d6",
+    "verified_before": true,
+    "verified_after": true
+  },
+  "environment": {
+    "runtime": "v26.4.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "cpu_model": "Apple M5"
+  },
+  "resource_measurements": {
+    "module_import_ms": 0.8037500000000009,
+    "geometry_validation_ms": 91.551708,
+    "whole_app_physical_footprint_bytes": null,
+    "note": "Direct synchronous Node calls; no production browser path or app RAM measurement."
+  },
+  "predictions": [
+    {
+      "id": "s01",
+      "text": "真珠みたいな玉",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.8661250000000038,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s02",
+      "text": "球状の物体",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.42916600000000216,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s03",
+      "text": "a perfectly round orb",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.8860000000000028,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s04",
+      "text": "横に押しつぶされた球体",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.015000000000000568,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s05",
+      "text": "縦に伸びた玉",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.005791999999999575,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s06",
+      "text": "四角い箱",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.09120899999999921,
+      "error": null
+    },
+    {
+      "id": "s07",
+      "text": "rectangular block",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.005457999999997298,
+      "error": null
+    },
+    {
+      "id": "s08",
+      "text": "さいころのような角張った塊",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0045000000000001705,
+      "error": null
+    },
+    {
+      "id": "s09",
+      "text": "横に長い箱",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1.65,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.010167000000002702,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s10",
+      "text": "ねじれた直方体",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0.65
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.007207999999998549,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s11",
+      "text": "筒",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.00883400000000023,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s12",
+      "text": "a straight rod",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.010832999999998094,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s13",
+      "text": "細長い円柱",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0033749999999983515,
+      "error": null
+    },
+    {
+      "id": "s14",
+      "text": "曲がった管",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0.65,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.008209000000000799,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s15",
+      "text": "ねじれた太い棒",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1.5,
+            "depth": 1.5,
+            "bend": 0,
+            "twist": 0.65
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.008291999999997302,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s16",
+      "text": "剣",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.005041999999995994,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s17",
+      "text": "a dagger",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.003208999999998241,
+      "error": null
+    },
+    {
+      "id": "s18",
+      "text": "尖った刃",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.004041999999998325,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s19",
+      "text": "短く幅広い刀身",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1.5,
+            "depth": 1.5,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.004374999999996021,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s20",
+      "text": "湾曲した剣",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.003500000000002501,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s21",
+      "text": "花瓶",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.0036249999999995453,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 624,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s22",
+      "text": "a ceramic vase",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.004165999999997894,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 624,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s23",
+      "text": "細長い口の開いた壺",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.007041999999998438,
+      "error": null
+    },
+    {
+      "id": "s24",
+      "text": "背の高い花器",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.017208000000003665,
+      "error": null
+    },
+    {
+      "id": "s25",
+      "text": "横に広いずんぐりした花瓶",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.005875000000003183,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 624,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s26",
+      "text": "輪っか",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.0037920000000042364,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s27",
+      "text": "a closed loop",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0033749999999983515,
+      "error": null
+    },
+    {
+      "id": "s28",
+      "text": "太い穴のある環",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.002874999999995964,
+      "error": null
+    },
+    {
+      "id": "s29",
+      "text": "縦長の輪",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1.65,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.0037080000000031532,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "s30",
+      "text": "ねじれた輪",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0.65
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.0032910000000043738,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r01",
+      "text": "棒の先端に球を付ける",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.2756660000000011,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r02",
+      "text": "球の先端に棒を付ける",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.0727499999999992,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r03",
+      "text": "花瓶の端に輪をつなぐ",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.00783299999999798,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1068,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r04",
+      "text": "輪の端に花瓶をつなぐ",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.004666999999997756,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1068,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r05",
+      "text": "Put a blade on the tip of a box.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.16737499999999983,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r06",
+      "text": "Put a box on the tip of a blade.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.005666000000005056,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r07",
+      "text": "箱の先端へ取り付けるのは球",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.004291999999999518,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 888,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r08",
+      "text": "球の先端へ取り付けるのは箱",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "end",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.0038330000000001974,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 888,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r09",
+      "text": "The rod is the base; attach a ring at its end.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0048340000000024475,
+      "error": null
+    },
+    {
+      "id": "r10",
+      "text": "The ring is the base; attach a rod at its end.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0037090000000006285,
+      "error": null
+    },
+    {
+      "id": "r11",
+      "text": "箱の上に球を置く",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.003208000000000766,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 888,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r12",
+      "text": "球の上に箱を置く",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.0030829999999966162,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 888,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r13",
+      "text": "A vase sits above a rod.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.004749999999994259,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1188,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r14",
+      "text": "A rod sits above a vase.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.0034580000000019595,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1188,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "r15",
+      "text": "刃を花瓶より上に置く",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0028750000000030695,
+      "error": null
+    },
+    {
+      "id": "r16",
+      "text": "花瓶を刃より上に置く",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.002375000000000682,
+      "error": null
+    },
+    {
+      "id": "r17",
+      "text": "球を置く。輪よりも上側に",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0025410000000007926,
+      "error": null
+    },
+    {
+      "id": "r18",
+      "text": "輪を置く。球よりも上側に",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0022080000000030964,
+      "error": null
+    },
+    {
+      "id": "r19",
+      "text": "Below the sphere sits a box.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0030000000000001137,
+      "error": null
+    },
+    {
+      "id": "r20",
+      "text": "Below the box sits a sphere.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.002834000000000003,
+      "error": null
+    },
+    {
+      "id": "r21",
+      "text": "箱を棒が貫く",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.003124999999997158,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "through_material": true,
+        "through_check": {
+          "method": "sampled-material-occupancy",
+          "maximumPointsPerTime": 266,
+          "atTimes": [
+            {
+              "time": 0,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            },
+            {
+              "time": 15,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            },
+            {
+              "time": 30,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            },
+            {
+              "time": 45,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "part": "1",
+            "reason": "surface-intersection",
+            "height": 1.15
+          }
+        ]
+      }
+    },
+    {
+      "id": "r22",
+      "text": "棒を箱が貫く",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.002625000000001876,
+      "error": null,
+      "geometry": {
+        "compiled": false,
+        "finite": false,
+        "sample_count": 0
+      }
+    },
+    {
+      "id": "r23",
+      "text": "A blade passes through a sphere.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.010042000000005658,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "through_material": true,
+        "through_check": {
+          "method": "sampled-material-occupancy",
+          "maximumPointsPerTime": 266,
+          "atTimes": [
+            {
+              "time": 0,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            },
+            {
+              "time": 15,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            },
+            {
+              "time": 30,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            },
+            {
+              "time": 45,
+              "sampledPoints": 5,
+              "insideCount": 4,
+              "outsideCount": 1
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "part": "1",
+            "reason": "surface-intersection",
+            "height": 1.15
+          }
+        ]
+      }
+    },
+    {
+      "id": "r24",
+      "text": "A sphere passes through a blade.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "blade",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.005916999999996619,
+      "error": null,
+      "geometry": {
+        "compiled": false,
+        "finite": false,
+        "sample_count": 0
+      }
+    },
+    {
+      "id": "r25",
+      "text": "花瓶の壁を棒が貫通する",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.0045000000000001705,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1188,
+        "through_material": true,
+        "through_check": {
+          "method": "sampled-material-occupancy",
+          "maximumPointsPerTime": 266,
+          "atTimes": [
+            {
+              "time": 0,
+              "sampledPoints": 27,
+              "insideCount": 1,
+              "outsideCount": 26
+            },
+            {
+              "time": 15,
+              "sampledPoints": 27,
+              "insideCount": 1,
+              "outsideCount": 26
+            },
+            {
+              "time": 30,
+              "sampledPoints": 38,
+              "insideCount": 1,
+              "outsideCount": 36
+            },
+            {
+              "time": 45,
+              "sampledPoints": 26,
+              "insideCount": 1,
+              "outsideCount": 25
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "part": "1",
+            "reason": "surface-intersection",
+            "height": 1.0489366319444444
+          }
+        ]
+      }
+    },
+    {
+      "id": "r26",
+      "text": "棒を花瓶が貫通する",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.003667000000000087,
+      "error": null,
+      "geometry": {
+        "compiled": false,
+        "finite": false,
+        "sample_count": 0
+      }
+    },
+    {
+      "id": "r27",
+      "text": "輪を貫くのは棒",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.003750000000003695,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "through_material": true,
+        "through_check": {
+          "method": "sampled-material-occupancy",
+          "maximumPointsPerTime": 266,
+          "atTimes": [
+            {
+              "time": 0,
+              "sampledPoints": 15,
+              "insideCount": 1,
+              "outsideCount": 14
+            },
+            {
+              "time": 15,
+              "sampledPoints": 15,
+              "insideCount": 1,
+              "outsideCount": 14
+            },
+            {
+              "time": 30,
+              "sampledPoints": 15,
+              "insideCount": 1,
+              "outsideCount": 14
+            },
+            {
+              "time": 45,
+              "sampledPoints": 15,
+              "insideCount": 1,
+              "outsideCount": 14
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "part": "1",
+            "reason": "surface-intersection",
+            "height": 1.43
+          }
+        ]
+      }
+    },
+    {
+      "id": "r28",
+      "text": "棒を貫くのは輪",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "ring",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "through",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.003416999999998893,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 1008,
+        "through_material": true,
+        "through_check": {
+          "method": "sampled-material-occupancy",
+          "maximumPointsPerTime": 266,
+          "atTimes": [
+            {
+              "time": 0,
+              "sampledPoints": 3,
+              "insideCount": 1,
+              "outsideCount": 2
+            },
+            {
+              "time": 15,
+              "sampledPoints": 3,
+              "insideCount": 1,
+              "outsideCount": 2
+            },
+            {
+              "time": 30,
+              "sampledPoints": 3,
+              "insideCount": 1,
+              "outsideCount": 2
+            },
+            {
+              "time": 45,
+              "sampledPoints": 3,
+              "insideCount": 1,
+              "outsideCount": 2
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "part": "1",
+            "reason": "surface-intersection",
+            "width": 0.38,
+            "height": 1.1400000000000001
+          }
+        ]
+      }
+    },
+    {
+      "id": "r29",
+      "text": "The box is pierced by a ring.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0032910000000043738,
+      "error": null
+    },
+    {
+      "id": "r30",
+      "text": "The ring is pierced by a box.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.002625000000001876,
+      "error": null
+    },
+    {
+      "id": "h01",
+      "text": "今日もよく頑張った",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.002917000000003611,
+      "error": null
+    },
+    {
+      "id": "h02",
+      "text": "赤く光って，ゆっくり流れる",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.007415999999999201,
+      "error": null
+    },
+    {
+      "id": "h03",
+      "text": "触れていない世界への手紙",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0020419999999958804,
+      "error": null
+    },
+    {
+      "id": "h04",
+      "text": "立方根を計算した",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0017500000000012506,
+      "error": null
+    },
+    {
+      "id": "h05",
+      "text": "リングバッファは満杯だ",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0077920000000020195,
+      "error": null
+    },
+    {
+      "id": "h06",
+      "text": "星はどうして光るの",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0019580000000019027,
+      "error": null
+    },
+    {
+      "id": "h07",
+      "text": "夕食にカレーを作る",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0017089999999981842,
+      "error": null
+    },
+    {
+      "id": "h08",
+      "text": "幾何学について考えている",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.001708000000000709,
+      "error": null
+    },
+    {
+      "id": "h09",
+      "text": "The meeting starts at noon.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0024999999999977263,
+      "error": null
+    },
+    {
+      "id": "h10",
+      "text": "Turn the volume down.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.002375000000000682,
+      "error": null
+    },
+    {
+      "id": "h11",
+      "text": "The database table is locked.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0020419999999958804,
+      "error": null
+    },
+    {
+      "id": "h12",
+      "text": "I am thinking about tomorrow.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.006374999999998465,
+      "error": null
+    },
+    {
+      "id": "h13",
+      "text": "8個",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0019169999999988363,
+      "error": null
+    },
+    {
+      "id": "h14",
+      "text": "青",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.003208000000000766,
+      "error": null
+    },
+    {
+      "id": "h15",
+      "text": "地図の凡例",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0062080000000008795,
+      "error": null
+    },
+    {
+      "id": "h16",
+      "text": "球は作らない",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.005583999999998923,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "h17",
+      "text": "No sphere, no ring.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0038749999999936335,
+      "error": null
+    },
+    {
+      "id": "h18",
+      "text": "箱でも筒でもない形",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.002625000000001876,
+      "error": null
+    },
+    {
+      "id": "h19",
+      "text": "花瓶を取り消す",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "vase",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.0024999999999977263,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 624,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "h20",
+      "text": "Do not add a blade.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "否定を保留",
+      "elapsed_ms": 0.0007500000000035811,
+      "error": null
+    },
+    {
+      "id": "h21",
+      "text": "箱を出すな。",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.00216700000000003,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "h22",
+      "text": "管のない形",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.002291999999997074,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "h23",
+      "text": "ねじれない",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.0017089999999981842,
+      "error": null
+    },
+    {
+      "id": "h24",
+      "text": "球か箱のどちらか",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.0037090000000006285,
+      "error": null
+    },
+    {
+      "id": "h25",
+      "text": "A ring or a vase, either is fine.",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.003124999999997158,
+      "error": null
+    },
+    {
+      "id": "h26",
+      "text": "球と箱",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "関係の指定なし",
+      "elapsed_ms": 0.00795800000000213,
+      "error": null
+    },
+    {
+      "id": "h27",
+      "text": "棒の先に球を付けるか，棒を球に通すか",
+      "program": null,
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "形の指定なし、または2部位超過",
+      "elapsed_ms": 0.018167000000005373,
+      "error": null
+    },
+    {
+      "id": "h28",
+      "text": "箱の上か下に球",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          },
+          {
+            "id": "1",
+            "primitive": "sphere",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ],
+        "relation": {
+          "kind": "above",
+          "parent": "0",
+          "child": "1"
+        }
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語と関係規則",
+      "elapsed_ms": 0.0045000000000001705,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 888,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "h29",
+      "text": "長くて短い棒",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "tube",
+            "height": 1.65,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.002666000000004942,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 564,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "h30",
+      "text": "A box that is both wider and narrower than itself.",
+      "program": {
+        "version": 1,
+        "parts": [
+          {
+            "id": "0",
+            "primitive": "box",
+            "height": 1,
+            "width": 1,
+            "depth": 1,
+            "bend": 0,
+            "twist": 0
+          }
+        ]
+      },
+      "source": "rules",
+      "modelMs": 0,
+      "reason": "指定語",
+      "elapsed_ms": 0.00462500000000432,
+      "error": null,
+      "geometry": {
+        "compiled": true,
+        "finite": true,
+        "sample_count": 444,
+        "adjustments": []
+      }
+    }
+  ]
+}
