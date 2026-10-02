@@ -1,0 +1,1358 @@
+{
+  "label": "qwen08-cpu",
+  "backend": "cpu",
+  "hardware": "Apple M5, 32GB shared RAM; not a 16GB Intel/AMD laptop",
+  "threads": 4,
+  "context": 2048,
+  "max_output_tokens": 512,
+  "temperature": 0,
+  "seed": 17,
+  "prompt_cache": false,
+  "fixture_sha256": "0108e344e60b165ab8772ba01a2b4d4a551fd3cc137060b8cdacc72306984c9a",
+  "prompt_sha256": "39b9208dc99e650798e1072bfbd4f8f2e0bd0da6e2768608fe0c1c338bb2934c",
+  "schema_sha256": "71d91851ae26662f510b5f99731159e22118500ba98390b162b945d5deff10ce",
+  "cases": [
+    {
+      "id": "dsl-01",
+      "input": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+      "seconds": 1.367,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"sphere\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"sphere\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 60,
+        "prompt_tokens": 467,
+        "total_tokens": 527,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 467,
+        "prompt_ms": 768.331,
+        "prompt_per_token_ms": 1.6452483940042828,
+        "prompt_per_second": 607.8109564757898,
+        "predicted_n": 60,
+        "predicted_ms": 596.087,
+        "predicted_per_token_ms": 10.103169491525424,
+        "predicted_per_second": 98.9788403370649
+      }
+    },
+    {
+      "id": "dsl-02",
+      "input": "横幅がとても広い、角張ったかたまりを置く。",
+      "seconds": 1.75,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 459,
+        "total_tokens": 567,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 459,
+        "prompt_ms": 723.731,
+        "prompt_per_token_ms": 1.576755991285403,
+        "prompt_per_second": 634.2135406663526,
+        "predicted_n": 108,
+        "predicted_ms": 1023.854,
+        "predicted_per_token_ms": 9.568728971962617,
+        "predicted_per_second": 104.5070879246455
+      }
+    },
+    {
+      "id": "dsl-03",
+      "input": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+      "seconds": 0.85,
+      "raw": "{\"act\":\"unsupported\",\"parts\":[],\"rel\":[]}",
+      "parsed": {
+        "act": "unsupported",
+        "parts": [],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 12,
+        "prompt_tokens": 461,
+        "total_tokens": 473,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 461,
+        "prompt_ms": 742.638,
+        "prompt_per_token_ms": 1.6109284164859003,
+        "prompt_per_second": 620.7600472908739,
+        "predicted_n": 12,
+        "predicted_ms": 103.194,
+        "predicted_per_token_ms": 9.381272727272728,
+        "predicted_per_second": 106.59534469058279
+      }
+    },
+    {
+      "id": "dsl-04",
+      "input": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+      "seconds": 1.485,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"cone\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[{\"a\":\"a\",\"b\":\"b\",\"type\":\"above\"}]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "above"
+          }
+        ]
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_tokens": 468,
+        "total_tokens": 540,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 468,
+        "prompt_ms": 791.711,
+        "prompt_per_token_ms": 1.691690170940171,
+        "prompt_per_second": 591.1247917485042,
+        "predicted_n": 72,
+        "predicted_ms": 690.417,
+        "predicted_per_token_ms": 9.72418309859155,
+        "predicted_per_second": 102.83640176878612
+      }
+    },
+    {
+      "id": "dsl-05",
+      "input": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+      "seconds": 1.34,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"green\"},{\"id\":\"b\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"red\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "green"
+          },
+          {
+            "id": "b",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "red"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_tokens": 461,
+        "total_tokens": 523,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 461,
+        "prompt_ms": 752.067,
+        "prompt_per_token_ms": 1.6313817787418656,
+        "prompt_per_second": 612.977301224492,
+        "predicted_n": 62,
+        "predicted_ms": 585.298,
+        "predicted_per_token_ms": 9.59504918032787,
+        "predicted_per_second": 104.2204142163479
+      }
+    },
+    {
+      "id": "dsl-06",
+      "input": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+      "seconds": 1.923,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"sphere\",\"n\":3,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"sphere\",\"n\":3,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"sphere\",\"n\":3,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"sphere\",\"n\":3,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "n": 3,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 3,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "sphere",
+            "n": 3,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "sphere",
+            "n": 3,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 471,
+        "total_tokens": 579,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 471,
+        "prompt_ms": 845.471,
+        "prompt_per_token_ms": 1.7950552016985137,
+        "prompt_per_second": 557.0859319834743,
+        "predicted_n": 108,
+        "predicted_ms": 1074.621,
+        "predicted_per_token_ms": 10.043186915887851,
+        "predicted_per_second": 99.56998793062856
+      }
+    },
+    {
+      "id": "dsl-07",
+      "input": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+      "seconds": 1.996,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"green\"},{\"id\":\"b\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"red\"},{\"id\":\"c\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"yellow\"},{\"id\":\"d\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"blue\"}],\"rel\":[{\"a\":\"b\",\"b\":\"c\",\"type\":\"left\"}]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "green"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "red"
+          },
+          {
+            "id": "c",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "yellow"
+          },
+          {
+            "id": "d",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "blue"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "c",
+            "type": "left"
+          }
+        ]
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 124,
+        "prompt_tokens": 467,
+        "total_tokens": 591,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 467,
+        "prompt_ms": 781.169,
+        "prompt_per_token_ms": 1.6727387580299786,
+        "prompt_per_second": 597.8219821831128,
+        "predicted_n": 124,
+        "predicted_ms": 1210.889,
+        "predicted_per_token_ms": 9.844626016260161,
+        "predicted_per_second": 101.57826192161298
+      }
+    },
+    {
+      "id": "dsl-08",
+      "input": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+      "seconds": 1.881,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"red\"},{\"id\":\"b\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"blue\"},{\"id\":\"c\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"green\"},{\"id\":\"d\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"purple\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "red"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "blue"
+          },
+          {
+            "id": "c",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "green"
+          },
+          {
+            "id": "d",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "purple"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 470,
+        "total_tokens": 582,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 470,
+        "prompt_ms": 772.092,
+        "prompt_per_token_ms": 1.6427489361702128,
+        "prompt_per_second": 608.7357465172545,
+        "predicted_n": 112,
+        "predicted_ms": 1105.946,
+        "predicted_per_token_ms": 9.963477477477477,
+        "predicted_per_second": 100.36656400945435
+      }
+    },
+    {
+      "id": "dsl-09",
+      "input": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+      "seconds": 1.859,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"torus\",\"n\":2,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"torus\",\"n\":2,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"torus\",\"n\":2,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"torus\",\"n\":2,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 2,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 2,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "torus",
+            "n": 2,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "torus",
+            "n": 2,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 464,
+        "total_tokens": 576,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 464,
+        "prompt_ms": 778.081,
+        "prompt_per_token_ms": 1.6768987068965517,
+        "prompt_per_second": 596.3389415754915,
+        "predicted_n": 112,
+        "predicted_ms": 1076.403,
+        "predicted_per_token_ms": 9.697324324324324,
+        "predicted_per_second": 103.12122875911717
+      }
+    },
+    {
+      "id": "dsl-10",
+      "input": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+      "seconds": 1.861,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"large\",\"stretch\":\"x\",\"color\":\"red\"},{\"id\":\"b\",\"shape\":\"box\",\"n\":1,\"size\":\"large\",\"stretch\":\"x\",\"color\":\"yellow\"},{\"id\":\"c\",\"shape\":\"box\",\"n\":1,\"size\":\"large\",\"stretch\":\"x\",\"color\":\"green\"},{\"id\":\"d\",\"shape\":\"box\",\"n\":1,\"size\":\"large\",\"stretch\":\"x\",\"color\":\"blue\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "large",
+            "stretch": "x",
+            "color": "red"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "large",
+            "stretch": "x",
+            "color": "yellow"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "large",
+            "stretch": "x",
+            "color": "green"
+          },
+          {
+            "id": "d",
+            "shape": "box",
+            "n": 1,
+            "size": "large",
+            "stretch": "x",
+            "color": "blue"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 474,
+        "total_tokens": 582,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 474,
+        "prompt_ms": 789.775,
+        "prompt_per_token_ms": 1.6661919831223628,
+        "prompt_per_second": 600.1709347599,
+        "predicted_n": 108,
+        "predicted_ms": 1068.512,
+        "predicted_per_token_ms": 9.986093457943925,
+        "predicted_per_second": 100.13925908178851
+      }
+    },
+    {
+      "id": "dsl-11",
+      "input": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+      "seconds": 1.888,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 465,
+        "total_tokens": 573,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 465,
+        "prompt_ms": 819.013,
+        "prompt_per_token_ms": 1.7613182795698925,
+        "prompt_per_second": 567.7565557567463,
+        "predicted_n": 108,
+        "predicted_ms": 1065.244,
+        "predicted_per_token_ms": 9.955551401869158,
+        "predicted_per_second": 100.4464704800027
+      }
+    },
+    {
+      "id": "dsl-12",
+      "input": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+      "seconds": 1.49,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"cone\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"sphere\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[{\"a\":\"a\",\"b\":\"b\",\"type\":\"above\"}]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "above"
+          }
+        ]
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_tokens": 464,
+        "total_tokens": 536,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 464,
+        "prompt_ms": 799.107,
+        "prompt_per_token_ms": 1.7222133620689655,
+        "prompt_per_second": 580.6481484957585,
+        "predicted_n": 72,
+        "predicted_ms": 687.126,
+        "predicted_per_token_ms": 9.677830985915493,
+        "predicted_per_second": 103.32893821511631
+      }
+    },
+    {
+      "id": "dsl-13",
+      "input": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+      "seconds": 1.575,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"sphere\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[{\"a\":\"b\",\"b\":\"a\",\"type\":\"inside\"}]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "inside"
+          }
+        ]
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 461,
+        "total_tokens": 534,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 461,
+        "prompt_ms": 817.156,
+        "prompt_per_token_ms": 1.7725726681127982,
+        "prompt_per_second": 564.1517653911861,
+        "predicted_n": 73,
+        "predicted_ms": 754.201,
+        "predicted_per_token_ms": 10.475013888888888,
+        "predicted_per_second": 95.46526721656427
+      }
+    },
+    {
+      "id": "dsl-14",
+      "input": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+      "seconds": 1.87,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"cone\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 467,
+        "total_tokens": 575,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 467,
+        "prompt_ms": 817.046,
+        "prompt_per_token_ms": 1.7495631691648823,
+        "prompt_per_second": 571.5712456826176,
+        "predicted_n": 108,
+        "predicted_ms": 1049.078,
+        "predicted_per_token_ms": 9.804467289719627,
+        "predicted_per_second": 101.99432263377938
+      }
+    },
+    {
+      "id": "dsl-15",
+      "input": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+      "seconds": 1.439,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_tokens": 463,
+        "total_tokens": 525,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 463,
+        "prompt_ms": 813.78,
+        "prompt_per_token_ms": 1.7576241900647949,
+        "prompt_per_second": 568.9498390228317,
+        "predicted_n": 62,
+        "predicted_ms": 622.07,
+        "predicted_per_token_ms": 10.197868852459017,
+        "predicted_per_second": 98.05970389184496
+      }
+    },
+    {
+      "id": "dsl-16",
+      "input": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+      "seconds": 1.643,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 84,
+        "prompt_tokens": 465,
+        "total_tokens": 549,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 465,
+        "prompt_ms": 829.557,
+        "prompt_per_token_ms": 1.7839935483870968,
+        "prompt_per_second": 560.54014371526,
+        "predicted_n": 84,
+        "predicted_ms": 809.172,
+        "predicted_per_token_ms": 9.749060240963855,
+        "predicted_per_second": 102.57398921366533
+      }
+    },
+    {
+      "id": "dsl-17",
+      "input": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+      "seconds": 1.918,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 463,
+        "total_tokens": 575,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 463,
+        "prompt_ms": 811.301,
+        "prompt_per_token_ms": 1.752269978401728,
+        "prompt_per_second": 570.6883142015108,
+        "predicted_n": 112,
+        "predicted_ms": 1103.162,
+        "predicted_per_token_ms": 9.938396396396397,
+        "predicted_per_second": 100.61985456351832
+      }
+    },
+    {
+      "id": "dsl-18",
+      "input": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+      "seconds": 1.527,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"blue\"},{\"id\":\"b\",\"shape\":\"cone\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"yellow\"}],\"rel\":[{\"a\":\"a\",\"b\":\"b\",\"type\":\"above\"}]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "blue"
+          },
+          {
+            "id": "b",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "yellow"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "above"
+          }
+        ]
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_tokens": 464,
+        "total_tokens": 536,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 464,
+        "prompt_ms": 829.578,
+        "prompt_per_token_ms": 1.7878836206896551,
+        "prompt_per_second": 559.3205220003424,
+        "predicted_n": 72,
+        "predicted_ms": 694.473,
+        "predicted_per_token_ms": 9.781309859154929,
+        "predicted_per_second": 102.23579606406585
+      }
+    },
+    {
+      "id": "dsl-19",
+      "input": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+      "seconds": 1.912,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 467,
+        "total_tokens": 575,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 467,
+        "prompt_ms": 839.226,
+        "prompt_per_token_ms": 1.7970578158458244,
+        "prompt_per_second": 556.4651238164689,
+        "predicted_n": 108,
+        "predicted_ms": 1068.798,
+        "predicted_per_token_ms": 9.988766355140188,
+        "predicted_per_second": 100.11246278529713
+      }
+    },
+    {
+      "id": "dsl-20",
+      "input": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+      "seconds": 1.965,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"black\"},{\"id\":\"b\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"red\"},{\"id\":\"c\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"yellow\"},{\"id\":\"d\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"x\",\"color\":\"green\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "black"
+          },
+          {
+            "id": "b",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "red"
+          },
+          {
+            "id": "c",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "yellow"
+          },
+          {
+            "id": "d",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "green"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 468,
+        "total_tokens": 580,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 468,
+        "prompt_ms": 846.004,
+        "prompt_per_token_ms": 1.8077008547008548,
+        "prompt_per_second": 553.1888738114714,
+        "predicted_n": 112,
+        "predicted_ms": 1115.641,
+        "predicted_per_token_ms": 10.05081981981982,
+        "predicted_per_second": 99.49437139725053
+      }
+    },
+    {
+      "id": "dsl-21",
+      "input": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+      "seconds": 0.945,
+      "raw": "{\"act\":\"unsupported\",\"parts\":[],\"rel\":[]}",
+      "parsed": {
+        "act": "unsupported",
+        "parts": [],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 12,
+        "prompt_tokens": 466,
+        "total_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 466,
+        "prompt_ms": 833.343,
+        "prompt_per_token_ms": 1.7882896995708153,
+        "prompt_per_second": 559.193513355245,
+        "predicted_n": 12,
+        "predicted_ms": 107.079,
+        "predicted_per_token_ms": 9.734454545454545,
+        "predicted_per_second": 102.72789249059106
+      }
+    },
+    {
+      "id": "dsl-22",
+      "input": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+      "seconds": 1.915,
+      "raw": "{\"act\":\"make\",\"parts\":[{\"id\":\"a\",\"shape\":\"box\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"b\",\"shape\":\"cone\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"c\",\"shape\":\"torus\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"},{\"id\":\"d\",\"shape\":\"cylinder\",\"n\":1,\"size\":\"normal\",\"stretch\":\"none\",\"color\":\"white\"}],\"rel\":[]}",
+      "parsed": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 472,
+        "total_tokens": 582,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 472,
+        "prompt_ms": 814.791,
+        "prompt_per_token_ms": 1.7262521186440678,
+        "prompt_per_second": 579.2896583295593,
+        "predicted_n": 110,
+        "predicted_ms": 1096.931,
+        "predicted_per_token_ms": 10.063587155963303,
+        "predicted_per_second": 99.3681462188597
+      }
+    },
+    {
+      "id": "dsl-23",
+      "input": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+      "seconds": 0.897,
+      "raw": "{\"act\":\"keep\",\"parts\":[],\"rel\":[]}",
+      "parsed": {
+        "act": "keep",
+        "parts": [],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 12,
+        "prompt_tokens": 461,
+        "total_tokens": 473,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 461,
+        "prompt_ms": 789.207,
+        "prompt_per_token_ms": 1.711945770065076,
+        "prompt_per_second": 584.1306526678045,
+        "predicted_n": 12,
+        "predicted_ms": 103.92,
+        "predicted_per_token_ms": 9.447272727272727,
+        "predicted_per_second": 105.85065434949962
+      }
+    },
+    {
+      "id": "dsl-24",
+      "input": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+      "seconds": 0.909,
+      "raw": "{\"act\":\"keep\",\"parts\":[],\"rel\":[]}",
+      "parsed": {
+        "act": "keep",
+        "parts": [],
+        "rel": []
+      },
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 12,
+        "prompt_tokens": 466,
+        "total_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 466,
+        "prompt_ms": 800.99,
+        "prompt_per_token_ms": 1.718862660944206,
+        "prompt_per_second": 581.7800471916004,
+        "predicted_n": 12,
+        "predicted_ms": 104.1,
+        "predicted_per_token_ms": 9.463636363636363,
+        "predicted_per_second": 105.66762728146014
+      }
+    }
+  ],
+  "startup_seconds": 0.821,
+  "peak_server_rss_bytes_sampled": 1452589056,
+  "rss_note": "server only, 250ms samples; excludes OS/browser, may miss brief peaks",
+  "server_exit_code": 0
+}

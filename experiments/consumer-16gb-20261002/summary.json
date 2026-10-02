@@ -1,0 +1,4055 @@
+{
+  "version": 1,
+  "fixture_sha256": "0108e344e60b165ab8772ba01a2b4d4a551fd3cc137060b8cdacc72306984c9a",
+  "source_note": "Per-model source files contain raw/parsed outputs and timing metadata. heldout.json contains expected graphs and forbidden conditions. Resolve case references by ID; this summary intentionally does not duplicate those graphs or outputs.",
+  "scoring_note": "Required finite-DSL meaning under ID renaming; not rendered geometry or Japanese-general accuracy. Schema, action, counts, attributes, relations are separate metrics. Extra nodes fail. Requested relations are a subset, with contradictions and explicit forbidden relations rejected.",
+  "partition_note": "Identical unrelated copies may split/merge count groups. Related count groups retain exact node ID scope; equivalent repartitions of related groups are not automatically scored as correct.",
+  "cold_start_note": "Per-case seconds exclude the separately reported startup; server RSS excludes browser/OS and may miss short peaks.",
+  "models": [
+    {
+      "label": "qwen08-cpu",
+      "source": "qwen08-cpu.json",
+      "hardware": "Apple M5, 32GB shared RAM; not a 16GB Intel/AMD laptop",
+      "backend": "cpu",
+      "complete": true,
+      "metrics": {
+        "contract": {
+          "correct": 24,
+          "total": 24
+        },
+        "action": {
+          "correct": 22,
+          "total": 24
+        },
+        "subjects_counts": {
+          "correct": 3,
+          "total": 20
+        },
+        "attributes_counts": {
+          "correct": 1,
+          "total": 20
+        },
+        "relations": {
+          "correct": 1,
+          "total": 15
+        },
+        "semantic_exact": {
+          "correct": 3,
+          "total": 24
+        }
+      },
+      "by_tag": {
+        "attribute": {
+          "correct": 0,
+          "total": 10
+        },
+        "color": {
+          "correct": 0,
+          "total": 2
+        },
+        "composition": {
+          "correct": 0,
+          "total": 15
+        },
+        "count": {
+          "correct": 0,
+          "total": 7
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "negation": {
+          "correct": 1,
+          "total": 5
+        },
+        "node-budget": {
+          "correct": 0,
+          "total": 1
+        },
+        "non-shape": {
+          "correct": 1,
+          "total": 1
+        },
+        "paraphrase": {
+          "correct": 0,
+          "total": 6
+        },
+        "part-attribute": {
+          "correct": 0,
+          "total": 2
+        },
+        "quotation": {
+          "correct": 1,
+          "total": 1
+        },
+        "relation": {
+          "correct": 0,
+          "total": 15
+        },
+        "subject": {
+          "correct": 0,
+          "total": 3
+        },
+        "unknown-subject": {
+          "correct": 1,
+          "total": 1
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "by_action": {
+        "make": {
+          "correct": 0,
+          "total": 20
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "latency_seconds": {
+        "n": 24,
+        "median": 1.6965,
+        "p95_nearest_rank": 1.965,
+        "minimum": 0.85,
+        "maximum": 1.996
+      },
+      "startup_seconds": 0.821,
+      "peak_server_rss_bytes_sampled": 1452589056,
+      "rss_note": "server only, 250ms samples; excludes OS/browser, may miss brief peaks",
+      "contract_flag_disagreements": [],
+      "failures": [
+        {
+          "id": "dsl-01",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-02",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-03",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-04",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-05",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-06",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-07",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-08",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-09",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-10",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-11",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-12",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-13",
+          "errors": [
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-14",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-15",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-16",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-17",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-18",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-19",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-20",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-22",
+          "errors": [
+            "action_mismatch"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "dsl-01",
+          "input": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.367
+        },
+        {
+          "id": "dsl-02",
+          "input": "横幅がとても広い、角張ったかたまりを置く。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.75
+        },
+        {
+          "id": "dsl-03",
+          "input": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 0.85
+        },
+        {
+          "id": "dsl-04",
+          "input": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.485
+        },
+        {
+          "id": "dsl-05",
+          "input": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.34
+        },
+        {
+          "id": "dsl-06",
+          "input": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.923
+        },
+        {
+          "id": "dsl-07",
+          "input": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.996
+        },
+        {
+          "id": "dsl-08",
+          "input": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+          "tags": [
+            "count",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.881
+        },
+        {
+          "id": "dsl-09",
+          "input": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.859
+        },
+        {
+          "id": "dsl-10",
+          "input": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+          "tags": [
+            "count",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.861
+        },
+        {
+          "id": "dsl-11",
+          "input": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.888
+        },
+        {
+          "id": "dsl-12",
+          "input": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.49
+        },
+        {
+          "id": "dsl-13",
+          "input": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": true,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.575
+        },
+        {
+          "id": "dsl-14",
+          "input": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.87
+        },
+        {
+          "id": "dsl-15",
+          "input": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.439
+        },
+        {
+          "id": "dsl-16",
+          "input": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+          "tags": [
+            "count",
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.643
+        },
+        {
+          "id": "dsl-17",
+          "input": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+          "tags": [
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.918
+        },
+        {
+          "id": "dsl-18",
+          "input": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+          "tags": [
+            "color",
+            "paraphrase",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.527
+        },
+        {
+          "id": "dsl-19",
+          "input": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+          "tags": [
+            "count",
+            "negation",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.912
+        },
+        {
+          "id": "dsl-20",
+          "input": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+          "tags": [
+            "count",
+            "color",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.965
+        },
+        {
+          "id": "dsl-21",
+          "input": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+          "tags": [
+            "unsupported",
+            "unknown-subject"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.945
+        },
+        {
+          "id": "dsl-22",
+          "input": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+          "tags": [
+            "unsupported",
+            "node-budget"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch"
+          ],
+          "seconds": 1.915
+        },
+        {
+          "id": "dsl-23",
+          "input": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+          "tags": [
+            "keep",
+            "non-shape"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.897
+        },
+        {
+          "id": "dsl-24",
+          "input": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+          "tags": [
+            "keep",
+            "quotation",
+            "negation"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.909
+        }
+      ]
+    },
+    {
+      "label": "qwen2-cpu",
+      "source": "qwen2-cpu.json",
+      "hardware": "Apple M5, 32GB shared RAM; not a 16GB Intel/AMD laptop",
+      "backend": "cpu",
+      "complete": true,
+      "metrics": {
+        "contract": {
+          "correct": 23,
+          "total": 24
+        },
+        "action": {
+          "correct": 20,
+          "total": 24
+        },
+        "subjects_counts": {
+          "correct": 12,
+          "total": 20
+        },
+        "attributes_counts": {
+          "correct": 5,
+          "total": 20
+        },
+        "relations": {
+          "correct": 0,
+          "total": 15
+        },
+        "semantic_exact": {
+          "correct": 4,
+          "total": 24
+        }
+      },
+      "by_tag": {
+        "attribute": {
+          "correct": 0,
+          "total": 10
+        },
+        "color": {
+          "correct": 0,
+          "total": 2
+        },
+        "composition": {
+          "correct": 0,
+          "total": 15
+        },
+        "count": {
+          "correct": 0,
+          "total": 7
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "negation": {
+          "correct": 1,
+          "total": 5
+        },
+        "node-budget": {
+          "correct": 0,
+          "total": 1
+        },
+        "non-shape": {
+          "correct": 1,
+          "total": 1
+        },
+        "paraphrase": {
+          "correct": 1,
+          "total": 6
+        },
+        "part-attribute": {
+          "correct": 0,
+          "total": 2
+        },
+        "quotation": {
+          "correct": 1,
+          "total": 1
+        },
+        "relation": {
+          "correct": 0,
+          "total": 15
+        },
+        "subject": {
+          "correct": 1,
+          "total": 3
+        },
+        "unknown-subject": {
+          "correct": 1,
+          "total": 1
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "by_action": {
+        "make": {
+          "correct": 1,
+          "total": 20
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "latency_seconds": {
+        "n": 24,
+        "median": 3.626,
+        "p95_nearest_rank": 4.54,
+        "minimum": 2.514,
+        "maximum": 4.556
+      },
+      "startup_seconds": 1.227,
+      "peak_server_rss_bytes_sampled": 2883993600,
+      "rss_note": "server only, 250ms samples; excludes OS/browser, may miss brief peaks",
+      "contract_flag_disagreements": [],
+      "failures": [
+        {
+          "id": "dsl-02",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-03",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-04",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-05",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-06",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-07",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-08",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-09",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-10",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-11",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-12",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-13",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-14",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-15",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-16",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-17",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-18",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-19",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-20",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-22",
+          "errors": [
+            "action_mismatch"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "dsl-01",
+          "input": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 3.069
+        },
+        {
+          "id": "dsl-02",
+          "input": "横幅がとても広い、角張ったかたまりを置く。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 3.671
+        },
+        {
+          "id": "dsl-03",
+          "input": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 2.683
+        },
+        {
+          "id": "dsl-04",
+          "input": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 3.117
+        },
+        {
+          "id": "dsl-05",
+          "input": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 3.634
+        },
+        {
+          "id": "dsl-06",
+          "input": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.16
+        },
+        {
+          "id": "dsl-07",
+          "input": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.603
+        },
+        {
+          "id": "dsl-08",
+          "input": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+          "tags": [
+            "count",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.624
+        },
+        {
+          "id": "dsl-09",
+          "input": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.609
+        },
+        {
+          "id": "dsl-10",
+          "input": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+          "tags": [
+            "count",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.186
+        },
+        {
+          "id": "dsl-11",
+          "input": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.618
+        },
+        {
+          "id": "dsl-12",
+          "input": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.59
+        },
+        {
+          "id": "dsl-13",
+          "input": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.793
+        },
+        {
+          "id": "dsl-14",
+          "input": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.569
+        },
+        {
+          "id": "dsl-15",
+          "input": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.816
+        },
+        {
+          "id": "dsl-16",
+          "input": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+          "tags": [
+            "count",
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.165
+        },
+        {
+          "id": "dsl-17",
+          "input": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+          "tags": [
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.54
+        },
+        {
+          "id": "dsl-18",
+          "input": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+          "tags": [
+            "color",
+            "paraphrase",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.744
+        },
+        {
+          "id": "dsl-19",
+          "input": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+          "tags": [
+            "count",
+            "negation",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.904
+        },
+        {
+          "id": "dsl-20",
+          "input": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+          "tags": [
+            "count",
+            "color",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.04
+        },
+        {
+          "id": "dsl-21",
+          "input": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+          "tags": [
+            "unsupported",
+            "unknown-subject"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.538
+        },
+        {
+          "id": "dsl-22",
+          "input": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+          "tags": [
+            "unsupported",
+            "node-budget"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch"
+          ],
+          "seconds": 4.556
+        },
+        {
+          "id": "dsl-23",
+          "input": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+          "tags": [
+            "keep",
+            "non-shape"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.521
+        },
+        {
+          "id": "dsl-24",
+          "input": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+          "tags": [
+            "keep",
+            "quotation",
+            "negation"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.514
+        }
+      ]
+    },
+    {
+      "label": "qwen08-cpu-no-grammar",
+      "source": "qwen08-cpu-no-grammar.json",
+      "hardware": "Apple M5, 32GB shared RAM; not a 16GB Intel/AMD laptop",
+      "backend": "cpu",
+      "complete": true,
+      "metrics": {
+        "contract": {
+          "correct": 7,
+          "total": 24
+        },
+        "action": {
+          "correct": 19,
+          "total": 24
+        },
+        "subjects_counts": {
+          "correct": 1,
+          "total": 20
+        },
+        "attributes_counts": {
+          "correct": 1,
+          "total": 20
+        },
+        "relations": {
+          "correct": 0,
+          "total": 15
+        },
+        "semantic_exact": {
+          "correct": 3,
+          "total": 24
+        }
+      },
+      "by_tag": {
+        "attribute": {
+          "correct": 0,
+          "total": 10
+        },
+        "color": {
+          "correct": 0,
+          "total": 2
+        },
+        "composition": {
+          "correct": 0,
+          "total": 15
+        },
+        "count": {
+          "correct": 0,
+          "total": 7
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "negation": {
+          "correct": 1,
+          "total": 5
+        },
+        "node-budget": {
+          "correct": 0,
+          "total": 1
+        },
+        "non-shape": {
+          "correct": 1,
+          "total": 1
+        },
+        "paraphrase": {
+          "correct": 0,
+          "total": 6
+        },
+        "part-attribute": {
+          "correct": 0,
+          "total": 2
+        },
+        "quotation": {
+          "correct": 1,
+          "total": 1
+        },
+        "relation": {
+          "correct": 0,
+          "total": 15
+        },
+        "subject": {
+          "correct": 0,
+          "total": 3
+        },
+        "unknown-subject": {
+          "correct": 1,
+          "total": 1
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "by_action": {
+        "make": {
+          "correct": 0,
+          "total": 20
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "latency_seconds": {
+        "n": 24,
+        "median": 1.4965000000000002,
+        "p95_nearest_rank": 5.267,
+        "minimum": 0.675,
+        "maximum": 5.334
+      },
+      "startup_seconds": 0.823,
+      "peak_server_rss_bytes_sampled": 1676722176,
+      "rss_note": "server only, 250ms samples; excludes OS/browser, may miss brief peaks",
+      "contract_flag_disagreements": [],
+      "failures": [
+        {
+          "id": "dsl-01",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-02",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-03",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-04",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-05",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-06",
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-07",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-08",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-09",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-10",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-11",
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-12",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-13",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-14",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-15",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-16",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-17",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-18",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-19",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-20",
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-22",
+          "errors": [
+            "contract_invalid",
+            "action_mismatch"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "dsl-01",
+          "input": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.191
+        },
+        {
+          "id": "dsl-02",
+          "input": "横幅がとても広い、角張ったかたまりを置く。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.566
+        },
+        {
+          "id": "dsl-03",
+          "input": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 0.675
+        },
+        {
+          "id": "dsl-04",
+          "input": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.223
+        },
+        {
+          "id": "dsl-05",
+          "input": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.159
+        },
+        {
+          "id": "dsl-06",
+          "input": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 5.334
+        },
+        {
+          "id": "dsl-07",
+          "input": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.638
+        },
+        {
+          "id": "dsl-08",
+          "input": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+          "tags": [
+            "count",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.627
+        },
+        {
+          "id": "dsl-09",
+          "input": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.638
+        },
+        {
+          "id": "dsl-10",
+          "input": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+          "tags": [
+            "count",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.659
+        },
+        {
+          "id": "dsl-11",
+          "input": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 5.243
+        },
+        {
+          "id": "dsl-12",
+          "input": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.258
+        },
+        {
+          "id": "dsl-13",
+          "input": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.229
+        },
+        {
+          "id": "dsl-14",
+          "input": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.633
+        },
+        {
+          "id": "dsl-15",
+          "input": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.208
+        },
+        {
+          "id": "dsl-16",
+          "input": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+          "tags": [
+            "count",
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.427
+        },
+        {
+          "id": "dsl-17",
+          "input": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+          "tags": [
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.667
+        },
+        {
+          "id": "dsl-18",
+          "input": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+          "tags": [
+            "color",
+            "paraphrase",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.269
+        },
+        {
+          "id": "dsl-19",
+          "input": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+          "tags": [
+            "count",
+            "negation",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.646
+        },
+        {
+          "id": "dsl-20",
+          "input": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+          "tags": [
+            "count",
+            "color",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 5.267
+        },
+        {
+          "id": "dsl-21",
+          "input": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+          "tags": [
+            "unsupported",
+            "unknown-subject"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.764
+        },
+        {
+          "id": "dsl-22",
+          "input": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+          "tags": [
+            "unsupported",
+            "node-budget"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": false,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "action_mismatch"
+          ],
+          "seconds": 1.683
+        },
+        {
+          "id": "dsl-23",
+          "input": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+          "tags": [
+            "keep",
+            "non-shape"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.751
+        },
+        {
+          "id": "dsl-24",
+          "input": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+          "tags": [
+            "keep",
+            "quotation",
+            "negation"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.747
+        }
+      ]
+    },
+    {
+      "label": "qwen2-cpu-no-grammar",
+      "source": "qwen2-cpu-no-grammar.json",
+      "hardware": "Apple M5, 32GB shared RAM; not a 16GB Intel/AMD laptop",
+      "backend": "cpu",
+      "complete": true,
+      "metrics": {
+        "contract": {
+          "correct": 19,
+          "total": 24
+        },
+        "action": {
+          "correct": 19,
+          "total": 24
+        },
+        "subjects_counts": {
+          "correct": 9,
+          "total": 20
+        },
+        "attributes_counts": {
+          "correct": 3,
+          "total": 20
+        },
+        "relations": {
+          "correct": 0,
+          "total": 15
+        },
+        "semantic_exact": {
+          "correct": 4,
+          "total": 24
+        }
+      },
+      "by_tag": {
+        "attribute": {
+          "correct": 0,
+          "total": 10
+        },
+        "color": {
+          "correct": 0,
+          "total": 2
+        },
+        "composition": {
+          "correct": 0,
+          "total": 15
+        },
+        "count": {
+          "correct": 0,
+          "total": 7
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "negation": {
+          "correct": 1,
+          "total": 5
+        },
+        "node-budget": {
+          "correct": 0,
+          "total": 1
+        },
+        "non-shape": {
+          "correct": 1,
+          "total": 1
+        },
+        "paraphrase": {
+          "correct": 1,
+          "total": 6
+        },
+        "part-attribute": {
+          "correct": 0,
+          "total": 2
+        },
+        "quotation": {
+          "correct": 1,
+          "total": 1
+        },
+        "relation": {
+          "correct": 0,
+          "total": 15
+        },
+        "subject": {
+          "correct": 1,
+          "total": 3
+        },
+        "unknown-subject": {
+          "correct": 1,
+          "total": 1
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "by_action": {
+        "make": {
+          "correct": 1,
+          "total": 20
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "latency_seconds": {
+        "n": 24,
+        "median": 3.1315,
+        "p95_nearest_rank": 4.417,
+        "minimum": 1.891,
+        "maximum": 4.731
+      },
+      "startup_seconds": 1.224,
+      "peak_server_rss_bytes_sampled": 2836201472,
+      "rss_note": "server only, 250ms samples; excludes OS/browser, may miss brief peaks",
+      "contract_flag_disagreements": [],
+      "failures": [
+        {
+          "id": "dsl-02",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-03",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-04",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-05",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-06",
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-07",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-08",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-09",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-10",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-11",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-12",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-13",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-14",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-15",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-16",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-17",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-18",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-19",
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-20",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-22",
+          "errors": [
+            "contract_invalid",
+            "action_mismatch"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "dsl-01",
+          "input": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.388
+        },
+        {
+          "id": "dsl-02",
+          "input": "横幅がとても広い、角張ったかたまりを置く。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 2.775
+        },
+        {
+          "id": "dsl-03",
+          "input": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.891
+        },
+        {
+          "id": "dsl-04",
+          "input": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 2.371
+        },
+        {
+          "id": "dsl-05",
+          "input": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 2.856
+        },
+        {
+          "id": "dsl-06",
+          "input": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.731
+        },
+        {
+          "id": "dsl-07",
+          "input": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.918
+        },
+        {
+          "id": "dsl-08",
+          "input": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+          "tags": [
+            "count",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.039
+        },
+        {
+          "id": "dsl-09",
+          "input": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.043
+        },
+        {
+          "id": "dsl-10",
+          "input": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+          "tags": [
+            "count",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.406
+        },
+        {
+          "id": "dsl-11",
+          "input": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.998
+        },
+        {
+          "id": "dsl-12",
+          "input": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.331
+        },
+        {
+          "id": "dsl-13",
+          "input": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.284
+        },
+        {
+          "id": "dsl-14",
+          "input": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.346
+        },
+        {
+          "id": "dsl-15",
+          "input": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.466
+        },
+        {
+          "id": "dsl-16",
+          "input": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+          "tags": [
+            "count",
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.516
+        },
+        {
+          "id": "dsl-17",
+          "input": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+          "tags": [
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 4.018
+        },
+        {
+          "id": "dsl-18",
+          "input": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+          "tags": [
+            "color",
+            "paraphrase",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.265
+        },
+        {
+          "id": "dsl-19",
+          "input": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+          "tags": [
+            "count",
+            "negation",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.325
+        },
+        {
+          "id": "dsl-20",
+          "input": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+          "tags": [
+            "count",
+            "color",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 3.483
+        },
+        {
+          "id": "dsl-21",
+          "input": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+          "tags": [
+            "unsupported",
+            "unknown-subject"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.11
+        },
+        {
+          "id": "dsl-22",
+          "input": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+          "tags": [
+            "unsupported",
+            "node-budget"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": false,
+          "runner_contract_ok": false,
+          "action_ok": false,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "contract_invalid",
+            "action_mismatch"
+          ],
+          "seconds": 4.417
+        },
+        {
+          "id": "dsl-23",
+          "input": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+          "tags": [
+            "keep",
+            "non-shape"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.108
+        },
+        {
+          "id": "dsl-24",
+          "input": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+          "tags": [
+            "keep",
+            "quotation",
+            "negation"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 2.103
+        }
+      ]
+    },
+    {
+      "label": "qwen2-metal",
+      "source": "qwen2-metal.json",
+      "hardware": "Apple M5, 32GB shared RAM; not a 16GB Intel/AMD laptop",
+      "backend": "metal",
+      "complete": true,
+      "metrics": {
+        "contract": {
+          "correct": 24,
+          "total": 24
+        },
+        "action": {
+          "correct": 20,
+          "total": 24
+        },
+        "subjects_counts": {
+          "correct": 13,
+          "total": 20
+        },
+        "attributes_counts": {
+          "correct": 5,
+          "total": 20
+        },
+        "relations": {
+          "correct": 0,
+          "total": 15
+        },
+        "semantic_exact": {
+          "correct": 4,
+          "total": 24
+        }
+      },
+      "by_tag": {
+        "attribute": {
+          "correct": 0,
+          "total": 10
+        },
+        "color": {
+          "correct": 0,
+          "total": 2
+        },
+        "composition": {
+          "correct": 0,
+          "total": 15
+        },
+        "count": {
+          "correct": 0,
+          "total": 7
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "negation": {
+          "correct": 1,
+          "total": 5
+        },
+        "node-budget": {
+          "correct": 0,
+          "total": 1
+        },
+        "non-shape": {
+          "correct": 1,
+          "total": 1
+        },
+        "paraphrase": {
+          "correct": 1,
+          "total": 6
+        },
+        "part-attribute": {
+          "correct": 0,
+          "total": 2
+        },
+        "quotation": {
+          "correct": 1,
+          "total": 1
+        },
+        "relation": {
+          "correct": 0,
+          "total": 15
+        },
+        "subject": {
+          "correct": 1,
+          "total": 3
+        },
+        "unknown-subject": {
+          "correct": 1,
+          "total": 1
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "by_action": {
+        "make": {
+          "correct": 1,
+          "total": 20
+        },
+        "keep": {
+          "correct": 2,
+          "total": 2
+        },
+        "unsupported": {
+          "correct": 1,
+          "total": 2
+        }
+      },
+      "latency_seconds": {
+        "n": 24,
+        "median": 1.076,
+        "p95_nearest_rank": 1.636,
+        "minimum": 0.392,
+        "maximum": 2.213
+      },
+      "startup_seconds": 1.02,
+      "peak_server_rss_bytes_sampled": 1596358656,
+      "rss_note": "server only, 250ms samples; excludes OS/browser, may miss brief peaks",
+      "contract_flag_disagreements": [],
+      "failures": [
+        {
+          "id": "dsl-02",
+          "errors": [
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-03",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-04",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-05",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ]
+        },
+        {
+          "id": "dsl-06",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-07",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-08",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-09",
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-10",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-11",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-12",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-13",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-14",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-15",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-16",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-17",
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-18",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-19",
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-20",
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ]
+        },
+        {
+          "id": "dsl-22",
+          "errors": [
+            "action_mismatch"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "dsl-01",
+          "input": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 1.168
+        },
+        {
+          "id": "dsl-02",
+          "input": "横幅がとても広い、角張ったかたまりを置く。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 0.694
+        },
+        {
+          "id": "dsl-03",
+          "input": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 0.393
+        },
+        {
+          "id": "dsl-04",
+          "input": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+          "tags": [
+            "paraphrase",
+            "subject"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 0.689
+        },
+        {
+          "id": "dsl-05",
+          "input": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+          "tags": [
+            "paraphrase",
+            "attribute"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch"
+          ],
+          "seconds": 1.014
+        },
+        {
+          "id": "dsl-06",
+          "input": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.304
+        },
+        {
+          "id": "dsl-07",
+          "input": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+          "tags": [
+            "count",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 2.213
+        },
+        {
+          "id": "dsl-08",
+          "input": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+          "tags": [
+            "count",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 0.393
+        },
+        {
+          "id": "dsl-09",
+          "input": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch",
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 0.395
+        },
+        {
+          "id": "dsl-10",
+          "input": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+          "tags": [
+            "count",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.314
+        },
+        {
+          "id": "dsl-11",
+          "input": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 0.989
+        },
+        {
+          "id": "dsl-12",
+          "input": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.001
+        },
+        {
+          "id": "dsl-13",
+          "input": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+          "tags": [
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.162
+        },
+        {
+          "id": "dsl-14",
+          "input": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.001
+        },
+        {
+          "id": "dsl-15",
+          "input": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+          "tags": [
+            "attribute",
+            "relation",
+            "negation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.186
+        },
+        {
+          "id": "dsl-16",
+          "input": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+          "tags": [
+            "count",
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.288
+        },
+        {
+          "id": "dsl-17",
+          "input": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+          "tags": [
+            "part-attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": false,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "missing_or_extra_subject_or_count",
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.328
+        },
+        {
+          "id": "dsl-18",
+          "input": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+          "tags": [
+            "color",
+            "paraphrase",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.138
+        },
+        {
+          "id": "dsl-19",
+          "input": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+          "tags": [
+            "count",
+            "negation",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": true,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.152
+        },
+        {
+          "id": "dsl-20",
+          "input": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+          "tags": [
+            "count",
+            "color",
+            "attribute",
+            "relation",
+            "composition"
+          ],
+          "expected_action": "make",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": true,
+          "attributes_counts_ok": false,
+          "relations_ok": false,
+          "semantic_exact": false,
+          "errors": [
+            "part_attributes_or_counts_mismatch",
+            "required_relation_missing_or_contradictory"
+          ],
+          "seconds": 1.316
+        },
+        {
+          "id": "dsl-21",
+          "input": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+          "tags": [
+            "unsupported",
+            "unknown-subject"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.393
+        },
+        {
+          "id": "dsl-22",
+          "input": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+          "tags": [
+            "unsupported",
+            "node-budget"
+          ],
+          "expected_action": "unsupported",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": false,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": false,
+          "errors": [
+            "action_mismatch"
+          ],
+          "seconds": 1.636
+        },
+        {
+          "id": "dsl-23",
+          "input": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+          "tags": [
+            "keep",
+            "non-shape"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.392
+        },
+        {
+          "id": "dsl-24",
+          "input": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+          "tags": [
+            "keep",
+            "quotation",
+            "negation"
+          ],
+          "expected_action": "keep",
+          "contract_ok": true,
+          "runner_contract_ok": true,
+          "action_ok": true,
+          "subjects_counts_ok": null,
+          "attributes_counts_ok": null,
+          "relations_ok": null,
+          "semantic_exact": true,
+          "errors": [],
+          "seconds": 0.394
+        }
+      ]
+    }
+  ]
+}

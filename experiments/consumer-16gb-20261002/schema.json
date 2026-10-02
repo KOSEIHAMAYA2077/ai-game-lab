@@ -1,0 +1,138 @@
+{
+  "type": "object",
+  "properties": {
+    "act": {
+      "type": "string",
+      "enum": [
+        "make",
+        "keep",
+        "unsupported"
+      ]
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ]
+          },
+          "shape": {
+            "type": "string",
+            "enum": [
+              "sphere",
+              "box",
+              "cylinder",
+              "cone",
+              "torus"
+            ]
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "size": {
+            "type": "string",
+            "enum": [
+              "normal",
+              "small",
+              "large"
+            ]
+          },
+          "stretch": {
+            "type": "string",
+            "enum": [
+              "none",
+              "x",
+              "y",
+              "z"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "enum": [
+              "white",
+              "red",
+              "yellow",
+              "blue",
+              "green",
+              "purple",
+              "black"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "shape",
+          "n",
+          "size",
+          "stretch",
+          "color"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 4
+    },
+    "rel": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "string",
+            "enum": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ]
+          },
+          "b": {
+            "type": "string",
+            "enum": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "above",
+              "below",
+              "left",
+              "right",
+              "inside",
+              "around",
+              "concentric",
+              "chain",
+              "cross",
+              "touch"
+            ]
+          }
+        },
+        "required": [
+          "a",
+          "b",
+          "type"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 4
+    }
+  },
+  "required": [
+    "act",
+    "parts",
+    "rel"
+  ],
+  "additionalProperties": false
+}

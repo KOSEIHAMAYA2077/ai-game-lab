@@ -1,5 +1,11 @@
 # 変更履歴
 
+## 16GBノートPC向けの研究とCPU比較 — 2026-10-02
+
+- aDSL、Bioinspired123D、GuideCAD、Text2CSG、3D生成器の圧縮研究を一次資料から調査。共有RAM、VRAM、学習・推論規模、配布条件を区別。
+- 新しい人工24文・凍結promptで0.8B/2BをCPU比較。形式と意味を別に集計し、意味精度不足で作品への採用を見送り。grammarなし・Mac Metalも同じ文で診断。
+- 次の方向を意味encoder＋属性head／専用構造decoder＋配置処理とする。既存の根性版・骨格版・公開ゲームの中身は保持。
+
 ## Glyph Matterへの改名 — 2026-10-02
 
 - リポジトリを `glyph-matter` に改名し、READMEと公開Web版への導線を更新。

@@ -1,0 +1,991 @@
+{
+  "version": 1,
+  "project": "Glyph Matter",
+  "createdDateJst": "2026-10-02",
+  "purpose": "Fresh synthetic Japanese semantic cases for a finite part-and-relation DSL. Created after the parent froze the inference contract, before this agent observed any inference output.",
+  "provenance": {
+    "source": "All text and expectations authored for this evaluation by a read-only research subagent; no user writing, attached documents, or personal data reused.",
+    "trainingUse": "Do not use these cases to train, select thresholds, craft per-case dictionaries, or revise prompts before the first locked inference run.",
+    "blindness": "Artificial cases known to their author and available to the implementation team; not a human participant study, not externally blinded, and pretraining exposure is unknown.",
+    "priorDatasetCheck": "Checked exact and Unicode-normalized duplicate text against available earlier local JSON evaluation fixtures; summary reported separately to the parent."
+  },
+  "contract": {
+    "actions": [
+      "make",
+      "keep",
+      "unsupported"
+    ],
+    "partIds": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "maxParts": 4,
+    "shape": [
+      "sphere",
+      "box",
+      "cylinder",
+      "cone",
+      "torus"
+    ],
+    "nRange": [
+      1,
+      8
+    ],
+    "size": [
+      "normal",
+      "small",
+      "large"
+    ],
+    "stretch": [
+      "none",
+      "x",
+      "y",
+      "z"
+    ],
+    "color": [
+      "white",
+      "red",
+      "yellow",
+      "blue",
+      "green",
+      "purple",
+      "black"
+    ],
+    "relation": [
+      "above",
+      "below",
+      "left",
+      "right",
+      "inside",
+      "around",
+      "concentric",
+      "chain",
+      "cross",
+      "touch"
+    ],
+    "maxRelations": 4,
+    "defaultAttributes": {
+      "n": 1,
+      "size": "normal",
+      "stretch": "none",
+      "color": "white"
+    }
+  },
+  "scoring": {
+    "schema": "Measure schema validity separately from semantic correctness.",
+    "matching": "Expected objects show one canonical valid graph, not byte-for-byte JSON targets. Node IDs and array ordering are arbitrary; compare under a one-to-one node renaming while preserving per-node properties and counts.",
+    "relations": "above(a,b) is equivalent to below(b,a); left(a,b) to right(b,a). touch, concentric, cross, and chain are symmetric. inside and around are directed. Duplicate equivalent relations do not increase success.",
+    "scope": "Require requested subjects, count, explicit per-part properties and explicit relations; reject contradicted or extra geometry under forbidden constraints. Defaults provide expected examples but do not substitute for stated semantic criteria.",
+    "geometry": "Semantic graph success does not establish a valid or attractive 3D construction. Independently inspect contact, crossing, chain topology, surface coverage, silhouette, and text preservation.",
+    "policy": "unsupported is appropriate for an explicit request outside the frozen grammar or its budgets. keep means no geometric request; both preserve already accepted text. This keep policy is a fixed evaluation choice, not a claim that all creative uses require it.",
+    "statistics": "Report make/keep/unsupported, negation, counts, attributes and relations separately. Do not turn these 24 artificial examples into Japanese-general accuracy."
+  },
+  "cases": [
+    {
+      "id": "dsl-01",
+      "text": "氷の粒を思わせる、縦も横も同じ大きさの丸いかたまりを一つ。",
+      "tags": [
+        "paraphrase",
+        "subject"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "形名sphereを直接書かず、三方向に同程度の丸い立体を指定する。氷という比喩から新しい素材・色は要求しない。"
+    },
+    {
+      "id": "dsl-02",
+      "text": "横幅がとても広い、角張ったかたまりを置く。",
+      "tags": [
+        "paraphrase",
+        "attribute"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "対象は箱系で、横方向の伸長を求める。横長の球や輪への置換は不一致。"
+    },
+    {
+      "id": "dsl-03",
+      "text": "中央にぽっかり穴がある、ドーナツ状のかたまり。",
+      "tags": [
+        "paraphrase",
+        "subject"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "食べ物の名称をそのまま生成する試験ではなく、穴のある輪として十分表現できる。"
+    },
+    {
+      "id": "dsl-04",
+      "text": "上へ行くほどすぼまり、てっぺんが一点になるかたまりを一つ置く。",
+      "tags": [
+        "paraphrase",
+        "subject"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "円錐という単語なしで先細りの基本立体を選ぶ。"
+    },
+    {
+      "id": "dsl-05",
+      "text": "上下の太さが変わらない、縦長の丸棒を一本立てる。",
+      "tags": [
+        "paraphrase",
+        "attribute"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "y",
+            "color": "white"
+          }
+        ],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "棒は円柱で縦方向に伸長。空洞や曲げは指定しない。"
+    },
+    {
+      "id": "dsl-06",
+      "text": "丸い玉を三つ、雪だるまみたいに上下へ接して積み上げる。三つとも同じ大きさ。",
+      "tags": [
+        "count",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "above"
+          },
+          {
+            "a": "b",
+            "b": "a",
+            "type": "touch"
+          },
+          {
+            "a": "c",
+            "b": "b",
+            "type": "above"
+          },
+          {
+            "a": "c",
+            "b": "b",
+            "type": "touch"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "sphereを一つ選ぶだけでは足りない。同じ大きさの三球の上下と接触を保持する。"
+    },
+    {
+      "id": "dsl-07",
+      "text": "柱を一本立て、その周りを六つの丸い玉が等間隔で囲む。",
+      "tags": [
+        "count",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 6,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "around"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "二種類を維持し、六球が柱の周囲にある。単なるsphere count6への置換では足りない。"
+    },
+    {
+      "id": "dsl-08",
+      "text": "四つの輪を、隣どうしが互いに通るようにつなぐ。端と端はつながない。",
+      "tags": [
+        "count",
+        "relation",
+        "negation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "d",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "chain"
+          },
+          {
+            "a": "b",
+            "b": "c",
+            "type": "chain"
+          },
+          {
+            "a": "c",
+            "b": "d",
+            "type": "chain"
+          }
+        ]
+      },
+      "forbidden": {
+        "additionalChainEdges": true
+      },
+      "rationale": "開いた四環の鎖。閉環や四つの独立した輪ではない。"
+    },
+    {
+      "id": "dsl-09",
+      "text": "大小二つの穴あきの輪を、同じ平面の上で中心をそろえる。",
+      "tags": [
+        "attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "large",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "concentric"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "同心の大小二輪。二つのshape単語を拾うだけでは、サイズ差と同心を表現できない。"
+    },
+    {
+      "id": "dsl-10",
+      "text": "三枚の横長の角張ったかたまりを接して積む。下から大、中、小の順にする。",
+      "tags": [
+        "count",
+        "attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "large",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "box",
+            "n": 1,
+            "size": "small",
+            "stretch": "x",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "above"
+          },
+          {
+            "a": "b",
+            "b": "a",
+            "type": "touch"
+          },
+          {
+            "a": "c",
+            "b": "b",
+            "type": "above"
+          },
+          {
+            "a": "c",
+            "b": "b",
+            "type": "touch"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "三箱の大きさと上下順を両方保持する。上下を逆にした三段は不一致。"
+    },
+    {
+      "id": "dsl-11",
+      "text": "二本の細長い四角い棒を、真ん中で十字に交差させる。",
+      "tags": [
+        "attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "y",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "cross"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "十字という形IDを選ぶだけでなく、横長・縦長の二箱を交差させる。"
+    },
+    {
+      "id": "dsl-12",
+      "text": "小さな丸柱の天辺に、普通の大きさの球を接するように載せる。",
+      "tags": [
+        "attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "above"
+          },
+          {
+            "a": "b",
+            "b": "a",
+            "type": "touch"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "球が円柱の上で接触する。floating aboveだけでは接触指定を失う。"
+    },
+    {
+      "id": "dsl-13",
+      "text": "大きなドーナツの穴の中央へ、小さな丸玉を入れる。",
+      "tags": [
+        "attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "large",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "inside"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "insideはtorusの場合、固体内部ではなく穴の領域として評価する。球と輪の双方を残す。"
+    },
+    {
+      "id": "dsl-14",
+      "text": "小さな輪の下に、横長の四角いかたまりを置く。二つの間は空けて。",
+      "tags": [
+        "attribute",
+        "relation",
+        "negation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "x",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "below"
+          }
+        ]
+      },
+      "forbidden": {
+        "relations": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "touch"
+          }
+        ]
+      },
+      "rationale": "二物体の上下。触れない指定はtouchの追加を禁止する意味契約で確認する。"
+    },
+    {
+      "id": "dsl-15",
+      "text": "丸柱の右にだけ小さな輪を取り付ける。左には何も付けない。",
+      "tags": [
+        "attribute",
+        "relation",
+        "negation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "right"
+          },
+          {
+            "a": "b",
+            "b": "a",
+            "type": "touch"
+          }
+        ]
+      },
+      "forbidden": {
+        "extraParts": true
+      },
+      "rationale": "左右を区別して右側だけに接触する輪を一つ。両側の取っ手を足すのは不一致。"
+    },
+    {
+      "id": "dsl-16",
+      "text": "三つの玉を横に並べ、真ん中だけを縦に引き伸ばす。",
+      "tags": [
+        "count",
+        "part-attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "y",
+            "color": "white"
+          },
+          {
+            "id": "c",
+            "shape": "sphere",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "a",
+            "b": "b",
+            "type": "left"
+          },
+          {
+            "a": "c",
+            "b": "b",
+            "type": "right"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "中央の球だけに伸長を適用する。三球全体のstretch変更は不一致。"
+    },
+    {
+      "id": "dsl-17",
+      "text": "穴のある輪を左右に一つずつ置き、右の輪だけ大きくする。",
+      "tags": [
+        "part-attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "torus",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "torus",
+            "n": 1,
+            "size": "large",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "right"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "全体ではなく右側だけのsize変更。左輪を大きくした結果は不一致。"
+    },
+    {
+      "id": "dsl-18",
+      "text": "青い箱の上に、黄色い尖った山のようなかたまりを一つ置く。",
+      "tags": [
+        "color",
+        "paraphrase",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "blue"
+          },
+          {
+            "id": "b",
+            "shape": "cone",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "yellow"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "above"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "箱と円錐の色の対応を保つ。色を全体へ一律に適用しない。"
+    },
+    {
+      "id": "dsl-19",
+      "text": "丸い玉ではなく、箱の形のかたまりを二つ上下に接して積んで。",
+      "tags": [
+        "count",
+        "negation",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          },
+          {
+            "id": "b",
+            "shape": "box",
+            "n": 1,
+            "size": "normal",
+            "stretch": "none",
+            "color": "white"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "above"
+          },
+          {
+            "a": "b",
+            "b": "a",
+            "type": "touch"
+          }
+        ]
+      },
+      "forbidden": {
+        "shapes": [
+          "sphere"
+        ]
+      },
+      "rationale": "否定されたsphereを除き、二箱の積み重ねを表現する。"
+    },
+    {
+      "id": "dsl-20",
+      "text": "黒い縦長の丸棒を一本立て、その左右に赤い小玉を一つずつ置く。",
+      "tags": [
+        "count",
+        "color",
+        "attribute",
+        "relation",
+        "composition"
+      ],
+      "expected": {
+        "act": "make",
+        "parts": [
+          {
+            "id": "a",
+            "shape": "cylinder",
+            "n": 1,
+            "size": "normal",
+            "stretch": "y",
+            "color": "black"
+          },
+          {
+            "id": "b",
+            "shape": "sphere",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "red"
+          },
+          {
+            "id": "c",
+            "shape": "sphere",
+            "n": 1,
+            "size": "small",
+            "stretch": "none",
+            "color": "red"
+          }
+        ],
+        "rel": [
+          {
+            "a": "b",
+            "b": "a",
+            "type": "left"
+          },
+          {
+            "a": "c",
+            "b": "a",
+            "type": "right"
+          }
+        ]
+      },
+      "forbidden": {},
+      "rationale": "柱の黒と球の赤、左右一つずつの配置を保持する。"
+    },
+    {
+      "id": "dsl-21",
+      "text": "ひじやひざに歯車のある人型ロボットを、その細かい姿のまま作る。",
+      "tags": [
+        "unsupported",
+        "unknown-subject"
+      ],
+      "expected": {
+        "act": "unsupported",
+        "parts": [],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "5基本形の選択と有限stretchだけでは、要求する関節・歯車・詳細な人型を忠実に表現できない。適当なboxへ押し込まずunsupportedを返す。"
+    },
+    {
+      "id": "dsl-22",
+      "text": "丸玉、四角い箱、円柱、円錐、穴のある輪を、それぞれ一つずつ同時に置く。",
+      "tags": [
+        "unsupported",
+        "node-budget"
+      ],
+      "expected": {
+        "act": "unsupported",
+        "parts": [],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "異なる5種類をそれぞれ1個要求しており最大4ノードを超える。4種類へ黙って省略しない。"
+    },
+    {
+      "id": "dsl-23",
+      "text": "形の変更はいらない。今日は作業の段取りを文章にしておく。",
+      "tags": [
+        "keep",
+        "non-shape"
+      ],
+      "expected": {
+        "act": "keep",
+        "parts": [],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "文章を追加するだけで、現行の形や属性を保持する。"
+    },
+    {
+      "id": "dsl-24",
+      "text": "「角張った箱」は作品の題名です。画面に箱を作る指示ではありません。",
+      "tags": [
+        "keep",
+        "quotation",
+        "negation"
+      ],
+      "expected": {
+        "act": "keep",
+        "parts": [],
+        "rel": []
+      },
+      "forbidden": {},
+      "rationale": "引用した作品名と形の要求を区別する。単語boxの検出だけで形を変更しない。"
+    }
+  ]
+}
