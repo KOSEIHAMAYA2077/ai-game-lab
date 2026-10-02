@@ -7,6 +7,9 @@
 - 凍結した約122KBの分類器をHELPの実験選択肢へ遅延読込。保留では現在の形を保持して文字だけ追加。標準60形とMiniLMを変更しない。
 - 23実WebGL UI回帰、174単体・型が成功。保存key v3とnative bundle ID v3を分ける。実native資源・一般PC・人間の意味評価は未確認。
 - 別のMetal 3形実験と、新しい120合成文の評価・クエリ重複監査を保存。
+- 公開前の別担当reviewで種類上限の原文消失を再現・修正。追加0はdraft/形/停止状態を保持し、色previewを送信と一致させる。独立23項目・60形の選択と容量reloadを確認。
+- native R2のEnter/日本語paste/表面/再起動・実pause/hide/復帰を短いsmokeで確認。配布ZIPを新展開先でstrict署名・全40web file hash照合。
+- 固定日本語StaticEmbeddingの1024/128/f16/mmapと新140合成文を比較。否定・引用・英語の弱さが残り既定採用見送り。取得量・独立processRSS・全窓RAMを分けて記録。
 
 ## 0.14.1-widget.2 — 2026-10-03
 

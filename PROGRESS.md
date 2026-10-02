@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-03 02:54 — 表面を保つ小窓v3と追加の使用像
+
+根性60形を保ち、段階atlasと約122KB分類器の任意選択を別版 `0.14.2-widget.3`へ統合。公開前の独立レビューで種類上限のdraft消失と色previewを修正し、別productionの23項目・60形選択・tiny遅延読込・旧保存key不変が成功。[独立review](experiments/widget-v3-release-review-v1/REPORT.md)。174単体・型・build、32k/1536容量復元、新native ZIPのhash/strict署名が成功。nativeの日本語paste・メビウス・再起動・pause/hide/復帰を短い実操作で確認。[配布確認](experiments/widget-v3-release-verification-v1/README.md)。全体CPU/RAM削減と実IMEは未検証。
+
+追加の使用像は日常の創作・仕事・プログラミングの横で入力から育つサイドインテリア。分析期限を10:37 JSTへ延長した。全入力を命令とせず、活動量・確定文字・文書編集・意味反映を分けて設計中。OS全体の入力取得や権限変更は開始していない。[継続状況](experiments/widget-companion-v1/STATUS.md)。
+
+静的日本語検索のfresh140は、128guard正しい受理23/80、保留誤反応3/40で既定採用を見送る。[評価と限界](experiments/static-japanese-fresh-evaluation-v1/REPORT.md)。Metal2時間offscreen試験は04:35終了予定で進行中、窓全体の資源比較とはしない。
+
 ## 2026-10-03 02:10 — 描画Aを公開、次の小窓比較へ
 
 `0.14.1-widget.2`をPR #25・独立tag・`widget-v2/`・macOS arm64 Releaseへ保存。Pages成功、旧5版と新v2の6 manifest SHAを確認。表示容量に配列とGPU更新を合わせ、原文全文と旧色を保持。隔離した公開commitの174単体・型・production build、容量末尾とreload復元が成功。[表現・保存・実機原票](experiments/widget-render-budget-v2/README.md)。実macOSの基準→A→基準再測定でCPU改善は再確認できず、RAMは低い観測値に留まった。

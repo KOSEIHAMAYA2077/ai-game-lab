@@ -1,0 +1,17 @@
+{
+  "candidate": "pre-release R1, prior to kind-capacity review fix",
+  "checks": {
+    "source_commit_matches": true,
+    "version": true,
+    "bundle_id": true,
+    "native_sources": true,
+    "web_files": true
+  },
+  "web_file_count": 40,
+  "sourceCommit": "8acd4f3ae9ef378d2615be4b8169a45c8851ce05",
+  "nativeSourceSha256": {
+    "Sources/LoopbackServer.swift": "fd2016d8f75228d57cabd6db59b8e0e94c5c884a5e025f83b7c3e1ec518b568a",
+    "Sources/main.swift": "129b51c2e226fa18e5bf00a3812572b6cfc8e92578c96915e1af5d2cd69b2f7a"
+  },
+  "note": "Build and strict ad-hoc signature only. No new native UI/resource test while Mac locked. Pre-sign executable hash is intentionally not the signed executable hash."
+}
