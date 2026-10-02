@@ -1,0 +1,390 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "eventId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "sessionId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "monotonicMS": {
+      "type": "number",
+      "minimum": 0
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "adapter": {
+          "enum": [
+            "manual",
+            "obsidian-cm6",
+            "vscode-document",
+            "mac-activity",
+            "windows-activity",
+            "mac-ax",
+            "windows-uia"
+          ]
+        },
+        "synthetic": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "adapter",
+        "synthetic"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "applicationHandle": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "documentHandle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "focusEpoch": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "policyEpoch": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "secureState": {
+          "enum": [
+            "known-safe",
+            "secure",
+            "unknown"
+          ]
+        },
+        "allowed": {
+          "type": "boolean"
+        },
+        "primaryAdapter": {
+          "enum": [
+            "manual",
+            "obsidian-cm6",
+            "vscode-document",
+            "mac-activity",
+            "windows-activity",
+            "mac-ax",
+            "windows-uia",
+            null
+          ]
+        }
+      },
+      "required": [
+        "applicationHandle",
+        "documentHandle",
+        "focusEpoch",
+        "policyEpoch",
+        "secureState",
+        "allowed",
+        "primaryAdapter"
+      ],
+      "additionalProperties": false
+    },
+    "kind": {
+      "enum": [
+        "activity",
+        "text-delta",
+        "text-commit",
+        "composition-cancel",
+        "policy-change",
+        "gap"
+      ]
+    },
+    "payload": {}
+  },
+  "required": [
+    "schemaVersion",
+    "eventId",
+    "sessionId",
+    "sequence",
+    "monotonicMS",
+    "source",
+    "context",
+    "kind",
+    "payload"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ambient input normalized event design v1",
+  "description": "Design only. Synthetic fixtures do not establish real IME or OS coverage. Runtime gates and cross-field invariants are separate. No key code/clipboard/file path fields.",
+  "oneOf": [
+    {
+      "properties": {
+        "kind": {
+          "const": "activity"
+        },
+        "payload": {
+          "$ref": "#/$defs/activity"
+        }
+      }
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "text-delta"
+        },
+        "payload": {
+          "$ref": "#/$defs/textDelta"
+        }
+      }
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "text-commit"
+        },
+        "payload": {
+          "$ref": "#/$defs/textCommit"
+        }
+      }
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "composition-cancel"
+        },
+        "payload": {
+          "$ref": "#/$defs/compositionCancel"
+        }
+      }
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "policy-change"
+        },
+        "payload": {
+          "$ref": "#/$defs/policyChange"
+        }
+      }
+    },
+    {
+      "properties": {
+        "kind": {
+          "const": "gap"
+        },
+        "payload": {
+          "$ref": "#/$defs/gap"
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "activity": {
+      "type": "object",
+      "properties": {
+        "units": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "intervalMS": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 60000
+        },
+        "containsText": {
+          "const": false
+        }
+      },
+      "required": [
+        "units",
+        "intervalMS",
+        "containsText"
+      ],
+      "additionalProperties": false
+    },
+    "textDelta": {
+      "type": "object",
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "baseVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "certainty": {
+          "enum": [
+            "composing",
+            "finalized",
+            "document-only"
+          ]
+        },
+        "reason": {
+          "enum": [
+            "input",
+            "undo",
+            "redo",
+            "programmatic",
+            "unknown"
+          ]
+        },
+        "changes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "properties": {
+              "offsetUTF16": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "lengthUTF16": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 8192
+              }
+            },
+            "required": [
+              "offsetUTF16",
+              "lengthUTF16",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "truncated": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "operationId",
+        "baseVersion",
+        "version",
+        "certainty",
+        "reason",
+        "changes",
+        "truncated"
+      ],
+      "additionalProperties": false
+    },
+    "textCommit": {
+      "type": "object",
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "documentVersion": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "certainty": {
+          "enum": [
+            "finalized",
+            "explicit-send"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 8192
+        },
+        "truncated": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "operationId",
+        "documentVersion",
+        "certainty",
+        "text",
+        "truncated"
+      ],
+      "additionalProperties": false
+    },
+    "compositionCancel": {
+      "type": "object",
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        }
+      },
+      "required": [
+        "operationId"
+      ],
+      "additionalProperties": false
+    },
+    "policyChange": {
+      "type": "object",
+      "properties": {
+        "allowText": {
+          "type": "boolean"
+        },
+        "allowActivity": {
+          "type": "boolean"
+        },
+        "secureState": {
+          "enum": [
+            "known-safe",
+            "secure",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "allowText",
+        "allowActivity",
+        "secureState"
+      ],
+      "additionalProperties": false
+    },
+    "gap": {
+      "type": "object",
+      "properties": {
+        "reason": {
+          "enum": [
+            "overflow",
+            "sequence-gap",
+            "version-gap",
+            "source-lost",
+            "unsupported",
+            "stale-context"
+          ]
+        },
+        "droppedEvents": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "reason",
+        "droppedEvents"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,1603 @@
+{
+  "synthetic_only": true,
+  "platform_api_calls": 0,
+  "real_user_documents": 0,
+  "executed_semantic_reducer": false,
+  "schema_version": 1,
+  "receiver_premises": {
+    "currentFocusEpoch": 1,
+    "currentPolicyEpoch": 1,
+    "unknownVersionFixtureKnownVersion": 1,
+    "mode": "ephemeral-text-not-saved",
+    "countReasons": [
+      "input"
+    ],
+    "do_not_count_reasons": [
+      "undo",
+      "redo",
+      "programmatic",
+      "unknown"
+    ],
+    "defaultKnownDocumentVersion": 0
+  },
+  "cases": [
+    {
+      "name": "raw_activity_not_characters",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "mac-activity",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": null
+          },
+          "kind": "activity",
+          "payload": {
+            "units": 7,
+            "intervalMS": 500,
+            "containsText": false
+          }
+        }
+      ],
+      "expected": {
+        "activityUnits": 7,
+        "permanentAddedText": "",
+        "semanticInferenceCalls": 0
+      },
+      "why": "7打鍵は7文字ではない。文字を推測しない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "ime_candidate_replaces_instead_of_appends",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "jp-one",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "composing",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "りん"
+              }
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-2",
+          "sessionId": "demo-session",
+          "sequence": 2,
+          "monotonicMS": 200,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "jp-one",
+            "baseVersion": 1,
+            "version": 2,
+            "certainty": "composing",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 2,
+                "text": "輪"
+              }
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-3",
+          "sessionId": "demo-session",
+          "sequence": 3,
+          "monotonicMS": 300,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "jp-one",
+            "documentVersion": 2,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "輪",
+        "permanentAddedGlyphs": 1,
+        "remainingCandidate": ""
+      },
+      "why": "りん→輪の途中候補は蓄積しない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "duplicate_transport_packet",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "jp-final",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "球体",
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "jp-final",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "球体",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "球体",
+        "acceptedEventCount": 1
+      },
+      "why": "同eventId・同payloadの再送は一回。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "same_word_two_real_operations",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "ring-A",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-2",
+          "sessionId": "demo-session",
+          "sequence": 2,
+          "monotonicMS": 200,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "ring-B",
+            "documentVersion": 2,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "輪輪",
+        "permanentAddedGlyphs": 2
+      },
+      "why": "文字列だけの重複除去は禁止。",
+      "initialState": {
+        "knownDocumentVersion": 1,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "composition_cancel",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "cancel-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "composing",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "あ"
+              }
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-2",
+          "sessionId": "demo-session",
+          "sequence": 2,
+          "monotonicMS": 200,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "composition-cancel",
+          "payload": {
+            "operationId": "cancel-A"
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "remainingCandidate": ""
+      },
+      "why": "変換cancelから新glyphを作らない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "enter_key_only",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "windows-activity",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": null
+          },
+          "kind": "activity",
+          "payload": {
+            "units": 1,
+            "intervalMS": 100,
+            "containsText": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "activityUnits": 1
+      },
+      "why": "Enterのキー信号から文字確定や改行を判断しない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "paste_document_delta_without_clipboard",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "paste-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "finalized",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "流れる球体"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "流れる球体",
+        "clipboardReads": 0
+      },
+      "why": "貼付はdocument changeで受ける。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "undo_is_not_new_creation",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "undo-A",
+            "baseVersion": 4,
+            "version": 5,
+            "certainty": "finalized",
+            "reason": "undo",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 1,
+                "text": ""
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "candidateUpdateCount": 1
+      },
+      "why": "Undoは文書状態へ反映するが新規入力を加算しない。",
+      "initialState": {
+        "knownDocumentVersion": 4,
+        "baseDocument": "輪",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1,
+        "historicalGlyphs": "輪"
+      }
+    },
+    {
+      "name": "redo_does_not_duplicate_history",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "redo-A",
+            "baseVersion": 5,
+            "version": 6,
+            "certainty": "finalized",
+            "reason": "redo",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "輪"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "candidateUpdateCount": 1
+      },
+      "why": "Redoで同じ身体履歴を二度追加しない。",
+      "initialState": {
+        "knownDocumentVersion": 5,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1,
+        "historicalGlyphs": "輪"
+      }
+    },
+    {
+      "name": "vscode_exact_delta_unknown_ime",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "vscode-document",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "vscode-document"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "vs-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "document-only",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "りん"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "candidateText": "りん",
+        "certainty": "document-only"
+      },
+      "why": "差分が正確でも公開APIにないIME確定を発明しない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "vscode_explicit_send",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "manual",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "manual"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "manual-A",
+            "documentVersion": 1,
+            "certainty": "explicit-send",
+            "text": "輪環",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "輪環",
+        "permanentAddedGlyphs": 2
+      },
+      "why": "本人の明示送信は確定経路にできる。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "secure_field_gate",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "secure",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "blocked-A",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "TEST-ONLY",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "acceptedTextEvents": 0,
+        "diskTextWrites": 0
+      },
+      "why": "人工の侵入テスト。実adapterはsecure本文を読む前に止める。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "unknown_security_gate",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "unknown",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "unknown-A",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "TEST-ONLY",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "acceptedTextEvents": 0
+      },
+      "why": "状態不明で本文処理へ進まない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "excluded_application",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": false,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "excluded-A",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "TEST-ONLY",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "acceptedTextEvents": 0
+      },
+      "why": "本文処理より先に除外を判定する。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "secondary_provider_does_not_double_feed",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "primary-A",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-2",
+          "sessionId": "demo-session",
+          "sequence": 2,
+          "monotonicMS": 200,
+          "source": {
+            "adapter": "windows-uia",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "secondary-A",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "輪",
+        "secondaryDropCount": 1
+      },
+      "why": "同contextのprimaryをplugin一つにする。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "stale_focus_after_switch",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 0,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "focus-old",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "TEST-ONLY",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "acceptedTextEvents": 0
+      },
+      "why": "receiver側のcurrentFocusEpoch=1という前提で古いfocusを捨てる。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "revision_gap",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "gap-A",
+            "baseVersion": 9,
+            "version": 10,
+            "certainty": "finalized",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "TEST-ONLY"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "acceptedTextEvents": 0,
+        "gap": "version-gap"
+      },
+      "why": "receiverのknownDocumentVersion=1。新版が飛んだら正確さを主張しない。",
+      "initialState": {
+        "knownDocumentVersion": 1,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "composition_finalization_and_doc_delta_one_operation",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "same-op",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "finalized",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "輪"
+              }
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-2",
+          "sessionId": "demo-session",
+          "sequence": 2,
+          "monotonicMS": 200,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "same-op",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "輪",
+        "permanentAddedGlyphs": 1
+      },
+      "why": "同一operation/revisionのdeltaとcommitが相関する時だけ一度へ統合。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "noncorrelated_provider_commit_is_candidate_only",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "windows-uia",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "windows-uia"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "unmapped-provider",
+            "documentVersion": null,
+            "certainty": "finalized",
+            "text": "輪",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "candidateText": "輪",
+        "needsCorrelation": true
+      },
+      "why": "provider確定文字列だけで同一性を確定できないadapterは候補まで。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "emoji_utf16_vs_glyph",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "emoji-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "finalized",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 1,
+                "lengthUTF16": 1,
+                "text": "😀"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "insertedUTF16Units": 2,
+        "insertedGraphemes": 1
+      },
+      "why": "座標はUTF-16、字形はgrapheme。一文字への変換でoffsetを壊さない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "ab",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "combining_sequence_preserved",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "accent-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "finalized",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "é"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "insertedUTF16Units": 2,
+        "insertedGraphemes": 1,
+        "retainedCodePoints": [
+          "U+0065",
+          "U+0301"
+        ]
+      },
+      "why": "NFCによる座標変更をdocumentへ戻さない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "bounded_queue_gap",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "gap",
+          "payload": {
+            "reason": "overflow",
+            "droppedEvents": 100
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "exactDeltaMode": "suspended",
+        "automaticFullDocumentRead": false
+      },
+      "why": "overflowを全文再取得や黙った欠落で隠さない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "policy_epoch_clears_candidate",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "pending-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "composing",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "球"
+              }
+            ],
+            "truncated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "eventId": "event-2",
+          "sessionId": "demo-session",
+          "sequence": 2,
+          "monotonicMS": 200,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 2,
+            "secureState": "secure",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "policy-change",
+          "payload": {
+            "allowText": false,
+            "allowActivity": false,
+            "secureState": "secure"
+          }
+        }
+      ],
+      "expected": {
+        "remainingCandidate": "",
+        "permanentAddedText": ""
+      },
+      "why": "停止・secure化でvolatileな候補を破棄。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "programmatic_formatter_not_human_typing",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "formatter-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "finalized",
+            "reason": "programmatic",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 0,
+                "text": "立方体"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "candidateText": "立方体"
+      },
+      "why": "document差分の発生は人間の新規打鍵を保証しない。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "reject_text_in_activity_schema",
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "mac-activity",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": null
+          },
+          "kind": "activity",
+          "payload": {
+            "units": 7,
+            "intervalMS": 500,
+            "containsText": false,
+            "text": "SHOULD-NOT-BE-PERMITTED"
+          }
+        }
+      ],
+      "expected": {
+        "schemaRejection": true
+      },
+      "why": "additionalProperties=falseでactivity内の文字fieldを拒否。",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      }
+    },
+    {
+      "name": "provider_empty_finalization_is_cancel",
+      "initialState": {
+        "knownDocumentVersion": 1,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      },
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-empty",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "cancel-empty",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "permanentAddedText": "",
+        "permanentAddedGlyphs": 0
+      },
+      "why": "UIA providerの空確定はcancel/deletedにも発生する。"
+    },
+    {
+      "name": "family_emoji_is_one_glyph",
+      "initialState": {
+        "knownDocumentVersion": 1,
+        "baseDocument": "",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      },
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-family",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-commit",
+          "payload": {
+            "operationId": "family-one",
+            "documentVersion": 1,
+            "certainty": "finalized",
+            "text": "👩‍👩‍👧‍👦",
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "insertedUTF16Units": 11,
+        "insertedGraphemes": 1,
+        "permanentAddedText": "👩‍👩‍👧‍👦"
+      },
+      "why": "ZWJ列を単純なcode point個数で字形へ分割しない。"
+    },
+    {
+      "name": "multicursor_base_coordinates",
+      "initialState": {
+        "knownDocumentVersion": 0,
+        "baseDocument": "abcd",
+        "currentFocusEpoch": 1,
+        "currentPolicyEpoch": 1
+      },
+      "events": [
+        {
+          "schemaVersion": 1,
+          "eventId": "event-1",
+          "sessionId": "demo-session",
+          "sequence": 1,
+          "monotonicMS": 100,
+          "source": {
+            "adapter": "obsidian-cm6",
+            "synthetic": true
+          },
+          "context": {
+            "applicationHandle": "app-demo-A",
+            "documentHandle": "doc-demo-A",
+            "focusEpoch": 1,
+            "policyEpoch": 1,
+            "secureState": "known-safe",
+            "allowed": true,
+            "primaryAdapter": "obsidian-cm6"
+          },
+          "kind": "text-delta",
+          "payload": {
+            "operationId": "multi-A",
+            "baseVersion": 0,
+            "version": 1,
+            "certainty": "finalized",
+            "reason": "input",
+            "changes": [
+              {
+                "offsetUTF16": 0,
+                "lengthUTF16": 1,
+                "text": "X"
+              },
+              {
+                "offsetUTF16": 3,
+                "lengthUTF16": 1,
+                "text": "Y"
+              }
+            ],
+            "truncated": false
+          }
+        }
+      ],
+      "expected": {
+        "finalDocument": "XbcY",
+        "permanentAddedText": "XY",
+        "permanentAddedGlyphs": 2
+      },
+      "why": "一transactionのrangeは同baseに対する非重複範囲。末尾から適用。"
+    }
+  ],
+  "cross_field_invariants": [
+    "version > baseVersion and base matches receiver known revision",
+    "range offsets and lengths valid in base document UTF16 coordinates",
+    "ranges do not overlap in the same transaction",
+    "text byte and grapheme limits checked separately from schema maxLength",
+    "source primary, context, policy and secure gate checked before text",
+    "once per operation and correlated revision, not once per text string",
+    "eventId retries must keep identical payload",
+    "finalized provider payload without operation correlation remains candidate"
+  ]
+}
