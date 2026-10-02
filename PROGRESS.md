@@ -1,5 +1,13 @@
 # 進捗
 
+## 2026-10-03 04:42 — 材料・形判断の機構とWindows移植案
+
+[17人工stream×3方針](experiments/ambient-material-scheduler-v1/REPORT.md)で論理材料の原文/ID/色を一致させ、形変更166/21/13、字句検索195/26/26を比較。rootも51runを再実行した。保存offからID/色順を除くR2回帰51run/5,313assertionと漏れ3mutantもroot再実行。3群の単純語彙・語burst偏重で、意味精度・快適性・実OS/表示性能とはしない。
+
+[接続マップ](experiments/ambient-integration-map-v1/README.md)は参照時点の設計snapshot、14 JSON例は未実行。別の統合grammarでno-ACK待機slotへの別producer割込み不具合を検出し、新receiver版で修正・独立レビュー中。既存widgetやOS連動には接続していない。
+
+[Windows runtimeの公式資料30項目](research/widget-cross-platform-runtime-v1/README.md)から、Win32+D3D11+DirectWriteを最初の移植候補に選び、SDL3 GPU/native wgpu/WebView2/Tauri/Qtの違いと実機評価を整理した。Windows実装・実測0、性能優位を主張しない。Metal v2のコード/実窓比較はPR #29でmainへ保存・タスク添付済み。
+
 ## 2026-10-03 04:31 — Metalの端切れと実小窓比較
 
 別[Metal v2](desktop/glyph-metal-lab-v2/README.md)でメビウスの画面端・縦長のfar切断を修正。旧v1/R1を保持し、独立CPU射影35,763条件はR2切断0、CPU1,213・GPU581確認、実日本語paste・旧白＋追加青・pause/Hide/終了を確認。[画面と原票](experiments/widget-metal-framing-v2/README.md)。初期@は近いまま、遠くすることで文字が小さくなる交換も残す。

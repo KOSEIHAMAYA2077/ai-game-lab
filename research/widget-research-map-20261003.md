@@ -10,6 +10,10 @@
 
 ## 1. 現在使っている技術と、その担当範囲
 
+追加の[材料／形判断の人工比較](../experiments/ambient-material-scheduler-v1/REPORT.md)では、17 stream×3方針で材料の原文・ID・色を保持しながら、更新数と字句検索数を分けた。R2 storageは本文・ID列・色順をexportしない別回帰。実OS/IME・実小窓・一般的な意味理解・快適性は未検証で、2秒batch／5秒保持を製品値には採用しない。[接続マップ](../experiments/ambient-integration-map-v1/README.md)の14 JSON提案例も実行済み件数へ数えない。
+
+Windows16GB laptop CPU/iGPUでの常駐条件は未検証。文字plane instanceとGPUの面計算を保つ最初の移植候補はWin32＋D3D11＋DirectWriteで、SDL3 GPUとnative wgpuを代案に整理した。WebView2/Tauriのbrowser系process、Qt nativeとWebEngineを分け、同じ3形・描画数・DPI・pause/hide・帰属CPU/RAMで将来比較する。[移植対応・公式資料30項目・実機評価案](widget-cross-platform-runtime-v1/README.md)。OS本文取得と意味モデル採用はこの描画案と別で、Windows実装・測定は0件。
+
 | 層 | 現在の実装 | できること・限界 |
 | --- | --- | --- |
 | 自由入力と文字の蓄積 | TypeScript、文字ID・入力順・入力色・入力batch、端末内保存 | 日本語・英字・記号を身体の材料として残す。文字そのものを形の推定結果へ置き換えない。保存量には上限がある |
