@@ -1,0 +1,3435 @@
+{
+  "version": 1,
+  "evaluation_status": "regression after independent 90-case fixture seen",
+  "fixture_sha256": "77c46e0a966af39b7501c5d1d00530056fa53413c39a9e5dccf23956d9fb893b",
+  "scorer_sha256": "54b26ac35fa1d562e45efdb08caa30ea8ba104571beb14568cf09ab5609408e5",
+  "weights_and_thresholds_changed": false,
+  "overlap_exclusions_unchanged": [
+    "h26",
+    "s06",
+    "s07",
+    "s10",
+    "s11",
+    "s16",
+    "s21",
+    "s26",
+    "s27",
+    "s30"
+  ],
+  "guard_v2": {
+    "scored_summary": {
+      "cases": 90,
+      "definite_cases": 86,
+      "definite_semantic_successes": 72,
+      "definite_semantic_accuracy": 0.8372093023255814,
+      "render_cases": 60,
+      "render_successes": 46,
+      "positive_abstentions": 14,
+      "hold_cases": 26,
+      "hold_successes": 26,
+      "false_activations": 0,
+      "invalid_programs": 0,
+      "ambiguous_cases": 4,
+      "ambiguous_acceptable": 4,
+      "reversed_role_pairs": 15,
+      "both_directions_correct_pairs": 7,
+      "both_directions_correct_pair_ids": [
+        [
+          "r01",
+          "r02"
+        ],
+        [
+          "r03",
+          "r04"
+        ],
+        [
+          "r05",
+          "r06"
+        ],
+        [
+          "r07",
+          "r08"
+        ],
+        [
+          "r11",
+          "r12"
+        ],
+        [
+          "r13",
+          "r14"
+        ],
+        [
+          "r27",
+          "r28"
+        ]
+      ],
+      "geometry_measured_outputs": 46,
+      "geometry_safe_outputs": 46,
+      "pipeline_measured_definite_cases": 86,
+      "pipeline_successes_on_measured_definite_cases": 72,
+      "failure_taxonomy": {
+        "abstained_positive": 14
+      },
+      "geometry_failures": {},
+      "categories": {
+        "single_nominal": {
+          "count": 15,
+          "successes": 14,
+          "failures": {
+            "abstained_positive": 1
+          }
+        },
+        "single_attribute": {
+          "count": 15,
+          "successes": 14,
+          "failures": {
+            "abstained_positive": 1
+          }
+        },
+        "relation_simple": {
+          "count": 15,
+          "successes": 13,
+          "failures": {
+            "abstained_positive": 2
+          }
+        },
+        "relation_scope": {
+          "count": 15,
+          "successes": 5,
+          "failures": {
+            "abstained_positive": 10
+          }
+        },
+        "hold_ordinary": {
+          "count": 15,
+          "successes": 15,
+          "failures": {}
+        },
+        "hold_negation_ambiguity": {
+          "count": 15,
+          "successes": 15,
+          "failures": {}
+        }
+      },
+      "model_only_latency_ms": {
+        "count": 90,
+        "p50": 0.5592500000000022,
+        "p95": 2.453617000000009,
+        "max": 5.5844580000000015
+      }
+    },
+    "accepted_definite_outputs": 46,
+    "accepted_definite_output_successes": 46,
+    "accepted_definite_precision": 1.0,
+    "positive_program_coverage_count": 46,
+    "positive_program_coverage": 0.7666666666666667,
+    "positive_accepted_precision": 1.0,
+    "negation_cancellation_conflict_hold_successes": 11,
+    "negation_cancellation_conflict_hold_cases": 11,
+    "normalized_overlap_excluded": {
+      "definite_count": 76,
+      "definite_semantic_successes": 62,
+      "definite_accuracy": 0.8157894736842105,
+      "positive_count": 51,
+      "positive_semantic_successes": 37
+    },
+    "hold_reasons": {
+      "primitive-uncertain": 15,
+      "relation-uncertain": 12,
+      "geometry-unsupported": 4,
+      "explicit-negation-or-absence": 6,
+      "part-budget": 2,
+      "negation-held": 2,
+      "cancel-or-removal": 1,
+      "contradictory-local-attributes": 2
+    },
+    "false_activations": [],
+    "failures": [
+      {
+        "id": "s17",
+        "text": "a dagger",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "blade"
+                }
+              ]
+            }
+          ]
+        },
+        "prediction": {
+          "id": "s17",
+          "text": "a dagger",
+          "program": null,
+          "reason": "primitive-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.10004100000000449,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "unknown",
+              "score": 0.735045288289677
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "unknown",
+                "score": 0.735045288289677,
+                "coverage": 0.975
+              },
+              {
+                "label": "vase",
+                "score": 0.14881287578519656,
+                "coverage": 0.975
+              },
+              {
+                "label": "blade",
+                "score": 0.05189022888407943,
+                "coverage": 0.975
+              },
+              {
+                "label": "ring",
+                "score": 0.027260946647771307,
+                "coverage": 0.975
+              },
+              {
+                "label": "tube",
+                "score": 0.025315226261829086,
+                "coverage": 0.975
+              },
+              {
+                "label": "sphere",
+                "score": 0.009668068824612637,
+                "coverage": 0.975
+              },
+              {
+                "label": "box",
+                "score": 0.0020073653068340487,
+                "coverage": 0.975
+              }
+            ]
+          ],
+          "relationCandidates": [],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.0647080000000031,
+          "guardMs": 0.03533300000000139,
+          "elapsed_ms": 0.10241599999999806,
+          "error": null
+        },
+        "scored": {
+          "id": "s17",
+          "category": "single_nominal",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.10241599999999806
+        }
+      },
+      {
+        "id": "s19",
+        "text": "短く幅広い刀身",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "blade",
+                  "constraints": [
+                    {
+                      "left": "height",
+                      "operation": "lte",
+                      "value": 0.9
+                    },
+                    {
+                      "left": "width",
+                      "operation": "gte",
+                      "value": 1.1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "prediction": {
+          "id": "s19",
+          "text": "短く幅広い刀身",
+          "program": null,
+          "reason": "primitive-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.07549999999999812,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "blade",
+              "score": 0.38343923687367426
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "blade",
+                "score": 0.38343923687367426,
+                "coverage": 0.9714285714285714
+              },
+              {
+                "label": "vase",
+                "score": 0.2607536661206151,
+                "coverage": 0.9714285714285714
+              },
+              {
+                "label": "tube",
+                "score": 0.09324492636643206,
+                "coverage": 0.9714285714285714
+              },
+              {
+                "label": "box",
+                "score": 0.08022906284368697,
+                "coverage": 0.9714285714285714
+              },
+              {
+                "label": "unknown",
+                "score": 0.07098026062828172,
+                "coverage": 0.9714285714285714
+              },
+              {
+                "label": "ring",
+                "score": 0.057099904569973575,
+                "coverage": 0.9714285714285714
+              },
+              {
+                "label": "sphere",
+                "score": 0.05425294259733618,
+                "coverage": 0.9714285714285714
+              }
+            ]
+          ],
+          "relationCandidates": [],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.05174999999999841,
+          "guardMs": 0.023749999999999716,
+          "elapsed_ms": 0.07645800000000236,
+          "error": null
+        },
+        "scored": {
+          "id": "s19",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.07645800000000236
+        }
+      },
+      {
+        "id": "r09",
+        "text": "The rod is the base; attach a ring at its end.",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "tube"
+                },
+                {
+                  "primitive": "ring"
+                }
+              ],
+              "relation": "end"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r09",
+          "text": "The rod is the base; attach a ring at its end.",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.16345800000000565,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "tube",
+              "score": 0.9940254833905077
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "ring",
+              "score": 0.9910418038412093
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "none",
+              "score": 0.7387265796830506
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "tube",
+                "score": 0.9940254833905077,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 0.0019042048266647367,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0012973290650744,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 0.0009878040049415113,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.0008223276707990398,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 0.0005642257797654093,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 0.00039862526224723516,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "ring",
+                "score": 0.9910418038412093,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.008592748906588432,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0002021693476634074,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 9.415948282885606e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.71110584996153e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 2.7083237268551213e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.4924125941918066e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "none",
+              "score": 0.7387265796830506,
+              "coverage": 0.764367816091954
+            },
+            {
+              "label": "end",
+              "score": 0.23165383287897856,
+              "coverage": 0.764367816091954
+            },
+            {
+              "label": "through",
+              "score": 0.018173485249578306,
+              "coverage": 0.764367816091954
+            },
+            {
+              "label": "above",
+              "score": 0.01144610218839256,
+              "coverage": 0.764367816091954
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.12729199999999707,
+          "guardMs": 0.03616600000000858,
+          "elapsed_ms": 0.16470800000000452,
+          "error": null
+        },
+        "scored": {
+          "id": "r09",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.16470800000000452
+        }
+      },
+      {
+        "id": "r10",
+        "text": "The ring is the base; attach a rod at its end.",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "ring"
+                },
+                {
+                  "primitive": "tube"
+                }
+              ],
+              "relation": "end"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r10",
+          "text": "The ring is the base; attach a rod at its end.",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.10637499999999989,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "ring",
+              "score": 0.9910418038412093
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "tube",
+              "score": 0.9940254833905077
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "none",
+              "score": 0.7387265796830506
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "ring",
+                "score": 0.9910418038412093,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.008592748906588432,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0002021693476634074,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 9.415948282885606e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.71110584996153e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 2.7083237268551213e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.4924125941918066e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "tube",
+                "score": 0.9940254833905077,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 0.0019042048266647367,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0012973290650744,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 0.0009878040049415113,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.0008223276707990398,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 0.0005642257797654093,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 0.00039862526224723516,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "none",
+              "score": 0.7387265796830506,
+              "coverage": 0.764367816091954
+            },
+            {
+              "label": "end",
+              "score": 0.23165383287897856,
+              "coverage": 0.764367816091954
+            },
+            {
+              "label": "through",
+              "score": 0.018173485249578306,
+              "coverage": 0.764367816091954
+            },
+            {
+              "label": "above",
+              "score": 0.01144610218839256,
+              "coverage": 0.764367816091954
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.08525000000000205,
+          "guardMs": 0.02112499999999784,
+          "elapsed_ms": 0.1070840000000004,
+          "error": null
+        },
+        "scored": {
+          "id": "r10",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.1070840000000004
+        }
+      },
+      {
+        "id": "r15",
+        "text": "刃を花瓶より上に置く",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "vase"
+                },
+                {
+                  "primitive": "blade"
+                }
+              ],
+              "relation": "above"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r15",
+          "text": "刃を花瓶より上に置く",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.10504199999999742,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "blade",
+              "score": 0.9998210463030194
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "vase",
+              "score": 0.9992088300098984
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "above",
+              "score": 0.5771020924146034
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "blade",
+                "score": 0.9998210463030194,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 7.472659017783828e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 4.225458030610544e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.1497400890736912e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.5463507195913396e-05,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 1.3387435812163085e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 1.1624182597868457e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "vase",
+                "score": 0.9992088300098984,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0007361147049027742,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 1.770643267732317e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 1.1693880899377048e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 1.0438153696613019e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 7.625511608621218e-06,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 7.5913063169601755e-06,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "above",
+              "score": 0.5771020924146034,
+              "coverage": 0.7058823529411765
+            },
+            {
+              "label": "through",
+              "score": 0.3054955935263711,
+              "coverage": 0.7058823529411765
+            },
+            {
+              "label": "none",
+              "score": 0.09816592477683353,
+              "coverage": 0.7058823529411765
+            },
+            {
+              "label": "end",
+              "score": 0.0192363892821919,
+              "coverage": 0.7058823529411765
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.06416700000001185,
+          "guardMs": 0.04087499999998556,
+          "elapsed_ms": 0.10637499999999989,
+          "error": null
+        },
+        "scored": {
+          "id": "r15",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.10637499999999989
+        }
+      },
+      {
+        "id": "r16",
+        "text": "花瓶を刃より上に置く",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "blade"
+                },
+                {
+                  "primitive": "vase"
+                }
+              ],
+              "relation": "above"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r16",
+          "text": "花瓶を刃より上に置く",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.1284169999999989,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "vase",
+              "score": 0.9992088300098984
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "blade",
+              "score": 0.9998210463030194
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "above",
+              "score": 0.5771020924146034
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "vase",
+                "score": 0.9992088300098984,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0007361147049027742,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 1.770643267732317e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 1.1693880899377048e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 1.0438153696613019e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 7.625511608621218e-06,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 7.5913063169601755e-06,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "blade",
+                "score": 0.9998210463030194,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 7.472659017783828e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 4.225458030610544e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.1497400890736912e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.5463507195913396e-05,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 1.3387435812163085e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 1.1624182597868457e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "above",
+              "score": 0.5771020924146034,
+              "coverage": 0.7058823529411765
+            },
+            {
+              "label": "through",
+              "score": 0.3054955935263711,
+              "coverage": 0.7058823529411765
+            },
+            {
+              "label": "none",
+              "score": 0.09816592477683353,
+              "coverage": 0.7058823529411765
+            },
+            {
+              "label": "end",
+              "score": 0.0192363892821919,
+              "coverage": 0.7058823529411765
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.055165999999999826,
+          "guardMs": 0.07325099999999907,
+          "elapsed_ms": 0.12954100000000324,
+          "error": null
+        },
+        "scored": {
+          "id": "r16",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.12954100000000324
+        }
+      },
+      {
+        "id": "r17",
+        "text": "球を置く。輪よりも上側に",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "ring"
+                },
+                {
+                  "primitive": "sphere"
+                }
+              ],
+              "relation": "above"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r17",
+          "text": "球を置く。輪よりも上側に",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.0835000000000008,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "sphere",
+              "score": 0.9999085651018849
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "ring",
+              "score": 0.9997962677253821
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "none",
+              "score": 0.7765577792871756
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "sphere",
+                "score": 0.9999085651018849,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 5.6829174960087977e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.624527486775458e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 8.026946597554485e-06,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 6.167388688031448e-06,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 2.1763648939451414e-06,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 1.9897481079638057e-06,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "ring",
+                "score": 0.9997962677253821,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.00013030407685731669,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 2.534285552084623e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.949368194433913e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 1.1637277221269778e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 1.1358098747874451e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 5.596284326299863e-06,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "none",
+              "score": 0.7765577792871756,
+              "coverage": 0.6060606060606061
+            },
+            {
+              "label": "through",
+              "score": 0.13681044915167193,
+              "coverage": 0.6060606060606061
+            },
+            {
+              "label": "above",
+              "score": 0.07176918496868977,
+              "coverage": 0.6060606060606061
+            },
+            {
+              "label": "end",
+              "score": 0.014862586592462809,
+              "coverage": 0.6060606060606061
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.06091700000000344,
+          "guardMs": 0.022582999999997355,
+          "elapsed_ms": 0.08441700000000196,
+          "error": null
+        },
+        "scored": {
+          "id": "r17",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.08441700000000196
+        }
+      },
+      {
+        "id": "r18",
+        "text": "輪を置く。球よりも上側に",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "sphere"
+                },
+                {
+                  "primitive": "ring"
+                }
+              ],
+              "relation": "above"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r18",
+          "text": "輪を置く。球よりも上側に",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.06912499999999966,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "ring",
+              "score": 0.9997962677253821
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "sphere",
+              "score": 0.9999085651018849
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "none",
+              "score": 0.7765577792871756
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "ring",
+                "score": 0.9997962677253821,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.00013030407685731669,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 2.534285552084623e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.949368194433913e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 1.1637277221269778e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 1.1358098747874451e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 5.596284326299863e-06,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "sphere",
+                "score": 0.9999085651018849,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 5.6829174960087977e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.624527486775458e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 8.026946597554485e-06,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 6.167388688031448e-06,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 2.1763648939451414e-06,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 1.9897481079638057e-06,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "none",
+              "score": 0.7765577792871756,
+              "coverage": 0.6060606060606061
+            },
+            {
+              "label": "through",
+              "score": 0.13681044915167193,
+              "coverage": 0.6060606060606061
+            },
+            {
+              "label": "above",
+              "score": 0.07176918496868977,
+              "coverage": 0.6060606060606061
+            },
+            {
+              "label": "end",
+              "score": 0.014862586592462809,
+              "coverage": 0.6060606060606061
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.04816700000000651,
+          "guardMs": 0.02095799999999315,
+          "elapsed_ms": 0.06987499999999613,
+          "error": null
+        },
+        "scored": {
+          "id": "r18",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.06987499999999613
+        }
+      },
+      {
+        "id": "r19",
+        "text": "Below the sphere sits a box.",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "box"
+                },
+                {
+                  "primitive": "sphere"
+                }
+              ],
+              "relation": "above"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r19",
+          "text": "Below the sphere sits a box.",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.109958000000006,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "sphere",
+              "score": 0.9978700611622817
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "box",
+              "score": 0.9975089406854789
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "none",
+              "score": 0.8727989205324813
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "sphere",
+                "score": 0.9978700611622817,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0016361786527674354,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.00019684433267839083,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0001419648109871829,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 8.171181115350834e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 5.1177279265005145e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 2.2061950866587255e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "box",
+                "score": 0.9975089406854789,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.001161762749089757,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0009830908265626636,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.00018714673300172238,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 8.622204431281721e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 3.690169514726116e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 3.593526640682862e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "none",
+              "score": 0.8727989205324813,
+              "coverage": 0.8541666666666666
+            },
+            {
+              "label": "above",
+              "score": 0.06007964146493452,
+              "coverage": 0.8541666666666666
+            },
+            {
+              "label": "through",
+              "score": 0.056156142575508244,
+              "coverage": 0.8541666666666666
+            },
+            {
+              "label": "end",
+              "score": 0.010965295427075859,
+              "coverage": 0.8541666666666666
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.08216699999999832,
+          "guardMs": 0.02779100000000767,
+          "elapsed_ms": 0.11066700000000651,
+          "error": null
+        },
+        "scored": {
+          "id": "r19",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.11066700000000651
+        }
+      },
+      {
+        "id": "r20",
+        "text": "Below the box sits a sphere.",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "sphere"
+                },
+                {
+                  "primitive": "box"
+                }
+              ],
+              "relation": "above"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r20",
+          "text": "Below the box sits a sphere.",
+          "program": null,
+          "reason": "relation-uncertain",
+          "source": "tiny-student",
+          "modelMs": 0.07954200000000355,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "box",
+              "score": 0.9975089406854789
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "sphere",
+              "score": 0.9978700611622817
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "none",
+              "score": 0.8727989205324813
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "box",
+                "score": 0.9975089406854789,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.001161762749089757,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0009830908265626636,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.00018714673300172238,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 8.622204431281721e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 3.690169514726116e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 3.593526640682862e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "sphere",
+                "score": 0.9978700611622817,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0016361786527674354,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.00019684433267839083,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0001419648109871829,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 8.171181115350834e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 5.1177279265005145e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 2.2061950866587255e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "none",
+              "score": 0.8727989205324813,
+              "coverage": 0.8541666666666666
+            },
+            {
+              "label": "above",
+              "score": 0.06007964146493452,
+              "coverage": 0.8541666666666666
+            },
+            {
+              "label": "through",
+              "score": 0.056156142575508244,
+              "coverage": 0.8541666666666666
+            },
+            {
+              "label": "end",
+              "score": 0.010965295427075859,
+              "coverage": 0.8541666666666666
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.05812499999998977,
+          "guardMs": 0.021417000000013786,
+          "elapsed_ms": 0.08016700000000299,
+          "error": null
+        },
+        "scored": {
+          "id": "r20",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.08016700000000299
+        }
+      },
+      {
+        "id": "r22",
+        "text": "棒を箱が貫く",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "tube"
+                },
+                {
+                  "primitive": "box"
+                }
+              ],
+              "relation": "through"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r22",
+          "text": "棒を箱が貫く",
+          "program": null,
+          "reason": "geometry-unsupported",
+          "source": "tiny-student",
+          "modelMs": 0.9987080000000077,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "tube",
+              "score": 0.999612994041151
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "box",
+              "score": 0.9975100404485319
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "through",
+              "score": 0.9963933036576286
+            },
+            {
+              "kind": "explicit-part-order-and-attribute-scope",
+              "detail": "forward"
+            },
+            {
+              "kind": "explicit-v2-parent-order",
+              "detail": "japanese-parent-object-pierced-by-child"
+            },
+            {
+              "kind": "explicit-v2-compiler-guard"
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "tube",
+                "score": 0.999612994041151,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.00024938961691136106,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 4.514516817536797e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 3.0187078779942314e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.663613048998307e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 2.4288489392269414e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 1.1359475099767434e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "box",
+                "score": 0.9975100404485319,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0024036051476805974,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 3.3439853066120364e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 1.7797266516730562e-05,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 1.220436278553816e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 1.1501784561871975e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 1.1411136857198491e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "through",
+              "score": 0.9963933036576286,
+              "coverage": 1
+            },
+            {
+              "label": "none",
+              "score": 0.0023874610287488466,
+              "coverage": 1
+            },
+            {
+              "label": "above",
+              "score": 0.0007343879245757848,
+              "coverage": 1
+            },
+            {
+              "label": "end",
+              "score": 0.00048484738904674735,
+              "coverage": 1
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.11508299999999849,
+          "guardMs": 0.8836250000000092,
+          "elapsed_ms": 1.0017079999999936,
+          "error": null
+        },
+        "scored": {
+          "id": "r22",
+          "category": "relation_simple",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 1.0017079999999936
+        }
+      },
+      {
+        "id": "r24",
+        "text": "A sphere passes through a blade.",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "blade"
+                },
+                {
+                  "primitive": "sphere"
+                }
+              ],
+              "relation": "through"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r24",
+          "text": "A sphere passes through a blade.",
+          "program": null,
+          "reason": "geometry-unsupported",
+          "source": "tiny-student",
+          "modelMs": 1.1286249999999995,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "sphere",
+              "score": 0.9978700611622817
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "blade",
+              "score": 0.9979817838174333
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "through",
+              "score": 0.9994397775561951
+            },
+            {
+              "kind": "explicit-part-order-and-attribute-scope",
+              "detail": "reverse"
+            },
+            {
+              "kind": "explicit-v2-parent-order",
+              "detail": "english-child-through-parent"
+            },
+            {
+              "kind": "explicit-v2-compiler-guard"
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "sphere",
+                "score": 0.9978700611622817,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0016361786527674354,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.00019684433267839083,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0001419648109871829,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 8.171181115350834e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 5.1177279265005145e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 2.2061950866587255e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "blade",
+                "score": 0.9979817838174333,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0005617256946448756,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0005578512358359612,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 0.00042484312661508544,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 0.00029228599526946145,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 0.0001563560987583703,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 2.5154031443017464e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "through",
+              "score": 0.9994397775561951,
+              "coverage": 0.957983193277311
+            },
+            {
+              "label": "none",
+              "score": 0.00035822413924006493,
+              "coverage": 0.957983193277311
+            },
+            {
+              "label": "end",
+              "score": 0.0001182126459512318,
+              "coverage": 0.957983193277311
+            },
+            {
+              "label": "above",
+              "score": 8.378565861353941e-05,
+              "coverage": 0.957983193277311
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.2540829999999943,
+          "guardMs": 0.8745420000000053,
+          "elapsed_ms": 1.1332909999999998,
+          "error": null
+        },
+        "scored": {
+          "id": "r24",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 1.1332909999999998
+        }
+      },
+      {
+        "id": "r26",
+        "text": "棒を花瓶が貫通する",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "tube"
+                },
+                {
+                  "primitive": "vase"
+                }
+              ],
+              "relation": "through"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r26",
+          "text": "棒を花瓶が貫通する",
+          "program": null,
+          "reason": "geometry-unsupported",
+          "source": "tiny-student",
+          "modelMs": 0.7095839999999924,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "tube",
+              "score": 0.999612994041151
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "vase",
+              "score": 0.9992088300098984
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "through",
+              "score": 0.9614780126732942
+            },
+            {
+              "kind": "explicit-part-order-and-attribute-scope",
+              "detail": "forward"
+            },
+            {
+              "kind": "explicit-v2-parent-order",
+              "detail": "japanese-parent-object-pierced-by-child"
+            },
+            {
+              "kind": "explicit-v2-compiler-guard"
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "tube",
+                "score": 0.999612994041151,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.00024938961691136106,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 4.514516817536797e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 3.0187078779942314e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.663613048998307e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 2.4288489392269414e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 1.1359475099767434e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "vase",
+                "score": 0.9992088300098984,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.0007361147049027742,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 1.770643267732317e-05,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 1.1693880899377048e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 1.0438153696613019e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 7.625511608621218e-06,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 7.5913063169601755e-06,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "through",
+              "score": 0.9614780126732942,
+              "coverage": 0.8043478260869565
+            },
+            {
+              "label": "none",
+              "score": 0.03168541787415769,
+              "coverage": 0.8043478260869565
+            },
+            {
+              "label": "above",
+              "score": 0.0038198234425692677,
+              "coverage": 0.8043478260869565
+            },
+            {
+              "label": "end",
+              "score": 0.0030167460099788435,
+              "coverage": 0.8043478260869565
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.06125000000000114,
+          "guardMs": 0.6483339999999913,
+          "elapsed_ms": 0.7109169999999949,
+          "error": null
+        },
+        "scored": {
+          "id": "r26",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.7109169999999949
+        }
+      },
+      {
+        "id": "r30",
+        "text": "The ring is pierced by a box.",
+        "expected": {
+          "action": "render",
+          "alternatives": [
+            {
+              "parts": [
+                {
+                  "primitive": "ring"
+                },
+                {
+                  "primitive": "box"
+                }
+              ],
+              "relation": "through"
+            }
+          ]
+        },
+        "prediction": {
+          "id": "r30",
+          "text": "The ring is pierced by a box.",
+          "program": null,
+          "reason": "geometry-unsupported",
+          "source": "tiny-student",
+          "modelMs": 0.3969160000000045,
+          "evidence": [
+            {
+              "kind": "learned-char-primitive",
+              "detail": "ring",
+              "score": 0.9910418038412093
+            },
+            {
+              "kind": "learned-char-primitive",
+              "detail": "box",
+              "score": 0.9975089406854789
+            },
+            {
+              "kind": "explicit-noun-and-color-mask"
+            },
+            {
+              "kind": "learned-char-relation",
+              "detail": "through",
+              "score": 0.9901540981800616
+            },
+            {
+              "kind": "explicit-part-order-and-attribute-scope",
+              "detail": "forward"
+            },
+            {
+              "kind": "explicit-v2-parent-order",
+              "detail": "english-parent-pierced-by-child"
+            },
+            {
+              "kind": "explicit-v2-compiler-guard"
+            }
+          ],
+          "primitiveCandidates": [
+            [
+              {
+                "label": "ring",
+                "score": 0.9910418038412093,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.008592748906588432,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0002021693476634074,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 9.415948282885606e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 2.71110584996153e-05,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 2.7083237268551213e-05,
+                "coverage": 1
+              },
+              {
+                "label": "box",
+                "score": 1.4924125941918066e-05,
+                "coverage": 1
+              }
+            ],
+            [
+              {
+                "label": "box",
+                "score": 0.9975089406854789,
+                "coverage": 1
+              },
+              {
+                "label": "unknown",
+                "score": 0.001161762749089757,
+                "coverage": 1
+              },
+              {
+                "label": "tube",
+                "score": 0.0009830908265626636,
+                "coverage": 1
+              },
+              {
+                "label": "blade",
+                "score": 0.00018714673300172238,
+                "coverage": 1
+              },
+              {
+                "label": "vase",
+                "score": 8.622204431281721e-05,
+                "coverage": 1
+              },
+              {
+                "label": "ring",
+                "score": 3.690169514726116e-05,
+                "coverage": 1
+              },
+              {
+                "label": "sphere",
+                "score": 3.593526640682862e-05,
+                "coverage": 1
+              }
+            ]
+          ],
+          "relationCandidates": [
+            {
+              "label": "through",
+              "score": 0.9901540981800616,
+              "coverage": 0.8956521739130435
+            },
+            {
+              "label": "none",
+              "score": 0.007787110499276382,
+              "coverage": 0.8956521739130435
+            },
+            {
+              "label": "above",
+              "score": 0.0016207735637147065,
+              "coverage": 0.8956521739130435
+            },
+            {
+              "label": "end",
+              "score": 0.0004380177569473941,
+              "coverage": 0.8956521739130435
+            }
+          ],
+          "guardVersion": "widget-student-guard-v2",
+          "classifierMs": 0.12187500000000284,
+          "guardMs": 0.27504100000000165,
+          "elapsed_ms": 0.3988339999999937,
+          "error": null
+        },
+        "scored": {
+          "id": "r30",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.3988339999999937
+        }
+      }
+    ],
+    "changed_from_freeze_1": [
+      {
+        "id": "s04",
+        "before": {
+          "id": "s04",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "attribute",
+          "failures": [
+            "attribute"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [
+            {
+              "part_index": 0,
+              "condition": {
+                "left": "height",
+                "operation": "lt",
+                "right": "width",
+                "ratio": 0.9
+              },
+              "actual": {
+                "height": 1,
+                "twist": 0,
+                "depth": 1,
+                "bend": 0,
+                "width": 1
+              }
+            }
+          ],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.05491599999999863
+        },
+        "after": {
+          "id": "s04",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 1.4365829999999988
+        }
+      },
+      {
+        "id": "s05",
+        "before": {
+          "id": "s05",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "attribute",
+          "failures": [
+            "attribute"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [
+            {
+              "part_index": 0,
+              "condition": {
+                "left": "height",
+                "operation": "gt",
+                "right": "width",
+                "ratio": 1.1
+              },
+              "actual": {
+                "height": 1,
+                "twist": 0,
+                "depth": 1,
+                "bend": 0,
+                "width": 1
+              }
+            }
+          ],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.04579199999999872
+        },
+        "after": {
+          "id": "s05",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 0.6429999999999936
+        }
+      },
+      {
+        "id": "s09",
+        "before": {
+          "id": "s09",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "attribute",
+          "failures": [
+            "attribute"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [
+            {
+              "part_index": 0,
+              "condition": {
+                "left": "width",
+                "operation": "gt",
+                "right": "height",
+                "ratio": 1.1
+              },
+              "actual": {
+                "height": 1.65,
+                "twist": 0,
+                "depth": 1,
+                "bend": 0,
+                "width": 1
+              }
+            }
+          ],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.07124999999999915
+        },
+        "after": {
+          "id": "s09",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 0.5599999999999952
+        }
+      },
+      {
+        "id": "s25",
+        "before": {
+          "id": "s25",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "attribute",
+          "failures": [
+            "attribute"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [
+            {
+              "part_index": 0,
+              "condition": {
+                "left": "width",
+                "operation": "gt",
+                "right": "height",
+                "ratio": 1.1
+              },
+              "actual": {
+                "height": 1,
+                "twist": 0,
+                "depth": 1,
+                "bend": 0,
+                "width": 1
+              }
+            }
+          ],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.03295800000000071
+        },
+        "after": {
+          "id": "s25",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 1.0017500000000013
+        }
+      },
+      {
+        "id": "s29",
+        "before": {
+          "id": "s29",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "attribute",
+          "failures": [
+            "attribute"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [
+            {
+              "part_index": 0,
+              "condition": {
+                "left": "height",
+                "operation": "gt",
+                "right": "width",
+                "ratio": 1.1
+              },
+              "actual": {
+                "height": 1,
+                "twist": 0,
+                "depth": 1,
+                "bend": 0,
+                "width": 1
+              }
+            }
+          ],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.02845800000000054
+        },
+        "after": {
+          "id": "s29",
+          "category": "single_attribute",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 0.44299999999999784
+        }
+      },
+      {
+        "id": "r05",
+        "before": {
+          "id": "r05",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "roles_reversed",
+          "failures": [
+            "roles_reversed"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": false,
+          "relation_correct": true,
+          "structure_correct": false,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.6677080000000046
+        },
+        "after": {
+          "id": "r05",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 2.2403750000000002
+        }
+      },
+      {
+        "id": "r06",
+        "before": {
+          "id": "r06",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "roles_reversed",
+          "failures": [
+            "roles_reversed"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": false,
+          "relation_correct": true,
+          "structure_correct": false,
+          "matched_alternative": 0,
+          "pipeline_success": false,
+          "elapsed_ms": 0.1198750000000004
+        },
+        "after": {
+          "id": "r06",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": true,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "pipeline_success": true,
+          "elapsed_ms": 1.2976670000000041
+        }
+      },
+      {
+        "id": "r22",
+        "before": {
+          "id": "r22",
+          "category": "relation_simple",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": false,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "geometry_failure": "geometry_rejected",
+          "pipeline_success": false,
+          "elapsed_ms": 0.06687499999999602
+        },
+        "after": {
+          "id": "r22",
+          "category": "relation_simple",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 1.0017079999999936
+        }
+      },
+      {
+        "id": "r24",
+        "before": {
+          "id": "r24",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": false,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "geometry_failure": "geometry_rejected",
+          "pipeline_success": false,
+          "elapsed_ms": 0.06724999999999426
+        },
+        "after": {
+          "id": "r24",
+          "category": "relation_simple",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 1.1332909999999998
+        }
+      },
+      {
+        "id": "r26",
+        "before": {
+          "id": "r26",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": false,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "geometry_failure": "geometry_rejected",
+          "pipeline_success": false,
+          "elapsed_ms": 0.04183400000000148
+        },
+        "after": {
+          "id": "r26",
+          "category": "relation_scope",
+          "language": "ja",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.7109169999999949
+        }
+      },
+      {
+        "id": "r30",
+        "before": {
+          "id": "r30",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "render",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": false,
+          "attribute_failures": [],
+          "part_count_correct": true,
+          "ordered_primitives_correct": true,
+          "relation_correct": true,
+          "structure_correct": true,
+          "matched_alternative": 0,
+          "geometry_failure": "geometry_rejected",
+          "pipeline_success": false,
+          "elapsed_ms": 0.06800000000000495
+        },
+        "after": {
+          "id": "r30",
+          "category": "relation_scope",
+          "language": "en",
+          "expected_action": "render",
+          "actual_action": "hold",
+          "semantic_success": false,
+          "failure": "abstained_positive",
+          "failures": [
+            "abstained_positive"
+          ],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": false,
+          "elapsed_ms": 0.3988339999999937
+        }
+      },
+      {
+        "id": "h19",
+        "before": {
+          "id": "h19",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "false_activation",
+          "failures": [
+            "false_activation"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "pipeline_success": false,
+          "elapsed_ms": 0.027208000000001675
+        },
+        "after": {
+          "id": "h19",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "hold",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": true,
+          "elapsed_ms": 0.0012499999999988631
+        }
+      },
+      {
+        "id": "h21",
+        "before": {
+          "id": "h21",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "false_activation",
+          "failures": [
+            "false_activation"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "pipeline_success": false,
+          "elapsed_ms": 0.030249999999995225
+        },
+        "after": {
+          "id": "h21",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "hold",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": true,
+          "elapsed_ms": 0.0014159999999918682
+        }
+      },
+      {
+        "id": "h22",
+        "before": {
+          "id": "h22",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "false_activation",
+          "failures": [
+            "false_activation"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "pipeline_success": false,
+          "elapsed_ms": 0.02629200000000509
+        },
+        "after": {
+          "id": "h22",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "hold",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": true,
+          "elapsed_ms": 0.0010410000000007358
+        }
+      },
+      {
+        "id": "h29",
+        "before": {
+          "id": "h29",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "false_activation",
+          "failures": [
+            "false_activation"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "pipeline_success": false,
+          "elapsed_ms": 0.03008299999999764
+        },
+        "after": {
+          "id": "h29",
+          "category": "hold_negation_ambiguity",
+          "language": "ja",
+          "expected_action": "hold",
+          "actual_action": "hold",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": true,
+          "elapsed_ms": 0.02208300000000918
+        }
+      },
+      {
+        "id": "h30",
+        "before": {
+          "id": "h30",
+          "category": "hold_negation_ambiguity",
+          "language": "en",
+          "expected_action": "hold",
+          "actual_action": "render",
+          "semantic_success": false,
+          "failure": "false_activation",
+          "failures": [
+            "false_activation"
+          ],
+          "safe_program": true,
+          "geometry_success": true,
+          "pipeline_success": false,
+          "elapsed_ms": 0.030791999999998154
+        },
+        "after": {
+          "id": "h30",
+          "category": "hold_negation_ambiguity",
+          "language": "en",
+          "expected_action": "hold",
+          "actual_action": "hold",
+          "semantic_success": true,
+          "failure": null,
+          "failures": [],
+          "safe_program": true,
+          "geometry_success": null,
+          "pipeline_success": true,
+          "elapsed_ms": 0.08412500000000023
+        }
+      }
+    ],
+    "timing_decomposition_ms": {
+      "classifier_all_cases": {
+        "count": 90,
+        "p50": 0.06137499999999818,
+        "p95": 0.35273924999999784,
+        "max": 1.8825409999999962,
+        "sum": 10.185291000000028
+      },
+      "classifier_called_cases": {
+        "count": 81,
+        "p50": 0.0647080000000031,
+        "p95": 0.4334580000000017,
+        "max": 1.8825409999999962,
+        "sum": 10.185291000000028
+      },
+      "guard_all_cases_including_compile": {
+        "count": 90,
+        "p50": 0.48537549999999285,
+        "p95": 2.2193956499999956,
+        "max": 3.6218760000000003,
+        "sum": 65.29833599999998
+      },
+      "reported_total_all_cases": {
+        "count": 90,
+        "p50": 0.557250499999995,
+        "p95": 2.449553949999994,
+        "max": 5.504416999999997,
+        "sum": 75.48362700000001
+      },
+      "wall_clock_all_cases": {
+        "count": 90,
+        "p50": 0.5592500000000022,
+        "p95": 2.453617000000009,
+        "max": 5.5844580000000015,
+        "sum": 75.78212200000004
+      }
+    }
+  },
+  "preserved_models": {
+    "student-freeze-1": {
+      "scored_summary": {
+        "cases": 90,
+        "definite_cases": 86,
+        "definite_semantic_successes": 64,
+        "definite_semantic_accuracy": 0.7441860465116279,
+        "render_cases": 60,
+        "render_successes": 43,
+        "positive_abstentions": 10,
+        "hold_cases": 26,
+        "hold_successes": 21,
+        "false_activations": 5,
+        "invalid_programs": 0,
+        "ambiguous_cases": 4,
+        "ambiguous_acceptable": 4,
+        "reversed_role_pairs": 15,
+        "both_directions_correct_pairs": 10,
+        "both_directions_correct_pair_ids": [
+          [
+            "r01",
+            "r02"
+          ],
+          [
+            "r03",
+            "r04"
+          ],
+          [
+            "r07",
+            "r08"
+          ],
+          [
+            "r11",
+            "r12"
+          ],
+          [
+            "r13",
+            "r14"
+          ],
+          [
+            "r21",
+            "r22"
+          ],
+          [
+            "r23",
+            "r24"
+          ],
+          [
+            "r25",
+            "r26"
+          ],
+          [
+            "r27",
+            "r28"
+          ],
+          [
+            "r29",
+            "r30"
+          ]
+        ],
+        "geometry_measured_outputs": 55,
+        "geometry_safe_outputs": 51,
+        "pipeline_measured_definite_cases": 86,
+        "pipeline_successes_on_measured_definite_cases": 60,
+        "failure_taxonomy": {
+          "attribute": 5,
+          "abstained_positive": 10,
+          "roles_reversed": 2,
+          "false_activation": 5
+        },
+        "geometry_failures": {
+          "geometry_rejected": 4
+        },
+        "categories": {
+          "single_nominal": {
+            "count": 15,
+            "successes": 14,
+            "failures": {
+              "abstained_positive": 1
+            }
+          },
+          "single_attribute": {
+            "count": 15,
+            "successes": 9,
+            "failures": {
+              "attribute": 5,
+              "abstained_positive": 1
+            }
+          },
+          "relation_simple": {
+            "count": 15,
+            "successes": 13,
+            "failures": {
+              "roles_reversed": 2
+            }
+          },
+          "relation_scope": {
+            "count": 15,
+            "successes": 7,
+            "failures": {
+              "abstained_positive": 8
+            }
+          },
+          "hold_ordinary": {
+            "count": 15,
+            "successes": 15,
+            "failures": {}
+          },
+          "hold_negation_ambiguity": {
+            "count": 15,
+            "successes": 10,
+            "failures": {
+              "false_activation": 5
+            }
+          }
+        },
+        "model_only_latency_ms": {
+          "count": 90,
+          "p50": 0.05535399999999768,
+          "p95": 0.458547800000001,
+          "max": 2.5749169999999992
+        }
+      },
+      "accepted_definite_outputs": 55,
+      "accepted_definite_output_successes": 43,
+      "accepted_definite_precision": 0.7818181818181819,
+      "positive_program_coverage_count": 50,
+      "positive_program_coverage": 0.8333333333333334,
+      "positive_accepted_precision": 0.86,
+      "negation_cancellation_conflict_hold_successes": 6,
+      "negation_cancellation_conflict_hold_cases": 11,
+      "ambiguous_held": 4,
+      "normalized_overlap_excluded": {
+        "definite_count": 76,
+        "definite_semantic_successes": 54,
+        "definite_accuracy": 0.7105263157894737,
+        "positive_count": 51,
+        "positive_semantic_successes": 34
+      }
+    },
+    "rules-preserved": {
+      "scored_summary": {
+        "cases": 90,
+        "definite_cases": 86,
+        "definite_semantic_successes": 53,
+        "definite_semantic_accuracy": 0.6162790697674418,
+        "render_cases": 60,
+        "render_successes": 33,
+        "positive_abstentions": 19,
+        "hold_cases": 26,
+        "hold_successes": 20,
+        "false_activations": 6,
+        "invalid_programs": 0,
+        "ambiguous_cases": 4,
+        "ambiguous_acceptable": 4,
+        "reversed_role_pairs": 15,
+        "both_directions_correct_pairs": 9,
+        "both_directions_correct_pair_ids": [
+          [
+            "r01",
+            "r02"
+          ],
+          [
+            "r03",
+            "r04"
+          ],
+          [
+            "r07",
+            "r08"
+          ],
+          [
+            "r11",
+            "r12"
+          ],
+          [
+            "r13",
+            "r14"
+          ],
+          [
+            "r21",
+            "r22"
+          ],
+          [
+            "r23",
+            "r24"
+          ],
+          [
+            "r25",
+            "r26"
+          ],
+          [
+            "r27",
+            "r28"
+          ]
+        ],
+        "geometry_measured_outputs": 48,
+        "geometry_safe_outputs": 45,
+        "pipeline_measured_definite_cases": 86,
+        "pipeline_successes_on_measured_definite_cases": 50,
+        "failure_taxonomy": {
+          "attribute": 6,
+          "abstained_positive": 19,
+          "roles_reversed": 2,
+          "false_activation": 6
+        },
+        "geometry_failures": {
+          "geometry_rejected": 3
+        },
+        "categories": {
+          "single_nominal": {
+            "count": 15,
+            "successes": 10,
+            "failures": {
+              "abstained_positive": 5
+            }
+          },
+          "single_attribute": {
+            "count": 15,
+            "successes": 5,
+            "failures": {
+              "attribute": 6,
+              "abstained_positive": 4
+            }
+          },
+          "relation_simple": {
+            "count": 15,
+            "successes": 13,
+            "failures": {
+              "roles_reversed": 2
+            }
+          },
+          "relation_scope": {
+            "count": 15,
+            "successes": 5,
+            "failures": {
+              "abstained_positive": 10
+            }
+          },
+          "hold_ordinary": {
+            "count": 15,
+            "successes": 15,
+            "failures": {}
+          },
+          "hold_negation_ambiguity": {
+            "count": 15,
+            "successes": 9,
+            "failures": {
+              "false_activation": 6
+            }
+          }
+        },
+        "model_only_latency_ms": {
+          "count": 90,
+          "p50": 0.0037710000000039656,
+          "p95": 0.13310029999999934,
+          "max": 0.8860000000000028
+        }
+      },
+      "accepted_definite_outputs": 47,
+      "accepted_definite_output_successes": 33,
+      "accepted_definite_precision": 0.7021276595744681,
+      "positive_program_coverage_count": 41,
+      "positive_program_coverage": 0.6833333333333333,
+      "positive_accepted_precision": 0.8048780487804879,
+      "negation_cancellation_conflict_hold_successes": 5,
+      "negation_cancellation_conflict_hold_cases": 11,
+      "ambiguous_held": 3,
+      "normalized_overlap_excluded": {
+        "definite_count": 76,
+        "definite_semantic_successes": 46,
+        "definite_accuracy": 0.6052631578947368,
+        "positive_count": 51,
+        "positive_semantic_successes": 27
+      }
+    }
+  },
+  "interpretation": "Changes come from explicit guard/attribute/order/compiler rules on the same learned classifier. This is not new unseen accuracy or a training improvement."
+}

@@ -1,5 +1,9 @@
 # Glyph Matter — 文字のかたち
 
+### [▶ 小窓・描画予算の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v2/)
+
+旧小窓を残し、表示用の配列・転送を削減した版。形と文字表面を前版と比較して保持し、保存32,000文字と描画1,536文字を分ける。実機のCPU改善は未確認、メモリは少し低い観測値に留まる。[比較・原票・制限](experiments/widget-render-budget-v2/README.md) / [基準の小窓](https://koseihamaya2077.github.io/glyph-matter/widget-v1/)。
+
 ### [▶ 小窓・低負荷構成の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v1/)
 
 Mac標準の小窓で、別の作業の横に置く試作。通常15fps、入力の吸収30fps、停止・非表示では描画を停止し、任意のモデルは解釈後に終了する。描画サンプルと文字履歴を分ける。現時点では全体RAM・CPUの候補予算に未達で、8時間の比較改良を進行中。[操作・実測・制限](experiments/widget-companion-v1/README.md) / [研究の技術・課題・先行研究・評価案](research/widget-research-map-20261003.md) / [Macアプリの作り方](desktop/glyph-widget/README.md)。

@@ -1,6 +1,17 @@
 import { it, expect } from 'vitest';
 import { Matter, MAX_GLYPHS, MAX_INPUT_LENGTH, MAX_KINDS } from './model';
 import { saveWidget, restoreWidget } from './widget-state';
+it('keeps the preserved v1 storage entry unchanged on the shared web origin', () => {
+  const old = '{"preserved":"old body"}', memory = new Map([['glyph-widget-state-v1', old]]);
+  const store = { getItem: (key: string) => memory.get(key) ?? null, setItem: (key: string, value: string) => { memory.set(key, value); } };
+  const current = new Matter();
+  expect(restoreWidget(current, store)).toBeNull();
+  current.add('new words', 4, {seed: 123});
+  expect(saveWidget(current, null, store)).toBe(true);
+  expect(memory.get('glyph-widget-state-v1')).toBe(old);
+  expect(memory.has('glyph-widget-state-v2')).toBe(true);
+  expect(restoreWidget(new Matter(), store)).not.toBeNull();
+});
 it('restores original words, their colors and motion without storing model state', () => {
   const memory = new Map<string,string>(), store = {getItem:(k:string)=>memory.get(k)??null,setItem:(k:string,v:string)=>{memory.set(k,v);}};
   const a = new Matter(); a.add('過去の文字',64,{ink:'white',seed:42}); a.step(5); a.add('青い文字',64,{ink:'blue',seed:101}); a.spec.shape='mobius'; a.step(5);

@@ -2,7 +2,9 @@ import { Matter, MAX_INPUT_LENGTH, MAX_GLYPHS } from './model';
 import { COLORS, SHAPES, type SceneSpec, type Ink } from './language';
 import { MOTIONS } from './motions';
 import { validateProgram, type Program } from './scaffold-program';
-const KEY = 'glyph-widget-state-v1';
+// Comparison pages share a GitHub Pages origin. Keep the preserved v1 body
+// untouched instead of migrating or overwriting its storage entry.
+const KEY = 'glyph-widget-state-v2';
 type Store = Pick<Storage, 'getItem'|'setItem'>;
 const finite = (v: unknown, min: number, max: number): v is number => typeof v === 'number' && Number.isFinite(v) && v >= min && v <= max;
 

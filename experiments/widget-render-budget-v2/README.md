@@ -53,6 +53,12 @@
 
 依存関係が揃ったリポジトリのrootで、`node experiments/widget-render-budget-v2/run-regression.mjs`。基準ソースと比較ページは無視領域へ生成し、別の開発ポート4263で測る。基準指定は`GLYPH_BASELINE_SHA`、ポートは`GLYPH_BUDGET_PORT`、結果の別保存先は`GLYPH_BUDGET_OUTPUT`。`dist`や配布アプリを再生成しない。
 
-候補Aの数値チェックは合格したが、実WebKitアプリでのcalm/入力/非表示の資源比較は主担当の測定待ち。現在の曲面と流れを15fpsで正確に評価するため、数値微分を使う形の5回の曲面評価は残る。これが支配的なら、[5Hz面評価と15fps補間の別候補](../widget-companion-v1/render-budget-plan.md)を、近似誤差と見た目を含めて比較する。
+候補Aの数値チェックは合格した。同じ人工身体の実WebKit比較は、基準→候補→基準再測定の90秒×3窓でCPU13.278→12.110→11.798%、charged footprint中央値218.93→207.60→215.39MiB。CPU全体の改善は再確認できず、RAMが低い観測値に留まる。[条件・失敗窓・原票](native-evaluation/REPORT.md)。数値微分を使う形の5回の曲面評価は残る。[5Hz面評価と15fps補間の別候補](../widget-companion-v1/render-budget-plan.md)を、近似誤差と見た目を含めて比較する。
 
 暫定のテストは単体161件・型検査とも成功。最初のハーネス実行でfaviconの404をconsole errorとして拾ったため、比較ページへ空のfaviconを与えて測定をやり直した。アプリの不具合として扱っていない。
+
+## v0.14.1の保存と診断
+
+表示容量が残り23文字の場合にも、送信された原文を切らずにバッチへ残す。人工入力3件を実UIで送信して32,000文字へ達し、1,536表示と旧色・全原文のreload復元を確認。[再現](raw-capacity-check.mjs) / [結果](raw-capacity-result.json)。
+
+native R3は停止等のboolean状態が変わる最終メッセージを、通常1秒の診断保存制限から除外する。実ボタンで停止→再開→停止後、表示中5秒と、停止を解除した実Hide5秒の両方でフレーム固定・正しい最終状態を保存した。[停止](native-r3-smoke.json) / [非表示](native-r3-hidden-smoke.json)。これは診断修正のsmokeで、R3の資源を90秒比較した結果ではない。配布は旧版と別bundle ID・保存originの新規アプリで行う。
