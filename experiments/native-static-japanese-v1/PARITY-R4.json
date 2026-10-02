@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "expectedSHA256": "2db43f972725130a84a7e33c020bfa1846e881ed11031480cf24c008533217c4",
+  "nativeFile": "NATIVE-R4.json",
+  "nativeSHA256": "e9227e8636e9bc6c813b2179a282af5921fe9e4a0985e441c851c588df1c568c",
+  "cases": 709,
+  "old455": 455,
+  "extra": 254,
+  "gatesUnchanged": true,
+  "gatePassed": true,
+  "failures": [],
+  "groups": {
+    "old-calibration": {
+      "cases": 112,
+      "idExact": 112,
+      "pieceExact": 112,
+      "normalizationExact": 112,
+      "pretokenExact": 112,
+      "holdExact": 112,
+      "shapeTop1Exact": 112,
+      "primitiveTop1Exact": 112
+    },
+    "old-caption": {
+      "cases": 343,
+      "idExact": 343,
+      "pieceExact": 343,
+      "normalizationExact": 343,
+      "pretokenExact": 343,
+      "holdExact": 343,
+      "shapeTop1Exact": 343,
+      "primitiveTop1Exact": 343
+    },
+    "manual-unicode": {
+      "cases": 23,
+      "idExact": 23,
+      "pieceExact": 23,
+      "normalizationExact": 23,
+      "pretokenExact": 23,
+      "holdExact": 23,
+      "shapeTop1Exact": 23,
+      "primitiveTop1Exact": 23
+    },
+    "nmt-whitespace": {
+      "cases": 62,
+      "idExact": 62,
+      "pieceExact": 62,
+      "normalizationExact": 62,
+      "pretokenExact": 62,
+      "holdExact": 62,
+      "shapeTop1Exact": 62,
+      "primitiveTop1Exact": 62
+    },
+    "added-special": {
+      "cases": 142,
+      "idExact": 142,
+      "pieceExact": 142,
+      "normalizationExact": 142,
+      "pretokenExact": 142,
+      "holdExact": 142,
+      "shapeTop1Exact": 142,
+      "primitiveTop1Exact": 142
+    },
+    "mask-lstrip": {
+      "cases": 16,
+      "idExact": 16,
+      "pieceExact": 16,
+      "normalizationExact": 16,
+      "pretokenExact": 16,
+      "holdExact": 16,
+      "shapeTop1Exact": 16,
+      "primitiveTop1Exact": 16
+    },
+    "special-boundary": {
+      "cases": 6,
+      "idExact": 6,
+      "pieceExact": 6,
+      "normalizationExact": 6,
+      "pretokenExact": 6,
+      "holdExact": 6,
+      "shapeTop1Exact": 6,
+      "primitiveTop1Exact": 6
+    },
+    "limit": {
+      "cases": 5,
+      "idExact": 5,
+      "pieceExact": 5,
+      "normalizationExact": 5,
+      "pretokenExact": 5,
+      "holdExact": 5,
+      "shapeTop1Exact": 5,
+      "primitiveTop1Exact": 5
+    }
+  },
+  "maxima": {
+    "meanAbs": 8.471679677768407e-07,
+    "unitAbs": 9.315536497744858e-08,
+    "cosineAbs": 8.596046447983952e-07
+  },
+  "rankDiagnostics": {
+    "top1Different": 0,
+    "completeOrderDifferent": 0,
+    "captionChoiceDifferent": 0,
+    "nearTiePairReversed": 0,
+    "separatedPairReversed": 0
+  },
+  "limitations": "Original calibration/captions and synthetic edge runtime parity, not new semantic quality or unseen evaluation. nearTie pair reversals separately disclosed."
+}

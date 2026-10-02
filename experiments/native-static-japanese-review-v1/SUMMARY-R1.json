@@ -1,0 +1,123 @@
+{
+  "version": "independent-native-static-review-summary-r1",
+  "createdAt": "2026-10-02T23:16:05.162028+00:00",
+  "groups": {
+    "manual20": {
+      "total": 20,
+      "passed": 20,
+      "diagnosticExact": {
+        "idsExact": 20,
+        "piecesExactDiagnostic": 20,
+        "normalizationExact": 20,
+        "pretokenizedWholeExactDiagnostic": 20,
+        "holdSame": 20
+      },
+      "meanAbsMax": 2.3794555659151229e-07,
+      "vectorAbsMax": 6.351356507394712e-08,
+      "scoreAbsMax": 2.0252380372731693e-07,
+      "innerQueryElapsedMs": {
+        "min": 0.0052089691162109375,
+        "max": 0.46333301067352295
+      },
+      "driverRoundTripMs": {
+        "first": 42.598875,
+        "min": 0.13554200000000238,
+        "max": 42.598875
+      },
+      "returnedReplyBytes": {
+        "min": 547,
+        "max": 20926
+      },
+      "nativeSelfMemoryBytes": {
+        "residentBytes": {
+          "min": 43008000,
+          "max": 44072960
+        },
+        "physicalFootprintBytes": {
+          "min": 33636880,
+          "max": 34259472
+        },
+        "maxRSSBytes": {
+          "min": 43008000,
+          "max": 44072960
+        }
+      }
+    },
+    "artifactInformedSpecials4": {
+      "total": 4,
+      "passed": 4,
+      "diagnosticExact": {
+        "idsExact": 4,
+        "piecesExactDiagnostic": 4,
+        "normalizationExact": 4,
+        "pretokenizedWholeExactDiagnostic": 4,
+        "holdSame": 4
+      },
+      "meanAbsMax": 1.2499999968440534e-07,
+      "vectorAbsMax": 3.339637755228608e-08,
+      "scoreAbsMax": 3.161453246969259e-07,
+      "innerQueryElapsedMs": {
+        "min": 0.014042019844055176,
+        "max": 0.036625027656555176
+      },
+      "driverRoundTripMs": {
+        "first": 0.184875000000001,
+        "min": 0.10316599999998788,
+        "max": 0.18983300000000036
+      },
+      "returnedReplyBytes": {
+        "min": 3661,
+        "max": 6704
+      },
+      "nativeSelfMemoryBytes": {
+        "residentBytes": {
+          "min": 44236800,
+          "max": 44285952
+        },
+        "physicalFootprintBytes": {
+          "min": 34423312,
+          "max": 34456080
+        },
+        "maxRSSBytes": {
+          "min": 44236800,
+          "max": 44285952
+        }
+      }
+    }
+  },
+  "candidateCalls": 24,
+  "additionalCandidateCalls": 0,
+  "nativeExitCode": 0,
+  "replies": 24,
+  "timeouts": 0,
+  "unexpectedTailBytes": 0,
+  "wholeChildWallSeconds": 0.054241792,
+  "candidateSourceSHA": "fb99669e9afc3287dab7706d00fe89d4b52f2d10f7cf22bd37d1f97fa06a4be4",
+  "candidateBinarySHA": "52b7ea7fc00d5413fe79ad85e56743e890c36ae2800b7095b7c47a853dde4c74",
+  "oracleActiveSHA": "db6b0005d8d97a7c47980426ddaaa669fdd351c77ab349882676a479f035a32b",
+  "known709Overlap": {
+    "manual20": {
+      "total": 20,
+      "exactOverlap": 1,
+      "NFKCOverlap": 1
+    },
+    "artifactInformedSpecials4": {
+      "total": 4,
+      "exactOverlap": 0,
+      "NFKCOverlap": 0
+    }
+  },
+  "globalGatePass": true,
+  "modelMeaningAccuracyClaim": false,
+  "humanEvaluation": false,
+  "Windows16GB": false,
+  "wholeWidgetResourceClaim": false,
+  "actualUI": false,
+  "realOSCapture": false,
+  "GPU": false,
+  "populationSeparation": "Manual20, artifact-informed4, authorknown709, authorlean1382 separate.",
+  "helperCorrectionBeforeNative": "OracleR1captionIndex registry-local correctedinR2 toglobal343, R1preserved; gates/input/normalization/math unchanged.",
+  "candidateRetuning": 0,
+  "fixtureChanges": 0,
+  "thresholdChanges": 0
+}

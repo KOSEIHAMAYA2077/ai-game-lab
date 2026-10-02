@@ -208,3 +208,9 @@ GitHubのREADMEトップからGitHub Pagesの試遊版へ直接進む導線を�
 入力確定→肉付け→文字を伴う初回描画まで約10秒を目標とする。[骨格生成案 v0.1](research/skeleton-first-10s-v1.md)を別ブランチに保存。花瓶・剣・輪を少数の構造と寸法で扱い、肉付けは決定的な処理へ任せる。設計更新のみで、既存の試遊版・CPU実測結果は変更していない。
 
 今回の期限付き継続実行は停止した。今後の常時監視・自動更新は行わない。
+
+## 2026-10-03 日本語特徴のnative CPU比較
+
+固定した8MiB F16表とtokenizerをSwift CLIへ移したR5候補を保存。作者の709は失敗を修正した既知回帰、独立20とartifact-informed特殊token4は別母数で各一致。短batch1382callでpeak43.53MiB・query内p95約0.044ms。意味精度、全widget、Windows16GB、電力の値ではない。外側frame制限・本文なし応答・形の受理policyが未整備なので既定接続を保留。[公開確認](experiments/native-static-publication-v1/README.md)。
+
+別に、固定CLIを100分保持する人工query/idle補足を開始。実UI・GPU・OS入力を使わず、完走前の値を長期達成として報告しない。

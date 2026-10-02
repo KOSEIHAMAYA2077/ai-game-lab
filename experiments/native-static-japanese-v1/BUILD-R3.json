@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "build": [
+    "swiftc",
+    "-O",
+    "NativeStaticR3.swift",
+    "-o",
+    "native-static-r3"
+  ],
+  "sdk": "Apple Swift6.3.2 arm64-macos26",
+  "beforeFirstNativeR3Results": true,
+  "files": [
+    {
+      "path": "experiments/native-static-japanese-v1/NativeStaticR3.swift",
+      "bytes": 16309,
+      "sha256": "1db61b2fa5a83947901badb92682426e1a8ec7c8dffe5e2921bedf7f08d686eb"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/native-static-r3",
+      "bytes": 378048,
+      "sha256": "7c7993f64fec42d23fcb9df19c25108bf0d146f33afce3e62d74c0f3a3130c11"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/EXPECTED-FREEZE-R1.json",
+      "bytes": 3733,
+      "sha256": "ccaeb4fe2c28b6359b9ee9036b3812f94655de6880b5228676eb4497c38e7c86"
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/TOKENIZER-SCHEMA-CORRECTION-R3.json",
+      "bytes": 421,
+      "sha256": "9d291a857277fa91cd9c90557cf4faffc9459f2d792591f4de026d62583ed382"
+    }
+  ]
+}

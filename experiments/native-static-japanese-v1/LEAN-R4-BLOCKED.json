@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "observedAtUTC": "2026-10-02T22:56:16.483944+00:00",
+  "sourceR4SHA256": "1998734c243b06d5fc4875a3845e6f13ce062aa0f23ab63df31af4e2eacd936a",
+  "failure": "Lean JSONL driver blocked waiting for first response on non-TTY stdout. No successful latency aggregate was produced. Owned native process observed CPU 0%, RSS 40144 KiB; own bench and descendants terminated after exact executable/start verification. Suspected buffered stdout, not tokenizer/rank parity failure.",
+  "nativePID": 12059,
+  "elapsedAtObservationSeconds": 253,
+  "preserved": [
+    "bench_lean.py",
+    "METHOD-LEAN-CPU-R4.md",
+    "LEAN-R4.time.log",
+    "NativeStaticR4.swift",
+    "native-static-r4",
+    "PARITY-R4.json"
+  ],
+  "R5Changes": [
+    "Explicit fflush(stdout) after each JSONL answer.",
+    "Per-query autoreleasepool to bound Foundation autoreleased temporary lifetime; not a measured leak fix.",
+    "Version metadata only."
+  ],
+  "notChanged": [
+    "tokenizer algorithms",
+    "model/table/captions",
+    "input caps",
+    "numerical gates",
+    "709 oracle",
+    "ranking",
+    "semantic thresholds"
+  ],
+  "sourceR5SHA256": "fb99669e9afc3287dab7706d00fe89d4b52f2d10f7cf22bd37d1f97fa06a4be4"
+}
