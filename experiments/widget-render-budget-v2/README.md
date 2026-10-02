@@ -62,3 +62,5 @@
 表示容量が残り23文字の場合にも、送信された原文を切らずにバッチへ残す。人工入力3件を実UIで送信して32,000文字へ達し、1,536表示と旧色・全原文のreload復元を確認。[再現](raw-capacity-check.mjs) / [結果](raw-capacity-result.json)。
 
 native R3は停止等のboolean状態が変わる最終メッセージを、通常1秒の診断保存制限から除外する。実ボタンで停止→再開→停止後、表示中5秒と、停止を解除した実Hide5秒の両方でフレーム固定・正しい最終状態を保存した。[停止](native-r3-smoke.json) / [非表示](native-r3-hidden-smoke.json)。これは診断修正のsmokeで、R3の資源を90秒比較した結果ではない。配布は旧版と別bundle ID・保存originの新規アプリで行う。
+
+GitHub Pagesの複数URLは同じoriginを共有するので、公開v2は保存keyも`glyph-widget-state-v2`へ分けた。v1エントリを変更しない単体回帰と、隔離したcommitからの174単体・型・production buildが成功。[公開資産の容量回帰](raw-capacity-release-v2-result.json)も合格。native別ID版はEnter→日本語paste→青いメビウスを実操作確認したが、その後Macがロックされた。最終R5は保存key分離後の資産を同梱し、署名と資産を検査する。ロック後のR5の再操作・通常表示負荷は未確認として残す。
