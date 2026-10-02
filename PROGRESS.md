@@ -1,5 +1,11 @@
 # 進捗
 
+## 2026-10-03 06:45 JST — 専用編集欄のR2
+
+人工統合R3に専用textareaを接続する比較版を保存。blur・destroy後の古いcallbackによる追加を止め、旧R1失敗を保持した。作者30回帰＋4差分、独立17＋destroy1、retired callback10＋別stale shape1は人工検証であり、実IMEではない。root実ブラウザはASCII box→削除→ring→緑sphereで旧7青/新7緑/14材料、再読込0を確認した。本文を削除しても身体を残す扱いは暫定。実OS取得・入力の外部送信・人の快適性評価は未実施。
+
+[実操作](experiments/ambient-editor-root-ui-v1/README.md) / [実装と保持した失敗](experiments/ambient-editor-adapter-v1/REPORT.md) / [独立監査](experiments/ambient-editor-adapter-review-v1/README.md) / [評価設計の再検討](research/ambient-study-questions-v1/README.md)。既定の60形Webは維持し、次はこの材料を文字の表面へ渡す独立比較と、16形Metal版の実窓確認。
+
 ## 2026-10-03 06:10 — Metalの13形と実小窓資源
 
 別namespaceの[13形候補](desktop/glyph-metal-lab-v3/README.md)へWebの作者定義10形を移植。旧3形の式は保持。CPU 4,953検査、GPU 605の凍結geometry対応、13形offscreen、40,560収まり条件と757,760元TS頂点を別母数で確認。蝶の退化点・Float候補失敗と旧原票を保持した。

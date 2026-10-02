@@ -1,0 +1,21 @@
+{
+  "version": "ambient-editor-adapter-v1-r2-lifecycle",
+  "frozenBeforeR2ImplementationAndResults": true,
+  "classification": "Known-failure regression, after independent R1 15/17 and supplementary destroy/retry 0/1. Never reinterpret R1 as passing.",
+  "baseSource": {
+    "path": "experiments/ambient-editor-adapter-v1/adapter.mjs",
+    "sha256": "32485a02209b85158e536afecc03edf0b7be79f03908e28453ff386c1994066a"
+  },
+  "receiver": {
+    "path": "experiments/ambient-integration-contract-v1/receiver-r3.mjs",
+    "sha256": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d",
+    "readOnlyDependency": true
+  },
+  "unchanged": "R1 normalization, original frozen CASES.json, bounded UTF16/grapheme limits, saving off and sole receiver body/ID owner remain. No direct cast to old widget, no OS/clipboard/network/UI tests by author.",
+  "sameElement": "One owner per textarea per loaded module instance. createAdapter on already-owned element throws textarea-already-owned before reading value or creating a receiver. Reservation persists after destroy. Explicit new DOM element or reload starts a different body with initial baseline material0. This is module lifecycle hygiene, not a security guarantee against deliberately loading separate copies/bundles.",
+  "blurPending": "If pending noACK exists, blur invalidates frozen producer and receiver pending slots by an explicit newer editor seq under R3 conservative gap boundary; body0 for that event, unsupported true, readonly restored. Current own field can be observed as document-only baseline; ordinary baseline/new commits cannot repair appendSupported. No silent retry or auto-rebase.",
+  "destroy": "Terminal and idempotent. Cancel pending as unsupported-detached, cancel preedit as unknown, clear before token, pause receiver, remove own listeners, restore previous readonly. Retain already accepted historical body for readonly inspection; no new body/ID authority. No reattachment on same element.",
+  "retiredCalls": "handle/advance/setAdmissionReady/retry/setVisible/setPaused/answerShape after destroy return unchanged snapshot; setInk ignores after destroy; shapeRequest returns null. snapshot/readBody/exportState/inspectVolatile remain readonly. Do not read stale event payloads or call clock/receiver after detach.",
+  "page": "Separate index-r2.html/page-r2.mjs preserve R1 entry. BFcache pagehide persisted=true hides same live owner; pageshow unhides it. Final nonpersisted pagehide clears interval and destroys; no body regeneration. Actual DOM and real IME remain root-owned validation.",
+  "evaluation": "Run unchanged original30/4 diff on separate R2 runner/output; separately run new manually specified4 lifecycle cases. Independent 17 and supplementary1 belong to reviewer and must be labelled known-failure regression. No comfort, resource, general IME, or OS acquisition claim."
+}

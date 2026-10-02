@@ -1,0 +1,9 @@
+{
+  "frozen_before_execution_utc": "2026-10-02T20:35:18.350859+00:00",
+  "designed_after_R2_source_and_results": true,
+  "scope": "Targeted known harness-strengthening regression, not blind holdout",
+  "reason": "Original P09 used same sphere candidate/current shape and did not assert staleAnswers; its shape equality alone could be false positive. Preserve that original result and add box\u2192sphere + stale counter assertion separately.",
+  "probe_sha256": "d4a16d3c6cf8e1c1e2b8f43d0b540079a1f2ebf7c4f4750b0fb9660a97013286",
+  "source": "SOURCE-FREEZE-R2.json",
+  "expected": "Box token invalidated by undo produces staleAnswers1, retains sphere/body/IDs"
+}

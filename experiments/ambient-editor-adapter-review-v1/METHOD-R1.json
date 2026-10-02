@@ -1,0 +1,49 @@
+{
+  "version": "ambient-editor-adapter-independent-review-v1-r1",
+  "frozen_before_adapter_source_or_results_read_utc": "2026-10-02T20:04:14.392102+00:00",
+  "scope": "Dedicated owned textarea boundary and provisional receiver R3; artificial DOM-like event traces in module review only; actual UI belongs root",
+  "forbidden": [
+    "OS-wide capture",
+    "clipboard reading",
+    "network model calls",
+    "OS settings",
+    "existing source/Git changes",
+    "actual UI interaction by reviewer",
+    "real user text"
+  ],
+  "sources_checked": "SOURCE-NOTES.md, official WHATWG/W3C drafts at 2026-10-03 JST",
+  "acceptance": "Method and manual expected behaviors frozen before adapter source. Interface mapping may be added before execution without changing behavioral expectations. Any expectation/harness correction after results receives a new version and immutable original record.",
+  "receiver_expected_sha256": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d",
+  "source_not_yet_received": true,
+  "testing_layers": {
+    "layer1": "read-only module/frozen-source verification",
+    "layer2": "artificial EventTarget/textarea-like object trace; setting isTrusted in a fake object is a synthetic producer declaration only, never genuine browser trust",
+    "layer3": "root actual dedicated editor operation/visual check; root records result separately",
+    "realIME": "Unverified until root does actual OS IME, with event trace and no claim of cross-browser universality"
+  },
+  "requirements": [
+    "Only one received material body/ID allocator",
+    "ACK follows whole admitted units, no-ACK producer snapshot/freeze one payload",
+    "Unknown quality or unsupported event order never silently upgraded by timeout/data/shape",
+    "Owned dedicated field only, no other app/input scraping",
+    "Storage-off allowlist throughout adapter+receiver+page",
+    "Document observation and append material histories remain separate",
+    "UI prototype vs contract snapshot remain separate"
+  ],
+  "conditional_policy": "A fully matched trace can count as a local owned-editor commit only if adapter has explicitly documented that exact supported trace and producer evidence guard. If it labels that trace unknown, expected body is0 and explicit-send remains the route. This is a safety boundary; usefulness policy must be chosen before executable probes and root actual UI.",
+  "unknown_definition": "Any absent/unsupported trust/session/target/type/composition ordering/version evidence, or cancellation, is no-confirmation. A fake isTrusted=true field never establishes real OS evidence.",
+  "result_labels": [
+    "synthetic module check",
+    "known-correction regression",
+    "root actual editor UI",
+    "unverified real IME"
+  ],
+  "no_claims": [
+    "Universal all-app committed text",
+    "OS authentication or permissions",
+    "comfort",
+    "CPU/RAM/power",
+    "renderer equivalence",
+    "app completed from snapshot contract"
+  ]
+}

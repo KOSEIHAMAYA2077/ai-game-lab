@@ -1,0 +1,1072 @@
+{
+  "version": "ambient-editor-independent-probes-r1",
+  "recordedAt": "2026-10-02T20:23:24.679Z",
+  "source": "experiments/ambient-editor-adapter-review-v1/snapshots/r1/experiments/ambient-editor-adapter-v1/adapter.mjs",
+  "scope": "Synthetic owned-field module checks, fake UA trust declaration; no real DOM/IME/OS/UI",
+  "total": 17,
+  "passed": 15,
+  "failed": 2,
+  "rows": [
+    {
+      "id": "P01-A01",
+      "expectation": "initial baseline0; wrong target does not read either field; own listeners only",
+      "passed": true,
+      "observed": {
+        "units": 0,
+        "ownListenerTypes": 7,
+        "otherReads": 0
+      }
+    },
+    {
+      "id": "P02-A02-A03",
+      "expectation": "selected replacement adds onlyB once; duplicate echo0; new repeated content adds separately with preserved ink/IDs",
+      "passed": true,
+      "observed": {
+        "version": 2,
+        "savingOff": true,
+        "status": "known",
+        "lastReason": "whole-add-before-ack",
+        "bodyCount": 2,
+        "presentedCount": 0,
+        "documentVersion": 2,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 2,
+          "unknown": 0,
+          "ignored": 1,
+          "cancelled": 0,
+          "retries": 0,
+          "overruns": 0
+        },
+        "body": "BB",
+        "units": 2,
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "unitTexts": [
+          "B",
+          "B"
+        ],
+        "document": "aBcB",
+        "composition": null,
+        "frozenPending": false
+      }
+    },
+    {
+      "id": "P03-A04-A05",
+      "expectation": "trusted IME preedit/Enter do not admit; cancel clears; quiet cannot confirm",
+      "passed": true,
+      "observed": {
+        "version": 0,
+        "savingOff": true,
+        "status": "cancelled",
+        "lastReason": "composition-cancelled",
+        "bodyCount": 0,
+        "presentedCount": 0,
+        "documentVersion": 0,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 1,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 0,
+          "unknown": 1,
+          "ignored": 0,
+          "cancelled": 1,
+          "retries": 0,
+          "overruns": 0
+        },
+        "body": "",
+        "units": 0,
+        "ids": [],
+        "inks": [],
+        "unitTexts": [],
+        "document": "",
+        "composition": null,
+        "frozenPending": false
+      }
+    },
+    {
+      "id": "P04-A06",
+      "expectation": "IME end after preedit input exact selected replacement adds final only once",
+      "passed": true,
+      "observed": {
+        "version": 1,
+        "savingOff": true,
+        "status": "ignored",
+        "lastReason": "unchanged-echo",
+        "bodyCount": 2,
+        "presentedCount": 0,
+        "documentVersion": 1,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 1,
+          "unknown": 0,
+          "ignored": 1,
+          "cancelled": 0,
+          "retries": 0,
+          "overruns": 0
+        },
+        "body": "漢字",
+        "units": 2,
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "unitTexts": [
+          "漢",
+          "字"
+        ],
+        "document": "a漢字c",
+        "composition": null,
+        "frozenPending": false
+      }
+    },
+    {
+      "id": "P05-A06",
+      "expectation": "IME end before matching final input holds0 then adds once; missing/untrusted mismatch0",
+      "passed": true,
+      "observed": {
+        "known": {
+          "version": 1,
+          "savingOff": true,
+          "status": "known",
+          "lastReason": "whole-add-before-ack",
+          "bodyCount": 2,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 1,
+            "unknown": 0,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "確定",
+          "units": 2,
+          "ids": [
+            1,
+            2
+          ],
+          "inks": [
+            "blue",
+            "blue"
+          ],
+          "unitTexts": [
+            "確",
+            "定"
+          ],
+          "document": "確定",
+          "composition": null,
+          "frozenPending": false
+        },
+        "missing": {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-ime-no-start",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "不明",
+          "composition": null,
+          "frozenPending": false
+        },
+        "untrusted": {
+          "version": 1,
+          "savingOff": true,
+          "status": "cancelled",
+          "lastReason": "unknown-ime-final",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 1,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "不明",
+          "composition": null,
+          "frozenPending": false
+        }
+      }
+    },
+    {
+      "id": "P06-A06",
+      "expectation": "ended IME token expiry at5000ms and later never revives",
+      "passed": true,
+      "observed": [
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 2,
+            "ignored": 0,
+            "cancelled": 1,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "終",
+          "composition": null,
+          "frozenPending": false
+        },
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 2,
+            "ignored": 0,
+            "cancelled": 1,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "終",
+          "composition": null,
+          "frozenPending": false
+        },
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 2,
+            "ignored": 0,
+            "cancelled": 1,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "終",
+          "composition": null,
+          "frozenPending": false
+        }
+      ]
+    },
+    {
+      "id": "P07-A07",
+      "expectation": "unknown missing flags/type/trust/defaultPrevented/input-only never material nor timeout promoted",
+      "passed": true,
+      "observed": [
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "X",
+          "composition": null,
+          "frozenPending": false
+        },
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "X",
+          "composition": null,
+          "frozenPending": false
+        },
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "X",
+          "composition": null,
+          "frozenPending": false
+        },
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "X",
+          "composition": null,
+          "frozenPending": false
+        },
+        {
+          "version": 1,
+          "savingOff": true,
+          "status": "unknown",
+          "lastReason": "unknown-input-trace",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "X",
+          "composition": null,
+          "frozenPending": false
+        }
+      ]
+    },
+    {
+      "id": "P08-A08",
+      "expectation": "nullable paste selected replacement reads no clipboard/DataTransfer/ranges; adds inserted only",
+      "passed": true,
+      "observed": {
+        "version": 1,
+        "savingOff": true,
+        "status": "known",
+        "lastReason": "whole-add-before-ack",
+        "bodyCount": 3,
+        "presentedCount": 0,
+        "documentVersion": 1,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 1,
+          "unknown": 0,
+          "ignored": 0,
+          "cancelled": 0,
+          "retries": 0,
+          "overruns": 0
+        },
+        "body": "P,Q",
+        "units": 3,
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "inks": [
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "unitTexts": [
+          "P",
+          ",",
+          "Q"
+        ],
+        "document": "aP,Qc",
+        "composition": null,
+        "frozenPending": false
+      }
+    },
+    {
+      "id": "P09-A09-A10",
+      "expectation": "undo/redo/delete update mirror only preserve appendIDs/ink and invalidate shape query",
+      "passed": true,
+      "observed": {
+        "tokenExisted": true,
+        "version": 4,
+        "savingOff": true,
+        "status": "known",
+        "lastReason": "whole-add-before-ack",
+        "bodyCount": 2,
+        "presentedCount": 2,
+        "documentVersion": 4,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 4,
+          "unknown": 0,
+          "ignored": 0,
+          "cancelled": 0,
+          "retries": 0,
+          "overruns": 0
+        },
+        "body": "球体",
+        "units": 2,
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "unitTexts": [
+          "球",
+          "体"
+        ],
+        "document": "球",
+        "composition": null,
+        "frozenPending": false
+      }
+    },
+    {
+      "id": "P10-A11",
+      "expectation": "noACK captures recursively frozenX; retry does not reread mutated DOM/event; whole exactly once and off export no payload",
+      "passed": true,
+      "observed": {
+        "version": 1,
+        "savingOff": true,
+        "status": "known",
+        "lastReason": "whole-add-before-ack",
+        "bodyCount": 1,
+        "presentedCount": 0,
+        "documentVersion": 1,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 1,
+          "unknown": 0,
+          "ignored": 0,
+          "cancelled": 0,
+          "retries": 1,
+          "overruns": 0
+        },
+        "body": "X",
+        "units": 1,
+        "ids": [
+          1
+        ],
+        "inks": [
+          "blue"
+        ],
+        "unitTexts": [
+          "X"
+        ],
+        "document": "X",
+        "composition": null,
+        "frozenPending": true
+      }
+    },
+    {
+      "id": "P11-A12",
+      "expectation": "different new value during noACK invalidates provenance; later automaticretry/newinput does not materialize",
+      "passed": true,
+      "observed": {
+        "version": 2,
+        "savingOff": true,
+        "status": "unsupported",
+        "lastReason": "unsupported-or-unbased",
+        "bodyCount": 0,
+        "presentedCount": 0,
+        "documentVersion": 2,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": true,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 0,
+          "unknown": 2,
+          "ignored": 0,
+          "cancelled": 0,
+          "retries": 0,
+          "overruns": 1
+        },
+        "body": "",
+        "units": 0,
+        "ids": [],
+        "inks": [],
+        "unitTexts": [],
+        "document": "YZ",
+        "composition": null,
+        "frozenPending": true
+      }
+    },
+    {
+      "id": "P12-A13",
+      "expectation": "blur cancels IME before stalefinal; pending handoff does not cross blur without explicit policy",
+      "passed": false,
+      "error": "blur pending retained",
+      "actual": true,
+      "expected": false
+    },
+    {
+      "id": "P13-A14",
+      "expectation": "wrongtarget and activity-only keydown never read text; unsupported policy toggles not invented",
+      "passed": true,
+      "observed": {
+        "reads": 1,
+        "rawKeys": 1,
+        "unverified": "capture/policy APIs are not exposed by adapter"
+      }
+    },
+    {
+      "id": "P14-A15",
+      "expectation": "off export exact10keys through body/preedit/pending; body iterator derives single ID authority; restart separate empty baseline",
+      "passed": true,
+      "observed": {
+        "keys": [
+          "grammar",
+          "version",
+          "savingOff",
+          "seed",
+          "shape",
+          "now",
+          "count",
+          "presentedCount",
+          "inkCounts",
+          "counters"
+        ],
+        "projection": [
+          {
+            "id": 1,
+            "text": "秘",
+            "ink": "blue"
+          },
+          {
+            "id": 2,
+            "text": "密",
+            "ink": "blue"
+          }
+        ],
+        "scope": "module off export only; actual page persistence unverified"
+      }
+    },
+    {
+      "id": "P15-A16",
+      "expectation": "destroy detaches; new attach onebody; duplicate create same element must be rejected or share singleauthority",
+      "passed": false,
+      "error": "duplicate element listener authorities",
+      "actual": false,
+      "expected": true
+    },
+    {
+      "id": "P16-A17",
+      "expectation": "graphemes and literal text whole; surrogate range invalid0; >256event and >512doc hold0 then IDs contiguous",
+      "passed": true,
+      "observed": {
+        "graphemes": {
+          "version": 1,
+          "savingOff": true,
+          "status": "known",
+          "lastReason": "whole-add-before-ack",
+          "bodyCount": 2,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 1,
+            "unknown": 0,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "👩‍💻á",
+          "units": 2,
+          "ids": [
+            1,
+            2
+          ],
+          "inks": [
+            "blue",
+            "blue"
+          ],
+          "unitTexts": [
+            "👩‍💻",
+            "á"
+          ],
+          "document": "👩‍💻á",
+          "composition": null,
+          "frozenPending": false
+        },
+        "malformed": {
+          "version": 0,
+          "savingOff": true,
+          "status": "document-limit",
+          "lastReason": "document-limit",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 0,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "😀",
+          "composition": null,
+          "frozenPending": false
+        },
+        "eventBound": {
+          "version": 3,
+          "savingOff": true,
+          "status": "known",
+          "lastReason": "whole-add-before-ack",
+          "bodyCount": 1,
+          "presentedCount": 0,
+          "documentVersion": 3,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 1,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "Z",
+          "units": 1,
+          "ids": [
+            1
+          ],
+          "inks": [
+            "blue"
+          ],
+          "unitTexts": [
+            "Z"
+          ],
+          "document": "Z",
+          "composition": null,
+          "frozenPending": false
+        },
+        "docBound": {
+          "version": 0,
+          "savingOff": true,
+          "status": "document-limit",
+          "lastReason": "document-limit",
+          "bodyCount": 0,
+          "presentedCount": 0,
+          "documentVersion": 0,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 0,
+            "unknown": 1,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "",
+          "units": 0,
+          "ids": [],
+          "inks": [],
+          "unitTexts": [],
+          "document": "",
+          "composition": null,
+          "frozenPending": false
+        },
+        "literal": {
+          "version": 1,
+          "savingOff": true,
+          "status": "known",
+          "lastReason": "whole-add-before-ack",
+          "bodyCount": 18,
+          "presentedCount": 0,
+          "documentVersion": 1,
+          "compositionPhase": null,
+          "pendingRetry": false,
+          "readOnly": false,
+          "unsupported": false,
+          "shape": "sphere",
+          "shapePending": false,
+          "rawKeys": 0,
+          "rawShortcuts": 0,
+          "counters": {
+            "known": 1,
+            "unknown": 0,
+            "ignored": 0,
+            "cancelled": 0,
+            "retries": 0,
+            "overruns": 0
+          },
+          "body": "<script>x</script>",
+          "units": 18,
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "inks": [
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue"
+          ],
+          "unitTexts": [
+            "<",
+            "s",
+            "c",
+            "r",
+            "i",
+            "p",
+            "t",
+            ">",
+            "x",
+            "<",
+            "/",
+            "s",
+            "c",
+            "r",
+            "i",
+            "p",
+            "t",
+            ">"
+          ],
+          "document": "<script>x</script>",
+          "composition": null,
+          "frozenPending": false
+        }
+      }
+    },
+    {
+      "id": "P17-A17",
+      "expectation": "original blueIDs survive body-capacity wholehold; next rejected long input cannot allocate partial units",
+      "passed": true,
+      "observed": {
+        "version": 2,
+        "savingOff": true,
+        "status": "held",
+        "lastReason": "body-capacity",
+        "bodyCount": 1,
+        "presentedCount": 0,
+        "documentVersion": 2,
+        "compositionPhase": null,
+        "pendingRetry": false,
+        "readOnly": false,
+        "unsupported": false,
+        "shape": "sphere",
+        "shapePending": false,
+        "rawKeys": 0,
+        "rawShortcuts": 0,
+        "counters": {
+          "known": 1,
+          "unknown": 0,
+          "ignored": 0,
+          "cancelled": 0,
+          "retries": 0,
+          "overruns": 0
+        },
+        "body": "A",
+        "units": 1,
+        "ids": [
+          1
+        ],
+        "inks": [
+          "blue"
+        ],
+        "unitTexts": [
+          "A"
+        ],
+        "document": "ABC",
+        "composition": null,
+        "frozenPending": false
+      }
+    }
+  ]
+}

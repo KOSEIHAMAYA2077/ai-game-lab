@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>入力から素材へ — 専用欄の比較</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">独立した入力比較</span><h1>書いた文字を、素材に。</h1><p>このページの入力欄だけが対象です。本文や文字の履歴は保存しません。</p></header>
+    <section class="writing" aria-labelledby="writing-title">
+      <div class="section-top"><h2 id="writing-title">入力</h2><label class="ink-choice">文字の色<select id="ink"><option value="blue">青</option><option value="green">緑</option><option value="purple">紫</option><option value="white">白</option></select></label></div>
+      <textarea id="editor" aria-label="専用の入力欄" maxlength="512" rows="5" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="この欄に書いてみてください。"></textarea>
+      <p class="hint">変換中の文字はまだ素材にしません。入力欄の削除や undo でも、蓄積済みの素材は残ります。</p>
+    </section>
+    <section class="material" aria-labelledby="material-title">
+      <div class="section-top"><h2 id="material-title">蓄積した素材</h2><span id="shape" class="pill">球</span></div>
+      <div id="projection" aria-label="確定した文字の蓄積" class="projection"><p id="empty">確定を確認できた文字が、ここへたまります。</p></div>
+      <div class="counts"><span>素材 <strong id="count">0</strong> / 256</span><span>表示 <strong id="presented">0</strong></span><span>確定 <strong id="known">0</strong> 回</span><span>保留・不明 <strong id="unknown">0</strong> 回</span></div>
+      <p id="status" role="status" aria-live="polite">入力を待っています。</p>
+    </section>
+    <footer><p>球・箱・輪の語を、少ない回数で形候補へ反映する比較です。一般的な意味理解や、OS 全体の入力取得を行うものではありません。</p><p>256 単位の素材上限を超える入力は、全体を保留します。実際の IME の挙動は環境ごとに確認が必要です。</p></footer>
+  </main>
+  <script type="module" src="./page.mjs"></script>
+</body>
+</html>

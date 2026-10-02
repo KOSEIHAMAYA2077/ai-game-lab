@@ -1,0 +1,65 @@
+{
+  "version": "adapter-r2-lifecycle-manual-v1",
+  "knownFailuresBeforeFixture": true,
+  "cases": [
+    {
+      "id": "L01",
+      "scenario": "Temporary noACK X then blur, readiness and retry",
+      "expected": {
+        "body": "",
+        "units": 0,
+        "pendingRetry": false,
+        "unsupported": true,
+        "readOnly": false,
+        "document": "X",
+        "lastReasonAfterBlur": "unsupported-blur",
+        "listenersBeforeDestroy": 7
+      }
+    },
+    {
+      "id": "L02",
+      "scenario": "Known A, duplicate same-element create, destroy, duplicate again, stale APIs",
+      "expected": {
+        "body": "A",
+        "units": 1,
+        "ids": [
+          1
+        ],
+        "duplicateError": "textarea-already-owned",
+        "duplicateAfterDestroyError": "textarea-already-owned",
+        "listenersBeforeDestroy": 7,
+        "listenersAfterDestroy": 0,
+        "unchangedAfterRetiredCalls": true
+      }
+    },
+    {
+      "id": "L03",
+      "scenario": "Temporary noACK X then destroy, old readiness/retry/handle/advance callbacks",
+      "expected": {
+        "body": "",
+        "units": 0,
+        "pendingRetry": false,
+        "unsupported": true,
+        "readOnly": false,
+        "document": "X",
+        "compositionPhase": null,
+        "lastReasonAfterDestroy": "adapter-detached",
+        "listenersAfterDestroy": 0,
+        "unchangedAfterRetiredCalls": true
+      }
+    },
+    {
+      "id": "L04",
+      "scenario": "Trusted composition start and preedit then destroy, late compositionend/input",
+      "expected": {
+        "body": "",
+        "units": 0,
+        "pendingRetry": false,
+        "compositionPhase": null,
+        "readOnly": false,
+        "listenersAfterDestroy": 0,
+        "unchangedAfterRetiredCalls": true
+      }
+    }
+  ]
+}

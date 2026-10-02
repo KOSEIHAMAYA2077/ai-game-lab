@@ -1,0 +1,70 @@
+[
+  {
+    "before": "a🙂b",
+    "after": "a🙂漢b",
+    "expected": [
+      {
+        "offset": 3,
+        "deleteCount": 0,
+        "text": "漢"
+      }
+    ],
+    "actual": [
+      {
+        "offset": 3,
+        "deleteCount": 0,
+        "text": "漢"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "before": "🙂",
+    "after": "😇",
+    "expected": [
+      {
+        "offset": 0,
+        "deleteCount": 2,
+        "text": "😇"
+      }
+    ],
+    "actual": [
+      {
+        "offset": 0,
+        "deleteCount": 2,
+        "text": "😇"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "before": "é",
+    "after": "é🙂",
+    "expected": [
+      {
+        "offset": 2,
+        "deleteCount": 0,
+        "text": "🙂"
+      }
+    ],
+    "actual": [
+      {
+        "offset": 2,
+        "deleteCount": 0,
+        "text": "🙂"
+      }
+    ],
+    "passed": true,
+    "failures": []
+  },
+  {
+    "before": "aa",
+    "after": "aa",
+    "expected": [],
+    "actual": [],
+    "passed": true,
+    "failures": []
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "source": "experiments/ambient-editor-adapter-review-v1/snapshots/r2/experiments/ambient-editor-adapter-v1/adapter-r2.mjs",
+  "scope": "Known terminal-lifecycle supplementary artificial regression after R2 source/results read; no realDOM/IME/OS/UI",
+  "recordedAt": "2026-10-02T20:34:18.363Z",
+  "expected": "Every retired mutation callback ignores time/payload, does not read owned text, keeps old material/IDs/ink/counters unchanged; shapeRequest null",
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "baseline": {
+    "version": 2,
+    "savingOff": true,
+    "status": "detached",
+    "lastReason": "adapter-detached",
+    "bodyCount": 1,
+    "presentedCount": 0,
+    "documentVersion": 2,
+    "compositionPhase": null,
+    "pendingRetry": false,
+    "readOnly": false,
+    "unsupported": true,
+    "shape": "sphere",
+    "shapePending": false,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 1,
+      "unknown": 1,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 0,
+      "overruns": 1
+    },
+    "body": "A",
+    "units": 1,
+    "ids": [
+      1
+    ],
+    "inks": [
+      "blue"
+    ],
+    "unitTexts": [
+      "A"
+    ],
+    "document": "AX",
+    "composition": null,
+    "frozenPending": true
+  },
+  "rows": [
+    {
+      "name": "handle",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "advance",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "setInk",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "setAdmissionReady",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "retry",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "setVisible",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "setPaused",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "shapeRequest",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "answerShape",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    },
+    {
+      "name": "destroy-again",
+      "passed": true,
+      "unchanged": true,
+      "rawReads": 0,
+      "clockReads": 0
+    }
+  ]
+}

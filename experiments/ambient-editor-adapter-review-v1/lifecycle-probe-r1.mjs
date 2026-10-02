@@ -1,0 +1,18 @@
+import { writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { FakeTextarea, artificialEvent, artificialClock } from './fake-dom-r1.mjs';
+const source=process.argv[2]??'experiments/ambient-editor-adapter-review-v1/snapshots/r1/experiments/ambient-editor-adapter-v1/adapter.mjs';
+const output=process.argv[3]??'experiments/ambient-editor-adapter-review-v1/lifecycle-results-r1.json';
+const {createAdapter}=await import(pathToFileURL(resolve(source)));
+const field=new FakeTextarea(),clock=artificialClock();
+const a=createAdapter({element:field,clock:clock.read});
+a.setAdmissionReady(false,0);
+clock.set(1);a.handle(artificialEvent(field,'beforeinput',{isTrusted:true,inputType:'insertText',data:'X'}));
+field.value='X';clock.set(2);a.handle(artificialEvent(field,'input',{isTrusted:true,inputType:'insertText',data:'X'}));
+const before=a.inspectVolatile();a.destroy();const afterDestroy=a.inspectVolatile();
+a.setAdmissionReady(true,3);a.retry(4);const afterStaleCallback=a.inspectVolatile();
+const passed=before.units===0&&before.pendingRetry===true&&afterDestroy.pendingRetry===false&&afterStaleCallback.units===0;
+const result={scope:'Additional artificial lifecycle regression designed after R1 source/result review; no browser/realIME/UI',source,recordedAt:new Date().toISOString(),expected:'Destroy ends owner session, clears one deferred payload, old readiness/retry callback never appends to retired body',passed,before,afterDestroy,afterStaleCallback};
+await writeFile(output,JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({output,passed,afterDestroyPending:afterDestroy.pendingRetry,afterRetiredRetryUnits:afterStaleCallback.units}));

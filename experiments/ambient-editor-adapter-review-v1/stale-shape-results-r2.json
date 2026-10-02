@@ -1,0 +1,193 @@
+{
+  "source": "experiments/ambient-editor-adapter-review-v1/snapshots/r2/experiments/ambient-editor-adapter-v1/adapter-r2.mjs",
+  "scope": "Supplementary artificial stale-answer probe after R2 results; original P09 used sphere→sphere, so its unchanged-shape observation alone could not reject a false positive",
+  "recordedAt": "2026-10-02T20:35:18.385Z",
+  "expected": "A pending box answer invalidated by undo must increment staleAnswers and never change sphere; old body/IDs survive",
+  "passed": true,
+  "token": {
+    "requestId": 1,
+    "focusEpoch": 1,
+    "policyEpoch": 0,
+    "generation": 1,
+    "windowRevision": 2,
+    "shape": "box"
+  },
+  "before": {
+    "version": 1,
+    "savingOff": true,
+    "status": "known",
+    "lastReason": "whole-add-before-ack",
+    "bodyCount": 3,
+    "presentedCount": 3,
+    "documentVersion": 1,
+    "compositionPhase": null,
+    "pendingRetry": false,
+    "readOnly": false,
+    "unsupported": false,
+    "shape": "sphere",
+    "shapePending": true,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 1,
+      "unknown": 0,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 0,
+      "overruns": 0
+    },
+    "body": "立方体",
+    "units": 3,
+    "ids": [
+      1,
+      2,
+      3
+    ],
+    "inks": [
+      "blue",
+      "blue",
+      "blue"
+    ],
+    "unitTexts": [
+      "立",
+      "方",
+      "体"
+    ],
+    "document": "立方体",
+    "composition": null,
+    "frozenPending": false
+  },
+  "afterUndo": {
+    "version": 2,
+    "savingOff": true,
+    "status": "known",
+    "lastReason": "whole-add-before-ack",
+    "bodyCount": 3,
+    "presentedCount": 3,
+    "documentVersion": 2,
+    "compositionPhase": null,
+    "pendingRetry": false,
+    "readOnly": false,
+    "unsupported": false,
+    "shape": "sphere",
+    "shapePending": false,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 2,
+      "unknown": 0,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 0,
+      "overruns": 0
+    },
+    "body": "立方体",
+    "units": 3,
+    "ids": [
+      1,
+      2,
+      3
+    ],
+    "inks": [
+      "blue",
+      "blue",
+      "blue"
+    ],
+    "unitTexts": [
+      "立",
+      "方",
+      "体"
+    ],
+    "document": "",
+    "composition": null,
+    "frozenPending": false
+  },
+  "afterAnswer": {
+    "version": 2,
+    "savingOff": true,
+    "status": "known",
+    "lastReason": "whole-add-before-ack",
+    "bodyCount": 3,
+    "presentedCount": 3,
+    "documentVersion": 2,
+    "compositionPhase": null,
+    "pendingRetry": false,
+    "readOnly": false,
+    "unsupported": false,
+    "shape": "sphere",
+    "shapePending": false,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 2,
+      "unknown": 0,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 0,
+      "overruns": 0
+    },
+    "body": "立方体",
+    "units": 3,
+    "ids": [
+      1,
+      2,
+      3
+    ],
+    "inks": [
+      "blue",
+      "blue",
+      "blue"
+    ],
+    "unitTexts": [
+      "立",
+      "方",
+      "体"
+    ],
+    "document": "",
+    "composition": null,
+    "frozenPending": false
+  },
+  "off": {
+    "grammar": "ambient.integration.v1",
+    "version": "ambient-integration-contract-v1-r1",
+    "savingOff": true,
+    "seed": 1,
+    "shape": "sphere",
+    "now": 3002,
+    "count": 3,
+    "presentedCount": 3,
+    "inkCounts": {
+      "white": 0,
+      "blue": 3,
+      "green": 0,
+      "purple": 0
+    },
+    "counters": {
+      "received": 5,
+      "addedUnits": 3,
+      "admissions": 2,
+      "permanentHolds": 0,
+      "deferrals": 0,
+      "gaps": 0,
+      "documentGaps": 0,
+      "serialGaps": 0,
+      "trustedRebases": 0,
+      "invalidChanges": 0,
+      "transportDuplicates": 0,
+      "operationDuplicates": 0,
+      "activityKeys": 0,
+      "activityShortcuts": 0,
+      "queries": 1,
+      "shapeChanges": 0,
+      "cachedSamples": 0,
+      "candidateExpiries": 0,
+      "staleAnswers": 1,
+      "acceptedAnswers": 0,
+      "unsupportedModes": 0,
+      "queuePeak": 3,
+      "pendingSlotPeak": 0,
+      "hiddenWork": 0,
+      "normalizedForwardGaps": 0
+    }
+  }
+}
