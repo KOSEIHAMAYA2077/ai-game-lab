@@ -1,0 +1,24 @@
+{
+  "version":"ambient-integration-supplementary-probes-r2",
+  "timing":"Authored after R3 fixture regression, before supplementary probe implementation/execution. Frozen R1 cases and method stay unchanged.",
+  "sourceFreeze":{"receiver.mjs":"c10e352cef8534c416ccad4c6b0565cf71245008bbcb2300e9b163da10c323a8","shape-only.mjs":"bc2e3ce24f5fe43889dc2527ef741bb620f57d24f3c754acfbb1b67024c83239"},
+  "normalProbes":[
+    {"id":"P01","case":"Strict saving-off recursive schema","expected":"Only fixed scalar/enum fields, fixed numeric counters, color histogram. Reject added raw text/ID sequence/color order/query/window/dictionary/fingerprint/origin plus nested counter leak or an aggregate string."},
+    {"id":"P02","case":"Artificial opt-in","expected":"No opt-in saving-on constructor rejected; explicit opt-in returns admitted body only."},
+    {"id":"P03","case":"256-unit burst followed by one unit","expected":"Immediate256, first reveal4, later one-unit whole hold, count256 and IDs1..256 unchanged."},
+    {"id":"P04","case":"65 same-base edits","expected":"All rejected, no body/revision advance."},
+    {"id":"P05","case":"Parallel producer during one pending handoff","expected":"No second no-ACK slot, pending cleared with unsupported/gap, no invented material; both sources require provenance repair."},
+    {"id":"P06","case":"Valid document edit exceeds remaining body capacity","expected":"ACK permanent body-capacity, mirror advances as observation, zero units added for held event, existing IDs/colors retained."},
+    {"id":"P07","case":"1000 artificial activity events count10000 each","expected":"Activity counter saturates1000000, body/window empty, history<=64, source watermark1000; timing only artificial harness."},
+    {"id":"P08","case":"New input changes window revision before old deferred answer","expected":"Old token ignored, no stale application, newly admitted letters immediate."}
+  ],
+  "runtimeMutants":[
+    {"id":"M01","change":"Disable both operation duplicate/serial gates","detector":"Equal-text duplicate operation must remain one unit."},
+    {"id":"M02","change":"Consume source seq/serial before no-ACK","detector":"Deferred source seq/serial must remain before-event."},
+    {"id":"M03","change":"Promote exact document-only producer to known primary","detector":"Document API edit must add zero material."},
+    {"id":"M04","change":"Allocate id1 repeatedly","detector":"Two accepted characters must have IDs1,2."},
+    {"id":"M05","change":"Accept absent/stale shape request","detector":"Answer after focus reset must not change shape."},
+    {"id":"M06","change":"Export raw body while saving-off","detector":"Independent recursive storage gate rejects off body."}
+  ],
+  "limits":"Mutants exercise actual in-memory alternate module code, never edit base source or old folders. Supplemental self-checks are not fresh unseen evaluation or OS evidence. No performance/resource comfort inference. No network/UI/clipboard/Git."
+}

@@ -1,5 +1,7 @@
 # Glyph Matterを研究テーマへつなぐ
 
+人工統合R3の検査は、唯一の材料body/ID・全体追加後ACK・shape-only判断・保存offを同時に扱う新しいgrammarへ進んだ。元20、補助8、追加gap4と独立11/追加5は修正後の人工回帰として区別し、R1/R2失敗とharness不足を残した。[公開確認とroot再現](../experiments/ambient-integration-publication-v1/README.md)。専用textarea接続が次の候補で、OS取得・実IME・快適性の結果ではない。
+
 追加の用途は、日常の創作・仕事・プログラミングに伴う入力から育つサイドインテリア。[使用像の追加分析](side-interior-direction-20261003.md)と、[実施可能な研究プロトコル](widget-study-protocol-v1/README.md)を別資料にまとめた。日常文章のambient反映と明示的な形指定の研究課題は分ける。 [人工入力契約](../experiments/ambient-input-contract-v1/README.md)、[HCI本文8論文](side-interior-hci-v1/README.md)、[接続前の境界レビュー](../experiments/ambient-boundary-review-v1/REPORT.md)を別資料へ保存した。既存小窓の原文保存と、新しい保存off案を同一実装と扱わない。
 
 確認日: 2026-10-03。文章の内容に応じて3Dの形が変わり、蓄積した文字がその面を流れ続ける、軽量なデスクトップ常駐表現を対象とする。ダウンロード量と常駐負荷を分け、16GB RAM・laptop CPU/iGPUで他の作業と共存できることを目指す。

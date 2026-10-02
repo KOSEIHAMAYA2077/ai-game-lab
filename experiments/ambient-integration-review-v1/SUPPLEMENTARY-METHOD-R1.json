@@ -1,0 +1,15 @@
+{
+  "recorded_before_execution_utc": "2026-10-02T19:47:55.407733+00:00",
+  "probe_sha256": "5c4a1f3e3dc242a28ab4c8addea73bff07d4620237d726cea00019dfa8be1f8d",
+  "classification": "post-R1 independent additional probes, not original11 prewritten initial evaluation",
+  "source_snapshots": [
+    "SOURCE-R1.json",
+    "SOURCE-R2.json"
+  ],
+  "expected": {
+    "S01": "Interpretation of independent activity: its own missing seq must not erase unrelated pending text payload metadata/provenance. A failure requests a method/spec decision; no caller claims universal losslessness.",
+    "S02": "Deliberately violate producer-frozen-event precondition. Receiver will accept changed payload under identical metadata; freezing producer retains original. This is a known contract limitation, not arbitrary attacker authentication claim.",
+    "S03": "Hidden logical body accepts20, never parses/reveals while hidden, reopen4/tick, one stale-window catchup query.",
+    "S04": "Unknown composition final remains mirror-only and current implementation retains preedit; document lifecycle clearing needs explicit policy in future adapter."
+  }
+}

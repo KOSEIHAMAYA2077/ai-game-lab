@@ -1,0 +1,11 @@
+{
+  "version":"ambient-integration-receiver-r3-gap-regression",
+  "authoredBeforeImplementationAndR3Execution":true,
+  "origin":"Independent R1/R2 supplementary5 found keys seq3 cancelled an unrelated editor wait, while keys seq2 coinciding with pending editor seq2 bypassed gap detection. R1/R2 source and failures remain unchanged.",
+  "change":"Only a registry source with activity capability and no document/composition/commit/explicitSend/control/shapeAnswer capability gets independent activity-gap accounting. Record its source gap; do not cancel another producer pending slot, modify doc/operation provenance, invalidate lexical context or forward a normalized text/control gap.",
+  "conservativeOtherSources":"Document, composition, commit, explicit-send, shape-answer and control source gaps retain R2 conservative behavior. A control gap may hide focus/policy change; a document gap may hide a revision. These are not assumed equivalent to activity-only.",
+  "retryException":"Exception matches source/session/seq/focusEpoch/policyEpoch/observedAt/kind/operationId/serial, not bare numeric seq. Receiver pending metadata also records fixed session. Payload byte identity remains a cooperative frozen-producer contract; no authentication is added.",
+  "unchanged":"Versioned grammar/schema v1, fixed source registry, sole material/ID allocator, whole add-before-ACK,20original fixture expectations, original method parameters,8supplementary probes and6mutants, off allowlist, shape mechanics. This is a post-result regression.",
+  "independentRuns":"Original20 run here. Original11 and independent supplementary5 are reviewed in their owner's folder against the R3 source SHA, reported separately, never copied as20 fixture passes.",
+  "adoption":"Only after independent R3 review; no real textarea/OS/IME acquisition is implemented."
+}

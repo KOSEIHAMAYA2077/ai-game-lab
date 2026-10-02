@@ -1,0 +1,81 @@
+{
+  "version": "ambient-integration-independent-review-v1-r1",
+  "recorded_before_probe_execution_utc": "2026-10-02T19:40:44.948716+00:00",
+  "artificial_only": true,
+  "prohibited": "No app/model/platform/UI/network/Git/process control or real text reads",
+  "read_before_design": [
+    "METHOD.json",
+    "GRAMMAR.md",
+    "receiver.mjs",
+    "shape-only.mjs",
+    "CASES.json first60lines only"
+  ],
+  "author_results_read": false,
+  "known_prior_information": "Root relayed author R1 pending-parallel-producer defect before these probes were frozen. P11 is targeted known-issue corroboration, not independent blind discovery. Author 20-case R3 pass not imported.",
+  "case_source": "new manually reasoned checks; no expected/pass import from author cases",
+  "acceptance": "Each assertion is prewritten. R1 results immutable. Any correction after results is a new version/regression. Passing probes do not prove all states or OS/IME evidence.",
+  "probes": [
+    {
+      "id": "P01",
+      "target": "whole grapheme material and ACK after cooperative no-ACK",
+      "expected": "No-ACK preserves document/version/source seq/serial/IDs/normalized seq; exact frozen retry admits all 2 graphemes once before ACK; nextId3"
+    },
+    {
+      "id": "P02",
+      "target": "two original-base replacements and surrogate boundary",
+      "expected": "Material yx in ascending offsets; original middle not copied; invalid surrogate split leaves body/document/serial intact"
+    },
+    {
+      "id": "P03",
+      "target": "permanent capacity and retry",
+      "expected": "All-zero held material, mirror may advance, source/serial consumed; same operation retry ignored, existing IDs/ink unchanged"
+    },
+    {
+      "id": "P04",
+      "target": "transport and operation duplicate payload no-read",
+      "expected": "Two same-text new serials add twice; transport/echo duplicate getters never read; IDs unique and monotonically ordered"
+    },
+    {
+      "id": "P05",
+      "target": "source gap, trusted primary rebase, epoch",
+      "expected": "Gap disclosed without guessed material; only primary rebase restores source; ordinary baseline never becomes material; stale epoch getter never read; old IDs persist"
+    },
+    {
+      "id": "P06",
+      "target": "incapable declaration and unknown IME final",
+      "expected": "Document-only edits or unknown final may update mirror but add no material/window/query after quiet; preedit never material"
+    },
+    {
+      "id": "P07",
+      "target": "undo redo",
+      "expected": "Document changes, append body/IDs/ink stay; lexical pending/candidate/window invalidated; no added material"
+    },
+    {
+      "id": "P08",
+      "target": "deferred stale reply and original evidence expiry",
+      "expected": "New input rejects prior-token answer; current matching reply accepted; after original expiry never applies stale shape"
+    },
+    {
+      "id": "P09",
+      "target": "saving-off export and restart",
+      "expected": "Exact allowlist keys, no raw text/ID/order/doc/preedit/query fields; restarted body empty; saving-on without opt-in throws; opted-in save has only admitted body"
+    },
+    {
+      "id": "P10",
+      "target": "secure/capture/off before payload read",
+      "expected": "Text disabled routes and unknown source rejected/suppressed without data getter; activity alone does not add material"
+    },
+    {
+      "id": "P11",
+      "target": "known pending-parallel-producer defect",
+      "expected": "Both colliding producers append provenance becomes unsupported and original pending cleared; no future ordinary baseline can silently rehabilitate either route",
+      "label": "targeted corroboration of root-relayed issue"
+    }
+  ],
+  "non_claims": [
+    "No authentication or OS confirmation",
+    "No actual textarea/widget adapter finished",
+    "No upstream losslessness/comfort/CPU/RAM claim",
+    "No arbitrary text semantic inference"
+  ]
+}

@@ -1,0 +1,1739 @@
+{
+  "grammar": "independent.synthetic.review.v1-r2-harness",
+  "sourceSnapshot": "frozen-r3",
+  "nodeVersion": "v26.4.0",
+  "scope": "Artificial clock and text only; no OS authentication/IME/model/UI/real input",
+  "knownPriorIssueProbe": "P11",
+  "probes": [
+    {
+      "id": "P01",
+      "passed": true,
+      "checks": [
+        {
+          "name": "no ACK",
+          "actual": false,
+          "expected": false,
+          "passed": true
+        },
+        {
+          "name": "protected state unchanged",
+          "actual": {
+            "document": {
+              "documentId": "reviewDoc",
+              "version": 0,
+              "text": ""
+            },
+            "serial": 0,
+            "normalizedSeq": 1,
+            "body": [
+              {
+                "id": 1,
+                "text": "👩‍💻",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "箱",
+                "ink": "blue"
+              }
+            ],
+            "nextId": 1,
+            "editorSeq": 1
+          },
+          "expected": {
+            "document": {
+              "documentId": "reviewDoc",
+              "version": 0,
+              "text": ""
+            },
+            "serial": 0,
+            "normalizedSeq": 1,
+            "body": [],
+            "nextId": 1,
+            "editorSeq": 1
+          },
+          "passed": true
+        },
+        {
+          "name": "bounded metadata whitelist, no payload",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "metadata stays event identity",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "bounded metadata encoded size",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "whole ACK after body",
+          "actual": {
+            "ack": true,
+            "added": 2,
+            "text": [
+              "👩‍💻",
+              "箱"
+            ],
+            "ids": [
+              1,
+              2
+            ],
+            "ink": [
+              "blue",
+              "blue"
+            ],
+            "nextId": 3,
+            "version": 1,
+            "editorSeq": 2,
+            "serial": 1
+          },
+          "expected": {
+            "ack": true,
+            "added": 2,
+            "text": [
+              "👩‍💻",
+              "箱"
+            ],
+            "ids": [
+              1,
+              2
+            ],
+            "ink": [
+              "blue",
+              "blue"
+            ],
+            "nextId": 3,
+            "version": 1,
+            "editorSeq": 2,
+            "serial": 1
+          },
+          "passed": true
+        },
+        {
+          "name": "admission stamp delivery time",
+          "actual": {
+            "at": 31,
+            "added": 2,
+            "reason": "whole-add-before-ack"
+          },
+          "expected": {
+            "at": 31,
+            "added": 2,
+            "reason": "whole-add-before-ack"
+          },
+          "passed": true
+        },
+        {
+          "name": "activity independent",
+          "actual": 3,
+          "expected": 3,
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 10,
+          "source": "system",
+          "kind": "admission-ready",
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 20,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "deferred",
+          "reason": "temporary-handoff",
+          "ack": false,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": true
+        },
+        {
+          "at": 21,
+          "source": "keys",
+          "kind": "activity",
+          "status": "activity",
+          "reason": "no-text-route",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": true
+        },
+        {
+          "at": 30,
+          "source": "system",
+          "kind": "admission-ready",
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": true
+        },
+        {
+          "at": 31,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 2,
+          "units": 2,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P02",
+      "passed": true,
+      "checks": [
+        {
+          "name": "original positions and material ordering",
+          "actual": {
+            "doc": {
+              "documentId": "reviewDoc",
+              "version": 1,
+              "text": "y😀Bx"
+            },
+            "text": "yx",
+            "ids": [
+              1,
+              2
+            ]
+          },
+          "expected": {
+            "doc": {
+              "documentId": "reviewDoc",
+              "version": 1,
+              "text": "y😀Bx"
+            },
+            "text": "yx",
+            "ids": [
+              1,
+              2
+            ]
+          },
+          "passed": true
+        },
+        {
+          "name": "surrogate split rejected",
+          "actual": "invalid-changes",
+          "expected": "invalid-changes",
+          "passed": true
+        },
+        {
+          "name": "all document and material unchanged after rejection",
+          "actual": {
+            "document": {
+              "documentId": "reviewDoc",
+              "version": 1,
+              "text": "y😀Bx"
+            },
+            "serial": 1,
+            "normalizedSeq": 2,
+            "body": [
+              {
+                "id": 1,
+                "text": "y",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "x",
+                "ink": "blue"
+              }
+            ],
+            "nextId": 3,
+            "editorSeq": 2
+          },
+          "expected": {
+            "document": {
+              "documentId": "reviewDoc",
+              "version": 1,
+              "text": "y😀Bx"
+            },
+            "serial": 1,
+            "normalizedSeq": 2,
+            "body": [
+              {
+                "id": 1,
+                "text": "y",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "x",
+                "ink": "blue"
+              }
+            ],
+            "nextId": 3,
+            "editorSeq": 2
+          },
+          "passed": true
+        },
+        {
+          "name": "rejected source seq consumed",
+          "actual": 3,
+          "expected": 3,
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 10,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 2,
+          "units": 2,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 20,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "rejected",
+          "reason": "invalid-changes",
+          "ack": true,
+          "added": 0,
+          "units": 2,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P03",
+      "passed": true,
+      "checks": [
+        {
+          "name": "all-zero permanent hold",
+          "actual": {
+            "status": "held",
+            "reason": "body-capacity",
+            "ack": true,
+            "added": 0,
+            "body": [
+              {
+                "id": 1,
+                "text": "Q",
+                "ink": "green"
+              }
+            ],
+            "doc": {
+              "documentId": "reviewDoc",
+              "version": 1,
+              "text": "ABXY"
+            },
+            "serial": 2,
+            "seq": 2,
+            "nextId": 2,
+            "normalized": 2
+          },
+          "expected": {
+            "status": "held",
+            "reason": "body-capacity",
+            "ack": true,
+            "added": 0,
+            "body": [
+              {
+                "id": 1,
+                "text": "Q",
+                "ink": "green"
+              }
+            ],
+            "doc": {
+              "documentId": "reviewDoc",
+              "version": 1,
+              "text": "ABXY"
+            },
+            "serial": 2,
+            "seq": 2,
+            "nextId": 2,
+            "normalized": 2
+          },
+          "passed": true
+        },
+        {
+          "name": "retry not endless",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "name": "retry duplicate",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "units": 1,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 2,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 1,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 3,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "held",
+          "reason": "body-capacity",
+          "ack": true,
+          "added": 0,
+          "units": 1,
+          "serial": 2,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 4,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "ignored",
+          "reason": "transport-duplicate",
+          "ack": true,
+          "added": 0,
+          "units": 1,
+          "serial": 2,
+          "normalizedSeq": 2,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P04",
+      "passed": true,
+      "checks": [
+        {
+          "name": "two actual operations retained",
+          "actual": {
+            "body": "輪輪",
+            "ids": [
+              1,
+              2
+            ],
+            "inks": [
+              "blue",
+              "purple"
+            ],
+            "nextId": 3
+          },
+          "expected": {
+            "body": "輪輪",
+            "ids": [
+              1,
+              2
+            ],
+            "inks": [
+              "blue",
+              "purple"
+            ],
+            "nextId": 3
+          },
+          "passed": true
+        },
+        {
+          "name": "duplicate gates do not touch payload",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "distinct duplicate types",
+          "actual": {
+            "transport": 1,
+            "operation": 1
+          },
+          "expected": {
+            "transport": 1,
+            "operation": 1
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "units": 1,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 2,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "units": 2,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 3,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "ignored",
+          "reason": "transport-duplicate",
+          "ack": true,
+          "added": 0,
+          "units": 2,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 4,
+          "source": "echo",
+          "kind": "document-edit",
+          "status": "ignored",
+          "reason": "operation-duplicate",
+          "ack": true,
+          "added": 0,
+          "units": 2,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P05",
+      "passed": true,
+      "checks": [
+        {
+          "name": "source gap invalidates provenance",
+          "actual": {
+            "units": 0,
+            "unsupported": false,
+            "needs": true
+          },
+          "expected": {
+            "units": 0,
+            "unsupported": false,
+            "needs": true
+          },
+          "passed": true
+        },
+        {
+          "name": "ordinary baseline not provenance repair",
+          "actual": {
+            "body": "",
+            "doc": "RX",
+            "serial": 0
+          },
+          "expected": {
+            "body": "",
+            "doc": "RX",
+            "serial": 0
+          },
+          "passed": true
+        },
+        {
+          "name": "primary rebase repairs declared source",
+          "actual": {
+            "body": "Y",
+            "ids": [
+              1
+            ],
+            "append": true
+          },
+          "expected": {
+            "body": "Y",
+            "ids": [
+              1
+            ],
+            "append": true
+          },
+          "passed": true
+        },
+        {
+          "name": "stale epoch no read and prior IDs persist",
+          "actual": {
+            "reads": 0,
+            "body": "Y",
+            "ids": [
+              1
+            ],
+            "serial": 0
+          },
+          "expected": {
+            "reads": 0,
+            "body": "Y",
+            "ids": [
+              1
+            ],
+            "serial": 0
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 10,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "rejected",
+          "reason": "document-gap",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 20,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 30,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "preview",
+          "reason": "unknown-commit-quality",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 40,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 4,
+          "pending": false
+        },
+        {
+          "at": 50,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "units": 1,
+          "serial": 1,
+          "normalizedSeq": 5,
+          "pending": false
+        },
+        {
+          "at": 60,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 1,
+          "serial": 0,
+          "normalizedSeq": 6,
+          "pending": false
+        },
+        {
+          "at": 61,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "ignored",
+          "reason": "stale-epoch",
+          "ack": true,
+          "added": 0,
+          "units": 1,
+          "serial": 0,
+          "normalizedSeq": 6,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P06",
+      "passed": true,
+      "checks": [
+        {
+          "name": "unknown and incapable cannot become material",
+          "actual": {
+            "body": "",
+            "doc": "箱輪",
+            "version": 2,
+            "serial": 0,
+            "window": 0,
+            "queries": 0,
+            "shape": "sphere"
+          },
+          "expected": {
+            "body": "",
+            "doc": "箱輪",
+            "version": 2,
+            "serial": 0,
+            "window": 0,
+            "queries": 0,
+            "shape": "sphere"
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "editor",
+          "kind": "composition-start",
+          "status": "preview",
+          "reason": "preedit-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 2,
+          "source": "editor",
+          "kind": "composition-update",
+          "status": "preview",
+          "reason": "preedit-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 3,
+          "source": "editor",
+          "kind": "composition-final",
+          "status": "preview",
+          "reason": "unknown-commit-quality",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 4,
+          "source": "documentApi",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 5,
+          "source": "documentApi",
+          "kind": "document-edit",
+          "status": "preview",
+          "reason": "unknown-commit-quality",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P07",
+      "passed": true,
+      "checks": [
+        {
+          "name": "deferred request exists",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "undo redo keeps append history",
+          "actual": {
+            "body": "box ",
+            "ids": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "inks": [
+              "purple",
+              "purple",
+              "purple",
+              "purple"
+            ],
+            "doc": "box ",
+            "version": 3,
+            "serial": 3,
+            "window": 0,
+            "pending": null,
+            "candidate": null,
+            "shape": "sphere",
+            "queries": 1
+          },
+          "expected": {
+            "body": "box ",
+            "ids": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "inks": [
+              "purple",
+              "purple",
+              "purple",
+              "purple"
+            ],
+            "doc": "box ",
+            "version": 3,
+            "serial": 3,
+            "window": 0,
+            "pending": null,
+            "candidate": null,
+            "shape": "sphere",
+            "queries": 1
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 4,
+          "units": 4,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 2100,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 0,
+          "units": 4,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 2200,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 0,
+          "units": 4,
+          "serial": 3,
+          "normalizedSeq": 4,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P08",
+      "passed": true,
+      "checks": [
+        {
+          "name": "older dirty request ignored",
+          "actual": "stale-answer",
+          "expected": "stale-answer",
+          "passed": true
+        },
+        {
+          "name": "current token accepted",
+          "actual": "current-answer",
+          "expected": "current-answer",
+          "passed": true
+        },
+        {
+          "name": "current ring only after hysteresis",
+          "actual": {
+            "shape": "ring",
+            "changes": 1,
+            "stale": 1,
+            "accepted": 1,
+            "queries": 2
+          },
+          "expected": {
+            "shape": "ring",
+            "changes": 1,
+            "stale": 1,
+            "accepted": 1,
+            "queries": 2
+          },
+          "passed": true
+        },
+        {
+          "name": "original evidence expiry is strict",
+          "actual": {
+            "shape": "sphere",
+            "accepted": 0,
+            "stale": 1
+          },
+          "expected": {
+            "shape": "sphere",
+            "accepted": 0,
+            "stale": 1
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 4,
+          "units": 4,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 2500,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 4,
+          "units": 8,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 2501,
+          "source": "worker",
+          "kind": "shape-answer",
+          "status": "ignored",
+          "reason": "stale-answer",
+          "ack": true,
+          "added": 0,
+          "units": 8,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 4001,
+          "source": "worker",
+          "kind": "shape-answer",
+          "status": "answered",
+          "reason": "current-answer",
+          "ack": true,
+          "added": 0,
+          "units": 8,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 3,
+          "units": 3,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 6000,
+          "source": "worker",
+          "kind": "shape-answer",
+          "status": "ignored",
+          "reason": "stale-answer",
+          "ack": true,
+          "added": 0,
+          "units": 3,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P09",
+      "passed": true,
+      "checks": [
+        {
+          "name": "exact off allowlist",
+          "actual": [
+            "count",
+            "counters",
+            "grammar",
+            "inkCounts",
+            "now",
+            "presentedCount",
+            "savingOff",
+            "seed",
+            "shape",
+            "version"
+          ],
+          "expected": [
+            "count",
+            "counters",
+            "grammar",
+            "inkCounts",
+            "now",
+            "presentedCount",
+            "savingOff",
+            "seed",
+            "shape",
+            "version"
+          ],
+          "passed": true
+        },
+        {
+          "name": "no raw private strings",
+          "actual": false,
+          "expected": false,
+          "passed": true
+        },
+        {
+          "name": "restart has empty volatile state",
+          "actual": {
+            "body": [],
+            "nextId": 1,
+            "document": null,
+            "pending": null,
+            "recent": []
+          },
+          "expected": {
+            "body": [],
+            "nextId": 1,
+            "document": null,
+            "pending": null,
+            "recent": []
+          },
+          "passed": true
+        },
+        {
+          "name": "saving on requires declaration",
+          "actual": true,
+          "expected": true,
+          "passed": true
+        },
+        {
+          "name": "saving on body only",
+          "actual": [
+            {
+              "id": 1,
+              "text": "Z",
+              "ink": "purple"
+            }
+          ],
+          "expected": [
+            {
+              "id": 1,
+              "text": "Z",
+              "ink": "purple"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "name": "saving on not document",
+          "actual": false,
+          "expected": false,
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 4,
+          "units": 4,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 2,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 4,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 3,
+          "source": "editor",
+          "kind": "composition-start",
+          "status": "preview",
+          "reason": "preedit-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 4,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 4,
+          "source": "editor",
+          "kind": "composition-update",
+          "status": "preview",
+          "reason": "preedit-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 4,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "units": 1,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 2,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 1,
+          "serial": 1,
+          "normalizedSeq": 2,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P10",
+      "passed": true,
+      "checks": [
+        {
+          "name": "pre-payload route guards",
+          "actual": {
+            "reads": 0,
+            "body": "",
+            "keys": 9,
+            "queries": 0
+          },
+          "expected": {
+            "reads": 0,
+            "body": "",
+            "keys": 9,
+            "queries": 0
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 1,
+          "source": "rogue",
+          "kind": "explicit-send",
+          "status": "rejected",
+          "reason": "unknown-source-session",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 2,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 3,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "suppressed",
+          "reason": "text-route-disabled",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 4,
+          "source": "system",
+          "kind": "policy",
+          "status": "controlled",
+          "reason": "policy",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 3,
+          "pending": false
+        },
+        {
+          "at": 5,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 4,
+          "pending": false
+        },
+        {
+          "at": 6,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "suppressed",
+          "reason": "text-route-disabled",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 4,
+          "pending": false
+        },
+        {
+          "at": 7,
+          "source": "system",
+          "kind": "policy",
+          "status": "controlled",
+          "reason": "policy",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 5,
+          "pending": false
+        },
+        {
+          "at": 8,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "suppressed",
+          "reason": "text-route-disabled",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 5,
+          "pending": false
+        },
+        {
+          "at": 9,
+          "source": "keys",
+          "kind": "activity",
+          "status": "activity",
+          "reason": "no-text-route",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 5,
+          "pending": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "P11",
+      "passed": true,
+      "checks": [
+        {
+          "name": "both producers lose append provenance after pending collision",
+          "actual": [
+            "editor",
+            "sender"
+          ],
+          "expected": [
+            "editor",
+            "sender"
+          ],
+          "passed": true
+        },
+        {
+          "name": "slot cleared without adding body",
+          "actual": {
+            "pending": null,
+            "body": "",
+            "serial": 0
+          },
+          "expected": {
+            "pending": null,
+            "body": "",
+            "serial": 0
+          },
+          "passed": true
+        },
+        {
+          "name": "ordinary baseline cannot silently restore collided producer",
+          "actual": "",
+          "expected": "",
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "at": 0,
+          "source": "system",
+          "kind": "focus",
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 0,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 10,
+          "source": "system",
+          "kind": "admission-ready",
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": false
+        },
+        {
+          "at": 20,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "deferred",
+          "reason": "temporary-handoff",
+          "ack": false,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 1,
+          "pending": true
+        },
+        {
+          "at": 21,
+          "source": "sender",
+          "kind": "explicit-send",
+          "status": "unsupported",
+          "reason": "single-retry-slot-only",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 30,
+          "source": "system",
+          "kind": "admission-ready",
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 31,
+          "source": "editor",
+          "kind": "baseline",
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "pending": false
+        },
+        {
+          "at": 32,
+          "source": "editor",
+          "kind": "document-edit",
+          "status": "preview",
+          "reason": "unknown-commit-quality",
+          "ack": true,
+          "added": 0,
+          "units": 0,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "pending": false
+        }
+      ],
+      "error": null
+    }
+  ],
+  "passed": 11,
+  "failed": 0
+}

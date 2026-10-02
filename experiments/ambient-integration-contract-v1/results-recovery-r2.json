@@ -1,0 +1,176 @@
+{
+  "syntheticOnly": true,
+  "passed": true,
+  "receiveCalls": 11,
+  "failures": [],
+  "decisions": [
+    {
+      "source": "system",
+      "seq": 1,
+      "kind": "focus",
+      "ack": {
+        "at": 0,
+        "status": "controlled",
+        "reason": "focus",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "editor",
+      "seq": 1,
+      "kind": "baseline",
+      "ack": {
+        "at": 10,
+        "status": "observed",
+        "reason": "baseline-never-material",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "system",
+      "seq": 2,
+      "kind": "admission-ready",
+      "ack": {
+        "at": 20,
+        "status": "controlled",
+        "reason": "admission-ready",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "editor",
+      "seq": 2,
+      "kind": "document-edit",
+      "ack": {
+        "at": 30,
+        "status": "deferred",
+        "reason": "temporary-handoff",
+        "ack": false,
+        "added": 0
+      }
+    },
+    {
+      "source": "sender",
+      "seq": 1,
+      "kind": "explicit-send",
+      "ack": {
+        "at": 40,
+        "status": "unsupported",
+        "reason": "single-retry-slot-only",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "system",
+      "seq": 3,
+      "kind": "admission-ready",
+      "ack": {
+        "at": 50,
+        "status": "controlled",
+        "reason": "admission-ready",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "editor",
+      "seq": 3,
+      "kind": "baseline",
+      "ack": {
+        "at": 60,
+        "status": "observed",
+        "reason": "baseline-never-material",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "editor",
+      "seq": 4,
+      "kind": "document-edit",
+      "ack": {
+        "at": 70,
+        "status": "preview",
+        "reason": "unknown-commit-quality",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "sender",
+      "seq": 2,
+      "kind": "explicit-send",
+      "ack": {
+        "at": 80,
+        "status": "suppressed",
+        "reason": "known-selection-required",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "editor",
+      "seq": 5,
+      "kind": "baseline",
+      "ack": {
+        "at": 90,
+        "status": "observed",
+        "reason": "baseline-never-material",
+        "ack": true,
+        "added": 0
+      }
+    },
+    {
+      "source": "editor",
+      "seq": 6,
+      "kind": "document-edit",
+      "ack": {
+        "at": 100,
+        "status": "accepted",
+        "reason": "whole-add-before-ack",
+        "ack": true,
+        "added": 1
+      }
+    }
+  ],
+  "beforeProjection": {
+    "body": "",
+    "document": {
+      "text": "観測X",
+      "version": 6
+    },
+    "serial": 0,
+    "appendUnsupported": [
+      "editor",
+      "sender"
+    ],
+    "newEditorXAdded": 0,
+    "newSenderXAdded": 0
+  },
+  "afterProjection": {
+    "body": "Y",
+    "units": 1,
+    "ids": [
+      1
+    ],
+    "inks": [
+      "green"
+    ],
+    "document": {
+      "text": "観測XY",
+      "version": 7
+    },
+    "serial": 2,
+    "appendUnsupported": [
+      "sender"
+    ]
+  },
+  "planSha256": "4008be420e0a054f0658a3a73d29c79fd330913bf7b75493a12d663ae28666e9",
+  "sourceSha256": "96550b3131ad8275d61d5463d11f5e9f0684a8959897f6a45d8452c472df2e57",
+  "runnerSha256": "385cc187ae793fc06dc6adf577065bd3f36ebd99cb053f9f06dcc7d64f3415d4",
+  "scope": "Post-review regression; ordinary baseline does not restore unsupported append provenance. Explicit rebase is only a synthetic declaration."
+}

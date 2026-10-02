@@ -1,5 +1,7 @@
 # Glyph Matter — 文字のかたち
 
+人工統合R3では、材料を全体追加してからACKし、本文・ID列を保存offから除く境界を確認しました。別入力元の割込みと活動イベントの欠落で見つけた旧版不具合も保持。[結果と公開確認](experiments/ambient-integration-publication-v1/README.md) / [独立review](experiments/ambient-integration-review-v1/README.md)。次は専用編集欄の実DOM接続で、全アプリ入力連動は未実装です。
+
 ### Metalの小窓・3形の独立比較版
 
 球・箱・メビウスの文字表面をMac標準の描画へ移した候補。回転中の端切れを新v2で修正しました。実小窓の白い球・1,536描画・90秒ではCPU2.661%／charged peak68.298MiBですが、60形版との機能差があり既定版は維持します。反復WKの描画周期gate失敗も原票ごと保存。[作成・操作](desktop/glyph-metal-lab-v2/README.md) / [画面と射影](experiments/widget-metal-framing-v2/README.md) / [実窓比較・制限](experiments/widget-metal-native-evaluation-v2/REPORT.md)。

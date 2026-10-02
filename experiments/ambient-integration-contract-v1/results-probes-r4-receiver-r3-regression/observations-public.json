@@ -1,0 +1,561 @@
+{
+  "publicationTransform": "Only runtime-mutant source strings removed; assertions, decisions, expected/actual and failures retained.",
+  "rawLocalSha256": "9bec7df99c9d177d82e3e6ec275e51a997c2a533685de20fc41eb56fdb52de6e",
+  "observations": [
+    {
+      "id": "P01",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 2,
+      "details": {
+        "detections": [
+          {
+            "key": "text",
+            "detected": true
+          },
+          {
+            "key": "ids",
+            "detected": true
+          },
+          {
+            "key": "colorOrder",
+            "detected": true
+          },
+          {
+            "key": "query",
+            "detected": true
+          },
+          {
+            "key": "window",
+            "detected": true
+          },
+          {
+            "key": "dictionary",
+            "detected": true
+          },
+          {
+            "key": "fingerprint",
+            "detected": true
+          },
+          {
+            "key": "origin",
+            "detected": true
+          },
+          {
+            "key": "glyphIdSequence",
+            "detected": true
+          },
+          {
+            "key": "body",
+            "detected": true
+          }
+        ],
+        "exported": {
+          "grammar": "ambient.integration.v1",
+          "version": "ambient-integration-contract-v1-r1",
+          "savingOff": true,
+          "seed": 1,
+          "shape": "sphere",
+          "now": 0,
+          "count": 12,
+          "presentedCount": 0,
+          "inkCounts": {
+            "white": 0,
+            "blue": 12,
+            "green": 0,
+            "purple": 0
+          },
+          "counters": {
+            "received": 2,
+            "addedUnits": 12,
+            "admissions": 1,
+            "permanentHolds": 0,
+            "deferrals": 0,
+            "gaps": 0,
+            "documentGaps": 0,
+            "serialGaps": 0,
+            "trustedRebases": 0,
+            "invalidChanges": 0,
+            "transportDuplicates": 0,
+            "operationDuplicates": 0,
+            "activityKeys": 0,
+            "activityShortcuts": 0,
+            "queries": 0,
+            "shapeChanges": 0,
+            "cachedSamples": 0,
+            "candidateExpiries": 0,
+            "staleAnswers": 0,
+            "acceptedAnswers": 0,
+            "unsupportedModes": 0,
+            "queuePeak": 12,
+            "pendingSlotPeak": 0,
+            "hiddenWork": 0,
+            "normalizedForwardGaps": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "P02",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 2,
+      "details": {
+        "exported": {
+          "grammar": "ambient.integration.v1",
+          "version": "ambient-integration-contract-v1-r1",
+          "savingOff": false,
+          "seed": 1,
+          "shape": "sphere",
+          "now": 0,
+          "count": 2,
+          "presentedCount": 0,
+          "inkCounts": {
+            "white": 0,
+            "blue": 2,
+            "green": 0,
+            "purple": 0
+          },
+          "counters": {
+            "received": 2,
+            "addedUnits": 2,
+            "admissions": 1,
+            "permanentHolds": 0,
+            "deferrals": 0,
+            "gaps": 0,
+            "documentGaps": 0,
+            "serialGaps": 0,
+            "trustedRebases": 0,
+            "invalidChanges": 0,
+            "transportDuplicates": 0,
+            "operationDuplicates": 0,
+            "activityKeys": 0,
+            "activityShortcuts": 0,
+            "queries": 0,
+            "shapeChanges": 0,
+            "cachedSamples": 0,
+            "candidateExpiries": 0,
+            "staleAnswers": 0,
+            "acceptedAnswers": 0,
+            "unsupportedModes": 0,
+            "queuePeak": 2,
+            "pendingSlotPeak": 0,
+            "hiddenWork": 0,
+            "normalizedForwardGaps": 0
+          },
+          "body": [
+            {
+              "id": 1,
+              "text": "青",
+              "ink": "blue"
+            },
+            {
+              "id": 2,
+              "text": "🙂",
+              "ink": "blue"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 3,
+      "details": {
+        "hold": {
+          "at": 200,
+          "status": "held",
+          "reason": "body-capacity",
+          "ack": true,
+          "added": 0
+        },
+        "queuePeak": 256
+      }
+    },
+    {
+      "id": "P04",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 3,
+      "details": {
+        "result": {
+          "at": 0,
+          "status": "rejected",
+          "reason": "invalid-changes",
+          "ack": true,
+          "added": 0
+        }
+      }
+    },
+    {
+      "id": "P05",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 5,
+      "details": {
+        "pending": {
+          "at": 0,
+          "status": "deferred",
+          "reason": "temporary-handoff",
+          "ack": false,
+          "added": 0
+        },
+        "other": {
+          "at": 0,
+          "status": "unsupported",
+          "reason": "single-retry-slot-only",
+          "ack": true,
+          "added": 0
+        },
+        "state": {
+          "body": "",
+          "units": 0,
+          "unitTexts": [],
+          "ids": [],
+          "inks": [],
+          "inkCounts": {
+            "white": 0,
+            "blue": 0,
+            "green": 0,
+            "purple": 0
+          },
+          "document": {
+            "text": "",
+            "version": 0
+          },
+          "composition": null,
+          "serial": 0,
+          "normalizedSeq": 2,
+          "sourceSeq": {
+            "system": 2,
+            "keys": 0,
+            "editor": 1,
+            "echo": 0,
+            "documentApi": 0,
+            "sender": 1,
+            "worker": 0
+          },
+          "appendUnsupported": [
+            "editor",
+            "sender"
+          ],
+          "pendingSlots": 0,
+          "nextId": 1,
+          "presented": 0,
+          "windowUtf16": 0,
+          "candidate": null,
+          "shape": "sphere",
+          "shapeAt": 0,
+          "holdReasons": [],
+          "ackAddedAt": null,
+          "received": 5,
+          "addedUnits": 0,
+          "admissions": 0,
+          "permanentHolds": 0,
+          "deferrals": 1,
+          "gaps": 1,
+          "documentGaps": 0,
+          "serialGaps": 0,
+          "trustedRebases": 0,
+          "invalidChanges": 0,
+          "transportDuplicates": 0,
+          "operationDuplicates": 0,
+          "activityKeys": 0,
+          "activityShortcuts": 0,
+          "queries": 0,
+          "shapeChanges": 0,
+          "cachedSamples": 0,
+          "candidateExpiries": 0,
+          "staleAnswers": 0,
+          "acceptedAnswers": 0,
+          "unsupportedModes": 0,
+          "queuePeak": 0,
+          "pendingSlotPeak": 1,
+          "hiddenWork": 0,
+          "normalizedForwardGaps": 0
+        }
+      }
+    },
+    {
+      "id": "P06",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 4,
+      "details": {
+        "state": {
+          "body": "AB",
+          "units": 2,
+          "unitTexts": [
+            "A",
+            "B"
+          ],
+          "ids": [
+            1,
+            2
+          ],
+          "inks": [
+            "green",
+            "green"
+          ],
+          "inkCounts": {
+            "white": 0,
+            "blue": 0,
+            "green": 2,
+            "purple": 0
+          },
+          "document": {
+            "text": "ABCD",
+            "version": 2
+          },
+          "composition": null,
+          "serial": 2,
+          "normalizedSeq": 2,
+          "sourceSeq": {
+            "system": 1,
+            "keys": 0,
+            "editor": 3,
+            "echo": 0,
+            "documentApi": 0,
+            "sender": 0,
+            "worker": 0
+          },
+          "appendUnsupported": [],
+          "pendingSlots": 0,
+          "nextId": 3,
+          "presented": 0,
+          "windowUtf16": 2,
+          "candidate": null,
+          "shape": "sphere",
+          "shapeAt": 0,
+          "holdReasons": [
+            "body-capacity"
+          ],
+          "ackAddedAt": 0,
+          "received": 4,
+          "addedUnits": 2,
+          "admissions": 1,
+          "permanentHolds": 1,
+          "deferrals": 0,
+          "gaps": 0,
+          "documentGaps": 0,
+          "serialGaps": 0,
+          "trustedRebases": 0,
+          "invalidChanges": 0,
+          "transportDuplicates": 0,
+          "operationDuplicates": 0,
+          "activityKeys": 0,
+          "activityShortcuts": 0,
+          "queries": 0,
+          "shapeChanges": 0,
+          "cachedSamples": 0,
+          "candidateExpiries": 0,
+          "staleAnswers": 0,
+          "acceptedAnswers": 0,
+          "unsupportedModes": 0,
+          "queuePeak": 2,
+          "pendingSlotPeak": 0,
+          "hiddenWork": 0,
+          "normalizedForwardGaps": 0
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 1001,
+      "details": {
+        "boundedStateUtf8Bytes": 7088,
+        "metrics": {
+          "received": 1001,
+          "addedUnits": 0,
+          "admissions": 0,
+          "permanentHolds": 0,
+          "deferrals": 0,
+          "gaps": 0,
+          "documentGaps": 0,
+          "serialGaps": 0,
+          "trustedRebases": 0,
+          "invalidChanges": 0,
+          "transportDuplicates": 0,
+          "operationDuplicates": 0,
+          "activityKeys": 1000000,
+          "activityShortcuts": 0,
+          "queries": 0,
+          "shapeChanges": 0,
+          "cachedSamples": 0,
+          "candidateExpiries": 0,
+          "staleAnswers": 0,
+          "acceptedAnswers": 0,
+          "unsupportedModes": 0,
+          "queuePeak": 0,
+          "pendingSlotPeak": 0,
+          "hiddenWork": 0,
+          "normalizedForwardGaps": 0
+        }
+      }
+    },
+    {
+      "id": "P08",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 4,
+      "details": {
+        "ack": {
+          "at": 3000,
+          "status": "ignored",
+          "reason": "stale-answer",
+          "ack": true,
+          "added": 0
+        },
+        "state": {
+          "body": "box 輪",
+          "units": 5,
+          "unitTexts": [
+            "b",
+            "o",
+            "x",
+            " ",
+            "輪"
+          ],
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "inks": [
+            "blue",
+            "blue",
+            "blue",
+            "blue",
+            "blue"
+          ],
+          "inkCounts": {
+            "white": 0,
+            "blue": 5,
+            "green": 0,
+            "purple": 0
+          },
+          "document": null,
+          "composition": null,
+          "serial": 2,
+          "normalizedSeq": 3,
+          "sourceSeq": {
+            "system": 1,
+            "keys": 0,
+            "editor": 0,
+            "echo": 0,
+            "documentApi": 0,
+            "sender": 2,
+            "worker": 1
+          },
+          "appendUnsupported": [],
+          "pendingSlots": 0,
+          "nextId": 6,
+          "presented": 5,
+          "windowUtf16": 5,
+          "candidate": null,
+          "shape": "sphere",
+          "shapeAt": 0,
+          "holdReasons": [],
+          "ackAddedAt": 0,
+          "received": 4,
+          "addedUnits": 5,
+          "admissions": 2,
+          "permanentHolds": 0,
+          "deferrals": 0,
+          "gaps": 0,
+          "documentGaps": 0,
+          "serialGaps": 0,
+          "trustedRebases": 0,
+          "invalidChanges": 0,
+          "transportDuplicates": 0,
+          "operationDuplicates": 0,
+          "activityKeys": 0,
+          "activityShortcuts": 0,
+          "queries": 1,
+          "shapeChanges": 0,
+          "cachedSamples": 0,
+          "candidateExpiries": 0,
+          "staleAnswers": 1,
+          "acceptedAnswers": 0,
+          "unsupportedModes": 0,
+          "queuePeak": 4,
+          "pendingSlotPeak": 0,
+          "hiddenWork": 0,
+          "normalizedForwardGaps": 0
+        }
+      }
+    },
+    {
+      "id": "M01",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 3,
+      "details": {
+        "detected": true,
+        "mutatedSourceSha256": "eb4f88ab39c7a2ac0095d67b481ffa18c792fa077b48458298b4146b8c84e223",
+        "recipe": "Reconstruct executed alternate code from run-probes.mjs mutation anchors, effective receiver source and fixed scheduler constants. The source SHA identifies the executed in-memory module; raw runtime file URLs remain local."
+      }
+    },
+    {
+      "id": "M02",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 4,
+      "details": {
+        "detected": true,
+        "mutatedSourceSha256": "fd860c3012a4e1c276b63ccd0e5d792cb0e6aca1eb338070bad1cd77495e9d62",
+        "recipe": "Reconstruct executed alternate code from run-probes.mjs mutation anchors, effective receiver source and fixed scheduler constants. The source SHA identifies the executed in-memory module; raw runtime file URLs remain local."
+      }
+    },
+    {
+      "id": "M03",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 3,
+      "details": {
+        "detected": true,
+        "mutatedSourceSha256": "2d361e9c4e676959214a16eaa002b80cfb7be2cfbbb8c6aa89eacb2e2aa13c66",
+        "recipe": "Reconstruct executed alternate code from run-probes.mjs mutation anchors, effective receiver source and fixed scheduler constants. The source SHA identifies the executed in-memory module; raw runtime file URLs remain local."
+      }
+    },
+    {
+      "id": "M04",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 2,
+      "details": {
+        "detected": true,
+        "mutatedSourceSha256": "b9e02451c553e699a606bfb7ce702489f27cd3a9538433a933d39a7c2f1dd424",
+        "recipe": "Reconstruct executed alternate code from run-probes.mjs mutation anchors, effective receiver source and fixed scheduler constants. The source SHA identifies the executed in-memory module; raw runtime file URLs remain local."
+      }
+    },
+    {
+      "id": "M05",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 4,
+      "details": {
+        "detected": true,
+        "mutatedSourceSha256": "b1c180ea1281daa2f662132f38a0b4d161d77cd00b1b57827478d02552eeb161",
+        "recipe": "Reconstruct executed alternate code from run-probes.mjs mutation anchors, effective receiver source and fixed scheduler constants. The source SHA identifies the executed in-memory module; raw runtime file URLs remain local."
+      }
+    },
+    {
+      "id": "M06",
+      "passed": true,
+      "failures": [],
+      "receiveCalls": 2,
+      "details": {
+        "detected": true,
+        "mutatedSourceSha256": "e17a8207a8f4fed031c6e9a5e86817f6b32c2f283904d1bceafc4dcdaf0b90b4",
+        "recipe": "Reconstruct executed alternate code from run-probes.mjs mutation anchors, effective receiver source and fixed scheduler constants. The source SHA identifies the executed in-memory module; raw runtime file URLs remain local."
+      }
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "version": "supplementary-independent-boundary-v1",
+  "snapshot": "frozen-r2",
+  "knownPostR1": true,
+  "expectationsFrozenBeforeThisExecution": true,
+  "scope": "artificial-only; S01 requires spec boundary decision; S02 violates frozen-producer precondition intentionally; S04 is observation, not real IME behavior",
+  "rows": [
+    {
+      "id": "S01",
+      "classification": "boundary interpretation: independent activity source loss",
+      "checks": [
+        {
+          "name": "activity gap leaves unrelated cooperative text pending and provenance intact",
+          "actual": {
+            "pending": "editor",
+            "editorSupported": true,
+            "keys": 1
+          },
+          "expected": {
+            "pending": "editor",
+            "editorSupported": true,
+            "keys": 1
+          },
+          "passed": true
+        },
+        {
+          "name": "frozen text retry remains admissible after activity-only loss",
+          "actual": {
+            "status": "accepted",
+            "ack": true,
+            "body": "X"
+          },
+          "expected": {
+            "status": "accepted",
+            "ack": true,
+            "body": "X"
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "source": "system",
+          "kind": "focus",
+          "at": 0,
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "editor",
+          "kind": "baseline",
+          "at": 0,
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "system",
+          "kind": "admission-ready",
+          "at": 10,
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "editor",
+          "kind": "document-edit",
+          "at": 20,
+          "status": "deferred",
+          "reason": "temporary-handoff",
+          "ack": false,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "keys",
+          "kind": "activity",
+          "at": 21,
+          "status": "activity",
+          "reason": "no-text-route",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "system",
+          "kind": "admission-ready",
+          "at": 30,
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "editor",
+          "kind": "document-edit",
+          "at": 31,
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "body": "X",
+          "appendUnsupported": [],
+          "pending": false
+        }
+      ],
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "S02",
+      "classification": "negative producer assumption demonstration, not compliant producer guarantee",
+      "checks": [
+        {
+          "name": "metadata-only slot cannot enforce frozen payload",
+          "actual": {
+            "body": "Y",
+            "seq": 1,
+            "serial": 1
+          },
+          "expected": {
+            "body": "Y",
+            "seq": 1,
+            "serial": 1
+          },
+          "passed": true
+        },
+        {
+          "name": "producer freezing keeps retry identical",
+          "actual": {
+            "mutationThrows": true,
+            "body": "X"
+          },
+          "expected": {
+            "mutationThrows": true,
+            "body": "X"
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "source": "system",
+          "kind": "focus",
+          "at": 0,
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "system",
+          "kind": "admission-ready",
+          "at": 10,
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "sender",
+          "kind": "explicit-send",
+          "at": 20,
+          "status": "deferred",
+          "reason": "temporary-handoff",
+          "ack": false,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "system",
+          "kind": "admission-ready",
+          "at": 30,
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "sender",
+          "kind": "explicit-send",
+          "at": 31,
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "body": "Y",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "system",
+          "kind": "focus",
+          "at": 0,
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "system",
+          "kind": "admission-ready",
+          "at": 10,
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "sender",
+          "kind": "explicit-send",
+          "at": 20,
+          "status": "deferred",
+          "reason": "temporary-handoff",
+          "ack": false,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "system",
+          "kind": "admission-ready",
+          "at": 30,
+          "status": "controlled",
+          "reason": "admission-ready",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": true
+        },
+        {
+          "source": "sender",
+          "kind": "explicit-send",
+          "at": 31,
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 1,
+          "body": "X",
+          "appendUnsupported": [],
+          "pending": false
+        }
+      ],
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "S03",
+      "classification": "hidden logical admission and bounded reappearance",
+      "checks": [
+        {
+          "name": "hidden body admission no parsing or reveal",
+          "actual": {
+            "body": "abcdefghijklmnopqrst",
+            "presented": 0,
+            "queries": 0,
+            "shape": "sphere"
+          },
+          "expected": {
+            "body": "abcdefghijklmnopqrst",
+            "presented": 0,
+            "queries": 0,
+            "shape": "sphere"
+          },
+          "passed": true
+        },
+        {
+          "name": "reopen not instant reveal",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "name": "first reveal at most4",
+          "actual": 4,
+          "expected": 4,
+          "passed": true
+        },
+        {
+          "name": "eventual20 without ID loss",
+          "actual": {
+            "presented": 20,
+            "ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "expected": {
+            "presented": 20,
+            "ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "passed": true
+        },
+        {
+          "name": "one stale-window catchup not replay",
+          "actual": {
+            "queries": 1,
+            "shape": "sphere",
+            "maximumReveal": 4
+          },
+          "expected": {
+            "queries": 1,
+            "shape": "sphere",
+            "maximumReveal": 4
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "source": "system",
+          "kind": "focus",
+          "at": 0,
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "system",
+          "kind": "visibility",
+          "at": 1,
+          "status": "controlled",
+          "reason": "visibility",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "sender",
+          "kind": "explicit-send",
+          "at": 2,
+          "status": "accepted",
+          "reason": "whole-add-before-ack",
+          "ack": true,
+          "added": 20,
+          "body": "abcdefghijklmnopqrst",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "system",
+          "kind": "visibility",
+          "at": 10000,
+          "status": "controlled",
+          "reason": "visibility",
+          "ack": true,
+          "added": 0,
+          "body": "abcdefghijklmnopqrst",
+          "appendUnsupported": [],
+          "pending": false
+        }
+      ],
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "S04",
+      "classification": "unknown final preedit lifecycle observation, not confirmation",
+      "checks": [
+        {
+          "name": "unknown final mirror-only",
+          "actual": {
+            "body": "",
+            "doc": "箱"
+          },
+          "expected": {
+            "body": "",
+            "doc": "箱"
+          },
+          "passed": true
+        },
+        {
+          "name": "current implementation retains preedit until explicit cancellation",
+          "actual": {
+            "id": "unknownFinal",
+            "text": "k"
+          },
+          "expected": {
+            "id": "unknownFinal",
+            "text": "k"
+          },
+          "passed": true
+        }
+      ],
+      "trace": [
+        {
+          "source": "system",
+          "kind": "focus",
+          "at": 0,
+          "status": "controlled",
+          "reason": "focus",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "editor",
+          "kind": "baseline",
+          "at": 0,
+          "status": "observed",
+          "reason": "baseline-never-material",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "editor",
+          "kind": "composition-start",
+          "at": 1,
+          "status": "preview",
+          "reason": "preedit-never-material",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "editor",
+          "kind": "composition-update",
+          "at": 2,
+          "status": "preview",
+          "reason": "preedit-never-material",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        },
+        {
+          "source": "editor",
+          "kind": "composition-final",
+          "at": 3,
+          "status": "preview",
+          "reason": "unknown-commit-quality",
+          "ack": true,
+          "added": 0,
+          "body": "",
+          "appendUnsupported": [],
+          "pending": false
+        }
+      ],
+      "error": null,
+      "passed": true
+    }
+  ],
+  "passed": 4,
+  "failed": 0
+}
