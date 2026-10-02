@@ -1,0 +1,10 @@
+{
+  "version":"ambient-integration-receiver-r2-regression",
+  "afterSeeing":"Supplementary P05 R2 first failure, R1 source frozen and retained.",
+  "change":"When abandoning the single pending slot due to a gap or parallel producer, invalidate its owner as well as the new source. No recovery/invented letters are implied.",
+  "receiverSource":"receiver-r2.mjs",
+  "receiverSha256":"96550b3131ad8275d61d5463d11f5e9f0684a8959897f6a45d8452c472df2e57",
+  "fixedBeforeRerun":"Same R1 METHOD, grammar,20cases, source registry, parameter constants, and post-R3 PROBES-METHOD expectations. No expected result or threshold is changed.",
+  "exportSchema":"Still grammar/schema v1; implementation R2 is separately identified in result provenance.",
+  "recommendedEntry":"receiver-r2.mjs for future artificial integration only; original receiver.mjs remains the R1 baseline."
+}

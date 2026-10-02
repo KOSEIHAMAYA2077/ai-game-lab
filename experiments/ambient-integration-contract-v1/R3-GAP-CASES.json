@@ -1,0 +1,11 @@
+{
+  "version":"ambient-integration-r3-gap-fixtures",
+  "authoredBeforeR3ImplementationExecution":true,
+  "authorship":"AI manual expectations after independent R2 defect evidence; supplemental regression, not unseen evaluation.",
+  "cases":[
+    {"id":"G01","activitySeq":2,"scenario":"keys 0->2 while editor pending seq2; admission-ready followed by exact frozen editor retry","expectedDuring":{"gaps":1,"pendingSlots":1,"document":{"text":"","version":0},"serial":0,"normalizedSeq":1,"appendUnsupported":[]},"expectedFinal":{"body":"待","units":1,"ids":[1],"document":{"text":"待","version":1},"serial":1,"sourceSeq":{"editor":2,"keys":2},"activityKeys":1,"gaps":1,"pendingSlots":0,"appendUnsupported":[],"normalizedSeq":2}},
+    {"id":"G02","activitySeq":3,"scenario":"keys 0->3 while editor pending seq2; same frozen retry","expectedDuring":{"gaps":1,"pendingSlots":1,"document":{"text":"","version":0},"serial":0,"normalizedSeq":1,"appendUnsupported":[]},"expectedFinal":{"body":"待","units":1,"ids":[1],"document":{"text":"待","version":1},"serial":1,"sourceSeq":{"editor":2,"keys":3},"activityKeys":1,"gaps":1,"pendingSlots":0,"appendUnsupported":[],"normalizedSeq":2}},
+    {"id":"G03","scenario":"keys gap without pending after declared box material; keep candidate/window and apply on original fixed schedule","expectedFinal":{"body":"box","units":3,"gaps":1,"activityKeys":2,"normalizedSeq":2,"queries":1,"shape":"box","shapeAt":5000,"appendUnsupported":[]}},
+    {"id":"G04","scenario":"document-capable echo source 0->3 while editor pending; preserve conservative cancellation and fail closed","expectedDuring":{"gaps":1,"pendingSlots":0,"document":{"text":"","version":0},"serial":0,"appendUnsupported":["editor","echo"]},"expectedFinal":{"body":"","units":0,"serial":0,"appendUnsupported":["editor","echo"],"pendingSlots":0,"retryAdded":0}}
+  ]
+}

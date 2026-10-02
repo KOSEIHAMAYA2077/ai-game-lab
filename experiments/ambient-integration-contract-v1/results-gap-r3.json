@@ -1,0 +1,1021 @@
+{
+  "version": "ambient-integration-r3-gap-regression",
+  "syntheticOnly": true,
+  "fixtures": 4,
+  "passed": 4,
+  "failed": 0,
+  "assertions": 54,
+  "receiveCalls": 24,
+  "sourceSha256": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d",
+  "fixtureSha256": "8f97d5d951cd43b2a08f38b4d16b055b6ab6d83d01eb7c7307966553f70cede9",
+  "runnerSha256": "c63dc8e211ed70fb88b7e7f339b766f36bce97a4d1d1f9590bbfed809acbc7da",
+  "runs": [
+    {
+      "id": "G01",
+      "expected": {
+        "id": "G01",
+        "activitySeq": 2,
+        "scenario": "keys 0->2 while editor pending seq2; admission-ready followed by exact frozen editor retry",
+        "expectedDuring": {
+          "gaps": 1,
+          "pendingSlots": 1,
+          "document": {
+            "text": "",
+            "version": 0
+          },
+          "serial": 0,
+          "normalizedSeq": 1,
+          "appendUnsupported": []
+        },
+        "expectedFinal": {
+          "body": "待",
+          "units": 1,
+          "ids": [
+            1
+          ],
+          "document": {
+            "text": "待",
+            "version": 1
+          },
+          "serial": 1,
+          "sourceSeq": {
+            "editor": 2,
+            "keys": 2
+          },
+          "activityKeys": 1,
+          "gaps": 1,
+          "pendingSlots": 0,
+          "appendUnsupported": [],
+          "normalizedSeq": 2
+        }
+      },
+      "actual": {
+        "body": "待",
+        "units": 1,
+        "unitTexts": [
+          "待"
+        ],
+        "ids": [
+          1
+        ],
+        "inks": [
+          "green"
+        ],
+        "inkCounts": {
+          "white": 0,
+          "blue": 0,
+          "green": 1,
+          "purple": 0
+        },
+        "document": {
+          "text": "待",
+          "version": 1
+        },
+        "composition": null,
+        "serial": 1,
+        "normalizedSeq": 2,
+        "sourceSeq": {
+          "system": 3,
+          "keys": 2,
+          "editor": 2,
+          "echo": 0,
+          "documentApi": 0,
+          "sender": 0,
+          "worker": 0
+        },
+        "appendUnsupported": [],
+        "pendingSlots": 0,
+        "nextId": 2,
+        "presented": 0,
+        "windowUtf16": 1,
+        "candidate": null,
+        "shape": "sphere",
+        "shapeAt": 0,
+        "holdReasons": [],
+        "ackAddedAt": 200,
+        "received": 7,
+        "addedUnits": 1,
+        "admissions": 1,
+        "permanentHolds": 0,
+        "deferrals": 1,
+        "gaps": 1,
+        "documentGaps": 0,
+        "serialGaps": 0,
+        "trustedRebases": 0,
+        "invalidChanges": 0,
+        "transportDuplicates": 0,
+        "operationDuplicates": 0,
+        "activityKeys": 1,
+        "activityShortcuts": 0,
+        "queries": 0,
+        "shapeChanges": 0,
+        "cachedSamples": 0,
+        "candidateExpiries": 0,
+        "staleAnswers": 0,
+        "acceptedAnswers": 0,
+        "unsupportedModes": 0,
+        "queuePeak": 1,
+        "pendingSlotPeak": 1,
+        "hiddenWork": 0,
+        "normalizedForwardGaps": 0
+      },
+      "decisions": [
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 1,
+            "kind": "focus",
+            "data": {
+              "field": "normal",
+              "documentId": "docA"
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "editor",
+            "session": "lab",
+            "seq": 1,
+            "kind": "baseline",
+            "data": {
+              "documentId": "docA",
+              "version": 0,
+              "text": ""
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 2,
+            "kind": "admission-ready",
+            "data": {
+              "ready": false
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "editor",
+            "session": "lab",
+            "seq": 2,
+            "kind": "document-edit",
+            "data": {
+              "documentId": "docA",
+              "baseVersion": 0,
+              "version": 1,
+              "reason": "type",
+              "ink": "green",
+              "changes": [
+                {
+                  "offset": 0,
+                  "deleteCount": 0,
+                  "text": "待"
+                }
+              ]
+            },
+            "evidence": "synthetic-commit",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0,
+            "serial": 1,
+            "operationId": "e1-p0-c1"
+          },
+          "ack": {
+            "at": 0,
+            "status": "deferred",
+            "reason": "temporary-handoff",
+            "ack": false,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "keys",
+            "session": "lab",
+            "seq": 2,
+            "kind": "activity",
+            "data": {
+              "class": "key",
+              "count": 1
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 100
+          },
+          "ack": {
+            "at": 100,
+            "status": "activity",
+            "reason": "no-text-route",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 3,
+            "kind": "admission-ready",
+            "data": {
+              "ready": true
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 200
+          },
+          "ack": {
+            "at": 200,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "sameFrozenEventRetry": true,
+          "ack": {
+            "at": 200,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "G02",
+      "expected": {
+        "id": "G02",
+        "activitySeq": 3,
+        "scenario": "keys 0->3 while editor pending seq2; same frozen retry",
+        "expectedDuring": {
+          "gaps": 1,
+          "pendingSlots": 1,
+          "document": {
+            "text": "",
+            "version": 0
+          },
+          "serial": 0,
+          "normalizedSeq": 1,
+          "appendUnsupported": []
+        },
+        "expectedFinal": {
+          "body": "待",
+          "units": 1,
+          "ids": [
+            1
+          ],
+          "document": {
+            "text": "待",
+            "version": 1
+          },
+          "serial": 1,
+          "sourceSeq": {
+            "editor": 2,
+            "keys": 3
+          },
+          "activityKeys": 1,
+          "gaps": 1,
+          "pendingSlots": 0,
+          "appendUnsupported": [],
+          "normalizedSeq": 2
+        }
+      },
+      "actual": {
+        "body": "待",
+        "units": 1,
+        "unitTexts": [
+          "待"
+        ],
+        "ids": [
+          1
+        ],
+        "inks": [
+          "green"
+        ],
+        "inkCounts": {
+          "white": 0,
+          "blue": 0,
+          "green": 1,
+          "purple": 0
+        },
+        "document": {
+          "text": "待",
+          "version": 1
+        },
+        "composition": null,
+        "serial": 1,
+        "normalizedSeq": 2,
+        "sourceSeq": {
+          "system": 3,
+          "keys": 3,
+          "editor": 2,
+          "echo": 0,
+          "documentApi": 0,
+          "sender": 0,
+          "worker": 0
+        },
+        "appendUnsupported": [],
+        "pendingSlots": 0,
+        "nextId": 2,
+        "presented": 0,
+        "windowUtf16": 1,
+        "candidate": null,
+        "shape": "sphere",
+        "shapeAt": 0,
+        "holdReasons": [],
+        "ackAddedAt": 200,
+        "received": 7,
+        "addedUnits": 1,
+        "admissions": 1,
+        "permanentHolds": 0,
+        "deferrals": 1,
+        "gaps": 1,
+        "documentGaps": 0,
+        "serialGaps": 0,
+        "trustedRebases": 0,
+        "invalidChanges": 0,
+        "transportDuplicates": 0,
+        "operationDuplicates": 0,
+        "activityKeys": 1,
+        "activityShortcuts": 0,
+        "queries": 0,
+        "shapeChanges": 0,
+        "cachedSamples": 0,
+        "candidateExpiries": 0,
+        "staleAnswers": 0,
+        "acceptedAnswers": 0,
+        "unsupportedModes": 0,
+        "queuePeak": 1,
+        "pendingSlotPeak": 1,
+        "hiddenWork": 0,
+        "normalizedForwardGaps": 0
+      },
+      "decisions": [
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 1,
+            "kind": "focus",
+            "data": {
+              "field": "normal",
+              "documentId": "docA"
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "editor",
+            "session": "lab",
+            "seq": 1,
+            "kind": "baseline",
+            "data": {
+              "documentId": "docA",
+              "version": 0,
+              "text": ""
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 2,
+            "kind": "admission-ready",
+            "data": {
+              "ready": false
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "editor",
+            "session": "lab",
+            "seq": 2,
+            "kind": "document-edit",
+            "data": {
+              "documentId": "docA",
+              "baseVersion": 0,
+              "version": 1,
+              "reason": "type",
+              "ink": "green",
+              "changes": [
+                {
+                  "offset": 0,
+                  "deleteCount": 0,
+                  "text": "待"
+                }
+              ]
+            },
+            "evidence": "synthetic-commit",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0,
+            "serial": 1,
+            "operationId": "e1-p0-c1"
+          },
+          "ack": {
+            "at": 0,
+            "status": "deferred",
+            "reason": "temporary-handoff",
+            "ack": false,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "keys",
+            "session": "lab",
+            "seq": 3,
+            "kind": "activity",
+            "data": {
+              "class": "key",
+              "count": 1
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 100
+          },
+          "ack": {
+            "at": 100,
+            "status": "activity",
+            "reason": "no-text-route",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 3,
+            "kind": "admission-ready",
+            "data": {
+              "ready": true
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 200
+          },
+          "ack": {
+            "at": 200,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "sameFrozenEventRetry": true,
+          "ack": {
+            "at": 200,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "G03",
+      "expected": {
+        "id": "G03",
+        "scenario": "keys gap without pending after declared box material; keep candidate/window and apply on original fixed schedule",
+        "expectedFinal": {
+          "body": "box",
+          "units": 3,
+          "gaps": 1,
+          "activityKeys": 2,
+          "normalizedSeq": 2,
+          "queries": 1,
+          "shape": "box",
+          "shapeAt": 5000,
+          "appendUnsupported": []
+        }
+      },
+      "actual": {
+        "body": "box",
+        "units": 3,
+        "unitTexts": [
+          "b",
+          "o",
+          "x"
+        ],
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "inks": [
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "inkCounts": {
+          "white": 0,
+          "blue": 3,
+          "green": 0,
+          "purple": 0
+        },
+        "document": null,
+        "composition": null,
+        "serial": 1,
+        "normalizedSeq": 2,
+        "sourceSeq": {
+          "system": 1,
+          "keys": 3,
+          "editor": 0,
+          "echo": 0,
+          "documentApi": 0,
+          "sender": 1,
+          "worker": 0
+        },
+        "appendUnsupported": [],
+        "pendingSlots": 0,
+        "nextId": 4,
+        "presented": 3,
+        "windowUtf16": 0,
+        "candidate": null,
+        "shape": "box",
+        "shapeAt": 5000,
+        "holdReasons": [],
+        "ackAddedAt": 0,
+        "received": 3,
+        "addedUnits": 3,
+        "admissions": 1,
+        "permanentHolds": 0,
+        "deferrals": 0,
+        "gaps": 1,
+        "documentGaps": 0,
+        "serialGaps": 0,
+        "trustedRebases": 0,
+        "invalidChanges": 0,
+        "transportDuplicates": 0,
+        "operationDuplicates": 0,
+        "activityKeys": 2,
+        "activityShortcuts": 0,
+        "queries": 1,
+        "shapeChanges": 1,
+        "cachedSamples": 1,
+        "candidateExpiries": 0,
+        "staleAnswers": 0,
+        "acceptedAnswers": 0,
+        "unsupportedModes": 0,
+        "queuePeak": 3,
+        "pendingSlotPeak": 0,
+        "hiddenWork": 0,
+        "normalizedForwardGaps": 0
+      },
+      "decisions": [
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 1,
+            "kind": "focus",
+            "data": {
+              "field": "normal",
+              "documentId": "docA"
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "sender",
+            "session": "lab",
+            "seq": 1,
+            "kind": "explicit-send",
+            "data": {
+              "text": "box",
+              "ink": "blue",
+              "selectionDeclared": true,
+              "documentId": null,
+              "documentVersion": null
+            },
+            "evidence": "synthetic-explicit-send",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0,
+            "serial": 1,
+            "operationId": "e1-p0-c1"
+          },
+          "ack": {
+            "at": 0,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 3
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "keys",
+            "session": "lab",
+            "seq": 3,
+            "kind": "activity",
+            "data": {
+              "class": "key",
+              "count": 2
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 2500
+          },
+          "ack": {
+            "at": 2500,
+            "status": "activity",
+            "reason": "no-text-route",
+            "ack": true,
+            "added": 0
+          }
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "id": "G04",
+      "expected": {
+        "id": "G04",
+        "scenario": "document-capable echo source 0->3 while editor pending; preserve conservative cancellation and fail closed",
+        "expectedDuring": {
+          "gaps": 1,
+          "pendingSlots": 0,
+          "document": {
+            "text": "",
+            "version": 0
+          },
+          "serial": 0,
+          "appendUnsupported": [
+            "editor",
+            "echo"
+          ]
+        },
+        "expectedFinal": {
+          "body": "",
+          "units": 0,
+          "serial": 0,
+          "appendUnsupported": [
+            "editor",
+            "echo"
+          ],
+          "pendingSlots": 0,
+          "retryAdded": 0
+        }
+      },
+      "actual": {
+        "body": "",
+        "units": 0,
+        "unitTexts": [],
+        "ids": [],
+        "inks": [],
+        "inkCounts": {
+          "white": 0,
+          "blue": 0,
+          "green": 0,
+          "purple": 0
+        },
+        "document": {
+          "text": "",
+          "version": 0
+        },
+        "composition": null,
+        "serial": 0,
+        "normalizedSeq": 4,
+        "sourceSeq": {
+          "system": 3,
+          "keys": 0,
+          "editor": 2,
+          "echo": 3,
+          "documentApi": 0,
+          "sender": 0,
+          "worker": 0
+        },
+        "appendUnsupported": [
+          "editor",
+          "echo"
+        ],
+        "pendingSlots": 0,
+        "nextId": 1,
+        "presented": 0,
+        "windowUtf16": 0,
+        "candidate": null,
+        "shape": "sphere",
+        "shapeAt": 0,
+        "holdReasons": [],
+        "ackAddedAt": null,
+        "received": 7,
+        "addedUnits": 0,
+        "admissions": 0,
+        "permanentHolds": 0,
+        "deferrals": 1,
+        "gaps": 1,
+        "documentGaps": 2,
+        "serialGaps": 0,
+        "trustedRebases": 0,
+        "invalidChanges": 0,
+        "transportDuplicates": 0,
+        "operationDuplicates": 0,
+        "activityKeys": 0,
+        "activityShortcuts": 0,
+        "queries": 0,
+        "shapeChanges": 0,
+        "cachedSamples": 0,
+        "candidateExpiries": 0,
+        "staleAnswers": 0,
+        "acceptedAnswers": 0,
+        "unsupportedModes": 0,
+        "queuePeak": 0,
+        "pendingSlotPeak": 1,
+        "hiddenWork": 0,
+        "normalizedForwardGaps": 0
+      },
+      "decisions": [
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 1,
+            "kind": "focus",
+            "data": {
+              "field": "normal",
+              "documentId": "docA"
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "editor",
+            "session": "lab",
+            "seq": 1,
+            "kind": "baseline",
+            "data": {
+              "documentId": "docA",
+              "version": 0,
+              "text": ""
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 2,
+            "kind": "admission-ready",
+            "data": {
+              "ready": false
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0
+          },
+          "ack": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "editor",
+            "session": "lab",
+            "seq": 2,
+            "kind": "document-edit",
+            "data": {
+              "documentId": "docA",
+              "baseVersion": 0,
+              "version": 1,
+              "reason": "type",
+              "ink": "green",
+              "changes": [
+                {
+                  "offset": 0,
+                  "deleteCount": 0,
+                  "text": "待"
+                }
+              ]
+            },
+            "evidence": "synthetic-commit",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 0,
+            "serial": 1,
+            "operationId": "e1-p0-c1"
+          },
+          "ack": {
+            "at": 0,
+            "status": "deferred",
+            "reason": "temporary-handoff",
+            "ack": false,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "echo",
+            "session": "lab",
+            "seq": 3,
+            "kind": "document-edit",
+            "data": {
+              "documentId": "docA",
+              "baseVersion": 0,
+              "version": 1,
+              "reason": "type",
+              "ink": "blue",
+              "changes": [
+                {
+                  "offset": 0,
+                  "deleteCount": 0,
+                  "text": "観測"
+                }
+              ]
+            },
+            "evidence": "document-only",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 100
+          },
+          "ack": {
+            "at": 100,
+            "status": "rejected",
+            "reason": "document-gap",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "e": {
+            "grammar": "ambient.integration.v1",
+            "source": "system",
+            "session": "lab",
+            "seq": 3,
+            "kind": "admission-ready",
+            "data": {
+              "ready": true
+            },
+            "evidence": "none",
+            "focusEpoch": 1,
+            "policyEpoch": 0,
+            "observedAt": 200
+          },
+          "ack": {
+            "at": 200,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "sameFrozenEventRetry": true,
+          "ack": {
+            "at": 200,
+            "status": "rejected",
+            "reason": "document-gap",
+            "ack": true,
+            "added": 0
+          }
+        }
+      ],
+      "failures": [],
+      "passed": true
+    }
+  ]
+}

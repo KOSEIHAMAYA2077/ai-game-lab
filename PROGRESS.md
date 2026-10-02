@@ -1,5 +1,11 @@
 # 進捗
 
+## 2026-10-03 05:09 — 材料の唯一所有と入力の割込みを統合
+
+[人工統合R3](experiments/ambient-integration-contract-v1/REPORT.md)は元20ケース20/20、補助8/8、追加gap4/4、実mutant6/6検出。独立behavior11/11と追加5/5も別に確認し、rootは20・独立11/5を再現した。R1/R2の並列producerとactivity gap不具合、harness修正前の原票を保持する。既知ケースの回帰で、実OS・IME・快適性ではない。唯一body/ID、追加後ACK、保存off allowlistが専用編集欄の接続候補となった。[公開確認](experiments/ambient-integration-publication-v1/README.md)。
+
+別Metal v3候補は元Webの剣・花瓶・クラゲを段階移植中。root実小窓で3形・日本語paste・旧白/新青・停止/非表示counter差0を確認。非表示後の復帰が操作不能となったため、所有PIDだけ終了して失敗を保持、次候補で修正する。13形拡張・表示品質・実資源は未完。新2時間R5 offscreenは06:25終了予定で進行中。
+
 ## 2026-10-03 04:42 — 材料・形判断の機構とWindows移植案
 
 [17人工stream×3方針](experiments/ambient-material-scheduler-v1/REPORT.md)で論理材料の原文/ID/色を一致させ、形変更166/21/13、字句検索195/26/26を比較。rootも51runを再実行した。保存offからID/色順を除くR2回帰51run/5,313assertionと漏れ3mutantもroot再実行。3群の単純語彙・語burst偏重で、意味精度・快適性・実OS/表示性能とはしない。

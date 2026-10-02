@@ -1,0 +1,75 @@
+{
+  "version": "ambient-integration-contract-v1-r1",
+  "authoredBeforeImplementationAndResults": true,
+  "grammar": "ambient.integration.v1",
+  "scope": "Pure artificial integration of a new receiver/canonical gate, one material authority, shape-only lexical scheduling and a strict storage whitelist. No platform API or widget adapter is implemented.",
+  "referencesReadOnly": {
+    "canonicalComparison": "experiments/ambient-input-contract-v1/reducer.mjs",
+    "canonicalComparisonSha256": "785d53ff236f27977ee2b034e146eab1da86519aaa692cc3cabffdbf604b2f57",
+    "schedulerSource": "experiments/ambient-material-scheduler-v1/scheduler.mjs",
+    "schedulerSourceSha256": "78f2fb2b32a90e1bf712a2f4e2647f9ce4493ad5e5f3a033f7c6441ca64b1bc2",
+    "schedulerStorage": "experiments/ambient-material-scheduler-v1/storage-export-r2.mjs",
+    "schedulerStorageSha256": "a26def7f01860dfc8f6e7c626ade125458394ca3d5556149ccd5f6df726c9981"
+  },
+  "knownEvidenceBoundary": "Known commit/explicit-send is the declaration of a constructor-trusted synthetic producer with matching fixed source/session/capability. Payload claims, capability flags and synthetic=true are not OS confirmation or authentication evidence.",
+  "fixedSources": [
+    { "id": "system", "session": "lab", "control": true },
+    { "id": "keys", "session": "lab", "activity": true },
+    { "id": "editor", "session": "lab", "document": true, "composition": true, "commit": true, "primaryCommit": true },
+    { "id": "echo", "session": "lab", "document": true, "commit": true, "primaryCommit": false },
+    { "id": "documentApi", "session": "lab", "document": true },
+    { "id": "sender", "session": "lab", "explicitSend": true },
+    { "id": "worker", "session": "lab", "shapeAnswer": true }
+  ],
+  "evidenceKinds": ["none", "document-only", "synthetic-commit", "synthetic-explicit-send", "synthetic-rebase"],
+  "header": "Exact grammar, source, session, source seq, focusEpoch, policyEpoch, observedAt. receive() has a separate monotonic deliveryAt; retry preserves the entire observed event. IDs are opaque ASCII <=32 chars; source registry <=8.",
+  "operation": "Known new operation has serial=lastSerial+1 within focus/policy tuple, and operationId=e{focusEpoch}-p{policyEpoch}-c{serial}. That tuple is the bounded canonical operation identity shared by echoes. Lower serial is ignored; id/serial mismatch rejected. Two same-text new serials remain two operations. No text equality or timing dedupe.",
+  "ordering": "Per-source seq begins at 1, old/duplicate ignored; gaps disclose unsupported append provenance until an explicitly trusted baseline/rebase. Preview/activity sources do not consume downstream seq. A separate contiguous normalized seq is assigned only to material/control actually forwarded. Focus/policy invalidate preview/composition/window/request and reset operation serial domain, preserve append body/current shape.",
+  "canonical": "Owns only bounded document mirror/version, evidence/order/composition/operation gates and normalized forwarding. It does not own body or material IDs. Baseline is never material. New grammar is not cast to reducer v1 or platform schema.",
+  "document": {
+    "maximumUtf16": 512,
+    "maximumPreviewUtf16": 64,
+    "maximumChanges": 64,
+    "maximumInsertedUtf16PerEvent": 256,
+    "application": "All nonoverlapping changes address one original UTF-16 base revision; version=base+1. Duplicate offsets/overlap/range/surrogate splits rejected. Apply document changes in descending offset order atomically; insert material segments in ascending original offset order. Unchanged middle is never copied. No normalization.",
+    "unknownQuality": "Document-only or incapable known claim updates bounded document/preview only, never material/window. Silence, reason and exactness cannot upgrade confirmation.",
+    "undoRedoDelete": "Known document revision updates atomically; append history/IDs/inks remain. No new material; invalidate lexical window/candidate/request.",
+    "rebase": "Ordinary baseline restores document but cannot repair operation serial. Only synthetic-rebase from a commit-capable primary source may explicitly set a nondecreasing operationSerialBaseline. No baseline text becomes material.",
+    "sync": "Initial integration is append-only. Whole stable revision flags do not append existing baseline; document-sync request is unsupported pending a separate opt-in/identity contract."
+  },
+  "explicitSend": "Separate kind, null documentId/documentVersion, no ranges or invented baseline. synthetic-explicit-send plus sender capability and selectionDeclared=true. One whole bounded selection is material.",
+  "material": {
+    "soleBodyAndIdAuthority": true,
+    "maximumUnits": 256,
+    "maximumEventUtf16": 256,
+    "inkEnum": ["white", "blue", "green", "purple"],
+    "admission": "Precompute complete per-insertion grapheme segments and all permanent limits. If available, add all units/fresh monotonically increasing IDs/ink immediately at deliveryAt, then commit canonical watermarks and ACK. Shape work cannot delay admission. Presentation lag does not block admission or free permanent capacity.",
+    "temporary": "A synthetic admission-ready control models a temporary handoff slot independent of body/presentation. No-ACK keeps doc/version/source seq/operation serial/IDs/normalized seq unchanged. Receiver holds at most one bounded metadata slot, producer at most one frozen payload and retries the identical event. Independent activity/control may proceed.",
+    "noncooperative": "A newer same-source event while its event is unACKed discloses gap/unsupported append, invalidates lexical context and cannot invent the lost text. Route becomes activity/preview. Parallel producers cannot create extra retry slots.",
+    "permanent": "ACK-hold with explicit body-capacity or event-text-limit reason, all-or-zero material, no endless retry. Valid known operation identity/source seq are consumed. For a valid document edit the mirror can advance as an observation while material is held; this is not an accepted material partial success."
+  },
+  "shape": {
+    "policy": "batch-hysteresis",
+    "sourcePinned": true,
+    "integration": "Use pinned scheduler PARAMETERS/LEXICAL_GROUPS read-only; implement a shape-only adapter for its batch/hysteresis mechanics. Do not call createScheduler/accept/reveal/body functions. Recent window stores bounded references into the sole material body, no second material body or ID allocator.",
+    "batchIntervalMs": 2000,
+    "windowLookbackMs": 6000,
+    "windowMaximumUtf16": 128,
+    "maximumChunks": 64,
+    "consistentSamples": 2,
+    "minimumShapeHoldMs": 5000,
+    "candidateTtlMs": 6000,
+    "semantics": "Same limited sphere/box/ring latest lexical match, including quoted/negated mentions; not a general meaning model or command-accuracy evaluation.",
+    "tokens": "A pending artificial request has requestId/focusEpoch/policyEpoch/generation/windowRevision and original evidence expiry. Stale/mismatched/expired/inactive answers ignored. Inline local lexer or deferred synthetic answer mode, never network/model calls. New input dirtiness blocks old candidate apply; cached sample does not refresh expiry.",
+    "hiddenPaused": "No parse/sample/apply/reveal while hidden/paused. Logical material admission continues within bounds. On reopen unpaused, reveal <=4units/100ms and one bounded catchup after2000ms. No replay of all hidden words. Capture-stop is a separate receiver policy, not an OS monitor control."
+  },
+  "exports": {
+    "savingOffDefault": true,
+    "off": "Allowlist grammar/version, seed/shape/time, bounded counters and aggregate ink counts only. No text, document/draft, unit ID/origin/order arrays, color order, window/query, dictionary or fingerprint. Off restart has empty body and no pending/private text.",
+    "on": "Explicit synthetic-opt-in can serialize bounded admitted body id/text/ink only in addition to aggregates; never document/preedit/query. This is an artificial consent declaration, not a user/OS permission action."
+  },
+  "maximumMetadataRowsPerKind": 64,
+  "counterSaturation": 1000000,
+  "scoring": "Manually authored independent integration fixtures map to14 proposal conditions but no proposal expected/pass field is imported. Verify actual ACK/whole admission, document atomicity, private body/ID/ink retention, normalized seq, no-read guards, stale shape token, export schema, bounds, replay/gap, and actual query calls. AI manual expectations; no human annotation. Any post-result change is R2 regression.",
+  "resourceBoundary": "Artificial clock only; no OS/clipboard/UI/widget/Git/network input, no claim of real IME, upstream losslessness, comfort, CPU/RAM budget or renderer projection. Public reproduction commands are repo-root relative."
+}

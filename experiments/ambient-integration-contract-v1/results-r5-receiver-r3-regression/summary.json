@@ -1,0 +1,52 @@
+{
+  "version": "ambient-integration-evaluation-v1-r1",
+  "fixtures": 20,
+  "passed": 20,
+  "failed": 0,
+  "assertions": 2431,
+  "receiveCalls": 120,
+  "actualLexicalQueryCalls": 18,
+  "elapsedMs": 6.579042000000001,
+  "scope": "Artificial clock/pure receiver only; no OS, IME, widget, real CPU/RSS/comfort, upstream losslessness or general semantic inference.",
+  "proposalConditionsCovered": [
+    "I01",
+    "I02",
+    "I03",
+    "I04",
+    "I05",
+    "I06",
+    "I07",
+    "I08",
+    "I09",
+    "I10",
+    "I11",
+    "I12",
+    "I13",
+    "I14"
+  ],
+  "frozen": {
+    "METHOD.json": "ef0aa7f0347132e73da949d7227f551b7b880ac7ad51cec9759e9466248e7f57",
+    "CASES.json": "c7ffe342746c2c83d76d2721ae39a5440af3502db9d0cdf29082daaa826be208",
+    "GRAMMAR.md": "1d19c22fd2ac759237ed407c61e524ccc1da1c112b9103ff6b15109fff5e9511"
+  },
+  "effectiveReceiver": "receiver-r3.mjs",
+  "sourceHashes": {
+    "receiver-r3.mjs": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d",
+    "shape-only.mjs": "bc2e3ce24f5fe43889dc2527ef741bb620f57d24f3c754acfbb1b67024c83239",
+    "run.mjs": "5963e3ebf95bbf471461bd22c4b980d51ae4b98a0093978f59605c4b66151d80"
+  },
+  "environment": {
+    "node": "v26.4.0",
+    "icu": "78.3",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "references": {
+    "canonicalComparison": "experiments/ambient-input-contract-v1/reducer.mjs",
+    "canonicalComparisonSha256": "785d53ff236f27977ee2b034e146eab1da86519aaa692cc3cabffdbf604b2f57",
+    "schedulerSource": "experiments/ambient-material-scheduler-v1/scheduler.mjs",
+    "schedulerSourceSha256": "78f2fb2b32a90e1bf712a2f4e2647f9ce4493ad5e5f3a033f7c6441ca64b1bc2",
+    "schedulerStorage": "experiments/ambient-material-scheduler-v1/storage-export-r2.mjs",
+    "schedulerStorageSha256": "a26def7f01860dfc8f6e7c626ade125458394ca3d5556149ccd5f6df726c9981"
+  }
+}

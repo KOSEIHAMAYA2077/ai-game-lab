@@ -1,0 +1,15 @@
+# Artificial receiver grammar v1
+
+This is a new receiver boundary, not a cast to an existing reducer or an OS schema. Every payload is synthetic. The constructor trusts the fixed source/session/capability registry in METHOD.json. An adapter for a real producer would have to establish its own capability/evidence contract before producing these events. A claim of `synthetic-commit` is never proof of real IME confirmation.
+
+Header: `grammar="ambient.integration.v1"`, `source`, `session="lab"`, positive source `seq`, `focusEpoch`, `policyEpoch`, integer `observedAt`, `kind`, optional evidence and operation identity. `receive(state,event,deliveryAt)` receives a separate monotonic artificial clock; a retry preserves observedAt and the whole original event.
+
+Operation identity is `e{focusEpoch}-p{policyEpoch}-c{serial}`. It is a bounded serial domain shared by explicit send, declared document commit and commit echo. Source transport seq and canonical operation serial are different counters. Canonical assigns a third contiguous normalized seq only when forwarding a material/control event. Preview and key events are never forwarded to the shape window.
+
+Kinds: activity; focus; policy; visibility; pause; admission-ready; request-document-sync; baseline; document-edit; composition-start/update/cancel/final; explicit-send; shape-answer. Focus and policy controls explicitly advance their corresponding epoch. A document edit addresses all offsets in one original UTF-16 revision. `version=baseVersion+1`. A baseline is observation only; an explicitly primary `synthetic-rebase` can also declare a nondecreasing operationSerialBaseline. Explicit send has a declared selection with null document identity/version and no ranges.
+
+Material owns the only body and ID allocator. Shape uses bounded references into that body and its own candidate/request metadata; it never allocates glyph IDs. Admission computes whole-event limits first. A successful material ACK follows all added units and canonical watermarks. Temporary no-ACK preserves them and permits one producer-held frozen payload plus one receiver metadata slot. Permanent hold is ACK with a reason. Presentation backlog is independent of admission.
+
+The receiver is append-only. It does not initialize material from baseline and does not offer document-sync. Accepted undo/redo/deletion update the mirror and invalidate interpretation while historical material retains IDs/colors. Saving-off exports an allowlist of aggregates only; the raw body, IDs, ordered colors, documents, preedit, lexical windows, query text, dictionary and fingerprints remain volatile. Saving-on requires explicit artificial opt-in.
+
+CASES.json is a manually authored new grammar fixture. Its compact constructors (`alias`, `answerLatest`, `textRepeat`, `changesRepeat`, `unreadableData`) belong only to the test adapter; none are accepted receiver kinds. Map I01–I14 supplies requirements, not executed results or pre-approved passes. Each new expected result is scored independently. Any change after first results must be labelled regression R2.

@@ -1,0 +1,10 @@
+{
+  "recorded_before_R3_execution_utc": "2026-10-02T19:53:52.703927+00:00",
+  "old_sha256": "56cd9867aea1f379d45435d17d5f3ae4e2f1c88930a75d651fd46e90d74bf0cc",
+  "new_sha256": "550c989e7347d2d7ed7e2e1960a1ce608ce57da1b4e1ead80daf0e26faa7c351",
+  "classification": "harness correction after R1/R2 results and R3 source inspection, before any R3 result",
+  "change": "P01 exact implementation eight-key assertion -> bounded nine-key whitelist/session allowed, identity equality, encoded size<=512; no payload permitted",
+  "reason": "R3 legitimate metadata session extension is not an admission behavior defect. Existing R1/R2 probe results kept unchanged; old harness version not used to claim R3 success.",
+  "other10_probes_and_behavioral_expectations_unchanged": true,
+  "supplementary_harness_sha256": "fa8a8df82bf019e50746d03645f823eb4268e8ed7624dc82833fe054c11cc045"
+}

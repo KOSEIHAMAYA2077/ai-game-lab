@@ -1,0 +1,14 @@
+{
+  "recorded_before_corrected_execution_utc": "2026-10-02T19:49:08.441139+00:00",
+  "original_probe_sha256": "5c4a1f3e3dc242a28ab4c8addea73bff07d4620237d726cea00019dfa8be1f8d",
+  "corrected_probe_sha256": "fa8a8df82bf019e50746d03645f823eb4268e8ed7624dc82833fe054c11cc045",
+  "classification": "post-result supplementary harness correction; original four passing records kept, not initial holdout",
+  "first_result_limitation": "S01 initially used keys seq2 while editor pending seq2, did not assert gaps. Cross-source equal-seq condition skipped transport gap, so initial S01 result did not verify gap path.",
+  "changes": [
+    "S01 keys seq3 to force gap and require metrics.gaps===1",
+    "New S05 independently expects per-source gap diagnosis for seq2 even when unrelated pending seq2 exists"
+  ],
+  "expected_S01": "Activity-only gap is diagnosed but must not erase unrelated frozen pending text (METHOD independent activity/control boundary; root decides policy)",
+  "expected_S05": "Per-source missing seq must not be bypassed by equality to another source pending seq",
+  "no_receiver_or_original_probe_edits": true
+}

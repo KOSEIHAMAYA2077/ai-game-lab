@@ -1,5 +1,15 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 05:09 JST
+
+期限10:37、10:17以降新機能停止。PR30 merge f43f7b8・タスク添付済み。rootはresearch/ambient-integrated-contract-v1で返却済み人工統合R3/reviewの公開を担当。59+42 SHA一致、root元20/独立11+5再現成功、旧R1/R2/失敗保持。次の専用textareaはstatic_fresh_evaluationがexperiments/ambient-editor-adapter-v1/、独立reviewはwidget_metal_comparisonがexperiments/ambient-editor-adapter-review-v1/のみ所有。OS取得/設定/実本文送信なし。
+
+static_japanese_retrievalはdesktop/glyph-metal-lab-v3/とexperiments/widget-metal-authored-v3/のみ所有し13形へ段階移植中。root immutable StageA appで剣/花瓶/クラゲ、日本語paste旧白＋新青、pause/Hide counter差0を確認。Hide後open/CUA復帰はtimeout、ownPID96022/start04:52:53/executable照合してSIGTERM終了しnativeQuit成功に数えない。次Bでreopen通常fix。root証拠.local/metal-authored-a-root-ui-r1/、agent active folderへ書かない。
+
+R5新2時間r2はsupervisor93048/engine93049/sampler93050継続、06:25:03予定。ownedcaffeinate83393は生存、未知82495触らない。既定60形Webと旧7URL/保存保持。root shared docs/publication only、新agent foldersをstageしない。
+
+以下は04:45の履歴。
+
 ## 最新: 2026-10-03 04:45 JST
 
 最新の8時間分析は02:37〜10:37 JST、10:17以降新機能停止。専用caffeinate83393は期限付き、未知82495は触らない。heartbeat3d-5は20分、意味ある変化だけ通知。全アプリ入力という使用像を受け、人工契約・サイドインテリアの分析を継続。OS入力取得・権限／設定変更・有料API・実本文送信は未実行。

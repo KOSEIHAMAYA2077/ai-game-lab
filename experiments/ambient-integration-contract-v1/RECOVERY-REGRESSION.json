@@ -1,0 +1,10 @@
+{
+  "version":"ambient-integration-r2-recovery-followup",
+  "authoredBeforeExecution":true,
+  "origin":"After independent review requested ordinary-baseline non-recovery evidence. This is a post-R1 regression, not a fresh heldout case.",
+  "receiverSha256":"96550b3131ad8275d61d5463d11f5e9f0684a8959897f6a45d8452c472df2e57",
+  "scenario":"Editor declared commit waits without ACK; sender intrudes; both lose append support. Ordinary editor baseline at revision5 followed by declared new X edit at revision6 is document preview only. Unsupported sender X adds nothing. Only explicit primary synthetic-rebase serial1 restores editor; next declared Y serial2 can add Y, never baseline text.",
+  "expectedBeforeRebase":{"body":"","document":{"text":"観測X","version":6},"serial":0,"appendUnsupported":["editor","sender"],"newEditorXAdded":0,"newSenderXAdded":0},
+  "expectedAfterExplicitRebase":{"body":"Y","units":1,"ids":[1],"inks":["green"],"document":{"text":"観測XY","version":7},"serial":2,"appendUnsupported":["sender"]},
+  "evidenceBoundary":"Only trusted synthetic declarations; no OS authentication or IME confirmation. Same R2 source, no implementation/fixture changes."
+}

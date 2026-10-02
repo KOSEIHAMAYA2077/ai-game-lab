@@ -1,5 +1,11 @@
 # 変更履歴
 
+## 人工統合のR3候補 — 2026-10-03
+
+- 材料body/IDの唯一所有、全体追加後ACK、shape-only判断、保存offを新しい人工grammarで統合。
+- 別入力元のno-ACK割込みと無関係なactivity gapの不具合を新R2/R3で修正。旧版・失敗原票・harness修正を保持。
+- 元20・補助8・追加gap4・独立11/5・mutant6を別の修正後回帰として記録。root再現と公開SHA/リンク検査を追加。OS/実IME/既存widget接続は未実装。
+
 ## 材料と形判断・Windows移植の分析 — 2026-10-03
 
 - 材料追加と低頻度形判断の人工17stream×3方針を比較し、初回原票を保持。保存offのID/色順漏れを別R2で除き、rootも51run/5,313assertionを再実行。
