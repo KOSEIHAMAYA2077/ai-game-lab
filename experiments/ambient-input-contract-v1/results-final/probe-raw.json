@@ -1,0 +1,383 @@
+[
+  {
+    "id": "activity-only-unreadable-payload",
+    "payloadReads": 0,
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "activity",
+      "reason": "text-retention-disabled",
+      "retry": false,
+      "knownCommit": false,
+      "queued": 0
+    }
+  },
+  {
+    "id": "secure-field-unreadable-payload",
+    "payloadReads": 0,
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "activity",
+      "reason": "field-text-disabled",
+      "retry": false,
+      "knownCommit": false,
+      "queued": 0
+    }
+  },
+  {
+    "id": "unknown-field-unreadable-payload",
+    "payloadReads": 0,
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "activity",
+      "reason": "field-text-disabled",
+      "retry": false,
+      "knownCommit": false,
+      "queued": 0
+    }
+  },
+  {
+    "id": "unknown-source-unreadable-payload",
+    "payloadReads": 0,
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "ignored",
+      "reason": "unknown-source",
+      "retry": false,
+      "knownCommit": false,
+      "queued": 0
+    }
+  },
+  {
+    "id": "oversize-rejected-not-truncated",
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "rejected",
+      "reason": "invalid-change",
+      "retry": false,
+      "knownCommit": false,
+      "queued": 0
+    }
+  },
+  {
+    "id": "20000-activity-events",
+    "passed": true,
+    "eventCount": 20000,
+    "elapsedMs": 100.064709,
+    "stateBytes": 1365,
+    "status": {
+      "epoch": 1,
+      "mode": "append-only",
+      "retention": "text",
+      "bodyCount": 0,
+      "pendingCount": 0,
+      "pendingJobs": 0,
+      "documentVersion": null,
+      "documentUnits": 0,
+      "previewUnits": 0,
+      "compositionUnits": 0,
+      "lastCommitSerial": 0,
+      "nextGlyphId": 1,
+      "synchronized": false,
+      "needsResync": false,
+      "highWater": {
+        "system": 1,
+        "keys": 20000,
+        "ownedEditor": 0,
+        "documentApi": 0
+      },
+      "metrics": {
+        "activity": 1000000,
+        "key": 1000000,
+        "shortcut": 673266,
+        "edit": 0,
+        "acceptedCommits": 0,
+        "unknownEdits": 0,
+        "duplicates": 0,
+        "staleContext": 0,
+        "invalid": 0,
+        "blockedText": 0,
+        "backpressure": 0,
+        "capacityHolds": 0,
+        "coalesced": 0,
+        "cancelledSnapshots": 0,
+        "drained": 0,
+        "untrustedKnownClaims": 0
+      }
+    }
+  },
+  {
+    "id": "preview-surrogate-boundary",
+    "passed": true,
+    "status": {
+      "epoch": 1,
+      "mode": "append-only",
+      "retention": "text",
+      "bodyCount": 0,
+      "pendingCount": 0,
+      "pendingJobs": 0,
+      "documentVersion": 0,
+      "documentUnits": 2,
+      "previewUnits": 0,
+      "compositionUnits": 0,
+      "lastCommitSerial": 0,
+      "nextGlyphId": 1,
+      "synchronized": false,
+      "needsResync": false,
+      "highWater": {
+        "system": 1,
+        "keys": 0,
+        "ownedEditor": 1,
+        "documentApi": 0
+      },
+      "metrics": {
+        "activity": 0,
+        "key": 0,
+        "shortcut": 0,
+        "edit": 0,
+        "acceptedCommits": 0,
+        "unknownEdits": 0,
+        "duplicates": 0,
+        "staleContext": 0,
+        "invalid": 0,
+        "blockedText": 0,
+        "backpressure": 0,
+        "capacityHolds": 0,
+        "coalesced": 0,
+        "cancelledSnapshots": 0,
+        "drained": 0,
+        "untrustedKnownClaims": 0
+      }
+    }
+  },
+  {
+    "id": "capacity-before-first-drain",
+    "mode": "append-only",
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "held",
+      "reason": "body-capacity",
+      "retry": false,
+      "knownCommit": true,
+      "queued": 5
+    },
+    "status": {
+      "epoch": 1,
+      "mode": "append-only",
+      "retention": "text",
+      "bodyCount": 0,
+      "pendingCount": 5,
+      "pendingJobs": 1,
+      "documentVersion": 2,
+      "documentUnits": 10,
+      "previewUnits": 10,
+      "compositionUnits": 0,
+      "lastCommitSerial": 2,
+      "nextGlyphId": 1,
+      "synchronized": false,
+      "needsResync": false,
+      "highWater": {
+        "system": 1,
+        "keys": 0,
+        "ownedEditor": 3,
+        "documentApi": 0
+      },
+      "metrics": {
+        "activity": 2,
+        "key": 0,
+        "shortcut": 0,
+        "edit": 2,
+        "acceptedCommits": 2,
+        "unknownEdits": 0,
+        "duplicates": 0,
+        "staleContext": 0,
+        "invalid": 0,
+        "blockedText": 0,
+        "backpressure": 0,
+        "capacityHolds": 1,
+        "coalesced": 0,
+        "cancelledSnapshots": 0,
+        "drained": 0,
+        "untrustedKnownClaims": 0
+      }
+    }
+  },
+  {
+    "id": "capacity-before-first-drain",
+    "mode": "document-sync",
+    "passed": true,
+    "decision": {
+      "ack": true,
+      "disposition": "held",
+      "reason": "body-capacity",
+      "retry": false,
+      "knownCommit": true,
+      "queued": 0
+    },
+    "status": {
+      "epoch": 1,
+      "mode": "document-sync",
+      "retention": "text",
+      "bodyCount": 0,
+      "pendingCount": 0,
+      "pendingJobs": 0,
+      "documentVersion": 2,
+      "documentUnits": 10,
+      "previewUnits": 10,
+      "compositionUnits": 0,
+      "lastCommitSerial": 2,
+      "nextGlyphId": 1,
+      "synchronized": false,
+      "needsResync": false,
+      "highWater": {
+        "system": 1,
+        "keys": 0,
+        "ownedEditor": 3,
+        "documentApi": 0
+      },
+      "metrics": {
+        "activity": 2,
+        "key": 0,
+        "shortcut": 0,
+        "edit": 2,
+        "acceptedCommits": 2,
+        "unknownEdits": 0,
+        "duplicates": 0,
+        "staleContext": 0,
+        "invalid": 0,
+        "blockedText": 0,
+        "backpressure": 0,
+        "capacityHolds": 1,
+        "coalesced": 0,
+        "cancelledSnapshots": 1,
+        "drained": 0,
+        "untrustedKnownClaims": 0
+      }
+    }
+  },
+  {
+    "id": "noncooperative-producer-limit",
+    "passed": true,
+    "adoption": "unsupported-adapter",
+    "lostUnACKedSyntheticText": "B",
+    "calls": [
+      {
+        "kind": "snapshot",
+        "seq": 1,
+        "decision": {
+          "ack": true,
+          "disposition": "preview",
+          "reason": "baseline-is-not-material",
+          "retry": false,
+          "knownCommit": false,
+          "queued": 0
+        }
+      },
+      {
+        "kind": "edit",
+        "seq": 2,
+        "decision": {
+          "ack": true,
+          "disposition": "queued",
+          "reason": "known-insertion",
+          "retry": false,
+          "knownCommit": true,
+          "queued": 1
+        }
+      },
+      {
+        "kind": "edit",
+        "seq": 3,
+        "decision": {
+          "ack": false,
+          "disposition": "deferred",
+          "reason": "pending-capacity",
+          "retry": true,
+          "knownCommit": true,
+          "queued": 1
+        }
+      },
+      {
+        "kind": "edit",
+        "seq": 4,
+        "decision": {
+          "ack": true,
+          "disposition": "preview",
+          "reason": "commit-quality-unknown",
+          "retry": false,
+          "knownCommit": false,
+          "queued": 1
+        }
+      },
+      {
+        "kind": "tick",
+        "seq": 2,
+        "decision": {
+          "ack": true,
+          "disposition": "drained",
+          "reason": "bounded-work",
+          "retry": false,
+          "knownCommit": false,
+          "queued": 0
+        }
+      },
+      {
+        "kind": "edit",
+        "seq": 3,
+        "decision": {
+          "ack": true,
+          "disposition": "ignored",
+          "reason": "duplicate-sequence",
+          "retry": false,
+          "knownCommit": false,
+          "queued": 0
+        }
+      }
+    ],
+    "status": {
+      "epoch": 1,
+      "mode": "append-only",
+      "retention": "text",
+      "bodyCount": 1,
+      "pendingCount": 0,
+      "pendingJobs": 0,
+      "documentVersion": 2,
+      "documentUnits": 2,
+      "previewUnits": 2,
+      "compositionUnits": 0,
+      "lastCommitSerial": 1,
+      "nextGlyphId": 2,
+      "synchronized": false,
+      "needsResync": false,
+      "highWater": {
+        "system": 2,
+        "keys": 0,
+        "ownedEditor": 4,
+        "documentApi": 0
+      },
+      "metrics": {
+        "activity": 2,
+        "key": 0,
+        "shortcut": 0,
+        "edit": 2,
+        "acceptedCommits": 1,
+        "unknownEdits": 1,
+        "duplicates": 1,
+        "staleContext": 0,
+        "invalid": 0,
+        "blockedText": 0,
+        "backpressure": 1,
+        "capacityHolds": 0,
+        "coalesced": 0,
+        "cancelledSnapshots": 0,
+        "drained": 1,
+        "untrustedKnownClaims": 0
+      }
+    }
+  }
+]

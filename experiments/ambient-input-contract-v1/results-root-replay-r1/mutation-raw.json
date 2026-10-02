@@ -1,0 +1,51 @@
+[
+  {
+    "id": "capability-upgrade",
+    "fixtureId": "document-api-claims-known",
+    "mode": "append-only",
+    "detected": true,
+    "failure": "document-api-claims-known/append-only/body\n\n'猫です' !== ''\n"
+  },
+  {
+    "id": "transport-replay",
+    "fixtureId": "raw-activity-and-material",
+    "mode": "append-only",
+    "detected": true,
+    "failure": "raw-activity-and-material/append-only/key\n\n8 !== 4\n"
+  },
+  {
+    "id": "unbounded-pending",
+    "fixtureId": "append-backpressure-retry",
+    "mode": "append-only",
+    "detected": true,
+    "failure": "finite pending letters"
+  },
+  {
+    "id": "save-preview",
+    "fixtureId": "persist-off",
+    "mode": "append-only",
+    "detected": true,
+    "failure": "persist-off/append-only/persistedAbsent"
+  },
+  {
+    "id": "whole-revision-upgrade",
+    "fixtureId": "known-segment-not-whole-revision",
+    "mode": "document-sync",
+    "detected": true,
+    "failure": "known-segment-not-whole-revision/document-sync/body\n\n'未確定A' !== ''\n"
+  },
+  {
+    "id": "version-gap-bypass",
+    "fixtureId": "version-gap-and-baseline",
+    "mode": "append-only",
+    "detected": true,
+    "failure": "version-gap-and-baseline/append-only/needsResync\n\nfalse !== true\n"
+  },
+  {
+    "id": "preedit-material",
+    "fixtureId": "composition-once",
+    "mode": "append-only",
+    "detected": true,
+    "failure": "composition-once/append-only/body\n\n'kか漢' !== ''\n"
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "review": "ambient-boundary-review-v1",
+  "checkedAtUtc": "2026-10-02T18:43:32.083609+00:00",
+  "sourceCodeExecuted": false,
+  "oldTestsReexecuted": false,
+  "realInputOrUiAccess": false,
+  "sharedWrites": false,
+  "summaryCodeHashChecks": {
+    "reducer.mjs": true,
+    "fixtures.mjs": true,
+    "contract.d.ts": true,
+    "CONTRACT.md": true,
+    "run.mjs": true
+  },
+  "provenanceArtifactHashChecks": {
+    "CONTRACT.md": true,
+    "contract.d.ts": true,
+    "reducer.mjs": true,
+    "fixtures.mjs": true,
+    "run.mjs": true,
+    "README.md": false,
+    "REPORT.md": false,
+    "results-final-v2/summary.json": true,
+    "results-final-v2/fixture-raw.json": true,
+    "results-final-v2/probe-raw.json": true,
+    "results-final-v2/mutation-raw.json": true,
+    "results-final-v2/failures.json": true
+  },
+  "canonicalFailures": [],
+  "referenceDriftSinceCapture": [],
+  "privacyLocationOnlyScan": {
+    "scope": [
+      "research/ambient-input-platforms-v1",
+      "experiments/ambient-input-contract-v1",
+      "research/widget-study-protocol-v1",
+      "research/side-interior-hci-v1",
+      "README.md",
+      "research/side-interior-direction-20261003.md",
+      "research/widget-research-map-20261003.md"
+    ],
+    "scannedTextFiles": 59,
+    "patterns": [
+      "home_path",
+      "email",
+      "credential_marker"
+    ],
+    "findingCount": 0,
+    "findings": [],
+    "completePiiOrSecretsAudit": false,
+    "ignoredCacheAndBinaryExcluded": true
+  },
+  "localLinkChecks": {
+    "checked": 21,
+    "missing": []
+  },
+  "scheduler": {
+    "reviewed": false,
+    "reason": "parent directs review current boundary without waiting; implementation is owned by another agent and not frozen here",
+    "presentFilesAtCheck": [
+      "experiments/ambient-material-scheduler-v1/LIFECYCLE.md",
+      "experiments/ambient-material-scheduler-v1/METHOD.json",
+      "experiments/ambient-material-scheduler-v1/METHOD.md",
+      "experiments/ambient-material-scheduler-v1/scheduler.mjs"
+    ]
+  }
+}
