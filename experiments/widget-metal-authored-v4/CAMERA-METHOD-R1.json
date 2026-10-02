@@ -1,0 +1,92 @@
+{
+  "method": "analytic before candidate numerical results; rigid rotations and convex skin weights",
+  "snake_tube_rest_upper": 1.4662446581088182,
+  "snake_rows": [
+    {
+      "joint": 0,
+      "active_v": [
+        0,
+        0.125
+      ],
+      "displacement_upper": 0.01006432892104121
+    },
+    {
+      "joint": 1,
+      "active_v": [
+        0,
+        0.25
+      ],
+      "displacement_upper": 0.034639372868685826
+    },
+    {
+      "joint": 2,
+      "active_v": [
+        0.125,
+        0.375
+      ],
+      "displacement_upper": 0.07660064729059302
+    },
+    {
+      "joint": 3,
+      "active_v": [
+        0.25,
+        0.5
+      ],
+      "displacement_upper": 0.13805751274497963
+    },
+    {
+      "joint": 4,
+      "active_v": [
+        0.375,
+        0.625
+      ],
+      "displacement_upper": 0.22167839459258265
+    },
+    {
+      "joint": 5,
+      "active_v": [
+        0.5,
+        0.75
+      ],
+      "displacement_upper": 0.3302700492208574
+    },
+    {
+      "joint": 6,
+      "active_v": [
+        0.625,
+        0.875
+      ],
+      "displacement_upper": 0.4667458091690939
+    },
+    {
+      "joint": 7,
+      "active_v": [
+        0.75,
+        1
+      ],
+      "displacement_upper": 0.6340983819855132
+    },
+    {
+      "joint": 8,
+      "active_v": [
+        0.875,
+        1
+      ],
+      "displacement_upper": 0.7098538540321857
+    }
+  ],
+  "snake_tube_total_upper": 2.176098512141004,
+  "snake_head_upper": 1.5434226956268733,
+  "selected_radius": {
+    "fish": 2.0,
+    "bird": 1.65,
+    "snake": 2.2
+  },
+  "bird_upper": 1.579,
+  "fish_upper": 1.88,
+  "notes": [
+    "bird wing shoulder length plus wrist path plus vertex distance + .028 bob; other patches smaller",
+    "fish rest radius 1.504 plus max each Y angle times maximum eligible joint lever <.376",
+    "snake each rotation angle bounded via XYZ quaternion scalar; tube active influence v neighborhood; sphere triangle inequality; head root only"
+  ]
+}

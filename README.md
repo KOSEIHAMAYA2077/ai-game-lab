@@ -18,6 +18,8 @@
 
 入力の有限状態処理は、Mac標準のJavaScriptCoreでも同じ人工20ケースを処理し、Node側の意味出力と一致しました。[実装・再現手順](experiments/ambient-javascriptcore-v1/README.md) / [結果と環境・限界](experiments/ambient-javascriptcore-v1/REPORT.md)。小窓へ直接接続する前段階のCLI検証で、実IME・常駐資源の結果ではありません。
 
+魚・鳥・蛇を骨格付きの文字表面として加えた16形の別候補も保存。元Webの面・骨格・重みを移し、旧13形の同条件offscreen PNGは完全一致しました。[実装と原表現の由来](desktop/glyph-metal-lab-v4/README.md) / [数値・描画結果と保持した失敗](experiments/widget-metal-authored-v4/REPORT.md)。Macがロック状態のため新16形の実窓操作・通常窓資源は未確認で、配布・採用済みの13形版とは区別します。[root起動attempt](experiments/widget-metal-authored-v4-root-attempt/README.md)。
+
 ### Metalの小窓・3形の独立比較版
 
 球・箱・メビウスの文字表面をMac標準の描画へ移した候補。回転中の端切れを新v2で修正しました。実小窓の白い球・1,536描画・90秒ではCPU2.661%／charged peak68.298MiBですが、60形版との機能差があり既定版は維持します。反復WKの描画周期gate失敗も原票ごと保存。[作成・操作](desktop/glyph-metal-lab-v2/README.md) / [画面と射影](experiments/widget-metal-framing-v2/README.md) / [実窓比較・制限](experiments/widget-metal-native-evaluation-v2/REPORT.md)。
