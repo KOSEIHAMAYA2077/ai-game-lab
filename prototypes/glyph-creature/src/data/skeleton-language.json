@@ -1,0 +1,396 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "captions": {
+    "vase": [
+      "花瓶。花を生ける容器。細い口と膨らんだ胴。",
+      "一輪挿し。壺。花を入れる器。",
+      "vase for flowers with a neck and a rounded body",
+      "a pottery urn or decorative flower vessel"
+    ],
+    "sword": [
+      "剣。刀。まっすぐ長い刃と持ち手。",
+      "切っ先がある武器。両刃の剣。",
+      "a sword with a blade, guard, and handle",
+      "a long sharp blade or a saber",
+      "刃。刃物。切っ先。"
+    ],
+    "mobius": [
+      "メビウスの輪。ねじれた帯。表と裏がつながる輪。",
+      "輪っか。ひねってつないだリボン。",
+      "a Mobius strip, a twisted ribbon loop with one surface",
+      "an endless twisted band",
+      "輪っか"
+    ],
+    "ring": [
+      "円環。普通の輪。ドーナツ状の丸い管。",
+      "穴の開いた輪。丸いタイヤ。",
+      "a torus, a donut-shaped circular tube",
+      "an ordinary circular ring without a twist"
+    ],
+    "sphere": [
+      "球体。丸い球。ボール。",
+      "玉。地球のような丸い形。",
+      "a sphere, a round ball",
+      "a spherical globe or orb"
+    ],
+    "cube": [
+      "立方体。四角い箱。角ばった形。",
+      "四角い。直方体。箱の形。",
+      "a cube, a square box with flat faces",
+      "a cuboid or rectangular block"
+    ]
+  },
+  "aliases": {
+    "vase": [
+      "花瓶",
+      "一輪挿し",
+      "壺",
+      "つぼ",
+      "花入れ",
+      "vase",
+      "urn"
+    ],
+    "sword": [
+      "剣",
+      "刀",
+      "刃",
+      "刃物",
+      "ソード",
+      "sword",
+      "blade",
+      "saber"
+    ],
+    "mobius": [
+      "メビウスの輪",
+      "メビウス",
+      "輪っか",
+      "mobius strip",
+      "mobius",
+      "möbius",
+      "twisted ribbon"
+    ],
+    "ring": [
+      "円環",
+      "ドーナツ",
+      "輪",
+      "torus",
+      "donut",
+      "ring"
+    ],
+    "sphere": [
+      "球体",
+      "球",
+      "丸い",
+      "ボール",
+      "sphere",
+      "ball",
+      "orb"
+    ],
+    "cube": [
+      "立方体",
+      "直方体",
+      "四角",
+      "箱",
+      "cube",
+      "cuboid",
+      "box"
+    ]
+  },
+  "descriptors": {
+    "height": [
+      [
+        0.65,
+        "背が低い"
+      ],
+      [
+        0.65,
+        "ずんぐりした"
+      ],
+      [
+        0.65,
+        "short and squat"
+      ],
+      [
+        1.65,
+        "背が高い"
+      ],
+      [
+        1.65,
+        "すらっとした"
+      ],
+      [
+        1.65,
+        "tall and elongated"
+      ]
+    ],
+    "width": [
+      [
+        0.65,
+        "細い"
+      ],
+      [
+        0.65,
+        "ほっそりした"
+      ],
+      [
+        0.65,
+        "slim and narrow"
+      ],
+      [
+        1.55,
+        "太い"
+      ],
+      [
+        1.55,
+        "ふっくらした"
+      ],
+      [
+        1.55,
+        "wide and bulbous"
+      ]
+    ],
+    "neck": [
+      [
+        0.2,
+        "首が細い"
+      ],
+      [
+        0.2,
+        "口が小さい"
+      ],
+      [
+        0.2,
+        "a narrow neck with a small mouth"
+      ],
+      [
+        0.85,
+        "口が広い"
+      ],
+      [
+        0.85,
+        "首が太い"
+      ],
+      [
+        0.85,
+        "a wide neck with a broad mouth"
+      ]
+    ],
+    "bend": [
+      [
+        0.0,
+        "まっすぐ"
+      ],
+      [
+        0.0,
+        "straight and rigid"
+      ],
+      [
+        0.65,
+        "曲がった"
+      ],
+      [
+        0.65,
+        "しなやかに曲げる"
+      ],
+      [
+        0.65,
+        "bent and curved"
+      ]
+    ],
+    "twist": [
+      [
+        0.0,
+        "ねじらない"
+      ],
+      [
+        0.0,
+        "untwisted"
+      ],
+      [
+        0.65,
+        "ひねった"
+      ],
+      [
+        0.65,
+        "らせん状"
+      ],
+      [
+        0.65,
+        "twisted and spiraling"
+      ]
+    ]
+  },
+  "anchors": [
+    [
+      "細長(?:い|く|くし)|slender|elongated",
+      {
+        "height": 1.65,
+        "width": 0.65
+      }
+    ],
+    [
+      "背(?:が|を)?高(?:い|く)|長(?:い|く)|tall|long",
+      {
+        "height": 1.65
+      }
+    ],
+    [
+      "背(?:が|を)?低(?:い|く)|短(?:い|く)|平た(?:い|く)|short|squat|flat",
+      {
+        "height": 0.65
+      }
+    ],
+    [
+      "細(?:い|く|身)|ほっそり|slim|narrow",
+      {
+        "width": 0.65
+      }
+    ],
+    [
+      "太(?:い|く)|幅(?:が|を)?広(?:い|く)|ふっくら|wide|fat|bulbous",
+      {
+        "width": 1.55
+      }
+    ],
+    [
+      "(?:首|口)(?:が|を)?(?:細|狭)(?:い|く)|口(?:が|を)?小さ(?:い|く)|narrow neck|small mouth",
+      {
+        "neck": 0.2
+      }
+    ],
+    [
+      "口(?:が|を)?広(?:い|く)|首(?:が|を)?太(?:い|く)|wide neck|broad mouth",
+      {
+        "neck": 0.85
+      }
+    ],
+    [
+      "曲(?:がった|がる|げた|げて|げる)|湾曲|しなやか|curved|bent|bend",
+      {
+        "bend": 0.65
+      }
+    ],
+    [
+      "ねじ(?:れた|れる|れて|る|って|った)|ひね(?:った|る|って)|らせん状|螺旋状|twisted|twisting|spiral",
+      {
+        "twist": 0.65
+      }
+    ],
+    [
+      "まっすぐ|真っ直ぐ|曲げ(?:ない|ず)|straight|unbent",
+      {
+        "bend": 0.0
+      }
+    ],
+    [
+      "ねじ(?:らない|れない|りなし)|ひね(?:らない|りなし)|untwisted|no twist",
+      {
+        "twist": 0.0
+      }
+    ],
+    [
+      "左(?:に|へ)?曲げ|bend left",
+      {
+        "bend": -0.65
+      }
+    ],
+    [
+      "逆(?:に)?ねじ|左巻き|twist left",
+      {
+        "twist": -0.65
+      }
+    ]
+  ],
+  "background": [
+    "今日は楽しかった。明日の予定を考える。",
+    "人間。鳥。魚。生き物。",
+    "ドラゴン。恐竜。宇宙船。",
+    "風車。建物。乗り物。",
+    "I am writing about my day, not requesting a shape.",
+    "an animal, a spaceship, or a building"
+  ],
+  "bounds": {
+    "height": [
+      0.5,
+      1.8
+    ],
+    "width": [
+      0.5,
+      1.8
+    ],
+    "neck": [
+      0.15,
+      1.0
+    ],
+    "bend": [
+      -1.0,
+      1.0
+    ],
+    "twist": [
+      -1.0,
+      1.0
+    ]
+  },
+  "default": {
+    "family": "sphere",
+    "height": 1.0,
+    "width": 1.0,
+    "neck": 0.45,
+    "bend": 0.0,
+    "twist": 0.0
+  },
+  "maxText": 4000,
+  "minScore": 0.48,
+  "minMargin": 0.028,
+  "files": [
+    {
+      "file": "onnx/model_qint8_arm64.onnx",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/onnx/model_qint8_arm64.onnx",
+      "bytes": 118412398,
+      "sha256": "783fea82d71a58179b830a4dbd2d58447e640609e98eedf9ffa12622d375a672"
+    },
+    {
+      "file": "tokenizer.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer.json",
+      "bytes": 9081518,
+      "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8"
+    },
+    {
+      "file": "config.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json",
+      "bytes": 645,
+      "sha256": "6300193cb75e01cf80c96decef7187dfb33094d97cc1490b7ead6ff134476e4e"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer_config.json",
+      "bytes": 526,
+      "sha256": "5036ea374ffedd706e3bef33e2e0d6953cb868ef8a490e76e32ba0faa37a6b9b"
+    },
+    {
+      "file": "sentence_bert_config.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/sentence_bert_config.json",
+      "bytes": 53,
+      "sha256": "70f4448f31320443fe3557cacea5abf2dcc4915dda8c80646bec9f3bb0aa5a1f"
+    },
+    {
+      "file": "1_Pooling/config.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/1_Pooling/config.json",
+      "bytes": 190,
+      "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/special_tokens_map.json",
+      "bytes": 239,
+      "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d"
+    },
+    {
+      "file": "README.md",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/README.md",
+      "bytes": 3888,
+      "sha256": "1e98ea05b0de579fcaad3d625b62ea55647142ed674d5f5ebf1440e4bbbb6f23"
+    }
+  ]
+}

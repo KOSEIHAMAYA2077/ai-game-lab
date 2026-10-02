@@ -1,0 +1,210 @@
+{
+  "environment": "Apple M5 32GB, headless Chrome, CPU WASM single thread",
+  "kind": "development smoke; not independent accuracy evaluation",
+  "httpsBlocked": true,
+  "externalRequests": [],
+  "info": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "provider": "wasm",
+    "modelLoadMs": 1751.5999999642372,
+    "downloadedBytes": 0,
+    "cacheUsed": true,
+    "maxTokens": 128
+  },
+  "values": [
+    {
+      "text": "花を飾るための器",
+      "result": {
+        "spec": {
+          "family": "vase",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 12.5,
+        "confidence": 0.86264,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.86264
+          },
+          {
+            "family": "sword",
+            "score": 0.43863
+          },
+          {
+            "family": "mobius",
+            "score": 0.4383
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.86264
+          }
+        ],
+        "reason": "selected"
+      }
+    },
+    {
+      "text": "すらっとした花入れ",
+      "result": {
+        "spec": {
+          "family": "vase",
+          "height": 1.65,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 24.600000023841858,
+        "confidence": 0.99318,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99318
+          },
+          {
+            "family": "sword",
+            "score": 0.55706
+          },
+          {
+            "family": "mobius",
+            "score": 0.42955
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99318
+          },
+          {
+            "kind": "embedding-descriptor",
+            "attribute": "height",
+            "score": 0.99231
+          }
+        ],
+        "reason": "selected"
+      }
+    },
+    {
+      "text": "ずんぐりした壺",
+      "result": {
+        "spec": {
+          "family": "vase",
+          "height": 0.65,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 25,
+        "confidence": 0.99067,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99067
+          },
+          {
+            "family": "sword",
+            "score": 0.80827
+          },
+          {
+            "family": "cube",
+            "score": 0.72864
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99067
+          },
+          {
+            "kind": "embedding-descriptor",
+            "attribute": "height",
+            "score": 0.99608
+          }
+        ],
+        "reason": "selected"
+      }
+    },
+    {
+      "text": "表裏のないリボンを閉じる",
+      "result": {
+        "spec": {
+          "family": "mobius",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 12.5,
+        "confidence": 0.5944,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.5944
+          },
+          {
+            "family": "vase",
+            "score": 0.55117
+          },
+          {
+            "family": "sword",
+            "score": 0.49172
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "embedding-family",
+            "family": "mobius",
+            "score": 0.5944
+          }
+        ],
+        "reason": "selected"
+      }
+    },
+    {
+      "text": "今日の出来事を書いた",
+      "result": {
+        "spec": null,
+        "source": "unchanged",
+        "modelMs": 8.5,
+        "reason": "ambiguous",
+        "confidence": 0.535,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.535
+          },
+          {
+            "family": "mobius",
+            "score": 0.52482
+          },
+          {
+            "family": "vase",
+            "score": 0.4541
+          }
+        ],
+        "evidence": []
+      }
+    }
+  ]
+}

@@ -5,5 +5,6 @@ export default defineConfig({
   build: { rolldownOptions: { input: {
     main: fileURLToPath(new URL('./index.html', import.meta.url)),
     strokes: fileURLToPath(new URL('./strokes.html', import.meta.url)),
+    skeleton: fileURLToPath(new URL('./skeleton.html', import.meta.url)),
   } } },
 });
