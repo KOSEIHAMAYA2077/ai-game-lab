@@ -1,0 +1,112 @@
+{
+  "scope": "Additional artificial lifecycle regression designed after R1 source/result review; no browser/realIME/UI",
+  "source": "experiments/ambient-editor-adapter-review-v1/snapshots/r1/experiments/ambient-editor-adapter-v1/adapter.mjs",
+  "recordedAt": "2026-10-02T20:26:31.812Z",
+  "expected": "Destroy ends owner session, clears one deferred payload, old readiness/retry callback never appends to retired body",
+  "passed": false,
+  "before": {
+    "version": 0,
+    "savingOff": true,
+    "status": "deferred",
+    "lastReason": "temporary-handoff",
+    "bodyCount": 0,
+    "presentedCount": 0,
+    "documentVersion": 0,
+    "compositionPhase": null,
+    "pendingRetry": true,
+    "readOnly": true,
+    "unsupported": false,
+    "shape": "sphere",
+    "shapePending": false,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 0,
+      "unknown": 0,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 0,
+      "overruns": 0
+    },
+    "body": "",
+    "units": 0,
+    "ids": [],
+    "inks": [],
+    "unitTexts": [],
+    "document": "",
+    "composition": null,
+    "frozenPending": true
+  },
+  "afterDestroy": {
+    "version": 0,
+    "savingOff": true,
+    "status": "deferred",
+    "lastReason": "temporary-handoff",
+    "bodyCount": 0,
+    "presentedCount": 0,
+    "documentVersion": 0,
+    "compositionPhase": null,
+    "pendingRetry": true,
+    "readOnly": false,
+    "unsupported": false,
+    "shape": "sphere",
+    "shapePending": false,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 0,
+      "unknown": 0,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 0,
+      "overruns": 0
+    },
+    "body": "",
+    "units": 0,
+    "ids": [],
+    "inks": [],
+    "unitTexts": [],
+    "document": "",
+    "composition": null,
+    "frozenPending": true
+  },
+  "afterStaleCallback": {
+    "version": 1,
+    "savingOff": true,
+    "status": "known",
+    "lastReason": "whole-add-before-ack",
+    "bodyCount": 1,
+    "presentedCount": 0,
+    "documentVersion": 1,
+    "compositionPhase": null,
+    "pendingRetry": false,
+    "readOnly": false,
+    "unsupported": false,
+    "shape": "sphere",
+    "shapePending": false,
+    "rawKeys": 0,
+    "rawShortcuts": 0,
+    "counters": {
+      "known": 1,
+      "unknown": 0,
+      "ignored": 0,
+      "cancelled": 0,
+      "retries": 1,
+      "overruns": 0
+    },
+    "body": "X",
+    "units": 1,
+    "ids": [
+      1
+    ],
+    "inks": [
+      "blue"
+    ],
+    "unitTexts": [
+      "X"
+    ],
+    "document": "X",
+    "composition": null,
+    "frozenPending": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_before_R2_source_and_results_utc": "2026-10-02T20:31:19.535725+00:00",
+  "R1_method_cases_code_and_results_unchanged": true,
+  "R2_known_correction_regression": true,
+  "author_announced_policy": "duplicate create refused in module WeakMap; destroy terminal; same closed element cannot re-create; new element/reload creates new owner; blur noACK invalidates provenance; destroyed controls are inert",
+  "mapping_change": "Only P15 execution mapping changes: terminal same-element re-create must explicitly reject, then second constructor on a fresh live element must refuse or return same authority. Original A16 safety expectation unchanged. P12 and all other assertions unchanged.",
+  "probe_sha256": "4911472ee9b0a8b28eb13844236c32a58b8acb4df3bcd2886d5a98e8cce1ac29",
+  "original_probe_sha256": "0ed76f028c9ffeffccb4258cd12cab506803482948e9cc865c9f41b0561e1add",
+  "supplementary_lifecycle_probe_unchanged_sha256": "955614160fe4e06a7efca2319333b213114f3a02bb502779cfd32d37956f1cf5"
+}

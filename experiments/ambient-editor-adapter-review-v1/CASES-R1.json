@@ -1,0 +1,108 @@
+{
+  "version": "ambient-editor-independent-cases-v1-r1",
+  "source": "independent manual expectations, before source/API/result",
+  "cases": [
+    {
+      "id": "A01",
+      "target": "initial baseline/ownership",
+      "given": "Dedicated field initial value seed; another field exists",
+      "expected": "Initial baseline never material; attach only passed owned element, no scan/listeners/read of other fields"
+    },
+    {
+      "id": "A02",
+      "target": "known noncomposing selected replacement",
+      "given": "Owned baseline a-c, selection[1,2]; beforeinput/input declare local supported insertText data B, final value aBc",
+      "expected": "If known guard matches, only B admitted once, doc aBc, prior body/IDs/ink preserved; unchanged a/c never material"
+    },
+    {
+      "id": "A03",
+      "target": "duplicate final DOM echo",
+      "given": "Repeat input/final notification with same accepted revision/value",
+      "expected": "No duplicate material or ID allocation; text equality across actually new serials still remains separate when different operations are known"
+    },
+    {
+      "id": "A04",
+      "target": "IME preview",
+      "given": "compositionstart/update plus input isComposing true, values k->か->漢",
+      "expected": "Preview/mirror only;0 material,0 shape evidence; Enter/keydown alone never confirm"
+    },
+    {
+      "id": "A05",
+      "target": "IME cancel",
+      "given": "Same preedit then compositionend data empty, value returns original baseline",
+      "expected": "0 material and volatile composition preview cleared; no timeout promotion"
+    },
+    {
+      "id": "A06",
+      "target": "final IME ordering and trace policy",
+      "given": "Matching local final trace compositionend and final input in both supported and reversed/missing variants",
+      "expected": "One whole final insertion for an explicitly declared supported known trace only, otherwise0+unsupported/preview/explicit-send fallback; never both final events append"
+    },
+    {
+      "id": "A07",
+      "target": "unknown commit",
+      "given": "Input missing known type/composition flags/target/session/trust, synthetic dispatch, or unsupported event type",
+      "expected": "0 material, no local automatic confirmation from quiet wait; known lab assertions stay labelled synthetic"
+    },
+    {
+      "id": "A08",
+      "target": "paste without clipboard",
+      "given": "Own field selected replacement to pasted artificial P,Q; inputType insertFromPaste may have nullable data/ranges",
+      "expected": "No clipboard/dataTransfer/global reads. Known supported exact diff admits insertion only; unsupported shape of event gives0/preview, not guessed baseline copy"
+    },
+    {
+      "id": "A09",
+      "target": "undo and redo",
+      "given": "Add X, historyUndo back to baseline, historyRedo X",
+      "expected": "Mirror follows revision but append body/IDs/ink remains one X; no redo duplication; lexical pending/window invalidated"
+    },
+    {
+      "id": "A10",
+      "target": "deletion",
+      "given": "Known own deletion changes text without inserted portion",
+      "expected": "Document updates,0 added material, old IDs/ink retained; no guessed keystroke character"
+    },
+    {
+      "id": "A11",
+      "target": "cooperative noACK snapshot",
+      "given": "Receiver admissionReady false, own known X input; original DOM/event object later mutated artificially before readiness; producer retries without newer committed event",
+      "expected": "Producer holds exactly one immutable bounded payload; retry preserves observed metadata and original X, adds whole once then ACK; no re-read changed current DOM as same operation"
+    },
+    {
+      "id": "A12",
+      "target": "noACK competing new input",
+      "given": "A second new own operation/source occurs while frozen X waits",
+      "expected": "Explicit gap/unsupported, never silently rewrites pending X to Y or fabricates lossless rebase; reset/rebase explicit; no extra retry slots"
+    },
+    {
+      "id": "A13",
+      "target": "blur/refocus/epoch",
+      "given": "Preedit or pending request, blur then stale input/final and refocus",
+      "expected": "Stale trace adds0; volatile preview/pending invalidated; old material stays; fresh baseline never becomes material"
+    },
+    {
+      "id": "A14",
+      "target": "suppressed route no-read",
+      "given": "Policy capture false/activity-only or disabled field, throwing owned text getter",
+      "expected": "Suppression before raw text access when interface claims no-read; activity counters alone have no material; policy toggles cannot expose another field"
+    },
+    {
+      "id": "A15",
+      "target": "storage off full path",
+      "given": "Body, document mirror, preedit, pending retry; page/adapter persistence export",
+      "expected": "Only receiver off allowlist aggregates written; no raw text/IDs/order/doc/preedit/query/payload serialized; restart volatile body empty"
+    },
+    {
+      "id": "A16",
+      "target": "detach/re-attach",
+      "given": "Attach, detach, dispatch, re-attach or duplicate attach",
+      "expected": "Detached event adds0; one accepted event never fans into two body/ID authorities/listeners; explicit duplicate attach handling"
+    },
+    {
+      "id": "A17",
+      "target": "UTF16/limits/literal strings",
+      "given": "ZWJ grapheme+combining mark; malformed surrogate offset; >512 field or >256 insertion; HTML-like literal",
+      "expected": "Whole-event atomics/bounds, no partial material/ID gaps; preserve literal string, no HTML/code execution. Unsupported long document explicitly held/preview; no unbounded retained buffers"
+    }
+  ]
+}

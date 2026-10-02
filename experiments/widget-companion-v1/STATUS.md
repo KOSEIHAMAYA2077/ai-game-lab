@@ -1,5 +1,17 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 06:45 JST
+
+期限10:37、10:17以降新機能停止。PR32 merge bea453a、tag glyph-matter-metal-v0.3.0・未公証macOS arm64 Release公開、添付済み。13形の実窓4形90s/pause・hide30sは独立数値一致、CPU1.59〜2.01%・charged peak69.83〜72.24MiB、pause/hide counter差0。一般16GB機・電力・全13形資源・8時間は未実証。旧60形/タグ/保存を維持。
+
+rootはresearch/ambient-editor-dom-v1で返却済みeditor R2/review/実DOM原票/HCI評価文書を公開準備。surface R2のproduction3assetだけをown localhost5302/tab10へ配信し実UI確認中。作者/独立人工は成功だが、現在の実UIからQA globalがread-only realmに露出せず、直接読めないaggregateは実測扱いにしない。
+
+static_japanese_retrievalはdesktop/glyph-metal-lab-v4とexperiments/widget-metal-authored-v4のみ所有。16形Geometry R3 immutable appを返却、旧13 offscreen byte一致、魚/鳥/蛇GPU792確認、root実窓/資源はこれから。static_fresh_evaluationはJSC R1を20人工case native/Node一致で返却し、新desktop/glyph-metal-ambient-v1とexperiments/widget-metal-ambient-v1だけに専用native編集欄→唯一R3body→Metalの接続比較を進める。widget_metal_comparisonはcompleted-2h-r2/reviewだけで原票監査。
+
+R5新r2は04:25〜06:25の単独2h完走、108000draw/MTL0/40pixel・600finite確認。sample1438/末尾missing1、valid interval7197sは実窓や8時間と分離し独立確認中。engine/supervisor/samplerのown3PIDは終了確認。owned caffeinate83393だけ期限管理、未知82495触らない。OS全体取得・設定変更・実本文外部送信なし。
+
+以下は前の状態の履歴。
+
 ## 最新: 2026-10-03 05:48 JST
 
 期限10:37、10:17以降新機能停止。PR31 merge f24c7e5・添付済み（人工統合R3）。rootはexperiment/metal-authored-v3で13形Metal別版/原票を所有。Final Floor30/0.3.0/namespace v3を返却freezeし、実窓A/B/C/Eを確認。AのHide復帰timeout終了は保持、Cは同PID復帰/停止状態保持/actualQuit成功。青のfloor45明るさ候補は小差で、floor30を維持。新resource R1の4形90s＋pause/hide30sは事前METHODに従いPID1289で進行、heavy tasks休止・R5並走を明記。既定60形Webは維持。

@@ -1,0 +1,65 @@
+{
+  "recordedAt": "2026-10-02T20:37:15.382828+00:00",
+  "scope": "Independent synthetic owned-editor module review; not realDOM/IME/OS capture/resource measurement",
+  "R1": {
+    "original17": {
+      "passed": 15,
+      "total": 17
+    },
+    "supplementaryDestroy": {
+      "passed": false
+    }
+  },
+  "R2": {
+    "knownCorrection17": {
+      "passed": 17,
+      "total": 17
+    },
+    "P15Mapping": "terminal ownership interface mapping frozen before R2 source/results; other expectations unchanged",
+    "supplementaryDestroy": {
+      "passed": true
+    },
+    "supplementaryRetiredCallbacks": {
+      "passed": 10,
+      "total": 10
+    },
+    "supplementaryStaleShape": {
+      "passed": true
+    }
+  },
+  "provisionalRecommendation": "R2 may proceed to root-owned dedicated realDOM evaluation; first failures preserved; no platform/actualIME/wholeapp persistence claims",
+  "changedSharedSource": false,
+  "UIorOSCaptureExecuted": false,
+  "files": [
+    {
+      "path": "results-r1.json",
+      "bytes": 27574,
+      "sha256": "201bc2b5366e5be5f0107306cf0fd0086fa0e87e4d52d2c1817fe894afe38258"
+    },
+    {
+      "path": "lifecycle-results-r1.json",
+      "bytes": 2583,
+      "sha256": "c22d8a97363486b401b3bf3072c337cc97da30cb2a1960424eff18b9e37baeee"
+    },
+    {
+      "path": "results-r2.json",
+      "bytes": 29437,
+      "sha256": "be57261e85830c20ae82939221c832637dce9fab960e0d064a7b1a5a5f2526a4"
+    },
+    {
+      "path": "lifecycle-results-r2.json",
+      "bytes": 2536,
+      "sha256": "e3204d335b6515881d4f7c8e7aaa8f577126ea45745bb11b972e3d1e7d17d949"
+    },
+    {
+      "path": "retired-callbacks-results-r2.json",
+      "bytes": 2571,
+      "sha256": "a8e8a376d585f1852e7f95b69214d39395cfc077fa80ed7150b82c62a8c8824a"
+    },
+    {
+      "path": "stale-shape-results-r2.json",
+      "bytes": 4133,
+      "sha256": "deea93eee8010775984bcc6504cc62ac88e77efe4b1df362d90ff4387b278404"
+    }
+  ]
+}

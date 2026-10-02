@@ -1,0 +1,36 @@
+{
+  "version": "interface-mapping-before-adapter-source-v1-r1",
+  "frozen_utc": "2026-10-02T20:08:16.989380+00:00",
+  "source_still_unread": true,
+  "interface_from_author": "experiments/ambient-editor-adapter-v1/adapter.mjs createAdapter({element,clock,ink,bodyLimit,shapeMode}) -> handle(event), advance(at),setInk, setAdmissionReady,retry,readBody iterator,snapshot aggregate,exportState off,inspectVolatile test-only",
+  "mapping_is_not_author_result_import": true,
+  "selected_policy_before_execution": {
+    "regular_known": "trusted beforeinput/input, same type, noncomposing false, original stable revision/selection/expected resulting range; only insertion material",
+    "paste": "Nullable data accepted only by supported owned DOM-diff guard; no clipboard/DataTransfer/ranges read",
+    "IME_end_after_input": "Trusted full lifecycle, start stable selection, nonempty end.data replacing that selection yields exact final owned value -> known final once",
+    "IME_end_before_final_input": "Hold bounded end slot, admit only matching trusted noncomposing final input; missing/untrusted/mismatch remains0",
+    "unknown": "no timeout upgrade; nonowned/synthetic-untrusted no known automatic material",
+    "noACK": "one recursively immutable payload, readonly handoff; same-value echo ignored, different-value new event explicit unsupported gap; no automatic rebase"
+  },
+  "cases_requiring_page_or_future_interface": [
+    "A01 nonowned field no scan proof combines source read and throwing fake other element",
+    "A14 capture/activity-only policy route is receiver R3 feature, not exposed by planned adapter API; test wrong target/untrusted no-read and note policy UI integration unverified",
+    "A16 planned API has no attach/detach function; handle-only module duplication ownership review and page event listener lifecycle belong root actual page, no invented module claim",
+    "A17 HTML execution/comfort requires root realDOM view review, module literal retention only"
+  ],
+  "provisional_receiver": "R3 SHA d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d",
+  "reference_files": [
+    {
+      "name": "METHOD-R1.json",
+      "sha256": "db92b1f6e09746c72736fd4c17b8cc71b548c868dc4bab578d8fbd98a7bf4fd2"
+    },
+    {
+      "name": "CASES-R1.json",
+      "sha256": "06ddf79ddfa0e6173c71cc8b6fb47579cce68c47505ab6af09da52f7967f223b"
+    },
+    {
+      "name": "METHOD-FREEZE-R1.json",
+      "sha256": "8ba558696983788c93ba36d201cd70f633812f2bdac9b7acae0e5a99a1bddb67"
+    }
+  ]
+}

@@ -10,7 +10,9 @@
 
 [Mac用比較アプリをダウンロード](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases/tag/glyph-matter-metal-v0.3.0) / [操作と保存](desktop/glyph-metal-lab-v3/README.md) / [表面の再現・失敗と限界](experiments/widget-metal-authored-v3/README.md) / [実小窓の測定](experiments/widget-metal-native-evaluation-v3/REPORT.md) / [日本語paste・復元・復帰](experiments/widget-metal-authored-v3-root-ui/README.md)。Apple Silicon・macOS13以上向けの未公証アプリ。既定の60形Webと旧版・保存は維持します。
 
-人工統合R3では、材料を全体追加してからACKし、本文・ID列を保存offから除く境界を確認しました。別入力元の割込みと活動イベントの欠落で見つけた旧版不具合も保持。[結果と公開確認](experiments/ambient-integration-publication-v1/README.md) / [独立review](experiments/ambient-integration-review-v1/README.md)。次は専用編集欄の実DOM接続で、全アプリ入力連動は未実装です。
+人工統合R3では、材料を全体追加してからACKし、本文・ID列を保存offから除く境界を確認しました。別入力元の割込みと活動イベントの欠落で見つけた旧版不具合も保持。[結果と公開確認](experiments/ambient-integration-publication-v1/README.md) / [独立review](experiments/ambient-integration-review-v1/README.md)。専用編集欄のR2は、実ブラウザで入力・削除・次の追加の色・再読込による消去を確認しました。[入力アダプター](experiments/ambient-editor-adapter-v1/README.md) / [独立監査](experiments/ambient-editor-adapter-review-v1/README.md) / [実操作の範囲](experiments/ambient-editor-root-ui-v1/README.md)。日本語IME一般と全アプリ入力連動は未確認・未実装です。
+
+サイドインテリアの評価は、好みや作業への影響と、入力を正しく受ける機構を分けます。[評価案の再検討](research/ambient-study-questions-v1/README.md)。人による評価はまだ実施していません。
 
 ### Metalの小窓・3形の独立比較版
 
