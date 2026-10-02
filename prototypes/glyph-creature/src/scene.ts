@@ -53,22 +53,25 @@ export class GlyphScene {
   scene = new THREE.Scene();
   atlas = new Atlas();
   geometry = new THREE.InstancedBufferGeometry();
-  positions = new Float32Array(MAX_GLYPHS * 3);
-  morphTargets = new Float32Array(MAX_GLYPHS * 3);
-  origins = new Float32Array(MAX_GLYPHS * 3);
-  uv = new Float32Array(MAX_GLYPHS * 2);
-  born = new Float32Array(MAX_GLYPHS);
-  phases = new Float32Array(MAX_GLYPHS);
-  inks = new Float32Array(MAX_GLYPHS * 4);
-  sources = new Float32Array(MAX_GLYPHS * 3);
-  birthSizes = new Float32Array(MAX_GLYPHS);
-  frames = new Float32Array(MAX_GLYPHS * 4);
+  readonly capacity: number;
+  positions: Float32Array;
+  morphTargets: Float32Array;
+  origins: Float32Array;
+  uv: Float32Array;
+  born: Float32Array;
+  phases: Float32Array;
+  inks: Float32Array;
+  sources: Float32Array;
+  birthSizes: Float32Array;
+  frames: Float32Array;
   frameScratch = createSurfaceFrame();
   frameMatrix = new THREE.Matrix4();
   frameRotation = new THREE.Quaternion();
   motionScratch = prepareMotion('calm', 0);
   localPoint: Vec3 = [0, 0, 0];
   movedPoint: Vec3 = [0, 0, 0];
+  targetPoint: Vec3 = [0, 0, 0];
+  sourcePoint: Vec3 = [0, 0, 0];
   material: THREE.ShaderMaterial;
   planes: THREE.Mesh;
   testYaw: number | null = null;
@@ -90,6 +93,20 @@ export class GlyphScene {
   program: CompiledProgram | null = null;
 
   constructor(readonly host: HTMLElement, readonly matter: Matter, readonly options: SceneOptions = {}) {
+    // Matter retains the complete history. Only the renderer's sampled instances
+    // need these buffers; the original pages still allocate their full capacity.
+    this.capacity = options.maxDrawnGlyphs
+      ? Math.max(1, Math.min(MAX_GLYPHS, Math.floor(options.maxDrawnGlyphs))) : MAX_GLYPHS;
+    this.positions = new Float32Array(this.capacity * 3);
+    this.morphTargets = new Float32Array(this.capacity * 3);
+    this.origins = new Float32Array(this.capacity * 3);
+    this.uv = new Float32Array(this.capacity * 2);
+    this.born = new Float32Array(this.capacity);
+    this.phases = new Float32Array(this.capacity);
+    this.inks = new Float32Array(this.capacity * 4);
+    this.sources = new Float32Array(this.capacity * 3);
+    this.birthSizes = new Float32Array(this.capacity);
+    this.frames = new Float32Array(this.capacity * 4);
     this.renderer = new THREE.WebGLRenderer({ antialias: options.antialias ?? true, preserveDrawingBuffer: options.preserveDrawingBuffer ?? true });
     this.renderer.setPixelRatio(options.pixelRatio ?? Math.min(window.devicePixelRatio, 2));
     this.renderer.setClearColor(0x000000, 1);
@@ -197,6 +214,21 @@ export class GlyphScene {
     this.renderer.setSize(this.width, this.height);
   }
 
+  private uploadRange(name: string, start: number, count: number) {
+    if (count <= 0) return;
+    const attribute = this.geometry.getAttribute(name) as THREE.InstancedBufferAttribute;
+    // Rendering can be deferred while hidden. Union pending input ranges so an
+    // earlier undrawn input is not lost, retaining only one bounded range.
+    let first = start * attribute.itemSize, end = (start + count) * attribute.itemSize;
+    for (const range of attribute.updateRanges) {
+      first = Math.min(first, range.start);
+      end = Math.max(end, range.start + range.count);
+    }
+    attribute.clearUpdateRanges();
+    attribute.addUpdateRange(first, end - first);
+    attribute.needsUpdate = true;
+  }
+
   sync(screenPoints?: { x: number; y: number }[], fontSize = 20) {
     const next = this.options.maxDrawnGlyphs ? displayGlyphs(this.matter.glyphs, this.options.maxDrawnGlyphs) : this.matter.glyphs;
     const sampled = Boolean(this.options.maxDrawnGlyphs && this.matter.glyphs.length > this.options.maxDrawnGlyphs);
@@ -206,7 +238,8 @@ export class GlyphScene {
     const rect = this.host.getBoundingClientRect();
     const projectionScale = this.height / (2 * Math.tan(THREE.MathUtils.degToRad(43 / 2)));
     const motion = prepareMotion(this.matter.spec.motion ?? 'calm', this.matter.time, this.motionScratch);
-    for (let i = sampled ? 0 : this.count; i < next.length; i++) {
+    const start = sampled ? 0 : this.count;
+    for (let i = start; i < next.length; i++) {
       const glyph = next[i];
       const tile = this.atlas.add(glyph.text);
       this.uv[i * 2] = (tile % COLUMNS) / COLUMNS;
@@ -214,7 +247,7 @@ export class GlyphScene {
       this.born[i] = glyph.born;
       // Keep the seed's familiar pose. Other letters rotate independently of
       // the golden-angle positions, which otherwise form synchronized ribs.
-      this.phases[i] = i === 0 ? 0 : randomUnit(i * 2654435761 + this.matter.seed) * Math.PI * 2;
+      this.phases[i] = glyph.id === 0 ? 0 : randomUnit(glyph.id * 2654435761 + this.matter.seed) * Math.PI * 2;
       const ink = COLORS[glyph.ink ?? 'red'];
       this.inks.set([...ink, glyph.ink ? 1 : 0], i * 4);
       this.birthSizes[i] = fontSize * CELL / 42 * this.distance / projectionScale;
@@ -234,11 +267,7 @@ export class GlyphScene {
     }
     this.count = next.length;
     this.geometry.instanceCount = this.count;
-    this.geometry.getAttribute('atlasOffset').needsUpdate = true;
-    this.geometry.getAttribute('bornAt').needsUpdate = true;
-    this.geometry.getAttribute('phase').needsUpdate = true;
-    this.geometry.getAttribute('inkColor').needsUpdate = true;
-    this.geometry.getAttribute('birthSize').needsUpdate = true;
+    for (const name of ['atlasOffset', 'bornAt', 'phase', 'inkColor', 'birthSize']) this.uploadRange(name, start, next.length - start);
   }
 
   setForm(form: Form) {
@@ -308,12 +337,19 @@ export class GlyphScene {
           ? programSurface(this.program, glyph.id, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
           : this.skeleton
           ? skeletonSurface(this.skeleton, glyph.id, t, this.matter.seed, this.localPoint, sharedSurface ? this.frameScratch.x : undefined, sharedSurface ? this.frameScratch.y : undefined)
-          : composedPosition(this.matter.spec, glyph.id, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined)).map(v => v * this.formation);
-      const arrival = Math.max(0, Math.min(1, (t - glyph.born - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
-      const target = p.map((v, axis) => this.origins[i * 3 + axis] * (1 - blend) + v * blend) as Vec3;
-      this.morphTargets.set(target, i * 3);
-      const source = Array.from(this.sources.subarray(i * 3, i * 3 + 3)) as Vec3;
-      const formed = arrival >= 1 ? target : intakePosition(source, target, arrival, glyph.intakeSeed);
+          : composedPosition(this.matter.spec, glyph.id, t, this.matter.seed, motion, this.localPoint, sharedSurface ? this.frameScratch : undefined));
+      // A seed's delay is below .2s and its journey below 3.5s. Settled letters
+      // cannot need either hash or their intake source again during this frame.
+      const age = t - glyph.born;
+      const arrival = age >= 3.7 ? 1 : Math.max(0, Math.min(1, (age - randomUnit(glyph.intakeSeed + 5) * .2) / (2.4 + randomUnit(glyph.intakeSeed + 4) * 1.1)));
+      const formation = this.count === 1 ? 1 : this.formation;
+      for (let axis = 0; axis < 3; axis++) this.targetPoint[axis] = this.origins[i * 3 + axis] * (1 - blend) + (p[axis] * formation) * blend;
+      this.morphTargets.set(this.targetPoint, i * 3);
+      let formed = this.targetPoint;
+      if (arrival < 1) {
+        for (let axis = 0; axis < 3; axis++) this.sourcePoint[axis] = this.sources[i * 3 + axis];
+        formed = intakePosition(this.sourcePoint, this.targetPoint, arrival, glyph.intakeSeed);
+      }
       for (let axis = 0; axis < 3; axis++) {
         this.positions[i * 3 + axis] = formed[axis];
       }
@@ -331,8 +367,8 @@ export class GlyphScene {
         this.frames[i * 4 + 2] = this.frameRotation.z; this.frames[i * 4 + 3] = this.frameRotation.w;
       }
     }
-    this.geometry.getAttribute('center').needsUpdate = true;
-    if (alignment > 0) this.geometry.getAttribute('surfaceRotation').needsUpdate = true;
+    this.uploadRange('center', 0, this.count);
+    if (alignment > 0) this.uploadRange('surfaceRotation', 0, this.count);
     this.planes.scale.setScalar(this.scale);
     this.planes.rotation.set(this.testYaw === null ? this.turnX + .09 * Math.sin(t * .038) : 0,
       this.testYaw === null ? this.turnY + t * .03 : 0, 0);
