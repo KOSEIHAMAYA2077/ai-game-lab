@@ -10,6 +10,8 @@
 
 [16GBノートPC向けの先行研究・実装方針](research/16gb-text-to-3d-20261002.md) · [0.8B / 2BのCPU実測と失敗](experiments/consumer-16gb-20261002/README.md)。小モデルは動いたものの意味精度が不足したため、次は形・属性・関係を分けて学ぶ方式を比較します。
 
+次の生成目標は**入力確定から約10秒**。モデルが大まかな構造を決め、規定範囲の太さ・曲面を自前で肉付けする。[骨格からの生成案](research/skeleton-first-10s-v1.md)。
+
 公開中の試遊版は、用意した60形と語彙・連想グラフ・限定した曖昧検索で動く「根性版」に、鳥・魚・蛇の骨格を追加した版です。試遊中のモデル推論は使いません。軽量モデルによる任意の3D形状生成は、まだ研究段階です。
 
 [公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/glyph-matter/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)
