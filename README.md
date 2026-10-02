@@ -14,6 +14,10 @@
 
 サイドインテリアの評価は、好みや作業への影響と、入力を正しく受ける機構を分けます。[評価案の再検討](research/ambient-study-questions-v1/README.md)。人による評価はまだ実施していません。
 
+専用編集欄の材料を、既存の文字表面へ渡す別比較も追加しました。ASCII入力で面が育つこと、停止画面の一致、入力欄を隠しても面が残ることを実ブラウザで確認。[接続の実装と人工検証](experiments/ambient-editor-surface-v1/README.md) / [独立監査](experiments/ambient-editor-surface-review-v1/README.md) / [実画面と確認限界](experiments/ambient-editor-surface-root-ui-v1/README.md)。容量256の研究用比較で、日常の全文量やOS連動の完成版ではありません。
+
+入力の有限状態処理は、Mac標準のJavaScriptCoreでも同じ人工20ケースを処理し、Node側の意味出力と一致しました。[実装・再現手順](experiments/ambient-javascriptcore-v1/README.md) / [結果と環境・限界](experiments/ambient-javascriptcore-v1/REPORT.md)。小窓へ直接接続する前段階のCLI検証で、実IME・常駐資源の結果ではありません。
+
 ### Metalの小窓・3形の独立比較版
 
 球・箱・メビウスの文字表面をMac標準の描画へ移した候補。回転中の端切れを新v2で修正しました。実小窓の白い球・1,536描画・90秒ではCPU2.661%／charged peak68.298MiBですが、60形版との機能差があり既定版は維持します。反復WKの描画周期gate失敗も原票ごと保存。[作成・操作](desktop/glyph-metal-lab-v2/README.md) / [画面と射影](experiments/widget-metal-framing-v2/README.md) / [実窓比較・制限](experiments/widget-metal-native-evaluation-v2/REPORT.md)。

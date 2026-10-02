@@ -1,0 +1,61 @@
+{
+  "version": "ambient-javascriptcore-v1-r1",
+  "frozenBeforeImplementationAndResults": true,
+  "purpose": "CPU-only native Swift CLI JavaScriptCore context, no WebView, runs fixed pure R3 receiver using same synthetic20 input JSON and same bundledJS as Node vm. Not OS/IME/native app/resource equivalence.",
+  "scope": "New owned folder only; oldsource read-only; no GPU/UI/OS/clipboard/native input/model/storage/network hooks given to JS. Native host reads only command-selected bundle file+stdin artificial JSON, stdout artificial result. No liveinput producer.",
+  "fixtures": {
+    "source": "experiments/ambient-integration-contract-v1/CASES.json",
+    "sha256": "c7ffe342746c2c83d76d2721ae39a5440af3502db9d0cdf29082daaa826be208",
+    "cases": 20,
+    "type": "Existing AI manually-authored synthetic cases reused as regression, not fresh blind holdout/human labels. C17 savingOn explicit synthetic-opt-in is tested as data schema only; no native persistent storage."
+  },
+  "engineCompare": "Compile one IIFE bridge+R3 imports with pinned local Rolldown1.2.11. Load same bytes in Node vm and JSContext. Compare original manual expected20, ACK traces/checkpoints/final inspect, private finite bounds, synthetic raw body readview, shape token, histories and strict off/on artificial exports recursively; omit duration/engine exception stack from equality. Key order immaterial; array/order/text/ID/ink exact.",
+  "knownBaseline": {
+    "manualExpectedPass": 20,
+    "receiveCalls": 120,
+    "lexicalQueries": 18,
+    "expectedMeaning": "Baseline reported regression counts, not automatic pass. Execute fresh sharedbundle in eachengine independently."
+  },
+  "bounds": "At every actual receive: body<=bodyLimit<=256, IDs1..n nextId n+1, document<=512UTF16, preview<=64, lexicalwindow<=128, recentchunks<=64, pending<=1, history<=64, counters<=1e6, reveal<=4. Same fixture event/alias freezing and throwing unreadableData getters built INSIDE JS; native transportJSON cannot represent getters but parser blueprint reconstructs them.",
+  "portability": "R1 no polyfill/native callbacks. Probe Intl.Segmenter, Array.toReversed,Object.hasOwn plus absent Web/Node APIs beforebundle. Harness JSON-only copy instead of structuredClone because fixtures plainJSON; receiver unchanged. If unsupported builtin or engine/compiler fails preserve rawfailure and pin a separateR2 beforetrying any pure-functionshim. No semantic/threshold edits. No substring/codepoint fallback may silently substitute graphemes.",
+  "host": "Apple JavaScriptCore.framework using installed Swift6.3.2 / arm64 macOS SDK26.0. JSContext exception handler captures diagnostic only; no JS nativefunction bridges. Input<=1MiB; result<=16MiB CLI guard. All inputs explicitly artificial. No processresource sampling, CLI RAM not wholewindowRAM.",
+  "futureBridge": "Design only: private JS R3state singleowner in oneprocess, native bounded readonly readBody-derived presentedsnapshot retains existingid/ink/text, candidate token epochs/generation/TTL remaincheckedbyR3. No newMatter/body allocator/realIME inference/persistence. The testedCLI itself is not connected to native app.",
+  "readOnlyInputs": [
+    {
+      "path": "experiments/ambient-integration-contract-v1/receiver-r3.mjs",
+      "sha256": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/shape-only.mjs",
+      "sha256": "bc2e3ce24f5fe43889dc2527ef741bb620f57d24f3c754acfbb1b67024c83239"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/body-view.mjs",
+      "sha256": "7bbca53b4849b1e652cc97c07d8a141c8c9b17af4974066110af428dc74bee36"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/storage-gate.mjs",
+      "sha256": "7eb88202152658ff5ad944b483f0579130677c61741a4e939c08e16fc826c3c0"
+    },
+    {
+      "path": "experiments/ambient-material-scheduler-v1/scheduler.mjs",
+      "sha256": "78f2fb2b32a90e1bf712a2f4e2647f9ce4493ad5e5f3a033f7c6441ca64b1bc2"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/CASES.json",
+      "sha256": "c7ffe342746c2c83d76d2721ae39a5440af3502db9d0cdf29082daaa826be208"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/run.mjs",
+      "sha256": "5963e3ebf95bbf471461bd22c4b980d51ae4b98a0093978f59605c4b66151d80"
+    },
+    {
+      "path": "prototypes/glyph-creature/node_modules/rolldown/package.json",
+      "sha256": "4ac9bd4b57a1470fa4515e479cea7ca78875802b661b87dfc896e216d4cf6869"
+    },
+    {
+      "path": "prototypes/glyph-creature/node_modules/rolldown/dist/index.mjs",
+      "sha256": "57122bb7de7bf7116dc1d1866ad367753dee6820d55b81a3656d0c2e6c6f79d8"
+    }
+  ]
+}

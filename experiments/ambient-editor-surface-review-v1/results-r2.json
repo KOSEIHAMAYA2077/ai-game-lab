@@ -1,0 +1,321 @@
+{
+  "version": "independent-r1",
+  "recordedAt": "2026-10-02T21:23:42.020Z",
+  "projectionSource": "experiments/ambient-editor-surface-review-v1/snapshots/r2/projection-r2.mjs",
+  "scope": "synthetic CPU only; fake trusted declarations are not browser/IME/OS evidence",
+  "cases": [
+    {
+      "id": "P01",
+      "expected": "Empty iterator/presented0 projects0 and canonical body0. Source has no default Matter constructor/reset/add in material view.",
+      "passed": true,
+      "observed": {
+        "drawnMaterial": 0,
+        "placeholder": true,
+        "capacity": 256,
+        "ids": [],
+        "inks": [],
+        "born": [],
+        "tiles": []
+      }
+    },
+    {
+      "id": "P02",
+      "expected": "Synthetic IDs17/43/91 including Japanese and emoji preserve id/text/ink exactly; no renumber/rechunk/allocator.",
+      "passed": true,
+      "observed": {
+        "drawnMaterial": 3,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          17,
+          43,
+          91
+        ],
+        "inks": [
+          "blue",
+          "green",
+          "purple"
+        ],
+        "born": [
+          2,
+          2,
+          2
+        ],
+        "tiles": [
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "id": "P03",
+      "expected": "Resync same canonical units later preserves their original view birth; result size not doubled.",
+      "passed": true,
+      "observed": {
+        "drawnMaterial": 3,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          17,
+          43,
+          91
+        ],
+        "inks": [
+          "blue",
+          "green",
+          "purple"
+        ],
+        "born": [
+          2,
+          2,
+          2
+        ],
+        "tiles": [
+          4,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "id": "P04",
+      "expected": "Append a new ID and sync later preserves older birth/ink/tile; only new unit gets new observation birth.",
+      "passed": true,
+      "observed": {
+        "drawnMaterial": 3,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          17,
+          43,
+          91
+        ],
+        "inks": [
+          "blue",
+          "green",
+          "purple"
+        ],
+        "born": [
+          2,
+          2,
+          99
+        ],
+        "tiles": [
+          4,
+          4,
+          8
+        ]
+      }
+    },
+    {
+      "id": "P05",
+      "expected": "Frozen canonical unit records accepted/read without mutation; view change does not write source records.",
+      "passed": true,
+      "observed": {
+        "canonicalFrozen": true,
+        "units": 3,
+        "viewCount": 3
+      }
+    },
+    {
+      "id": "P06",
+      "expected": "View may gate to presentedCount but canonical material IDs/text/ink are not destroyed; later reveal returns all original units.",
+      "passed": true,
+      "observed": {
+        "drawnMaterial": 3,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          17,
+          43,
+          91
+        ],
+        "inks": [
+          "blue",
+          "green",
+          "purple"
+        ],
+        "born": [
+          2,
+          8,
+          8
+        ],
+        "tiles": [
+          4,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "id": "P07",
+      "expected": "R2 synthetic known insertion under admission false adds0; retry after ready adds once whole material and projection once, repeated sync/retry no duplicate.",
+      "passed": true,
+      "observed": {
+        "bodyCount": 2,
+        "drawnMaterial": 2,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "born": [
+          5,
+          5
+        ],
+        "tiles": [
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "id": "P08",
+      "expected": "Synthetic known insert/delete/undo updates own editor document while append material and projected IDs/ink remain retained.",
+      "passed": true,
+      "observed": {
+        "drawnMaterial": 2,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "born": [
+          5,
+          5
+        ],
+        "tiles": [
+          4,
+          4
+        ],
+        "retainedCount": 2,
+        "documentLength": 0
+      }
+    },
+    {
+      "id": "P09",
+      "expected": "Stopped scheduling does not create second body. Main uses latest canonical readBody on resume; view visual clock avoids hidden duration jump. Pending shape stale result contract does not remove material.",
+      "passed": true,
+      "observed": {
+        "stoppedFrames": 4,
+        "resumeDt": 0,
+        "drawnMaterial": 2,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          1,
+          2
+        ],
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "born": [
+          5,
+          6
+        ],
+        "tiles": [
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "id": "P10",
+      "expected": "Delayed shape answer after invalidating doc/revision rejected; canonical material IDs/ink preserved. Ordinary rendering shape changes never invoke material add/reset.",
+      "passed": true,
+      "observed": {
+        "shape": "sphere",
+        "staleAnswers": 1,
+        "drawnMaterial": 3,
+        "placeholder": false,
+        "capacity": 256,
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "inks": [
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "born": [
+          5,
+          5,
+          5
+        ],
+        "tiles": [
+          4,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "id": "P11",
+      "expected": "R2 off export remains allowlist aggregate only. Source no text console/storage/network/analytics and QA no raw view IDs/text/document.",
+      "passed": true,
+      "observed": {
+        "offKeys": [
+          "grammar",
+          "version",
+          "savingOff",
+          "seed",
+          "shape",
+          "now",
+          "count",
+          "presentedCount",
+          "inkCounts",
+          "counters"
+        ],
+        "count": 2
+      }
+    },
+    {
+      "id": "P12",
+      "expected": "Original geometry/basis files read-only referenced; shader differs only declared extraction/config. Numerical CPU geometry evidence not substituted for GPU/UI equivalence.",
+      "passed": true,
+      "observed": {
+        "vertexExact": true,
+        "fragmentExact": true,
+        "evidence": "CPU string identity only, not GPU compile/visual test"
+      }
+    }
+  ],
+  "totals": {
+    "executable": 12,
+    "passed": 12,
+    "failed": 0,
+    "sourceReviewOnly": 1
+  },
+  "timerKnownDefectSensitivity": [
+    {
+      "name": "exact-fractional-simulation",
+      "expectedMax15": 15,
+      "observed": 15,
+      "passed": true,
+      "first": 0,
+      "last": 938
+    },
+    {
+      "name": "floor-setTimeout-simulation",
+      "expectedMax15": 15,
+      "observed": 15,
+      "passed": true,
+      "first": 0,
+      "last": 938
+    }
+  ]
+}

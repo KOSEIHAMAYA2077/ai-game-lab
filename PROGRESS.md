@@ -1,5 +1,11 @@
 # 進捗
 
+## 2026-10-03 06:53 JST — 専用入力と文字表面のR2
+
+R3の唯一bodyをrendererへ読み取りviewとして渡す別実験。旧dynamicAtlas shader文字列を保持し、15fps上限の人工timer R1の16tick失敗をR2の67ms gateで修正、旧失敗を残した。rootはproduction3assetを専用配信しASCII追加・色・PAUSE/RESUME・容量超過の保留・削除/undo・INPUT閉・再読込を実操作。停止画面上部は2枚で全画素一致。read-only realmからQA hookを直接読めず、frame/body counterやexportOffは実測扱いにしない。[実画面と限界](experiments/ambient-editor-surface-root-ui-v1/README.md)。Mac lockのためnative16の実窓確認は保留、解除/設定変更はなし。
+
+直前のoffscreen完走記録にある07:05 JSTは文書見出しの時刻記入誤りで、実際の公開準備は06:53以前。run開始/終了とvalid intervalは原票からの値を変更せず、合算や測定時刻の変更はない。
+
 ## 2026-10-03 07:05 JST — 旧3形offscreenの別2時間run完走
 
 中断した初回を保持し、新r2を最初から7,200.009秒・108,000command commit実行。engine/sampler正常終了、40画素検査・600地点finite集計、MTL/timeout/skip0。独立監査では原票・13画像復号・終了境界を照合した。資源のvalid7,197.237秒はCPU0.499%・charged peak127.095MiBで、終了時欠測1件を残す。実窓・13/16形・8時間・一般16GB機の性能結果ではない。[完走と保持した初回失敗](experiments/widget-metal-soak-recovery-v1/REPORT.md) / [独立監査](experiments/widget-metal-soak-recovery-v1/evaluation/completed-2h-r2/review/REPORT.md)。
