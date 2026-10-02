@@ -13,7 +13,7 @@ from interpreter import Interpreter, MAX_TEXT, negation_clean, validated_previou
 
 class SpecBoundaries(unittest.TestCase):
     def test_missing_or_unsupported_family_is_rejected(self):
-        for value in [None, [], {}, {"family": "dragon"}, {"family": 3}]:
+        for value in [None, [], {}, {"family": "dragon"}, {"family": 3}, {"family": []}, {"family": {}}]:
             self.assertIsNone(validated_previous(value))
 
     def test_hostile_numbers_do_not_reach_geometry(self):

@@ -77,7 +77,7 @@ def normalize(text: str) -> str:
 
 
 def validated_previous(value: object) -> dict | None:
-    if not isinstance(value, dict) or value.get("family") not in CAPTIONS:
+    if not isinstance(value, dict) or not isinstance(value.get("family"), str) or value["family"] not in CAPTIONS:
         return None
     spec = dict(DEFAULT, family=value["family"])
     for key, (low, high) in BOUNDS.items():
