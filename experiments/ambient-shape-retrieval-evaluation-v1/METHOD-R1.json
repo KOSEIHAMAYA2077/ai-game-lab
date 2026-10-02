@@ -1,0 +1,67 @@
+{
+  "version": "manual-expectations-before-candidate-read-r1",
+  "frozenAt": "2026-10-02T21:58:12.653015+00:00",
+  "scope": "120 synthetic short texts on existing authored60-shape inventory; pure offline candidate evaluation only. No shape generation, render, OS monitoring, user text or human preference evidence.",
+  "annotation": {
+    "authors": "AI assistant manually wrote each text and expected intent",
+    "humanAnnotators": 0,
+    "empiricalUserPreferenceClaims": false,
+    "subjectivity": "Shape associations/central object choices are provisional artistic interpretations. Some positive labels allow multiple authored presets. Narrative candidate response is not an explicit command/authorization.",
+    "novelty": "New synthetic sentence strings; inventory/common words/user-discussed ideas may overlap earlier work. Historical negation failures are not a fresh discovery; no training/test independence beyond author-unseen new text is assumed without later provenance review."
+  },
+  "sourceAccessBeforeFreeze": {
+    "allowed": "SHAPES and EXPANDED_SHAPES declarations only exposed;60IDs saved in INVENTORY",
+    "disclosure": "Inventory-location rg also emitted import/reference syntax for existing EXPANDED_ALIASES, but no alias literal values or corpus/lexicon/old evaluation values were exposed. Historical prototype/render code had been read in earlier tasks, not current candidate graph/model/source/threshold.",
+    "currentCandidateImplementationRead": false,
+    "corpusRead": false,
+    "existingFixturesRead": false,
+    "fixturesSentToAuthor": false
+  },
+  "counts": {
+    "total": 120,
+    "positive": 60,
+    "ordinaryQuotationNegationCodeCancellation": 40,
+    "unresolved": 20,
+    "naturalEnglish": 20,
+    "language": {
+      "ja": 96,
+      "en": 20,
+      "code": 4
+    },
+    "groupSourceKind": {
+      "positive": {
+        "description": 36,
+        "narrative": 12,
+        "explicit_request": 12
+      },
+      "no_shape": {
+        "ordinary": 15,
+        "quotation": 6,
+        "negation": 6,
+        "code": 8,
+        "cancellation": 5
+      },
+      "unresolved": {
+        "metaphor": 6,
+        "multiple_directions": 2,
+        "hybrid": 4,
+        "out_of_inventory": 5,
+        "abstract": 3
+      }
+    }
+  },
+  "beforeEvaluation": {
+    "required": "Root confirms candidate model/source/threshold freeze before any source read or first evaluation. Pin exact files and exported function contract. Never change policy thresholds after reading results.",
+    "blindBoundary": "Author receives SHA and broad label/category range only, not fixture text/labels. Candidate freeze can predate this fixture, but cannot be selected/tuned on its labels."
+  },
+  "metrics": {
+    "primaryPositive": "Candidate policy chooses one accepted in-inventory shape. Hit only if accepted top1 is in allowedShapes. Abstain or wrong shape is a miss. Positive denominator60. Narrative/description/explicit_request reported separately.",
+    "negativeFalsePositive": "Any accepted shape for40 no_shape cases is false positive; report15ordinary/6quotation/6negation/8code/5cancellation separately. A raw suggested rank under declared abstention is not acceptance.",
+    "unresolvedHold": "No accepted shape for20 unresolved cases is correct hold. none and hold may share action-null in model API; do not claim it distinguished uncertainty reasons if API lacks them.",
+    "secondary": "Top3 acceptable-shape recall among60 positives only if candidate exports ranked shape list; report separately from gated acceptance. No inventing ranking from score ties or tuning threshold.",
+    "latency": "One deterministic fixed ordered pass per frozen candidate; optional isolated warmup uses only neutral synthetic text not in120. Record model load/warmup/per-call timings and environment if measured. CPU microbenchmark cannot prove widget memory/FPS/16GB behavior.",
+    "noOverallHeadlineAccuracy": "Do not pool120 into one flattering accuracy because12semantic targets and gating categories have different meanings."
+  },
+  "decisionPolicy": "Compare observed coverage/false positives/holds using each authors already frozen thresholds. No after-results performance acceptance gate or claimed human-quality success. Root decides next prototype; any tuning requires another version and these cases become known regression.",
+  "inputSafety": "All texts are artificial. No clipboard/network/OS/prototype edits. Own new evaluation folder only."
+}

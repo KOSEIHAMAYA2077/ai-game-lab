@@ -1,5 +1,17 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 07:31 JST
+
+期限10:37、10:17以降新機能停止。PR33専用DOM/R2、PR34独立2h offscreen完走、PR35文字表面R2/実ASCII画面、PR36骨格native16はmainへmerge・タスク添付済み。旧60形Web・URL・保存・Releaseは保持。native13実窓の4形資源とnative16のoffscreen/locked attemptを分ける。Mac lockを解除せず、新nativeの実窓は未確認。
+
+rootはresearch/ambient-retrieval-r1で返却candidate44/review26のSHA・全JSON・リンク・具体privatepathを検査し公開準備。初回人工120文でfull14/60正解、22受理/8誤形、no-shape2/40、説明3/36・物語1/12。従来baseline19/60より取りこぼしが増え、既定不採用。本文/閾値調整なし、追加modelcall0。
+
+static_fresh_evaluationはdesktop/glyph-metal-ambient-v1＋experiments/widget-metal-ambient-v1のみ所有。取消でsuper.unmarkTextが再入insertTextを呼ぶR1人工5/6の失敗を保持し、OwnEditor-r2で旧6/6＋事前cancel1/1、BuildR4固定中。widget_metal_comparisonはexperiments/widget-metal-ambient-review-v1のみで独立期待値を先に凍結し、固定sourceを監査。実IME/OS入力は未実行。単発追加/身体容量256の研究labで、ACKされた保留も無損失保証としない。
+
+static_japanese_retrievalは返却candidateの所有をrootへ戻し、新experiments/native-static-japanese-v1のみで既存のMIT静的日本語埋め込み128dim/F16約8MiBをpureSwift CPU CLIへ移す比較。既存455ID/追加境界を先に固定し、近似tokenizerを等価としない。download/再学習/新精度/GUI採用を拡大しない。owned caffeinate83393/start02:37:01を確認、未知82495触らない。OS全体取得・設定変更・実本文外部送信なし。
+
+以下は前の状態の履歴。
+
 ## 最新: 2026-10-03 06:45 JST
 
 期限10:37、10:17以降新機能停止。PR32 merge bea453a、tag glyph-matter-metal-v0.3.0・未公証macOS arm64 Release公開、添付済み。13形の実窓4形90s/pause・hide30sは独立数値一致、CPU1.59〜2.01%・charged peak69.83〜72.24MiB、pause/hide counter差0。一般16GB機・電力・全13形資源・8時間は未実証。旧60形/タグ/保存を維持。

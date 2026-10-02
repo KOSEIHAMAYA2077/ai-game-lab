@@ -1,5 +1,11 @@
 # 進捗
 
+## 2026-10-03 — 文章から既知形を選ぶCPU候補の初回独立評価
+
+辞書・WordNet同義語・作者20nodeの連想グラフ・疎なTF-IDFを組み合わせ、既知60形か保留を返す約200KiB候補を別保存。独立担当が先に固定した人工120文へ初回840callを実行し、以後候補・閾値を変更しなかった。fullは正例の受理22/60中14正解・8誤形、従来baselineは受理29/60中19正解。誤反応は20/40→2/40だが、正例の受理精度も網羅率も改善しなかった。説明3/36・物語1/12で、サイドインテリアの意味理解へ既定採用しない。
+
+[候補の方式と原票](experiments/ambient-shape-retrieval-v1/REPORT.md) / [独立の方法・全結果](experiments/ambient-shape-retrieval-evaluation-v1/REPORT.md)。Node/JSCの人工704ケースは一致、重量や局所推論速度は全widget資源と区別する。人による注釈・評価0、全60形の独立網羅・OS連動・任意mesh生成はない。旧版を保持し、次は既存の静的日本語埋め込みを重い実行環境なしで動かせるか別CLIへ移す。
+
 ## 2026-10-03 — 骨格付きのnative16形を別保存
 
 13形比較を残し、元Webの魚4骨・鳥7骨・蛇9骨を別v4へ移した。CPU6,045/GPU792、settled密度・姿勢288条件を確認。旧13形の白1536/time24/400×440 offscreen PNGは全13がbyte完全一致。GPU R1方向失敗と、吸収をsettledと誤って試した密度R1のinvalidも保持した。rootコピーは署名/5ファイル一致で起動したがMac lockで実UI不可、relative診断引数では原票なし、own PIDだけSIGTERM終了。実窓・通常窓資源は未確認、一般16GB機・快適性・モデル生成とは扱わない。[数値と境界](experiments/widget-metal-authored-v4/REPORT.md) / [root未完attempt](experiments/widget-metal-authored-v4-root-attempt/README.md)。

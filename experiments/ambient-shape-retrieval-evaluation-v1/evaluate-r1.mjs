@@ -1,0 +1,63 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import os from 'node:os';
+import {performance} from 'node:perf_hooks';
+import {pathToFileURL} from 'node:url';
+import {score} from './score.mjs';
+const here=import.meta.dirname,root=path.resolve(here,'../..'),candidate=path.join(root,'experiments/ambient-shape-retrieval-v1');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const norm=s=>s.normalize('NFKC').toLowerCase();
+const write=(n,d)=>fs.writeFileSync(path.join(here,n),JSON.stringify(d,null,2)+'\n',{flag:'wx'});
+for(const n of ['RESULTS-R1.json','SUMMARY-R1.json','INPUT-CHECK-AFTER-R1.json'])if(fs.existsSync(path.join(here,n)))throw Error('Refuse existing output '+n);
+const freeze=read(path.join(candidate,'FREEZE-R1.json')),evalFreeze=read(path.join(here,'FREEZE-R1.json'));
+const expectedFreeze='105bc4926757b5e4d68fc932cdf3eb78526c9aa63aaebb2e127fdcc58352fa98';
+if(hash(fs.readFileSync(path.join(candidate,'FREEZE-R1.json')))!==expectedFreeze)throw Error('Candidate freeze mismatch');
+const inputs=[...freeze.files,...freeze.dependencies,...freeze.originalSource];
+function verifyAll(){const rows=inputs.map(p=>{const b=fs.readFileSync(path.join(root,p.path));return {...p,actualBytes:b.length,actualSHA256:hash(b),matches:b.length===p.bytes&&hash(b)===p.sha256};});for(const [name,p]of Object.entries(evalFreeze.files)){const b=fs.readFileSync(path.join(here,name));rows.push({path:path.relative(root,path.join(here,name)),bytes:p.bytes,sha256:p.sha256,actualBytes:b.length,actualSHA256:hash(b),matches:b.length===p.bytes&&hash(b)===p.sha256});}if(rows.some(r=>!r.matches))throw Error('Pinned input changed');return rows;}
+const before=verifyAll();
+const cases=read(path.join(here,'FIXTURES-R1.json')).cases;
+const sourceInventory=read(path.join(candidate,'inventory.json')).shapes;
+if(cases.length!==120||cases.some(c=>c.allowedShapes.some(s=>!sourceInventory.includes(s))))throw Error('Fixture/inventory');
+const nodeHash=hash(fs.readFileSync(process.execPath));
+if(nodeHash!==freeze.nodeExecutableSHA256||process.version!==freeze.node)throw Error('Runtime mismatch');
+const startUTC=new Date().toISOString();
+let t=performance.now();const api=await import(pathToFileURL(path.join(candidate,'api.mjs')).href);const apiImportMs=performance.now()-t;
+t=performance.now();const baselineAPI=await import(pathToFileURL(path.join(candidate,'prepare.mjs')).href);const baselineImportMs=performance.now()-t;
+const modes=['baseline',...freeze.api.modes];
+const output={}, summaries={};
+const quantile=(xs,q)=>[...xs].sort((a,b)=>a-b)[Math.max(0,Math.ceil(xs.length*q)-1)];
+for(const mode of modes){
+ const rows=[];
+ for(const c of cases){
+  t=performance.now();const raw=mode==='baseline'?baselineAPI.baseline(c.text):api.predict(c.text,{mode,current:'mobius'});const elapsedMs=performance.now()-t;
+  if(typeof raw.accepted!=='boolean'||raw.accepted&&typeof raw.shape!=='string'||!raw.accepted&&raw.shape!==null)throw Error('API acceptance contract '+mode+' '+c.id);
+  if(raw.accepted&&!sourceInventory.includes(raw.shape))throw Error('Out of inventory '+mode+' '+c.id);
+  const rankedShapes=mode==='baseline'?null:raw.ranking.map(r=>r.shape);
+  if(mode!=='baseline'&&(raw.nextShape!==(raw.accepted?raw.shape:'mobius')||new Set(rankedShapes).size!==60))throw Error('Current/ranking contract '+mode+' '+c.id);
+  rows.push({id:c.id,acceptedShape:raw.accepted?raw.shape:null,rankedShapes,elapsedMs,raw});
+ }
+ output[mode]=rows;
+ const s=score(cases,rows),times=rows.map(r=>r.elapsedMs),positives=cases.filter(c=>c.group==='positive');
+ const rawTop1Hits=mode==='baseline'?null:positives.filter(c=>c.allowedShapes.includes(rows.find(r=>r.id===c.id).raw.rawTop1)).length;
+ s.rawTop1Positive={hits:rawTop1Hits,total:60,note:mode==='baseline'?'Not available; evidence choices are not score ranks.':'Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank.'};
+ s.latency={oneOrderedPass:true,warmupCalls:0,calls:rows.length,p50Ms:quantile(times,.50),p95Ms:quantile(times,.95),p99Ms:quantile(times,.99),maxMs:Math.max(...times),sumMs:times.reduce((a,b)=>a+b,0),firstCallMs:times[0],note:'CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence.'};
+ const p=s.groups.positive;s.acceptedPositivePrecision={correct:p.hit,accepted:p.accepted,value:p.accepted?p.hit/p.accepted:null};
+ summaries[mode]=s;
+}
+const weights=read(path.join(candidate,'weights-r1.json')),dev=read(path.join(candidate,'DEV.json')).rows,pilot=read(path.join(candidate,'PILOT-INPUTS.json')).rows,seeds=read(path.join(candidate,'profiles-source.json')).seeds;
+const fitUnits=[...weights.terms.map(r=>({kind:r.kind,text:r.term})),...seeds.flatMap(r=>[{kind:'definition',text:r.definition},...r.englishLemmas.map(s=>({kind:'lemma',text:s.replaceAll('_',' ')}))])];
+const pools={fit:fitUnits,dev:dev.map(r=>({kind:r.group??'dev',text:r.text})),pilot:pilot.map(r=>({kind:'pilot',text:r.text}))};
+const sets=Object.fromEntries(Object.entries(pools).map(([k,rows])=>[k,new Set(rows.map(r=>norm(r.text)))]));
+const fullTextOverlaps=cases.map(c=>({id:c.id,fit:sets.fit.has(norm(c.text)),dev:sets.dev.has(norm(c.text)),pilot:sets.pilot.has(norm(c.text))}));
+const queryOverlaps={};
+for(const mode of freeze.api.modes)queryOverlaps[mode]=output[mode].map(r=>({id:r.id,fit:sets.fit.has(r.raw.query),dev:sets.dev.has(r.raw.query),pilot:sets.pilot.has(r.raw.query),blank:!r.raw.query?.trim(),cueKinds:[...new Set(r.raw.evidence.map(e=>e.kind))],acceptedChannel:r.raw.accepted?r.raw.reason:null,matchedSparseFeatures:Math.max(...r.raw.ranking.map(x=>x.matchedFeatures.length)),rareSparseFeatures:Math.max(...r.raw.ranking.map(x=>x.rareFeatures))}));
+const cueByMode=Object.fromEntries(Object.entries(queryOverlaps).map(([mode,rs])=>[mode,Object.fromEntries(['positive','no_shape','unresolved'].map(group=>{const ids=new Set(cases.filter(c=>c.group===group).map(c=>c.id));const subset=rs.filter(r=>ids.has(r.id));return[group,{total:subset.length,aliasCue:subset.filter(r=>r.cueKinds.includes('alias')).length,synonymCue:subset.filter(r=>r.cueKinds.includes('synonym')).length,graphCue:subset.filter(r=>r.cueKinds.includes('graph')).length,anyDeclaredCue:subset.filter(r=>r.cueKinds.length).length,acceptedChannels:Object.fromEntries([...new Set(subset.map(r=>r.acceptedChannel).filter(Boolean))].map(k=>[k,subset.filter(r=>r.acceptedChannel===k).length]))}];}))]));
+const overlapCounts=rs=>Object.fromEntries(['fit','dev','pilot'].map(k=>[k,rs.filter(r=>r[k]).length]));
+const overlap={definition:'Exact NFKC/lowercase full text and exact candidate actual query separately. Fit units are individual alias/synonym/graph terms and selected synset definitions/lemmas, not invented concatenated profile sentences. Cue counts are actual returned longest-boundary-filtered evidence, not semantic knowledge claims; counts can overlap channels.',fitUnitCounts:Object.fromEntries([...new Set(fitUnits.map(r=>r.kind))].map(k=>[k,fitUnits.filter(r=>r.kind===k).length])),devCount:dev.length,pilotCount:pilot.length,fullText:fullTextOverlaps,fullTextCounts:overlapCounts(fullTextOverlaps),actualQuery:queryOverlaps,actualQueryCounts:Object.fromEntries(Object.entries(queryOverlaps).map(([k,rs])=>[k,overlapCounts(rs)])),cueByMode};
+const after=verifyAll();
+const environment={node:process.version,nodeExecutableSHA256:nodeHash,platform:process.platform,architecture:process.arch,osRelease:os.release(),machine:os.machine(),cpuModel:os.cpus()[0]?.model,logicalCPUs:os.cpus().length,systemTotalMemoryBytes:os.totalmem(),scope:'One Node CPU process; no app/GPU/OS capture/user text/human evaluation. Concurrent root/agent work possible; no isolated-machine claim.'};
+write('RESULTS-R1.json',{version:'independent-first-comparison-r1',startUTC,endUTC:new Date().toISOString(),environment,candidateFreezeSHA256:expectedFreeze,evaluationFreezeSHA256:hash(fs.readFileSync(path.join(here,'FREEZE-R1.json'))),modelInfo:api.info,imports:{apiImportMs,baselineImportMs},modes,caseCalls:120*modes.length,output,overlap});
+write('SUMMARY-R1.json',{version:'independent-first-comparison-r1',startUTC,endUTC:new Date().toISOString(),humanAnnotators:0,modes,summaries,overlap:{fullTextCounts:overlap.fullTextCounts,actualQueryCounts:overlap.actualQueryCounts,cueByMode},imports:{apiImportMs,baselineImportMs},environment,sourceUnchanged:after.every(r=>r.matches),sourceFiles:after.length});
+write('INPUT-CHECK-AFTER-R1.json',{before,after,unchanged:true,checks:after.length});
+console.log(JSON.stringify({modes:modes.map(mode=>({mode,positive:summaries[mode].groups.positive.hit,positiveAccepted:summaries[mode].groups.positive.accepted,noShapeFalsePositive:summaries[mode].groups.no_shape.falsePositive,unresolvedHold:summaries[mode].groups.unresolved.hit,rawTop1:summaries[mode].rawTop1Positive.hits})),caseCalls:120*modes.length,unchanged:after.every(r=>r.matches),fullTextOverlap:overlap.fullTextCounts,queryOverlap:overlap.actualQueryCounts}));

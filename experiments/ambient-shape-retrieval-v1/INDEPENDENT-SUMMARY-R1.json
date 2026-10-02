@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "source": "Independent evaluator widget_metal_comparison; aggregate-only messages after first comparison. Implementation agent did not inspect fixture texts/labels or individual failures.",
+  "candidateFreeze": "FREEZE-R1.json",
+  "fixturePath": "experiments/ambient-shape-retrieval-evaluation-v1/",
+  "fixtureSHA256": "6b524456b7615f85005888d4fc338de6993bad3016b20aa8cae87cbc70aedc42",
+  "evaluationMethodSHA256": "172c489bbc623738f6e8a69d0369aadebe5c3f129352f437b85b23526832b98d",
+  "calls": 840,
+  "callsAfterFirstComparison": 0,
+  "candidateAdjustmentsAfterFreeze": 0,
+  "humanParticipants": 0,
+  "scope": {"predictionInventory": 60, "representedTargetShapes": 12, "positive": 60, "clearNoShape": 40, "unresolved": 20, "positiveDescription": 36, "positiveNarrative": 12, "positiveExplicitRequest": 12},
+  "counts": {
+    "baseline": {"correctPositive": 19, "acceptedPositive": 29, "falseActivation": 20, "unresolvedHold": 10},
+    "alias": {"correctPositive": 13, "acceptedPositive": 21, "falseActivation": 2, "unresolvedHold": 19},
+    "alias_wordnet": {"correctPositive": 13, "acceptedPositive": 22, "falseActivation": 2, "unresolvedHold": 19},
+    "alias_wordnet_graph": {"correctPositive": 14, "acceptedPositive": 22, "falseActivation": 2, "unresolvedHold": 18},
+    "sparse_only": {"correctPositive": 0, "acceptedPositive": 1, "falseActivation": 0, "unresolvedHold": 20, "rawCorrectPositive": 24},
+    "unguarded": {"correctPositive": 14, "acceptedPositive": 22, "falseActivation": 17, "unresolvedHold": 18},
+    "full": {"correctPositive": 14, "acceptedPositive": 22, "wrongAcceptedPositive": 8, "heldPositive": 38, "rawCorrectPositive": 30, "falseActivation": 2, "unresolvedHold": 18, "correctDescription": 3, "correctNarrative": 1, "correctExplicitRequest": 10, "acceptedPositiveChannel": {"alias": 21, "graph": 1, "synonym": 0, "sparse": 0}}
+  },
+  "fullRates": {"positiveCoverage": 0.36666666666666664, "exactPositiveAll": 0.23333333333333334, "acceptedPositiveExactPrecision": 0.6363636363636364, "clearNoShapeFalseActivationRate": 0.05, "jointPrecisionPositivePlusClearHoldExcludingUnresolved": 0.5833333333333334, "unresolvedAcceptanceRate": 0.1},
+  "exactOverlap": {"normalizedFullTextToFitTermDefinitionLemmaDev114Pilot8": 0, "eachModeActualQueryToFitTermDefinitionLemmaDev114Pilot8": 0},
+  "knownVocabularyCues": {"note": "Finite literal cue presence in full actual query, distinct from accepted channel; counts may overlap and exact full/query overlap=0 does not prove new-vocabulary generalization.", "positive": {"alias": 21, "synonym": 0, "graph": 5, "any": 26}, "clearNoShape": {"alias": 12, "synonym": 0, "graph": 0, "any": 12}, "unresolved": {"alias": 4, "synonym": 0, "graph": 2, "any": 6}},
+  "riskVsCoverage": "No cut search/model calls performed. Fixed policy point only; selecting a different threshold on this fixture is prohibited.",
+  "adoption": {"default": false, "native13or16Connected": false, "semanticGeneralizationClaim": false, "arbitraryTextToMeshClaim": false}
+}

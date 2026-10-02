@@ -1,0 +1,1338 @@
+{
+  "version": "synthetic-manual-intent-r1",
+  "createdAt": "2026-10-02T21:56:27.236610+00:00",
+  "annotation": "AI-authored manual intent, human annotators0, no user text, no empirical preference labels",
+  "candidateAndCorpusUnread": true,
+  "cases": [
+    {
+      "id": "P01",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "シャボン玉みたいに、どこから見ても丸い塊。",
+      "manualIntent": "全方向で丸い体を球面の候補にする",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "condense"
+      ]
+    },
+    {
+      "id": "P02",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "縦横も奥行きも同じ長さの、角のないまるい体がほしい。",
+      "manualIntent": "角のない等方的な立体を球と解釈",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "condense"
+      ]
+    },
+    {
+      "id": "P03",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "今日の制作メモには、小さな地球儀が机を転がる場面を書いた。",
+      "manualIntent": "地球儀の球形を候補とするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "condense"
+      ]
+    },
+    {
+      "id": "P04",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "球体へ変えて、表面を静かに流して。",
+      "manualIntent": "明示的な球体への変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "condense"
+      ]
+    },
+    {
+      "id": "P05",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A smooth round body, equally wide in every direction.",
+      "manualIntent": "球の等方的な外形の記述",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "condense"
+      ]
+    },
+    {
+      "id": "P06",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "サイコロの外形を、文字だけで見せてほしい。",
+      "manualIntent": "サイコロの六面体を立方体へ対応",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "cube"
+      ]
+    },
+    {
+      "id": "P07",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "六つの正方形が同じ大きさで組み合わさった塊。",
+      "manualIntent": "同じ正方形六面の立方体",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "cube"
+      ]
+    },
+    {
+      "id": "P08",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "挿絵のメモは、六面が同じ正方形の荷物箱を机に置く場面。",
+      "manualIntent": "箱の等しい六面を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "cube"
+      ]
+    },
+    {
+      "id": "P09",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "角ばった箱を作ってほしい。縦横高さは同じ。",
+      "manualIntent": "箱の形を要求、近い直方体も粗い候補として許容",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "cube",
+        "cuboid"
+      ]
+    },
+    {
+      "id": "P10",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "Show a six-faced die with equally sized square faces.",
+      "manualIntent": "同じ正方形六面の立方体",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "cube"
+      ]
+    },
+    {
+      "id": "P11",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "帯を一度だけ半回転させて、端と端をつなぐ。",
+      "manualIntent": "半ひねりを持つ閉じた帯",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "mobius"
+      ]
+    },
+    {
+      "id": "P12",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "裏と表を分けられない、一周すると向きが反転する帯。",
+      "manualIntent": "片側だけを持つメビウス面",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "mobius"
+      ]
+    },
+    {
+      "id": "P13",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "主人公が、片側だけを指でたどれるねじれた輪に触れる。",
+      "manualIntent": "片側のねじれ帯を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "mobius"
+      ]
+    },
+    {
+      "id": "P14",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "輪っかに一回だけねじれを入れて。",
+      "manualIntent": "一回の半ひねりを持つ輪を要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "mobius"
+      ]
+    },
+    {
+      "id": "P15",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A looped ribbon with one half twist and only one continuous side.",
+      "manualIntent": "片側の半ひねり帯",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "mobius"
+      ]
+    },
+    {
+      "id": "P16",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "尾びれと背びれがあり、横に長い水中の体。",
+      "manualIntent": "ひれを持つ魚の体の記述",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "fish"
+      ]
+    },
+    {
+      "id": "P17",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "水槽の住人が、尾を左右に振って泳ぐ細長い生き物。",
+      "manualIntent": "魚の泳ぎ方と体の説明",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "fish"
+      ]
+    },
+    {
+      "id": "P18",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "鱗を持つ水生の小さな生き物が群れで進む物語。",
+      "manualIntent": "魚の群れを候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "fish"
+      ]
+    },
+    {
+      "id": "P19",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "魚のかたちにして。",
+      "manualIntent": "魚への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "fish"
+      ]
+    },
+    {
+      "id": "P20",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A streamlined swimmer with fins, scales and a tail.",
+      "manualIntent": "魚の外形を特徴から記述",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "fish"
+      ]
+    },
+    {
+      "id": "P21",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "くちばしと二枚の翼を持つ、羽根のある体。",
+      "manualIntent": "くちばしと羽の鳥",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "bird"
+      ]
+    },
+    {
+      "id": "P22",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "枝に止まり、両翼を広げて飛び立つ生き物。",
+      "manualIntent": "枝から翼で飛ぶ鳥",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "bird"
+      ]
+    },
+    {
+      "id": "P23",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "創作ノートには、羽ばたく小さな雀の場面を足した。",
+      "manualIntent": "雀から鳥を連想するが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "bird"
+      ]
+    },
+    {
+      "id": "P24",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "鳥へ変えてほしい。",
+      "manualIntent": "鳥への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "bird"
+      ]
+    },
+    {
+      "id": "P25",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A feathered creature with a beak and two wings.",
+      "manualIntent": "鳥の体の特徴",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "bird"
+      ]
+    },
+    {
+      "id": "P26",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "手足のない長い体が、S字を描いて這う。",
+      "manualIntent": "四肢がなく這う蛇の体",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "snake"
+      ]
+    },
+    {
+      "id": "P27",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "舌を二つに分けた爬虫類が、腹で地面を進む。",
+      "manualIntent": "二叉舌と腹ばいの蛇",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "snake"
+      ]
+    },
+    {
+      "id": "P28",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "物語の洞穴では、細長い鱗の体がとぐろを巻く。",
+      "manualIntent": "蛇のとぐろを候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "snake"
+      ]
+    },
+    {
+      "id": "P29",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "蛇の形に変えて、ゆっくりうねらせる。",
+      "manualIntent": "蛇への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "snake"
+      ]
+    },
+    {
+      "id": "P30",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A legless reptile with a long body curled into coils.",
+      "manualIntent": "蛇の体ととぐろ",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "snake"
+      ]
+    },
+    {
+      "id": "P31",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "半透明の傘の下から、細い触手が何本も垂れる。",
+      "manualIntent": "クラゲの傘と触手",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "jellyfish"
+      ]
+    },
+    {
+      "id": "P32",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "水に浮く柔らかい傘が、ゆっくり縮んだり開いたりする。",
+      "manualIntent": "水中で傘を収縮するクラゲ",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "jellyfish"
+      ]
+    },
+    {
+      "id": "P33",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "海辺の随筆に、透明な体と長い触手が漂う場面を入れた。",
+      "manualIntent": "クラゲを候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "jellyfish"
+      ]
+    },
+    {
+      "id": "P34",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "クラゲにして、脈打つ体を見せて。",
+      "manualIntent": "クラゲへの明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "jellyfish"
+      ]
+    },
+    {
+      "id": "P35",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A translucent bell with trailing tentacles drifting underwater.",
+      "manualIntent": "クラゲの傘と触手の説明",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "jellyfish"
+      ]
+    },
+    {
+      "id": "P36",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "中央の丸い芯を、何枚もの花びらが取り囲む。",
+      "manualIntent": "花びらを持つ形、一般花と近い花の型を許容",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "flower",
+        "lotus",
+        "rose"
+      ]
+    },
+    {
+      "id": "P37",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "茎の先に、放射状に開く薄い花弁をつけたい。",
+      "manualIntent": "放射状の花弁を一般花または蓮で表現",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "flower",
+        "lotus"
+      ]
+    },
+    {
+      "id": "P38",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "手紙には、庭の一輪が朝に咲く様子を書き足した。",
+      "manualIntent": "咲く花を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "flower",
+        "rose",
+        "lotus"
+      ]
+    },
+    {
+      "id": "P39",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "花の形へ変えてほしい。",
+      "manualIntent": "花を要求、三つの既定花型を許容",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "flower",
+        "rose",
+        "lotus"
+      ]
+    },
+    {
+      "id": "P40",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "Petals surround a central disk at the end of a stem.",
+      "manualIntent": "芯と茎と花弁を持つ花",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "flower",
+        "lotus"
+      ]
+    },
+    {
+      "id": "P41",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "一本の幹から枝が分かれ、上の方に葉が茂る。",
+      "manualIntent": "幹と枝葉を持つ木",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "tree"
+      ]
+    },
+    {
+      "id": "P42",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "根元は細い幹、上部は葉が集まった冠のような形。",
+      "manualIntent": "枝葉の冠と幹から木を候補にする",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "tree"
+      ]
+    },
+    {
+      "id": "P43",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "仕事の挿絵メモは、庭に立つ大きな枝葉のある一本。",
+      "manualIntent": "木を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "tree"
+      ]
+    },
+    {
+      "id": "P44",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "木へ変えて、枝を広げる。",
+      "manualIntent": "木への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "tree"
+      ]
+    },
+    {
+      "id": "P45",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A trunk branches upward into a leafy canopy.",
+      "manualIntent": "幹と樹冠を持つ木",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "tree"
+      ]
+    },
+    {
+      "id": "P46",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "柄と鍔の先に、長い刃が一本伸びる。",
+      "manualIntent": "柄、鍔、長い刃から剣",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "sword"
+      ]
+    },
+    {
+      "id": "P47",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "両刃の鋼を持ち手に取り付けた、武器の外形。",
+      "manualIntent": "両刃と持ち手の剣",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "sword"
+      ]
+    },
+    {
+      "id": "P48",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "冒険小説に、鞘から細長い刃を抜く場面を加えた。",
+      "manualIntent": "剣を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "sword"
+      ]
+    },
+    {
+      "id": "P49",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "剣の形へ変えて。",
+      "manualIntent": "剣への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "sword"
+      ]
+    },
+    {
+      "id": "P50",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A straight blade with a crossguard and a grip.",
+      "manualIntent": "鍔と柄と直線の刃を持つ剣",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "sword"
+      ]
+    },
+    {
+      "id": "P51",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "底が広がり、首が細く、上だけに口がある器。",
+      "manualIntent": "首の細い開口容器、花瓶と瓶を許容",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "vase",
+        "bottle"
+      ]
+    },
+    {
+      "id": "P52",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "切り花を挿すための、口が開いた背の高い容器。",
+      "manualIntent": "用途と開口から花瓶を候補にする",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "vase"
+      ]
+    },
+    {
+      "id": "P53",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "日記には、花を挿した縦長の器を窓辺へ置いたと書いた。",
+      "manualIntent": "主な物体は器として花瓶を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "vase"
+      ]
+    },
+    {
+      "id": "P54",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "花瓶の形へ変えて、口を少し広げる。",
+      "manualIntent": "花瓶への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "vase"
+      ]
+    },
+    {
+      "id": "P55",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A tall open vessel meant to hold cut flowers.",
+      "manualIntent": "切り花用の開口容器として花瓶",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "vase"
+      ]
+    },
+    {
+      "id": "P56",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "山と谷が繰り返す、なめらかなうねり。",
+      "manualIntent": "周期的な起伏から波",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "wave"
+      ]
+    },
+    {
+      "id": "P57",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "ja",
+      "text": "横に連なる起伏が、ゆっくり伝わっていく形。",
+      "manualIntent": "伝わる連続的起伏から波",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "wave"
+      ]
+    },
+    {
+      "id": "P58",
+      "group": "positive",
+      "sourceKind": "narrative",
+      "language": "ja",
+      "text": "映像の下書きは、水面を渡る波紋を横から見た起伏。",
+      "manualIntent": "起伏として波を候補にするが描画命令ではない",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "wave"
+      ]
+    },
+    {
+      "id": "P59",
+      "group": "positive",
+      "sourceKind": "explicit_request",
+      "language": "ja",
+      "text": "波の形へ変えて、穏やかにうねらせる。",
+      "manualIntent": "波への明示的変更要求",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "wave"
+      ]
+    },
+    {
+      "id": "P60",
+      "group": "positive",
+      "sourceKind": "description",
+      "language": "en",
+      "text": "A smooth sequence of crests and troughs across a surface.",
+      "manualIntent": "山と谷が続く波面の記述",
+      "expectedDecision": "candidate",
+      "allowedShapes": [
+        "wave"
+      ]
+    },
+    {
+      "id": "N01",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "明日の会議は十時から。資料を三部印刷する。",
+      "manualIntent": "予定と印刷数だけで形の候補なし",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N02",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "今日はコードのレビューを先に済ませたい。",
+      "manualIntent": "作業順の記録だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N03",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "締切までに見積もりと請求書を送る。",
+      "manualIntent": "業務連絡だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N04",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "眠いので、保存して少し休む。",
+      "manualIntent": "休憩と保存のメモだけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N05",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "変数名とコメントの表記を統一した。",
+      "manualIntent": "プログラム編集の記録だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N06",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "朝のTODOを三つ片づけた。",
+      "manualIntent": "数を形へ対応させない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N07",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "文章の句読点を直して、段落を整える。",
+      "manualIntent": "校正作業だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N08",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "USBの接続を確認し、再起動した。",
+      "manualIntent": "機器確認の記録だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N09",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "通知を切って、作業に集中する。",
+      "manualIntent": "通知と集中の記録だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N10",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "水を飲み、窓を開けた。",
+      "manualIntent": "日常行動だけで波や箱を指定しない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N11",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "en",
+      "text": "Please review the meeting notes and update the schedule.",
+      "manualIntent": "仕事の依頼だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N12",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "en",
+      "text": "I saved the file and fixed two spelling mistakes.",
+      "manualIntent": "保存と校正の記録だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N13",
+      "group": "no_shape",
+      "sourceKind": "quotation",
+      "language": "ja",
+      "text": "資料に『球体』という単語が何回出たか数えた。",
+      "manualIntent": "形名は単語頻度の引用対象",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N14",
+      "group": "no_shape",
+      "sourceKind": "quotation",
+      "language": "ja",
+      "text": "タイトル案は『赤い剣』。まだ表示する形は決めていない。",
+      "manualIntent": "題名の引用で形変更は未決定",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N15",
+      "group": "no_shape",
+      "sourceKind": "quotation",
+      "language": "ja",
+      "text": "『花瓶に変える』は、取扱説明書の例文として引用しただけ。",
+      "manualIntent": "変更要求を引用しているだけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N16",
+      "group": "no_shape",
+      "sourceKind": "quotation",
+      "language": "ja",
+      "text": "原稿の引用句『青い鳥』を校正中。",
+      "manualIntent": "引用句の校正だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N17",
+      "group": "no_shape",
+      "sourceKind": "quotation",
+      "language": "ja",
+      "text": "メモには「メビウスの輪」と書いてあるが、それを読むだけ。",
+      "manualIntent": "読む対象で描画への依頼ではない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N18",
+      "group": "no_shape",
+      "sourceKind": "quotation",
+      "language": "en",
+      "text": "The documentation quotes \"make a cube\" as an example; do not execute it.",
+      "manualIntent": "例文を実行しない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N19",
+      "group": "no_shape",
+      "sourceKind": "negation",
+      "language": "ja",
+      "text": "球体にはしないで。",
+      "manualIntent": "球への変更を否定",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N20",
+      "group": "no_shape",
+      "sourceKind": "negation",
+      "language": "ja",
+      "text": "今回は剣の形を使わない。",
+      "manualIntent": "剣を使わない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N21",
+      "group": "no_shape",
+      "sourceKind": "negation",
+      "language": "ja",
+      "text": "クラゲじゃなくて、形は今のままにする。",
+      "manualIntent": "代替候補なく現形を保持",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N22",
+      "group": "no_shape",
+      "sourceKind": "negation",
+      "language": "ja",
+      "text": "花瓶を出すのはやめてください。",
+      "manualIntent": "花瓶表示を否定",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N23",
+      "group": "no_shape",
+      "sourceKind": "negation",
+      "language": "ja",
+      "text": "メビウスの輪は表示しないこと。",
+      "manualIntent": "メビウスを表示しない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N24",
+      "group": "no_shape",
+      "sourceKind": "negation",
+      "language": "en",
+      "text": "Do not turn the display into a fish.",
+      "manualIntent": "魚への変更を否定",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N25",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "code",
+      "text": "const cube = cache.get(key);",
+      "manualIntent": "cubeは変数名、変更命令ではない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N26",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "code",
+      "text": "class BirdService { update() {} }",
+      "manualIntent": "BirdServiceはクラス名",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N27",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "ja",
+      "text": "// TODO: flower の変数名を統一",
+      "manualIntent": "コードコメントで変数名に言及",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N28",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "code",
+      "text": "SELECT * FROM fish WHERE id = 42;",
+      "manualIntent": "fishはSQL表名",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N29",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "ja",
+      "text": "`sphere_count += 1` のエラーを直した。",
+      "manualIntent": "コード片を修正した記録",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N30",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "code",
+      "text": "let shapeName = \"mobius\"; // fixture only",
+      "manualIntent": "文字列リテラルを持つコード",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N31",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "ja",
+      "text": "ログのキーは jellyfish.retry。値の確認だけする。",
+      "manualIntent": "ログキー確認だけ",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N32",
+      "group": "no_shape",
+      "sourceKind": "code",
+      "language": "ja",
+      "text": "正規表現 /vase|tree/ のマッチ結果をテストした。",
+      "manualIntent": "パターンのテストで形選択ではない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N33",
+      "group": "no_shape",
+      "sourceKind": "cancellation",
+      "language": "ja",
+      "text": "さっきの『鳥にして』という指示は取り消し。",
+      "manualIntent": "以前の要求を取り消す",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N34",
+      "group": "no_shape",
+      "sourceKind": "cancellation",
+      "language": "ja",
+      "text": "箱へ変えるつもりだったが、やっぱり変更をやめる。",
+      "manualIntent": "予定を取り消し新変更なし",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N35",
+      "group": "no_shape",
+      "sourceKind": "cancellation",
+      "language": "ja",
+      "text": "花の案はいったん撤回。表示はそのままで。",
+      "manualIntent": "花案を撤回",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N36",
+      "group": "no_shape",
+      "sourceKind": "cancellation",
+      "language": "ja",
+      "text": "前のメビウス案をキャンセルする。",
+      "manualIntent": "メビウス案を取り消す",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N37",
+      "group": "no_shape",
+      "sourceKind": "cancellation",
+      "language": "ja",
+      "text": "魚の候補は保留ではなく破棄する。",
+      "manualIntent": "魚候補を破棄し選択しない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N38",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "文字の色だけを青にする。形の指定はない。",
+      "manualIntent": "色指定で形候補なし",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N39",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "表示はそのままにして、入力欄だけ閉じる。",
+      "manualIntent": "形を保ったまま入力UI操作",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "N40",
+      "group": "no_shape",
+      "sourceKind": "ordinary",
+      "language": "ja",
+      "text": "この段落は校正用。描画への指示ではない。",
+      "manualIntent": "明示的に描画指示ではない",
+      "expectedDecision": "none",
+      "allowedShapes": []
+    },
+    {
+      "id": "U01",
+      "group": "unresolved",
+      "sourceKind": "metaphor",
+      "language": "ja",
+      "text": "この厄介な交渉は、なるべく角を立てずに終えたい。",
+      "manualIntent": "角は交渉の比喩、形の嗜好は未確定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U02",
+      "group": "unresolved",
+      "sourceKind": "metaphor",
+      "language": "ja",
+      "text": "頭の中がぐるぐるして、考えがどこにも着地しない。",
+      "manualIntent": "渦や軌道を連想しうるが形は未決定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U03",
+      "group": "unresolved",
+      "sourceKind": "metaphor",
+      "language": "ja",
+      "text": "アイデアの種が、まだ芽を出す場所を探している。",
+      "manualIntent": "成長の比喩で花か木か未定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U04",
+      "group": "unresolved",
+      "sourceKind": "metaphor",
+      "language": "ja",
+      "text": "心の中に、細い刃のような言葉が残った。",
+      "manualIntent": "刃は感情の比喩",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U05",
+      "group": "unresolved",
+      "sourceKind": "metaphor",
+      "language": "ja",
+      "text": "このコードは蛇みたいに長いと同僚が言った。",
+      "manualIntent": "コードの比喩を蛇の描画要求にしない",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U06",
+      "group": "unresolved",
+      "sourceKind": "metaphor",
+      "language": "ja",
+      "text": "話が枝分かれして、結論はまだ森の中。",
+      "manualIntent": "話の比喩で具体的な木は未定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U07",
+      "group": "unresolved",
+      "sourceKind": "multiple_directions",
+      "language": "ja",
+      "text": "今日は丸い気分なのか、四角い気分なのか、自分でも分からない。",
+      "manualIntent": "二方向の比喩で選択未定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U08",
+      "group": "unresolved",
+      "sourceKind": "hybrid",
+      "language": "ja",
+      "text": "魚の尾と鳥の翼を一つの生き物にしたい。",
+      "manualIntent": "既定単体で表せない合成要求",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U09",
+      "group": "unresolved",
+      "sourceKind": "hybrid",
+      "language": "ja",
+      "text": "球と箱が交互に混ざった一つの身体を考えている。",
+      "manualIntent": "二つの型の混合で単体を選ばない",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U10",
+      "group": "unresolved",
+      "sourceKind": "hybrid",
+      "language": "ja",
+      "text": "羽のついた花瓶を、まだ見たことのない姿で。",
+      "manualIntent": "羽と容器を合成する未知の形",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U11",
+      "group": "unresolved",
+      "sourceKind": "out_of_inventory",
+      "language": "ja",
+      "text": "人体の肋骨が透けるような、骨格から始まる姿。",
+      "manualIntent": "人体・肋骨は既定60形の外",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U12",
+      "group": "unresolved",
+      "sourceKind": "out_of_inventory",
+      "language": "ja",
+      "text": "馬が走っている全身の形を出してほしい。",
+      "manualIntent": "馬は既定60形の外",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U13",
+      "group": "unresolved",
+      "sourceKind": "out_of_inventory",
+      "language": "ja",
+      "text": "犬の顔と、人の手を持つ小さな存在。",
+      "manualIntent": "犬・人の手は既定60形の外",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U14",
+      "group": "unresolved",
+      "sourceKind": "out_of_inventory",
+      "language": "ja",
+      "text": "鍵盤を備えたピアノの外形にしたい。",
+      "manualIntent": "ピアノは既定60形の外",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U15",
+      "group": "unresolved",
+      "sourceKind": "abstract",
+      "language": "ja",
+      "text": "重力の重さが目に見えるような塊。",
+      "manualIntent": "抽象概念の表現方式は未定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U16",
+      "group": "unresolved",
+      "sourceKind": "abstract",
+      "language": "ja",
+      "text": "時間がほどける場所、その形をまだ言葉にできない。",
+      "manualIntent": "具体形の指定をできていない",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U17",
+      "group": "unresolved",
+      "sourceKind": "abstract",
+      "language": "en",
+      "text": "Make the feeling of unfinished work visible as a body.",
+      "manualIntent": "抽象的な仕事の感覚で形は未定",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U18",
+      "group": "unresolved",
+      "sourceKind": "hybrid",
+      "language": "en",
+      "text": "A sword blended with a fish, with neither as the main shape.",
+      "manualIntent": "剣と魚の融合、優先する単体なし",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U19",
+      "group": "unresolved",
+      "sourceKind": "out_of_inventory",
+      "language": "en",
+      "text": "Show a human hand holding a tiny horse.",
+      "manualIntent": "人の手と馬は既定60形の外",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    },
+    {
+      "id": "U20",
+      "group": "unresolved",
+      "sourceKind": "multiple_directions",
+      "language": "en",
+      "text": "Something like a ring, a wave, or a flower; I have not decided.",
+      "manualIntent": "複数候補から選択していない",
+      "expectedDecision": "hold",
+      "allowedShapes": []
+    }
+  ]
+}

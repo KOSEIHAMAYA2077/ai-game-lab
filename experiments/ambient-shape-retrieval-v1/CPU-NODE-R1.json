@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "node": "v26.4.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "GCRequested": true,
+  "serializedWeightBytes": 204333,
+  "memory": {
+    "before": {
+      "rss": 49823744,
+      "heapTotal": 5390336,
+      "heapUsed": 4101080,
+      "external": 2058753,
+      "arrayBuffers": 137467
+    },
+    "afterCode": {
+      "rss": 50315264,
+      "heapTotal": 5652480,
+      "heapUsed": 4173392,
+      "external": 2058794,
+      "arrayBuffers": 137467
+    },
+    "afterInit": {
+      "rss": 54149120,
+      "heapTotal": 7897088,
+      "heapUsed": 5532480,
+      "external": 2058794,
+      "arrayBuffers": 137467
+    },
+    "afterQueries": {
+      "rss": 74121216,
+      "heapTotal": 14712832,
+      "heapUsed": 5849680,
+      "external": 2058794,
+      "arrayBuffers": 137467
+    },
+    "initHeapDeltaBytes": 1431400,
+    "initRSSDeltaBytes": 4325376,
+    "maxRSSKiB": 72464
+  },
+  "timing": {
+    "initialMs": 4.877125000000003,
+    "parseMs": 0.4803329999999981,
+    "createMs": 1.2191669999999988,
+    "warmCalls": 200,
+    "dev": {
+      "n": 1140,
+      "p50": 0.04041699999999082,
+      "p95": 0.08037499999999653,
+      "p99": 0.11166699999999707,
+      "max": 0.19741600000000403,
+      "mean": 0.044486551754385914
+    },
+    "worst": [
+      {
+        "name": "ja512",
+        "UTF16": 512,
+        "latencyMs": {
+          "n": 100,
+          "p50": 0.11195899999999881,
+          "p95": 0.1703340000000111,
+          "p99": 0.18291700000000333,
+          "max": 0.19637499999998909,
+          "mean": 0.11790300999999971
+        }
+      },
+      {
+        "name": "en512",
+        "UTF16": 512,
+        "latencyMs": {
+          "n": 100,
+          "p50": 0.0644580000000019,
+          "p95": 0.09874999999999545,
+          "p99": 0.14862499999999557,
+          "max": 0.17508399999999824,
+          "mean": 0.06885921999999965
+        }
+      },
+      {
+        "name": "alias512",
+        "UTF16": 512,
+        "latencyMs": {
+          "n": 100,
+          "p50": 0.19195799999999963,
+          "p95": 0.255874999999989,
+          "p99": 0.3042080000000027,
+          "max": 0.35966600000000426,
+          "mean": 0.20219081000000003
+        }
+      }
+    ]
+  },
+  "checksums": {
+    "accepted": 750,
+    "rankings": 68400
+  },
+  "limitations": "Single Mac process; explicit GC and no Oxc/baseline. RSS is whole candidate process, not app/widget or 16GB Windows. Timing excludes external I/O/bridge/GPU/input, not a hard realtime guarantee."
+}

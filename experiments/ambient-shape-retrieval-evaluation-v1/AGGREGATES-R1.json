@@ -1,0 +1,1890 @@
+{
+  "version": "post-comparison-text-free-aggregates-r1",
+  "candidateCallsSinceFirstComparison": 0,
+  "humanAnnotators": 0,
+  "labelPolicyFixed": true,
+  "sourceThresholdChanges": 0,
+  "containsFixtureText": false,
+  "containsIndividualCaseIds": false,
+  "groupTotals": {
+    "positive": 60,
+    "no_shape": 40,
+    "unresolved": 20
+  },
+  "modes": {
+    "baseline": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 29,
+          "hit": 19,
+          "abstained": 31,
+          "falsePositive": 0,
+          "wrongShape": 10,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 13,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 23,
+              "wrongShape": 8
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 5,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 7,
+              "wrongShape": 2
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 11,
+              "hit": 11,
+              "falsePositive": 0,
+              "abstained": 1,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 25,
+              "hit": 18,
+              "falsePositive": 0,
+              "abstained": 23,
+              "wrongShape": 7
+            },
+            "en": {
+              "total": 12,
+              "accepted": 4,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 3
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 20,
+          "hit": 20,
+          "abstained": 20,
+          "falsePositive": 20,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 6,
+              "hit": 0,
+              "falsePositive": 6,
+              "abstained": 0,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 5,
+              "hit": 1,
+              "falsePositive": 5,
+              "abstained": 1,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 6,
+              "hit": 2,
+              "falsePositive": 6,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 3,
+              "hit": 2,
+              "falsePositive": 3,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 15,
+              "hit": 17,
+              "falsePositive": 15,
+              "abstained": 17,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 2,
+              "hit": 2,
+              "falsePositive": 2,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 3,
+              "hit": 1,
+              "falsePositive": 3,
+              "abstained": 1,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 10,
+          "hit": 10,
+          "abstained": 10,
+          "falsePositive": 10,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 3,
+              "hit": 3,
+              "falsePositive": 3,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 2,
+              "hit": 0,
+              "falsePositive": 2,
+              "abstained": 0,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 4,
+              "hit": 0,
+              "falsePositive": 4,
+              "abstained": 0,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 1,
+              "hit": 2,
+              "falsePositive": 1,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 8,
+              "hit": 8,
+              "falsePositive": 8,
+              "abstained": 8,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 2,
+              "hit": 2,
+              "falsePositive": 2,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": null,
+        "total": 60,
+        "note": "Not available; evidence choices are not score ranks."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 19,
+        "accepted": 29,
+        "value": 0.6551724137931034
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.22724999999999795,
+        "p95Ms": 0.7144580000000076,
+        "p99Ms": 4.578541000000001,
+        "maxMs": 6.923749999999998,
+        "sumMs": 48.28924500000004,
+        "firstCallMs": 6.923749999999998,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": null
+    },
+    "alias": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 21,
+          "hit": 13,
+          "abstained": 39,
+          "falsePositive": 0,
+          "wrongShape": 8,
+          "top3Available": 60,
+          "top3Hit": 17,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 10,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 26,
+              "wrongShape": 7
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 1,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 11,
+              "wrongShape": 1
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 10,
+              "hit": 10,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 17,
+              "hit": 12,
+              "falsePositive": 0,
+              "abstained": 31,
+              "wrongShape": 5
+            },
+            "en": {
+              "total": 12,
+              "accepted": 4,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 3
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 1,
+              "hit": 7,
+              "falsePositive": 1,
+              "abstained": 7,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 1,
+              "hit": 4,
+              "falsePositive": 1,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 2,
+              "hit": 30,
+              "falsePositive": 2,
+              "abstained": 30,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 1,
+          "hit": 19,
+          "abstained": 19,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 0,
+              "hit": 2,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 1,
+              "hit": 3,
+              "falsePositive": 1,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 0,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 3,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 1,
+              "hit": 15,
+              "falsePositive": 1,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": 13,
+        "total": 60,
+        "note": "Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 13,
+        "accepted": 21,
+        "value": 0.6190476190476191
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.0219589999999954,
+        "p95Ms": 0.09104199999998741,
+        "p99Ms": 0.5744590000000045,
+        "maxMs": 0.8636660000000091,
+        "sumMs": 5.587203999999957,
+        "firstCallMs": 0.8636660000000091,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 13,
+        "total": 60,
+        "zeroOnlyHitCount": 4,
+        "postResultDiagnostic": true
+      }
+    },
+    "alias_wordnet": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 13,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 9,
+          "top3Available": 60,
+          "top3Hit": 17,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 10,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 26,
+              "wrongShape": 7
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 1,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 11,
+              "wrongShape": 1
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 11,
+              "hit": 10,
+              "falsePositive": 0,
+              "abstained": 1,
+              "wrongShape": 1
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 18,
+              "hit": 12,
+              "falsePositive": 0,
+              "abstained": 30,
+              "wrongShape": 6
+            },
+            "en": {
+              "total": 12,
+              "accepted": 4,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 3
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 1,
+              "hit": 7,
+              "falsePositive": 1,
+              "abstained": 7,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 1,
+              "hit": 4,
+              "falsePositive": 1,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 2,
+              "hit": 30,
+              "falsePositive": 2,
+              "abstained": 30,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 1,
+          "hit": 19,
+          "abstained": 19,
+          "falsePositive": 1,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 0,
+              "hit": 2,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 1,
+              "hit": 3,
+              "falsePositive": 1,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 0,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 3,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 1,
+              "hit": 15,
+              "falsePositive": 1,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": 13,
+        "total": 60,
+        "note": "Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 13,
+        "accepted": 22,
+        "value": 0.5909090909090909
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.031291999999993436,
+        "p95Ms": 0.06645799999999724,
+        "p99Ms": 0.33287500000000136,
+        "maxMs": 0.43274999999999864,
+        "sumMs": 5.146212999999989,
+        "firstCallMs": 0.07991599999999721,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 13,
+        "total": 60,
+        "zeroOnlyHitCount": 4,
+        "postResultDiagnostic": true
+      }
+    },
+    "alias_wordnet_graph": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 14,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 8,
+          "top3Available": 60,
+          "top3Hit": 22,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 10,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 26,
+              "wrongShape": 7
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 2,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 10,
+              "wrongShape": 1
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 10,
+              "hit": 10,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 18,
+              "hit": 13,
+              "falsePositive": 0,
+              "abstained": 30,
+              "wrongShape": 5
+            },
+            "en": {
+              "total": 12,
+              "accepted": 4,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 3
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 1,
+              "hit": 7,
+              "falsePositive": 1,
+              "abstained": 7,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 1,
+              "hit": 4,
+              "falsePositive": 1,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 2,
+              "hit": 30,
+              "falsePositive": 2,
+              "abstained": 30,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 2,
+          "hit": 18,
+          "abstained": 18,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 1,
+              "hit": 5,
+              "falsePositive": 1,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 0,
+              "hit": 2,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 1,
+              "hit": 3,
+              "falsePositive": 1,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 0,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 3,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 2,
+              "hit": 14,
+              "falsePositive": 2,
+              "abstained": 14,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": 18,
+        "total": 60,
+        "note": "Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 14,
+        "accepted": 22,
+        "value": 0.6363636363636364
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.04058399999999551,
+        "p95Ms": 0.0794169999999923,
+        "p99Ms": 0.13829200000000696,
+        "maxMs": 0.41875000000000284,
+        "sumMs": 5.717624000000029,
+        "firstCallMs": 0.04745900000000347,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 18,
+        "total": 60,
+        "zeroOnlyHitCount": 4,
+        "postResultDiagnostic": true
+      }
+    },
+    "sparse_only": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 1,
+          "hit": 0,
+          "abstained": 59,
+          "falsePositive": 0,
+          "wrongShape": 1,
+          "top3Available": 60,
+          "top3Hit": 35,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 1,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 35,
+              "wrongShape": 1
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 0,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 12,
+              "wrongShape": 0
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 0,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 12,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 1,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 47,
+              "wrongShape": 1
+            },
+            "en": {
+              "total": 12,
+              "accepted": 0,
+              "hit": 0,
+              "falsePositive": 0,
+              "abstained": 12,
+              "wrongShape": 0
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 0,
+          "hit": 40,
+          "abstained": 40,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 0,
+              "hit": 8,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 0,
+              "hit": 32,
+              "falsePositive": 0,
+              "abstained": 32,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 0,
+          "hit": 20,
+          "abstained": 20,
+          "falsePositive": 0,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 0,
+              "hit": 2,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 0,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 3,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 0,
+              "hit": 16,
+              "falsePositive": 0,
+              "abstained": 16,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": 24,
+        "total": 60,
+        "note": "Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 0,
+        "accepted": 1,
+        "value": 0
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.028542000000015832,
+        "p95Ms": 0.05783399999999972,
+        "p99Ms": 0.35045800000000327,
+        "maxMs": 0.36445799999999906,
+        "sumMs": 4.353497999999959,
+        "firstCallMs": 0.36445799999999906,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 35,
+        "total": 60,
+        "zeroOnlyHitCount": 0,
+        "postResultDiagnostic": true
+      }
+    },
+    "unguarded": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 14,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 8,
+          "top3Available": 60,
+          "top3Hit": 41,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 10,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 26,
+              "wrongShape": 7
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 2,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 10,
+              "wrongShape": 1
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 10,
+              "hit": 10,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 18,
+              "hit": 13,
+              "falsePositive": 0,
+              "abstained": 30,
+              "wrongShape": 5
+            },
+            "en": {
+              "total": 12,
+              "accepted": 4,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 3
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 17,
+          "hit": 23,
+          "abstained": 23,
+          "falsePositive": 17,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 4,
+              "hit": 2,
+              "falsePositive": 4,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 5,
+              "hit": 1,
+              "falsePositive": 5,
+              "abstained": 1,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 5,
+              "hit": 3,
+              "falsePositive": 5,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 3,
+              "hit": 2,
+              "falsePositive": 3,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 12,
+              "hit": 20,
+              "falsePositive": 12,
+              "abstained": 20,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 2,
+              "hit": 2,
+              "falsePositive": 2,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 3,
+              "hit": 1,
+              "falsePositive": 3,
+              "abstained": 1,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 2,
+          "hit": 18,
+          "abstained": 18,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 1,
+              "hit": 5,
+              "falsePositive": 1,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 0,
+              "hit": 2,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 1,
+              "hit": 3,
+              "falsePositive": 1,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 0,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 3,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 2,
+              "hit": 14,
+              "falsePositive": 2,
+              "abstained": 14,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": 30,
+        "total": 60,
+        "note": "Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 14,
+        "accepted": 22,
+        "value": 0.6363636363636364
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.04612499999998931,
+        "p95Ms": 0.0650410000000079,
+        "p99Ms": 0.3565410000000213,
+        "maxMs": 0.4081249999999841,
+        "sumMs": 6.26403499999995,
+        "firstCallMs": 0.06379200000000651,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 41,
+        "total": 60,
+        "zeroOnlyHitCount": 0,
+        "postResultDiagnostic": true
+      }
+    },
+    "full": {
+      "groups": {
+        "positive": {
+          "total": 60,
+          "accepted": 22,
+          "hit": 14,
+          "abstained": 38,
+          "falsePositive": 0,
+          "wrongShape": 8,
+          "top3Available": 60,
+          "top3Hit": 41,
+          "sourceKinds": {
+            "description": {
+              "total": 36,
+              "accepted": 10,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 26,
+              "wrongShape": 7
+            },
+            "narrative": {
+              "total": 12,
+              "accepted": 2,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 10,
+              "wrongShape": 1
+            },
+            "explicit_request": {
+              "total": 12,
+              "accepted": 10,
+              "hit": 10,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 48,
+              "accepted": 18,
+              "hit": 13,
+              "falsePositive": 0,
+              "abstained": 30,
+              "wrongShape": 5
+            },
+            "en": {
+              "total": 12,
+              "accepted": 4,
+              "hit": 1,
+              "falsePositive": 0,
+              "abstained": 8,
+              "wrongShape": 3
+            }
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "accepted": 2,
+          "hit": 38,
+          "abstained": 38,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "ordinary": {
+              "total": 15,
+              "accepted": 0,
+              "hit": 15,
+              "falsePositive": 0,
+              "abstained": 15,
+              "wrongShape": 0
+            },
+            "quotation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "negation": {
+              "total": 6,
+              "accepted": 0,
+              "hit": 6,
+              "falsePositive": 0,
+              "abstained": 6,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 8,
+              "accepted": 1,
+              "hit": 7,
+              "falsePositive": 1,
+              "abstained": 7,
+              "wrongShape": 0
+            },
+            "cancellation": {
+              "total": 5,
+              "accepted": 1,
+              "hit": 4,
+              "falsePositive": 1,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 32,
+              "accepted": 2,
+              "hit": 30,
+              "falsePositive": 2,
+              "abstained": 30,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            },
+            "code": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "accepted": 2,
+          "hit": 18,
+          "abstained": 18,
+          "falsePositive": 2,
+          "wrongShape": 0,
+          "top3Available": 0,
+          "top3Hit": 0,
+          "sourceKinds": {
+            "metaphor": {
+              "total": 6,
+              "accepted": 1,
+              "hit": 5,
+              "falsePositive": 1,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "multiple_directions": {
+              "total": 2,
+              "accepted": 0,
+              "hit": 2,
+              "falsePositive": 0,
+              "abstained": 2,
+              "wrongShape": 0
+            },
+            "hybrid": {
+              "total": 4,
+              "accepted": 1,
+              "hit": 3,
+              "falsePositive": 1,
+              "abstained": 3,
+              "wrongShape": 0
+            },
+            "out_of_inventory": {
+              "total": 5,
+              "accepted": 0,
+              "hit": 5,
+              "falsePositive": 0,
+              "abstained": 5,
+              "wrongShape": 0
+            },
+            "abstract": {
+              "total": 3,
+              "accepted": 0,
+              "hit": 3,
+              "falsePositive": 0,
+              "abstained": 3,
+              "wrongShape": 0
+            }
+          },
+          "languages": {
+            "ja": {
+              "total": 16,
+              "accepted": 2,
+              "hit": 14,
+              "falsePositive": 2,
+              "abstained": 14,
+              "wrongShape": 0
+            },
+            "en": {
+              "total": 4,
+              "accepted": 0,
+              "hit": 4,
+              "falsePositive": 0,
+              "abstained": 4,
+              "wrongShape": 0
+            }
+          }
+        }
+      },
+      "rawTop1Positive": {
+        "hits": 30,
+        "total": 60,
+        "note": "Before guard rawTop1 from complete normalized input; separate from accepted and masked query rank."
+      },
+      "acceptedPositivePrecision": {
+        "correct": 14,
+        "accepted": 22,
+        "value": 0.6363636363636364
+      },
+      "latency": {
+        "oneOrderedPass": true,
+        "warmupCalls": 0,
+        "calls": 120,
+        "p50Ms": 0.05404100000001222,
+        "p95Ms": 0.09904199999999719,
+        "p99Ms": 0.12112500000000637,
+        "maxMs": 0.5099170000000015,
+        "sumMs": 7.210417999999947,
+        "firstCallMs": 0.05375000000000796,
+        "note": "CPU function timings only; imports excluded; first call included, no repeated benchmarking, process may share machine with other work. Not widget RAM/FPS/power/16GB evidence."
+      },
+      "posthocNonzeroTop3Diagnostic": {
+        "hits": 41,
+        "total": 60,
+        "zeroOnlyHitCount": 0,
+        "postResultDiagnostic": true
+      }
+    }
+  },
+  "overlap": {
+    "fullTextCounts": {
+      "fit": 0,
+      "dev": 0,
+      "pilot": 0
+    },
+    "actualQueryCounts": {
+      "alias": {
+        "fit": 0,
+        "dev": 0,
+        "pilot": 0
+      },
+      "alias_wordnet": {
+        "fit": 0,
+        "dev": 0,
+        "pilot": 0
+      },
+      "alias_wordnet_graph": {
+        "fit": 0,
+        "dev": 0,
+        "pilot": 0
+      },
+      "sparse_only": {
+        "fit": 0,
+        "dev": 0,
+        "pilot": 0
+      },
+      "unguarded": {
+        "fit": 0,
+        "dev": 0,
+        "pilot": 0
+      },
+      "full": {
+        "fit": 0,
+        "dev": 0,
+        "pilot": 0
+      }
+    },
+    "cueByMode": {
+      "alias": {
+        "positive": {
+          "total": 60,
+          "aliasCue": 21,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 21,
+          "acceptedChannels": {
+            "accepted-alias": 21
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "aliasCue": 12,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 12,
+          "acceptedChannels": {
+            "accepted-alias": 2
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "aliasCue": 4,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 4,
+          "acceptedChannels": {
+            "accepted-alias": 1
+          }
+        }
+      },
+      "alias_wordnet": {
+        "positive": {
+          "total": 60,
+          "aliasCue": 21,
+          "synonymCue": 1,
+          "graphCue": 0,
+          "anyDeclaredCue": 22,
+          "acceptedChannels": {
+            "accepted-alias": 21,
+            "accepted-synonym": 1
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "aliasCue": 12,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 12,
+          "acceptedChannels": {
+            "accepted-alias": 2
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "aliasCue": 4,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 4,
+          "acceptedChannels": {
+            "accepted-alias": 1
+          }
+        }
+      },
+      "alias_wordnet_graph": {
+        "positive": {
+          "total": 60,
+          "aliasCue": 21,
+          "synonymCue": 0,
+          "graphCue": 5,
+          "anyDeclaredCue": 26,
+          "acceptedChannels": {
+            "accepted-alias": 21,
+            "accepted-graph": 1
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "aliasCue": 12,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 12,
+          "acceptedChannels": {
+            "accepted-alias": 2
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "aliasCue": 4,
+          "synonymCue": 0,
+          "graphCue": 2,
+          "anyDeclaredCue": 6,
+          "acceptedChannels": {
+            "accepted-graph": 1,
+            "accepted-alias": 1
+          }
+        }
+      },
+      "sparse_only": {
+        "positive": {
+          "total": 60,
+          "aliasCue": 0,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 0,
+          "acceptedChannels": {
+            "accepted-sparse": 1
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "aliasCue": 0,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 0,
+          "acceptedChannels": {}
+        },
+        "unresolved": {
+          "total": 20,
+          "aliasCue": 0,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 0,
+          "acceptedChannels": {}
+        }
+      },
+      "unguarded": {
+        "positive": {
+          "total": 60,
+          "aliasCue": 21,
+          "synonymCue": 0,
+          "graphCue": 5,
+          "anyDeclaredCue": 26,
+          "acceptedChannels": {
+            "accepted-alias": 21,
+            "accepted-graph": 1
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "aliasCue": 18,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 18,
+          "acceptedChannels": {
+            "accepted-alias": 17
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "aliasCue": 4,
+          "synonymCue": 0,
+          "graphCue": 2,
+          "anyDeclaredCue": 6,
+          "acceptedChannels": {
+            "accepted-graph": 1,
+            "accepted-alias": 1
+          }
+        }
+      },
+      "full": {
+        "positive": {
+          "total": 60,
+          "aliasCue": 21,
+          "synonymCue": 0,
+          "graphCue": 5,
+          "anyDeclaredCue": 26,
+          "acceptedChannels": {
+            "accepted-alias": 21,
+            "accepted-graph": 1
+          }
+        },
+        "no_shape": {
+          "total": 40,
+          "aliasCue": 12,
+          "synonymCue": 0,
+          "graphCue": 0,
+          "anyDeclaredCue": 12,
+          "acceptedChannels": {
+            "accepted-alias": 2
+          }
+        },
+        "unresolved": {
+          "total": 20,
+          "aliasCue": 4,
+          "synonymCue": 0,
+          "graphCue": 2,
+          "anyDeclaredCue": 6,
+          "acceptedChannels": {
+            "accepted-graph": 1,
+            "accepted-alias": 1
+          }
+        }
+      }
+    }
+  },
+  "imports": {
+    "apiImportMs": 2.8760830000000013,
+    "baselineImportMs": 21.108083999999998
+  },
+  "limits": "Artificial AI-labelled text. Author remains blind to individual fixture/failure. Not new word understanding, human preference, learned model, renderer/widget RAM/FPS/16GB/OS capture evidence."
+}

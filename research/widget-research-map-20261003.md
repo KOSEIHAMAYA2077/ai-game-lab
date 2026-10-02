@@ -1,5 +1,9 @@
 # Glyph Matterを研究テーマへつなぐ
 
+文章から形を選ぶ新しい[有限60形検索R1](../experiments/ambient-shape-retrieval-v1/REPORT.md)も既定採用を見送った。約200KiBの辞書・作者グラフ・TF-IDFで、初回独立人工120文は正例受理22/60中14正解・8誤形、明確な保留への誤反応2/40。従来baselineの正例19/60に対し取りこぼしが増え、説明3/36・物語1/12だった。誤反応の減少は主に引用・否定・コード・取消を保留する規則によるもので、意味理解の向上とはしない。[独立評価・方法・原票](../experiments/ambient-shape-retrieval-evaluation-v1/REPORT.md)。
+
+この結果から、常駐時の形変更は「分からないなら現在の形を保つ」候補提案として扱う。材料の追加を意味推定の成功に依存させない方針は維持する。モデル・tokenizerをnative実行へ移すこと、未知文で正しく形を選ぶこと、入力から文字表面までつなぐことを別々に評価する。人の作業中の注意・快適性は未実施であり、この人工評価から製品の更新周期を決めない。
+
 [Metal 13形の独立候補](../desktop/glyph-metal-lab-v3/README.md)では、元Webの手続き表面をGPU側へ移し、固定文字plane/atlasを保つ。4形の実小窓90秒はCPU約1.6〜2.0%（1コア基準）/charged peak約70〜72MiB、停止/非表示の提出差0。[原票・方法・制限](../experiments/widget-metal-native-evaluation-v3/REPORT.md)。M5/32GiBでの限定条件であり、一般16GB機・全13/60形・OS入力連動・人間の快適性の実証ではない。
 
 文字数や描画payloadだけからアプリ全体RAMを見積もらず、実PIDのCPU/charged/residentを別に測る方針を維持する。独立native版の通常snapshotはraw本文を含み、別の人工入力契約の保存offとは同一機能ではない。旧版を比較基準として残す。

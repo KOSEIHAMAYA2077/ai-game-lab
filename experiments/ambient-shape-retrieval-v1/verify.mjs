@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {predict,rank,info,weights} from './api.mjs';
+const here=import.meta.dirname,checks=[];
+function check(name,fn){fn();checks.push(name);}
+check('current-shape-hold',()=>assert.equal(predict('今日は資料を読む',{current:'saturn'}).nextShape,'saturn'));
+check('non-string',()=>assert.equal(predict(null).reason,'invalid-input'));
+check('513-rejected-no-crop',()=>assert.equal(predict('x'.repeat(513)).reason,'overlength-input'));
+check('512-allowed',()=>assert.notEqual(predict('x'.repeat(512)).reason,'overlength-input'));
+check('surrogate-513',()=>assert.equal(predict('🙂'.repeat(256)+'x').reason,'overlength-input'));
+check('nfkc-expansion-limit',()=>assert.equal(predict('㍿'.repeat(129)).reason,'overlength-normalized'));
+check('empty-hold',()=>assert.equal(predict('').accepted,false));
+check('code-guard',()=>assert.equal(predict('const tree = 4;').accepted,false));
+check('quote-mask-retains-outside',()=>{const p=predict('「鳥」を引用し、花瓶を眺めた。');assert.equal(p.shape,'vase');assert.equal(p.query.length,p.inputUTF16);assert.equal(p.query.includes('鳥'),false);});
+check('negation-hold',()=>assert.equal(predict('鳥ではないものを考えた。').accepted,false));
+check('multi-object-hold',()=>assert.equal(predict('鳥と魚を見た。').reason,'conflicting-object-mentions'));
+check('unclosed-quote',()=>assert.equal(predict('「鳥を描く').reason,'unclosed-quote'));
+check('longest-leaf',()=>assert.equal(predict('木の葉を見た。').shape,'leaf'));
+check('substring-word-safety',()=>assert.equal(predict('shelled springing birdhouse').accepted,false));
+check('raw-ranking60',()=>{const r=rank('鳥を見た。');assert.equal(r.length,60);assert.equal(new Set(r.map(x=>x.shape)).size,60);assert.equal(r[0].shape,'bird');});
+check('finite-norm',()=>{for(const p of weights.profiles)assert.ok(Math.abs(p.reduce((s,x)=>s+x[1]**2,0)-1)<1e-12);for(const f of weights.features)assert.ok(Number.isFinite(f[1]));});
+check('weight-budget',()=>assert.ok(fs.statSync(path.join(here,'weights-r1.json')).size<8*1024*1024));
+check('all-60-name-smoke',()=>{const inv=JSON.parse(fs.readFileSync(path.join(here,'inventory.json'),'utf8'));for(const r of inv.aliases)assert.equal(predict(r.name+'を眺めた。').shape,r.shape);});
+check('bounded-deterministic-finite',()=>{let state=7;const tokens=['鳥','仕事','「','」','ない','tree','🙂','㍿','(',')',' ','花瓶','月','の','が','x'];for(let i=0;i<200;i++){let s='';for(let k=0;k<35;k++){state=(Math.imul(state,1664525)+1013904223)>>>0;s+=tokens[state%tokens.length];}for(const mode of ['full','unguarded']){const a=predict(s,{mode,current:'saturn'}),b=predict(s,{mode,current:'saturn'});assert.deepEqual(a,b);assert.ok(a.queryUTF16<=512);assert.ok(Number.isFinite(a.score)&&Number.isFinite(a.margin));assert.ok(a.ranking.every(r=>Number.isFinite(r.score)&&Number.isFinite(r.cosine)));if(!a.accepted)assert.equal(a.nextShape,'saturn');}}});
+fs.writeFileSync(path.join(here,'VERIFY-R1.json'),JSON.stringify({schema:1,checks,passed:checks.length,randomArtificial:200*2,info},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({passed:checks.length,randomArtificial:400}));
