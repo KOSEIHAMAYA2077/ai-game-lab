@@ -1,5 +1,15 @@
 # Glyph Matter — 文字のかたち
 
+**軽量モデルで曖昧な言葉を形へ変え、文字が表面を流れるサイドインテリアを研究・試作中。Codexのサブエージェントで調査・実装・独立検算を分担しています。**
+
+[▶ ブラウザで試す・60形](https://koseihamaya2077.github.io/glyph-matter/) / [小窓Web版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/) / [研究の技術・課題・先行研究](research/widget-research-map-20261003.md)。全アプリ入力との連動はまだ実装していません。
+
+### Macの小窓・13形のMetal比較版
+
+球・箱・メビウスに剣・花瓶・クラゲ・花・蝶・木・星・螺旋・砂時計・土星を追加。既存の文字表面式をMac標準描画へ移した別版です。M5/32GiBの4形・各90秒ではCPU約1.6〜2.0%（1コア基準）、charged peak約70〜72MiB、停止/非表示は提出数0。一般16GBノートPC・GPU負荷・8時間の実窓は未検証です。
+
+[Mac用比較アプリをダウンロード](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases/tag/glyph-matter-metal-v0.3.0) / [操作と保存](desktop/glyph-metal-lab-v3/README.md) / [表面の再現・失敗と限界](experiments/widget-metal-authored-v3/README.md) / [実小窓の測定](experiments/widget-metal-native-evaluation-v3/REPORT.md) / [日本語paste・復元・復帰](experiments/widget-metal-authored-v3-root-ui/README.md)。Apple Silicon・macOS13以上向けの未公証アプリ。既定の60形Webと旧版・保存は維持します。
+
 人工統合R3では、材料を全体追加してからACKし、本文・ID列を保存offから除く境界を確認しました。別入力元の割込みと活動イベントの欠落で見つけた旧版不具合も保持。[結果と公開確認](experiments/ambient-integration-publication-v1/README.md) / [独立review](experiments/ambient-integration-review-v1/README.md)。次は専用編集欄の実DOM接続で、全アプリ入力連動は未実装です。
 
 ### Metalの小窓・3形の独立比較版

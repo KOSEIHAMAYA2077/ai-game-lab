@@ -1,5 +1,9 @@
 # Glyph Matterを研究テーマへつなぐ
 
+[Metal 13形の独立候補](../desktop/glyph-metal-lab-v3/README.md)では、元Webの手続き表面をGPU側へ移し、固定文字plane/atlasを保つ。4形の実小窓90秒はCPU約1.6〜2.0%（1コア基準）/charged peak約70〜72MiB、停止/非表示の提出差0。[原票・方法・制限](../experiments/widget-metal-native-evaluation-v3/REPORT.md)。M5/32GiBでの限定条件であり、一般16GB機・全13/60形・OS入力連動・人間の快適性の実証ではない。
+
+文字数や描画payloadだけからアプリ全体RAMを見積もらず、実PIDのCPU/charged/residentを別に測る方針を維持する。独立native版の通常snapshotはraw本文を含み、別の人工入力契約の保存offとは同一機能ではない。旧版を比較基準として残す。
+
 人工統合R3の検査は、唯一の材料body/ID・全体追加後ACK・shape-only判断・保存offを同時に扱う新しいgrammarへ進んだ。元20、補助8、追加gap4と独立11/追加5は修正後の人工回帰として区別し、R1/R2失敗とharness不足を残した。[公開確認とroot再現](../experiments/ambient-integration-publication-v1/README.md)。専用textarea接続が次の候補で、OS取得・実IME・快適性の結果ではない。
 
 追加の用途は、日常の創作・仕事・プログラミングに伴う入力から育つサイドインテリア。[使用像の追加分析](side-interior-direction-20261003.md)と、[実施可能な研究プロトコル](widget-study-protocol-v1/README.md)を別資料にまとめた。日常文章のambient反映と明示的な形指定の研究課題は分ける。 [人工入力契約](../experiments/ambient-input-contract-v1/README.md)、[HCI本文8論文](side-interior-hci-v1/README.md)、[接続前の境界レビュー](../experiments/ambient-boundary-review-v1/REPORT.md)を別資料へ保存した。既存小窓の原文保存と、新しい保存off案を同一実装と扱わない。
