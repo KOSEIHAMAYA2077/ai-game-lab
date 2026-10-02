@@ -64,3 +64,7 @@ GitHubのREADMEトップからGitHub Pagesの試遊版へ直接進む導線を�
 リポジトリを `glyph-matter` に改名し、[新しい公開URL](https://koseihamaya2077.github.io/glyph-matter/)で入力・描画と保存タグのmanifestを確認した。公開元の版・過去の履歴は保持。
 
 [先行研究と次の方針](research/16gb-text-to-3d-20261002.md)、[小モデルCPU比較](experiments/consumer-16gb-20261002/README.md)を追加。0.8B/2BはCPUで動くが、形を求めた20文の全意味条件一致は0/20・1/20。汎用小LLMの直接採用は見送る。次は小さい意味encoder・専用head/decoderと決定的配置処理を別版で比較する。16GB Intel/AMDノートでの性能・新しい構造の組立は未検証。
+
+## 生成時間と骨格方式の追加条件 — 2026-10-02
+
+入力確定→肉付け→文字を伴う初回描画まで約10秒を目標とする。[骨格生成案 v0.1](research/skeleton-first-10s-v1.md)を別ブランチに保存。花瓶・剣・輪を少数の構造と寸法で扱い、肉付けは決定的な処理へ任せる。設計更新のみで、既存の試遊版・CPU実測結果は変更していない。
