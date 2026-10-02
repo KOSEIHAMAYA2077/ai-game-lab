@@ -1,4 +1,10 @@
-# 最新: 2026-10-03 04:31 JST — 別r2を走行中
+# 最新: 2026-10-03 07:05 JST — 別r2完走
+
+新r2はengine7,200.009秒/108,000commit、engine/sampler exit0、40pixel/600finite集計、MTL/timeout/skip0。root確認時own3PIDは終了。独立原票監査はhelper修正後11/11一致、初回10/11も保持。resource valid7,197.237秒CPU0.499%・charged peak127.095MiB、終了境界欠測1。旧初回約30分を合算せず、実窓/13・16形/8時間/16GB機と区別する。詳細は [回復と完走記録](../widget-metal-soak-recovery-v1/REPORT.md)。
+
+以下は前の状態の履歴。
+
+## 2026-10-03 04:31 JST — 別r2を走行中
 
 旧r1は約30分で中断、原因不明・finalなし。元のrunning原票を保持し、終了コードを残す専用supervisorで別r2を開始した。新supervisor PID93048、engine93049、sampler93050。開始04:25:03 JST、要求7200秒、予定06:25:03 JST。`.local/metal-soak-2h-r2/` と別attemptへ出力。新30秒preflightはengine/sampler exit0、450commit、14.9963/s、MTL error/timeout/skip0、1pixel/15finite成功。最初のsupervisor preflightはshader path誤りを開始前に拒否し、そのstderrを残した。
 

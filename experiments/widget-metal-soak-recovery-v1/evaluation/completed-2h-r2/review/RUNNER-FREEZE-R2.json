@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-10-02T21:40:08.361351+00:00",
+  "timing": "After R1 independent audit 10/11, before known helper-correction regression.",
+  "initialFailure": "System Python datetime.fromisoformat does not accept Z UTC suffix; source raw/method/threshold remain unchanged.",
+  "pythonVersion": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "changes": [
+    "normalize native ISO UTC Z to +00:00 for second-precision deadline comparison",
+    "new version label and separate immutable AUDIT-R2 output name"
+  ],
+  "methodSHA256": "9b0ebfc3ccabc4a5d23527f0455d431dc778b4dba3b89bec57c59b4ad145a10b",
+  "originalRunnerSHA256": "efbef0779b720a901ad5d77bc664dd061643f12d6c36b4fb6fd082778ceaa228",
+  "newRunnerSHA256": "d5ec9ebf67ac2bf81918017c412d74d7ee127d144c941713b32282a68222e3d8"
+}

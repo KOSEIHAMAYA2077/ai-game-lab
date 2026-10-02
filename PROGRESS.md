@@ -1,5 +1,9 @@
 # 進捗
 
+## 2026-10-03 07:05 JST — 旧3形offscreenの別2時間run完走
+
+中断した初回を保持し、新r2を最初から7,200.009秒・108,000command commit実行。engine/sampler正常終了、40画素検査・600地点finite集計、MTL/timeout/skip0。独立監査では原票・13画像復号・終了境界を照合した。資源のvalid7,197.237秒はCPU0.499%・charged peak127.095MiBで、終了時欠測1件を残す。実窓・13/16形・8時間・一般16GB機の性能結果ではない。[完走と保持した初回失敗](experiments/widget-metal-soak-recovery-v1/REPORT.md) / [独立監査](experiments/widget-metal-soak-recovery-v1/evaluation/completed-2h-r2/review/REPORT.md)。
+
 ## 2026-10-03 06:45 JST — 専用編集欄のR2
 
 人工統合R3に専用textareaを接続する比較版を保存。blur・destroy後の古いcallbackによる追加を止め、旧R1失敗を保持した。作者30回帰＋4差分、独立17＋destroy1、retired callback10＋別stale shape1は人工検証であり、実IMEではない。root実ブラウザはASCII box→削除→ring→緑sphereで旧7青/新7緑/14材料、再読込0を確認した。本文を削除しても身体を残す扱いは暫定。実OS取得・入力の外部送信・人の快適性評価は未実施。

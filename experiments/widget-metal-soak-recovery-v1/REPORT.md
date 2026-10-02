@@ -43,3 +43,11 @@
 [30秒preflightと誤ったpathの拒否原票](evaluation/supervisor-preflight-r2/PUBLICATION.json)を保存した。最初は存在しないshaderを開始前に拒否。別名の修正preflightはengine/sampler exit0、450commit／30.007秒、MTL error/timeout/skip0。これはsupervisor経由で終了記録が作れた短期確認で、2時間結果ではない。
 
 新r2のengine93049/sampler93050/supervisor93048は04:25:03開始、06:25:03予定。R5の凍結MSLを使い、旧runへ足し合わせない。[最新STATUS](../widget-metal-soak-v1/STATUS.md)。本走行完了と全検査は未確認。rootの実窓90秒比較とは別条件である。
+
+## 新r2の完走と独立監査（07:05 JST）
+
+04:25:03から06:25:06 JSTの別runは、engine 7,200.009秒・108,000回のcommand commitで正常終了した。supervisorはengine/samplerともexit0と最終記録の存在を確認。rootは終了後にown3PIDの不在を確認した。初回の約30分を合算した値ではない。[30原票の公開copyとSHA](evaluation/completed-2h-r2/PUBLICATION.json) / [独立監査](evaluation/completed-2h-r2/review/REPORT.md)。
+
+11回×400文字の更新後は保存5,936・描画1,536、文字551種・atlas16MiB。40画素検査と600地点のfinite集計、MTL error/timeout/deadline skip0を記録した。独立監査は13 PNGの復号結果・SHA・色和・非空画素数、11入力境界、終了・資源集計を照合した。個別ID tupleと600地点の生値は未保存なので、その部分はsource guardと集計の照合に限る。監査helperのUTC末尾Z parser不具合による初回10/11を保持し、別helperの回帰11/11と分けた。
+
+資源は1,438行のうちvalid1,437・終了境界missing1。観測できた7,197.237秒のCPU counter差から1コア換算0.4990%、sampled peak charged footprint127.095MiB・RSS78.219MiB。全7,200秒が欠測なく観測できたとはしない。shader/geometryの再現性を支える旧3形offscreen試験であり、実窓・13形/16形・8時間・16GB PC・GPU使用率・電力・人の快適性には広げない。実走行中は別のbuildや実窓検証も並行した。
