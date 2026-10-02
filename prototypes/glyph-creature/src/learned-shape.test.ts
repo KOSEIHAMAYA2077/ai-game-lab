@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import parity from '../../../experiments/word-shape/artifacts/parity.json';
 import { predictShape, interpretWithModel } from './learned-shape';
@@ -18,7 +18,7 @@ describe('学習した重みをブラウザへ渡す', () => {
     }
   });
   it('学習機能がオフなら既存動作を保ち、オンでは形だけを学習で選ぶ', () => {
-    expect(interpretWithModel('サイコロを黄色に', DEFAULT_SPEC, false).spec.shape).toBe('condense');
+    expect(interpretWithModel('サイコロを黄色に', DEFAULT_SPEC, false).spec.shape).toBe('cube');
     const result = interpretWithModel('サイコロを黄色に', DEFAULT_SPEC, true);
     expect(result).toMatchObject({ learned: true, spec: { shape: 'cube' }, ink: 'yellow' });
     expect(interpretWithModel('ドーナツ 8個', DEFAULT_SPEC, true).spec).toMatchObject({ shape: 'ring', count: 8 });
@@ -47,6 +47,7 @@ describe('学習した重みをブラウザへ渡す', () => {
         false_shape_on_none: negatives.filter((r: any) => r[key] !== 'none').length, negatives: negatives.length };
     };
     const report = { model_sha256: frozen.model_sha256, exact_overlap_excluded: frozen.overlap_count, model: summarize('model'), grammar: summarize('grammar'), combined: summarize('combined'), results };
-    writeFileSync(new URL('artifacts/browser-comparison.json', root), JSON.stringify(report, null, 2) + '\n');
+    mkdirSync(new URL('../konjo-v1/regression/', root), { recursive: true });
+    writeFileSync(new URL('../konjo-v1/regression/legacy-model-comparison.json', root), JSON.stringify(report, null, 2) + '\n');
   });
 });

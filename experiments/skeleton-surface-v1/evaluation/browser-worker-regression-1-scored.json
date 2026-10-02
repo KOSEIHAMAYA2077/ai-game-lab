@@ -1,0 +1,1556 @@
+{
+  "summary": {
+    "cases": 30,
+    "familyPass": 29,
+    "meaningPass": 29,
+    "wallP50Ms": 29.649999976158142,
+    "wallP95Ms": 51.80999998152256,
+    "modelP50Ms": 29.549999982118607,
+    "modelP95Ms": 51.65500000417232,
+    "preparationWallMs": 9809.400000035763,
+    "preparationIncludedFirstDownload": true,
+    "geometryMeasured": false
+  },
+  "rows": [
+    {
+      "id": "exact-vase",
+      "group": "exact",
+      "wallMs": 10.099999964237213,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 9,
+        "confidence": 0.99197,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99197
+          },
+          {
+            "family": "sword",
+            "score": 0.57748
+          },
+          {
+            "family": "mobius",
+            "score": 0.54004
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99197
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "exact-sword",
+      "group": "exact",
+      "wallMs": 6.400000035762787,
+      "output": {
+        "spec": {
+          "family": "sword",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 6.400000035762787,
+        "confidence": 0.99541,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.99541
+          },
+          {
+            "family": "vase",
+            "score": 0.53702
+          },
+          {
+            "family": "ring",
+            "score": 0.53227
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sword",
+            "score": 0.99541
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sword",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "exact-mobius",
+      "group": "exact",
+      "wallMs": 9.599999964237213,
+      "output": {
+        "spec": {
+          "family": "mobius",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 9.400000035762787,
+        "confidence": 0.99046,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.99046
+          },
+          {
+            "family": "ring",
+            "score": 0.82595
+          },
+          {
+            "family": "vase",
+            "score": 0.81417
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "mobius",
+            "score": 0.99046
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "mobius",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "exact-ring",
+      "group": "exact",
+      "wallMs": 7,
+      "output": {
+        "spec": {
+          "family": "ring",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 6.900000035762787,
+        "confidence": 0.98965,
+        "candidates": [
+          {
+            "family": "ring",
+            "score": 0.98965
+          },
+          {
+            "family": "sphere",
+            "score": 0.87161
+          },
+          {
+            "family": "mobius",
+            "score": 0.83629
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "ring",
+            "score": 0.98965
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "ring",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "exact-sphere",
+      "group": "exact",
+      "wallMs": 7.100000023841858,
+      "output": {
+        "spec": {
+          "family": "sphere",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 7,
+        "confidence": 0.99446,
+        "candidates": [
+          {
+            "family": "sphere",
+            "score": 0.99446
+          },
+          {
+            "family": "cube",
+            "score": 0.81996
+          },
+          {
+            "family": "ring",
+            "score": 0.64178
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sphere",
+            "score": 0.99446
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sphere",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "exact-cube",
+      "group": "exact",
+      "wallMs": 8.099999964237213,
+      "output": {
+        "spec": {
+          "family": "cube",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 8,
+        "confidence": 0.99659,
+        "candidates": [
+          {
+            "family": "cube",
+            "score": 0.99659
+          },
+          {
+            "family": "sphere",
+            "score": 0.8115
+          },
+          {
+            "family": "ring",
+            "score": 0.65786
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "cube",
+            "score": 0.99659
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "cube",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-vase-ja",
+      "group": "paraphrase",
+      "wallMs": 45.200000047683716,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 45.10000002384186,
+        "confidence": 0.75688,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.75688
+          },
+          {
+            "family": "mobius",
+            "score": 0.40323
+          },
+          {
+            "family": "ring",
+            "score": 0.38923
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.75688
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-vase-en",
+      "group": "paraphrase",
+      "wallMs": 16.5,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 16.400000035762787,
+        "confidence": 0.72714,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.72714
+          },
+          {
+            "family": "sphere",
+            "score": 0.39881
+          },
+          {
+            "family": "ring",
+            "score": 0.37046
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.72714
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-sword-ja",
+      "group": "paraphrase",
+      "wallMs": 51.89999997615814,
+      "output": {
+        "spec": {
+          "family": "sword",
+          "height": 1.65,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 51.69999998807907,
+        "confidence": 0.99055,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.99055
+          },
+          {
+            "family": "vase",
+            "score": 0.80796
+          },
+          {
+            "family": "mobius",
+            "score": 0.77556
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sword",
+            "score": 0.99055
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "height"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sword",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-sword-en",
+      "group": "paraphrase",
+      "wallMs": 51.69999998807907,
+      "output": {
+        "spec": {
+          "family": "sword",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 51.60000002384186,
+        "confidence": 0.98706,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.98706
+          },
+          {
+            "family": "mobius",
+            "score": 0.47143
+          },
+          {
+            "family": "ring",
+            "score": 0.45652
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sword",
+            "score": 0.98706
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sword",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-mobius",
+      "group": "paraphrase",
+      "wallMs": 22.30000001192093,
+      "output": {
+        "spec": null,
+        "source": "unchanged",
+        "modelMs": 22.19999998807907,
+        "reason": "ambiguous",
+        "confidence": 0.60339,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.60339
+          },
+          {
+            "family": "cube",
+            "score": 0.59079
+          },
+          {
+            "family": "vase",
+            "score": 0.48204
+          }
+        ],
+        "evidence": []
+      },
+      "contractPass": true,
+      "actualFamily": null,
+      "familyPass": false,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": false
+    },
+    {
+      "id": "paraphrase-ring",
+      "group": "paraphrase",
+      "wallMs": 53.80000001192093,
+      "output": {
+        "spec": {
+          "family": "ring",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 53.80000001192093,
+        "confidence": 0.98899,
+        "candidates": [
+          {
+            "family": "ring",
+            "score": 0.98899
+          },
+          {
+            "family": "mobius",
+            "score": 0.94221
+          },
+          {
+            "family": "sphere",
+            "score": 0.91065
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "ring",
+            "score": 0.98899
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "ring",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-sphere",
+      "group": "paraphrase",
+      "wallMs": 43.80000001192093,
+      "output": {
+        "spec": {
+          "family": "sphere",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 43.80000001192093,
+        "confidence": 0.99623,
+        "candidates": [
+          {
+            "family": "sphere",
+            "score": 0.99623
+          },
+          {
+            "family": "sword",
+            "score": 0.55317
+          },
+          {
+            "family": "mobius",
+            "score": 0.53888
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sphere",
+            "score": 0.99623
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sphere",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "paraphrase-cube",
+      "group": "paraphrase",
+      "wallMs": 18.5,
+      "output": {
+        "spec": {
+          "family": "cube",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 18.399999976158142,
+        "confidence": 0.74532,
+        "candidates": [
+          {
+            "family": "cube",
+            "score": 0.74532
+          },
+          {
+            "family": "sphere",
+            "score": 0.63644
+          },
+          {
+            "family": "mobius",
+            "score": 0.6353
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "embedding-family",
+            "family": "cube",
+            "score": 0.74532
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "cube",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-vase-tall",
+      "group": "attribute",
+      "wallMs": 39.799999952316284,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 1.65,
+          "width": 0.65,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 39.799999952316284,
+        "confidence": 0.99536,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99536
+          },
+          {
+            "family": "sword",
+            "score": 0.56349
+          },
+          {
+            "family": "mobius",
+            "score": 0.54154
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99536
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "height"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "width"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {
+        "height": {
+          "actual": 1.65,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        },
+        "width": {
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-vase-neck",
+      "group": "attribute",
+      "wallMs": 42.10000002384186,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 1,
+          "width": 0.65,
+          "neck": 0.2,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 41.89999997615814,
+        "confidence": 0.99517,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99517
+          },
+          {
+            "family": "sword",
+            "score": 0.56582
+          },
+          {
+            "family": "mobius",
+            "score": 0.54289
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99517
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "width"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "neck"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {
+        "neck": {
+          "actual": 0.2,
+          "expected": {
+            "max": 0.5
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-vase-wide",
+      "group": "attribute",
+      "wallMs": 51.30000001192093,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 0.65,
+          "width": 1.55,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 51.30000001192093,
+        "confidence": 0.99553,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99553
+          },
+          {
+            "family": "sword",
+            "score": 0.5757
+          },
+          {
+            "family": "mobius",
+            "score": 0.54898
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99553
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "height"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "width"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {
+        "height": {
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        },
+        "width": {
+          "actual": 1.55,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-sword-long",
+      "group": "attribute",
+      "wallMs": 31.19999998807907,
+      "output": {
+        "spec": {
+          "family": "sword",
+          "height": 1.65,
+          "width": 0.65,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 31.100000023841858,
+        "confidence": 0.99486,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.99486
+          },
+          {
+            "family": "vase",
+            "score": 0.55655
+          },
+          {
+            "family": "ring",
+            "score": 0.55247
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sword",
+            "score": 0.99486
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "height"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "width"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sword",
+      "familyPass": true,
+      "attributeChecks": {
+        "height": {
+          "actual": 1.65,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        },
+        "width": {
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-sword-bend",
+      "group": "attribute",
+      "wallMs": 38.5,
+      "output": {
+        "spec": {
+          "family": "sword",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0.65,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 38.39999997615814,
+        "confidence": 0.99513,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.99513
+          },
+          {
+            "family": "vase",
+            "score": 0.53531
+          },
+          {
+            "family": "ring",
+            "score": 0.53275
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sword",
+            "score": 0.99513
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "bend"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sword",
+      "familyPass": true,
+      "attributeChecks": {
+        "bend": {
+          "actual": 0.65,
+          "expected": {
+            "minAbs": 0.25
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-ring-twist",
+      "group": "attribute",
+      "wallMs": 42.89999997615814,
+      "output": {
+        "spec": {
+          "family": "mobius",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0.65
+        },
+        "source": "semantic-model",
+        "modelMs": 42.80000001192093,
+        "confidence": 0.99298,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.99298
+          },
+          {
+            "family": "ring",
+            "score": 0.80898
+          },
+          {
+            "family": "vase",
+            "score": 0.79495
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "mobius",
+            "score": 0.99298
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "twist"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "mobius",
+      "familyPass": true,
+      "attributeChecks": {
+        "twist": {
+          "actual": 0.65,
+          "expected": {
+            "minAbs": 0.4
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-cube-wide-en",
+      "group": "attribute",
+      "wallMs": 35.80000001192093,
+      "output": {
+        "spec": {
+          "family": "cube",
+          "height": 0.65,
+          "width": 1.55,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 35.700000047683716,
+        "confidence": 0.9946,
+        "candidates": [
+          {
+            "family": "cube",
+            "score": 0.9946
+          },
+          {
+            "family": "sphere",
+            "score": 0.69671
+          },
+          {
+            "family": "ring",
+            "score": 0.5344
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "cube",
+            "score": 0.9946
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "height"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "width"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "cube",
+      "familyPass": true,
+      "attributeChecks": {
+        "height": {
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        },
+        "width": {
+          "actual": 1.55,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "attr-sphere-tall-en",
+      "group": "attribute",
+      "wallMs": 41.90000003576279,
+      "output": {
+        "spec": {
+          "family": "sphere",
+          "height": 1.65,
+          "width": 0.65,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 41.69999998807907,
+        "confidence": 0.99172,
+        "candidates": [
+          {
+            "family": "sphere",
+            "score": 0.99172
+          },
+          {
+            "family": "cube",
+            "score": 0.67918
+          },
+          {
+            "family": "ring",
+            "score": 0.51981
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sphere",
+            "score": 0.99172
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "height"
+          },
+          {
+            "kind": "explicit-attribute-rule",
+            "attribute": "width"
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sphere",
+      "familyPass": true,
+      "attributeChecks": {
+        "height": {
+          "actual": 1.65,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        },
+        "width": {
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        }
+      },
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "negation-vase",
+      "group": "negation",
+      "wallMs": 31.899999976158142,
+      "output": {
+        "spec": {
+          "family": "vase",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 31.799999952316284,
+        "confidence": 0.99605,
+        "candidates": [
+          {
+            "family": "vase",
+            "score": 0.99605
+          },
+          {
+            "family": "sword",
+            "score": 0.55812
+          },
+          {
+            "family": "mobius",
+            "score": 0.54434
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "vase",
+            "score": 0.99605
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "vase",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "negation-sword",
+      "group": "negation",
+      "wallMs": 28.399999976158142,
+      "output": {
+        "spec": {
+          "family": "sword",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 28.30000001192093,
+        "confidence": 0.99456,
+        "candidates": [
+          {
+            "family": "sword",
+            "score": 0.99456
+          },
+          {
+            "family": "vase",
+            "score": 0.53268
+          },
+          {
+            "family": "ring",
+            "score": 0.51937
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sword",
+            "score": 0.99456
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sword",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "negation-sphere",
+      "group": "negation",
+      "wallMs": 20.900000035762787,
+      "output": {
+        "spec": {
+          "family": "sphere",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 20.80000001192093,
+        "confidence": 0.99438,
+        "candidates": [
+          {
+            "family": "sphere",
+            "score": 0.99438
+          },
+          {
+            "family": "cube",
+            "score": 0.81512
+          },
+          {
+            "family": "ring",
+            "score": 0.6316
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "sphere",
+            "score": 0.99438
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "sphere",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "negation-cube",
+      "group": "negation",
+      "wallMs": 30.599999964237213,
+      "output": {
+        "spec": {
+          "family": "cube",
+          "height": 1,
+          "width": 1,
+          "neck": 0.45,
+          "bend": 0,
+          "twist": 0
+        },
+        "source": "semantic-model",
+        "modelMs": 30.5,
+        "confidence": 0.99359,
+        "candidates": [
+          {
+            "family": "cube",
+            "score": 0.99359
+          },
+          {
+            "family": "sphere",
+            "score": 0.68294
+          },
+          {
+            "family": "ring",
+            "score": 0.50237
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "noun-focus-rule"
+          },
+          {
+            "kind": "embedding-family",
+            "family": "cube",
+            "score": 0.99359
+          }
+        ],
+        "reason": "selected"
+      },
+      "contractPass": true,
+      "actualFamily": "cube",
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "keep-ja",
+      "group": "ordinary",
+      "wallMs": 16.100000023841858,
+      "output": {
+        "spec": null,
+        "source": "unchanged",
+        "modelMs": 16.100000023841858,
+        "reason": "ambiguous",
+        "confidence": 0.32231,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.32231
+          },
+          {
+            "family": "vase",
+            "score": 0.29013
+          },
+          {
+            "family": "sword",
+            "score": 0.27421
+          }
+        ],
+        "evidence": []
+      },
+      "contractPass": true,
+      "actualFamily": null,
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "keep-en",
+      "group": "ordinary",
+      "wallMs": 21.30000001192093,
+      "output": {
+        "spec": null,
+        "source": "unchanged",
+        "modelMs": 21.19999998807907,
+        "reason": "ambiguous",
+        "confidence": 0.29936,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.29936
+          },
+          {
+            "family": "sword",
+            "score": 0.29658
+          },
+          {
+            "family": "vase",
+            "score": 0.28266
+          }
+        ],
+        "evidence": []
+      },
+      "contractPass": true,
+      "actualFamily": null,
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "unsupported-violin",
+      "group": "unsupported",
+      "wallMs": 16.5,
+      "output": {
+        "spec": null,
+        "source": "unchanged",
+        "modelMs": 16.399999976158142,
+        "reason": "ambiguous",
+        "confidence": 0.36245,
+        "candidates": [
+          {
+            "family": "mobius",
+            "score": 0.36245
+          },
+          {
+            "family": "sword",
+            "score": 0.32192
+          },
+          {
+            "family": "vase",
+            "score": 0.30486
+          }
+        ],
+        "evidence": []
+      },
+      "contractPass": true,
+      "actualFamily": null,
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    },
+    {
+      "id": "unsupported-phone",
+      "group": "unsupported",
+      "wallMs": 28.69999998807907,
+      "output": {
+        "spec": null,
+        "source": "unchanged",
+        "modelMs": 28.599999964237213,
+        "reason": "ambiguous",
+        "confidence": 0.38759,
+        "candidates": [
+          {
+            "family": "ring",
+            "score": 0.38759
+          },
+          {
+            "family": "sword",
+            "score": 0.36961
+          },
+          {
+            "family": "cube",
+            "score": 0.35687
+          }
+        ],
+        "evidence": []
+      },
+      "contractPass": true,
+      "actualFamily": null,
+      "familyPass": true,
+      "attributeChecks": {},
+      "attributePass": true,
+      "meaningPass": true
+    }
+  ]
+}

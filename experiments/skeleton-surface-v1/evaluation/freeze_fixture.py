@@ -1,0 +1,48 @@
+"""Create the independent, synthetic fixture exactly once; no private input."""
+import hashlib
+import json
+from pathlib import Path
+
+CASES = [
+    {"id": "exact-vase", "group": "exact", "text": "花瓶", "expectedFamily": "vase"},
+    {"id": "exact-sword", "group": "exact", "text": "剣", "expectedFamily": "sword"},
+    {"id": "exact-mobius", "group": "exact", "text": "メビウスの輪", "expectedFamily": "mobius"},
+    {"id": "exact-ring", "group": "exact", "text": "円環", "expectedFamily": "ring"},
+    {"id": "exact-sphere", "group": "exact", "text": "球体", "expectedFamily": "sphere"},
+    {"id": "exact-cube", "group": "exact", "text": "立方体", "expectedFamily": "cube"},
+    {"id": "paraphrase-vase-ja", "group": "paraphrase", "text": "庭で摘んだ花を挿して飾るための、口が開いた器を思い浮かべる。", "expectedFamily": "vase"},
+    {"id": "paraphrase-vase-en", "group": "paraphrase", "text": "A vessel made for displaying a bouquet of fresh flowers.", "expectedFamily": "vase"},
+    {"id": "paraphrase-sword-ja", "group": "paraphrase", "text": "手で握る柄と長い刃を持った武器が、静かに浮いている。", "expectedFamily": "sword"},
+    {"id": "paraphrase-sword-en", "group": "paraphrase", "text": "A knight's weapon with a hilt, a guard and a single blade.", "expectedFamily": "sword"},
+    {"id": "paraphrase-mobius", "group": "paraphrase", "text": "紙の帯を半回転させて両端を貼り合わせた、一続きの面。", "expectedFamily": "mobius"},
+    {"id": "paraphrase-ring", "group": "paraphrase", "text": "ドーナツのように真ん中に穴の開いた、丸い輪を作る。", "expectedFamily": "ring"},
+    {"id": "paraphrase-sphere", "group": "paraphrase", "text": "どの方向から見ても同じ丸さになる、ボールのような立体。", "expectedFamily": "sphere"},
+    {"id": "paraphrase-cube", "group": "paraphrase", "text": "六つの同じ正方形の面を持つ、サイコロみたいな塊。", "expectedFamily": "cube"},
+    {"id": "attr-vase-tall", "group": "attribute", "text": "背が高く、横幅の細い花瓶にして。", "expectedFamily": "vase", "attributes": {"height": {"min": 1.2}, "width": {"max": 0.85}}},
+    {"id": "attr-vase-neck", "group": "attribute", "text": "口元の首が細くすぼまった花瓶。", "expectedFamily": "vase", "attributes": {"neck": {"max": 0.5}}},
+    {"id": "attr-vase-wide", "group": "attribute", "text": "背が低くて横にふっくら広がる花瓶。", "expectedFamily": "vase", "attributes": {"height": {"max": 0.85}, "width": {"min": 1.2}}},
+    {"id": "attr-sword-long", "group": "attribute", "text": "長く細身の剣が欲しい。", "expectedFamily": "sword", "attributes": {"height": {"min": 1.2}, "width": {"max": 0.85}}},
+    {"id": "attr-sword-bend", "group": "attribute", "text": "刃がゆるやかに曲がった剣。", "expectedFamily": "sword", "attributes": {"bend": {"minAbs": 0.25}}},
+    {"id": "attr-ring-twist", "group": "attribute", "text": "強くねじったメビウスの輪を見たい。", "expectedFamily": "mobius", "attributes": {"twist": {"minAbs": 0.4}}},
+    {"id": "attr-cube-wide-en", "group": "attribute", "text": "A wide and short cube-shaped solid.", "expectedFamily": "cube", "attributes": {"height": {"max": 0.85}, "width": {"min": 1.2}}},
+    {"id": "attr-sphere-tall-en", "group": "attribute", "text": "Make a tall, narrow sphere stretched vertically.", "expectedFamily": "sphere", "attributes": {"height": {"min": 1.2}, "width": {"max": 0.85}}},
+    {"id": "negation-vase", "group": "negation", "text": "剣ではなく、花瓶を思い描いている。", "expectedFamily": "vase"},
+    {"id": "negation-sword", "group": "negation", "text": "花瓶じゃない。剣の方に変えてほしい。", "expectedFamily": "sword"},
+    {"id": "negation-sphere", "group": "negation", "text": "立方体ではなく球体にして。", "expectedFamily": "sphere"},
+    {"id": "negation-cube", "group": "negation", "text": "Not a sphere. I want a cube instead.", "expectedFamily": "cube"},
+    {"id": "keep-ja", "group": "ordinary", "text": "今日はゆっくり休もう。明日の予定はあとで考える。", "expectedFamily": None},
+    {"id": "keep-en", "group": "ordinary", "text": "I have finished writing for today and will return tomorrow.", "expectedFamily": None},
+    {"id": "unsupported-violin", "group": "unsupported", "text": "弦を四本持つヴァイオリンを作って。", "expectedFamily": None},
+    {"id": "unsupported-phone", "group": "unsupported", "text": "A telephone handset with a curly cord, please.", "expectedFamily": None},
+]
+
+if __name__ == "__main__":
+    directory = Path(__file__).parent
+    content = json.dumps({"version": 1, "createdAt": "2026-10-02T08:26:00Z", "purpose": "Fresh synthetic Japanese/English evaluation; not for tuning.", "cases": CASES}, ensure_ascii=False, indent=2) + "\n"
+    target = directory / "fixture.json"
+    if target.exists():
+        raise SystemExit("Fixture already frozen; do not overwrite it.")
+    target.write_text(content, encoding="utf-8")
+    digest = hashlib.sha256(content.encode()).hexdigest()
+    (directory / "fixture.sha256").write_text(f"{digest}  fixture.json\n", encoding="utf-8")
+    print(f"Frozen {len(CASES)} independent artificial cases: {digest}")

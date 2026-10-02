@@ -1,0 +1,93 @@
+{
+  "fixtureSha256": "b80e07f6300ac7fcfde0a8349dfa3fa64b21df56266d2d9435a7b5feed6a46d3",
+  "controllerRevision": "830aa38afbf97c186fa5a937f7e4a4fa79062e456b2474944f6e39e962457cc4",
+  "summary": {
+    "cases": 1,
+    "completed": 0,
+    "familyPass": 0,
+    "meaningPass": 0,
+    "finitePass": 0,
+    "textRetainedPass": 0,
+    "completedUnder10s": 0,
+    "correctUnder10s": 0,
+    "completedUnder30s": 0,
+    "correctUnder30s": 0,
+    "fullP50Ms": null,
+    "fullP95Ms": null,
+    "timingIncludes": "Input submitted, interpretation HTTP, scaffold/surface construction, glyph placement, first new render and absorption completion. Already-started inference server; model process preparation excluded and reported separately.",
+    "machineCaveat": "Apple M5 32GB host; not evidence of 16GB laptop CPU/iGPU performance.",
+    "methodology": "Fixed 1440x1000 development browser context, fresh page for each case, one active page, same frozen fixtures after controller fixes: regression, not new held-out accuracy."
+  },
+  "results": [
+    {
+      "id": "exact-vase",
+      "group": "exact",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#start-prompt')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"start-prompt\" aria-label=\"press enter\">press enter</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    54 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"start-prompt\" aria-label=\"press enter\">press enter</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+      "errors": [],
+      "meaningPass": false,
+      "failureState": {
+        "hook": {
+          "count": 1,
+          "kinds": 1,
+          "form": "condense",
+          "time": 1.1203,
+          "scale": 1,
+          "targetCamera": 3.8,
+          "redCount": 0,
+          "characters": [
+            "@"
+          ],
+          "batches": [],
+          "seed": 1,
+          "limit": 32000,
+          "spec": {
+            "shape": "condense",
+            "mode": "surface",
+            "count": 1,
+            "arrangement": "single",
+            "deformation": "gentle",
+            "motion": "calm"
+          },
+          "inks": [
+            "white"
+          ],
+          "scene": {
+            "camera": 3.8,
+            "renderedScale": 1,
+            "formation": 0,
+            "glyphSize": 0.3113468399260505,
+            "drawn": 1,
+            "points": [
+              0.0178823284804821,
+              0.020301850512623787,
+              0.01080277282744646
+            ],
+            "finite": true,
+            "drawCalls": 1,
+            "triangles": 2,
+            "renderer": "instanced-planes",
+            "testYaw": null,
+            "viewRotation": [
+              0.12383026880725383,
+              -0.216391,
+              0
+            ],
+            "manualRotation": [
+              0.12,
+              -0.25
+            ],
+            "rig": null,
+            "skeleton": null
+          },
+          "busy": false,
+          "provider": "model",
+          "timings": [],
+          "terminalOpen": false
+        },
+        "status": "",
+        "fatal": ""
+      },
+      "testWallMs": 30966.322
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import './strokes.css'
+import { dampAngle } from './stroke-transition'
 
 type Mode = 'write' | 'scatter' | 'flow' | 'gather'
 type Point = { x: number; y: number; z: number }
@@ -19,6 +20,7 @@ let strokes: Stroke[] = []
 let mode: Mode = 'write'
 let elapsed = 0
 let modeStarted = 0
+let writingStarted = 0
 let paused = false
 let loadVersion = 0
 let characterCount = 2
@@ -27,6 +29,7 @@ let width = 0
 let height = 0
 let lastTime = performance.now()
 let composition = false
+const view = { scale: 0, centerY: 0 }
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
 const descriptions: Record<Mode, string> = {
   write: '一画ずつ、書いています。', scatter: '線を一本ずつ、ほどいています。',
@@ -63,6 +66,7 @@ async function readStrokes(character: string): Promise<Point[][]> {
 function setMode(next: Mode) {
   mode = next
   modeStarted = elapsed
+  if (next === 'write') writingStarted = elapsed
   if (next === 'scatter') {
     for (const stroke of strokes) {
       stroke.seed = random(0, Math.PI * 2)
@@ -156,27 +160,29 @@ function resize() {
   context.setTransform(dpr, 0, 0, dpr, 0, 0)
 }
 
-function frame(now: number) {
-  const dt = Math.min(.05, (now - lastTime) / 1000)
-  lastTime = now
-  if (!paused && !document.hidden) elapsed += dt
+function render(dt: number) {
   context.fillStyle = '#000'
   context.fillRect(0, 0, width, height)
   const sceneBottom = terminal.getBoundingClientRect().top - 24
-  const centerY = 45 + Math.max(90, (sceneBottom - 45) * .5)
+  const targetCenterY = 45 + Math.max(90, (sceneBottom - 45) * .5)
   const writingScale = Math.min(2.5, (width - 50) / Math.max(145, characterCount * 138), (sceneBottom - 60) / 150)
   const movingScale = Math.min(1.75, (width - 50) / 580, (sceneBottom - 65) / 370)
-  const scale = Math.max(.1, mode === 'write' || mode === 'gather' ? writingScale : movingScale)
+  const targetScale = Math.max(.1, mode === 'write' || mode === 'gather' ? writingScale : movingScale)
   const ease = paused ? 0 : 1 - Math.exp(-dt * 3.3)
-  const writeTime = reducedMotion ? 1000 : (elapsed - modeStarted) * Math.max(3, strokes.length / 3.5)
+  if (!view.scale) { view.scale = targetScale; view.centerY = targetCenterY }
+  view.scale += (targetScale - view.scale) * ease
+  view.centerY += (targetCenterY - view.centerY) * ease
+  const { scale, centerY } = view
+  // A mode change does not create unseen strokes; the initial writing keeps unfolding.
+  const writeTime = reducedMotion ? 1000 : (elapsed - writingStarted) * Math.max(3, strokes.length / 3.5)
   const sorted = [...strokes].sort((a, b) => b.position.z - a.position.z)
   for (const stroke of sorted) {
     const target = targetFor(stroke)
     for (const axis of ['x', 'y', 'z'] as const) {
       stroke.position[axis] += (target.position[axis] - stroke.position[axis]) * ease
-      stroke.rotation[axis] += (target.rotation[axis] - stroke.rotation[axis]) * ease
+      stroke.rotation[axis] = dampAngle(stroke.rotation[axis], target.rotation[axis], ease)
     }
-    const reveal = mode === 'write' ? Math.max(0, Math.min(1, writeTime - stroke.index)) : 1
+    const reveal = Math.max(0, Math.min(1, writeTime - stroke.index))
     if (reveal <= 0) continue
     const steps = Math.max(2, Math.ceil(stroke.points.length * reveal))
     context.beginPath()
@@ -196,6 +202,14 @@ function frame(now: number) {
     context.strokeStyle = reveal < 1 ? '#ff956e' : `rgba(245,242,232,${Math.max(.33, Math.min(1, cameraScale * .8))})`
     context.stroke()
   }
+}
+
+function frame(now: number) {
+  const dt = Math.min(.05, Math.max(0, (now - lastTime) / 1000))
+  lastTime = now
+  const activeDt = !paused && !document.hidden ? dt : 0
+  elapsed += activeDt
+  render(activeDt)
   requestAnimationFrame(frame)
 }
 
@@ -234,3 +248,15 @@ window.addEventListener('resize', resize)
 resize()
 void write(input.value)
 requestAnimationFrame(frame)
+
+if (import.meta.env.DEV) {
+  ;(window as any).__GLYPH_STROKES__ = {
+    inspect: () => {
+      const writeTime = reducedMotion ? 1000 : (elapsed - writingStarted) * Math.max(3, strokes.length / 3.5)
+      return { text: currentText, mode, time: elapsed, paused, view: { ...view },
+        strokes: strokes.map(stroke => ({ index: stroke.index, char: stroke.char, points: stroke.points.length,
+          position: { ...stroke.position }, home: { ...stroke.home }, rotation: { ...stroke.rotation },
+          reveal: Math.max(0, Math.min(1, writeTime - stroke.index)) })) }
+    },
+  }
+}

@@ -1,0 +1,1090 @@
+{
+  "fixtureSha256": "b80e07f6300ac7fcfde0a8349dfa3fa64b21df56266d2d9435a7b5feed6a46d3",
+  "controllerRevision": "830aa38afbf97c186fa5a937f7e4a4fa79062e456b2474944f6e39e962457cc4",
+  "summary": {
+    "cases": 30,
+    "completed": 30,
+    "familyPass": 29,
+    "meaningPass": 29,
+    "finitePass": 30,
+    "textRetainedPass": 30,
+    "completedUnder10s": 30,
+    "correctUnder10s": 29,
+    "completedUnder30s": 30,
+    "correctUnder30s": 29,
+    "fullP50Ms": 3983.1500000059605,
+    "fullP95Ms": 3988.1250000119207,
+    "timingIncludes": "Input submitted, interpretation HTTP, scaffold/surface construction, glyph placement, first new render and absorption completion. Already-started inference server; model process preparation excluded and reported separately.",
+    "machineCaveat": "Apple M5 32GB host; not evidence of 16GB laptop CPU/iGPU performance.",
+    "methodology": "Fixed 1440x1000 development browser context, fresh page for each case, one active page, same frozen fixtures after controller fixes: regression, not new held-out accuracy."
+  },
+  "results": [
+    {
+      "id": "exact-vase",
+      "group": "exact",
+      "spec": {
+        "family": "vase",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3976.600000023842,
+        "firstFrameMs": 13.599999964237213,
+        "interpretationMs": 9.199999988079071,
+        "constructionMs": 4.399999976158142,
+        "modelMs": 4.663,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 513,
+        "frameP95Ms": 3.799999952316284
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 513,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4791.582
+    },
+    {
+      "id": "exact-sword",
+      "group": "exact",
+      "spec": {
+        "family": "sword",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3971.600000023842,
+        "firstFrameMs": 9.300000011920929,
+        "interpretationMs": 5.900000035762787,
+        "constructionMs": 3.399999976158142,
+        "modelMs": 2.873,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 257,
+        "frameP95Ms": 0.6000000238418579
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 257,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4738.82
+    },
+    {
+      "id": "exact-mobius",
+      "group": "exact",
+      "spec": {
+        "family": "mobius",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3980.600000023842,
+        "firstFrameMs": 20.19999998807907,
+        "interpretationMs": 14.399999976158142,
+        "constructionMs": 5.800000011920929,
+        "modelMs": 2.496,
+        "source": "semantic-model",
+        "family": "mobius",
+        "within30s": true,
+        "glyphs": 1537,
+        "frameP95Ms": 2
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 1537,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4750.523
+    },
+    {
+      "id": "exact-ring",
+      "group": "exact",
+      "spec": {
+        "family": "ring",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3971.099999964237,
+        "firstFrameMs": 9.199999988079071,
+        "interpretationMs": 5.699999988079071,
+        "constructionMs": 3.5,
+        "modelMs": 2.906,
+        "source": "semantic-model",
+        "family": "ring",
+        "within30s": true,
+        "glyphs": 513,
+        "frameP95Ms": 0.8999999761581421
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 513,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4748.82
+    },
+    {
+      "id": "exact-sphere",
+      "group": "exact",
+      "spec": {
+        "family": "sphere",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3982,
+        "firstFrameMs": 18.80000001192093,
+        "interpretationMs": 15.300000011920929,
+        "constructionMs": 3.5,
+        "modelMs": 2.733,
+        "source": "semantic-model",
+        "family": "sphere",
+        "within30s": true,
+        "glyphs": 513,
+        "frameP95Ms": 0.8999999761581421
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 513,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4740.554
+    },
+    {
+      "id": "exact-cube",
+      "group": "exact",
+      "spec": {
+        "family": "cube",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3979.399999976158,
+        "firstFrameMs": 18.69999998807907,
+        "interpretationMs": 14,
+        "constructionMs": 4.699999988079071,
+        "modelMs": 3.811,
+        "source": "semantic-model",
+        "family": "cube",
+        "within30s": true,
+        "glyphs": 769,
+        "frameP95Ms": 1.199999988079071
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 769,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4741.351
+    },
+    {
+      "id": "paraphrase-vase-ja",
+      "group": "paraphrase",
+      "spec": {
+        "family": "vase",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3986.199999988079,
+        "firstFrameMs": 29,
+        "interpretationMs": 14.5,
+        "constructionMs": 14.5,
+        "modelMs": 8.526,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 7681,
+        "frameP95Ms": 6.800000011920929
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 7681,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4702.398
+    },
+    {
+      "id": "paraphrase-vase-en",
+      "group": "paraphrase",
+      "spec": {
+        "family": "vase",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3990.399999976158,
+        "firstFrameMs": 31.80000001192093,
+        "interpretationMs": 17.80000001192093,
+        "constructionMs": 14,
+        "modelMs": 3.912,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 8179,
+        "frameP95Ms": 7.099999964237213
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 8179,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4700.088
+    },
+    {
+      "id": "paraphrase-sword-ja",
+      "group": "paraphrase",
+      "spec": {
+        "family": "sword",
+        "height": 1.65,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3979.899999976158,
+        "firstFrameMs": 23.399999976158142,
+        "interpretationMs": 11.899999976158142,
+        "constructionMs": 11.5,
+        "modelMs": 8.805,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 6657,
+        "frameP95Ms": 5.200000047683716
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 6657,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4698.121
+    },
+    {
+      "id": "paraphrase-sword-en",
+      "group": "paraphrase",
+      "spec": {
+        "family": "sword",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3985,
+        "firstFrameMs": 27.099999964237213,
+        "interpretationMs": 14.699999988079071,
+        "constructionMs": 12.399999976158142,
+        "modelMs": 7.977,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 8179,
+        "frameP95Ms": 6.200000047683716
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 8179,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4695.649
+    },
+    {
+      "id": "paraphrase-mobius",
+      "group": "paraphrase",
+      "spec": null,
+      "timing": {
+        "totalMs": 3984.399999976158,
+        "firstFrameMs": 28.399999976158142,
+        "interpretationMs": 14.699999988079071,
+        "constructionMs": 13.699999988079071,
+        "modelMs": 3.862,
+        "source": "unchanged",
+        "family": null,
+        "within30s": true,
+        "glyphs": 6657,
+        "frameP95Ms": 4.699999988079071
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 6657,
+      "errors": [],
+      "familyPass": false,
+      "conditions": [],
+      "meaningPass": false,
+      "testWallMs": 4690.411
+    },
+    {
+      "id": "paraphrase-ring",
+      "group": "paraphrase",
+      "spec": {
+        "family": "ring",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3984.7999999523163,
+        "firstFrameMs": 24.599999964237213,
+        "interpretationMs": 13.699999988079071,
+        "constructionMs": 10.899999976158142,
+        "modelMs": 8.078,
+        "source": "semantic-model",
+        "family": "ring",
+        "within30s": true,
+        "glyphs": 6401,
+        "frameP95Ms": 5.5
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 6401,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4694.788
+    },
+    {
+      "id": "paraphrase-sphere",
+      "group": "paraphrase",
+      "spec": {
+        "family": "sphere",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3988.800000011921,
+        "firstFrameMs": 32.30000001192093,
+        "interpretationMs": 19.700000047683716,
+        "constructionMs": 12.599999964237213,
+        "modelMs": 8.587,
+        "source": "semantic-model",
+        "family": "sphere",
+        "within30s": true,
+        "glyphs": 6913,
+        "frameP95Ms": 4.599999964237213
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 6913,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4693.321
+    },
+    {
+      "id": "paraphrase-cube",
+      "group": "paraphrase",
+      "spec": {
+        "family": "cube",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3980.300000011921,
+        "firstFrameMs": 23.19999998807907,
+        "interpretationMs": 10.5,
+        "constructionMs": 12.699999988079071,
+        "modelMs": 3.508,
+        "source": "semantic-model",
+        "family": "cube",
+        "within30s": true,
+        "glyphs": 6145,
+        "frameP95Ms": 4.5
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 6145,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4693.701
+    },
+    {
+      "id": "attr-vase-tall",
+      "group": "attribute",
+      "spec": {
+        "family": "vase",
+        "height": 1.65,
+        "width": 0.65,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3983.199999988079,
+        "firstFrameMs": 24.600000023841858,
+        "interpretationMs": 14.5,
+        "constructionMs": 10.100000023841858,
+        "modelMs": 10.175,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 4097,
+        "frameP95Ms": 4.400000035762787
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 4097,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "height",
+          "actual": 1.65,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        },
+        {
+          "attribute": "width",
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4752.34
+    },
+    {
+      "id": "attr-vase-neck",
+      "group": "attribute",
+      "spec": {
+        "family": "vase",
+        "height": 1,
+        "width": 0.65,
+        "neck": 0.2,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3987.2999999523163,
+        "firstFrameMs": 26.5,
+        "interpretationMs": 17.899999976158142,
+        "constructionMs": 8.600000023841858,
+        "modelMs": 6.823,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 3841,
+        "frameP95Ms": 4.300000011920929
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 3841,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "neck",
+          "actual": 0.2,
+          "expected": {
+            "max": 0.5
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4744.076
+    },
+    {
+      "id": "attr-vase-wide",
+      "group": "attribute",
+      "spec": {
+        "family": "vase",
+        "height": 0.65,
+        "width": 1.55,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3981.199999988079,
+        "firstFrameMs": 22.399999976158142,
+        "interpretationMs": 12.399999976158142,
+        "constructionMs": 10,
+        "modelMs": 9.283,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 4353,
+        "frameP95Ms": 4.5
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 4353,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "height",
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        },
+        {
+          "attribute": "width",
+          "actual": 1.55,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4698.96
+    },
+    {
+      "id": "attr-sword-long",
+      "group": "attribute",
+      "spec": {
+        "family": "sword",
+        "height": 1.65,
+        "width": 0.65,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3971.699999988079,
+        "firstFrameMs": 17.599999964237213,
+        "interpretationMs": 10,
+        "constructionMs": 7.599999964237213,
+        "modelMs": 6.232,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 2817,
+        "frameP95Ms": 3
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 2817,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "height",
+          "actual": 1.65,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        },
+        {
+          "attribute": "width",
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4727.813
+    },
+    {
+      "id": "attr-sword-bend",
+      "group": "attribute",
+      "spec": {
+        "family": "sword",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0.65,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3982.699999988079,
+        "firstFrameMs": 22.399999976158142,
+        "interpretationMs": 14.300000011920929,
+        "constructionMs": 8.099999964237213,
+        "modelMs": 6.046,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 3329,
+        "frameP95Ms": 3.100000023841858
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 3329,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "bend",
+          "actual": 0.65,
+          "expected": {
+            "minAbs": 0.25
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4739.047
+    },
+    {
+      "id": "attr-ring-twist",
+      "group": "attribute",
+      "spec": {
+        "family": "mobius",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0.65
+      },
+      "timing": {
+        "totalMs": 3983,
+        "firstFrameMs": 22.599999964237213,
+        "interpretationMs": 13.399999976158142,
+        "constructionMs": 9.199999988079071,
+        "modelMs": 7.986,
+        "source": "semantic-model",
+        "family": "mobius",
+        "within30s": true,
+        "glyphs": 4353,
+        "frameP95Ms": 4.600000023841858
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 4353,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "twist",
+          "actual": 0.65,
+          "expected": {
+            "minAbs": 0.4
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4739.876
+    },
+    {
+      "id": "attr-cube-wide-en",
+      "group": "attribute",
+      "spec": {
+        "family": "cube",
+        "height": 0.65,
+        "width": 1.55,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3987.300000011921,
+        "firstFrameMs": 32.5,
+        "interpretationMs": 17.399999976158142,
+        "constructionMs": 15.100000023841858,
+        "modelMs": 7.334,
+        "source": "semantic-model",
+        "family": "cube",
+        "within30s": true,
+        "glyphs": 7681,
+        "frameP95Ms": 5.400000035762787
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 7681,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "height",
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        },
+        {
+          "attribute": "width",
+          "actual": 1.55,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4692.302
+    },
+    {
+      "id": "attr-sphere-tall-en",
+      "group": "attribute",
+      "spec": {
+        "family": "sphere",
+        "height": 1.65,
+        "width": 0.65,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3985.800000011921,
+        "firstFrameMs": 28.5,
+        "interpretationMs": 15.600000023841858,
+        "constructionMs": 12.899999976158142,
+        "modelMs": 7.032,
+        "source": "semantic-model",
+        "family": "sphere",
+        "within30s": true,
+        "glyphs": 8191,
+        "frameP95Ms": 4.900000035762787
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 8191,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [
+        {
+          "attribute": "height",
+          "actual": 1.65,
+          "expected": {
+            "min": 1.2
+          },
+          "pass": true
+        },
+        {
+          "attribute": "width",
+          "actual": 0.65,
+          "expected": {
+            "max": 0.85
+          },
+          "pass": true
+        }
+      ],
+      "meaningPass": true,
+      "testWallMs": 4703.262
+    },
+    {
+      "id": "negation-vase",
+      "group": "negation",
+      "spec": {
+        "family": "vase",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3984.5,
+        "firstFrameMs": 24.600000023841858,
+        "interpretationMs": 14.800000011920929,
+        "constructionMs": 9.800000011920929,
+        "modelMs": 7.259,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 4353,
+        "frameP95Ms": 4.400000035762787
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 4353,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4694.878
+    },
+    {
+      "id": "negation-sword",
+      "group": "negation",
+      "spec": {
+        "family": "sword",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3981.199999988079,
+        "firstFrameMs": 22.400000035762787,
+        "interpretationMs": 12.900000035762787,
+        "constructionMs": 9.5,
+        "modelMs": 5.917,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 4609,
+        "frameP95Ms": 4.100000023841858
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 4609,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4694.74
+    },
+    {
+      "id": "negation-sphere",
+      "group": "negation",
+      "spec": {
+        "family": "sphere",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3982.600000023842,
+        "firstFrameMs": 22.400000035762787,
+        "interpretationMs": 14.400000035762787,
+        "constructionMs": 8,
+        "modelMs": 4.772,
+        "source": "semantic-model",
+        "family": "sphere",
+        "within30s": true,
+        "glyphs": 3329,
+        "frameP95Ms": 2.700000047683716
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 3329,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4689.397
+    },
+    {
+      "id": "negation-cube",
+      "group": "negation",
+      "spec": {
+        "family": "cube",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "timing": {
+        "totalMs": 3984.600000023842,
+        "firstFrameMs": 28.600000023841858,
+        "interpretationMs": 14.600000023841858,
+        "constructionMs": 14,
+        "modelMs": 6.141,
+        "source": "semantic-model",
+        "family": "cube",
+        "within30s": true,
+        "glyphs": 7425,
+        "frameP95Ms": 5.100000023841858
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 7425,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4692.397
+    },
+    {
+      "id": "keep-ja",
+      "group": "ordinary",
+      "spec": null,
+      "timing": {
+        "totalMs": 3984.300000011921,
+        "firstFrameMs": 27.5,
+        "interpretationMs": 15,
+        "constructionMs": 12.5,
+        "modelMs": 3.157,
+        "source": "unchanged",
+        "family": null,
+        "within30s": true,
+        "glyphs": 6145,
+        "frameP95Ms": 4.5
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 6145,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4691.956
+    },
+    {
+      "id": "keep-en",
+      "group": "ordinary",
+      "spec": null,
+      "timing": {
+        "totalMs": 3987.300000011921,
+        "firstFrameMs": 31.80000001192093,
+        "interpretationMs": 16.899999976158142,
+        "constructionMs": 14.900000035762787,
+        "modelMs": 2.71,
+        "source": "unchanged",
+        "family": null,
+        "within30s": true,
+        "glyphs": 8151,
+        "frameP95Ms": 5.5
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 8151,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4689.451
+    },
+    {
+      "id": "unsupported-violin",
+      "group": "unsupported",
+      "spec": null,
+      "timing": {
+        "totalMs": 3983.100000023842,
+        "firstFrameMs": 24.900000035762787,
+        "interpretationMs": 14.300000011920929,
+        "constructionMs": 10.600000023841858,
+        "modelMs": 3.493,
+        "source": "unchanged",
+        "family": null,
+        "within30s": true,
+        "glyphs": 4353,
+        "frameP95Ms": 3.399999976158142
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 4353,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4695.336
+    },
+    {
+      "id": "unsupported-phone",
+      "group": "unsupported",
+      "spec": null,
+      "timing": {
+        "totalMs": 3984.900000035763,
+        "firstFrameMs": 29.900000035762787,
+        "interpretationMs": 14.400000035762787,
+        "constructionMs": 15.5,
+        "modelMs": 5.184,
+        "source": "unchanged",
+        "family": null,
+        "within30s": true,
+        "glyphs": 8191,
+        "frameP95Ms": 5.300000011920929
+      },
+      "textRetained": true,
+      "finite": true,
+      "drawCalls": 1,
+      "glyphs": 8191,
+      "errors": [],
+      "familyPass": true,
+      "conditions": [],
+      "meaningPass": true,
+      "testWallMs": 4692.961
+    }
+  ]
+}

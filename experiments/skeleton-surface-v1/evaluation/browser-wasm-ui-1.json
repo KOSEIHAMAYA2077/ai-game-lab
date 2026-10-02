@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "cases": 4,
+    "familyPass": 4,
+    "retainedHistoryPass": 4,
+    "allUnder10s": true,
+    "allUnder30s": true,
+    "inferenceExternalRequests": 0,
+    "caveat": "Actual UI browser WASM on Apple M5 32GB. Download/preparation measured separately; totalMs includes interpretation, geometry/glyph generation and absorption completion. 4x CDP throttling is only artificial stress and is not a 16GB laptop test. Same already-seen fixture after fixes: regression/acceptance, not new held-out accuracy."
+  },
+  "cold": {
+    "wallMs": 8823.899958000002,
+    "model": {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "provider": "wasm",
+      "modelLoadMs": 8720.800000011921,
+      "downloadedBytes": 127494442,
+      "cacheUsed": false,
+      "maxTokens": 128
+    }
+  },
+  "warm": {
+    "wallMs": 1743.1086250000008,
+    "model": {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "provider": "wasm",
+      "modelLoadMs": 1652.6000000238419,
+      "downloadedBytes": 0,
+      "cacheUsed": true,
+      "maxTokens": 128
+    }
+  },
+  "rows": [
+    {
+      "id": "paraphrase-vase-ja",
+      "spec": {
+        "family": "vase",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "expectedFamily": "vase",
+      "familyPass": true,
+      "previousCharactersRetained": true,
+      "previousBatchesRetained": true,
+      "finite": true,
+      "timing": {
+        "totalMs": 4010.800000011921,
+        "firstFrameMs": 53.40000003576279,
+        "interpretationMs": 48.10000002384186,
+        "constructionMs": 5.300000011920929,
+        "modelMs": 47.19999998807907,
+        "source": "semantic-model",
+        "family": "vase",
+        "within30s": true,
+        "glyphs": 1921,
+        "frameP95Ms": 3.599999964237213
+      },
+      "glyphs": 1921
+    },
+    {
+      "id": "attr-sword-bend",
+      "spec": {
+        "family": "sword",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0.65,
+        "twist": 0
+      },
+      "expectedFamily": "sword",
+      "familyPass": true,
+      "previousCharactersRetained": true,
+      "previousBatchesRetained": true,
+      "finite": true,
+      "timing": {
+        "totalMs": 4014,
+        "firstFrameMs": 52.59999996423721,
+        "interpretationMs": 48.39999997615814,
+        "constructionMs": 4.199999988079071,
+        "modelMs": 47.700000047683716,
+        "source": "semantic-model",
+        "family": "sword",
+        "within30s": true,
+        "glyphs": 2753,
+        "frameP95Ms": 4.199999988079071
+      },
+      "glyphs": 2753
+    },
+    {
+      "id": "attr-ring-twist",
+      "spec": {
+        "family": "mobius",
+        "height": 1,
+        "width": 1,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0.65
+      },
+      "expectedFamily": "mobius",
+      "familyPass": true,
+      "previousCharactersRetained": true,
+      "previousBatchesRetained": true,
+      "finite": true,
+      "timing": {
+        "totalMs": 4014.699999988079,
+        "firstFrameMs": 55.10000002384186,
+        "interpretationMs": 50.69999998807907,
+        "constructionMs": 4.400000035762787,
+        "modelMs": 50.10000002384186,
+        "source": "semantic-model",
+        "family": "mobius",
+        "within30s": true,
+        "glyphs": 3841,
+        "frameP95Ms": 4.800000011920929
+      },
+      "glyphs": 3841
+    },
+    {
+      "id": "attr-cube-wide-en",
+      "spec": {
+        "family": "cube",
+        "height": 0.65,
+        "width": 1.55,
+        "neck": 0.45,
+        "bend": 0,
+        "twist": 0
+      },
+      "expectedFamily": "cube",
+      "familyPass": true,
+      "previousCharactersRetained": true,
+      "previousBatchesRetained": true,
+      "finite": true,
+      "timing": {
+        "totalMs": 4005.800000011921,
+        "firstFrameMs": 46.60000002384186,
+        "interpretationMs": 40.39999997615814,
+        "constructionMs": 6.200000047683716,
+        "modelMs": 39.90000003576279,
+        "source": "semantic-model",
+        "family": "cube",
+        "within30s": true,
+        "glyphs": 5761,
+        "frameP95Ms": 5.200000047683716
+      },
+      "glyphs": 5761
+    }
+  ],
+  "stress": {
+    "id": "attr-sphere-tall-en",
+    "spec": {
+      "family": "sphere",
+      "height": 1.65,
+      "width": 0.65,
+      "neck": 0.45,
+      "bend": 0,
+      "twist": 0
+    },
+    "expectedFamily": "sphere",
+    "familyPass": true,
+    "previousCharactersRetained": true,
+    "previousBatchesRetained": true,
+    "finite": true,
+    "timing": {
+      "totalMs": 4016.699999988079,
+      "firstFrameMs": 61.39999997615814,
+      "interpretationMs": 45.39999997615814,
+      "constructionMs": 16,
+      "modelMs": 43.39999997615814,
+      "source": "semantic-model",
+      "family": "sphere",
+      "within30s": true,
+      "glyphs": 2689,
+      "frameP95Ms": 6.099999964237213
+    },
+    "glyphs": 2689
+  },
+  "requests": [
+    {
+      "phase": "cold-model-preparation",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "cold-model-preparation",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "cold-model-preparation",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "cold-model-preparation",
+      "host": "us.aws.cdn.hf.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "cold-model-preparation",
+      "host": "huggingface.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "phase": "cold-model-preparation",
+      "host": "us.aws.cdn.hf.co",
+      "method": "GET",
+      "resourceType": "fetch"
+    }
+  ],
+  "errors": []
+}

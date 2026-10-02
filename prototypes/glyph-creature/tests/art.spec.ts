@@ -25,7 +25,7 @@ test.beforeEach(async ({ page }, testInfo) => {
   page.on('console', message => { if (message.type() === 'error') errors.push(`${message.text()} ${message.location().url}`); });
   await page.goto('/');
   await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
-  mkdirSync('evidence', { recursive: true });
+  mkdirSync('../../experiments/konjo-v1/regression/art', { recursive: true });
   if (!testInfo.title.startsWith('導入')) await page.evaluate(() => (window as any).__GLYPH_ART__.reset());
 });
 test.afterEach(async ({ page }) => { expect(browserErrors.get(page)).toEqual([]); });
@@ -46,7 +46,7 @@ test('黒い空間からEnterで開き、送信・Escapeで戻る。長押しで
   await page.locator('#text-input').fill('あa?');
   await page.locator('#text-input').dispatchEvent('keydown', { key: 'Enter', repeat: true });
   expect((await inspect(page)).count).toBe(1);
-  await page.screenshot({ path: 'evidence/terminal.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/terminal.png' });
   await page.keyboard.press('Escape');
   await expect(page.locator('#terminal')).toBeHidden();
   await open(page);
@@ -74,10 +74,10 @@ test('通常入力・赤白の変化・4形状・蓄積・リセット', async (
     expect(state.form).toBe(name); expect(state.count).toBe(count);
     expect(state.scene.finite).toBe(true); expect(state.scene.drawn).toBe(count);
     expect(state.scene.drawCalls).toBe(1); expect(state.scene.triangles).toBe(count * 2);
-    await page.screenshot({ path: `evidence/${name}.png` });
+    await page.screenshot({ path: `../../experiments/konjo-v1/regression/art/${name}.png` });
   }
   await feed(page, '新しい文字', '64'); await advance(page, 4100);
-  await page.screenshot({ path: 'evidence/new-characters.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/new-characters.png' });
   await open(page); await page.locator('#reset').click();
   expect((await inspect(page)).count).toBe(1);
   expect((await inspect(page)).form).toBe('condense');
@@ -135,11 +135,11 @@ test('厚さゼロの文字は正面→真横で消える→裏面に戻る。�
   });
   const pose = (yaw: number | null) => page.evaluate(yaw => (window as any).__GLYPH_ART__.planePose(yaw), yaw);
   await pose(0); const front = await measure();
-  await page.screenshot({ path: 'evidence/plane-front.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/plane-front.png' });
   await pose(Math.PI / 2); const edge = await measure();
-  await page.screenshot({ path: 'evidence/plane-edge.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/plane-edge.png' });
   await pose(Math.PI); const back = await measure();
-  await page.screenshot({ path: 'evidence/plane-back.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/plane-back.png' });
   expect(front).toBeGreaterThan(100);
   expect(edge).toBeLessThan(front * 0.06);
   expect(back).toBeGreaterThan(front * 0.85);
@@ -160,7 +160,7 @@ test('32,000枚でも形を切り替え、カメラが引いて操作を続け�
   await form(page, 'mobius'); await advance(page, 2000);
   expect((await inspect(page)).form).toBe('mobius');
   expect((await inspect(page)).scene.drawCalls).toBe(1);
-  await page.screenshot({ path: 'evidence/dense-32000.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/dense-32000.png' });
   await open(page); await page.locator('#pause').click();
   expect((await inspect(page)).paused).toBe(false);
   const frames = await page.evaluate(() => new Promise<number[]>(resolve => {
@@ -182,7 +182,7 @@ test('狭い画面でも入力・形の切替が収まり、タッチで開く',
   await open(page);
   await expect(page.locator('#feed')).toBeInViewport();
   await expect(page.locator('#close')).toBeInViewport();
-  await page.screenshot({ path: 'evidence/mobile.png', fullPage: true });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/mobile.png', fullPage: true });
 });
 
 test('導入: 最初のEnterで入力し、文字を送ってからボタンが現れる', async ({ page }) => {
@@ -190,13 +190,13 @@ test('導入: 最初のEnterで入力し、文字を送ってからボタンが�
   await expect(page.locator('#terminal')).toBeHidden();
   expect((await inspect(page)).count).toBe(1);
   await page.locator('#start-prompt').evaluate(el => el.getAnimations().forEach(animation => animation.effect?.getTiming().iterations === Infinity ? animation.cancel() : animation.finish()));
-  await page.screenshot({ path: 'evidence/initial.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/initial.png' });
   await page.keyboard.press('Enter');
   expect((await inspect(page)).count).toBe(1);
   await expect(page.locator('#actions')).toBeHidden();
   await expect(page.locator('#text-input')).toBeFocused();
   await expect(page.locator('#input-help')).toContainText('文章');
-  await page.screenshot({ path: 'evidence/terminal.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/terminal.png' });
   await page.locator('#text-input').fill('今日は、文字が空に浮かんでいる。');
   await page.keyboard.press('Enter');
   expect((await inspect(page)).batches[0].text).toBe('今日は、文字が空に浮かんでいる。');
@@ -211,27 +211,27 @@ test('導入: 最初のEnterで入力し、文字を送ってからボタンが�
 
 test('言葉の形・表面・色・個数・鎖と入力位置からの取り込み', async ({ page }) => {
   await feed(page, '流れる 赤 四角形', '64');
-  await advance(page, 600); await page.screenshot({ path: 'evidence/terminal-intake.png' });
+  await advance(page, 600); await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/terminal-intake.png' });
   await advance(page, 5000);
   expect((await inspect(page)).spec).toMatchObject({ shape: 'square', mode: 'flow' });
   const firstBatch = (await inspect(page)).batches[0]; expect(firstBatch.ink).toBe('red');
-  await page.screenshot({ path: 'evidence/flow-square.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/flow-square.png' });
   await feed(page, '表面 黄色 立方体', '64'); await advance(page, 6000);
   expect((await inspect(page)).spec).toMatchObject({ shape: 'cube', mode: 'surface' });
   expect((await inspect(page)).batches.map((b: any) => b.ink)).toEqual(['red', 'yellow']);
-  await page.screenshot({ path: 'evidence/surface-cube.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/surface-cube.png' });
   for (const [words, filename] of [['円 8個', 'eight-rings'], ['円環 鎖', 'chain'], ['流れる メビウスの輪', 'flow-mobius'], ['表面 メビウスの輪', 'surface-mobius'], ['円環 大小', 'unequal-rings'], ['オメガ メビウスの輪', 'omega']]) {
     await feed(page, words, '64'); await advance(page, 6000);
     expect((await inspect(page)).scene.finite).toBe(true);
     if (filename === 'eight-rings') expect((await inspect(page)).spec.count).toBe(8);
     if (filename === 'chain') expect((await inspect(page)).spec.arrangement).toBe('chain');
-    await page.screenshot({ path: `evidence/${filename}.png` });
+    await page.screenshot({ path: `../../experiments/konjo-v1/regression/art/${filename}.png` });
   }
 });
 
 test('通常操作は外部通信なし', async ({ page }) => {
   const external: string[] = [];
-  page.on('request', request => { if (!request.url().startsWith('http://127.0.0.1:4173') && !request.url().startsWith('data:')) external.push(request.url()); });
+  page.on('request', request => { if (!request.url().startsWith('http://127.0.0.1:4195') && !request.url().startsWith('data:')) external.push(request.url()); });
   await feed(page, '表面 青 三角形', '16');
   await feed(page, '円環 鎖', '16');
   expect((await inspect(page)).spec.arrangement).toBe('chain');
@@ -251,25 +251,24 @@ test('吸収中に形を変えても既存の文字が跳び戻らない', async
   for (let i = 0; i < before.length; i++) expect(Math.abs(after[i] - before[i])).toBeLessThan(.00001);
 });
 
-test('実験用の学習モデルが形だけを補い、入力文字と色を保つ', async ({ page }) => {
+test('手動辞書の言い換えが形を選び、入力文字と色を保つ', async ({ page }) => {
   const external: string[] = [];
-  page.on('request', r => { if (!r.url().startsWith('http://127.0.0.1:4173') && !r.url().startsWith('data:')) external.push(r.url()); });
+  page.on('request', r => { if (!r.url().startsWith('http://127.0.0.1:4195') && !r.url().startsWith('data:')) external.push(r.url()); });
   await open(page);
-  await expect(page.locator('#learned-shapes')).not.toBeChecked();
-  await page.locator('#learned-shapes').check();
+  await expect(page.locator('#learned-shapes')).toHaveCount(0);
   await feed(page, 'サイコロを黄色に', '64'); await advance(page, 4500);
   expect((await inspect(page)).spec.shape).toBe('cube');
   expect((await inspect(page)).batches[0]).toMatchObject({ text: 'サイコロを黄色に', ink: 'yellow' });
   await feed(page, 'ドーナツ 8個', '64'); await advance(page, 4500);
   expect((await inspect(page)).spec).toMatchObject({ shape: 'ring', count: 8 });
-  await page.screenshot({ path: 'evidence/learned-rings.png' });
+  await page.screenshot({ path: '../../experiments/konjo-v1/regression/art/learned-rings.png' });
   const spec = (await inspect(page)).spec;
   await feed(page, '今日は眠い', '1');
   expect((await inspect(page)).spec).toEqual(spec);
   await open(page); await page.locator('#reset').click();
   await page.keyboard.press('Enter'); await page.keyboard.press('Enter');
   await page.locator('#guide summary').click();
-  await expect(page.locator('#learned-shapes')).not.toBeChecked();
+  await expect(page.locator('#learned-shapes')).toHaveCount(0);
   expect(external).toEqual([]);
 });
 
@@ -280,15 +279,16 @@ test('花火を文章から拾い、形ボタンからも切り替えられる',
   expect((await inspect(page)).spec.shape).toBe('fireworks');
   expect((await inspect(page)).batches[0].ink).toBe('red');
   expect((await inspect(page)).scene.finite).toBe(true);
-  await page.screenshot({path:'evidence/fireworks.png'});
+  await page.screenshot({path:'../../experiments/konjo-v1/regression/art/fireworks.png'});
   await page.locator('#choose-form').click();
-  await page.locator('[data-shape="cube"]').click();
+  await page.locator('#quick-forms summary').filter({ hasText: '形' }).click(); await page.locator('[data-shape="cube"]').click();
   expect((await inspect(page)).spec.shape).toBe('cube');
 });
 
 test('執筆: 入力が届き、Enterで一度取り込み、再読込で日記を復元する', async ({page, context}) => {
   await page.goto('/?write');
   await page.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
+  await page.locator('#live-writing').uncheck();
   const input = page.locator('#manuscript');
   await input.fill('今日は黄色い球体について書く。');
   await expect(page.locator('#draft-preview')).toHaveText('今日は黄色い球体について書く。');
@@ -307,7 +307,7 @@ test('執筆: 入力が届き、Enterで一度取り込み、再読込で日記�
   expect(state.batches[0].ink).toBe('yellow');
   await expect(input).toBeFocused();
   await advance(page, 5000);
-  await page.screenshot({path:'evidence/writing-day.png'});
+  await page.screenshot({path:'../../experiments/konjo-v1/regression/art/writing-day.png'});
   const view = await context.newPage();
   await view.goto('/?companion');
   await view.waitForFunction(() => Boolean((window as any).__GLYPH_ART__));
@@ -380,7 +380,7 @@ test('執筆: 別窓が開き、編集側の行を同時に受け取る（通常
 
 test('筆画: 同梱の花火11画をほどいて戻し、未収録は現在の形を保つ', async ({page}) => {
   const external:string[]=[];
-  page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4173')&&!r.url().startsWith('data:'))external.push(r.url());});
+  page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4195')&&!r.url().startsWith('data:'))external.push(r.url());});
   await page.goto('/strokes.html');
   await expect(page.locator('#stroke-status')).toContainText('11画');
   await page.locator('[data-motion="scatter"]').click();

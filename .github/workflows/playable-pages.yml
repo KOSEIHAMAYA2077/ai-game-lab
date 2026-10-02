@@ -15,6 +15,7 @@ concurrency:
 
 env:
   PLAYABLE_REF: glyph-creature-p0-v0.11.0-rigs.1
+  SKELETON_REF: glyph-matter-v0.12.0-skeleton.1
 
 jobs:
   build:
@@ -47,6 +48,24 @@ jobs:
         working-directory: prototype-source/prototypes/glyph-creature
         run: |
           SOURCE_SHA=$(git rev-parse HEAD) node -e 'const fs = require("node:fs"); const pkg = require("./package.json"); fs.writeFileSync("dist/version.json", JSON.stringify({ version: pkg.version, ref: process.env.PLAYABLE_REF, commit: process.env.SOURCE_SHA }, null, 2) + "\n");'
+      - name: Check out the separate skeleton comparison
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.SKELETON_REF }}
+          path: skeleton-source
+          persist-credentials: false
+      - name: Check and build the separate comparison
+        working-directory: skeleton-source/prototypes/glyph-creature
+        run: |
+          npm ci --ignore-scripts
+          npm test
+          npm run build
+          SOURCE_SHA=$(git rev-parse HEAD) node -e 'const fs = require("node:fs"); const pkg = require("./package.json"); fs.writeFileSync("dist/version.json", JSON.stringify({ version: pkg.version, ref: process.env.SKELETON_REF, commit: process.env.SOURCE_SHA, model: "local browser WASM, optional first-time official model download" }, null, 2) + "\n");'
+      - name: Add comparison without replacing the preserved root app
+        run: |
+          mkdir -p prototype-source/prototypes/glyph-creature/dist/skeleton-v1
+          cp -R skeleton-source/prototypes/glyph-creature/dist/. prototype-source/prototypes/glyph-creature/dist/skeleton-v1/
+          cp skeleton-source/prototypes/glyph-creature/dist/skeleton.html prototype-source/prototypes/glyph-creature/dist/skeleton-v1/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload only built public files

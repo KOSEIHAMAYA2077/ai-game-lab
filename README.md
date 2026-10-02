@@ -12,6 +12,10 @@
 
 次の生成目標は**入力確定から約10秒**。モデルが大まかな構造を決め、規定範囲の太さ・曲面を自前で肉付けする。[骨格からの生成案](research/skeleton-first-10s-v1.md)。
 
+### [▶ 小型モデルと文字表面の比較版](https://koseihamaya2077.github.io/glyph-matter/skeleton-v1/)
+
+6系統の形・首・縦横・曲がり・ねじれを文章から選び、文字が面を流れる。HELPの「小型モデルを準備」で無料モデルを取得し、ブラウザ内CPUで処理する。初回取得は約128MB、入力の外部送信なし。既知の曲面を制約内で作る版で、任意のtext-to-meshではない。[操作・実測・失敗・モデルとルールの区別](experiments/skeleton-surface-v1/README.md)。表示まで10秒を目安とし、演出を含め30秒まで許容する条件へ更新した。
+
 公開中の試遊版は、用意した60形と語彙・連想グラフ・限定した曖昧検索で動く「根性版」に、鳥・魚・蛇の骨格を追加した版です。試遊中のモデル推論は使いません。軽量モデルによる任意の3D形状生成は、まだ研究段階です。
 
 [公開版のコード・確認](https://github.com/KOSEIHAMAYA2077/glyph-matter/tree/glyph-creature-p0-v0.11.0-rigs.1) · [小型AIの実測](concepts/glyph-creature/LOCAL_AI_RESEARCH.md) · [自作分類モデル](experiments/word-shape/README.md) · [進捗](PROGRESS.md) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)
@@ -22,9 +26,16 @@
 
 # AIでアイデアを遊べる形にするための制作設計
 
-作成日: 2026-09-30 / 現在の試作設計: 0.6
+**2026-10-01 / 骨格版 0.11.0:** 鳥・魚・蛇に親子の骨格を持たせ、動く身体の表面を文字が流れる。[操作・仕組み・比較](experiments/creature-rigs-v1/README.md)。この版は通常4198、執筆4198/?write。以下は以前の版の記録。
 
-**現在地: 制作方法の設計は完了。文字の集合P0に、導入・HELP・花火・筆画実験・執筆と日記を追加。v0.5.0を試せる。**
+**2026-10-01 / 根性版 0.10.1:** ゆっくり左右へ回りながら上下にも傾く見え方と、クラゲの傘の拍動・触手の遅れを追加。[今回の操作と確認](experiments/konjo-motion-v1/README.md)。通常4197、執筆4197/?write。
+
+
+作成日: 2026-09-30 / 別版: 根性版 0.10.0
+
+**現在地: 根性版を60形へ拡張。形の名前・WordNetの同義語・作者の連想グラフ・限定した誤字検索で、文章から形を選ぶ。モデル推論なし。**
+
+[入力例・形・比較・検証](experiments/konjo-v1/README.md) / 通常画面は localhost:4195。前の版（4173/4194）を保持し、この版は別ブランチ・別の保存領域で動く。
 
 [進捗](PROGRESS.md) · [変更履歴](CHANGELOG.md) · [版管理の方針](VERSIONING.md) · [GitHub Issues](https://github.com/KOSEIHAMAYA2077/glyph-matter/issues) · [Releases](https://github.com/KOSEIHAMAYA2077/glyph-matter/releases)
 
@@ -36,7 +47,7 @@
 
 [文字のかたち — 起動方法と操作](prototypes/glyph-creature/README.md)
 
-![文字が立方体の表面を流れる](prototypes/glyph-creature/evidence/surface-cube.png)
+![文字が球の全面を覆う](experiments/surface-coverage-20260930/qa/final/sphere-2048-t12.png)
 
 ## 読み方と現在地
 
