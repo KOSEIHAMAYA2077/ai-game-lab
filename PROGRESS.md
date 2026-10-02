@@ -1,12 +1,12 @@
 # 進捗
 
-## 2026-10-03 03:18 — サイドインテリアの入力方式と研究計画
+## 2026-10-03 03:50 — サイドインテリアの入力方式と研究計画
 
 日常の入力から育つ用途を、[使用像と分析](research/side-interior-direction-20261003.md)へ整理。[一次資料30項目の入力API比較](research/ambient-input-platforms-v1/README.md)では、キー操作だけで全アプリの日本語確定本文を得る前提を置かず、活動量と対応editor本文を分ける。VS Codeの差分にIME確定フラグが無いことも記した。APIの存在や人工schemaを、OS監視の実装・実IME確認とは扱わない。
 
-[研究プロトコル案](research/widget-study-protocol-v1/README.md)は、保留付き既知6形の明示要求を同条件で比較する研究と、日常文章が穏やかに姿へ反映される体験の研究を分ける。件数、閾値、6人試遊、16GB実機・長期評価は将来の計画であり、実施済みではない。入力契約の人工実験とHCI本文調査は別担当で続行中。
+[研究プロトコル案](research/widget-study-protocol-v1/README.md)は、保留付き既知6形の明示要求を同条件で比較する研究と、日常文章が穏やかに姿へ反映される体験の研究を分ける。件数、閾値、6人試遊、16GB実機・長期評価は将来の計画であり、実施済みではない。[人工入力契約](experiments/ambient-input-contract-v1/README.md)は28fixture/51runと10 probe・7 mutation checkを完了しrootも再実行。[HCI本文8論文](research/side-interior-hci-v1/README.md)は配置・注意・長期使用の比較案を整理。[接続前の境界レビュー](experiments/ambient-boundary-review-v1/REPORT.md)ではplatform schemaとの変換、保存off、解釈前の材料追加を未実装課題とした。人工テストと人間・実OSの検証を分ける。
 
-公開小窓v3のEnter→日本語paste→文字のメビウス表面→停止を実操作確認。旧版を含む7つのHTTP manifestは保存commitと全一致。[確認原票](experiments/widget-v3-release-verification-v1/public-manifests.json)。Metalの実時間2時間offscreenは04:35終了予定で継続中。全入力連動・実窓Metal資源・一般PC快適性は未実証。
+公開小窓v3のEnter→日本語paste→文字のメビウス表面→停止を実操作確認。旧版を含む7つのHTTP manifestは保存commitと全一致。[確認原票](experiments/widget-v3-release-verification-v1/public-manifests.json)。Metalの2時間予定offscreenはfinal記録なしに中断。約30分までの原票を保持し、完走や窓全体の性能とは扱わない。全入力連動・実窓Metal資源・一般PC快適性は未実証。
 
 ## 2026-10-03 02:54 — 表面を保つ小窓v3と追加の使用像
 

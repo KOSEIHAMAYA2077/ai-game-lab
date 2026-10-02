@@ -1,6 +1,6 @@
 # 小窓版の継続状況
 
-## 最新: 2026-10-03 03:18 JST
+## 最新: 2026-10-03 03:50 JST
 
 追加の使用像は、創作・プログラミング・仕事中の入力を材料に育つサイドインテリア。既存の改良を継続し、02:37から8時間の設計分析を追加。新期限10:37 JST（2026-10-03 01:37 UTC）、10:17から新機能を止めまとめる。専用caffeinateはPID83393へ置換（8時間限定、旧専用52785だけ終了）。同タスク20分継続3d-5も更新済み。今回の追加は使用想定と分析であり、OS全体入力監視を開始・設定変更していない。Macロック時は解除を求めずoffscreen/コード/資料を続け、通常窓の計測としない。02:48頃にはR2 nativeを実操作可能になり短いsmokeを行った。8時間の実窓資源測定ではない。
 
@@ -15,10 +15,10 @@
 
 ### 進行中と所有
 
-1. root: widget-main/state/版管理/研究map/STATUS/公開。B v3のtag/URL/Release保存と公開実操作を完了。新しい入力API調査・研究プロトコルを新分析branchへ統合。R1と旧公開版は保持する。
-2. `static_fresh_evaluation`: review所有返却済み。新 `experiments/ambient-input-contract-v1/` だけ所有し、非監視の人工入力イベント契約/IME確定の品質/重複/負荷/蓄積を比較。共有sourceはrootだけ編集。
-3. `static_japanese_retrieval`: protocol所有返却済み。新 `research/side-interior-hci-v1/` だけ所有。InformativeArt/PeripheralInteraction/最新HCI本文と注意・長期使用を調査。2026AR論文は摘要と本文の相違も調べる。
-4. `widget_metal_comparison`: 入力API調査は完了し所有返却。一次資料30項目、platform比較、schema設計と人工28ケースを記録。構文等35イベント確認は実adapter/IMEの検証ではない。rootが監視するsoakはfrozenR5から2時間offscreen実時間表示、PID83137/session36101、02:35:33〜04:35:33 JST。explicitPID sampler session1218、5秒周期。1536文字400x440/15fps、10分毎の3形切替・人工入力/atlas成長・旧ID/色保持を記録。30分時点も15fps/MTLエラー0だが未完。offscreen一process資源で窓全体のRAM/CPUではない。原文/旧アプリにアクセスしない。
+1. root: 版管理・公開・状態文書、新しいMetal v2描画候補と実UI。PR #27の入力API/研究計画をmainへ公開済み。返却済み入力契約・HCI本文・境界レビューを独立して公開準備。Metal v1のメビウスが回転中に切れる問題を新v2へ修正し、CPU射影35,763条件はR2で切断0、実GPU/入力直後/手動寄りは別評価。旧ソースとアプリを保持する。
+2. `static_fresh_evaluation`: 入力契約を返却。人工28fixture/51run・probe10・mutation7成功、rootも同じrunを再実行。新 `experiments/ambient-material-scheduler-v1/` のみ所有し、材料蓄積と形判断の低頻度化を人工streamで比較中。上流契約/既存widgetとの接続は未実装。
+3. `static_japanese_retrieval`: HCI本文8論文と境界レビューを返却。新 `experiments/ambient-integration-map-v1/` のみ所有し、adapter/schema→canonical→materialの将来変換と保存offを整理。実OS取得はしない。
+4. `widget_metal_comparison`: R1/R2の独立射影評価を返却。新 `experiments/widget-metal-soak-recovery-v1/` のみ所有し、中断の記録と再走行条件をread-onlyレビュー。旧2時間soakは約30分の記録で止まりfinalなし、03:43で2PID不在を確認。原票を保持し、2時間完走とは報告しない。
 
 ### 次の一実験
 
