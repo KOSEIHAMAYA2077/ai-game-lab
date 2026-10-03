@@ -1,0 +1,65 @@
+{
+  "auditUTC": "2026-10-03T01:05:35.055407+00:00",
+  "scope": "Post-final saved-file diagnosis only; no acceptance threshold changed and no native/model/ps/UI call",
+  "finalAuditSHA256": "4534c89df44e64561cd7fab3f14d11f28f1fefce2a8a0890f532c9393d751510",
+  "ordinary": {
+    "count": 20,
+    "allHoldAbsentMean128Vector128Ranks60": true
+  },
+  "long4000": {
+    "count": 4,
+    "allTokens4001HeldTokenLimitMeanVectorAbsentRanksEmpty": true
+  },
+  "clockBoundaries": {
+    "driverMonotonicElapsedSeconds": 6000.0133435,
+    "driverUTCStartEndSeconds": 5999.906106,
+    "monotonicMinusUTCSeconds": 0.10723749999942811,
+    "nativeTimeLRealSeconds": 5999.96,
+    "driverMinusNativeRealSeconds": 0.053343499999755295,
+    "firstPSSampleElapsedSeconds": 0.04795962499999999,
+    "lastPSSampleElapsedSeconds": 5990.103960833,
+    "firstLastPSSampleIntervalSeconds": 5990.056001208,
+    "driverAfterLastPSSampleSeconds": 9.90938266699959,
+    "lastQueryEstimatedReceiptSeconds": 5700.166890416,
+    "driverAfterLastQuerySeconds": 299.84645308400013,
+    "EOFExactTimestampAvailable": false,
+    "sourceClosesStdinAtDurationThenWaitsForExit": true,
+    "exitCode": 0,
+    "failure": null,
+    "unexpectedTailReported": false
+  },
+  "sampleCoverage": {
+    "valid": 600,
+    "scheduled": 600,
+    "missing": 0,
+    "strictlyIncreasingTime": true,
+    "nondecreasingRoundedCPU": true,
+    "intervalMinSeconds": 9.5828480830005,
+    "intervalMaxSeconds": 10.170587333000014,
+    "continuousMemoryMeasurement": false,
+    "processStartIdentityPersistedInSamples": false
+  },
+  "memory": {
+    "RSSMaxFromPSBytes": 44531712,
+    "RSSMaxFromTimeLBytes": 44531712,
+    "replyPhysicalFootprintMaxBytes": 34652664,
+    "replyPhysicalFootprintReplyCount": 24,
+    "timeLReportedPeakMemoryFootprintBytes": 35127800,
+    "timeLFootprintReportingScope": "Exact label from saved time -l output, separate from reply physicalFootprintBytes and PS RSS",
+    "uniqueRAM": false,
+    "wholeWidgetOrHostRAM": false
+  },
+  "cpu": {
+    "nativeTimeLUserPlusSysSeconds": 0.05,
+    "nativeTimeLUserPlusSysOverRealOneCorePercent": 0.0008333388889259261,
+    "psRoundedCumulativeDeltaSeconds": 0.019999999999999997,
+    "psRoundedDeltaOverSampleIntervalOneCorePercent": 0.0003338866948149841,
+    "timeLTextCPUResolutionSeconds": 0.01,
+    "newSamplerCalls": 0,
+    "driverPSOtherProcessExcluded": true,
+    "notContinuousInferenceLoad": true
+  },
+  "newModelCalls": 0,
+  "rawFilesModified": false,
+  "sourceFreezeUnchanged": true
+}

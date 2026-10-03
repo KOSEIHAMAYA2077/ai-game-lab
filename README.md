@@ -4,6 +4,10 @@
 
 [▶ ブラウザで試す・60形](https://koseihamaya2077.github.io/glyph-matter/) / [小窓Web版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/) / [研究の技術・課題・先行研究](research/widget-research-map-20261003.md)。全アプリ入力との連動はまだ実装していません。
 
+**作業の横へ置く用途の結果と次の方針は、[今回の整理](research/side-interior-results-20261003.md)から読めます。** 試せる版、入力・意味・描画の比較、未確認の部分を分けました。[独立した文書照合](experiments/side-interior-summary-review-v1/REPORT.md)も保存しています。
+
+固定した日本語CPU CLIの100分観測は、人工24返信・600/600標本・通常終了を確認。最大RSS約42.47MiBでした。[図・原票・方法と限界](experiments/native-static-longrun-v1/REPORT-R1.md) / [独立算術監査](experiments/native-static-longrun-review-v1/REPORT-R1.md)。単独CLIの結果で、8時間の小窓・全アプリ連動・一般16GB機・意味精度の達成ではありません。
+
 専用入力から小窓へ渡す比較では、待機中の全文転送をやめ、増えた材料だけを受け取る候補を保存しました。独立した12セッションで文字の位置・色・形が元の処理と一致し、時刻の巻戻りを拒否する修正も記録しています。[実装・原票・確認範囲](experiments/widget-metal-ambient-cache-v1/REPORT-R2.md) / [独立監査](experiments/widget-metal-ambient-cache-review-v1/REPORT-R2.md)。小窓全体の負荷、実IME、OS入力は未確認です。
 
 作業の横に置く用途では「形を命令する」と「文章から形を連想する」を別に評価します。[内容の連想と次の比較方針](research/ambient-association-policy-v1/README.md)。連想の楽しさや邪魔にならなさは、人による検証が残っています。
@@ -50,7 +54,7 @@ Macの専用編集欄から同じ文字材料をMetalへ渡す比較も保存。
 
 ### [▶ 小窓・低負荷構成の比較版](https://koseihamaya2077.github.io/glyph-matter/widget-v1/)
 
-Mac標準の小窓で、別の作業の横に置く試作。通常15fps、入力の吸収30fps、停止・非表示では描画を停止し、任意のモデルは解釈後に終了する。描画サンプルと文字履歴を分ける。現時点では全体RAM・CPUの候補予算に未達で、8時間の比較改良を進行中。[操作・実測・制限](experiments/widget-companion-v1/README.md) / [研究の技術・課題・先行研究・評価案](research/widget-research-map-20261003.md) / [Macアプリの作り方](desktop/glyph-widget/README.md)。
+Mac標準の小窓で、別の作業の横に置く試作。通常15fps、入力の吸収30fps、停止・非表示では描画を停止し、任意のモデルは解釈後に終了する。描画サンプルと文字履歴を分ける。このWebKit基準版は全体RAM・CPUの候補予算に未達で、別のMetal描画やCPU解釈と比較しています。[操作・実測・制限](experiments/widget-companion-v1/README.md) / [研究の技術・課題・先行研究・評価案](research/widget-research-map-20261003.md) / [Macアプリの作り方](desktop/glyph-widget/README.md)。
 
 ### [▶ ブラウザで試す](https://koseihamaya2077.github.io/glyph-matter/)
 

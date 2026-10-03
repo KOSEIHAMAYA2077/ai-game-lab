@@ -222,3 +222,9 @@ GitHubのREADMEトップからGitHub Pagesの試遊版へ直接進む導線を�
 ## 2026-10-03 本文を返さない入力入口
 
 native R5 coreをbyte同一で使うCLI入口R2を別folderへ保存。独立20入力・21返信、旧正常9件のrank6/hold3が一致。長すぎる行の後の復帰を確認。作者のコンパイル失敗・検算helper失敗と原返信を保存できなかった点も記録。実IPC・OS・意味精度・全widgetは未検証で既定接続なし。
+
+## 2026-10-03 100分観測とサイドインテリアの整理
+
+固定CPU CLIは6000.013秒を通常終了。通常20件とtoken_limit保留4件を分け、600/600標本・RSS peak約42.47MiBを保存した。単独CLIで、8時間の窓・全体RAM・16GB機・意味精度の結果ではない。[図と原票](experiments/native-static-longrun-v1/REPORT-R1.md) / [独立算術](experiments/native-static-longrun-review-v1/REPORT-R1.md)。
+
+[今回の結果と次の方針](research/side-interior-results-20261003.md)をまとめ、別担当が36原資料と照合した。研究の候補は、低資源のサイドインテリアでの文章による形の連想と文字表面の連続性。人による評価0・全アプリ取得未実装・一般16GB laptop未検証を明記し、既定60形Webと13形配布を維持した。
