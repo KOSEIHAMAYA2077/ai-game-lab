@@ -129,3 +129,7 @@ native R2の初回署名でDesktopのFinderInfo属性によりエラーが出た
 ### 2026-10-02T23:28:12.320521+00:00 — native Static配備候補の公開準備
 
 PR38をmainへ保存。native R5と独立配備20/20・別特殊token4/4の保存監査を完了。709は既知回帰、意味品質を更新せず既定接続なし。rootの別固定CLI100分観測は23:23:30UTC開始、01:03:30UTC頃EOF終了予定、native14760。cache候補は局所timing完了・独立12session/14wireの確認待ち。実新native UIはlockで未確認のまま。
+
+### 2026-10-03T00:04:19.207712+00:00 — cache R2の公開準備
+
+作者126public rows・独立77text・連想policy資料を返却受領。cache R2は同12セッション・804描画数値一致、wire15/15。実窓・IME・全widget資源は未確認。別の100分CLI待機観測は継続中で、完走値と呼ばない。本文を返さないbounded CLI入口を別folderで実装・独立検証中。

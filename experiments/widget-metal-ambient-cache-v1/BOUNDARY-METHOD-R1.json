@@ -1,0 +1,22 @@
+{
+  "version": "cache-legal-response-boundary-regression-r1",
+  "beforeHarnessAndResults": true,
+  "scope": "Known R5 UTF16/grapheme/JSON response-bound regression through new cache, not fresh/human/nativeIME",
+  "cluster": "A + U+20D0 repeated255",
+  "commands": "init; 256 x confirmed cluster insert then observe empty; advance7000; 60 idle ticks67ms",
+  "expected": {
+    "bodyUnits": 256,
+    "totalBodyUTF16": 65536,
+    "cachedBodyCalls": 256,
+    "cachedDecodedUnits": 256,
+    "idleBodyCalls": 0,
+    "oldAndCacheBodyLiteralEquality": true,
+    "oldAndCacheInstanceByteExact": true,
+    "metadataLimitBytes": 4096,
+    "deltaLimitBytes": 524288,
+    "offExportSame": true,
+    "offExportNoTextIDOrderedInkOrSession": true
+  },
+  "finiteJSONBound": "delta upper 417792B conservative old schema bound retained; per delta session+keys reservation8192 covers actual new fields, old417792 safe for <=256*(256*6+64)+8192",
+  "responseCopies": "bounded transfer/view caches can coexist; not whole process memory bound"
+}

@@ -1,0 +1,38 @@
+{
+  "version": "independent-helper-build-records-r1",
+  "builds": [
+    {
+      "helper": "old-jsc-reference-r1",
+      "revision": "old R1",
+      "exitCode": 0,
+      "compilerWarning": "String(contentsOf:) without explicit encoding deprecated on macOS15; source preserved. Original compile was successful; stdout/stderr not separately captured for old build.",
+      "rebuildPerformed": false
+    },
+    {
+      "helper": "CandidateReview-R1.swift",
+      "revision": "candidateR1 helperR1",
+      "exitCode": 1,
+      "stdout": "BUILD-CANDIDATE-R1.stdout.log",
+      "stderr": "BUILD-CANDIDATE-R1.stderr.log",
+      "reason": "summary print nested interpolation syntax",
+      "callsBeforeFailure": 0
+    },
+    {
+      "helper": "candidate-review-r2",
+      "revision": "candidateR1 helperR2",
+      "exitCode": 0,
+      "stdout": "BUILD-CANDIDATE-R2.stdout.log",
+      "stderr": "BUILD-CANDIDATE-R2.stderr.log",
+      "correction": "HELPER-COMPILE-CORRECTION-R2.json"
+    },
+    {
+      "helper": "candidate-review-r3",
+      "revision": "candidateR2 helperR3",
+      "exitCode": 0,
+      "stdout": "BUILD-CANDIDATE-R3.stdout.log",
+      "stderr": "BUILD-CANDIDATE-R3.stderr.log",
+      "correction": "HELPER-CLOCK-REGRESSION-R3.json"
+    }
+  ],
+  "scope": "CPU SDK helpers only; no app/window/Metal device"
+}

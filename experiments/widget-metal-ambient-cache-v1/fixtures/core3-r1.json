@@ -1,0 +1,328 @@
+{
+  "version": "cache-core-multisource3-r1",
+  "scope": "OriginalR3 direct artificial producer events, samecache emitter. NotnativeAPI/OSmultiple-sourceadoption.",
+  "cases": [
+    {
+      "id": "R01",
+      "events": [
+        {
+          "at": 0,
+          "source": "system",
+          "seq": 1,
+          "kind": "focus",
+          "data": {
+            "field": "normal",
+            "documentId": "D"
+          }
+        },
+        {
+          "at": 1,
+          "source": "editor",
+          "seq": 1,
+          "kind": "baseline",
+          "data": {
+            "documentId": "D",
+            "version": 0,
+            "text": ""
+          }
+        },
+        {
+          "at": 2,
+          "source": "editor",
+          "seq": 2,
+          "kind": "document-edit",
+          "data": {
+            "documentId": "D",
+            "baseVersion": 0,
+            "version": 1,
+            "reason": "type",
+            "ink": "blue",
+            "changes": [
+              {
+                "offset": 0,
+                "deleteCount": 0,
+                "text": "A"
+              }
+            ]
+          },
+          "op": 1,
+          "evidence": "synthetic-commit"
+        },
+        {
+          "at": 3,
+          "source": "echo",
+          "seq": 1,
+          "kind": "document-edit",
+          "data": {
+            "documentId": "D",
+            "baseVersion": 0,
+            "version": 1,
+            "reason": "type",
+            "ink": "blue",
+            "changes": [
+              {
+                "offset": 0,
+                "deleteCount": 0,
+                "text": "A"
+              }
+            ]
+          },
+          "op": 1,
+          "evidence": "synthetic-commit"
+        },
+        {
+          "at": 4,
+          "source": "sender",
+          "seq": 1,
+          "kind": "explicit-send",
+          "data": {
+            "text": "B",
+            "ink": "green",
+            "selectionDeclared": true,
+            "documentId": null,
+            "documentVersion": null
+          },
+          "op": 2,
+          "evidence": "synthetic-explicit-send"
+        },
+        {
+          "at": 5,
+          "source": "documentApi",
+          "seq": 1,
+          "kind": "document-edit",
+          "data": {
+            "documentId": "D",
+            "baseVersion": 1,
+            "version": 2,
+            "reason": "replace",
+            "ink": "blue",
+            "changes": [
+              {
+                "offset": 0,
+                "deleteCount": 1,
+                "text": "D"
+              }
+            ]
+          },
+          "evidence": "document-only"
+        },
+        {
+          "at": 300,
+          "advance": true
+        }
+      ],
+      "expected": {
+        "body": "AB",
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "document": "D",
+        "units": 2
+      }
+    },
+    {
+      "id": "R02",
+      "events": [
+        {
+          "at": 0,
+          "source": "system",
+          "seq": 1,
+          "kind": "focus",
+          "data": {
+            "field": "normal",
+            "documentId": "D"
+          }
+        },
+        {
+          "at": 1,
+          "source": "editor",
+          "seq": 1,
+          "kind": "baseline",
+          "data": {
+            "documentId": "D",
+            "version": 0,
+            "text": ""
+          }
+        },
+        {
+          "at": 2,
+          "source": "system",
+          "seq": 2,
+          "kind": "admission-ready",
+          "data": {
+            "ready": false
+          }
+        },
+        {
+          "at": 3,
+          "source": "editor",
+          "seq": 2,
+          "kind": "document-edit",
+          "data": {
+            "documentId": "D",
+            "baseVersion": 0,
+            "version": 1,
+            "reason": "type",
+            "ink": "blue",
+            "changes": [
+              {
+                "offset": 0,
+                "deleteCount": 0,
+                "text": "X"
+              }
+            ]
+          },
+          "op": 1,
+          "evidence": "synthetic-commit"
+        },
+        {
+          "at": 4,
+          "source": "keys",
+          "seq": 3,
+          "kind": "activity",
+          "data": {
+            "count": 1,
+            "class": "key"
+          }
+        },
+        {
+          "at": 5,
+          "source": "system",
+          "seq": 3,
+          "kind": "admission-ready",
+          "data": {
+            "ready": true
+          }
+        },
+        {
+          "at": 6,
+          "alias": 3
+        },
+        {
+          "at": 300,
+          "advance": true
+        }
+      ],
+      "expected": {
+        "body": "X",
+        "inks": [
+          "blue"
+        ],
+        "document": "X",
+        "units": 1,
+        "gaps": 1,
+        "pendingSlots": 0
+      }
+    },
+    {
+      "id": "R03",
+      "events": [
+        {
+          "at": 0,
+          "source": "system",
+          "seq": 1,
+          "kind": "focus",
+          "data": {
+            "field": "normal",
+            "documentId": "D"
+          }
+        },
+        {
+          "at": 1,
+          "source": "editor",
+          "seq": 1,
+          "kind": "baseline",
+          "data": {
+            "documentId": "D",
+            "version": 0,
+            "text": ""
+          }
+        },
+        {
+          "at": 2,
+          "source": "editor",
+          "seq": 2,
+          "kind": "document-edit",
+          "data": {
+            "documentId": "D",
+            "baseVersion": 0,
+            "version": 1,
+            "reason": "type",
+            "ink": "blue",
+            "changes": [
+              {
+                "offset": 0,
+                "deleteCount": 0,
+                "text": "A"
+              }
+            ]
+          },
+          "op": 1,
+          "evidence": "synthetic-commit"
+        },
+        {
+          "at": 300,
+          "advance": true
+        },
+        {
+          "at": 301,
+          "source": "system",
+          "seq": 2,
+          "kind": "focus",
+          "data": {
+            "field": "normal",
+            "documentId": "E"
+          }
+        },
+        {
+          "at": 302,
+          "source": "editor",
+          "seq": 3,
+          "kind": "baseline",
+          "data": {
+            "documentId": "E",
+            "version": 0,
+            "text": ""
+          }
+        },
+        {
+          "at": 303,
+          "source": "editor",
+          "seq": 4,
+          "kind": "document-edit",
+          "data": {
+            "documentId": "E",
+            "baseVersion": 0,
+            "version": 1,
+            "reason": "type",
+            "ink": "purple",
+            "changes": [
+              {
+                "offset": 0,
+                "deleteCount": 0,
+                "text": "C"
+              }
+            ]
+          },
+          "op": 1,
+          "evidence": "synthetic-commit"
+        },
+        {
+          "at": 700,
+          "advance": true
+        }
+      ],
+      "expected": {
+        "body": "AC",
+        "inks": [
+          "blue",
+          "purple"
+        ],
+        "document": "C",
+        "units": 2,
+        "focusEpoch": 2
+      }
+    }
+  ]
+}

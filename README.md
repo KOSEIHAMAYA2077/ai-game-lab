@@ -4,6 +4,10 @@
 
 [▶ ブラウザで試す・60形](https://koseihamaya2077.github.io/glyph-matter/) / [小窓Web版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/) / [研究の技術・課題・先行研究](research/widget-research-map-20261003.md)。全アプリ入力との連動はまだ実装していません。
 
+専用入力から小窓へ渡す比較では、待機中の全文転送をやめ、増えた材料だけを受け取る候補を保存しました。独立した12セッションで文字の位置・色・形が元の処理と一致し、時刻の巻戻りを拒否する修正も記録しています。[実装・原票・確認範囲](experiments/widget-metal-ambient-cache-v1/REPORT-R2.md) / [独立監査](experiments/widget-metal-ambient-cache-review-v1/REPORT-R2.md)。小窓全体の負荷、実IME、OS入力は未確認です。
+
+作業の横に置く用途では「形を命令する」と「文章から形を連想する」を別に評価します。[内容の連想と次の比較方針](research/ambient-association-policy-v1/README.md)。連想の楽しさや邪魔にならなさは、人による検証が残っています。
+
 ### 日本語の意味特徴を小さく配備する比較
 
 日本語の固定特徴を、約8MiBの表とMac標準CPU処理へ移しました。単独CLIの短い人工試験ではpeak43.53MiB、処理内p95約0.044ms。独立した追加20件と別枠の特殊token4件で、元の処理との一致を確認しました。曖昧な文章から正しい形を選ぶ精度は別課題で、既定の60形版へは接続していません。[候補・原票・失敗](experiments/native-static-japanese-v1/PUBLIC-README-R6.md) / [独立配備確認と未整備の入力境界](experiments/native-static-japanese-review-v1/REPORT.md)。全widget・16GB Windows・消費電力の値ではありません。

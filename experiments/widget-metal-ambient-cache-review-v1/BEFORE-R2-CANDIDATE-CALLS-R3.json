@@ -1,0 +1,156 @@
+{
+  "version": "before-candidate-r2-native-known-regression-r3",
+  "timeUTC": "2026-10-02T23:51:45.150364+00:00",
+  "candidateNativeCallsBeforeFreeze": 0,
+  "candidateRevision": "R2",
+  "reviewHelperRevision": "R3",
+  "cases": "unchanged independent R1 twelve sessions and fourteen parent wire cases, fifteen attempts",
+  "expected": "same manual R1 expectations and bitwise CPU instance gates",
+  "newIndependentFixture": false,
+  "priorR1Failure": "W12 clock rollback",
+  "referenceNodeReuse": "Candidate JS bundle byte-identical to R1; no duplicate Node evaluation required. Existing CANDIDATE-NODE-R1.json compares same JS behavior.",
+  "buildExitCode": 0,
+  "references": [
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/CandidateReview-R3.swift",
+      "sha256": "9e644caf2d564c87804bccf12b8704f821d59b187e5857121f3af66fb8924ba2",
+      "bytes": 8919
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/candidate-review-r3",
+      "sha256": "cd377e4a8b2868906d6e5bf8113e1edc2b89ab05ee32363ce7fee2c8938dae0c",
+      "bytes": 252832
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/Candidate-GeometryTypes.swift",
+      "sha256": "3c010e2d75d363f1a2c9083204b3af4f2e9762aa65d13c60ef7a9a08a4c1c023",
+      "bytes": 1880
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/CandidateR2-Projection.swift",
+      "sha256": "ef2f906e4534e215b1e35025f18938aa133117c34c10080c55732711491e3bb4",
+      "bytes": 6378
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/CandidateR2-ReceiverBridge.swift",
+      "sha256": "87cd98ee27afd9f3bd9032cb972bb2680cbc4fc9f8b0400180f3de8954140a2d",
+      "bytes": 5258
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/CASES-R1.json",
+      "sha256": "c864ec5270af14ef4484a6256841035b31c6b9b92e3f259129e5f2c2eb704db8",
+      "bytes": 37555
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/METHOD-R1.md",
+      "sha256": "2fd3863cc6cb21343d43232e35a7943a8d09e158313606741d7dc6b95b3cd62f",
+      "bytes": 5571
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/WIRE-MAPPING-R1.json",
+      "sha256": "cce91b3cb1a3216fd8f005dd85690639cb46476c2dc5dd7687f9633e953533d5",
+      "bytes": 37697
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/compare-r1.py",
+      "sha256": "8c58db9b32acbc2fee931bb1b3fb066f37716a32d6ca93b95a101e35432f7694",
+      "bytes": 4324
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/CANDIDATE-PIN-R2.json",
+      "sha256": "f3c94e08af1711db7bbde9b70bd1814580681eda23415e5212c81f22f1924f66",
+      "bytes": 1977
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/CANDIDATE-SOURCE-PIN-R2.json",
+      "sha256": "4ca52ad60ea59e8da1ccb41cf8eaa332df1dffd9b99f2e6d835d0cd56da70dac",
+      "bytes": 3479
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/HELPER-CLOCK-REGRESSION-R3.json",
+      "sha256": "0176c84b2a1d97b058ff1bc62348127c682d9e6b6f1ebe8fa9e9769e91fa6607",
+      "bytes": 436
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W01-r1.js",
+      "sha256": "52fa415cf2e20dbb69b482f2e08764a9658a51420a44b2718b2c44fc90d4d9a5",
+      "bytes": 1708
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W02-r1.js",
+      "sha256": "5e45a291162393c36e4fa4bf7251885f31547d98174fdf46fb63909d793418ee",
+      "bytes": 1708
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W03-r1.js",
+      "sha256": "8728ed9d4b72d7df666a7f119279636d2f4cec5ab7d44d0aa28731ecc43028d4",
+      "bytes": 1708
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W04-r1.js",
+      "sha256": "fb1f08dded2f8bf4be4e2edfdab528e7d70d26e3acd1e838d87167b208f12a76",
+      "bytes": 1721
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W05-r1.js",
+      "sha256": "d603f60904d8df5f095bb5a87e6e2fdcd808af1ef2750b2c59f3189a17981e44",
+      "bytes": 1723
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W06-r1.js",
+      "sha256": "3859594b886bf4be229c8e95c4495f6981fa5c6b2457f5bb821690c5e76b681b",
+      "bytes": 1708
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W07-r1.js",
+      "sha256": "4a2aa781b28201056ccc5539696c5a2c2f7a695157148a110ff02cba74f6534f",
+      "bytes": 1715
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W08-r1.js",
+      "sha256": "c8cd72b5c6a35b2a0fbe46412324d4dc3a2e98c92e74373a09cc4f146850f2a9",
+      "bytes": 1708
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W09-r1.js",
+      "sha256": "9e21a653f2a622650982479280259303759ceca937be02a797286e591997e957",
+      "bytes": 1484
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W10-r1.js",
+      "sha256": "c9cd0673ed965a08b83c2d46e499f64b521cd2a4bf695914b2255c2059eae44d",
+      "bytes": 1484
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W11-emptyText-r1.js",
+      "sha256": "7aa2cd4d9a1c6d79abb1ec05fdb3ef157f7c72c93d6604b6b2a107d77da1f7e6",
+      "bytes": 1707
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W11-redInk-r1.js",
+      "sha256": "f8017ecf61c11a5d8fb87371b0e476caff4859a264aa547f1aae8b43ee16f425",
+      "bytes": 1706
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W12-r1.js",
+      "sha256": "874e7edf658c0c3611bb2914dc896174c8468b887a2a1a875701a9550f1f350f",
+      "bytes": 1484
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W13-r1.js",
+      "sha256": "9fc3ec75d319cf779236eeff460a951e00e90c95d36e161d88563f0abb0bbb6c",
+      "bytes": 1722
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-review-v1/fake-wire-W14-r1.js",
+      "sha256": "52c75bf383c023426d120696923b1b09db95da3d7ec1e457f29b883143f9da72",
+      "bytes": 1673
+    }
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "release": "25.5.0"
+  },
+  "scope": "No app launch, UI, GPU, OS capture, clipboard, model, new downloads or whole-window resource measurement."
+}

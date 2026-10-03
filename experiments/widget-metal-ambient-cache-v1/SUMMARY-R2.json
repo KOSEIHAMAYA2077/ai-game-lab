@@ -1,0 +1,45 @@
+{
+  "version": "ambient-cache-summary-r2",
+  "candidate": "CACHE-CANDIDATE-R2.json",
+  "candidateManifestSHA256": "dc94290b4ae32ee83a5f5f306dec891fd98578733d745efc46a35a6ee0b8e725",
+  "sourceScope": "Host clock guard only. OriginalR3/sourceJS/OwnEditor/renderer/shader/16geometry/weights/density unchanged",
+  "clockKnownSupplement": {
+    "R1passed": 4,
+    "R1total": 8,
+    "R1failures": [
+      "C01",
+      "C04",
+      "C05",
+      "C07"
+    ],
+    "R2passed": 8,
+    "R2total": 8,
+    "R2failures": [],
+    "notFresh": true
+  },
+  "sameNativeCoreWireKnownRegression": {
+    "native14Passed": 14,
+    "core3Passed": 3,
+    "invalid8Passed": 8,
+    "instancePairs": 15908,
+    "geometryChecks": 96,
+    "failures": []
+  },
+  "sameBoundaryKnownRegression": {
+    "bodyCount": 256,
+    "bodyUTF16": 65536,
+    "largestCacheDeltaBytes": 952,
+    "largestMetadataBytes": 410,
+    "idleBodyCalls": 0,
+    "idleValidatedUnits": 0,
+    "offExportSameAndSafe": true,
+    "failures": []
+  },
+  "R1TimingMustNotBeRelabeledAsR2": true,
+  "R1RawAndSourcePreserved": true,
+  "actualNativeUIIMEOSGPU": false,
+  "wholeWidgetResourceClaim": false,
+  "independentReviewR2PendingAtAuthorReturnPreparation": false,
+  "independentReviewGate": "INDEPENDENT-GATE-R2.json",
+  "decision": "Limited CPU/source integration candidate R2 passed independent known regressions; actual nativeUI/IME/wholewindow resources untested"
+}

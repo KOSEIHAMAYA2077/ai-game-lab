@@ -1,0 +1,34 @@
+--- Projection_R1
++++ Projection_R2
+@@ -1,3 +1,4 @@
++// R2 host clock guard only; original ID-derived instance expression unchanged.
+ import Foundation
+ import simd
+ 
+@@ -34,6 +35,7 @@
+     private(set) var glyphs: [AmbientGlyphView] = []
+     private(set) var bodyCount = 0
+     private(set) var receiverSession: String?
++    private(set) var observedAt: Int?
+     private var stagedViews: [AmbientUnit] = []
+     private(set) var validatedUnits = 0
+     private(set) var metadataUpdates = 0
+@@ -52,7 +54,8 @@
+         guard m.cacheVersion == Self.cacheVersion, m.receiverSession == receiverSession,
+               m.bodyCount >= bodyCount, m.bodyCount <= 256, m.materialGeneration == m.bodyCount, m.nextId == m.bodyCount + 1,
+               m.presentedCount >= glyphs.count, m.presentedCount <= m.bodyCount,
+-              m.aggregate.savingOff, m.aggregate.bodyCount == m.bodyCount,
++              m.aggregate.savingOff, m.aggregate.now >= 0, m.aggregate.now <= 9_007_199_254_740_991,
++              m.aggregate.now >= (observedAt ?? 0), m.aggregate.bodyCount == m.bodyCount,
+               m.aggregate.presentedCount == m.presentedCount, m.aggregate.shape == m.shape,
+               let mapped = Self.mappedShape(m.shape) else { throw AmbientLabError.invalidProjection }
+         let expectedAdded = m.bodyCount - bodyCount
+@@ -78,7 +81,7 @@
+             glyphs.append(AmbientGlyphView(text: unit.text, id: unit.id, born: time, ink: unit.ink,
+                 intakeSeed: UInt32(unit.id) &* 2_654_435_761 &+ seed, inputIndex: unit.id - 1))
+         }
+-        bodyCount = m.bodyCount; shape = mapped
++        bodyCount = m.bodyCount; shape = mapped; observedAt = m.aggregate.now
+         metadataUpdates += 1
+         if glyphs.count != oldCount { projectionUpdates += 1 }
+         return glyphs.count != oldCount

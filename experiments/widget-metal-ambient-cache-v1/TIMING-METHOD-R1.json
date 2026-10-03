@@ -1,0 +1,38 @@
+{
+  "version": "cache-local-timing-workloads-r1",
+  "warm": {
+    "rounds": 5,
+    "tickCount": 1500,
+    "tickStepMs": 67,
+    "bodyCount": 256,
+    "text": "A",
+    "settleAtMs": 7000,
+    "ordering": [
+      "old-cache",
+      "cache-old",
+      "old-cache",
+      "cache-old",
+      "old-cache"
+    ],
+    "expectedCacheIdleBodyCalls": 0,
+    "expectedCacheIdleValidatedUnits": 0,
+    "expectedOldFullCallsPerRound": 1500,
+    "expectedBodyOutputEquality": true
+  },
+  "cold": {
+    "pairs": 10,
+    "alternatingOrder": true,
+    "sameBundleGraph": false,
+    "note": "Reportnewruntimegraphsize/coldbootstrapconfounding; noCPU improvement threshold."
+  },
+  "burstPresentation": {
+    "text": "A",
+    "count": 256,
+    "ticks": 110,
+    "stepMs": 67,
+    "expectedFinalPresented": 256,
+    "expectedTotalTransferredCachedUnits": 256
+  },
+  "sharedContention": "notcontrolled/otherrootagentsunknown; no globalprocessenumeration",
+  "timeScope": "ownCLIprocessCPU delta +localwall, no wholewidgetRAM/CPU/energy/fps/humanclaims"
+}

@@ -1,0 +1,11 @@
+--- AppMain_R1
++++ AppMain_R2
+@@ -101,7 +101,7 @@
+         guard let url = diagnosisURL, let r = renderer, let a = bridge?.lastMetadata?.aggregate else { return }
+         let uptime = ProcessInfo.processInfo.systemUptime
+         guard force || uptime - lastDiagnostic >= 1 else { return }; lastDiagnostic = uptime
+-        var object = r.diagnostics(); for (key, value) in bridge.diagnostics() { object[key] = value }; object["version"] = "metal-ambient-cache-v1-r1"; object["pid"] = ProcessInfo.processInfo.processIdentifier
++        var object = r.diagnostics(); for (key, value) in bridge.diagnostics() { object[key] = value }; object["version"] = "metal-ambient-cache-v1-r2"; object["pid"] = ProcessInfo.processInfo.processIdentifier
+         object["bodyCount"] = a.bodyCount; object["presentedCount"] = a.presentedCount; object["status"] = a.status; object["reason"] = a.reason; object["savingOff"] = true
+         if let data = try? JSONSerialization.data(withJSONObject: object, options: [.sortedKeys]) { try? data.write(to: url, options: .atomic) }
+     }

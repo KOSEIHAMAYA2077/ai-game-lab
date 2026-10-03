@@ -214,3 +214,7 @@ GitHubのREADMEトップからGitHub Pagesの試遊版へ直接進む導線を�
 固定した8MiB F16表とtokenizerをSwift CLIへ移したR5候補を保存。作者の709は失敗を修正した既知回帰、独立20とartifact-informed特殊token4は別母数で各一致。短batch1382callでpeak43.53MiB・query内p95約0.044ms。意味精度、全widget、Windows16GB、電力の値ではない。外側frame制限・本文なし応答・形の受理policyが未整備なので既定接続を保留。[公開確認](experiments/native-static-publication-v1/README.md)。
 
 別に、固定CLIを100分保持する人工query/idle補足を開始。実UI・GPU・OS入力を使わず、完走前の値を長期達成として報告しない。
+
+## 2026-10-03 待機中の全文転送を減らす別候補
+
+差分受信cache R2を保存。独立12セッション・66stepの804描画レコードが元処理とbitwise一致。R1のclock失敗を残し、同期待のR2 wireは15/15。意味モデル・全アプリ取得・実窓資源は追加していない。連想policyの設計分析を別資料へ記録。既定版は保持。

@@ -1,0 +1,49 @@
+{
+  "version": "local-CLI-compiled-pins",
+  "compiler": "AppleSwift6.3.2 lang5 SDK26.5 targetarm64-macos26.0",
+  "scope": "Tests only; not nativewindow resource/model/OS capture",
+  "executables": [
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-boundary-r1",
+      "bytes": 322496,
+      "sha256": "edf081001ea53f173f9a775f554a2f8ca59c2ce87781c1961f6be6e764829712"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-boundary-r2",
+      "bytes": 322848,
+      "sha256": "af3af01ef13b1934e5c3edfa0d5edd192a3d1e906850e225bd557dc452b6d49d"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-clock-r1-reproduction",
+      "bytes": 229768,
+      "sha256": "41a58daa23da813fca255232f9cf102681207f9fcd066142c88d90aed9828569"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-clock-r2",
+      "bytes": 230048,
+      "sha256": "183d2a0685fe3da6e1c153f6b78bb43f2146ad4a83ef7a5774480c00cec17624"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-cpu-r1",
+      "bytes": 338992,
+      "sha256": "574d0b9b4eda14495499c3fbdab069ca889fbed342e9c09033ea8c6880a8bd48"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-cpu-r2",
+      "bytes": 339280,
+      "sha256": "785e6464d1ff7eab82de7284331b6231500092571fc70159fbe0b144d278edbd"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/work/cache-timing-r1",
+      "bytes": 320016,
+      "sha256": "05a4b5bc172c258a075f36e55f304ffb1cff06bd1ca702f1c57ddb08ad9cc5d8"
+    }
+  ],
+  "R1harnessMethods": [
+    "CPU-HARNESS-FREEZE-R1.json",
+    "TIMING-HARNESS-FREEZE-R1.json",
+    "BOUNDARY-HARNESS-FREEZE-R1.json"
+  ],
+  "R2sourceMethod": "CLOCK-SOURCE-FREEZE-R2.json",
+  "R2originalCPUAndBoundaryHarnessUnchanged": true
+}

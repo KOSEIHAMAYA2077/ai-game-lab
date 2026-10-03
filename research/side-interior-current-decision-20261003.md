@@ -56,3 +56,11 @@ Mac標準の `unmarkText` は、印を外した文字を通常挿入として受
 4. 実IMEと対応アプリの少数経路を確認してから、本人が作業中に置ける版へ進む。機構の正しさと、邪魔にならないか・愛着があるかは別の確認にする。
 
 人間評価の参加者は現在0人。8時間の開発作業を8時間の利用体験とは呼ばない。[研究質問と人による評価案](ambient-study-questions-v1/README.md) / [技術・課題・先行研究の地図](widget-research-map-20261003.md)。
+
+## 入力を増やすときと、待機するときの別比較
+
+[cache候補R2](../experiments/widget-metal-ambient-cache-v1/REPORT-R2.md)は同じR3正本を使い、増えた材料を差分で渡し、待機中はmetadataだけを渡す。Swift側で毎回全文を復号・検算する経路を外した。独立12セッション・66通常stepの804描画レコードが元R5とbitwise一致した。独立wire初回R1の時計巻戻り失敗は残し、R2の同期待回帰では15/15を通した。[独立報告](../experiments/widget-metal-ambient-cache-review-v1/REPORT-R2.md)。
+
+これは転送とSwift側の検算の比較である。coreは形の窓でboundedなbodyのsliceを読み、増加時に全bodyから新しいID範囲を選ぶため、内部の全走査が常に0、計算時間が常に差分量だけ、とは言えない。R1の局所CPU測定をR2や全widgetの数値へ流用しない。実窓・IME・GPU再評価は未実施で、既定版へ接続していない。
+
+[連想policyの再検討](ambient-association-policy-v1/README.md)では、正しい命令実行と、日常文から許容できる姿を提案する課題を分けた。これは設計分析で、既存の意味評価の不採用判断を覆す実測ではない。形変更の頻度・保留・現在の定期変更の共存を、次の人による比較へ送る。

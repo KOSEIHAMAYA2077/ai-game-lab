@@ -1,0 +1,18 @@
+--- ReceiverBridge_R1
++++ ReceiverBridge_R2
+@@ -1,3 +1,4 @@
++// R2 host clock guard only; R1 source and immutable app retained.
+ import Foundation
+ import JavaScriptCore
+ 
+@@ -41,7 +42,9 @@
+         guard m.cacheVersion == AmbientProjection.cacheVersion, m.receiverSession == receiverSession,
+               m.bodyCount >= knownBodyCount, m.bodyCount <= 256, m.materialGeneration == m.bodyCount, m.nextId == m.bodyCount + 1,
+               m.presentedCount >= lastPresentedCount, m.presentedCount <= m.bodyCount,
+-              m.aggregate.savingOff, m.aggregate.bodyCount == m.bodyCount, m.aggregate.presentedCount == m.presentedCount,
++              m.aggregate.savingOff, m.aggregate.now >= 0, m.aggregate.now <= 9_007_199_254_740_991,
++              m.aggregate.now >= (lastMetadata?.aggregate.now ?? 0),
++              m.aggregate.bodyCount == m.bodyCount, m.aggregate.presentedCount == m.presentedCount,
+               m.aggregate.shape == m.shape, AmbientProjection.mappedShape(m.shape) != nil else { throw AmbientLabError.bridgeFailure }
+         var delta: AmbientCacheDelta?
+         if m.bodyCount > knownBodyCount {
