@@ -1,0 +1,14 @@
+experiments/native-static-wire-v1/NativeStaticWireR1.swift:218:55: error: missing argument for parameter #2 in call
+ 14 |  return hash.finalize().map{String(format:"%02x",$0)}.joined()
+ 15 | }
+ 16 | func readJSON<T:Decodable>(_ path:String,_ type:T.Type)throws->T{try JSONDecoder().decode(type,from:Data(contentsOf:URL(fileURLWithPath:path)))}
+    |      `- note: 'readJSON' declared here
+ 17 | func writeNew<T:Encodable>(_ path:String,_ value:T)throws{
+ 18 |  guard !FileManager.default.fileExists(atPath:path) else {throw LabError.invalid("output exists")}
+    :
+216 |   guard try shaFile(captionsPath) == "00a0483a29f2afa11d85d5019ac867d14c6b0d8ee71ac020da2bacb92ff587a8" else { throw WireFailure.runtime }
+217 |   encoder = try NativeEncoder(tokenizerPath: local + "/source/" + revision + "/0_StaticEmbedding/tokenizer.json", tablePath: local + "/tables/table-128-float16.bin")
+218 |   let inventory: Inventory = try readJSON(captionsPath)
+    |                                                       `- error: missing argument for parameter #2 in call
+219 |   let captions = inventory.entries.flatMap { e in e.captions.map { Caption(registry: e.registry, label: e.label, text: $0) } }
+220 |   ranker = try NativeRanker(encoder: encoder, captions: captions)

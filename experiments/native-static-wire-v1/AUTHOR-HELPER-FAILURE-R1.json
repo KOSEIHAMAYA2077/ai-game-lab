@@ -1,0 +1,11 @@
+{
+  "UTC": "2026-10-03T00:02:54.971405+00:00",
+  "failure": "KeyError: hold",
+  "cause": "Old R5 Codable omits nil hold; author helper indexed hold instead of get. Candidate unchanged.",
+  "completedBeforeHelperFailure": {
+    "oldCalls": 5,
+    "newCalls": 5
+  },
+  "rawReplyRetention": "Initial helper held replies only in memory and failed before save. They were not retained; do not count first batch as checked parity.",
+  "next": "Save raw before comparison; rerun known fixture once as helper R2, not fresh evaluation."
+}

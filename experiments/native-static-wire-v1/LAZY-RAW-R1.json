@@ -1,0 +1,13 @@
+{
+  "invalidOnly": {
+    "exit": 0,
+    "stdout": "{\"ranks\":[],\"requestId\":null,\"registry\":\"shape\",\"hold\":\"invalid_schema\",\"elapsedMs\":0.1431249976158142}\n{\"registry\":null,\"hold\":\"invalid_registry\",\"ranks\":[],\"requestId\":7,\"elapsedMs\":0.020166993141174316}\n",
+    "stderr": ""
+  },
+  "validMissingModel": {
+    "exit": 1,
+    "stdout": "",
+    "stderr": "wire_runtime_failure\n"
+  },
+  "interpretation": "Invalid frame replies do not require model availability. Missing-model valid request fails closed with fixed stderr; no automatic download. Not direct allocation tracing or OS input safety."
+}
