@@ -1,0 +1,83 @@
+{
+  "scope": "Post-audit descriptive sensitivity only; not a changed evaluation or new tuning set. Main 244-case results remain unchanged. Exclusions use union across all train/dev corpora, applied equally to every method. No inference rerun.",
+  "slices": {
+    "anyPhrase8": {
+      "excludedIds": [
+        "description-015",
+        "description-016",
+        "description-029",
+        "description-034",
+        "description-036",
+        "description-037",
+        "description-045",
+        "description-066",
+        "description-069",
+        "description-116",
+        "hold-008",
+        "hold-013"
+      ],
+      "descriptionResults": {
+        "rules": {
+          "correct": 5,
+          "total": 110
+        },
+        "seed": {
+          "correct": 21,
+          "total": 110
+        },
+        "bonsai4": {
+          "correct": 24,
+          "total": 110
+        },
+        "bonsai8": {
+          "correct": 25,
+          "total": 110
+        },
+        "static-seed": {
+          "correct": 80,
+          "total": 110
+        },
+        "static-bonsai8": {
+          "correct": 80,
+          "total": 110
+        }
+      }
+    },
+    "strongPhrase": {
+      "excludedIds": [
+        "description-015",
+        "description-016",
+        "description-036",
+        "description-045",
+        "hold-008",
+        "hold-013"
+      ],
+      "descriptionResults": {
+        "rules": {
+          "correct": 5,
+          "total": 116
+        },
+        "seed": {
+          "correct": 26,
+          "total": 116
+        },
+        "bonsai4": {
+          "correct": 29,
+          "total": 116
+        },
+        "bonsai8": {
+          "correct": 30,
+          "total": 116
+        },
+        "static-seed": {
+          "correct": 86,
+          "total": 116
+        },
+        "static-bonsai8": {
+          "correct": 86,
+          "total": 116
+        }
+      }
+    }
+  }
+}

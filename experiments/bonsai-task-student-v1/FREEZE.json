@@ -1,0 +1,35 @@
+{
+  "frozenBeforeIndependentEvaluation": true,
+  "charPreview": "bonsai8",
+  "staticPreview": "static-seed",
+  "basis": "Development only. Character student: gated name-free descriptions seed3/240, Bonsai4 3/240, Bonsai8 7/240. Static: equally weighted named/description/hold development objective seed0.6885417, Bonsai8 0.6815972. No holdout predictions inspected by model developer.",
+  "teacherClaim": "Offline paraphrase augmentation only; not transferred Bonsai weights/logits/hidden states. Static feature model is unrelated pretrained Japanese embedding, frozen.",
+  "models": {
+    "seed": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+    "bonsai4": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+    "bonsai8": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+    "static-seed": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df",
+    "static-bonsai8": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889"
+  },
+  "files": {
+    "train.py": "247438d8fc488b585e8898ca916e62524f35f3eec89e0c33286e491ba23d3b38",
+    "train_static.py": "4d8b03b091582fcf7fa6bcb46d2cfc65977d776cfbe21725ff91906c7414fbd9",
+    "predict_static.py": "622614b1c9cb82802b8d863c276bc468909995800cfd1fb3f46112af800a853c",
+    "seeds/shapes.json": "9890b0cc751455a4e895cd4c60e8a9e3a574d3b42d227248151b80f211d9de51",
+    "seeds/holds.json": "9def20d665f1fbca5dcbb0a73b5900a7d078027b8042dfa70944644fecf0c963",
+    "seeds/transforms.json": "d0d10d5f5f2e2cf61ad6e2f03e6bebebce14718755ae97b2e0095a5bddc9e96e",
+    "teacher/curated-r2.json": "d5b8c7be2368393aa4f40f28a2b30ba4c3715bf600818550a017a23eb404f436",
+    "teacher/curated-r3.json": "6d1100c3bfcc4774fd8a4d0283cc8904f5d78a626f0d3466dc3481c78b97116b",
+    "static-candidate/export_features.py": "59040afc86950ec93435f533c3b4ec61029ca745a0db1de053880de0f772d4c6",
+    "artifacts/seed-model.json": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+    "artifacts/seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+    "artifacts/bonsai4-model.json": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+    "artifacts/bonsai4-corpus.json": "9212a59a03eb600013496337b9474973002ab539c9fd594cf79be60269a9ee07",
+    "artifacts/bonsai8-model.json": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+    "artifacts/bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+    "artifacts/static-seed-model.json": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df",
+    "artifacts/static-seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+    "artifacts/static-bonsai8-model.json": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889",
+    "artifacts/static-bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2"
+  }
+}

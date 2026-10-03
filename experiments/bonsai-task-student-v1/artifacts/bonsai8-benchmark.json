@@ -1,0 +1,56 @@
+{
+  "kind": "bonsai8",
+  "modelBytes": 1516980,
+  "loadMs": 5.9482089999999985,
+  "decodedWeightBytes": 1134592,
+  "rssNowBytes": 70369280,
+  "rssMaxKiB": 68720,
+  "host": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.4.0"
+  },
+  "results": [
+    {
+      "characters": 2,
+      "label": "花瓶",
+      "shape": "vase",
+      "p50Ms": 0.007750000000001478,
+      "p95Ms": 0.011541999999998609,
+      "maxMs": 0.08574999999999733
+    },
+    {
+      "characters": 16,
+      "label": "全体を細くして縦に伸ばした立方体",
+      "shape": "cube",
+      "p50Ms": 0.036625000000000796,
+      "p95Ms": 0.07733299999999588,
+      "maxMs": 0.1569579999999995
+    },
+    {
+      "characters": 24,
+      "label": "海の中をふわふわ漂う、傘の下に触手が垂れた生き物",
+      "shape": "jellyfish",
+      "p50Ms": 0.039166999999999064,
+      "p95Ms": 0.05245800000000145,
+      "maxMs": 0.09279200000000287
+    },
+    {
+      "characters": 9,
+      "label": "今日は作業を進めた",
+      "shape": "hold",
+      "p50Ms": 0.016291999999999973,
+      "p95Ms": 0.02441699999999969,
+      "maxMs": 0.09579199999999588
+    },
+    {
+      "characters": 512,
+      "label": "512-character-boundary",
+      "shape": "hold",
+      "p50Ms": 0.17929199999998957,
+      "p95Ms": 0.2065419999999989,
+      "maxMs": 0.24854200000000048
+    }
+  ],
+  "scope": "Single Node CPU process. Load excludes download. p50/p95 exclude model parsing/loading and drawing; 512-character input included. Not the full widget or general laptop validation."
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "seed",
+  "rows": 17289,
+  "heads": {
+    "shape": {
+      "train": 4332,
+      "dev": 1212,
+      "recomputedDevCorrect": 985,
+      "trainFamilies": 2172,
+      "devFamilies": 543,
+      "maxFloat32ScoreError": 0.0,
+      "maxFloat32MarginError": 2.9802322387695312e-08,
+      "maxCoverageError": 0.0,
+      "quantizedCoefficients": 499712,
+      "maxAbsQuantized": 32760
+    },
+    "length": {
+      "train": 2883,
+      "dev": 1032,
+      "recomputedDevCorrect": 792,
+      "trainFamilies": 2172,
+      "devFamilies": 543,
+      "maxFloat32ScoreError": 0.0,
+      "maxFloat32MarginError": 2.9802322387695312e-08,
+      "maxCoverageError": 0.0,
+      "quantizedCoefficients": 24576,
+      "maxAbsQuantized": 32760
+    },
+    "width": {
+      "train": 2883,
+      "dev": 1032,
+      "recomputedDevCorrect": 792,
+      "trainFamilies": 2172,
+      "devFamilies": 543,
+      "maxFloat32ScoreError": 0.0,
+      "maxFloat32MarginError": 2.9802322387695312e-08,
+      "maxCoverageError": 0.0,
+      "quantizedCoefficients": 24576,
+      "maxAbsQuantized": 32760
+    },
+    "bend": {
+      "train": 2883,
+      "dev": 1032,
+      "recomputedDevCorrect": 912,
+      "trainFamilies": 2172,
+      "devFamilies": 543,
+      "maxFloat32ScoreError": 0.0,
+      "maxFloat32MarginError": 2.9802322387695312e-08,
+      "maxCoverageError": 0.0,
+      "quantizedCoefficients": 16384,
+      "maxAbsQuantized": 32760
+    }
+  },
+  "baseAttributeRowsWithDefaultLabels": 1845,
+  "globalModifierRows": 13200,
+  "teacherCorpusRows": 0,
+  "gate": {
+    "score": 0.1,
+    "margin": 0,
+    "coverage": 0,
+    "objective": 0.90125,
+    "positiveAccuracy": 0.8025,
+    "holdAccuracy": 1.0
+  },
+  "gateCandidates": 48,
+  "teacherR2": {
+    "rawRows": 120,
+    "sourceFamilies": 120,
+    "sourceAllTrain": true,
+    "sourceDevRows": 0,
+    "statusCounts": {
+      "generated": 120
+    }
+  },
+  "issues": [],
+  "files": {
+    "experiments/bonsai-task-student-v1/train.py": "247438d8fc488b585e8898ca916e62524f35f3eec89e0c33286e491ba23d3b38",
+    "experiments/bonsai-task-student-v1/artifacts/seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+    "experiments/bonsai-task-student-v1/artifacts/seed-model.json": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+    "experiments/bonsai-task-student-v1/artifacts/seed-training.json": "0d926472844b94e150e4a8dba8b97514e589c938d71204d4faf25c114e7dba1e",
+    "experiments/bonsai-task-student-v1/teacher/raw-r2.jsonl": "b4d44d7cfbf5bbe25fb5d934bd5b483e8f610b4b6068d160dea87d52c0efc1a7"
+  },
+  "scope": "Seed/train/development artifacts only. Does not read frozen evaluation inputs or predictions."
+}

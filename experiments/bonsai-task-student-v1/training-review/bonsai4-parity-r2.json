@@ -1,0 +1,1164 @@
+{
+  "normalizationCompatibleCases": 40,
+  "normalizationCompatibleFeaturesEqual": 40,
+  "normalizationCompatibleTop1Equal": 40,
+  "normalizationCompatiblePredictionEqual": 40,
+  "normalizationCompatibleMaxScoreError": 1.3322676295501878e-15,
+  "normalizationCompatibleMaxFloat32ScoreError": 2.983867233297133e-07,
+  "unsupportedUnicodeCaseIds": [
+    "probe.unicode-16-case",
+    "probe.unicode-15-nfkc"
+  ],
+  "kind": "bonsai4",
+  "round": "r2",
+  "cases": 42,
+  "featuresEqual": 40,
+  "top1Equal": 42,
+  "predictionEqual": 42,
+  "float32Top1Equal": 42,
+  "maxScoreError": 0.0586928583258266,
+  "maxFloat32ScoreError": 0.05869282300480794,
+  "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "numpy": "2.0.2",
+  "unicodeVersion": "13.0.0",
+  "node": "v26.4.0",
+  "files": {
+    "experiments/bonsai-task-student-v1/train.py": "247438d8fc488b585e8898ca916e62524f35f3eec89e0c33286e491ba23d3b38",
+    "prototypes/glyph-creature/src/task-student-v1/inference.mjs": "e55308d7cf2c215f9326f53d4a048eb0ee1cde917764bf01f9bf7478766eca3c",
+    "experiments/bonsai-task-student-v1/artifacts/bonsai4-model.json": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+    "experiments/bonsai-task-student-v1/training-review/parity-fixtures-r2.json": "9abe94d7c583d9009b433b06f6c5a621e514d601127b58576d8b81381a8436e5"
+  },
+  "scope": "Train/dev seeds and reviewer normalization probes only. No frozen evaluation input or prediction read.",
+  "rows": [
+    {
+      "id": "condense.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 10,
+      "jsFeatureCount": 10,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 3.2526065174565133e-19,
+      "maxFloat32ScoreError": 1.1582589198866344e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "condense.radial_geometry",
+      "kind": "train-description",
+      "pythonFeatureCount": 145,
+      "jsFeatureCount": 145,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.1102230246251565e-15,
+      "maxFloat32ScoreError": 6.776346550552148e-08,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "condense.section_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 149,
+      "jsFeatureCount": 149,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.1102230246251565e-16,
+      "maxFloat32ScoreError": 7.675082291935809e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "mobius.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 30,
+      "jsFeatureCount": 30,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.804131457207376e-08,
+      "pythonPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "mobius.half_twist",
+      "kind": "train-description",
+      "pythonFeatureCount": 107,
+      "jsFeatureCount": 107,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.6020852139652106e-18,
+      "maxFloat32ScoreError": 1.856570586156181e-07,
+      "pythonPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "mobius.boundary_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 138,
+      "jsFeatureCount": 138,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.6653345369377348e-16,
+      "maxFloat32ScoreError": 2.7132170510313358e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "cube.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.3322676295501878e-15,
+      "maxFloat32ScoreError": 1.9122055139320082e-07,
+      "pythonPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "cube.equal_faces",
+      "kind": "train-description",
+      "pythonFeatureCount": 117,
+      "jsFeatureCount": 117,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 1.872300763317014e-07,
+      "pythonPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "cube.vertices_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 148,
+      "jsFeatureCount": 148,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.163336342344337e-17,
+      "maxFloat32ScoreError": 6.3631923230556e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "jellyfish.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 7.614817942869223e-08,
+      "pythonPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "jellyfish.umbrella_body",
+      "kind": "train-description",
+      "pythonFeatureCount": 129,
+      "jsFeatureCount": 129,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 1.2119329928506062e-07,
+      "pythonPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "jellyfish.stinging_cells_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 159,
+      "jsFeatureCount": 159,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.163336342344337e-17,
+      "maxFloat32ScoreError": 5.501959055020933e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "vase.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 10,
+      "jsFeatureCount": 10,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.701415998846329e-08,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "vase.narrow_neck",
+      "kind": "train-description",
+      "pythonFeatureCount": 132,
+      "jsFeatureCount": 132,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 1.4634066469731977e-07,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "vase.hand_access_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 153,
+      "jsFeatureCount": 153,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.6653345369377348e-16,
+      "maxFloat32ScoreError": 4.0459727679298396e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "snake.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 6,
+      "jsFeatureCount": 6,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 5.421010862427522e-20,
+      "maxFloat32ScoreError": 2.799493713512291e-07,
+      "pythonPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "snake.limbless_body",
+      "kind": "train-description",
+      "pythonFeatureCount": 121,
+      "jsFeatureCount": 121,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 5.637851296924623e-18,
+      "maxFloat32ScoreError": 6.741620528494252e-08,
+      "pythonPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "snake.shedding_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 141,
+      "jsFeatureCount": 141,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 3.3865256959808576e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "lotus.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 6,
+      "jsFeatureCount": 6,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 6.187875511987073e-08,
+      "pythonPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "lotus.open_layered_petals",
+      "kind": "train-description",
+      "pythonFeatureCount": 125,
+      "jsFeatureCount": 125,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.2551405187698492e-17,
+      "maxFloat32ScoreError": 9.44348350628843e-08,
+      "pythonPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "lotus.seed_pod_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 127,
+      "jsFeatureCount": 127,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 3.0531133177191805e-16,
+      "maxFloat32ScoreError": 3.326742858966725e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "bottle.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 6,
+      "jsFeatureCount": 6,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 2.0408640710734005e-07,
+      "pythonPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "bottle.neck_and_body",
+      "kind": "train-description",
+      "pythonFeatureCount": 118,
+      "jsFeatureCount": 118,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 1.6994955442939386e-08,
+      "pythonPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "bottle.pouring_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 139,
+      "jsFeatureCount": 139,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 3.3306690738754696e-16,
+      "maxFloat32ScoreError": 1.2559504963816082e-07,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.ascii-ws",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.985990418430845e-08,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.fullwidth",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 30,
+      "jsFeatureCount": 30,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 7.730326090360506e-08,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.combining",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 20,
+      "jsFeatureCount": 20,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 6.977774391625502e-08,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.astral",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 20,
+      "jsFeatureCount": 20,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 2.2564083956844172e-07,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.case-expansion",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 28,
+      "jsFeatureCount": 28,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 7.143874269921469e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.unicode-16-case",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 20,
+      "jsFeatureCount": 20,
+      "sameFeatures": false,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 0.0018118384625026099,
+      "maxFloat32ScoreError": 0.0018118384390148283,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [
+        1495,
+        2724,
+        3532,
+        4571,
+        6440,
+        6936,
+        7203,
+        7941
+      ],
+      "featureOnlyJS": [
+        988,
+        2147,
+        2198,
+        2848,
+        3933,
+        4802,
+        8040,
+        8145
+      ]
+    },
+    {
+      "id": "probe.unicode-15-nfkc",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 20,
+      "jsFeatureCount": 20,
+      "sameFeatures": false,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 0.0586928583258266,
+      "maxFloat32ScoreError": 0.05869282300480794,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [
+        726,
+        2223,
+        3619,
+        3769,
+        4022,
+        4036,
+        4248,
+        6429,
+        6442
+      ],
+      "featureOnlyJS": [
+        950,
+        964,
+        1322,
+        4793,
+        5405,
+        6691,
+        7320,
+        7343,
+        7894
+      ]
+    },
+    {
+      "id": "probe.nbsp",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.985990418430845e-08,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.next-line",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.985990418430845e-08,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.file-separator",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.985990418430845e-08,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.bom",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 2.983867233297133e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.empty",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 3,
+      "jsFeatureCount": 3,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 6.938893903907228e-18,
+      "maxFloat32ScoreError": 3.817416804885454e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.only-space",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 3,
+      "jsFeatureCount": 3,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 6.938893903907228e-18,
+      "maxFloat32ScoreError": 3.817416804885454e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.512-chars",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 5.517765599982738e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.513-chars",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 5.517765599982738e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.whole-modifiers",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 61,
+      "jsFeatureCount": 61,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 2.781937566975756e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "short",
+        "width": "neutral",
+        "bend": "curved"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "short",
+        "width": "neutral",
+        "bend": "curved"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.implicit-neck",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 132,
+      "jsFeatureCount": 132,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 1.4634066469731977e-07,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.hold-command",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 64,
+      "jsFeatureCount": 64,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 5.252736390293222e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    }
+  ]
+}

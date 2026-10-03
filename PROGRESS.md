@@ -236,3 +236,11 @@ native R5 coreをbyte同一で使うCLI入口R2を別folderへ保存。独立20�
 ## 2026-10-03 10:32 JST — 期限付き作業の終了
 
 PR42の結果・研究入口はmain e819f015へmerge・タスク添付済み。今回のheartbeatは10:15にPAUSEDへ更新し保存設定を確認。所有caffeinate83393は開始時刻/commandを照合して10:32:24に終了し、PID不在を確認した。他のjob・既存版・保存・URL・アプリを保持。[終了記録](experiments/side-interior-session-close-v1/README.md)。全アプリ入力・16GB実機・人の作業影響は残る検証であり、自動で取得を始めない。
+
+## 2026-10-03 — Bonsai教師と60形の専用モデルを比較
+
+承認後、別ブランチに5学習候補・6方式を実装。Bonsai 4B/8Bの人工言い換えを独立AIレビューし、追加18/48文と除外・原応答を保持。固定日本語意味特徴128F16と小さなheadも同じデータで比較した。教師LLMは制作時のみ実行し、所有した2serverを通常終了した。
+
+候補とデータを凍結し、独立人工244文で一度だけ評価。意味seedの名称なし描写90/120、否定誤反応19/20。Bonsai追加の意味方式改善は見られず、日常入力の既定エンジンへは採用しない。別URLの表現比較として公開する。[技術・結果・先行研究・制限](experiments/bonsai-task-student-v1/README.md)。
+
+ブラウザ用JSとPythonの同じ488返信は形/hold/3属性一致。実IABでEnter・日本語paste・形の保持・文字追加・色・6方式比較を確認。実IME、16GB Windows、全widgetのRAM/電力は未確認。旧7公開refとURL・保存は保持し、新タグ `glyph-matter-v0.15.0-task-student.1` と `/task-student-v1/` を追加する。

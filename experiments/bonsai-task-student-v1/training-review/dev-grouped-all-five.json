@@ -1,0 +1,997 @@
+{
+  "scope": "AI-authored development set only. No holdout input or prediction read. Summaries use raw head predictions; shape gating is applied separately. Attr metrics are not end-to-end gated return values.",
+  "units": "Shape dev = 960 named modifier combinations + 60 held descriptive families x 4 wrappers + 12 hold sentences. Wrappers within a family are correlated, not independent semantic examples.",
+  "defaultsContract": "Absent whole-body length/width/bend instruction -> neutral/neutral/straight. Native narrow neck, long legs, or curved geometry is not an explicit global transform.",
+  "freezeHashesMatch": true,
+  "sameDevAllFive": true,
+  "candidates": [
+    {
+      "kind": "seed",
+      "modelSha256": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+      "corpusSha256": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+      "trainingReportSha256": "0d926472844b94e150e4a8dba8b97514e589c938d71204d4faf25c114e7dba1e",
+      "sameDevAsSeed": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "shape": {
+        "overallRaw": {
+          "count": 1212,
+          "correct": 985,
+          "accuracy": 0.8127062706270627
+        },
+        "overallGated": {
+          "count": 1212,
+          "correct": 975,
+          "accuracy": 0.8044554455445545
+        },
+        "groups": {
+          "named": {
+            "raw": {
+              "count": 960,
+              "correct": 960,
+              "accuracy": 1.0
+            },
+            "gated": {
+              "count": 960,
+              "correct": 960,
+              "accuracy": 1.0
+            },
+            "distinctSourceFamilies": 480
+          },
+          "nameFreeDescription": {
+            "raw": {
+              "count": 240,
+              "correct": 13,
+              "accuracy": 0.05416666666666667
+            },
+            "gated": {
+              "count": 240,
+              "correct": 3,
+              "accuracy": 0.0125
+            },
+            "distinctSourceFamilies": 60
+          },
+          "hold": {
+            "raw": {
+              "count": 12,
+              "correct": 12,
+              "accuracy": 1.0
+            },
+            "gated": {
+              "count": 12,
+              "correct": 12,
+              "accuracy": 1.0
+            },
+            "distinctSourceFamilies": 3
+          }
+        },
+        "equalGroupRawAccuracy": 0.6847222222222222,
+        "equalGroupGatedAccuracy": 0.6708333333333333,
+        "gate": {
+          "score": 0.1,
+          "margin": 0,
+          "coverage": 0
+        },
+        "selectionObjective": "fixed training configuration; dev-only gate"
+      },
+      "attributes": {
+        "length": {
+          "overall": {
+            "count": 1032,
+            "correct": 792,
+            "accuracy": 0.7674418604651163
+          },
+          "byLabel": {
+            "short": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 792,
+              "accuracy": 1.0
+            },
+            "long": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.3333333333333333,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 792,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "neutral": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        },
+        "width": {
+          "overall": {
+            "count": 1032,
+            "correct": 792,
+            "accuracy": 0.7674418604651163
+          },
+          "byLabel": {
+            "narrow": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 792,
+              "accuracy": 1.0
+            },
+            "wide": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.3333333333333333,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 792,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "neutral": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        },
+        "bend": {
+          "overall": {
+            "count": 1032,
+            "correct": 912,
+            "accuracy": 0.8837209302325582
+          },
+          "byLabel": {
+            "straight": {
+              "count": 912,
+              "correct": 912,
+              "accuracy": 1.0
+            },
+            "curved": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.5,
+          "defaultLabel": "straight",
+          "default": {
+            "count": 912,
+            "correct": 912,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 120,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "straight": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        }
+      }
+    },
+    {
+      "kind": "bonsai4",
+      "modelSha256": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+      "corpusSha256": "9212a59a03eb600013496337b9474973002ab539c9fd594cf79be60269a9ee07",
+      "trainingReportSha256": "247169bb77f9d7f415e30704d575d2c6d9f9218354d5381249e6307148f7369f",
+      "sameDevAsSeed": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "shape": {
+        "overallRaw": {
+          "count": 1212,
+          "correct": 985,
+          "accuracy": 0.8127062706270627
+        },
+        "overallGated": {
+          "count": 1212,
+          "correct": 975,
+          "accuracy": 0.8044554455445545
+        },
+        "groups": {
+          "named": {
+            "raw": {
+              "count": 960,
+              "correct": 960,
+              "accuracy": 1.0
+            },
+            "gated": {
+              "count": 960,
+              "correct": 960,
+              "accuracy": 1.0
+            },
+            "distinctSourceFamilies": 480
+          },
+          "nameFreeDescription": {
+            "raw": {
+              "count": 240,
+              "correct": 13,
+              "accuracy": 0.05416666666666667
+            },
+            "gated": {
+              "count": 240,
+              "correct": 3,
+              "accuracy": 0.0125
+            },
+            "distinctSourceFamilies": 60
+          },
+          "hold": {
+            "raw": {
+              "count": 12,
+              "correct": 12,
+              "accuracy": 1.0
+            },
+            "gated": {
+              "count": 12,
+              "correct": 12,
+              "accuracy": 1.0
+            },
+            "distinctSourceFamilies": 3
+          }
+        },
+        "equalGroupRawAccuracy": 0.6847222222222222,
+        "equalGroupGatedAccuracy": 0.6708333333333333,
+        "gate": {
+          "score": 0.1,
+          "margin": 0,
+          "coverage": 0
+        },
+        "selectionObjective": "fixed training configuration; dev-only gate"
+      },
+      "attributes": {
+        "length": {
+          "overall": {
+            "count": 1032,
+            "correct": 792,
+            "accuracy": 0.7674418604651163
+          },
+          "byLabel": {
+            "short": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 792,
+              "accuracy": 1.0
+            },
+            "long": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.3333333333333333,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 792,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "neutral": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        },
+        "width": {
+          "overall": {
+            "count": 1032,
+            "correct": 792,
+            "accuracy": 0.7674418604651163
+          },
+          "byLabel": {
+            "narrow": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 792,
+              "accuracy": 1.0
+            },
+            "wide": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.3333333333333333,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 792,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "neutral": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        },
+        "bend": {
+          "overall": {
+            "count": 1032,
+            "correct": 912,
+            "accuracy": 0.8837209302325582
+          },
+          "byLabel": {
+            "straight": {
+              "count": 912,
+              "correct": 912,
+              "accuracy": 1.0
+            },
+            "curved": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.5,
+          "defaultLabel": "straight",
+          "default": {
+            "count": 912,
+            "correct": 912,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 120,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "straight": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        }
+      }
+    },
+    {
+      "kind": "bonsai8",
+      "modelSha256": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+      "corpusSha256": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+      "trainingReportSha256": "b171c63eb7ae96b6d4f60145ae34332b02089a9753ede2fc8e921dbb5d1536bb",
+      "sameDevAsSeed": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "shape": {
+        "overallRaw": {
+          "count": 1212,
+          "correct": 988,
+          "accuracy": 0.8151815181518152
+        },
+        "overallGated": {
+          "count": 1212,
+          "correct": 979,
+          "accuracy": 0.8077557755775577
+        },
+        "groups": {
+          "named": {
+            "raw": {
+              "count": 960,
+              "correct": 960,
+              "accuracy": 1.0
+            },
+            "gated": {
+              "count": 960,
+              "correct": 960,
+              "accuracy": 1.0
+            },
+            "distinctSourceFamilies": 480
+          },
+          "nameFreeDescription": {
+            "raw": {
+              "count": 240,
+              "correct": 16,
+              "accuracy": 0.06666666666666667
+            },
+            "gated": {
+              "count": 240,
+              "correct": 7,
+              "accuracy": 0.029166666666666667
+            },
+            "distinctSourceFamilies": 60
+          },
+          "hold": {
+            "raw": {
+              "count": 12,
+              "correct": 12,
+              "accuracy": 1.0
+            },
+            "gated": {
+              "count": 12,
+              "correct": 12,
+              "accuracy": 1.0
+            },
+            "distinctSourceFamilies": 3
+          }
+        },
+        "equalGroupRawAccuracy": 0.6888888888888889,
+        "equalGroupGatedAccuracy": 0.6763888888888889,
+        "gate": {
+          "score": 0.1,
+          "margin": 0,
+          "coverage": 0
+        },
+        "selectionObjective": "fixed training configuration; dev-only gate"
+      },
+      "attributes": {
+        "length": {
+          "overall": {
+            "count": 1032,
+            "correct": 792,
+            "accuracy": 0.7674418604651163
+          },
+          "byLabel": {
+            "short": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 792,
+              "accuracy": 1.0
+            },
+            "long": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.3333333333333333,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 792,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "neutral": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        },
+        "width": {
+          "overall": {
+            "count": 1032,
+            "correct": 792,
+            "accuracy": 0.7674418604651163
+          },
+          "byLabel": {
+            "narrow": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 792,
+              "accuracy": 1.0
+            },
+            "wide": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.3333333333333333,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 792,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "neutral": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        },
+        "bend": {
+          "overall": {
+            "count": 1032,
+            "correct": 912,
+            "accuracy": 0.8837209302325582
+          },
+          "byLabel": {
+            "straight": {
+              "count": 912,
+              "correct": 912,
+              "accuracy": 1.0
+            },
+            "curved": {
+              "count": 120,
+              "correct": 0,
+              "accuracy": 0.0
+            }
+          },
+          "macroPerLabelAccuracy": 0.5,
+          "defaultLabel": "straight",
+          "default": {
+            "count": 912,
+            "correct": 912,
+            "accuracy": 1.0
+          },
+          "nonDefault": {
+            "count": 120,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "predictedLabels": {
+            "straight": 1032
+          },
+          "selectionObjective": "fixed training configuration"
+        }
+      }
+    },
+    {
+      "kind": "static-seed",
+      "modelSha256": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df",
+      "corpusSha256": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+      "trainingReportSha256": "357282e060a7f771cfa49535290433798210a9421c8e8956f4248e466d53ffc2",
+      "sameDevAsSeed": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "shape": {
+        "overallRaw": {
+          "count": 1212,
+          "correct": 1041,
+          "accuracy": 0.8589108910891089
+        },
+        "overallGated": {
+          "count": 1212,
+          "correct": 1041,
+          "accuracy": 0.8589108910891089
+        },
+        "groups": {
+          "named": {
+            "raw": {
+              "count": 960,
+              "correct": 955,
+              "accuracy": 0.9947916666666666
+            },
+            "gated": {
+              "count": 960,
+              "correct": 955,
+              "accuracy": 0.9947916666666666
+            },
+            "distinctSourceFamilies": 480
+          },
+          "nameFreeDescription": {
+            "raw": {
+              "count": 240,
+              "correct": 77,
+              "accuracy": 0.32083333333333336
+            },
+            "gated": {
+              "count": 240,
+              "correct": 77,
+              "accuracy": 0.32083333333333336
+            },
+            "distinctSourceFamilies": 60
+          },
+          "hold": {
+            "raw": {
+              "count": 12,
+              "correct": 9,
+              "accuracy": 0.75
+            },
+            "gated": {
+              "count": 12,
+              "correct": 9,
+              "accuracy": 0.75
+            },
+            "distinctSourceFamilies": 3
+          }
+        },
+        "equalGroupRawAccuracy": 0.6885416666666666,
+        "equalGroupGatedAccuracy": 0.6885416666666666,
+        "gate": {
+          "score": 0,
+          "margin": 0
+        },
+        "selectionObjective": "mean named/description/hold group accuracy"
+      },
+      "attributes": {
+        "length": {
+          "overall": {
+            "count": 1032,
+            "correct": 697,
+            "accuracy": 0.6753875968992248
+          },
+          "byLabel": {
+            "short": {
+              "count": 120,
+              "correct": 9,
+              "accuracy": 0.075
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 598,
+              "accuracy": 0.7550505050505051
+            },
+            "long": {
+              "count": 120,
+              "correct": 90,
+              "accuracy": 0.75
+            }
+          },
+          "macroPerLabelAccuracy": 0.5266835016835016,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 598,
+            "accuracy": 0.7550505050505051
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 99,
+            "accuracy": 0.4125
+          },
+          "predictedLabels": {
+            "neutral": 679,
+            "long": 298,
+            "short": 55
+          },
+          "selectionObjective": "macro per-label accuracy"
+        },
+        "width": {
+          "overall": {
+            "count": 1032,
+            "correct": 697,
+            "accuracy": 0.6753875968992248
+          },
+          "byLabel": {
+            "narrow": {
+              "count": 120,
+              "correct": 31,
+              "accuracy": 0.25833333333333336
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 631,
+              "accuracy": 0.7967171717171717
+            },
+            "wide": {
+              "count": 120,
+              "correct": 35,
+              "accuracy": 0.2916666666666667
+            }
+          },
+          "macroPerLabelAccuracy": 0.4489057239057239,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 631,
+            "accuracy": 0.7967171717171717
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 66,
+            "accuracy": 0.275
+          },
+          "predictedLabels": {
+            "neutral": 795,
+            "wide": 162,
+            "narrow": 75
+          },
+          "selectionObjective": "macro per-label accuracy"
+        },
+        "bend": {
+          "overall": {
+            "count": 1032,
+            "correct": 785,
+            "accuracy": 0.7606589147286822
+          },
+          "byLabel": {
+            "straight": {
+              "count": 912,
+              "correct": 727,
+              "accuracy": 0.7971491228070176
+            },
+            "curved": {
+              "count": 120,
+              "correct": 58,
+              "accuracy": 0.48333333333333334
+            }
+          },
+          "macroPerLabelAccuracy": 0.6402412280701755,
+          "defaultLabel": "straight",
+          "default": {
+            "count": 912,
+            "correct": 727,
+            "accuracy": 0.7971491228070176
+          },
+          "nonDefault": {
+            "count": 120,
+            "correct": 58,
+            "accuracy": 0.48333333333333334
+          },
+          "predictedLabels": {
+            "curved": 243,
+            "straight": 789
+          },
+          "selectionObjective": "macro per-label accuracy"
+        }
+      }
+    },
+    {
+      "kind": "static-bonsai8",
+      "modelSha256": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889",
+      "corpusSha256": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+      "trainingReportSha256": "33f8bb978029249236323bc8f125456b29a732e1958eec6efab1494178c0cc57",
+      "sameDevAsSeed": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "shape": {
+        "overallRaw": {
+          "count": 1212,
+          "correct": 1033,
+          "accuracy": 0.8523102310231023
+        },
+        "overallGated": {
+          "count": 1212,
+          "correct": 1033,
+          "accuracy": 0.8523102310231023
+        },
+        "groups": {
+          "named": {
+            "raw": {
+              "count": 960,
+              "correct": 951,
+              "accuracy": 0.990625
+            },
+            "gated": {
+              "count": 960,
+              "correct": 951,
+              "accuracy": 0.990625
+            },
+            "distinctSourceFamilies": 480
+          },
+          "nameFreeDescription": {
+            "raw": {
+              "count": 240,
+              "correct": 73,
+              "accuracy": 0.30416666666666664
+            },
+            "gated": {
+              "count": 240,
+              "correct": 73,
+              "accuracy": 0.30416666666666664
+            },
+            "distinctSourceFamilies": 60
+          },
+          "hold": {
+            "raw": {
+              "count": 12,
+              "correct": 9,
+              "accuracy": 0.75
+            },
+            "gated": {
+              "count": 12,
+              "correct": 9,
+              "accuracy": 0.75
+            },
+            "distinctSourceFamilies": 3
+          }
+        },
+        "equalGroupRawAccuracy": 0.6815972222222222,
+        "equalGroupGatedAccuracy": 0.6815972222222222,
+        "gate": {
+          "score": 0,
+          "margin": 0
+        },
+        "selectionObjective": "mean named/description/hold group accuracy"
+      },
+      "attributes": {
+        "length": {
+          "overall": {
+            "count": 1032,
+            "correct": 697,
+            "accuracy": 0.6753875968992248
+          },
+          "byLabel": {
+            "short": {
+              "count": 120,
+              "correct": 9,
+              "accuracy": 0.075
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 598,
+              "accuracy": 0.7550505050505051
+            },
+            "long": {
+              "count": 120,
+              "correct": 90,
+              "accuracy": 0.75
+            }
+          },
+          "macroPerLabelAccuracy": 0.5266835016835016,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 598,
+            "accuracy": 0.7550505050505051
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 99,
+            "accuracy": 0.4125
+          },
+          "predictedLabels": {
+            "neutral": 679,
+            "long": 298,
+            "short": 55
+          },
+          "selectionObjective": "macro per-label accuracy"
+        },
+        "width": {
+          "overall": {
+            "count": 1032,
+            "correct": 697,
+            "accuracy": 0.6753875968992248
+          },
+          "byLabel": {
+            "narrow": {
+              "count": 120,
+              "correct": 31,
+              "accuracy": 0.25833333333333336
+            },
+            "neutral": {
+              "count": 792,
+              "correct": 631,
+              "accuracy": 0.7967171717171717
+            },
+            "wide": {
+              "count": 120,
+              "correct": 35,
+              "accuracy": 0.2916666666666667
+            }
+          },
+          "macroPerLabelAccuracy": 0.4489057239057239,
+          "defaultLabel": "neutral",
+          "default": {
+            "count": 792,
+            "correct": 631,
+            "accuracy": 0.7967171717171717
+          },
+          "nonDefault": {
+            "count": 240,
+            "correct": 66,
+            "accuracy": 0.275
+          },
+          "predictedLabels": {
+            "neutral": 795,
+            "wide": 162,
+            "narrow": 75
+          },
+          "selectionObjective": "macro per-label accuracy"
+        },
+        "bend": {
+          "overall": {
+            "count": 1032,
+            "correct": 785,
+            "accuracy": 0.7606589147286822
+          },
+          "byLabel": {
+            "straight": {
+              "count": 912,
+              "correct": 727,
+              "accuracy": 0.7971491228070176
+            },
+            "curved": {
+              "count": 120,
+              "correct": 58,
+              "accuracy": 0.48333333333333334
+            }
+          },
+          "macroPerLabelAccuracy": 0.6402412280701755,
+          "defaultLabel": "straight",
+          "default": {
+            "count": 912,
+            "correct": 727,
+            "accuracy": 0.7971491228070176
+          },
+          "nonDefault": {
+            "count": 120,
+            "correct": 58,
+            "accuracy": 0.48333333333333334
+          },
+          "predictedLabels": {
+            "curved": 243,
+            "straight": 789
+          },
+          "selectionObjective": "macro per-label accuracy"
+        }
+      }
+    }
+  ],
+  "sha256": {
+    "artifacts/seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+    "artifacts/seed-model.json": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+    "artifacts/seed-training.json": "0d926472844b94e150e4a8dba8b97514e589c938d71204d4faf25c114e7dba1e",
+    "artifacts/bonsai4-corpus.json": "9212a59a03eb600013496337b9474973002ab539c9fd594cf79be60269a9ee07",
+    "artifacts/bonsai4-model.json": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+    "artifacts/bonsai4-training.json": "247169bb77f9d7f415e30704d575d2c6d9f9218354d5381249e6307148f7369f",
+    "artifacts/bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+    "artifacts/bonsai8-model.json": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+    "artifacts/bonsai8-training.json": "b171c63eb7ae96b6d4f60145ae34332b02089a9753ede2fc8e921dbb5d1536bb",
+    "artifacts/static-seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+    "artifacts/static-seed-model.json": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df",
+    "artifacts/static-seed-training.json": "357282e060a7f771cfa49535290433798210a9421c8e8956f4248e466d53ffc2",
+    "artifacts/static-bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+    "artifacts/static-bonsai8-model.json": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889",
+    "artifacts/static-bonsai8-training.json": "33f8bb978029249236323bc8f125456b29a732e1958eec6efab1494178c0cc57",
+    "train.py": "247438d8fc488b585e8898ca916e62524f35f3eec89e0c33286e491ba23d3b38",
+    "train_static.py": "4d8b03b091582fcf7fa6bcb46d2cfc65977d776cfbe21725ff91906c7414fbd9",
+    "predict_static.py": "622614b1c9cb82802b8d863c276bc468909995800cfd1fb3f46112af800a853c",
+    "seeds/shapes.json": "9890b0cc751455a4e895cd4c60e8a9e3a574d3b42d227248151b80f211d9de51",
+    "seeds/holds.json": "9def20d665f1fbca5dcbb0a73b5900a7d078027b8042dfa70944644fecf0c963",
+    "seeds/transforms.json": "d0d10d5f5f2e2cf61ad6e2f03e6bebebce14718755ae97b2e0095a5bddc9e96e",
+    "teacher/curated-r2.json": "d5b8c7be2368393aa4f40f28a2b30ba4c3715bf600818550a017a23eb404f436",
+    "teacher/curated-r3.json": "6d1100c3bfcc4774fd8a4d0283cc8904f5d78a626f0d3466dc3481c78b97116b",
+    "static-candidate/export_features.py": "59040afc86950ec93435f533c3b4ec61029ca745a0db1de053880de0f772d4c6"
+  },
+  "observedRuntimeSourceSha256": {
+    "prototypes/glyph-creature/src/task-student-v1/inference.mjs": "e55308d7cf2c215f9326f53d4a048eb0ee1cde917764bf01f9bf7478766eca3c"
+  },
+  "issues": []
+}

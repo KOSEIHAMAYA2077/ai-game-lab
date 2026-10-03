@@ -1,0 +1,478 @@
+{
+  "fixtures": 90,
+  "passed": 90,
+  "failures": [],
+  "maximumMeanError": 0,
+  "maximumVectorError": 5.960464477539063e-8,
+  "tolerance": 0.000002,
+  "encoder": {
+    "kind": "standalone-unigram",
+    "baseVocab": 32702,
+    "addedTokens": 71,
+    "trieNodes": 102711,
+    "packedTrieBytes": 2007694,
+    "inputScalarLimit": 512,
+    "automaticSpecialTokens": false,
+    "dependencies": [],
+    "tableBytes": 8388608,
+    "halfLookupBytes": 262144,
+    "dimensions": 128,
+    "initializationMs": 18.44275,
+    "format": "first128-float16-little-endian",
+    "cpuOnly": true
+  },
+  "timings": [
+    {
+      "id": "sphere",
+      "tokenizeMs": 0.21991599999999778,
+      "encodeMs": 0.2815829999999977
+    },
+    {
+      "id": "train-cube-geometry",
+      "tokenizeMs": 0.14533300000000082,
+      "encodeMs": 0.22720800000000452
+    },
+    {
+      "id": "train-vase-use",
+      "tokenizeMs": 0.05070900000000478,
+      "encodeMs": 0.11608400000000074
+    },
+    {
+      "id": "japanese-attrs",
+      "tokenizeMs": 0.025292000000000314,
+      "encodeMs": 0.0643750000000054
+    },
+    {
+      "id": "japanese-combination",
+      "tokenizeMs": 0.02387499999999676,
+      "encodeMs": 0.07087500000000091
+    },
+    {
+      "id": "ascii",
+      "tokenizeMs": 0.03420799999999957,
+      "encodeMs": 0.08045800000000014
+    },
+    {
+      "id": "fullwidth",
+      "tokenizeMs": 0.029209000000001595,
+      "encodeMs": 0.05837499999999807
+    },
+    {
+      "id": "combining",
+      "tokenizeMs": 0.017040999999998974,
+      "encodeMs": 0.04299999999999926
+    },
+    {
+      "id": "greek-scalar-lower",
+      "tokenizeMs": 0.017250000000004206,
+      "encodeMs": 0.0558329999999998
+    },
+    {
+      "id": "unicode-case-expansion",
+      "tokenizeMs": 0.013207999999998776,
+      "encodeMs": 0.050041000000000224
+    },
+    {
+      "id": "emoji-unknown",
+      "tokenizeMs": 0.023541999999999064,
+      "encodeMs": 0.044417000000002815
+    },
+    {
+      "id": "unknown-merge",
+      "tokenizeMs": 0.011541999999998609,
+      "encodeMs": 0.03633400000000364
+    },
+    {
+      "id": "empty",
+      "tokenizeMs": 0.003292000000001849,
+      "encodeMs": 0.009000000000000341
+    },
+    {
+      "id": "spaces",
+      "tokenizeMs": 0.007417000000003782,
+      "encodeMs": 0.02454200000000384
+    },
+    {
+      "id": "newline",
+      "tokenizeMs": 0.010791999999995028,
+      "encodeMs": 0.03949999999999676
+    },
+    {
+      "id": "specials",
+      "tokenizeMs": 0.030500000000003524,
+      "encodeMs": 0.06349999999999767
+    },
+    {
+      "id": "mask-lstrip",
+      "tokenizeMs": 0.02558299999999747,
+      "encodeMs": 0.06041700000000105
+    },
+    {
+      "id": "mask-zero-width",
+      "tokenizeMs": 0.010832999999998094,
+      "encodeMs": 0.038624999999996135
+    },
+    {
+      "id": "unused",
+      "tokenizeMs": 0.02520799999999923,
+      "encodeMs": 0.06504199999999827
+    },
+    {
+      "id": "uppercase-special",
+      "tokenizeMs": 0.01762499999999534,
+      "encodeMs": 0.040957999999996275
+    },
+    {
+      "id": "adjacent-specials",
+      "tokenizeMs": 0.009166999999997927,
+      "encodeMs": 0.0327920000000006
+    },
+    {
+      "id": "specials-no-boundary",
+      "tokenizeMs": 0.0204169999999948,
+      "encodeMs": 0.0663330000000002
+    },
+    {
+      "id": "512-ascii",
+      "tokenizeMs": 0.36512499999999903,
+      "encodeMs": 0.9299170000000032
+    },
+    {
+      "id": "512-japanese",
+      "tokenizeMs": 0.37720900000000057,
+      "encodeMs": 0.5449589999999986
+    },
+    {
+      "id": "512-astral",
+      "tokenizeMs": 0.21587500000000404,
+      "encodeMs": 0.22629200000000083
+    },
+    {
+      "id": "513-ascii",
+      "tokenizeMs": 0.003124999999997158,
+      "encodeMs": 0.010375000000003354
+    },
+    {
+      "id": "513-astral",
+      "tokenizeMs": 0.0028750000000030695,
+      "encodeMs": 0.0036249999999995453
+    },
+    {
+      "id": "unpaired-surrogate",
+      "tokenizeMs": 0.0004580000000018458,
+      "encodeMs": 0.0006249999999994316
+    },
+    {
+      "id": "nmt-0000",
+      "tokenizeMs": 0.008707999999998606,
+      "encodeMs": 0.035166999999994175
+    },
+    {
+      "id": "nmt-0001",
+      "tokenizeMs": 0.005709000000003073,
+      "encodeMs": 0.026333999999998525
+    },
+    {
+      "id": "nmt-0002",
+      "tokenizeMs": 0.003791999999997131,
+      "encodeMs": 0.024082999999997412
+    },
+    {
+      "id": "nmt-0003",
+      "tokenizeMs": 0.003500000000002501,
+      "encodeMs": 0.022750000000002046
+    },
+    {
+      "id": "nmt-0004",
+      "tokenizeMs": 0.0028750000000030695,
+      "encodeMs": 0.019792000000002474
+    },
+    {
+      "id": "nmt-0005",
+      "tokenizeMs": 0.004792000000001906,
+      "encodeMs": 0.026541999999999177
+    },
+    {
+      "id": "nmt-0006",
+      "tokenizeMs": 0.0035829999999990036,
+      "encodeMs": 0.02020800000000378
+    },
+    {
+      "id": "nmt-0007",
+      "tokenizeMs": 0.0025000000000048317,
+      "encodeMs": 0.01995900000000006
+    },
+    {
+      "id": "nmt-0008",
+      "tokenizeMs": 0.002666999999995312,
+      "encodeMs": 0.018833000000000766
+    },
+    {
+      "id": "nmt-0009",
+      "tokenizeMs": 0.003750000000003695,
+      "encodeMs": 0.025083000000002187
+    },
+    {
+      "id": "nmt-000a",
+      "tokenizeMs": 0.003167000000004805,
+      "encodeMs": 0.025249999999999773
+    },
+    {
+      "id": "nmt-000b",
+      "tokenizeMs": 0.0037909999999996558,
+      "encodeMs": 0.02499999999999858
+    },
+    {
+      "id": "nmt-000c",
+      "tokenizeMs": 0.0035420000000030427,
+      "encodeMs": 0.026457999999998094
+    },
+    {
+      "id": "nmt-000d",
+      "tokenizeMs": 0.0032919999999947436,
+      "encodeMs": 0.02633300000000105
+    },
+    {
+      "id": "nmt-000e",
+      "tokenizeMs": 0.0024590000000017653,
+      "encodeMs": 0.01895900000000239
+    },
+    {
+      "id": "nmt-000f",
+      "tokenizeMs": 0.0023330000000001405,
+      "encodeMs": 0.018665999999996075
+    },
+    {
+      "id": "nmt-0010",
+      "tokenizeMs": 0.002375000000000682,
+      "encodeMs": 0.018665999999996075
+    },
+    {
+      "id": "nmt-0011",
+      "tokenizeMs": 0.0023339999999976158,
+      "encodeMs": 0.020083999999997104
+    },
+    {
+      "id": "nmt-0012",
+      "tokenizeMs": 0.0024999999999977263,
+      "encodeMs": 0.0187919999999977
+    },
+    {
+      "id": "nmt-0013",
+      "tokenizeMs": 0.002415999999996643,
+      "encodeMs": 0.018791000000000224
+    },
+    {
+      "id": "nmt-0014",
+      "tokenizeMs": 0.0024999999999977263,
+      "encodeMs": 0.01970800000000139
+    },
+    {
+      "id": "nmt-0015",
+      "tokenizeMs": 0.002375000000000682,
+      "encodeMs": 0.01995900000000006
+    },
+    {
+      "id": "nmt-0016",
+      "tokenizeMs": 0.0027500000000060254,
+      "encodeMs": 0.02012500000000017
+    },
+    {
+      "id": "nmt-0017",
+      "tokenizeMs": 0.0024579999999971847,
+      "encodeMs": 0.01970800000000139
+    },
+    {
+      "id": "nmt-0018",
+      "tokenizeMs": 0.0025420000000053733,
+      "encodeMs": 0.01995900000000006
+    },
+    {
+      "id": "nmt-0019",
+      "tokenizeMs": 0.0026249999999947704,
+      "encodeMs": 0.01999999999999602
+    },
+    {
+      "id": "nmt-001a",
+      "tokenizeMs": 0.0027079999999983784,
+      "encodeMs": 0.020041999999996563
+    },
+    {
+      "id": "nmt-001b",
+      "tokenizeMs": 0.00274999999999892,
+      "encodeMs": 0.020249999999997215
+    },
+    {
+      "id": "nmt-001c",
+      "tokenizeMs": 0.00274999999999892,
+      "encodeMs": 0.03341700000000003
+    },
+    {
+      "id": "nmt-001d",
+      "tokenizeMs": 0.003916999999994175,
+      "encodeMs": 0.02383299999999622
+    },
+    {
+      "id": "nmt-001e",
+      "tokenizeMs": 0.0027079999999983784,
+      "encodeMs": 0.02324999999999733
+    },
+    {
+      "id": "nmt-001f",
+      "tokenizeMs": 0.0027079999999983784,
+      "encodeMs": 0.03841599999999801
+    },
+    {
+      "id": "nmt-0020",
+      "tokenizeMs": 0.005124999999999602,
+      "encodeMs": 0.015749999999997044
+    },
+    {
+      "id": "nmt-007f",
+      "tokenizeMs": 0.002541999999998268,
+      "encodeMs": 0.011333000000000482
+    },
+    {
+      "id": "nmt-0085",
+      "tokenizeMs": 0.0053339999999977294,
+      "encodeMs": 0.015584000000004039
+    },
+    {
+      "id": "nmt-008f",
+      "tokenizeMs": 0.0029169999999965057,
+      "encodeMs": 0.011624999999995111
+    },
+    {
+      "id": "nmt-009f",
+      "tokenizeMs": 0.00245800000000429,
+      "encodeMs": 0.011208000000003437
+    },
+    {
+      "id": "nmt-00a0",
+      "tokenizeMs": 0.0038330000000001974,
+      "encodeMs": 0.013416000000006534
+    },
+    {
+      "id": "nmt-1680",
+      "tokenizeMs": 0.0034170000000059986,
+      "encodeMs": 0.013625000000004661
+    },
+    {
+      "id": "nmt-2000",
+      "tokenizeMs": 0.004874999999998408,
+      "encodeMs": 0.015833999999998127
+    },
+    {
+      "id": "nmt-2001",
+      "tokenizeMs": 0.0034580000000019595,
+      "encodeMs": 0.013083000000001732
+    },
+    {
+      "id": "nmt-2002",
+      "tokenizeMs": 0.004541999999993607,
+      "encodeMs": 0.014374999999994031
+    },
+    {
+      "id": "nmt-2003",
+      "tokenizeMs": 0.003249999999994202,
+      "encodeMs": 0.018707999999996616
+    },
+    {
+      "id": "nmt-2004",
+      "tokenizeMs": 0.004707999999993717,
+      "encodeMs": 0.014249999999996987
+    },
+    {
+      "id": "nmt-2005",
+      "tokenizeMs": 0.004375000000003126,
+      "encodeMs": 0.014875000000003524
+    },
+    {
+      "id": "nmt-2006",
+      "tokenizeMs": 0.0035829999999990036,
+      "encodeMs": 0.014458000000004745
+    },
+    {
+      "id": "nmt-2007",
+      "tokenizeMs": 0.00462500000000432,
+      "encodeMs": 0.014959000000004608
+    },
+    {
+      "id": "nmt-2008",
+      "tokenizeMs": 0.0035419999999959373,
+      "encodeMs": 0.01387499999999875
+    },
+    {
+      "id": "nmt-2009",
+      "tokenizeMs": 0.004333000000002585,
+      "encodeMs": 0.01520800000000122
+    },
+    {
+      "id": "nmt-200a",
+      "tokenizeMs": 0.0035420000000030427,
+      "encodeMs": 0.021125000000004945
+    },
+    {
+      "id": "nmt-200b",
+      "tokenizeMs": 0.0037080000000031532,
+      "encodeMs": 0.013958000000002357
+    },
+    {
+      "id": "nmt-200c",
+      "tokenizeMs": 0.004041999999998325,
+      "encodeMs": 0.014624999999995225
+    },
+    {
+      "id": "nmt-200d",
+      "tokenizeMs": 0.003208000000000766,
+      "encodeMs": 0.014375000000001137
+    },
+    {
+      "id": "nmt-200e",
+      "tokenizeMs": 0.009709000000000856,
+      "encodeMs": 0.020083999999997104
+    },
+    {
+      "id": "nmt-200f",
+      "tokenizeMs": 0.00333299999999781,
+      "encodeMs": 0.0137499999999946
+    },
+    {
+      "id": "nmt-2028",
+      "tokenizeMs": 0.005000000000002558,
+      "encodeMs": 0.015166999999998154
+    },
+    {
+      "id": "nmt-2029",
+      "tokenizeMs": 0.003292000000001849,
+      "encodeMs": 0.013709000000005744
+    },
+    {
+      "id": "nmt-202f",
+      "tokenizeMs": 0.0037909999999996558,
+      "encodeMs": 0.013958000000002357
+    },
+    {
+      "id": "nmt-205f",
+      "tokenizeMs": 0.004332999999995479,
+      "encodeMs": 0.014333000000000595
+    },
+    {
+      "id": "nmt-2581",
+      "tokenizeMs": 0.0034589999999994347,
+      "encodeMs": 0.013334000000000401
+    },
+    {
+      "id": "nmt-feff",
+      "tokenizeMs": 0.004041999999998325,
+      "encodeMs": 0.02054199999999895
+    },
+    {
+      "id": "nmt-fffd",
+      "tokenizeMs": 0.003416000000001418,
+      "encodeMs": 0.013249999999999318
+    }
+  ],
+  "semanticQualityEvaluation": false,
+  "note": "Public artificial implementation fixtures only; no evaluation holdout read. Typed buffer bytes are not process or widget RAM."
+}

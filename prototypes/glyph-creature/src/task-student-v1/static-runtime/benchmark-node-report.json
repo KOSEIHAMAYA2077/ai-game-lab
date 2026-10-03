@@ -1,0 +1,455 @@
+{
+  "purpose": "Implementation performance on public artificial inputs; no semantic quality measurement",
+  "runtime": {
+    "node": "v26.4.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M5",
+    "unicode": "17.0",
+    "icu": "78.3",
+    "exposedGC": true
+  },
+  "configuration": {
+    "processCount": 1,
+    "encoderInstances": 1,
+    "headModels": [
+      "static-seed",
+      "static-bonsai8"
+    ],
+    "shortFixtureCount": 10,
+    "shortFixtureScalarRange": [
+      1,
+      13
+    ],
+    "fixtureNames": [
+      "sphere",
+      "train-cube-geometry",
+      "train-vase-use",
+      "japanese-attrs",
+      "japanese-combination",
+      "ascii",
+      "fullwidth",
+      "combining",
+      "greek-scalar-lower",
+      "emoji-unknown"
+    ],
+    "timingUnit": "milliseconds",
+    "percentile": "nearest rank"
+  },
+  "loading": {
+    "assetDiskReadMs": 1.8324169999999995,
+    "assetHashMs": 3.2695409999999967,
+    "tokenizerParseMs": 5.325750000000003,
+    "encoderInitializationMs": 24.875749999999996,
+    "encoderLoadTotalMs": 35.377334,
+    "heads": {
+      "static-seed": {
+        "diskBytes": 51721,
+        "diskReadMs": 0.23433300000000656,
+        "parseAndDecodeMs": 1.6407919999999976,
+        "totalMs": 1.8770410000000055,
+        "float32WeightBytes": 35328,
+        "numericBiasCount": 69,
+        "sha256": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df"
+      },
+      "static-bonsai8": {
+        "diskBytes": 51714,
+        "diskReadMs": 0.16429100000000574,
+        "parseAndDecodeMs": 1.517249999999997,
+        "totalMs": 1.6822910000000064,
+        "float32WeightBytes": 35328,
+        "numericBiasCount": 69,
+        "sha256": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889"
+      }
+    },
+    "encoderAndBothHeadsLoadMs": 39.037834,
+    "scope": "Local disk read, SHA256 verification, JSON parse, trie/half-lookup construction and dense head decode; excludes process startup, browser fetch and UI"
+  },
+  "retainedNumericBuffers": {
+    "tableBytes": 8388608,
+    "packedTrieAndScoresBytes": 2007694,
+    "halfLookupBytes": 262144,
+    "encoderTotalBytes": 10658446,
+    "denseHeadFloat32WeightBytes": {
+      "static-seed": 35328,
+      "static-bonsai8": 35328
+    },
+    "scope": "Exact retained typed buffers only; excludes JS strings, objects, arrays, allocator overhead, temporary allocations and UI"
+  },
+  "processMemory": {
+    "beforeLoad": {
+      "rss": 52002816,
+      "heapTotal": 6701056,
+      "heapUsed": 4484512,
+      "external": 2202178,
+      "arrayBuffers": 143611
+    },
+    "afterLoadGC": {
+      "rss": 103907328,
+      "heapTotal": 20594688,
+      "heapUsed": 4750120,
+      "external": 15294123,
+      "arrayBuffers": 10924427
+    },
+    "afterBenchmarkGC": {
+      "rss": 112410624,
+      "heapTotal": 24002560,
+      "heapUsed": 5191688,
+      "external": 13047677,
+      "arrayBuffers": 10925451
+    },
+    "maxRSSKiB": 109776,
+    "maxRSSBytes": 112410624,
+    "scope": "Whole single Node process peak/current RSS, including Node runtime and harness; not browser widget RAM"
+  },
+  "shortInputs": {
+    "static-seed": {
+      "warmupCalls": 500,
+      "measuredCalls": 5000,
+      "encodeAndHead": {
+        "samples": 5000,
+        "p50Ms": 0.02025000000000432,
+        "p95Ms": 0.02724999999999511,
+        "minimumMs": 0.016208000000005995,
+        "maximumMs": 0.12870800000000315
+      },
+      "encoder": {
+        "samples": 5000,
+        "p50Ms": 0.010249999999999204,
+        "p95Ms": 0.016374999999996476,
+        "minimumMs": 0.0069999999999765805,
+        "maximumMs": 0.11662499999999909
+      },
+      "tokenizer": {
+        "samples": 5000,
+        "p50Ms": 0.004375000000010232,
+        "p95Ms": 0.009833000000000425,
+        "minimumMs": 0.0018749999999840838,
+        "maximumMs": 0.0715409999999963
+      },
+      "perInputEncodeAndHead": {
+        "sphere": {
+          "samples": 500,
+          "p50Ms": 0.017583000000001903,
+          "p95Ms": 0.02208300000000918,
+          "minimumMs": 0.016208000000005995,
+          "maximumMs": 0.06570899999999824
+        },
+        "train-cube-geometry": {
+          "samples": 500,
+          "p50Ms": 0.025874999999984993,
+          "p95Ms": 0.03324999999999534,
+          "minimumMs": 0.023334000000005517,
+          "maximumMs": 0.12179199999999923
+        },
+        "train-vase-use": {
+          "samples": 500,
+          "p50Ms": 0.021916000000004487,
+          "p95Ms": 0.027374999999992156,
+          "minimumMs": 0.019916999999992413,
+          "maximumMs": 0.12870800000000315
+        },
+        "japanese-attrs": {
+          "samples": 500,
+          "p50Ms": 0.021667000000007874,
+          "p95Ms": 0.0272499999999809,
+          "minimumMs": 0.019708000000008496,
+          "maximumMs": 0.07041700000000617
+        },
+        "japanese-combination": {
+          "samples": 500,
+          "p50Ms": 0.021875000000008527,
+          "p95Ms": 0.027333999999996195,
+          "minimumMs": 0.019874999999984766,
+          "maximumMs": 0.07808299999999235
+        },
+        "ascii": {
+          "samples": 500,
+          "p50Ms": 0.020291999999997756,
+          "p95Ms": 0.025624999999990905,
+          "minimumMs": 0.01854099999999903,
+          "maximumMs": 0.09166700000000105
+        },
+        "fullwidth": {
+          "samples": 500,
+          "p50Ms": 0.019834000000003016,
+          "p95Ms": 0.024500000000003297,
+          "minimumMs": 0.018084000000015976,
+          "maximumMs": 0.09499999999999886
+        },
+        "combining": {
+          "samples": 500,
+          "p50Ms": 0.018000000000000682,
+          "p95Ms": 0.02199999999999136,
+          "minimumMs": 0.016707999999994172,
+          "maximumMs": 0.07945899999999995
+        },
+        "greek-scalar-lower": {
+          "samples": 500,
+          "p50Ms": 0.017875000000003638,
+          "p95Ms": 0.021957999999997924,
+          "minimumMs": 0.01654099999998948,
+          "maximumMs": 0.08304199999999184
+        },
+        "emoji-unknown": {
+          "samples": 500,
+          "p50Ms": 0.01854099999999903,
+          "p95Ms": 0.02254100000001813,
+          "minimumMs": 0.01691699999997809,
+          "maximumMs": 0.07387500000000102
+        }
+      }
+    },
+    "static-bonsai8": {
+      "warmupCalls": 500,
+      "measuredCalls": 5000,
+      "encodeAndHead": {
+        "samples": 5000,
+        "p50Ms": 0.01966600000000085,
+        "p95Ms": 0.025584000000037577,
+        "minimumMs": 0.01587499999999409,
+        "maximumMs": 0.0969169999999906
+      },
+      "encoder": {
+        "samples": 5000,
+        "p50Ms": 0.009792000000004464,
+        "p95Ms": 0.01516700000001947,
+        "minimumMs": 0.006874999999979536,
+        "maximumMs": 0.07308399999999438
+      },
+      "tokenizer": {
+        "samples": 5000,
+        "p50Ms": 0.004124999999987722,
+        "p95Ms": 0.008958000000006905,
+        "minimumMs": 0.0017920000000231084,
+        "maximumMs": 0.05474999999998431
+      },
+      "perInputEncodeAndHead": {
+        "sphere": {
+          "samples": 500,
+          "p50Ms": 0.016999999999995907,
+          "p95Ms": 0.020375000000001364,
+          "minimumMs": 0.01587499999999409,
+          "maximumMs": 0.088374999999985
+        },
+        "train-cube-geometry": {
+          "samples": 500,
+          "p50Ms": 0.024666000000024724,
+          "p95Ms": 0.03191599999999539,
+          "minimumMs": 0.02258399999999483,
+          "maximumMs": 0.0969169999999906
+        },
+        "train-vase-use": {
+          "samples": 500,
+          "p50Ms": 0.021042000000022654,
+          "p95Ms": 0.02549999999999386,
+          "minimumMs": 0.019457999999985987,
+          "maximumMs": 0.08600000000001273
+        },
+        "japanese-attrs": {
+          "samples": 500,
+          "p50Ms": 0.02075000000002092,
+          "p95Ms": 0.025374999999996817,
+          "minimumMs": 0.019207999999991898,
+          "maximumMs": 0.071124999999995
+        },
+        "japanese-combination": {
+          "samples": 500,
+          "p50Ms": 0.02104100000002518,
+          "p95Ms": 0.02658400000001393,
+          "minimumMs": 0.019457999999985987,
+          "maximumMs": 0.07354200000000333
+        },
+        "ascii": {
+          "samples": 500,
+          "p50Ms": 0.01954200000000128,
+          "p95Ms": 0.024917000000016287,
+          "minimumMs": 0.017915999999956966,
+          "maximumMs": 0.07487499999996317
+        },
+        "fullwidth": {
+          "samples": 500,
+          "p50Ms": 0.019207999999991898,
+          "p95Ms": 0.02400000000000091,
+          "minimumMs": 0.017790999999988344,
+          "maximumMs": 0.07083399999999074
+        },
+        "combining": {
+          "samples": 500,
+          "p50Ms": 0.01737500000001546,
+          "p95Ms": 0.021208999999998923,
+          "minimumMs": 0.0162499999999568,
+          "maximumMs": 0.05966600000002131
+        },
+        "greek-scalar-lower": {
+          "samples": 500,
+          "p50Ms": 0.01737500000001546,
+          "p95Ms": 0.020124999999978854,
+          "minimumMs": 0.01599999999996271,
+          "maximumMs": 0.07679199999998332
+        },
+        "emoji-unknown": {
+          "samples": 500,
+          "p50Ms": 0.01783299999999599,
+          "p95Ms": 0.021500000000003183,
+          "minimumMs": 0.01658399999996618,
+          "maximumMs": 0.0625
+        }
+      }
+    }
+  },
+  "boundary": [
+    {
+      "id": "512-ascii",
+      "scalars": 512,
+      "utf16CodeUnits": 512,
+      "encoderHold": null,
+      "tokens": 172,
+      "encodeMs": 0.16895799999997507,
+      "models": {
+        "static-seed": {
+          "reason": "learned_static_head",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.14674999999999727,
+            "p95Ms": 0.18312499999996135,
+            "minimumMs": 0.13920799999999645,
+            "maximumMs": 0.2525420000000054
+          }
+        },
+        "static-bonsai8": {
+          "reason": "learned_static_head",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.1505409999999756,
+            "p95Ms": 0.17420900000001893,
+            "minimumMs": 0.1398330000000101,
+            "maximumMs": 0.23116700000002766
+          }
+        }
+      }
+    },
+    {
+      "id": "512-japanese",
+      "scalars": 512,
+      "utf16CodeUnits": 512,
+      "encoderHold": null,
+      "tokens": 513,
+      "encodeMs": 0.27337499999998727,
+      "models": {
+        "static-seed": {
+          "reason": "learned_static_head",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.26891699999998764,
+            "p95Ms": 0.32408400000002757,
+            "minimumMs": 0.23754199999996217,
+            "maximumMs": 0.4668750000000159
+          }
+        },
+        "static-bonsai8": {
+          "reason": "learned_static_head",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.2650830000000042,
+            "p95Ms": 0.32287500000001046,
+            "minimumMs": 0.23958300000003874,
+            "maximumMs": 0.35079099999995833
+          }
+        }
+      }
+    },
+    {
+      "id": "512-astral",
+      "scalars": 512,
+      "utf16CodeUnits": 1024,
+      "encoderHold": null,
+      "tokens": 2,
+      "encodeMs": 0.18108399999999847,
+      "models": {
+        "static-seed": {
+          "reason": "learned_static_head",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.16912500000000819,
+            "p95Ms": 0.20466699999997218,
+            "minimumMs": 0.15233299999999872,
+            "maximumMs": 0.24887499999999818
+          }
+        },
+        "static-bonsai8": {
+          "reason": "learned_static_head",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.1727499999999509,
+            "p95Ms": 0.2149579999999105,
+            "minimumMs": 0.1575830000000451,
+            "maximumMs": 0.257541999999944
+          }
+        }
+      }
+    },
+    {
+      "id": "513-ascii",
+      "scalars": 513,
+      "utf16CodeUnits": 513,
+      "encoderHold": "input_limit",
+      "tokens": null,
+      "encodeMs": 0.03187500000001364,
+      "models": {
+        "static-seed": {
+          "reason": "input_limit",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.0014170000000603977,
+            "p95Ms": 0.0019999999999527063,
+            "minimumMs": 0.0013749999999390639,
+            "maximumMs": 0.046082999999953245
+          }
+        },
+        "static-bonsai8": {
+          "reason": "input_limit",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.0013750000000527507,
+            "p95Ms": 0.0015000000000782165,
+            "minimumMs": 0.0013330000000451037,
+            "maximumMs": 0.002375000000029104
+          }
+        }
+      }
+    },
+    {
+      "id": "513-astral",
+      "scalars": 513,
+      "utf16CodeUnits": 1026,
+      "encoderHold": "input_limit",
+      "tokens": null,
+      "encodeMs": 0.004292000000077678,
+      "models": {
+        "static-seed": {
+          "reason": "input_limit",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.002124999999978172,
+            "p95Ms": 0.002417000000036751,
+            "minimumMs": 0.001958000000058746,
+            "maximumMs": 0.008000000000038199
+          }
+        },
+        "static-bonsai8": {
+          "reason": "input_limit",
+          "encodeAndHead": {
+            "samples": 200,
+            "p50Ms": 0.002124999999978172,
+            "p95Ms": 0.002334000000018932,
+            "minimumMs": 0.0019579999999450592,
+            "maximumMs": 0.04224999999996726
+          }
+        }
+      }
+    }
+  ],
+  "semanticQualityEvaluation": false,
+  "holdoutRead": false
+}

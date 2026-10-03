@@ -1,0 +1,1129 @@
+{
+  "kind": "seed",
+  "cases": 40,
+  "featuresEqual": 37,
+  "top1Equal": 40,
+  "predictionEqual": 40,
+  "float32Top1Equal": 40,
+  "maxScoreError": 0.17328911208122622,
+  "maxFloat32ScoreError": 0.1732888067337942,
+  "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "numpy": "2.0.2",
+  "unicodeVersion": "13.0.0",
+  "node": "v26.4.0",
+  "files": {
+    "experiments/bonsai-task-student-v1/train.py": "8e97e21deeabfe46c358f233e159b136ddab5ce236e5bea87e03c5f9fa60256b",
+    "prototypes/glyph-creature/src/task-student-v1/inference.mjs": "ed8fb8f3d49ebdc7bdf1ca590b62fe730ca9656497bca7301d02c62619157182",
+    "experiments/bonsai-task-student-v1/artifacts/seed-model.json": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+    "experiments/bonsai-task-student-v1/training-review/parity-fixtures.json": "ef2bba563ab3854ddfe28aed5b29c8e2fa58d591f67ba615088ae9c8f3c48511"
+  },
+  "scope": "Train/dev seeds and reviewer normalization probes only. No frozen evaluation input or prediction read.",
+  "rows": [
+    {
+      "id": "condense.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 10,
+      "jsFeatureCount": 10,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 2.480527458992299e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "condense.radial_geometry",
+      "kind": "train-description",
+      "pythonFeatureCount": 145,
+      "jsFeatureCount": 145,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 6.661338147750939e-16,
+      "maxFloat32ScoreError": 6.776346550552148e-08,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "condense.section_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 149,
+      "jsFeatureCount": 149,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.1102230246251565e-16,
+      "maxFloat32ScoreError": 7.675082291935809e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "mobius.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 30,
+      "jsFeatureCount": 30,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.5178830414797062e-18,
+      "maxFloat32ScoreError": 1.1684682144075254e-07,
+      "pythonPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "mobius.half_twist",
+      "kind": "train-description",
+      "pythonFeatureCount": 107,
+      "jsFeatureCount": 107,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 5.637851296924623e-18,
+      "maxFloat32ScoreError": 7.525355116833055e-08,
+      "pythonPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "mobius",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "mobius.boundary_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 138,
+      "jsFeatureCount": 138,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.498001805406602e-16,
+      "maxFloat32ScoreError": 2.7132170510313358e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "cube.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 7.396532963888092e-08,
+      "pythonPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "cube.equal_faces",
+      "kind": "train-description",
+      "pythonFeatureCount": 117,
+      "jsFeatureCount": 117,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 7.771561172376096e-16,
+      "maxFloat32ScoreError": 1.9469254086690313e-07,
+      "pythonPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "cube",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "cube.vertices_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 148,
+      "jsFeatureCount": 148,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.3877787807814457e-16,
+      "maxFloat32ScoreError": 3.351399661954968e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "jellyfish.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 9.75781955236954e-19,
+      "maxFloat32ScoreError": 6.499967075690449e-08,
+      "pythonPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "jellyfish.umbrella_body",
+      "kind": "train-description",
+      "pythonFeatureCount": 129,
+      "jsFeatureCount": 129,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 6.071532165918825e-18,
+      "maxFloat32ScoreError": 6.219158144027404e-08,
+      "pythonPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "jellyfish",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "jellyfish.stinging_cells_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 159,
+      "jsFeatureCount": 159,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 9.71445146547012e-17,
+      "maxFloat32ScoreError": 5.501959055020933e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "vase.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 10,
+      "jsFeatureCount": 10,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 8.701415998846329e-08,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "vase.narrow_neck",
+      "kind": "train-description",
+      "pythonFeatureCount": 132,
+      "jsFeatureCount": 132,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.8189256484623115e-18,
+      "maxFloat32ScoreError": 1.0709648390339055e-07,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "vase.hand_access_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 153,
+      "jsFeatureCount": 153,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 1.381725847626747e-07,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "snake.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 6,
+      "jsFeatureCount": 6,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 3.9211649260906256e-08,
+      "pythonPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "snake.limbless_body",
+      "kind": "train-description",
+      "pythonFeatureCount": 121,
+      "jsFeatureCount": 121,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.8648277366750676e-17,
+      "maxFloat32ScoreError": 6.741620528494252e-08,
+      "pythonPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "snake",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "snake.shedding_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 141,
+      "jsFeatureCount": 141,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.163336342344337e-17,
+      "maxFloat32ScoreError": 3.3769648188908263e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "lotus.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 6,
+      "jsFeatureCount": 6,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 7.453889935837843e-20,
+      "maxFloat32ScoreError": 1.0206835421300298e-07,
+      "pythonPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "lotus.open_layered_petals",
+      "kind": "train-description",
+      "pythonFeatureCount": 125,
+      "jsFeatureCount": 125,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 9.44348350628843e-08,
+      "pythonPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "lotus",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "lotus.seed_pod_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 127,
+      "jsFeatureCount": 127,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.498001805406602e-16,
+      "maxFloat32ScoreError": 3.326742858966725e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "bottle.name",
+      "kind": "train-name",
+      "pythonFeatureCount": 6,
+      "jsFeatureCount": 6,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 1.424059525856336e-07,
+      "pythonPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "bottle.neck_and_body",
+      "kind": "train-description",
+      "pythonFeatureCount": 118,
+      "jsFeatureCount": 118,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 9.974659986866641e-18,
+      "maxFloat32ScoreError": 9.625851549177611e-08,
+      "pythonPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "bottle",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "bottle.pouring_dev",
+      "kind": "dev-description",
+      "pythonFeatureCount": 139,
+      "jsFeatureCount": 139,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 5.551115123125783e-17,
+      "maxFloat32ScoreError": 9.137631351574527e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.ascii-ws",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 8.881784197001252e-16,
+      "maxFloat32ScoreError": 3.053474328940098e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.fullwidth",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 30,
+      "jsFeatureCount": 30,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 1.1102230246251565e-16,
+      "maxFloat32ScoreError": 7.730326090360506e-08,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.combining",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 20,
+      "jsFeatureCount": 20,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 2.2601396365562465e-07,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.astral",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 20,
+      "jsFeatureCount": 20,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 5.551115123125783e-16,
+      "maxFloat32ScoreError": 4.896399530274209e-08,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.case-expansion",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 28,
+      "jsFeatureCount": 28,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.220446049250313e-16,
+      "maxFloat32ScoreError": 7.143874269921469e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.nbsp",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 8.881784197001252e-16,
+      "maxFloat32ScoreError": 3.053474328940098e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.next-line",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": false,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 0.14887394963747735,
+      "maxFloat32ScoreError": 0.14887364429004535,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [
+        411,
+        815,
+        1076,
+        1240,
+        1611,
+        1880,
+        2287,
+        2385,
+        2707,
+        3967
+      ],
+      "featureOnlyJS": [
+        548,
+        1282,
+        1486,
+        3008,
+        4021,
+        4161,
+        4335,
+        5094,
+        6866,
+        7070
+      ]
+    },
+    {
+      "id": "probe.file-separator",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": false,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 0.17328911208122622,
+      "maxFloat32ScoreError": 0.1732888067337942,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [
+        411,
+        815,
+        1076,
+        1240,
+        1611,
+        1880,
+        2287,
+        2385,
+        2707,
+        3967
+      ],
+      "featureOnlyJS": [
+        641,
+        853,
+        1743,
+        1864,
+        2495,
+        2787,
+        4351,
+        4651,
+        4710,
+        5924
+      ]
+    },
+    {
+      "id": "probe.bom",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 25,
+      "jsFeatureCount": 25,
+      "sameFeatures": false,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 0.1342827335733997,
+      "maxFloat32ScoreError": 0.13428277509688358,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [
+        3024,
+        3351,
+        4851,
+        5100,
+        5198,
+        5651,
+        6455,
+        6713,
+        6780,
+        7554
+      ],
+      "featureOnlyJS": [
+        411,
+        815,
+        1076,
+        1240,
+        1611,
+        1880,
+        2287,
+        2385,
+        2707,
+        3967
+      ]
+    },
+    {
+      "id": "probe.empty",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 3,
+      "jsFeatureCount": 3,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 3.817416804885454e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.only-space",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 3,
+      "jsFeatureCount": 3,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 3.817416804885454e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.512-chars",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 5.517765599982738e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.513-chars",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 15,
+      "jsFeatureCount": 15,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.7755575615628914e-17,
+      "maxFloat32ScoreError": 5.517765599982738e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.whole-modifiers",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 61,
+      "jsFeatureCount": 61,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 4.440892098500626e-16,
+      "maxFloat32ScoreError": 2.781937566975756e-07,
+      "pythonPrediction": {
+        "shape": "condense",
+        "length": "short",
+        "width": "neutral",
+        "bend": "curved"
+      },
+      "jsPrediction": {
+        "shape": "condense",
+        "length": "short",
+        "width": "neutral",
+        "bend": "curved"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.implicit-neck",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 132,
+      "jsFeatureCount": 132,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.8189256484623115e-18,
+      "maxFloat32ScoreError": 1.0709648390339055e-07,
+      "pythonPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    },
+    {
+      "id": "probe.hold-command",
+      "kind": "normalization-or-contract-probe",
+      "pythonFeatureCount": 64,
+      "jsFeatureCount": 64,
+      "sameFeatures": true,
+      "sameHeadTop1": true,
+      "samePrediction": true,
+      "sameFloat32Top1": true,
+      "maxScoreError": 2.0816681711721685e-17,
+      "maxFloat32ScoreError": 5.252736390293222e-08,
+      "pythonPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "jsPrediction": {
+        "shape": "hold",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight"
+      },
+      "featureOnlyPython": [],
+      "featureOnlyJS": []
+    }
+  ]
+}
