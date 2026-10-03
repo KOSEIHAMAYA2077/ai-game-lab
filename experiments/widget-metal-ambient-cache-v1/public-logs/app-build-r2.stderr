@@ -1,0 +1,10 @@
+<repo>/desktop/glyph-metal-ambient-cache-v1/Sources/Renderer.swift:103:52: warning: 'fastMathEnabled' was deprecated in macOS 15.0: Use mathMode instead [#DeprecatedDeclaration]
+101 |         guard let device = MTLCreateSystemDefaultDevice(), let queue = device.makeCommandQueue() else { throw AmbientLabError.unavailableDevice }
+102 |         let started = ProcessInfo.processInfo.systemUptime
+103 |         let options = MTLCompileOptions(); options.fastMathEnabled = false
+    |                                                    `- warning: 'fastMathEnabled' was deprecated in macOS 15.0: Use mathMode instead [#DeprecatedDeclaration]
+104 |         let library = try device.makeLibrary(source: String(contentsOf: shaderURL, encoding: .utf8), options: options)
+105 |         let descriptor = MTLRenderPipelineDescriptor()
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+<repo>/experiments/widget-metal-ambient-cache-v1/work/GlyphMatter-Ambient-Cache-R2.app: replacing existing signature

@@ -1,0 +1,1453 @@
+{
+  "runs": [
+    {
+      "id": "R01",
+      "passed": true,
+      "failures": [],
+      "actual": {
+        "body": "AB",
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "document": "D",
+        "units": 2,
+        "gaps": 0,
+        "pendingSlots": 0,
+        "focusEpoch": 1
+      },
+      "traces": [
+        {
+          "at": 0,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 0
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 0
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 1,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 1
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 1
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 1,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 2,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 2
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 2
+            }
+          },
+          "delta": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "afterId": 0,
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ]
+          },
+          "decision": {
+            "at": 2,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        },
+        {
+          "at": 3,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "ignored",
+              "reason": "operation-duplicate",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 3
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "ignored",
+              "reason": "operation-duplicate",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 3
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 3,
+            "status": "ignored",
+            "reason": "operation-duplicate",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 4,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 4
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "B",
+                "ink": "green"
+              }
+            ],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 4
+            }
+          },
+          "delta": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "afterId": 1,
+            "units": [
+              {
+                "id": 2,
+                "text": "B",
+                "ink": "green"
+              }
+            ]
+          },
+          "decision": {
+            "at": 4,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        },
+        {
+          "at": 5,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "preview",
+              "reason": "unknown-commit-quality",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 5
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "B",
+                "ink": "green"
+              }
+            ],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "preview",
+              "reason": "unknown-commit-quality",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 5
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 5,
+            "status": "preview",
+            "reason": "unknown-commit-quality",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 300,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 2,
+              "shape": "sphere",
+              "status": "preview",
+              "reason": "unknown-commit-quality",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 300
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "B",
+                "ink": "green"
+              }
+            ],
+            "presentedCount": 2,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R01",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "presentedCount": 2,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 2,
+              "shape": "sphere",
+              "status": "preview",
+              "reason": "unknown-commit-quality",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 300
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 5,
+            "status": "preview",
+            "reason": "unknown-commit-quality",
+            "ack": true,
+            "added": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "passed": true,
+      "failures": [],
+      "actual": {
+        "body": "X",
+        "inks": [
+          "blue"
+        ],
+        "document": "X",
+        "units": 1,
+        "gaps": 1,
+        "pendingSlots": 0,
+        "focusEpoch": 1
+      },
+      "traces": [
+        {
+          "at": 0,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 0
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 0
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 1,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 1
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 1
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 1,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 2,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "admission-ready",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 2
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "admission-ready",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 2
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 2,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 3,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "deferred",
+              "reason": "temporary-handoff",
+              "pending": true,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 3
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "deferred",
+              "reason": "temporary-handoff",
+              "pending": true,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 3
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 3,
+            "status": "deferred",
+            "reason": "temporary-handoff",
+            "ack": false,
+            "added": 0
+          }
+        },
+        {
+          "at": 4,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "activity",
+              "reason": "no-text-route",
+              "pending": true,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 4
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "activity",
+              "reason": "no-text-route",
+              "pending": true,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 4
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 4,
+            "status": "activity",
+            "reason": "no-text-route",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 5,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "admission-ready",
+              "pending": true,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 5
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "admission-ready",
+              "pending": true,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 5
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 5,
+            "status": "controlled",
+            "reason": "admission-ready",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 6,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 6
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "X",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 6
+            }
+          },
+          "delta": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "afterId": 0,
+            "units": [
+              {
+                "id": 1,
+                "text": "X",
+                "ink": "blue"
+              }
+            ]
+          },
+          "decision": {
+            "at": 6,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        },
+        {
+          "at": 300,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 300
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "X",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 1,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R02",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 1,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 300
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 6,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "passed": true,
+      "failures": [],
+      "actual": {
+        "body": "AC",
+        "inks": [
+          "blue",
+          "purple"
+        ],
+        "document": "C",
+        "units": 2,
+        "gaps": 0,
+        "pendingSlots": 0,
+        "focusEpoch": 2
+      },
+      "traces": [
+        {
+          "at": 0,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 0
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 0
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 0,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 1,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 1
+            },
+            "units": [],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 0,
+            "nextId": 1,
+            "bodyCount": 0,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 0,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 1
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 1,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 2,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 2
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 0,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 0,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 0,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 2
+            }
+          },
+          "delta": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "afterId": 0,
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ]
+          },
+          "decision": {
+            "at": 2,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        },
+        {
+          "at": 300,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 300
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 1,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 1,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 300
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 2,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        },
+        {
+          "at": 301,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 301
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 1,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 1,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "controlled",
+              "reason": "focus",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 301
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 301,
+            "status": "controlled",
+            "reason": "focus",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 302,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 302
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              }
+            ],
+            "presentedCount": 1,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 1,
+            "nextId": 2,
+            "bodyCount": 1,
+            "presentedCount": 1,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 1,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "observed",
+              "reason": "baseline-never-material",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 302
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 302,
+            "status": "observed",
+            "reason": "baseline-never-material",
+            "ack": true,
+            "added": 0
+          }
+        },
+        {
+          "at": 303,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 303
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "C",
+                "ink": "purple"
+              }
+            ],
+            "presentedCount": 1,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "presentedCount": 1,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 1,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 303
+            }
+          },
+          "delta": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "afterId": 1,
+            "units": [
+              {
+                "id": 2,
+                "text": "C",
+                "ink": "purple"
+              }
+            ]
+          },
+          "decision": {
+            "at": 303,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        },
+        {
+          "at": 700,
+          "full": {
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 2,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 700
+            },
+            "units": [
+              {
+                "id": 1,
+                "text": "A",
+                "ink": "blue"
+              },
+              {
+                "id": 2,
+                "text": "C",
+                "ink": "purple"
+              }
+            ],
+            "presentedCount": 2,
+            "shape": "sphere"
+          },
+          "metadata": {
+            "cacheVersion": "ambient.cache.transport.v1",
+            "receiverSession": "R03",
+            "materialGeneration": 2,
+            "nextId": 3,
+            "bodyCount": 2,
+            "presentedCount": 2,
+            "shape": "sphere",
+            "aggregate": {
+              "version": "metal-ambient-v1-r1",
+              "savingOff": true,
+              "bodyCount": 2,
+              "presentedCount": 2,
+              "shape": "sphere",
+              "status": "accepted",
+              "reason": "whole-add-before-ack",
+              "pending": false,
+              "composing": false,
+              "paused": false,
+              "visible": true,
+              "now": 700
+            }
+          },
+          "delta": null,
+          "decision": {
+            "at": 303,
+            "status": "accepted",
+            "reason": "whole-add-before-ack",
+            "ack": true,
+            "added": 1
+          }
+        }
+      ]
+    }
+  ],
+  "passed": 3
+}

@@ -1,0 +1,161 @@
+{
+  "version": "source-runtime-audit-r1",
+  "initialFreezeChecks": [
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/.gitignore",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/METHOD-R1.json",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/TIMING-METHOD-R1.json",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/build-runtime.mjs",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/fixtures/core3-r1.json",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/fixtures/invalid8-r1.json",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/fixtures/native14-r1.json",
+      "match": true
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/run-node.mjs",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Info.plist",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/AppMain.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/CameraFraming.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/CreatureGeometry.metal.inc",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/CreatureRigReference.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/GeometryTypes.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/Glyphs.metal",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/OwnEditor.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/Projection.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/ReceiverBridge.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/Renderer.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/SurfaceReference.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/WordSurfaceReference.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/cache-runtime.mjs",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/cache-transport.mjs",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/receiver-policy.mjs",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Tests/BaselineBridge.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Tests/BaselineInstances.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Tests/BaselineProjection.swift",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Tests/core-replay.mjs",
+      "match": true
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/build.sh",
+      "match": true
+    }
+  ],
+  "upstreamPinsMatch": true,
+  "appRuntimeResources": [
+    "BuildInfo.json",
+    "Receiver.js",
+    "Glyphs.metal"
+  ],
+  "JSNamespace": [
+    "AmbientCacheReceiver.createSession"
+  ],
+  "JSPerSessionAPI": [
+    "executeMetaJSON",
+    "snapshotMetaJSON",
+    "readBodyDeltaJSON",
+    "aggregateJSON",
+    "offExportJSON",
+    "destroy"
+  ],
+  "networkStorageOSSymbolsScan": {
+    "patterns": [
+      "fetch(",
+      "XMLHttpRequest",
+      "WebSocket",
+      "localStorage",
+      "sessionStorage",
+      "navigator.",
+      "clipboard",
+      "URLSession",
+      "WKWebView",
+      "CGEvent",
+      "AXObserver"
+    ],
+    "matchesInCandidateSourcesAndRuntime": 0,
+    "meaning": "String scan plus manual receiver/host source review; not blanket OS/platform guarantee"
+  },
+  "coreBodyAuthority": "Pinned receiver-r3.mjs only; no material add/allocator in Swift projection or renderer",
+  "savingOff": "Host volatile glyph atlas/cache necessarily contains text+IDs; exported R3 value is ten-key allowlist aggregate only, no session/glyphs/ID/ordered inks/window/query/hash",
+  "nativeCallbacksSHAUnchanged": true,
+  "rendererSHAUnchanged": true,
+  "shaderSHAUnchanged": true,
+  "noActualUIIMEOSGPU": true
+}

@@ -1,0 +1,75 @@
+{
+  "version": "ambient-cache-summary-r1",
+  "candidateRevision": "R1",
+  "node": {
+    "native14Initial": 14,
+    "core3Initial": 2,
+    "core3KnownHarnessCorrection": 3
+  },
+  "nativeCPU": {
+    "native14Passed": 14,
+    "core3Passed": 3,
+    "invalid8Passed": 8,
+    "instancePairs": 15908,
+    "geometryChecks": 96,
+    "failures": []
+  },
+  "boundaryKnownR5Regression": {
+    "bodyCount": 256,
+    "bodyUTF16": 65536,
+    "largestOldRawResponseBytes": 205003,
+    "largestCacheDeltaBytes": 952,
+    "largestMetadataBytes": 410,
+    "idleBodyCalls": 0,
+    "idleValidatedUnits": 0,
+    "offExportSameAndSafe": true,
+    "failures": []
+  },
+  "warmTimingR2": {
+    "rounds": 5,
+    "ticksPerRound": 1500,
+    "oldCPUSecondsMedian": 0.45379400000000003,
+    "cacheCPUSecondsMedian": 0.01598900000000003,
+    "oldWallSecondsMedian": 0.44948366668540984,
+    "cacheWallSecondsMedian": 0.015604791697114706,
+    "oldFullBytesPerRound": [
+      13746068,
+      13746068,
+      13746068,
+      13746068,
+      13746068
+    ],
+    "cacheMetadataBytesPerRound": [
+      613568,
+      613568,
+      613568,
+      613568,
+      613568
+    ],
+    "cacheBodyCallsPerRound": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cacheValidatedUnitsPerRound": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failures": []
+  },
+  "timingR1OwnCompilerContention": true,
+  "timingR2OtherMacWorkUnknown": true,
+  "coldBundleBytes": {
+    "cache": 42266,
+    "old": 56465
+  },
+  "coldGraphConfound": true,
+  "actualUIIMEOSGPU": false,
+  "wholeWidgetResourceClaim": false,
+  "tentativeDecision": "Allow limited immutable CPU/source candidate review; actual own-editor native UI and whole-window resource gate remain untested"
+}

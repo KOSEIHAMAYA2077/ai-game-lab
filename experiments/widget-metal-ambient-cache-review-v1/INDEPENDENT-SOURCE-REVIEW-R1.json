@@ -1,0 +1,44 @@
+{
+  "version": "independent-source-only-review-r1",
+  "reviewer": "widget_metal_comparison",
+  "sourceRevision": "candidate R1",
+  "fixtureAndRawResultsRead": false,
+  "additionalNativeGPUUIModelCalls": 0,
+  "sourceEdits": 0,
+  "findings": [
+    {
+      "scope": "canonical owner",
+      "finding": "receiver-r3.admit alone performs body push and nextId++; cache transport and staged/glyph views do not allocate material IDs."
+    },
+    {
+      "scope": "idle transfer vs core processing",
+      "finding": "Bridge growth gate avoids readBodyDeltaJSON on no-growth; metadata/diagnostics/offExport have no body output. Existing shape-only.advance\u2192bound may read bounded body slices via recent.reduce/chunkText."
+    },
+    {
+      "scope": "delta",
+      "finding": "readBody scans whole body and filters id>afterId. Newrange transfer is not O(delta) traversal; bridge bodyCalls/decodedUnits do not count internal core scans."
+    },
+    {
+      "scope": "math",
+      "finding": "ambientInstances function text and GeometryTypes/Renderer bytes match baseline; no GPU run."
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/ambient-integration-contract-v1/receiver-r3.mjs",
+      "sha256": "d72e7931fb601104f70929d7ce0ceb60756b968fc540a59698f2c08dc1e9cb6d"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/shape-only.mjs",
+      "sha256": "bc2e3ce24f5fe43889dc2527ef741bb620f57d24f3c754acfbb1b67024c83239"
+    },
+    {
+      "path": "experiments/ambient-integration-contract-v1/body-view.mjs",
+      "sha256": "7bbca53b4849b1e652cc97c07d8a141c8c9b17af4974066110af428dc74bee36"
+    },
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Sources/cache-transport.mjs",
+      "sha256": "381ea49d60dfeb0f5e0dbb4c82be9c7eb915d7a36cf118c4bd01cab36521220e"
+    }
+  ]
+}

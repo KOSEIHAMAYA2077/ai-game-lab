@@ -1,0 +1,31 @@
+# Ambient cache 独立境界レビュー METHOD R1
+
+2026-10-03。candidate の新 source/結果を読む前に、旧 desktop/glyph-metal-ambient-v1 と immutable ProducerR2-BridgeR2-BuildR5、R3 receiver、旧 Projection/instance builder、旧 FUTURE-CACHE-NOTES だけを参照して CASES-R1/FREEZE-R1 を固定する。作者の fixture/結果は使用しない。新 cache は source も実行もまだ見ていない。公開APIの field名を知ってから、固定した意味のcaseを変更せず mapperだけ別freezeにする。
+
+## 比較母数と判定
+
+人工 editor session12と hostile wire mutation14の二つを別母数にする。case自体の期待値は手書き、時間は人工。旧viewの実出力は補助referenceであり、手書き期待を黙って更新しない。旧referenceが手書き期待と違った場合は原票不合格を保存し、必要なhelper修正は別revisionで行う。candidate修正は作者へ知らせ、こちらでは一切変更しない。
+
+sessionは旧 createSession/executeJSON相当の synthetic commandで、初期/未知文書は0material、確定追加のgrapheme分割とID/inkはR3だけが担当する。renderer cacheはderived/volatileで、本文の再分割・ID発行・canonical編集・二つ目のbody authorityを持たない。cross-commit combining markは旧R3のoperation-local分割を維持する。文書undoと素材の除去を同一視しない。
+
+各stepのbody count、presented prefix、原文UTF16 literal、連続ID、ink、shape、任意指定したprojectionTimeでbirthを照合する。presentation前にmaterial到着してもbornを付けず、初めて表示prefixへ入る時だけbornを付ける。既存born/id/intakeSeed/inputIndexを保持する。pause/hide中のprojectionTimeはfixtureで明示固定し、実窓/実animation clockの実証とはしない。
+
+shape-only/color-only/held/unknown/preedit/idleではmaterial追加を0とし、candidateの応答は既存本文prefixの転送をしない。通常のidleでJSON応答そのものが0回になることは要求しない。metadata JSON、aggregate更新、形のuniform更新はbody読み出し/再検算とは分ける。metadata-onlyだけで実CPU/RAM/快適性が改善したとは主張しない。
+
+wire mutationの固定意図は重複unit、ID欠損/順序、oldprefixのliteral変化/ink変化、generation巻戻り、明示resetなしsession変更、応答順/欠損、body/presented減少、invalidtext/schema、時刻巻戻り、同一応答replay。既存valid cacheの状態をsnapshotし、invalidwireはthrow/hold/rejectで状態を変えず、glyph birth/ID/counter/shapeも変えない。exactresponse replayだけは明示的idempotent no-opまたはrejectを許容する。session resetは明示された別sessionのみにcacheを空にして新prefix/ID1を受ける。focus/document syncをsession resetにすることは許さない。
+
+field schemaを未読のためmutationは意味として固定する。mapperでは候補の名前/serializationだけを対応付け、適用対象が契約に存在しない場合はnot-coveredとして隠さず報告する。unsupportedをpassedへ数えない。protocolが当該攻撃をそもそも表現できない場合もsource上の代替guardと確認範囲を明記する。
+
+## CPU数学・転送・保存の範囲
+
+同じ旧CPU instance builderまたは候補が直接使う同じ関数を、Metal deviceを作らずSwift SDK helperで実行できる場合に比較する。instance80B＝5×SIMD4×4B。seed1、固定distance4/scale0.9/height440、人工atlasrectを固定する。glyph primitive順、文字用atlasキーをrawUTF16で照合し、Float32全成分とUInt32 identityをbitwise照合する。padding含むrawstruct bytesではなく、規定80B field payloadを比較する。Float gateを結果後に緩めない。shapeuniform/shader描画/GPU/見た目は本レビューで再検証しない。
+
+旧full view JSONと新wire JSONの実UTF8byte、bodyunit/UTF16転送数、delta/presentation/rebuild countが観測可能なら別々に記録する。新sourceでidle pathがbody enumeration/全prefix検算へ入らないことをread-only確認する。新wire全body上限は256units×256UTF16、JSON worst6B/UTF16＋metadata予算から静的に確認し、実数byteと数式boundを混ぜない。component転送量は全processRAM/全窓CPU/電力の代理ではない。
+
+saving-off export/diagnosticにtext/ID/glyphが入らないこと、cacheはvolatileで再起動時復元しないことをsourceとsynthetic exportで確認する。診断の保存間隔はsourceの制御だけを確認し、実OSファイル/本物のユーザー文は読み書きしない。artificial原票保存は本番retentionではない。model call、OS監視/clipboard/UI/GPU、新download、Git/sharedsource変更は0。
+
+## Freezeと失敗
+
+source/fixture/method/reference SHAをFREEZE-R1へ。candidate受領後はimmutable candidate manifest/source/bundleSHAを別recordへpinしてから初回評価。Node/JSC/Swiftは同じ固定caseとmapperを使い、engine母数/helperrevisionを分ける。helpercompile/runtime不合格を残し、修正版はR2別fileで旧source/resultsを保存する。candidateが変われば別candidate revisionの再確認と呼び、未見の初回結果を置き換えない。
+
+10:17JSTで新しい実験追加を停止、10:37までに報告/所有返却。最小限のcaseを一度通し、問題がない限り広い反復resource/GPU試験へ拡張しない。

@@ -1,0 +1,17 @@
+{
+  "version": "core-harness-r2",
+  "candidateSourceChanged": false,
+  "failure": "R03 focusEpoch actual omitted because frozenR3 inspect() has no focusEpoch key. State focus epoch is2; rawbody/prefix/ink alreadymatched. OriginalR1 outputs/source retained.",
+  "correction": "Read state.focusEpoch in separatecore harnessr2. Fixtureexpected unchanged.",
+  "files": [
+    {
+      "path": "desktop/glyph-metal-ambient-cache-v1/Tests/core-replay-r2.mjs",
+      "sha256": "8d568d9af0485dce007054bfbe06dee287203792cb0b7b3eaca974e9e3b63c63"
+    },
+    {
+      "path": "experiments/widget-metal-ambient-cache-v1/run-node-r2.mjs",
+      "sha256": "81d33e0b506986b507f6bc629b8275269eb5685eafd1f1ee47f488bfd8311312"
+    }
+  ],
+  "beforeExecution": true
+}

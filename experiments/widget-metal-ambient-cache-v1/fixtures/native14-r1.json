@@ -1,0 +1,1160 @@
+{
+  "version": "cache-manual14-beforeimplementation",
+  "authorship": "AI hand synthetic expected, nohumanannotation/OSIMEtrace. Fails preserved; do not tune expected.",
+  "cases": [
+    {
+      "id": "K01",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        }
+      ],
+      "expected": {
+        "body": "",
+        "unitCount": 0,
+        "inks": [],
+        "shape": "sphere",
+        "presented": 0,
+        "bodyCalls": 0
+      }
+    },
+    {
+      "id": "K02",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "A",
+          "text": "A",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "at": 2,
+          "ink": "green"
+        },
+        {
+          "op": "commit",
+          "at": 3,
+          "base": "A",
+          "value": "AB",
+          "text": "B",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "AB",
+        "unitCount": 2,
+        "inks": [
+          "blue",
+          "green"
+        ],
+        "shape": "sphere",
+        "presented": 2,
+        "bodyCalls": 2
+      }
+    },
+    {
+      "id": "K03",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "mark-start",
+          "at": 1,
+          "base": "",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "mark-update",
+          "at": 2,
+          "text": "か"
+        },
+        {
+          "op": "commit",
+          "at": 3,
+          "base": "",
+          "value": "漢字",
+          "text": "漢字",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "observe",
+          "at": 4,
+          "value": "漢字"
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "漢字",
+        "unitCount": 2,
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "presented": 2,
+        "bodyCalls": 1
+      }
+    },
+    {
+      "id": "K04",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "AB",
+          "text": "AB",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "observe",
+          "at": 2,
+          "value": "A"
+        },
+        {
+          "op": "observe",
+          "at": 3,
+          "value": "AB"
+        },
+        {
+          "op": "observe",
+          "at": 4,
+          "value": "A"
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "AB",
+        "unitCount": 2,
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "document": "A",
+        "bodyCalls": 1
+      }
+    },
+    {
+      "id": "K05",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit-repeat",
+          "at": 1,
+          "text": "A",
+          "count": 256
+        },
+        {
+          "op": "commit-after-current",
+          "at": 2,
+          "text": "B"
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        }
+      ],
+      "expected": {
+        "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "unitCount": 256,
+        "inks": [
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "lastHold": "body-capacity",
+        "bodyCalls": 1,
+        "presented": 256
+      }
+    },
+    {
+      "id": "K06",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "e",
+          "text": "e",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "at": 2,
+          "ink": "green"
+        },
+        {
+          "op": "commit",
+          "at": 3,
+          "base": "e",
+          "value": "é",
+          "text": "́",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "op": "ink",
+          "at": 4,
+          "ink": "purple"
+        },
+        {
+          "op": "commit",
+          "at": 5,
+          "base": "é",
+          "value": "é👩🏽‍💻",
+          "text": "👩🏽‍💻",
+          "range": [
+            2,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "é👩🏽‍💻",
+        "unitCount": 3,
+        "inks": [
+          "blue",
+          "green",
+          "purple"
+        ],
+        "shape": "sphere",
+        "unitTexts": [
+          "e",
+          "́",
+          "👩🏽‍💻"
+        ],
+        "bodyCalls": 3
+      }
+    },
+    {
+      "id": "K07",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "pause",
+          "at": 1,
+          "value": true
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "AB",
+          "text": "AB",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        },
+        {
+          "op": "pause",
+          "at": 7100,
+          "value": false
+        },
+        {
+          "op": "advance",
+          "at": 7400
+        }
+      ],
+      "expected": {
+        "body": "AB",
+        "unitCount": 2,
+        "inks": [
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "bodyCalls": 1,
+        "presented": 2
+      }
+    },
+    {
+      "id": "K08",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "visible",
+          "at": 1,
+          "value": false
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "箱",
+          "text": "箱",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        },
+        {
+          "op": "visible",
+          "at": 7100,
+          "value": true
+        },
+        {
+          "op": "advance",
+          "at": 7400
+        }
+      ],
+      "expected": {
+        "body": "箱",
+        "unitCount": 1,
+        "inks": [
+          "blue"
+        ],
+        "shape": "sphere",
+        "bodyCalls": 1,
+        "presented": 1
+      }
+    },
+    {
+      "id": "K09",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "箱",
+          "text": "箱",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 5001
+        },
+        {
+          "op": "commit",
+          "at": 6000,
+          "base": "箱",
+          "value": "箱知らない物",
+          "text": "知らない物",
+          "range": [
+            1,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 12000
+        }
+      ],
+      "expected": {
+        "body": "箱知らない物",
+        "unitCount": 6,
+        "inks": [
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "shape": "box",
+        "bodyCalls": 2
+      }
+    },
+    {
+      "id": "K10",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "箱",
+          "text": "箱",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 300
+        },
+        {
+          "op": "advance",
+          "at": 5001
+        },
+        {
+          "op": "advance",
+          "at": 10000
+        }
+      ],
+      "expected": {
+        "body": "箱",
+        "unitCount": 1,
+        "inks": [
+          "blue"
+        ],
+        "shape": "box",
+        "bodyCalls": 1,
+        "presented": 1
+      }
+    },
+    {
+      "id": "K11",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "AB",
+          "text": "AB",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 300
+        },
+        {
+          "op": "reset-session",
+          "at": 0,
+          "session": "K11_phase2"
+        },
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "ink",
+          "at": 1,
+          "ink": "green"
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "Z",
+          "text": "Z",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "Z",
+        "unitCount": 1,
+        "inks": [
+          "green"
+        ],
+        "shape": "sphere",
+        "bodyCallsPerFinalSession": 1,
+        "presented": 1
+      }
+    },
+    {
+      "id": "K12",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit-repeat",
+          "at": 1,
+          "text": "A",
+          "count": 256
+        },
+        {
+          "op": "advance",
+          "at": 7000
+        },
+        {
+          "op": "idle-ticks",
+          "at": 7000,
+          "count": 60,
+          "step": 67
+        }
+      ],
+      "expected": {
+        "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "unitCount": 256,
+        "inks": [
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue"
+        ],
+        "shape": "sphere",
+        "bodyCalls": 1,
+        "presented": 256,
+        "idleBodyTransfers": 0
+      }
+    },
+    {
+      "id": "K13",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "unsupported-command",
+          "at": 1,
+          "original": {
+            "op": "raw-source",
+            "at": 1
+          }
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "",
+        "unitCount": 0,
+        "inks": [],
+        "shape": "sphere",
+        "throws": 1,
+        "bodyCalls": 0
+      }
+    },
+    {
+      "id": "K14",
+      "commands": [
+        {
+          "op": "init",
+          "at": 0
+        },
+        {
+          "op": "commit",
+          "at": 1,
+          "base": "",
+          "value": "A",
+          "text": "A",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "commit",
+          "at": 2,
+          "base": "",
+          "value": "A",
+          "text": "A",
+          "range": [
+            0,
+            0
+          ]
+        },
+        {
+          "op": "advance",
+          "at": 300
+        }
+      ],
+      "expected": {
+        "body": "A",
+        "unitCount": 1,
+        "inks": [
+          "blue"
+        ],
+        "shape": "sphere",
+        "bodyCalls": 1,
+        "presented": 1
+      }
+    }
+  ]
+}

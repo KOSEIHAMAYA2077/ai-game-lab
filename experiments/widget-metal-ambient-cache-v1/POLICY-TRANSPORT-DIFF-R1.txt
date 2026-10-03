@@ -1,0 +1,68 @@
+Transport/plumbing diff only. Reference evaluateManualJSON suffix excluded from runtime entry; native policy unchanged.
+--- R5_receiver-bridge_prefix
++++ Cache_R1_receiver-policy
+@@ -1,10 +1,9 @@
++// Derived from pinned R5: only transport/return plumbing changed. Native commit/cancel policy retained.
+ import { createReceiver, receive, advanceTo, inspect, exportReceiver } from '../../../experiments/ambient-integration-contract-v1/receiver-r3.mjs';
+-import { readBody } from '../../../experiments/ambient-integration-contract-v1/body-view.mjs';
+-import { latestAnswer } from '../../../experiments/ambient-integration-contract-v1/shape-only.mjs';
++import { createCacheTransport } from './cache-transport.mjs';
+ import { validateStorage } from '../../../experiments/ambient-integration-contract-v1/storage-gate.mjs';
+ import { singleDiff } from '../../../experiments/ambient-editor-adapter-v1/adapter-r2.mjs';
+-export { evaluateJSON as evaluateOriginal20JSON } from '../../../experiments/ambient-javascriptcore-v1/bridge.mjs';
+-const TEST_STATE = new WeakMap();
++export const TEST_SESSIONS = new WeakMap();
+ const INKS = new Set(['white', 'blue', 'green', 'purple']);
+ const integer = n => Number.isSafeInteger(n) && n >= 0;
+ const safeBoundary = (text, n) => integer(n) && n <= text.length && (n === 0 || n === text.length || !(text.charCodeAt(n - 1) >= 0xd800 && text.charCodeAt(n - 1) <= 0xdbff && text.charCodeAt(n) >= 0xdc00 && text.charCodeAt(n) <= 0xdfff));
+@@ -15,8 +14,9 @@
+   if (value && typeof value === 'object') return Object.freeze(Object.fromEntries(Object.entries(value).map(([k, v]) => [k, freeze(v)])));
+   return value;
+ }
+-export function createSession() {
++export function createSession(receiverSession) {
+   const state = createReceiver({ savingOff: true, bodyLimit: 256, shapeMode: 'inline' });
++  const transport = createCacheTransport(state, receiverSession, aggregate);
+   let initialized = false, composition = null, selectedInk = 'blue', compositionSerial = 0, last = { status: 'ready', reason: 'ready' }, retired = false;
+   const header = (source, kind, data, options = {}) => freeze({ grammar: state.grammar, source, session: 'lab', seq: state.sources[source].seq + 1,
+     focusEpoch: options.focusEpoch ?? state.focusEpoch, policyEpoch: state.policyEpoch, observedAt: state.now, evidence: options.evidence ?? 'none', kind, data,
+@@ -59,12 +59,8 @@
+       shape: state.shape.current, status: last.status, reason: last.reason, pending: Boolean(state.pending), composing: Boolean(composition),
+       paused: state.paused, visible: state.visible, now: state.now };
+   }
+-  function frameView() {
+-    return { aggregate: aggregate(), units: [...readBody(state)], presentedCount: state.material.presented, shape: state.shape.current,
+-      shapeToken: state.shape.pending ? latestAnswer(state) : null };
+-  }
+   function execute(command) {
+-    if (retired) return frameView();
++    if (retired) return;
+     if (!command || !integer(command.at) || command.at < state.now) throw new Error('monotonic native command required');
+     advanceTo(state, command.at);
+     if (composition && command.at >= composition.at + 5000) { cancel(); last = { status: 'unknown', reason: 'native-preedit-expired' }; }
+@@ -97,21 +93,13 @@
+     else if (command.op === 'visible') deliver(header('system', 'visibility', { visible: command.value }));
+     else if (command.op === 'advance' || command.op === 'checkpoint') { /* no inference from idle */ }
+     else throw new Error('unsupported native command');
+-    return frameView();
++    return;
+   }
+-  const api = Object.freeze({ executeJSON: json => JSON.stringify(execute(JSON.parse(json))), snapshotJSON: () => JSON.stringify(frameView()), aggregateJSON: () => JSON.stringify(aggregate()),
++  const api = Object.freeze({ executeMetaJSON: json => { execute(JSON.parse(json)); return JSON.stringify(transport.metadata()); },
++    snapshotMetaJSON: () => JSON.stringify(transport.metadata()), readBodyDeltaJSON: json => JSON.stringify(transport.delta(JSON.parse(json))), aggregateJSON: () => JSON.stringify(aggregate()),
+     offExportJSON() { const value = exportReceiver(state); if (!validateStorage(value).valid || value.savingOff !== true) throw new Error('off export failed'); return JSON.stringify(value); },
+     destroy() { if (retired) return; cancel(); deliver(header('system', 'pause', { paused: true })); retired = true; },
+   });
+-  TEST_STATE.set(api, { state, execute });
++  TEST_SESSIONS.set(api, { state, execute, transport });
+   return api;
+ }
+-const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+-function expanded(expected) {
+-  const out = { ...expected };
+-  if (out.bodyRepeat) { out.body = out.bodyRepeat.text.repeat(out.bodyRepeat.count); delete out.bodyRepeat; }
+-  if (out.documentRepeat) { out.document = out.documentRepeat.text.repeat(out.documentRepeat.count) + (out.documentRepeat.suffix ?? ''); delete out.documentRepeat; }
+-  if (out.idsRange) { out.ids = Array.from({ length: out.idsRange[1] - out.idsRange[0] + 1 }, (_, i) => i + out.idsRange[0]); delete out.idsRange; }
+-  if (out.inkRepeat) { out.inks = Array(out.inkRepeat.count).fill(out.inkRepeat.ink); delete out.inkRepeat; }
+-  return out;
+-}

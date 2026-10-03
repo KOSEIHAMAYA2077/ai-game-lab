@@ -1,0 +1,105 @@
+{
+  "version": "cache-clock-known-regression-r2",
+  "beforeR2Implementation": true,
+  "origin": "Independent frozen W12 failure reported; supplementary author cases are known boundary/fix regressions, not fresh evaluation",
+  "cases": [
+    {
+      "id": "C01",
+      "initialNow": 110,
+      "nextNow": 109,
+      "operation": "metadata-only samebody2",
+      "expected": {
+        "bridgeReject": true,
+        "projectionReject": true,
+        "bodyUnchanged": true,
+        "acceptedNow": 110
+      }
+    },
+    {
+      "id": "C02",
+      "initialNow": 110,
+      "nextNow": 110,
+      "operation": "metadata-only shapebox",
+      "expected": {
+        "bridgeReject": false,
+        "projectionReject": false,
+        "acceptedNow": 110,
+        "shape": "box"
+      }
+    },
+    {
+      "id": "C03",
+      "initialNow": 110,
+      "nextNow": 111,
+      "operation": "metadata-only samebody2",
+      "expected": {
+        "bridgeReject": false,
+        "projectionReject": false,
+        "acceptedNow": 111
+      }
+    },
+    {
+      "id": "C04",
+      "initialNow": 110,
+      "nextNow": 109,
+      "operation": "bodygrowth3 deltaC rollback",
+      "expected": {
+        "bridgeReject": true,
+        "projectionReject": true,
+        "bodyUnchanged": true,
+        "acceptedNow": 110,
+        "newDeltaFetches": 0
+      }
+    },
+    {
+      "id": "C05",
+      "initialNow": null,
+      "nextNow": -1,
+      "operation": "firstempty metadata",
+      "expected": {
+        "bridgeReject": true,
+        "projectionReject": true,
+        "bodyUnchanged": true,
+        "acceptedNow": null
+      }
+    },
+    {
+      "id": "C06",
+      "initialNow": 1000,
+      "nextNow": 0,
+      "operation": "explicitnewsessionandcore empty0",
+      "expected": {
+        "bridgeReject": false,
+        "projectionReject": false,
+        "acceptedNow": 0,
+        "bodyCount": 0
+      }
+    },
+    {
+      "id": "C07",
+      "initialNow": null,
+      "nextNow": 9007199254740992,
+      "operation": "firstempty metadata aboveNumberMaxSafeInteger",
+      "expected": {
+        "bridgeReject": true,
+        "projectionReject": true,
+        "bodyUnchanged": true,
+        "acceptedNow": null
+      }
+    },
+    {
+      "id": "C08",
+      "initialNow": 110,
+      "nextNow": 111,
+      "operation": "badnewdeltaID2 thenvalidnewdeltaID3 at110",
+      "expected": {
+        "firstBridgeReject": true,
+        "firstProjectionReject": true,
+        "clockUnchangedAfterReject": true,
+        "secondAccepted": true,
+        "acceptedNow": 110,
+        "bodyCount": 3
+      }
+    }
+  ]
+}

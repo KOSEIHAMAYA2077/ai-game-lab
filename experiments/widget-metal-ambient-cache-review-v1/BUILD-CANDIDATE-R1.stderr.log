@@ -1,0 +1,15 @@
+CandidateReview-R1.swift:90:60: error: cannot find ')' to match opening '(' in string interpolation
+88 |         guard !FileManager.default.fileExists(atPath:output.path) else{throw ReviewError.failed("output exists")}
+89 |         try JSONSerialization.data(withJSONObject:result,options:[.prettyPrinted,.sortedKeys]).write(to:output,options:.withoutOverwriting)
+90 |         print("{\"sessions\":\(runs.count),\"wirePassed\":\(wireRuns.filter{($0[\"passed\"] as? Bool)==true}.count),\"wireAttempts\":\(wireRuns.count)}")
+   |                                                            `- error: cannot find ')' to match opening '(' in string interpolation
+91 |     }
+92 | }
+
+CandidateReview-R1.swift:90:15: error: unterminated string literal
+88 |         guard !FileManager.default.fileExists(atPath:output.path) else{throw ReviewError.failed("output exists")}
+89 |         try JSONSerialization.data(withJSONObject:result,options:[.prettyPrinted,.sortedKeys]).write(to:output,options:.withoutOverwriting)
+90 |         print("{\"sessions\":\(runs.count),\"wirePassed\":\(wireRuns.filter{($0[\"passed\"] as? Bool)==true}.count),\"wireAttempts\":\(wireRuns.count)}")
+   |               `- error: unterminated string literal
+91 |     }
+92 | }
