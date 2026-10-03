@@ -1,0 +1,24 @@
+{
+  "version": "native-static-wire-source-review-summary-r1",
+  "candidate": "NativeStaticWireR2",
+  "decision": "No new source blocker confirmed in bounded transport contract; not a runtime PASS",
+  "candidateRuntimeExecutions": 0,
+  "modelCalls": 0,
+  "UIOrOSInputOperations": 0,
+  "networkOrDownloadCalls": 0,
+  "independentFixtureOrResultReads": 0,
+  "authorFixtureOrResultReads": 0,
+  "sourcePrefixUnchangedBytes": 13229,
+  "sourceExactlyPrefixPlusNewEntry": true,
+  "sourceLimits": [
+    "safeRequestId checks decoded NSNumber.doubleValue, not exact raw decimal",
+    "frame/reply cap and mapped8MiB do not bound totalRSS",
+    "normalization/token caps partly checked after constructing intermediate values",
+    "SHA then read/open/mmap assumes stable trusted local artifacts"
+  ],
+  "noSourceChanges": true,
+  "scope": "Controlled stdout/stderr failures, logical caps, float/index range and EOF/overflow/lazy source path review only",
+  "reportedRootTestsNotCountedAsOwnPass": true,
+  "authorInitial5plus5RepliesNotRecountableWithoutRaw": true,
+  "sourcePins": "SOURCE-PINS.json"
+}

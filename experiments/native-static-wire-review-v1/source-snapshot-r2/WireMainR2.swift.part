@@ -1,0 +1,117 @@
+import CoreFoundation
+
+// The R5 prefix is unchanged. This entry point only constrains transport.
+struct WireRank: Encodable { let label: String; let score: Float }
+struct WireReply: Encodable {
+ let requestId: UInt64?; let registry: String?; let ranks: [WireRank]
+ let hold: String?; let elapsedMs: Double
+ enum CodingKeys: String, CodingKey { case requestId, registry, ranks, hold, elapsedMs }
+ func encode(to encoder: Encoder) throws {
+  var c = encoder.container(keyedBy: CodingKeys.self)
+  if let value = requestId { try c.encode(value, forKey: .requestId) } else { try c.encodeNil(forKey: .requestId) }
+  if let value = registry { try c.encode(value, forKey: .registry) } else { try c.encodeNil(forKey: .registry) }
+  try c.encode(ranks, forKey: .ranks)
+  if let value = hold { try c.encode(value, forKey: .hold) } else { try c.encodeNil(forKey: .hold) }
+  try c.encode(elapsedMs, forKey: .elapsedMs)
+ }
+}
+enum WireFailure: Error { case runtime, io, output }
+func safeRequestId(_ value: Any?) -> UInt64? {
+ guard let number = value as? NSNumber,
+       CFGetTypeID(number) != CFBooleanGetTypeID() else { return nil }
+ let d = number.doubleValue
+ guard d.isFinite, d >= 0, d <= 9_007_199_254_740_991, d.rounded(.down) == d else { return nil }
+ return UInt64(d)
+}
+func knownRegistry(_ value: Any?) -> String? {
+ guard let s = value as? String, s == "shape" || s == "primitive" else { return nil }
+ return s
+}
+func writeBytes(_ bytes: Data, to fd: Int32) throws {
+ try bytes.withUnsafeBytes { buffer in
+  guard let start = buffer.baseAddress else { return }
+  var offset = 0
+  while offset < bytes.count {
+   let count = Darwin.write(fd, start.advanced(by: offset), bytes.count - offset)
+   if count < 0 && errno == EINTR { continue }
+   guard count > 0 else { throw WireFailure.io }
+   offset += count
+  }
+ }
+}
+func emitReply(_ reply: WireReply) throws {
+ guard reply.elapsedMs.isFinite, reply.elapsedMs >= 0,
+       reply.ranks.allSatisfy({ $0.score.isFinite }) else { throw WireFailure.output }
+ var data = try JSONEncoder().encode(reply)
+ guard data.count <= 2048 else { throw WireFailure.output }
+ data.append(10)
+ try writeBytes(data, to: STDOUT_FILENO)
+}
+final class WireRuntime {
+ let encoder: NativeEncoder; let ranker: NativeRanker
+ init() throws {
+  let local = ".local/static-japanese-v1"
+  let revision = "95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3"
+  let captionsPath = "experiments/static-japanese-retrieval-v1/captions.json"
+  guard try shaFile(captionsPath) == "00a0483a29f2afa11d85d5019ac867d14c6b0d8ee71ac020da2bacb92ff587a8" else { throw WireFailure.runtime }
+  encoder = try NativeEncoder(tokenizerPath: local + "/source/" + revision + "/0_StaticEmbedding/tokenizer.json", tablePath: local + "/tables/table-128-float16.bin")
+  let inventory: Inventory = try readJSON(captionsPath, Inventory.self)
+  let captions = inventory.entries.flatMap { e in e.captions.map { Caption(registry: e.registry, label: e.label, text: $0) } }
+  ranker = try NativeRanker(encoder: encoder, captions: captions)
+ }
+}
+func wireMain() throws {
+ guard CommandLine.arguments.count == 1 else { throw WireFailure.runtime }
+ signal(SIGPIPE, SIG_IGN)
+ var runtime: WireRuntime?
+ func frame(_ bytes: Data?, overflow: Bool) throws {
+  let start = now()
+  func reject(_ reason: String, id: UInt64? = nil, registry: String? = nil) throws {
+   try emitReply(WireReply(requestId: id, registry: registry, ranks: [], hold: reason, elapsedMs: max(0, now() - start)))
+  }
+  guard !overflow, let bytes = bytes else { try reject("frame_limit"); return }
+  guard String(data: bytes, encoding: .utf8) != nil else { try reject("invalid_utf8"); return }
+  let value: Any
+  do { value = try JSONSerialization.jsonObject(with: bytes, options: [.fragmentsAllowed]) }
+  catch { try reject("invalid_json"); return }
+  let object = value as? [String: Any]
+  let id = safeRequestId(object?["requestId"]), registry = knownRegistry(object?["registry"])
+  guard let object = object, Set(object.keys) == Set(["requestId", "text", "registry"]),
+        id != nil, let text = object["text"] as? String, object["registry"] is String else {
+   try reject("invalid_schema", id: id, registry: registry); return
+  }
+  guard let registry = registry else { try reject("invalid_registry", id: id); return }
+  if runtime == nil { runtime = try WireRuntime() }
+  guard let runtime = runtime else { throw WireFailure.runtime }
+  let result = runtime.encoder.encode(text)
+  let ranks = runtime.ranker.rank(result.vector, registry).prefix(3).map { WireRank(label: $0.label, score: $0.score) }
+  try emitReply(WireReply(requestId: id, registry: registry, ranks: ranks, hold: result.hold, elapsedMs: max(0, now() - start)))
+ }
+ var input = [UInt8](repeating: 0, count: 4096)
+ var line = Data(); line.reserveCapacity(32768)
+ var overflow = false
+ while true {
+  let count = input.withUnsafeMutableBytes { Darwin.read(STDIN_FILENO, $0.baseAddress, $0.count) }
+  if count < 0 && errno == EINTR { continue }
+  guard count >= 0 else { throw WireFailure.io }
+  if count == 0 {
+   if overflow || !line.isEmpty { try autoreleasepool { try frame(overflow ? nil : line, overflow: overflow) } }
+   break
+  }
+  for byte in input.prefix(count) {
+   if byte == 10 {
+    try autoreleasepool { try frame(overflow ? nil : line, overflow: overflow) }
+    line.removeAll(keepingCapacity: true); overflow = false
+   } else if !overflow {
+    if line.count == 32768 { line.removeAll(keepingCapacity: true); overflow = true }
+    else { line.append(byte) }
+   }
+  }
+ }
+}
+do { try wireMain() }
+catch {
+ // Never serialize the actual exception: it can contain paths or input.
+ try? writeBytes(Data("wire_runtime_failure\n".utf8), to: STDERR_FILENO)
+ exit(1)
+}

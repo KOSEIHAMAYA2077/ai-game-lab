@@ -179,3 +179,5 @@ Model2Vecが示す「最大500倍」「CPUで蒸留約30秒」は作者のモデ
 [差分受信候補R2](../experiments/widget-metal-ambient-cache-v1/README-R2.md)は、待機中の全文JSON転送・Swift全素材検算を避ける。元の見え方とのCPU数値一致、clock拒否、人工入力の原票を残した。実窓全体の資源や実IMEは未確認で、旧60形Webと13形配布版を保持している。
 
 [内容からの連想policy](ambient-association-policy-v1/README.md)は、形の命令精度とサイドインテリアの連想価値を別の研究質問にする。120文・140文・6 Programは異なる課題なので合算せず、top3の候補包含を自動受理の成功へ読み替えない。人の快適性・好みは未検証である。
+
+[本文なしのbounded CLI](../experiments/native-static-wire-v1/README.md)は同じ静的特徴の外側を制限する比較。異常なlineからの復帰、固定5項目の返信、旧top3との一致を確認した。モデルが本文を理解する品質・本当のIPC・入力監視の許可・常駐全体の省電力とは別の境界である。
