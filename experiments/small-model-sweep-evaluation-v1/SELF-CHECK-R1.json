@@ -1,0 +1,121 @@
+{
+  "version": "scorer-self-check-r1",
+  "model_calls": 0,
+  "cases": [
+    {
+      "name": "one valid proposal",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "diagnostic": null
+    },
+    {
+      "name": "one valid hold",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "diagnostic": null
+    },
+    {
+      "name": "allowed whitespace",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "diagnostic": null
+    },
+    {
+      "name": "markdown fence rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "JSON: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "name": "extra explanation rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "JSON: Extra data: line 2 column 1 (char 84)"
+    },
+    {
+      "name": "duplicate key rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "JSON: duplicate JSON key: action"
+    },
+    {
+      "name": "boolean count rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "count must be an integer from 1 through 8 (boolean is invalid)"
+    },
+    {
+      "name": "float count rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "count must be an integer from 1 through 8 (boolean is invalid)"
+    },
+    {
+      "name": "unsupported shape rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "propose requires one supported shape"
+    },
+    {
+      "name": "missing shape rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "propose requires one supported shape"
+    },
+    {
+      "name": "count above range rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "count must be an integer from 1 through 8 (boolean is invalid)"
+    },
+    {
+      "name": "nonfinite rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "JSON: nonfinite JSON constant: NaN"
+    },
+    {
+      "name": "hold attributes rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "hold must clear shape/color/motion and set count to one"
+    },
+    {
+      "name": "array color rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "unsupported color"
+    },
+    {
+      "name": "object motion rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "unsupported motion"
+    },
+    {
+      "name": "extra key rejected",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "diagnostic": "reply must have exactly five contract keys"
+    }
+  ],
+  "passed": 16,
+  "total": 16,
+  "scorer_sha256": "afbcbcefbc7ce38134d89bd38ebcb3605ab36c6729da36f3f856f3504637acd5"
+}

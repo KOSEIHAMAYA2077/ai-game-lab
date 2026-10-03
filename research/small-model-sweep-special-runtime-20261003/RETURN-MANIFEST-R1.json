@@ -1,0 +1,57 @@
+{
+  "created_at_utc": "2026-10-03T05:25:22.826233+00:00",
+  "ownership": "Returned to root after research handoff; root owns publication and runtime trials",
+  "payload_files": [
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/README.md",
+      "bytes": 7894,
+      "sha256": "4255b910de801b15f86287ea5d3420af7f2d25a2c9aedd99f343881d302f39cf"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/BUILD-TOOLS-R1.md",
+      "bytes": 4145,
+      "sha256": "7e1b99e84fb4b8cd94df66d4c1da3cc5be2f6adc7b4bb7289154a4ca7d74c28f"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/PUBLIC-SOURCE-READS-R5.json",
+      "bytes": 31568,
+      "sha256": "3b31bce9641c951e06b09682d227a1c46857c169e96fc5270a392197391f80fd"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/PRISM-RELEASE-METADATA-R1.json",
+      "bytes": 1558,
+      "sha256": "b940a9bebe34843c97560823bc9f890bef8504071d6a2f6dc4c58cb535121bcd"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/CMAKE-RELEASE-METADATA-R1.json",
+      "bytes": 2014,
+      "sha256": "e9c1955ccb9ce8a04d3644e55dc1f52a6f0e5d7cb17d9a2ef3fec3dfab473d98"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/AUDIT-R1.json",
+      "bytes": 789,
+      "sha256": "e931f27d7e7976db16690fe079953756bd9d7804299a17d05b9727ca77d84f3a"
+    }
+  ],
+  "manifest_itself": "research/small-model-sweep-special-runtime-20261003/RETURN-MANIFEST-R1.json",
+  "excluded_local_files": [
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/SOURCE-READS-R1.json",
+      "reason": "Initial source excerpts preserved locally; condensed no-excerpt R5 is public payload"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/SOURCE-READS-R2.json",
+      "reason": "Initial source excerpts preserved locally; condensed no-excerpt R5 is public payload"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/SOURCE-READS-R3.json",
+      "reason": "Initial source excerpts preserved locally; condensed no-excerpt R5 is public payload"
+    },
+    {
+      "path": "research/small-model-sweep-special-runtime-20261003/SOURCE-READS-R4.json",
+      "reason": "Initial source excerpts preserved locally; condensed no-excerpt R5 is public payload"
+    }
+  ],
+  "actions_performed": "Pinned public source/release metadata reads and documentation only; no weights/runtime archive/build/inference/Git/OS actions",
+  "root_next_action": "Verify downloaded archive SHA locally; execute separate runtime experiments only in new directories; publish results without claiming source review proves model load or speed"
+}

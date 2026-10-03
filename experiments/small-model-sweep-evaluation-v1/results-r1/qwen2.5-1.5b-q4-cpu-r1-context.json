@@ -1,0 +1,62 @@
+{
+  "version": "saved-run-independent-context-r1",
+  "label": "qwen2.5-1.5b-q4-cpu-r1",
+  "reviewed_at_utc": "2026-10-03T05:32:09.751442+00:00",
+  "source_summary_path": "experiments/small-model-sweep-v1/results/qwen2.5-1.5b-q4-cpu-r1/summary.json",
+  "summary_sha256": "7bec9e621af81dbdcca5ae1a053830de388d9f44c04772ef62d8b2854917646d",
+  "raw_sha256": "e2c54cf19ae283138322104d8cc969d8149e983cf5a8ae9a2b4f42db1bd8ae57",
+  "evaluation_freeze_sha256": "e56f916e8fc55d2571e13462dbe928dbc88b6388621bbcf7d465554d904c2cbe",
+  "primary_scorer_sha256": "afbcbcefbc7ce38134d89bd38ebcb3605ab36c6729da36f3f856f3504637acd5",
+  "aggregation_helper_sha256": "86948194f9b511b88f78275e3e59aef97b179cab589db0714509594c0c3abb16",
+  "model_calls_by_reviewer": 0,
+  "runtime_status": "completed",
+  "failure_type": null,
+  "shutdown": {
+    "method": "owned_sigterm",
+    "exit_code": 0
+  },
+  "fixed_fixture_count": 24,
+  "attempted_case_count": 24,
+  "unattempted_case_ids": [],
+  "status_counts": {
+    "reply": 24
+  },
+  "http_status_counts": {
+    "200": 24
+  },
+  "finish_reason_counts": {
+    "stop": 24
+  },
+  "length_finish_count": 0,
+  "http_500_count": 0,
+  "driver_json_ok_count": 24,
+  "driver_contract_ok_count": 21,
+  "independent_schema_valid_count": 21,
+  "strict_all_field_exact_count": 5,
+  "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+  "reply_http200_latency": {
+    "count": 24,
+    "median_seconds": 1.5566339999999999,
+    "p95_nearest_rank_seconds": 1.610012,
+    "max_seconds": 1.66336
+  },
+  "attempt_latency_including_errors": {
+    "count": 24,
+    "median_seconds": 1.5566339999999999,
+    "p95_nearest_rank_seconds": 1.610012,
+    "max_seconds": 1.66336
+  },
+  "startup_seconds": 0.886016,
+  "sampled_peak_server_rss_bytes": 2147696640,
+  "model_file_bytes": 1117320736,
+  "model_file_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "runtime_binary_sha256": "6a072f8bf308ea28144476441d25760ee01b84ed102f86be4662d21ace8d72a6",
+  "driver_sha256": "2c40006c9c302f81f70df68bd2ed0d5b123b9fc3f1aeb34f888cc5d3e570d2fd",
+  "notes": [
+    "Fixed24 exact score counts unavailable/unattempted cases as zero; interpretation preserves whether a model actually replied.",
+    "HTTP500/loader/runtime/grammar errors are not observed semantic wrong answers.",
+    "Driver JSON and contract flags are separated from strict independent all-field correctness.",
+    "Query latency excludes server/model startup, rendering and download; sampled server RSS excludes UI/driver/OS.",
+    "This context helper was written after seeing the first completed summary, but the fixture/expectations/primary scorer and methods remain frozen."
+  ]
+}

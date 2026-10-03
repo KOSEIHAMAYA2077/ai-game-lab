@@ -1,0 +1,246 @@
+{
+  "version": "shape-only-source-review-r1",
+  "base_source_sha256": "2c40006c9c302f81f70df68bd2ed0d5b123b9fc3f1aeb34f888cc5d3e570d2fd",
+  "candidate_source_sha256": "d1dbbca277ae895ce8f2ed7441b589455a14e503bc2ed29672b6eb3d9596dcc7",
+  "candidate_matches_fixed_sha": true,
+  "source_hashes_unchanged_after_review": true,
+  "ast_rest_same_after_removing_contract_validator_and_version_label": true,
+  "guard_cases": 23,
+  "guard_passed": 23,
+  "cases": [
+    {
+      "id": "shape-sphere",
+      "value": {
+        "action": "propose",
+        "shape": "sphere"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-box",
+      "value": {
+        "action": "propose",
+        "shape": "box"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-mobius",
+      "value": {
+        "action": "propose",
+        "shape": "mobius"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-vase",
+      "value": {
+        "action": "propose",
+        "shape": "vase"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-sword",
+      "value": {
+        "action": "propose",
+        "shape": "sword"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-jellyfish",
+      "value": {
+        "action": "propose",
+        "shape": "jellyfish"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-flower",
+      "value": {
+        "action": "propose",
+        "shape": "flower"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-fireworks",
+      "value": {
+        "action": "propose",
+        "shape": "fireworks"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-tree",
+      "value": {
+        "action": "propose",
+        "shape": "tree"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-bird",
+      "value": {
+        "action": "propose",
+        "shape": "bird"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-fish",
+      "value": {
+        "action": "propose",
+        "shape": "fish"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "shape-snake",
+      "value": {
+        "action": "propose",
+        "shape": "snake"
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "hold-null",
+      "value": {
+        "action": "hold",
+        "shape": null
+      },
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "id": "hold-nonnull",
+      "value": {
+        "action": "hold",
+        "shape": "sphere"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "propose-null",
+      "value": {
+        "action": "propose",
+        "shape": null
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "unknown-action",
+      "value": {
+        "action": "other",
+        "shape": "sphere"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "unknown-shape",
+      "value": {
+        "action": "propose",
+        "shape": "wheel"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "bool-action",
+      "value": {
+        "action": true,
+        "shape": "sphere"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "list-action",
+      "value": {
+        "action": [],
+        "shape": "sphere"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "object-shape",
+      "value": {
+        "action": "propose",
+        "shape": {}
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "extra-color",
+      "value": {
+        "action": "propose",
+        "shape": "sphere",
+        "color": "red"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "missing-shape",
+      "value": {
+        "action": "hold"
+      },
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "id": "top-level-list",
+      "value": [],
+      "expected": false,
+      "actual": false,
+      "passed": true
+    }
+  ],
+  "model_or_server_calls": 0,
+  "model_downloads": 0,
+  "limitations": [
+    "source comparison and pure validator calls only, no actual model or new transport test",
+    "JSON duplicate keys may pass driver parser; independent scorer rejects them",
+    "CPU backend settings remain shared; sampled server RSS is not total widget memory or utilization/power"
+  ]
+}

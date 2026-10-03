@@ -4,7 +4,9 @@
 
 [▶ ブラウザで試す・60形](https://koseihamaya2077.github.io/glyph-matter/) / [小窓Web版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/) / [研究の技術・課題・先行研究](research/widget-research-map-20261003.md)。全アプリ入力との連動はまだ実装していません。
 
-今回の期限付き作業は終了し、自動継続と専用スリープ防止を停止しました。[終了記録](experiments/side-interior-session-close-v1/README.md)。
+**無料小モデルの追加比較:** Bonsai・Qwen・LFM・Granite・Phiなど23種類の重みを実行。形と属性の24文では最多17/24、形だけの別36文ではBonsai 4Bが28/36。[全候補・取得量・RAM・失敗・次の構成](experiments/small-model-sweep-v1/README.md)。既定版は維持し、モデルを必要時だけ起動する接続候補を検討します。
+
+前回の8時間作業は終了し、その自動継続と専用スリープ防止を停止しました。[終了記録](experiments/side-interior-session-close-v1/README.md)。
 
 **作業の横へ置く用途の結果と次の方針は、[今回の整理](research/side-interior-results-20261003.md)から読めます。** 試せる版、入力・意味・描画の比較、未確認の部分を分けました。[独立した文書照合](experiments/side-interior-summary-review-v1/REPORT.md)も保存しています。
 

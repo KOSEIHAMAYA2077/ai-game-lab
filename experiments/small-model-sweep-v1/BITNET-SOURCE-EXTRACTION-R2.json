@@ -1,0 +1,39 @@
+{
+  "UTC": "2026-10-03T05:28:35.326310+00:00",
+  "source_commit": "390c307752ab78fd8189f359d6954c9ba1be74af",
+  "archive_sha256": "b208b29c44302ea0dbc2bcc27e2995d30b0e3e87bdb670462abb4daf87076b03",
+  "archive_bytes": 35317928,
+  "note": "Initial standalone extraction rejected cross-submodule symlinks. Original attempt preserved. Verified six links resolve inside pinned BitNet superproject include/src or the submodule; extracted into its empty gitlink directory.",
+  "links": [
+    {
+      "member": "spm-headers/bitnet-lut-kernels.h",
+      "link": "../../../include/bitnet-lut-kernels.h",
+      "resolved_project_relative": "include/bitnet-lut-kernels.h"
+    },
+    {
+      "member": "spm-headers/ggml-bitnet.h",
+      "link": "../../../include/ggml-bitnet.h",
+      "resolved_project_relative": "include/ggml-bitnet.h"
+    },
+    {
+      "member": "spm-headers/ggml-common.h",
+      "link": "../ggml/src/ggml-common.h",
+      "resolved_project_relative": "3rdparty/llama.cpp/ggml/src/ggml-common.h"
+    },
+    {
+      "member": "spm-headers/ggml-quants.h",
+      "link": "../ggml/src/ggml-quants.h",
+      "resolved_project_relative": "3rdparty/llama.cpp/ggml/src/ggml-quants.h"
+    },
+    {
+      "member": "spm-sources/ggml-bitnet-lut.cpp",
+      "link": "../../../src/ggml-bitnet-lut.cpp",
+      "resolved_project_relative": "src/ggml-bitnet-lut.cpp"
+    },
+    {
+      "member": "spm-sources/ggml-bitnet-mad.cpp",
+      "link": "../../../src/ggml-bitnet-mad.cpp",
+      "resolved_project_relative": "src/ggml-bitnet-mad.cpp"
+    }
+  ]
+}

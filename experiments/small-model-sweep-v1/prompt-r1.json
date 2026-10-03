@@ -1,0 +1,78 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You interpret a Japanese user sentence for a glyph sculpture. Return exactly one JSON object, with no explanations. This is a finite shape proposal, not arbitrary 3D generation.\nUse action=propose only when the sentence positively requests a supported sculpture, including an unambiguous description of its appearance. Choose one supported shape: sphere (ball/spherical), box (cube or rectangular solid), mobius (a one-sided twisted band), vase, sword, jellyfish, flower, fireworks, tree, bird, fish, snake. A plain loop without a one-sided twist is unsupported in this contract.\nOrdinary work or narration, quoted/code text, explicitly negated requests, contradictory requests, and unsupported objects must hold the present shape. Do not infer a command from an incidental mention. If no single supported request can be determined, use action=hold. For hold always set shape=null, color=null, count=1, motion=null.\nFor propose, color is white/red/blue/yellow/green only if explicitly requested, otherwise null. count is the requested integer 1..8, otherwise 1; unsupported counts must hold. motion is still for stopped motion, flow for continuous flowing letters, pulse for rhythmic expansion/contraction, otherwise null. Do not invent extra attributes. The JSON keys are action, shape, color, count, motion."
+    }
+  ],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "glyph_proposal",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "propose",
+              "hold"
+            ]
+          },
+          "shape": {
+            "enum": [
+              "sphere",
+              "box",
+              "mobius",
+              "vase",
+              "sword",
+              "jellyfish",
+              "flower",
+              "fireworks",
+              "tree",
+              "bird",
+              "fish",
+              "snake",
+              null
+            ]
+          },
+          "color": {
+            "enum": [
+              "white",
+              "red",
+              "blue",
+              "yellow",
+              "green",
+              null
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "motion": {
+            "enum": [
+              "still",
+              "flow",
+              "pulse",
+              null
+            ]
+          }
+        },
+        "required": [
+          "action",
+          "shape",
+          "color",
+          "count",
+          "motion"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}

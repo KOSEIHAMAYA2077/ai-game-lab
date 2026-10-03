@@ -1,0 +1,445 @@
+{
+  "version": "saved-reply-field-diagnostics-r1",
+  "label": "qwen3.5-0.8b-q4-0-baseline-cpu-r1",
+  "raw_sha256": "ae5c4e7be4e2c6e299ce6bc70f8d684481d858ba9fb15a1e94c4d7a8ed063db2",
+  "primary_score_sha256": "12f8b5299da3a4c64fe63996d56ba6dddd594cd10b7e9cd31f0b06e9127162aa",
+  "primary_scorer_sha256": "afbcbcefbc7ce38134d89bd38ebcb3605ab36c6729da36f3f856f3504637acd5",
+  "diagnostic_source_sha256": "a6be6cbf6a70073263f25faf2e16550542a6897345c9c1e9c8c63f2f689a3158",
+  "model_calls": 0,
+  "primary_exact_unchanged": 1,
+  "denominator": 24,
+  "frozen_primary_field_correct_schema_valid_only": {
+    "action": 9,
+    "color": 3,
+    "count": 12,
+    "motion": 5,
+    "shape": 8
+  },
+  "diagnostic_field_equal_ignoring_other_field_errors": {
+    "action": 12,
+    "color": 12,
+    "count": 21,
+    "motion": 14,
+    "shape": 11
+  },
+  "propose_shape_only_schema_valid_primary": {
+    "correct": 8,
+    "denominator": 18
+  },
+  "propose_shape_only_ignoring_other_field_errors": {
+    "correct": 11,
+    "denominator": 18
+  },
+  "unspecified_color_filled_count": 7,
+  "unspecified_motion_filled_count": 7,
+  "by_group": {
+    "attributes": {
+      "denominator": 6,
+      "shape_equal_ignoring_other_field_errors": 5
+    },
+    "descriptive_metaphor": {
+      "denominator": 6,
+      "shape_equal_ignoring_other_field_errors": 2
+    },
+    "hold": {
+      "denominator": 6,
+      "shape_equal_ignoring_other_field_errors": 0
+    },
+    "named": {
+      "denominator": 6,
+      "shape_equal_ignoring_other_field_errors": 4
+    }
+  },
+  "notes": [
+    "Diagnostics were requested and implemented after initial saved model replies were observed, not a newly frozen primary metric.",
+    "Other-field-errors-ignored counts use original values in strict five-key JSON objects; no value is repaired, filled, cleared, or sent back to a model.",
+    "Diagnostic field counts are not adoptable reply counts, repaired accuracy, or arbitrary shape generation quality.",
+    "All field denominators remain24; propose-only shape denominators remain18 even for missing or failed cases."
+  ],
+  "cases": [
+    {
+      "case_id": "N01",
+      "group": "named",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": false,
+        "shape": true
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    },
+    {
+      "case_id": "N02",
+      "group": "named",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "N03",
+      "group": "named",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "N04",
+      "group": "named",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": false,
+        "shape": true
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    },
+    {
+      "case_id": "N05",
+      "group": "named",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "N06",
+      "group": "named",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "M01",
+      "group": "descriptive_metaphor",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": false,
+        "shape": false
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    },
+    {
+      "case_id": "M02",
+      "group": "descriptive_metaphor",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": false,
+        "shape": true
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    },
+    {
+      "case_id": "M03",
+      "group": "descriptive_metaphor",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "M04",
+      "group": "descriptive_metaphor",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "M05",
+      "group": "descriptive_metaphor",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "M06",
+      "group": "descriptive_metaphor",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "A01",
+      "group": "attributes",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": true,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "A02",
+      "group": "attributes",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": false,
+        "count": false,
+        "motion": false,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "A03",
+      "group": "attributes",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": true,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "A04",
+      "group": "attributes",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": false,
+        "count": true,
+        "motion": true,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "A05",
+      "group": "attributes",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": false,
+        "count": false,
+        "motion": false,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "A06",
+      "group": "attributes",
+      "expected_action": "propose",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": true,
+        "count": true,
+        "motion": false,
+        "shape": true
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "H01",
+      "group": "hold",
+      "expected_action": "hold",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "H02",
+      "group": "hold",
+      "expected_action": "hold",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "H03",
+      "group": "hold",
+      "expected_action": "hold",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": false,
+        "count": true,
+        "motion": false,
+        "shape": false
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    },
+    {
+      "case_id": "H04",
+      "group": "hold",
+      "expected_action": "hold",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": false,
+        "count": false,
+        "motion": false,
+        "shape": false
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    },
+    {
+      "case_id": "H05",
+      "group": "hold",
+      "expected_action": "hold",
+      "strict_five_key_object": true,
+      "original_schema_valid": false,
+      "field_equal_ignoring_other_field_errors": {
+        "action": true,
+        "color": true,
+        "count": true,
+        "motion": true,
+        "shape": false
+      },
+      "unspecified_color_filled": false,
+      "unspecified_motion_filled": false
+    },
+    {
+      "case_id": "H06",
+      "group": "hold",
+      "expected_action": "hold",
+      "strict_five_key_object": true,
+      "original_schema_valid": true,
+      "field_equal_ignoring_other_field_errors": {
+        "action": false,
+        "color": false,
+        "count": true,
+        "motion": false,
+        "shape": false
+      },
+      "unspecified_color_filled": true,
+      "unspecified_motion_filled": true
+    }
+  ]
+}

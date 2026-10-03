@@ -1,0 +1,23 @@
+{
+  "version": "resource-review-tests-r1",
+  "created_utc": "2026-10-03T06:18:37.193018+00:00",
+  "command": "python3 -m unittest discover -s experiments/small-model-sweep-resource-evaluation-v1 -p test_*.py -v",
+  "tests": 9,
+  "pass": true,
+  "reported_seconds": 0.003,
+  "cpu_format_subcases": 6,
+  "cpu_invalid_format_subcases": 5,
+  "checks": [
+    "ownership failure prevents real ps call",
+    "actual600s interval including extra shutdown sample",
+    "completed short interval is truncated",
+    "decreasing CPU counter invalid",
+    "incorrect percent or RSS aggregate rejected",
+    "missing end counter incomplete",
+    "NaN/zero interval invalid"
+  ],
+  "models_or_servers_started": 0,
+  "real_ps_or_lsof_calls_in_tests": 0,
+  "fixture_prompt_scorer_changes": 0,
+  "scope": "Artificial counter and records only; not model or complete widget validation"
+}

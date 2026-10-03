@@ -1,0 +1,86 @@
+{
+  "version": "saved-run-independent-context-r1",
+  "label": "bitnet-2b-i2s-patched-cpu-r3",
+  "reviewed_at_utc": "2026-10-03T05:48:09.138335+00:00",
+  "source_summary_path": "experiments/small-model-sweep-v1/results/bitnet-2b-i2s-patched-cpu-r3/summary.json",
+  "summary_sha256": "21db791d920e6c930bbe566f2c14184b21a2da930e0b5750bfd3edaa8803eabc",
+  "raw_sha256": "122e2dce2016300772f3a28f05919ef65b4fc7a4941aa648095b6021810bd51f",
+  "evaluation_freeze_sha256": "e56f916e8fc55d2571e13462dbe928dbc88b6388621bbcf7d465554d904c2cbe",
+  "primary_scorer_sha256": "afbcbcefbc7ce38134d89bd38ebcb3605ab36c6729da36f3f856f3504637acd5",
+  "aggregation_helper_sha256": "86948194f9b511b88f78275e3e59aef97b179cab589db0714509594c0c3abb16",
+  "model_calls_by_reviewer": 0,
+  "runtime_status": "query_timeout",
+  "failure_type": "DeadlineExceeded",
+  "shutdown": {
+    "method": "owned_sigkill_after_5s",
+    "exit_code": -9
+  },
+  "fixed_fixture_count": 24,
+  "attempted_case_count": 1,
+  "unattempted_case_ids": [
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "H06"
+  ],
+  "status_counts": {
+    "timeout": 1
+  },
+  "http_status_counts": {
+    "None": 1
+  },
+  "finish_reason_counts": {
+    "None": 1
+  },
+  "length_finish_count": 0,
+  "http_500_count": 0,
+  "driver_json_ok_count": 0,
+  "driver_contract_ok_count": 0,
+  "independent_schema_valid_count": 0,
+  "strict_all_field_exact_count": 0,
+  "interpretation": "no_semantic_reply_transport_grammar_or_runtime_failure",
+  "reply_http200_latency": {
+    "count": 0,
+    "median_seconds": null,
+    "p95_nearest_rank_seconds": null,
+    "max_seconds": null
+  },
+  "attempt_latency_including_errors": {
+    "count": 1,
+    "median_seconds": 30.002847,
+    "p95_nearest_rank_seconds": 30.002847,
+    "max_seconds": 30.002847
+  },
+  "startup_seconds": 1.173795,
+  "sampled_peak_server_rss_bytes": 1438171136,
+  "model_file_bytes": 1187801280,
+  "model_file_sha256": "4221b252fdd5fd25e15847adfeb5ee88886506ba50b8a34548374492884c2162",
+  "runtime_binary_sha256": "e53290a849545b36eb598a22ba9475c6ae422be5b1b808502a9c1d3ff5903f6c",
+  "driver_sha256": "2c40006c9c302f81f70df68bd2ed0d5b123b9fc3f1aeb34f888cc5d3e570d2fd",
+  "notes": [
+    "Fixed24 exact score counts unavailable/unattempted cases as zero; interpretation preserves whether a model actually replied.",
+    "HTTP500/loader/runtime/grammar errors are not observed semantic wrong answers.",
+    "Driver JSON and contract flags are separated from strict independent all-field correctness.",
+    "Query latency excludes server/model startup, rendering and download; sampled server RSS excludes UI/driver/OS.",
+    "This context helper was written after seeing the first completed summary, but the fixture/expectations/primary scorer and methods remain frozen."
+  ]
+}

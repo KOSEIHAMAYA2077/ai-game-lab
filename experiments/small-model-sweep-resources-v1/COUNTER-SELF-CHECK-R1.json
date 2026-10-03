@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "input": "0:00.00",
+      "seconds": 0.0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "input": "1:12.34",
+      "seconds": 72.34,
+      "expected": 72.34,
+      "pass": true
+    },
+    {
+      "input": "2:03:04.50",
+      "seconds": 7384.5,
+      "expected": 7384.5,
+      "pass": true
+    },
+    {
+      "input": "1-02:03:04.50",
+      "seconds": 93784.5,
+      "expected": 93784.5,
+      "pass": true
+    }
+  ],
+  "contract_guards_passed": 3,
+  "setup_note": "Initial counter mock used None and failed before any model call; replaced test fixture with fake owned PID. Model driver unchanged."
+}

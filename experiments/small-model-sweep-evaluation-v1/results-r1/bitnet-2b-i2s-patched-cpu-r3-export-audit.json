@@ -1,0 +1,30 @@
+{
+  "version": "saved-export-provenance-audit-r1",
+  "label": "bitnet-2b-i2s-patched-cpu-r3",
+  "raw_sha256": "122e2dce2016300772f3a28f05919ef65b4fc7a4941aa648095b6021810bd51f",
+  "summary_sha256": "21db791d920e6c930bbe566f2c14184b21a2da930e0b5750bfd3edaa8803eabc",
+  "prompt_sha256": "da0223fdfe8eab4c970b0054f901a3c5dfb042e54be13aebe5dea678e990d73d",
+  "fixture_sha256": "faef1015db57e15a8677ef180c8e658db0f9b82d32311f68bb9477ac06eba23b",
+  "source_sha256": "551a0403573afc845c98793bbbb794fec01098479c7a769eec9b84c14fe48255",
+  "model_calls": 0,
+  "attempted": 1,
+  "requests_match_frozen_prompt_plus_text": 1,
+  "http200_reply_content_matches": 0,
+  "notes": [
+    "Audit helper was added after initial model outputs; it does not change primary scoring or expectations.",
+    "Only text is present as the appended user message; fixture expected/rationale/group are not provided to the model.",
+    "Each successful reply's raw_text is compared with original saved HTTP message.content; failed or partial transport is preserved separately."
+  ],
+  "cases": [
+    {
+      "case_id": "N01",
+      "runtime_status": "timeout",
+      "http_status": null,
+      "request_sha256": "8f450dab6a0783562af13913863ce581eb50f07f804614a50ff18e2ca71bf41b",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": null,
+      "original_http_message_content_matches_unrepaired_export": null,
+      "wire_parse_error": null
+    }
+  ]
+}

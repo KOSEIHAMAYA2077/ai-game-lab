@@ -1,0 +1,51 @@
+{
+  "version": "portability-adoption-prior-r1",
+  "created_utc": "2026-10-03T05:18:49.346175+00:00",
+  "phase": "Results-unread proposal after root started comparison; not global pre-experiment registration",
+  "author_viewed_new_model_quality_results": false,
+  "author_viewed_new_model_performance_results": false,
+  "author_read_fixture_text_or_expected": false,
+  "author_model_calls": 0,
+  "author_builds": 0,
+  "frozen_inputs": {
+    "driver_path": "experiments/small-model-sweep-runtime-v1/run_r2.py",
+    "driver_sha256": "2c40006c9c302f81f70df68bd2ed0d5b123b9fc3f1aeb34f888cc5d3e570d2fd",
+    "prompt_sha256": "da0223fdfe8eab4c970b0054f901a3c5dfb042e54be13aebe5dea678e990d73d",
+    "fixture_sha256": "faef1015db57e15a8677ef180c8e658db0f9b82d32311f68bb9477ac06eba23b"
+  },
+  "scope": "Finite 12-shape proposal and bounded attributes, not unknown object mesh generation or widget validation",
+  "pilot_candidate_conditions": {
+    "all_24_inputs_accounted_for": true,
+    "strict_scorer_contract_valid_replies": 24,
+    "exact_overall_minimum": 22,
+    "exact_positive_fraction_minimum": 0.9,
+    "false_proposals_on_labeled_hold_maximum": 0,
+    "query_timeout_or_transport_failure_maximum": 0,
+    "startup_seconds_maximum": 60,
+    "each_client_http_query_seconds_maximum": 30,
+    "scoring_note": "Use frozen independent scorer; driver contract_ok is not authoritative. Unsupported runtime and unattempted cases remain separate failures; no tuning on these 24 cases."
+  },
+  "standard_widget_adoption_conditions": {
+    "additional_fresh_evaluation_required": true,
+    "real_16gb_laptop_required": true,
+    "actual_connected_widget_required": true,
+    "end_to_end_input_to_formation_seconds_maximum": 30,
+    "normal_total_memory_mib_candidate_maximum": 200,
+    "transient_total_memory_mib_candidate_maximum": 512,
+    "normal_mean_cpu_percent_one_logical_core_candidate_maximum": 5,
+    "normal_fps_candidate": 15,
+    "paused_or_hidden_render_submissions": 0,
+    "idle_inference_requests": 0,
+    "after_owned_model_exit_baseline_recovery_observation_seconds": 120,
+    "two_hour_growth_observation_required": true,
+    "cpu_gpu_power_and_other_work_responsiveness_required": true,
+    "human_work_session_check_required": true,
+    "note": "Engineering numbers inherit existing widget-first proposal, are not achieved values or statistically validated comfort thresholds."
+  },
+  "failure_disposition": {
+    "memory_over_budget": "Keep artifact and raw results; possible optional manual/teacher experiment, not standard widget",
+    "quality_under_target": "Keep result, reject default selection, train/evaluate on new independently frozen cases only",
+    "runtime_unsupported": "Record software incompatibility, do not convert to a semantic wrong answer only",
+    "startup_or_query_timeout": "Record timeout and unattempted cases; do not silently omit"
+  }
+}

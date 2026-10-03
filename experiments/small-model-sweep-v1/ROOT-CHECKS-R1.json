@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-03T06:20:56Z",
+  "actual_model_tests_already_finished": true,
+  "commands": [
+    {
+      "cwd": "experiments/small-model-sweep-runtime-v1",
+      "command": "python3 -m unittest test_r1 test_lifecycle_r1 -v",
+      "tests": 19,
+      "reported_seconds": 3.443,
+      "exit_code": 0
+    },
+    {
+      "cwd": "experiments/small-model-sweep-shape-only-evaluation-v1",
+      "command": "python3 -m unittest test_score_r1 -v",
+      "tests": 11,
+      "reported_seconds": 0.002,
+      "exit_code": 0
+    },
+    {
+      "cwd": "experiments/small-model-sweep-resource-evaluation-v1",
+      "command": "python3 -m unittest test_cpu_counter_r1 test_idle_validation_r1 -v",
+      "tests": 9,
+      "reported_seconds": 0.003,
+      "exit_code": 0
+    }
+  ],
+  "scope": "Artificial HTTP/JSON/lifecycle/scorer/counter checks; not app UI, whole-widget, semantic quality, numeric kernel, or 16GB PC validation."
+}

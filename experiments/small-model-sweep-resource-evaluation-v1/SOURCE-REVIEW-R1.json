@@ -1,0 +1,70 @@
+{
+  "version": "resource-source-review-r1",
+  "created_utc": "2026-10-03T06:04:46.970556+00:00",
+  "review_timing": "Root resource trials may have started; reviewer has not read any resource outputs. Not a preregistration before all root execution.",
+  "shape_driver_sha256": "d1dbbca277ae895ce8f2ed7441b589455a14e503bc2ed29672b6eb3d9596dcc7",
+  "resource_driver_sha256": "f6a7d89e42ca124bb590cacff0ca22dc6b0d8a6fa9d6707e9804795618ca4714",
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+  "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa",
+  "source_diff_sha256": "b9d167853ab023b8c7a300c96a954a50ff832ffefd71345d617ec567d71f3dc4",
+  "syntax_parse_ok": true,
+  "permitted_source_changes": [
+    "ctx2048 ->1024",
+    "batch256 ->64",
+    "ubatch128 ->32",
+    "output256 ->128",
+    "runtime version label",
+    "cpu_counter helper",
+    "owned server post-query idle block"
+  ],
+  "unchanged_guards": [
+    "finite12 shape/action contract",
+    "strict whole JSON parsing path",
+    "request deadline30s",
+    "owned process and loopback port checks",
+    "shutdown only owned Popen handle",
+    "exact raw content JSONL",
+    "do not feed expected/rationale/group to model",
+    "failures never semantic PASS"
+  ],
+  "cpu_semantics": {
+    "source": "Local macOS man(1) ps; time=accumulated CPU time user+system, -S would include exited children, and is absent",
+    "formula": "(cpu_end_seconds-cpu_start_seconds)/actual_elapsed_seconds*100",
+    "one_core_100_percent": true,
+    "includes": [
+      "owned server user/system CPU, threads summed"
+    ],
+    "excludes": [
+      "monitor",
+      "renderer/UI",
+      "other children/processes",
+      "OS/background work",
+      "power/thermal"
+    ],
+    "counter_interval_note": "Elapsed timer starts before start counter and ends after end counter, including lsof/ps overhead; small denominator bias toward lower percent."
+  },
+  "idle_validation_before_results": [
+    "status completed alone does not prove600s because min(idle_start+600,batch_deadline); independently classify actual elapsed<600 as truncated",
+    "end>=start>=0 and finite elapsed>0 required",
+    "independently recompute CPU delta and percent; precision limited by ps TIME display",
+    "validate idle RSS values against exact saved samples and phase marker",
+    "shutdown/error/timeout/missing raw remain separate pipeline diagnostics",
+    "same seen36 cannot establish fresh/generalization; 4 resource parameters jointly changed",
+    "model/runtime/prompt/fixture identity required for paired baseline comparison",
+    "server RSS<512MiB would still not prove whole widget budget, idle CPU alone does not prove active CPU or power"
+  ],
+  "test": {
+    "command": "python3 -m unittest discover -s experiments/small-model-sweep-resource-evaluation-v1 -p test_cpu_counter_r1.py -v",
+    "tests": 3,
+    "format_subcases": 6,
+    "invalid_format_subcases": 5,
+    "ownership_subcases": 1,
+    "pass": true,
+    "seconds_reported": 0.003,
+    "model_or_server_calls": 0,
+    "real_ps_calls": 0
+  },
+  "downloads": 0,
+  "source_owned_file_changes": 0
+}

@@ -1,0 +1,80 @@
+--- experiments/small-model-sweep-shape-only-v1/run_r2.py
++++ experiments/small-model-sweep-resources-v1/run_r2.py
+@@ -203,6 +203,22 @@
+         server.wait(timeout=5)
+         method = "owned_sigkill_after_5s"
+     return {"method": method, "exit_code": server.returncode}
++
++
++def cpu_counter(server, port):
++    assert_owned(server, port)
++    value = subprocess.run(["ps", "-o", "time=", "-p", str(server.pid)], capture_output=True, text=True, timeout=2).stdout.strip()
++    days = 0
++    if "-" in value:
++        d, value = value.split("-", 1)
++        days = int(d)
++    parts = value.split(":")
++    if len(parts) not in {2, 3}:
++        raise ValueError("unsupported_ps_cpu_time")
++    seconds = float(parts[-1]) + int(parts[-2]) * 60 + days * 86400
++    if len(parts) == 3:
++        seconds += int(parts[0]) * 3600
++    return seconds, value
+ 
+ 
+ def main(argv=None):
+@@ -254,14 +270,14 @@
+             p.error("duplicate fixture id")
+         case_ids.add(case["id"])
+     command = [str(args.server.resolve()), "--model", str(args.model.resolve()),
+-               "--ctx-size", "2048", "--threads", "4", "--threads-batch", "4",
+-               "--parallel", "1", "--batch-size", "256", "--ubatch-size", "128",
++               "--ctx-size", "1024", "--threads", "4", "--threads-batch", "4",
++               "--parallel", "1", "--batch-size", "64", "--ubatch-size", "32",
+                "--reasoning", "off", "--no-cache-prompt", "--host", "127.0.0.1",
+                "--port", str(args.port), "--device", "none", "--gpu-layers", "0",
+                "--no-op-offload", "--no-kv-offload"]
+-    summary = {"version": "small-model-sweep-shape-only-runtime-r1", "label": args.label,
++    summary = {"version": "small-model-sweep-resources-runtime-r1", "label": args.label,
+                "backend": "cpu", "threads": 4, "threads_batch": 4,
+-               "context_tokens": 2048, "max_output_tokens": 256,
++               "context_tokens": 1024, "max_output_tokens": 128,
+                "temperature": 0, "seed": 17, "stream": False,
+                "prompt_cache": False, "startup_deadline_seconds": 60,
+                "query_deadline_seconds": 30,
+@@ -343,7 +359,7 @@
+             assert_owned(server, args.port)
+             body = dict(prompt)
+             body["messages"] = prompt["messages"] + [{"role": "user", "content": case["text"]}]
+-            body.update(temperature=0, seed=17, max_tokens=256, stream=False, cache_prompt=False)
++            body.update(temperature=0, seed=17, max_tokens=128, stream=False, cache_prompt=False)
+             save(private / (case["id"] + "-request.json"), body)
+             at = time.monotonic()
+             item = {"id": case["id"], "status": "not_started", "seconds": None,
+@@ -409,6 +425,26 @@
+             print(json.dumps({"label": args.label, "id": item["id"],
+                               "status": item["status"], "seconds": item["seconds"],
+                               "contract_ok": item["contract_ok"]}), flush=True)
++        if args.label.endswith("-idle-r1"):
++            summary["status"] = "idling"
++            idle_start = time.monotonic()
++            cpu_start, cpu_start_raw = cpu_counter(server, args.port)
++            summary["idle"] = {"planned_seconds": 600, "started_batch_seconds": idle_start-started,
++                "cpu_start_seconds": cpu_start, "cpu_start_raw": cpu_start_raw,
++                "cpu_note": "Owned server cumulative CPU time from ps TIME; delta/elapsed, one core=100%. Monitor and renderer excluded."}
++            save(public / "summary.json", summary)
++            until = min(idle_start + 600, batch_deadline)
++            while time.monotonic() < until:
++                if server.poll() is not None:
++                    raise RuntimeError("owned_server_exited_during_idle")
++                time.sleep(min(5, max(0, until-time.monotonic())))
++            cpu_end, cpu_end_raw = cpu_counter(server, args.port)
++            elapsed = time.monotonic()-idle_start
++            idle_rss = [v["rss_bytes"] for v in samples if v["seconds"] >= idle_start-started and v["rss_bytes"] is not None]
++            summary["idle"].update(elapsed_seconds=elapsed, cpu_end_seconds=cpu_end, cpu_end_raw=cpu_end_raw,
++                cpu_delta_seconds=cpu_end-cpu_start, cpu_percent_one_core=(cpu_end-cpu_start)/elapsed*100,
++                rss_min_bytes=min(idle_rss,default=None), rss_max_bytes=max(idle_rss,default=None),
++                rss_samples=len(idle_rss), mean_rss_bytes=sum(idle_rss)/len(idle_rss) if idle_rss else None)
+         summary["status"] = "completed"
+     except BaseException as exc:
+         if summary["status"] not in {"startup_failed", "query_timeout", "batch_timeout", "response_limit", "transport_error"}:

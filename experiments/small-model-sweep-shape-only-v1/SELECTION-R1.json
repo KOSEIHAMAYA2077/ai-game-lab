@@ -1,0 +1,17 @@
+{
+  "version": "shape-only-selection-r1",
+  "selected_ids": [
+    "bonsai-1.7b-q1",
+    "bonsai-4b-q1",
+    "bonsai-8b-q1",
+    "qwen3-0.6b-q8",
+    "granite4-1b-q4",
+    "ternary-bonsai-1.7b-g64"
+  ],
+  "selection_basis": "After R1 outputs, before new 36-case outputs. Bonsai family requested by user; 4B best observed full contract, 8B/Granite4 observed shape diagnostic strong; Qwen3 0.6B low-latency control; Ternary sibling quant control. Not pre-registered before R1 and not selected using fresh36 results.",
+  "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "driver_sha256": "d1dbbca277ae895ce8f2ed7441b589455a14e503bc2ed29672b6eb3d9596dcc7",
+  "cpu_config": "same b11342/context2048/batch256/ubatch128/4threads/max256; R2 two-field contract only",
+  "comparison_note": "R1 has 24 cases and five fields; R2 has new 36 cases and two fields. Do not treat difference in headline percentage as a controlled improvement."
+}

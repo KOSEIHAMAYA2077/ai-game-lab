@@ -1,0 +1,37 @@
+{
+  "version": "bitnet-patch-source-review-r1",
+  "reviewed_at_utc": "2026-10-03T05:39:06.872203+00:00",
+  "scope": "Read-only original/new CPU source and local ggml_is_contiguous definition; no build/kernel/model execution.",
+  "build_calls": 0,
+  "kernel_calls": 0,
+  "model_calls": 0,
+  "old_source_sha256": "181eb04e02e4d27b16d9c887782d05b877dbc9ffc7a3eca66a822ed973d43764",
+  "new_source_sha256": "037ce662e0ddd9b7e287b96c988b35d2b81359fc33687c93721f416d32e9e817",
+  "patch_sha256": "1048bbfae29094f364035235b33a05ac0ee26e10a8f291c82219448ed1da2e96",
+  "single_expression_replacement_only_in_reviewed_file": true,
+  "replacement_occurrences_old": 1,
+  "replacement_occurrences_new": 1,
+  "metadata_exists_at_review": false,
+  "findings": [
+    {
+      "id": "P01",
+      "classification": "source_plausibility",
+      "finding": "src1_cont is declared inside #if GGML_USE_LLAMAFILE in this function; the I2_S fast path using it is outside that conditional. Direct ggml_is_contiguous(src1) removes the out-of-scope identifier for non-LLAMAFILE builds."
+    },
+    {
+      "id": "P02",
+      "classification": "source_equivalence_scope",
+      "finding": "Inside enabled LLAMAFILE builds, src1_cont is assigned exactly ggml_is_contiguous(src1), and its descriptor is const; the replacement gives the same Boolean test if that descriptor is not mutated externally. The reviewed ggml predicate only reads type/ne/nb."
+    },
+    {
+      "id": "P03",
+      "classification": "not_verified",
+      "finding": "No independent numerical kernel result, vector-dot equivalence, finite-output or tensor-layout boundary tests were run. Compilation and a model reply would not by themselves certify the I2_S kernel for all tensors."
+    },
+    {
+      "id": "P04",
+      "classification": "separate_runtime_group",
+      "finding": "Any patched static BitNet run must retain original shared-runtime failure and be labeled as a separate patched runtime. Its quality and timings are not directly an identical-backend comparison with mainline/Prism runs."
+    }
+  ]
+}

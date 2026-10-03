@@ -1,0 +1,367 @@
+{
+  "version": "shape-only-evaluation-r1",
+  "language": "ja",
+  "source": "New artificial sentences authored without reading R1 fixture body or quality; no human personal text",
+  "cases": [
+    {
+      "case_id": "named01",
+      "group": "named",
+      "text": "中央の文字の身体を、クラゲのかたちへ移してください。",
+      "expected": {
+        "action": "propose",
+        "shape": "jellyfish"
+      },
+      "rationale": "明示した対象の形への変更要求。"
+    },
+    {
+      "case_id": "named02",
+      "group": "named",
+      "text": "置き物の姿を花瓶に切り替えてほしい。",
+      "expected": {
+        "action": "propose",
+        "shape": "vase"
+      },
+      "rationale": "明示した対象の形への変更要求。"
+    },
+    {
+      "case_id": "named03",
+      "group": "named",
+      "text": "いま見えている形の候補は花火に決めます。花火の姿を作ってください。",
+      "expected": {
+        "action": "propose",
+        "shape": "fireworks"
+      },
+      "rationale": "形を一つに決めた明示要求。"
+    },
+    {
+      "case_id": "named04",
+      "group": "named",
+      "text": "この文字の集まりで一本の木を描いてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "tree"
+      },
+      "rationale": "明示した対象の形への変更要求。"
+    },
+    {
+      "case_id": "named05",
+      "group": "named",
+      "text": "今回は魚の姿に変えて見せてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "fish"
+      },
+      "rationale": "明示した対象の形への変更要求。"
+    },
+    {
+      "case_id": "named06",
+      "group": "named",
+      "text": "文字の並びをメビウスの帯の形へ変えてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "mobius"
+      },
+      "rationale": "メビウスの帯を明示した要求。"
+    },
+    {
+      "case_id": "appearance01",
+      "group": "appearance",
+      "text": "角も平らな面もない、どこから見ても丸いボールのような塊にしてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "sphere"
+      },
+      "rationale": "全方向に丸い球の外見。"
+    },
+    {
+      "case_id": "appearance02",
+      "group": "appearance",
+      "text": "六枚の平らな四角い面で囲まれ、面どうしが直角で会う箱型の姿を作ってください。",
+      "expected": {
+        "action": "propose",
+        "shape": "box"
+      },
+      "rationale": "平面と直角を持つ箱の外見。"
+    },
+    {
+      "case_id": "appearance03",
+      "group": "appearance",
+      "text": "帯の片端を半回転させてから両端をつなぎ、表裏がひと続きになる姿にしてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "mobius"
+      },
+      "rationale": "半ねじりした一側面の帯を指定。"
+    },
+    {
+      "case_id": "appearance04",
+      "group": "appearance",
+      "text": "切り花を挿せるような、細い口とふくらんだ胴、平らな底を持つ器の姿にしてほしい。",
+      "expected": {
+        "action": "propose",
+        "shape": "vase"
+      },
+      "rationale": "花を挿す細口の器を対象として指定。"
+    },
+    {
+      "case_id": "appearance05",
+      "group": "appearance",
+      "text": "握り手と鍔があり、その先に長く尖った刃が伸びる武器の姿を作ってください。",
+      "expected": {
+        "action": "propose",
+        "shape": "sword"
+      },
+      "rationale": "握り手、鍔、長い刃という剣の外見。"
+    },
+    {
+      "case_id": "appearance06",
+      "group": "appearance",
+      "text": "半透明の丸い傘の下から細長い触手が垂れ、水中を漂う生き物の姿にしてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "jellyfish"
+      },
+      "rationale": "傘と垂れた触手というクラゲの外見。"
+    },
+    {
+      "case_id": "appearance07",
+      "group": "appearance",
+      "text": "中心から花びらが放射状に広がり、下に細い茎が続く姿を作ってください。",
+      "expected": {
+        "action": "propose",
+        "shape": "flower"
+      },
+      "rationale": "花びらと茎を持つ花の外見。"
+    },
+    {
+      "case_id": "appearance08",
+      "group": "appearance",
+      "text": "夜空の一点から光の粒が放射状に開き、外側へ広がって消える姿を見せてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "fireworks"
+      },
+      "rationale": "夜空で放射状に開く光という花火の外見。"
+    },
+    {
+      "case_id": "appearance09",
+      "group": "appearance",
+      "text": "根元から太い幹が伸び、枝分かれした先に葉が茂る姿を作ってください。",
+      "expected": {
+        "action": "propose",
+        "shape": "tree"
+      },
+      "rationale": "根、幹、枝、葉という木の外見。"
+    },
+    {
+      "case_id": "appearance10",
+      "group": "appearance",
+      "text": "羽毛のある二枚の翼とくちばし、二本の脚を持つ生き物の姿にしてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "bird"
+      },
+      "rationale": "羽毛、くちばし、翼、脚という鳥の外見。"
+    },
+    {
+      "case_id": "appearance11",
+      "group": "appearance",
+      "text": "鱗に覆われた胴に背びれと尾びれが付き、水中を泳ぐ生き物の姿を作ってください。",
+      "expected": {
+        "action": "propose",
+        "shape": "fish"
+      },
+      "rationale": "鱗と複数の鰭を持つ魚の外見。"
+    },
+    {
+      "case_id": "appearance12",
+      "group": "appearance",
+      "text": "手足のない長い鱗の身体をくねらせ、先が二つに分かれた舌を出す生き物の姿にしてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "snake"
+      },
+      "rationale": "無肢、鱗、二股の舌という蛇の外見。"
+    },
+    {
+      "case_id": "mixed01",
+      "group": "mixed",
+      "text": "青い球を三つ、文字がゆっくり流れる姿にしてほしい。",
+      "expected": {
+        "action": "propose",
+        "shape": "sphere"
+      },
+      "rationale": "球が対象。色、個数、流れは形採点から除く。"
+    },
+    {
+      "case_id": "mixed02",
+      "group": "mixed",
+      "text": "黄色い立方体を二個並べて、動きは止めてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "box"
+      },
+      "rationale": "立方体が対象。色、個数、停止は形採点から除く。"
+    },
+    {
+      "case_id": "mixed03",
+      "group": "mixed",
+      "text": "赤い剣を一本作り、文字だけを穏やかに循環させてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "sword"
+      },
+      "rationale": "剣が対象。色と文字の運動は形採点から除く。"
+    },
+    {
+      "case_id": "mixed04",
+      "group": "mixed",
+      "text": "緑の花を四輪に増やし、ゆっくり膨らんだり縮んだりさせてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "flower"
+      },
+      "rationale": "花が対象。色、個数、拍動は形採点から除く。"
+    },
+    {
+      "case_id": "mixed05",
+      "group": "mixed",
+      "text": "八羽の白い鳥の姿を作り、表面の文字を流してください。",
+      "expected": {
+        "action": "propose",
+        "shape": "bird"
+      },
+      "rationale": "鳥が対象。上限内の個数、色、流れは形採点から除く。"
+    },
+    {
+      "case_id": "mixed06",
+      "group": "mixed",
+      "text": "黄色の蛇を五匹描いて、全体の動きは静止させてください。",
+      "expected": {
+        "action": "propose",
+        "shape": "snake"
+      },
+      "rationale": "蛇が対象。色、個数、停止は形採点から除く。"
+    },
+    {
+      "case_id": "hold01",
+      "group": "hold",
+      "text": "今日は資料の枝分かれを整理してから、昼食を取る予定です。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "通常の予定文で形の要求がない。"
+    },
+    {
+      "case_id": "hold02",
+      "group": "hold",
+      "text": "メモ：花瓶の相場を明日調べる。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "対象語への言及のみで形の要求がない。"
+    },
+    {
+      "case_id": "hold03",
+      "group": "hold",
+      "text": "読解のために「青い鳥の形を作ってください」という台詞を引用しました。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "引用された要求を実行する指示ではない。"
+    },
+    {
+      "case_id": "hold04",
+      "group": "hold",
+      "text": "テストコードには command = \"剣を作れ\" という文字列を保存する。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "コード内の文字列への言及。"
+    },
+    {
+      "case_id": "hold05",
+      "group": "hold",
+      "text": "ここでは木の姿への変更をしないでください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "明示的に対象形への変更を否定。"
+    },
+    {
+      "case_id": "hold06",
+      "group": "hold",
+      "text": "剣の形へ変えるという指示は取り消します。いまの姿を維持してください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "変更取消と維持の要求。"
+    },
+    {
+      "case_id": "hold07",
+      "group": "hold",
+      "text": "クラゲの姿に変更してください。ただしクラゲへの変更は絶対に禁止します。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "同じ変更への要求と禁止が矛盾。"
+    },
+    {
+      "case_id": "hold08",
+      "group": "hold",
+      "text": "文字の集まりを自転車の姿にしてください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "有限12形にない対象。"
+    },
+    {
+      "case_id": "hold09",
+      "group": "hold",
+      "text": "三日月の姿を作ってください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "有限12形にない対象。"
+    },
+    {
+      "case_id": "hold10",
+      "group": "hold",
+      "text": "幅のある帯を、ねじらずに両端をつないだ普通の輪にしてください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "半ねじりのない輪は契約で未対応。"
+    },
+    {
+      "case_id": "hold11",
+      "group": "hold",
+      "text": "赤い球を九個作ってください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "明示個数が1..8の範囲外。"
+    },
+    {
+      "case_id": "hold12",
+      "group": "hold",
+      "text": "花をゼロ輪だけ作ってください。",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "rationale": "明示個数が1..8の範囲外。"
+    }
+  ]
+}

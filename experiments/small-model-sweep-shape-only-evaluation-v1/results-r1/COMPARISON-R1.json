@@ -1,0 +1,425 @@
+{
+  "version": "shape-only-fresh36-comparison-r1",
+  "source": "Frozen independent Japanese artificial cases; one sequential run per artifact",
+  "contract": "exact action/shape only; finite 12 shapes; hold -> null; propose -> supported shape",
+  "selection_timing": "Chosen after R1 diagnosis, before fresh36 outputs; not a preregistration before R1",
+  "scope_exclusions": [
+    "R1-to-R2 controlled improvement",
+    "attribute extraction accuracy",
+    "unknown mesh generation",
+    "whole-widget memory/CPU",
+    "actual 16GB laptop",
+    "global OS input",
+    "human preference"
+  ],
+  "resource_notes": [
+    "CPU threads 4, context 2048, max output 256, prompt cache off",
+    "RSS: owned server only; sampled every 250ms; instantaneous peaks can be missed",
+    "Startup follows full model/runtime hashing; not a controlled cold-cache result",
+    "Query is full HTTP reply time, not decode-only tok/s or input-to-visible-formation",
+    "No timeout or runtime failure occurred in these six completed runs",
+    "This independent reviewer started no model/server and downloaded no models"
+  ],
+  "metric_definitions": {
+    "query_p95": "Nearest-rank p95 over 36 full reply durations",
+    "model_file_bytes": "Stored artifact size, not resident RAM"
+  },
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa",
+  "selection_sha256": "9683970d1cc80dc2398ece83fdf00d2ca349614c84345ec51f587f5ed6bc110c",
+  "records": [
+    {
+      "model_id": "bonsai-1.7b-q1",
+      "label": "bonsai-1.7b-q1-shape-only-r1",
+      "exact": 16,
+      "count": 36,
+      "contract_ok": 36,
+      "positive_exact": 16,
+      "positive_count": 24,
+      "hold_exact": 0,
+      "hold_count": 12,
+      "false_proposals_on_hold": 12,
+      "by_group": {
+        "appearance": {
+          "count": 12,
+          "exact": 7,
+          "contract_ok": 12
+        },
+        "hold": {
+          "count": 12,
+          "exact": 0,
+          "contract_ok": 12
+        },
+        "mixed": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        },
+        "named": {
+          "count": 6,
+          "exact": 3,
+          "contract_ok": 6
+        }
+      },
+      "statuses": {
+        "semantic_mismatch": 20,
+        "exact": 16
+      },
+      "model_file_bytes": 248302272,
+      "server_rss_peak_bytes_sampled": 859144192,
+      "server_rss_last_bytes_sampled": 855195648,
+      "startup_seconds_after_prehash": 0.585392,
+      "preflight_hash_seconds": 0.081405,
+      "query_seconds_median": 1.00507,
+      "query_seconds_p95_nearest_rank": 1.052293,
+      "query_seconds_max": 1.067926,
+      "reply_count": 36,
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "score_sha256": "1b0a022a8f782a5d67646c07b1c15bd2350461a537946314e6486bb3dea13667",
+      "provenance_sha256": "2a4e2c52e4256bc2f81257e6da9692cdba9e6fb5d5b03a396b7a3209a0da757f",
+      "summary_sha256": "41e5e70dc6fcb7d244aad806a6d7ca2a84ee86fe98ccfde635099f3332bf9840",
+      "responses_sha256": "accad4b5ba58133c9a794a6c8b4cea355ae5237ebda7f1b92958038d164dfd00",
+      "integrity_checks": {
+        "fixture": true,
+        "scorer": true,
+        "selection": true,
+        "summary": true,
+        "original_responses": true,
+        "stable_after_score": true,
+        "completed": true,
+        "input_integrity": true
+      }
+    },
+    {
+      "model_id": "bonsai-4b-q1",
+      "label": "bonsai-4b-q1-shape-only-r1",
+      "exact": 28,
+      "count": 36,
+      "contract_ok": 35,
+      "positive_exact": 20,
+      "positive_count": 24,
+      "hold_exact": 8,
+      "hold_count": 12,
+      "false_proposals_on_hold": 4,
+      "by_group": {
+        "appearance": {
+          "count": 12,
+          "exact": 9,
+          "contract_ok": 12
+        },
+        "hold": {
+          "count": 12,
+          "exact": 8,
+          "contract_ok": 12
+        },
+        "mixed": {
+          "count": 6,
+          "exact": 5,
+          "contract_ok": 5
+        },
+        "named": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        }
+      },
+      "statuses": {
+        "exact": 28,
+        "semantic_mismatch": 7,
+        "contract_violation": 1
+      },
+      "model_file_bytes": 572270624,
+      "server_rss_peak_bytes_sampled": 1569128448,
+      "server_rss_last_bytes_sampled": 1569128448,
+      "startup_seconds_after_prehash": 1.040868,
+      "preflight_hash_seconds": 0.200007,
+      "query_seconds_median": 2.450201,
+      "query_seconds_p95_nearest_rank": 2.616589,
+      "query_seconds_max": 2.624258,
+      "reply_count": 36,
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "score_sha256": "b74a478704cccebab549ca6b5482503738ba01b85344f8e836985d4f2f0aa98d",
+      "provenance_sha256": "7b7375736886e29a24e32a26ca04df4cf5deff36ddf8d06d760c9ff764a5f701",
+      "summary_sha256": "59bc9bee545175889e9fe0f0a0b4a5a6f1d16f98e4ddf40e821ed43db01ea8f6",
+      "responses_sha256": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2",
+      "integrity_checks": {
+        "fixture": true,
+        "scorer": true,
+        "selection": true,
+        "summary": true,
+        "original_responses": true,
+        "stable_after_score": true,
+        "completed": true,
+        "input_integrity": true
+      }
+    },
+    {
+      "model_id": "bonsai-8b-q1",
+      "label": "bonsai-8b-q1-shape-only-r1",
+      "exact": 26,
+      "count": 36,
+      "contract_ok": 35,
+      "positive_exact": 20,
+      "positive_count": 24,
+      "hold_exact": 6,
+      "hold_count": 12,
+      "false_proposals_on_hold": 5,
+      "by_group": {
+        "appearance": {
+          "count": 12,
+          "exact": 10,
+          "contract_ok": 12
+        },
+        "hold": {
+          "count": 12,
+          "exact": 6,
+          "contract_ok": 11
+        },
+        "mixed": {
+          "count": 6,
+          "exact": 4,
+          "contract_ok": 6
+        },
+        "named": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        }
+      },
+      "statuses": {
+        "exact": 26,
+        "semantic_mismatch": 9,
+        "contract_violation": 1
+      },
+      "model_file_bytes": 1158654496,
+      "server_rss_peak_bytes_sampled": 2623995904,
+      "server_rss_last_bytes_sampled": 2623995904,
+      "startup_seconds_after_prehash": 1.596897,
+      "preflight_hash_seconds": 0.405516,
+      "query_seconds_median": 4.4128105,
+      "query_seconds_p95_nearest_rank": 4.629981,
+      "query_seconds_max": 4.664815,
+      "reply_count": 36,
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "score_sha256": "f18d2a5f5aadb1fb0c4505c2ff5cb71a454ab5bd0bcda990197e69dbec85530e",
+      "provenance_sha256": "9adc502e2c10161554536b3c42c13eaae0bc67edb80d8836a709d2babd1d0845",
+      "summary_sha256": "732e3b28562043cf498caeb29c152996ad97bc730a156754f7834542e9d8e2e4",
+      "responses_sha256": "0b253e754ab93f3cf2fbd68d3911791f14a42e7fb25daccf5c849cb665682f85",
+      "integrity_checks": {
+        "fixture": true,
+        "scorer": true,
+        "selection": true,
+        "summary": true,
+        "original_responses": true,
+        "stable_after_score": true,
+        "completed": true,
+        "input_integrity": true
+      }
+    },
+    {
+      "model_id": "qwen3-0.6b-q8",
+      "label": "qwen3-0.6b-q8-shape-only-r1",
+      "exact": 18,
+      "count": 36,
+      "contract_ok": 34,
+      "positive_exact": 18,
+      "positive_count": 24,
+      "hold_exact": 0,
+      "hold_count": 12,
+      "false_proposals_on_hold": 10,
+      "by_group": {
+        "appearance": {
+          "count": 12,
+          "exact": 6,
+          "contract_ok": 12
+        },
+        "hold": {
+          "count": 12,
+          "exact": 0,
+          "contract_ok": 10
+        },
+        "mixed": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        },
+        "named": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        }
+      },
+      "statuses": {
+        "exact": 18,
+        "semantic_mismatch": 16,
+        "contract_violation": 2
+      },
+      "model_file_bytes": 639446688,
+      "server_rss_peak_bytes_sampled": 1678360576,
+      "server_rss_last_bytes_sampled": 171982848,
+      "startup_seconds_after_prehash": 0.608116,
+      "preflight_hash_seconds": 0.225525,
+      "query_seconds_median": 0.420957,
+      "query_seconds_p95_nearest_rank": 0.452225,
+      "query_seconds_max": 0.452598,
+      "reply_count": 36,
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "score_sha256": "face97031083590e57d5747b15d9d663c98d1963d28a86b2a32d95b9e3caa710",
+      "provenance_sha256": "bc4338b8f5efa54c94efa139f710432aab49a753a31e444dfbdafc128d321f65",
+      "summary_sha256": "4406b607140a7786e87952814fa27bf10677b4dbc0c66c3fc44a0e6db0c06f80",
+      "responses_sha256": "f81bc9edb227ee3e30d85f7bd4ea1566c2d41f0f50bba0055f10aa27d3194d33",
+      "integrity_checks": {
+        "fixture": true,
+        "scorer": true,
+        "selection": true,
+        "summary": true,
+        "original_responses": true,
+        "stable_after_score": true,
+        "completed": true,
+        "input_integrity": true
+      }
+    },
+    {
+      "model_id": "granite4-1b-q4",
+      "label": "granite4-1b-q4-shape-only-r1",
+      "exact": 26,
+      "count": 36,
+      "contract_ok": 36,
+      "positive_exact": 22,
+      "positive_count": 24,
+      "hold_exact": 4,
+      "hold_count": 12,
+      "false_proposals_on_hold": 8,
+      "by_group": {
+        "appearance": {
+          "count": 12,
+          "exact": 10,
+          "contract_ok": 12
+        },
+        "hold": {
+          "count": 12,
+          "exact": 4,
+          "contract_ok": 12
+        },
+        "mixed": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        },
+        "named": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        }
+      },
+      "statuses": {
+        "exact": 26,
+        "semantic_mismatch": 10
+      },
+      "model_file_bytes": 1023645440,
+      "server_rss_peak_bytes_sampled": 2355740672,
+      "server_rss_last_bytes_sampled": 2355740672,
+      "startup_seconds_after_prehash": 0.751173,
+      "preflight_hash_seconds": 0.358678,
+      "query_seconds_median": 1.2852545000000002,
+      "query_seconds_p95_nearest_rank": 1.365216,
+      "query_seconds_max": 1.374984,
+      "reply_count": 36,
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "score_sha256": "c1c0061a8776adb60763653ecb8133841797d6af0da321680062394863adebe1",
+      "provenance_sha256": "690b6125eaa4731ab55934dc08a50a448c679f45bf17454c7ca80ef707f70da2",
+      "summary_sha256": "a89766ee4d3709c57f8faa4bce4b9e90c8b32807e53d12d52ff794f0636ce375",
+      "responses_sha256": "b9b3b6b05b84ea6525fd0d0e6942257a826ce248dc3e479882a6f7343e308cb7",
+      "integrity_checks": {
+        "fixture": true,
+        "scorer": true,
+        "selection": true,
+        "summary": true,
+        "original_responses": true,
+        "stable_after_score": true,
+        "completed": true,
+        "input_integrity": true
+      }
+    },
+    {
+      "model_id": "ternary-bonsai-1.7b-g64",
+      "label": "ternary-bonsai-1.7b-g64-shape-only-r1",
+      "exact": 23,
+      "count": 36,
+      "contract_ok": 36,
+      "positive_exact": 19,
+      "positive_count": 24,
+      "hold_exact": 4,
+      "hold_count": 12,
+      "false_proposals_on_hold": 8,
+      "by_group": {
+        "appearance": {
+          "count": 12,
+          "exact": 9,
+          "contract_ok": 12
+        },
+        "hold": {
+          "count": 12,
+          "exact": 4,
+          "contract_ok": 12
+        },
+        "mixed": {
+          "count": 6,
+          "exact": 6,
+          "contract_ok": 6
+        },
+        "named": {
+          "count": 6,
+          "exact": 4,
+          "contract_ok": 6
+        }
+      },
+      "statuses": {
+        "exact": 23,
+        "semantic_mismatch": 13
+      },
+      "model_file_bytes": 490163968,
+      "server_rss_peak_bytes_sampled": 957022208,
+      "server_rss_last_bytes_sampled": 934903808,
+      "startup_seconds_after_prehash": 0.321128,
+      "preflight_hash_seconds": 0.173756,
+      "query_seconds_median": 1.1947055,
+      "query_seconds_p95_nearest_rank": 1.342296,
+      "query_seconds_max": 1.382046,
+      "reply_count": 36,
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "score_sha256": "b159887eee1c93d29c52eb9c917bcfcb9efbac1e3588372bc4899fe1f4f179a4",
+      "provenance_sha256": "4fe26f967f76b65630395e736e1781c888f788568e6b031714dbf8822d6e2f24",
+      "summary_sha256": "ff36bc599c0eeacb02a6059db171d19df2007136cf81740d322e1f30d8b3e46c",
+      "responses_sha256": "de41cba3be9efbeaf1c47793fa67470f20e599c14bf4bf8220a4307922abb1fe",
+      "integrity_checks": {
+        "fixture": true,
+        "scorer": true,
+        "selection": true,
+        "summary": true,
+        "original_responses": true,
+        "stable_after_score": true,
+        "completed": true,
+        "input_integrity": true
+      }
+    }
+  ]
+}

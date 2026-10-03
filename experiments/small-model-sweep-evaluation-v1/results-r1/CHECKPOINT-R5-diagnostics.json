@@ -1,0 +1,630 @@
+{
+  "version": "field-diagnostic-checkpoint-r1",
+  "model_calls": 0,
+  "runs": [
+    {
+      "label": "bitnet-2b-i2s-cpu-r1",
+      "exact": 0,
+      "fixed_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "diagnostic_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "propose_shape": {
+        "correct": 0,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 0,
+      "unspecified_motion_filled": 0
+    },
+    {
+      "label": "bitnet-2b-i2s-patched-cpu-r3",
+      "exact": 0,
+      "fixed_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "diagnostic_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "propose_shape": {
+        "correct": 0,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 0,
+      "unspecified_motion_filled": 0
+    },
+    {
+      "label": "bonsai-1.7b-q1-cpu-r1",
+      "exact": 3,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 5,
+        "count": 22,
+        "motion": 6,
+        "shape": 10
+      },
+      "diagnostic_field_correct": {
+        "action": 19,
+        "color": 5,
+        "count": 23,
+        "motion": 6,
+        "shape": 10
+      },
+      "propose_shape": {
+        "correct": 10,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 18,
+      "unspecified_motion_filled": 17
+    },
+    {
+      "label": "bonsai-4b-q1-cpu-r1",
+      "exact": 17,
+      "fixed_field_correct": {
+        "action": 21,
+        "color": 20,
+        "count": 22,
+        "motion": 20,
+        "shape": 18
+      },
+      "diagnostic_field_correct": {
+        "action": 21,
+        "color": 20,
+        "count": 22,
+        "motion": 20,
+        "shape": 18
+      },
+      "propose_shape": {
+        "correct": 14,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 3,
+      "unspecified_motion_filled": 2
+    },
+    {
+      "label": "bonsai-8b-q1-cpu-r1",
+      "exact": 6,
+      "fixed_field_correct": {
+        "action": 17,
+        "color": 6,
+        "count": 18,
+        "motion": 7,
+        "shape": 16
+      },
+      "diagnostic_field_correct": {
+        "action": 20,
+        "color": 9,
+        "count": 22,
+        "motion": 10,
+        "shape": 17
+      },
+      "propose_shape": {
+        "correct": 17,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 15,
+      "unspecified_motion_filled": 14
+    },
+    {
+      "label": "granite3.1-1b-moe-q4-cpu-r1",
+      "exact": 2,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 6,
+        "count": 22,
+        "motion": 4,
+        "shape": 7
+      },
+      "diagnostic_field_correct": {
+        "action": 19,
+        "color": 6,
+        "count": 23,
+        "motion": 4,
+        "shape": 7
+      },
+      "propose_shape": {
+        "correct": 7,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 18,
+      "unspecified_motion_filled": 18
+    },
+    {
+      "label": "granite4-1b-q4-cpu-r1",
+      "exact": 14,
+      "fixed_field_correct": {
+        "action": 19,
+        "color": 15,
+        "count": 23,
+        "motion": 22,
+        "shape": 18
+      },
+      "diagnostic_field_correct": {
+        "action": 19,
+        "color": 15,
+        "count": 23,
+        "motion": 22,
+        "shape": 18
+      },
+      "propose_shape": {
+        "correct": 17,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 9,
+      "unspecified_motion_filled": 2
+    },
+    {
+      "label": "lfm2-350m-q4-cpu-r1",
+      "exact": 0,
+      "fixed_field_correct": {
+        "action": 15,
+        "color": 3,
+        "count": 16,
+        "motion": 4,
+        "shape": 6
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 6,
+        "count": 21,
+        "motion": 5,
+        "shape": 8
+      },
+      "propose_shape": {
+        "correct": 8,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 18,
+      "unspecified_motion_filled": 16
+    },
+    {
+      "label": "lfm2-700m-q4-cpu-r1",
+      "exact": 0,
+      "fixed_field_correct": {
+        "action": 11,
+        "color": 0,
+        "count": 7,
+        "motion": 1,
+        "shape": 6
+      },
+      "diagnostic_field_correct": {
+        "action": 17,
+        "color": 5,
+        "count": 17,
+        "motion": 8,
+        "shape": 11
+      },
+      "propose_shape": {
+        "correct": 11,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 17,
+      "unspecified_motion_filled": 15
+    },
+    {
+      "label": "lfm2.5-1.2b-q4-cpu-r1",
+      "exact": 5,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 10,
+        "count": 23,
+        "motion": 18,
+        "shape": 12
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 10,
+        "count": 23,
+        "motion": 18,
+        "shape": 12
+      },
+      "propose_shape": {
+        "correct": 12,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 14,
+      "unspecified_motion_filled": 5
+    },
+    {
+      "label": "lfm2.5-1.2b-qad-q4-cpu-r1",
+      "exact": 3,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 6,
+        "count": 23,
+        "motion": 17,
+        "shape": 15
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 6,
+        "count": 23,
+        "motion": 17,
+        "shape": 15
+      },
+      "propose_shape": {
+        "correct": 15,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 18,
+      "unspecified_motion_filled": 5
+    },
+    {
+      "label": "phi-3.5-mini-nojinja-cpu-r2",
+      "exact": 12,
+      "fixed_field_correct": {
+        "action": 19,
+        "color": 18,
+        "count": 21,
+        "motion": 13,
+        "shape": 19
+      },
+      "diagnostic_field_correct": {
+        "action": 21,
+        "color": 20,
+        "count": 23,
+        "motion": 15,
+        "shape": 19
+      },
+      "propose_shape": {
+        "correct": 18,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 4,
+      "unspecified_motion_filled": 9
+    },
+    {
+      "label": "phi-3.5-mini-q4km-extra-cpu-r1",
+      "exact": 0,
+      "fixed_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "diagnostic_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "propose_shape": {
+        "correct": 0,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 0,
+      "unspecified_motion_filled": 0
+    },
+    {
+      "label": "phi-4-mini-q4km-extra-cpu-r1",
+      "exact": 17,
+      "fixed_field_correct": {
+        "action": 19,
+        "color": 18,
+        "count": 21,
+        "motion": 20,
+        "shape": 18
+      },
+      "diagnostic_field_correct": {
+        "action": 20,
+        "color": 20,
+        "count": 23,
+        "motion": 21,
+        "shape": 19
+      },
+      "propose_shape": {
+        "correct": 17,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 4,
+      "unspecified_motion_filled": 2
+    },
+    {
+      "label": "qwen2.5-0.5b-q4-cpu-r1",
+      "exact": 5,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 21,
+        "count": 22,
+        "motion": 22,
+        "shape": 6
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 21,
+        "count": 22,
+        "motion": 22,
+        "shape": 6
+      },
+      "propose_shape": {
+        "correct": 6,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 1,
+      "unspecified_motion_filled": 1
+    },
+    {
+      "label": "qwen2.5-1.5b-q4-cpu-r1",
+      "exact": 5,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 7,
+        "count": 20,
+        "motion": 6,
+        "shape": 15
+      },
+      "diagnostic_field_correct": {
+        "action": 21,
+        "color": 8,
+        "count": 23,
+        "motion": 6,
+        "shape": 15
+      },
+      "propose_shape": {
+        "correct": 15,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 16,
+      "unspecified_motion_filled": 18
+    },
+    {
+      "label": "qwen3-0.6b-q8-cpu-r1",
+      "exact": 6,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 12,
+        "count": 21,
+        "motion": 9,
+        "shape": 10
+      },
+      "diagnostic_field_correct": {
+        "action": 19,
+        "color": 13,
+        "count": 22,
+        "motion": 10,
+        "shape": 10
+      },
+      "propose_shape": {
+        "correct": 10,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 10,
+      "unspecified_motion_filled": 13
+    },
+    {
+      "label": "qwen3.5-0.8b-q4-0-baseline-cpu-r1",
+      "exact": 1,
+      "fixed_field_correct": {
+        "action": 9,
+        "color": 3,
+        "count": 12,
+        "motion": 5,
+        "shape": 8
+      },
+      "diagnostic_field_correct": {
+        "action": 12,
+        "color": 12,
+        "count": 21,
+        "motion": 14,
+        "shape": 11
+      },
+      "propose_shape": {
+        "correct": 11,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 7,
+      "unspecified_motion_filled": 7
+    },
+    {
+      "label": "qwen3.5-0.8b-q4-cpu-r1",
+      "exact": 5,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 7,
+        "count": 21,
+        "motion": 10,
+        "shape": 16
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 7,
+        "count": 21,
+        "motion": 10,
+        "shape": 16
+      },
+      "propose_shape": {
+        "correct": 12,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 12,
+      "unspecified_motion_filled": 12
+    },
+    {
+      "label": "qwen3.5-2b-q4-baseline-cpu-r1",
+      "exact": 9,
+      "fixed_field_correct": {
+        "action": 15,
+        "color": 18,
+        "count": 21,
+        "motion": 14,
+        "shape": 15
+      },
+      "diagnostic_field_correct": {
+        "action": 15,
+        "color": 18,
+        "count": 21,
+        "motion": 14,
+        "shape": 15
+      },
+      "propose_shape": {
+        "correct": 10,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 3,
+      "unspecified_motion_filled": 6
+    },
+    {
+      "label": "smollm2-1.7b-q4-cpu-r1",
+      "exact": 3,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 6,
+        "count": 19,
+        "motion": 4,
+        "shape": 10
+      },
+      "diagnostic_field_correct": {
+        "action": 19,
+        "color": 6,
+        "count": 20,
+        "motion": 4,
+        "shape": 10
+      },
+      "propose_shape": {
+        "correct": 10,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 18,
+      "unspecified_motion_filled": 18
+    },
+    {
+      "label": "smollm2-360m-q8-cpu-r1",
+      "exact": 1,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 4,
+        "count": 20,
+        "motion": 2,
+        "shape": 4
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 4,
+        "count": 20,
+        "motion": 2,
+        "shape": 4
+      },
+      "propose_shape": {
+        "correct": 4,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 18,
+      "unspecified_motion_filled": 18
+    },
+    {
+      "label": "smollm3-3b-q4km-extra-cpu-r1",
+      "exact": 12,
+      "fixed_field_correct": {
+        "action": 14,
+        "color": 16,
+        "count": 20,
+        "motion": 18,
+        "shape": 13
+      },
+      "diagnostic_field_correct": {
+        "action": 14,
+        "color": 16,
+        "count": 20,
+        "motion": 18,
+        "shape": 13
+      },
+      "propose_shape": {
+        "correct": 10,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 5,
+      "unspecified_motion_filled": 3
+    },
+    {
+      "label": "ternary-bonsai-1.7b-g64-cpu-r1",
+      "exact": 3,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 8,
+        "count": 23,
+        "motion": 8,
+        "shape": 13
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 8,
+        "count": 23,
+        "motion": 8,
+        "shape": 13
+      },
+      "propose_shape": {
+        "correct": 13,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 16,
+      "unspecified_motion_filled": 14
+    },
+    {
+      "label": "ternary-bonsai-1.7b-pq2-g128-cpu-r1",
+      "exact": 0,
+      "fixed_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "diagnostic_field_correct": {
+        "action": 0,
+        "color": 0,
+        "count": 0,
+        "motion": 0,
+        "shape": 0
+      },
+      "propose_shape": {
+        "correct": 0,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 0,
+      "unspecified_motion_filled": 0
+    },
+    {
+      "label": "ternary-bonsai-pq2-prism-cpu-r2",
+      "exact": 4,
+      "fixed_field_correct": {
+        "action": 18,
+        "color": 8,
+        "count": 23,
+        "motion": 9,
+        "shape": 12
+      },
+      "diagnostic_field_correct": {
+        "action": 18,
+        "color": 8,
+        "count": 23,
+        "motion": 9,
+        "shape": 12
+      },
+      "propose_shape": {
+        "correct": 12,
+        "denominator": 18
+      },
+      "unspecified_color_filled": 16,
+      "unspecified_motion_filled": 14
+    }
+  ]
+}

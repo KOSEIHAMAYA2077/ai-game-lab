@@ -1,0 +1,113 @@
+{
+  "version": "seen36-resource-regression-r1",
+  "model_id": "bonsai-4b-q1",
+  "label": "bonsai-4b-q1-resources-idle-r1",
+  "runtime_status": "completed",
+  "shutdown": {
+    "method": "owned_sigterm",
+    "exit_code": 0
+  },
+  "count": 36,
+  "exact_before": 28,
+  "exact_after": 29,
+  "contract_ok_before": 35,
+  "contract_ok_after": 36,
+  "positive_exact_before": 20,
+  "positive_exact_after": 21,
+  "hold_exact_before": 8,
+  "hold_exact_after": 8,
+  "false_proposals_before": 4,
+  "false_proposals_after": 4,
+  "statuses_after": {
+    "exact": 29,
+    "semantic_mismatch": 7
+  },
+  "input_integrity_ok": true,
+  "lost_exact_case_ids": [],
+  "gained_exact_case_ids": [
+    "mixed06"
+  ],
+  "changed_case_predictions": [
+    {
+      "case_id": "mixed06",
+      "group": "mixed",
+      "before_status": "contract_violation",
+      "after_status": "exact",
+      "before_prediction": null,
+      "after_prediction": {
+        "action": "propose",
+        "shape": "snake"
+      }
+    }
+  ],
+  "resource_parameters_before": {
+    "context": 2048,
+    "batch": 256,
+    "ubatch": 128,
+    "max_output": 256
+  },
+  "resource_parameters_after": {
+    "context": 1024,
+    "batch": 64,
+    "ubatch": 32,
+    "max_output": 128
+  },
+  "model_file_bytes": 572270624,
+  "server_rss_peak_bytes_before_sampled": 1569128448,
+  "server_rss_peak_bytes_after_sampled": 1401028608,
+  "query_seconds_median_before": 2.450201,
+  "query_seconds_median_after": 2.639989,
+  "query_seconds_max_after": 2.86449,
+  "reply_count_after": 36,
+  "startup_seconds_after_prehash": 1.021268,
+  "idle_independent_check": {
+    "status": "complete_600_seconds",
+    "planned_seconds": 600,
+    "elapsed_seconds": 600.074476542,
+    "cpu_delta_seconds_recomputed": 0.75,
+    "cpu_percent_one_core_recomputed": 0.12498448597946768,
+    "rss_min_bytes": 1376976896,
+    "rss_max_bytes": 1376976896,
+    "rss_mean_bytes": 1376976896.0,
+    "idle_rss_samples": 2268,
+    "later_samples_excluded": 0,
+    "checks": {
+      "cpu_delta": true,
+      "cpu_percent": true,
+      "rss_sample_count": true,
+      "rss_min": true,
+      "rss_max": true,
+      "rss_mean": true
+    },
+    "scope": "Owned server user+system TIME, one core=100%; excludes UI, monitor and OS",
+    "counter_interval_note": "Denominator includes start/end lsof/ps overhead. No energy, active CPU, unloaded idle or complete widget measurement."
+  },
+  "paired_identity_checks": {
+    "model_file_sha256": true,
+    "runtime_binary_sha256": true,
+    "prompt_sha256": true,
+    "fixture_sha256": true,
+    "temperature": true,
+    "seed": true,
+    "threads": true,
+    "threads_batch": true,
+    "prompt_cache": true,
+    "stream": true,
+    "backend": true,
+    "baseline_summary_unchanged": true,
+    "baseline_score_source_pins": true
+  },
+  "inputs_unchanged_after_score": true,
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa",
+  "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+  "driver_sha256": "f6a7d89e42ca124bb590cacff0ca22dc6b0d8a6fa9d6707e9804795618ca4714",
+  "baseline_summary_sha256": "59bc9bee545175889e9fe0f0a0b4a5a6f1d16f98e4ddf40e821ed43db01ea8f6",
+  "baseline_score_sha256": "b74a478704cccebab549ca6b5482503738ba01b85344f8e836985d4f2f0aa98d",
+  "score_sha256": "a8b311e7cda3ec077d0c477be8e199251759ba67ac9e61fc9d02f0b931574fd0",
+  "summary_sha256": "4dfbe893394741a8744b93b3598fde6e73ef5f9640f3abd67363b430622369ef",
+  "responses_sha256": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7",
+  "rss_samples_sha256": "9f4ff6dacbcd08a8d694f4769a4859deb9d7e3f93078005491d1000355e1dfb0",
+  "scope": "Same already-seen36 shape/action cases; resource regression diagnosis only, not fresh/generalization or whole-widget adoption",
+  "reviewer_model_or_server_calls": 0
+}

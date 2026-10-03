@@ -1,0 +1,103 @@
+{
+  "version": "runner-source-review-r1",
+  "reviewed_at_utc": "2026-10-03T05:10:14.924910+00:00",
+  "scope": "Read-only driver source review and pure parsing function calls with independent artificial strings; no server/process/HTTP/model execution.",
+  "runtime_sha256": "2c40006c9c302f81f70df68bd2ed0d5b123b9fc3f1aeb34f888cc5d3e570d2fd",
+  "model_calls": 0,
+  "model_output_seen": false,
+  "parsing_checks": [
+    {
+      "case": "normal",
+      "driver_json_ok": true,
+      "driver_contract_ok": true,
+      "independent_schema_valid": true,
+      "independent_error": null
+    },
+    {
+      "case": "duplicate_key",
+      "driver_json_ok": true,
+      "driver_contract_ok": true,
+      "independent_schema_valid": false,
+      "independent_error": "JSON: duplicate JSON key: action"
+    },
+    {
+      "case": "json_null",
+      "driver_json_ok": false,
+      "driver_contract_ok": false,
+      "independent_schema_valid": false,
+      "independent_error": "reply must be an object"
+    },
+    {
+      "case": "fenced",
+      "driver_json_ok": false,
+      "driver_contract_ok": false,
+      "independent_schema_valid": false,
+      "independent_error": "JSON: Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "evaluation_freeze_checks": [
+    {
+      "path": "cases-r1.json",
+      "expected": "faef1015db57e15a8677ef180c8e658db0f9b82d32311f68bb9477ac06eba23b",
+      "observed": "faef1015db57e15a8677ef180c8e658db0f9b82d32311f68bb9477ac06eba23b",
+      "unchanged": true
+    },
+    {
+      "path": "contract-r1.json",
+      "expected": "868417bb35acb929e65a34b191a9c646a1378b15cc53d19c3bead1fd75462cbf",
+      "observed": "868417bb35acb929e65a34b191a9c646a1378b15cc53d19c3bead1fd75462cbf",
+      "unchanged": true
+    },
+    {
+      "path": "consultation-examples-r1.json",
+      "expected": "418ffcf42a8b774f8b51823bbef4f3de371cddc3384f25b56f652393ee24e690",
+      "observed": "418ffcf42a8b774f8b51823bbef4f3de371cddc3384f25b56f652393ee24e690",
+      "unchanged": true
+    },
+    {
+      "path": "METHOD-R1.md",
+      "expected": "820f124f52cabe68e8e939a4e998af2f5c42762f4d2ecfd7a928325bd16b4cfd",
+      "observed": "820f124f52cabe68e8e939a4e998af2f5c42762f4d2ecfd7a928325bd16b4cfd",
+      "unchanged": true
+    },
+    {
+      "path": "score.py",
+      "expected": "afbcbcefbc7ce38134d89bd38ebcb3605ab36c6729da36f3f856f3504637acd5",
+      "observed": "afbcbcefbc7ce38134d89bd38ebcb3605ab36c6729da36f3f856f3504637acd5",
+      "unchanged": true
+    },
+    {
+      "path": "SELF-CHECK-R1.json",
+      "expected": "7c93e5bf1dd9b5d9e2e30efa369fdbc1eca9eaf37f26d1690a2059c492d578b2",
+      "observed": "7c93e5bf1dd9b5d9e2e30efa369fdbc1eca9eaf37f26d1690a2059c492d578b2",
+      "unchanged": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "R01",
+      "severity": "reporting",
+      "finding": "One query timeout stops the full model batch. Subsequent cases are unattempted, not observed semantic errors. Fixed-denominator score counts them as zero while preserving that distinction."
+    },
+    {
+      "id": "R02",
+      "severity": "reporting",
+      "finding": "A normal HTTP500 error envelope without choices is recorded as invalid_response while retaining http_status500 and raw HTTP bytes; it continues to the next case. Runtime/grammar incompatibility must not be narrated as model semantic failure."
+    },
+    {
+      "id": "R03",
+      "severity": "reporting",
+      "finding": "Driver JSON parser permits duplicate keys. Independent strict scorer rejects them, so driver contract_ok must not be used as independent schema or semantic accuracy."
+    },
+    {
+      "id": "R04",
+      "severity": "scope",
+      "finding": "Query deadline starts after owned server/model startup. Startup hashes warm the file cache. Query time alone does not establish model preparation plus final visual formation within30seconds."
+    },
+    {
+      "id": "R05",
+      "severity": "scope",
+      "finding": "Owned server RSS excludes driver/OS/UI and sampled250ms maxima may miss brief peaks. No16GB laptop or fullwidget resource claim follows."
+    }
+  ]
+}

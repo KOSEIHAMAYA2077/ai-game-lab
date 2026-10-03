@@ -1,0 +1,62 @@
+{
+  "version": "small-model-sweep-bitnet-micro-runtime-r1",
+  "label": "bitnet-2b-i2s-micro-cpu-r1",
+  "backend": "cpu",
+  "threads": 4,
+  "threads_batch": 4,
+  "context_tokens": 512,
+  "max_output_tokens": 8,
+  "temperature": 0,
+  "seed": 17,
+  "stream": false,
+  "prompt_cache": false,
+  "startup_deadline_seconds": 60,
+  "query_deadline_seconds": 30,
+  "batch_deadline_seconds": 90.0,
+  "model_file_bytes": 1187801280,
+  "fixture_count": 1,
+  "cases": [
+    {
+      "id": "micro01",
+      "status": "reply",
+      "seconds": 5.074636,
+      "http_status": 200,
+      "response_bytes": 719,
+      "json_ok": false,
+      "contract_ok": false,
+      "finish_reason": "length",
+      "metrics": {
+        "prompt_tokens": 21,
+        "completion_tokens": 8,
+        "total_tokens": 29,
+        "server_prompt_ms": 3726.387,
+        "server_predicted_ms": 1346.578,
+        "server_predicted_per_second": 5.940985223284503,
+        "server_prompt_per_second": 5.635485525255429,
+        "completion_tokens_per_client_second": 1.576467750593343
+      }
+    }
+  ],
+  "status": "completed",
+  "startup_seconds": 1.180034,
+  "failure_type": null,
+  "hardware_note": "Caller must record host separately; not proof of a 16GB laptop or whole widget",
+  "rss_note": "Owned server RSS only, ps samples every 250ms, sampled peak may miss brief peaks; driver, OS and UI excluded",
+  "model_file_sha256": "4221b252fdd5fd25e15847adfeb5ee88886506ba50b8a34548374492884c2162",
+  "runtime_binary_sha256": "e53290a849545b36eb598a22ba9475c6ae422be5b1b808502a9c1d3ff5903f6c",
+  "prompt_sha256": "238a243b14e9f0be55ca113e0167026197df8231f30c97bed4f1af613b272d9b",
+  "fixture_sha256": "477e68ab3d86e1372ee340a5a30da92169c5570aae6f04e00fd8dd458e781e5f",
+  "driver_sha256": "a072107263573e21234b3b314e9e7866d6f07d1a971376bae966d6c04148e6e1",
+  "preflight_hash_seconds": 0.430961,
+  "startup_cache_note": "Input files are hashed before startup; startup is not a controlled cold file-cache measurement",
+  "shutdown": {
+    "method": "owned_sigterm",
+    "exit_code": 0
+  },
+  "elapsed_seconds_including_shutdown": 6.310664,
+  "rss_samples": 25,
+  "valid_rss_samples": 25,
+  "peak_server_rss_bytes_sampled": 1304559616,
+  "last_server_rss_bytes_sampled": 1298153472,
+  "unattempted_case_ids": []
+}

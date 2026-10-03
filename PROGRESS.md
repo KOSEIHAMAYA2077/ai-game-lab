@@ -1,5 +1,9 @@
 # 進捗
 
+## 2026-10-03 — 無料小モデルの2時間比較
+
+新規21重み（19.114GB）と既存2対照をCPUのみで実行。23重み・再試行を含む26実行、22重みが各24本文返信。5属性の全一致はBonsai 4B/Phi-4-miniが17/24。別のshape-only未見36文はBonsai 4Bが28/36、保留誤提案4/12。計算領域縮小と待機は別の回帰診断へ保存。[候補・原票・制限・次の構成](experiments/small-model-sweep-v1/README.md)。起動不可・HTTP400・30秒timeoutを意味精度から分け、既存版へは採用しない。一般16GB機・全widget・日常連想の評価は未確認。
+
 ## 2026-10-03 — 専用native入力と唯一の文字材料を接続
 
 独立担当はsourceを読む前に12callback＋6境界を固定しR4で18/18、R5同期待の回帰も18/18。既知取消1と別の大きいcluster応答は分け、独立の旧33send失敗→新0を確認した。[独立の原票・source/署名監査・制限](experiments/widget-metal-ambient-review-v1/REPORT.md)。実GUI/IME/GPUの独立実行は0。

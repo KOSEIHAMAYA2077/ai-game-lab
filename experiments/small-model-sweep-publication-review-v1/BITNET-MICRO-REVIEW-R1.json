@@ -1,0 +1,53 @@
+{
+  "version": "publication-bitnet-micro-review-r1",
+  "observed_at_utc": "2026-10-03T06:28:58.908740+00:00",
+  "own_read_only_checks": {
+    "file_pins": {
+      "experiments/small-model-sweep-bitnet-diagnostic-v1/run_r1.py": {
+        "sha256": "a072107263573e21234b3b314e9e7866d6f07d1a971376bae966d6c04148e6e1",
+        "match_frozen": true
+      },
+      "experiments/small-model-sweep-bitnet-diagnostic-v1/prompt-r1.json": {
+        "sha256": "238a243b14e9f0be55ca113e0167026197df8231f30c97bed4f1af613b272d9b",
+        "match_frozen": true
+      },
+      "experiments/small-model-sweep-bitnet-diagnostic-v1/case-r1.json": {
+        "sha256": "477e68ab3d86e1372ee340a5a30da92169c5570aae6f04e00fd8dd458e781e5f",
+        "match_frozen": true
+      },
+      "experiments/small-model-sweep-bitnet-diagnostic-v1/raw-public-r1.jsonl": {
+        "sha256": "4359bf7f6481c2b3ee131004bcd3183e9235d3de15eafa73a24d93380e3aea15",
+        "match_provenance": true
+      }
+    },
+    "one_artificial_response": true,
+    "literal_mismatch_preserved": true,
+    "raw_literal": "@@@@@@@@",
+    "expected_literal": "sphere",
+    "included_in_fixed24_main_score": false,
+    "summary_completed": true,
+    "shutdown_exit_zero": true
+  },
+  "peer_review": {
+    "reviewer": "independent runtime adapter subagent",
+    "reported_read_only_checks": 19,
+    "checks_reported_all_pass": true,
+    "checked_scope": [
+      "private original versus public raw SHA/content",
+      "freeze source/prompt/case",
+      "HTTP200,5.074636seconds,usage21/8,finish length",
+      "saved RSS max1244.125MiB and ownedSIGTERMexit0",
+      "CLI limits512/64/32/output8,30second deadline,JSONgrammar absent",
+      "TL1/TL2disabled I2Sroute and missing pre-tokenizer warning",
+      "main26/23/528 unchanged; micro excluded"
+    ],
+    "peer_created_files_or_model_calls": 0,
+    "checks_reported_during_current_publication_review": true
+  },
+  "interpretation": [
+    "HTTP200 is transport success; literal sphere expectation failed with@@@@@@@@ and length cap8.",
+    "This is one post-timeout artificial compatibility diagnosis, not fresh accuracy, JSON contract success, or numeric kernel validation.",
+    "Neither short prompt nor CPUroute factors were isolated; do not generalize to BitNetmodel quality, whole-widget resources,16GBlaptops or other optimized routes."
+  ],
+  "own_inference_download_compiler_git": 0
+}

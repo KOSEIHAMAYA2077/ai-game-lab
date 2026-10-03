@@ -1,0 +1,93 @@
+{
+  "observed_at_utc": "2026-10-03T05:06:35.478741+00:00",
+  "repo": "ggml-org/llama.cpp",
+  "revision": "f1cee9941b0e843ea260bf8dd9a090fbd9711b6a",
+  "requested_short_revision": "f1cee9941",
+  "parent_reported_binary_version": "b11342 macOS arm64",
+  "binary_identity_verified_by_researcher": false,
+  "source_read_only": true,
+  "inference_calls": 0,
+  "sources": [
+    {
+      "path": "ggml/include/ggml.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f1cee9941b0e843ea260bf8dd9a090fbd9711b6a/ggml/include/ggml.h",
+      "bytes": 116144,
+      "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9",
+      "markers_and_line_numbers": {
+        "GGML_TYPE_Q1_0": [
+          431
+        ],
+        "GGML_TYPE_Q2_0": [
+          432
+        ]
+      },
+      "type_and_group_declarations": [
+        "GGML_TYPE_Q1_0    = 41,",
+        "GGML_TYPE_Q2_0    = 42,"
+      ]
+    },
+    {
+      "path": "ggml/src/ggml-common.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f1cee9941b0e843ea260bf8dd9a090fbd9711b6a/ggml/src/ggml-common.h",
+      "bytes": 135161,
+      "sha256": "0061131b615c5721fc88a78feeb22c1f8c450f1c2646a317d80796a653bf595c",
+      "markers_and_line_numbers": {
+        "#define QK1_0": [
+          180
+        ],
+        "#define QK2_0": [
+          187
+        ]
+      },
+      "type_and_group_declarations": [
+        "#define QK1_0 128",
+        "#define QK2_0 64"
+      ]
+    },
+    {
+      "path": "src/llama-arch.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f1cee9941b0e843ea260bf8dd9a090fbd9711b6a/src/llama-arch.cpp",
+      "bytes": 84398,
+      "sha256": "ccc147cb84cea57dd11e00ff71bd0642fee29303046842d520747de4930ac900",
+      "markers_and_line_numbers": {
+        "qwen35": [
+          41,
+          42
+        ],
+        "lfm2": [
+          128,
+          129
+        ],
+        "granite": [
+          103,
+          104,
+          105,
+          106,
+          107
+        ],
+        "bitnet": [
+          88
+        ]
+      },
+      "type_and_group_declarations": []
+    },
+    {
+      "path": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f1cee9941b0e843ea260bf8dd9a090fbd9711b6a/ggml/src/ggml-cpu/ggml-cpu.c",
+      "bytes": 132400,
+      "sha256": "94e4c599aa8e6a0e047b1e4a40830cd5b54a5e0bc773acaccd3be2d4702caf39",
+      "markers_and_line_numbers": {
+        "GGML_TYPE_Q1_0": [
+          228
+        ],
+        "GGML_TYPE_Q2_0": [
+          234
+        ]
+      },
+      "type_and_group_declarations": [
+        "[GGML_TYPE_Q1_0] = {",
+        "[GGML_TYPE_Q2_0] = {"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "version": "shape-only-score-r1",
+  "count": 36,
+  "exact": 28,
+  "contract_ok": 35,
+  "positive_count": 24,
+  "positive_exact": 20,
+  "hold_count": 12,
+  "hold_exact": 8,
+  "false_proposals_on_hold": 4,
+  "statuses": {
+    "exact": 28,
+    "semantic_mismatch": 7,
+    "contract_violation": 1
+  },
+  "by_group": {
+    "appearance": {
+      "count": 12,
+      "exact": 9,
+      "contract_ok": 12
+    },
+    "hold": {
+      "count": 12,
+      "exact": 8,
+      "contract_ok": 12
+    },
+    "mixed": {
+      "count": 6,
+      "exact": 5,
+      "contract_ok": 5
+    },
+    "named": {
+      "count": 6,
+      "exact": 6,
+      "contract_ok": 6
+    }
+  },
+  "input_errors": [],
+  "input_integrity_ok": true,
+  "cases": [
+    {
+      "case_id": "named01",
+      "group": "named",
+      "expected": {
+        "action": "propose",
+        "shape": "jellyfish"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "jellyfish"
+      }
+    },
+    {
+      "case_id": "named02",
+      "group": "named",
+      "expected": {
+        "action": "propose",
+        "shape": "vase"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "case_id": "named03",
+      "group": "named",
+      "expected": {
+        "action": "propose",
+        "shape": "fireworks"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "fireworks"
+      }
+    },
+    {
+      "case_id": "named04",
+      "group": "named",
+      "expected": {
+        "action": "propose",
+        "shape": "tree"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "tree"
+      }
+    },
+    {
+      "case_id": "named05",
+      "group": "named",
+      "expected": {
+        "action": "propose",
+        "shape": "fish"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "fish"
+      }
+    },
+    {
+      "case_id": "named06",
+      "group": "named",
+      "expected": {
+        "action": "propose",
+        "shape": "mobius"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "mobius"
+      }
+    },
+    {
+      "case_id": "appearance01",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "sphere"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "case_id": "appearance02",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "box"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "box"
+      }
+    },
+    {
+      "case_id": "appearance03",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "mobius"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "mobius"
+      }
+    },
+    {
+      "case_id": "appearance04",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "vase"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "case_id": "appearance05",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "sword"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "sword"
+      }
+    },
+    {
+      "case_id": "appearance06",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "jellyfish"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "jellyfish"
+      }
+    },
+    {
+      "case_id": "appearance07",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "flower"
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "case_id": "appearance08",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "fireworks"
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "case_id": "appearance09",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "tree"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "tree"
+      }
+    },
+    {
+      "case_id": "appearance10",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "bird"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "bird"
+      }
+    },
+    {
+      "case_id": "appearance11",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "fish"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "fish"
+      }
+    },
+    {
+      "case_id": "appearance12",
+      "group": "appearance",
+      "expected": {
+        "action": "propose",
+        "shape": "snake"
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "jellyfish"
+      }
+    },
+    {
+      "case_id": "mixed01",
+      "group": "mixed",
+      "expected": {
+        "action": "propose",
+        "shape": "sphere"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "case_id": "mixed02",
+      "group": "mixed",
+      "expected": {
+        "action": "propose",
+        "shape": "box"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "box"
+      }
+    },
+    {
+      "case_id": "mixed03",
+      "group": "mixed",
+      "expected": {
+        "action": "propose",
+        "shape": "sword"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "sword"
+      }
+    },
+    {
+      "case_id": "mixed04",
+      "group": "mixed",
+      "expected": {
+        "action": "propose",
+        "shape": "flower"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "flower"
+      }
+    },
+    {
+      "case_id": "mixed05",
+      "group": "mixed",
+      "expected": {
+        "action": "propose",
+        "shape": "bird"
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "propose",
+        "shape": "bird"
+      }
+    },
+    {
+      "case_id": "mixed06",
+      "group": "mixed",
+      "expected": {
+        "action": "propose",
+        "shape": "snake"
+      },
+      "status": "contract_violation",
+      "contract_ok": false,
+      "exact_ok": false,
+      "false_proposal_on_hold": false,
+      "prediction": null
+    },
+    {
+      "case_id": "hold01",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold02",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold03",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": true,
+      "prediction": {
+        "action": "propose",
+        "shape": "bird"
+      }
+    },
+    {
+      "case_id": "hold04",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold05",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold06",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold07",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold08",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": true,
+      "prediction": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "case_id": "hold09",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold10",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "exact",
+      "contract_ok": true,
+      "exact_ok": true,
+      "false_proposal_on_hold": false,
+      "prediction": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "case_id": "hold11",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": true,
+      "prediction": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "case_id": "hold12",
+      "group": "hold",
+      "expected": {
+        "action": "hold",
+        "shape": null
+      },
+      "status": "semantic_mismatch",
+      "contract_ok": true,
+      "exact_ok": false,
+      "false_proposal_on_hold": true,
+      "prediction": {
+        "action": "propose",
+        "shape": "flower"
+      }
+    }
+  ],
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "responses_sha256": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2",
+  "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa"
+}

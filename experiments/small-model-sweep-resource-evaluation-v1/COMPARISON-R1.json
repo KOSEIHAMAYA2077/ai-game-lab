@@ -1,0 +1,236 @@
+{
+  "version": "seen36-resource-comparison-r1",
+  "source_review_sha256": "f9ac82abe460cc87c62cbeae80277efa3625bb34e7cdb3db0df1f33067ed7d4d",
+  "scope": "Resource regression on previously seen36 artificial shape/action sentences. Not fresh or generalization evidence. Not unknown3D generation or complete widget validation.",
+  "limitations": [
+    "4 parameters changed together, cannot attribute differences to one parameter",
+    "One run each, not repeated speed study or precision confidence estimate",
+    "Owned server RSS/TIME only; monitor, UI, OS and power excluded",
+    "Idle measured only for4B, post-query loaded state; no unloaded baseline",
+    "TIME display precision and lsof/ps timing overhead limit small CPU estimates",
+    "Startup is after file hashing, not controlled cold start",
+    "Same model/runtime/prompt/fixture held for paired diagnosis; raw text unmodified"
+  ],
+  "reviewer_model_or_server_calls": 0,
+  "records": [
+    {
+      "version": "seen36-resource-regression-r1",
+      "model_id": "bonsai-1.7b-q1",
+      "label": "bonsai-1.7b-q1-resources-r1",
+      "runtime_status": "completed",
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "count": 36,
+      "exact_before": 16,
+      "exact_after": 16,
+      "contract_ok_before": 36,
+      "contract_ok_after": 36,
+      "positive_exact_before": 16,
+      "positive_exact_after": 16,
+      "hold_exact_before": 0,
+      "hold_exact_after": 0,
+      "false_proposals_before": 12,
+      "false_proposals_after": 12,
+      "statuses_after": {
+        "semantic_mismatch": 20,
+        "exact": 16
+      },
+      "input_integrity_ok": true,
+      "lost_exact_case_ids": [],
+      "gained_exact_case_ids": [],
+      "changed_case_predictions": [
+        {
+          "case_id": "appearance12",
+          "group": "appearance",
+          "before_status": "semantic_mismatch",
+          "after_status": "semantic_mismatch",
+          "before_prediction": {
+            "action": "propose",
+            "shape": "fish"
+          },
+          "after_prediction": {
+            "action": "propose",
+            "shape": "jellyfish"
+          }
+        }
+      ],
+      "resource_parameters_before": {
+        "context": 2048,
+        "batch": 256,
+        "ubatch": 128,
+        "max_output": 256
+      },
+      "resource_parameters_after": {
+        "context": 1024,
+        "batch": 64,
+        "ubatch": 32,
+        "max_output": 128
+      },
+      "model_file_bytes": 248302272,
+      "server_rss_peak_bytes_before_sampled": 859144192,
+      "server_rss_peak_bytes_after_sampled": 731742208,
+      "query_seconds_median_before": 1.00507,
+      "query_seconds_median_after": 1.070112,
+      "query_seconds_max_after": 1.1655,
+      "reply_count_after": 36,
+      "startup_seconds_after_prehash": 0.593034,
+      "idle_independent_check": {
+        "status": "not_measured",
+        "scope": "No idle run for this candidate"
+      },
+      "paired_identity_checks": {
+        "model_file_sha256": true,
+        "runtime_binary_sha256": true,
+        "prompt_sha256": true,
+        "fixture_sha256": true,
+        "temperature": true,
+        "seed": true,
+        "threads": true,
+        "threads_batch": true,
+        "prompt_cache": true,
+        "stream": true,
+        "backend": true,
+        "baseline_summary_unchanged": true,
+        "baseline_score_source_pins": true
+      },
+      "inputs_unchanged_after_score": true,
+      "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+      "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa",
+      "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+      "driver_sha256": "f6a7d89e42ca124bb590cacff0ca22dc6b0d8a6fa9d6707e9804795618ca4714",
+      "baseline_summary_sha256": "41e5e70dc6fcb7d244aad806a6d7ca2a84ee86fe98ccfde635099f3332bf9840",
+      "baseline_score_sha256": "1b0a022a8f782a5d67646c07b1c15bd2350461a537946314e6486bb3dea13667",
+      "score_sha256": "513c6962032a794d138f17222bec8032724d71d0ab37b29c6f1e13e35451fa4e",
+      "summary_sha256": "454960cd2bca48881435bb91e3524e2935869ababca7867a48677ae41f359028",
+      "responses_sha256": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531",
+      "rss_samples_sha256": "58ec543112c6887751a6b98527c21d48f093940f49d6b780daa12018c8a6f4dc",
+      "scope": "Same already-seen36 shape/action cases; resource regression diagnosis only, not fresh/generalization or whole-widget adoption",
+      "reviewer_model_or_server_calls": 0,
+      "startup_and_queries_rss_peak_bytes_sampled": 731742208,
+      "startup_and_queries_rss_samples": 157,
+      "phase_note": "RSS before idle-start marker, includes startup and36 queries; non-idle candidate includes whole short run. All phases use saved server-only samples.",
+      "wire_cli_audit_sha256": "767353268512a3c55c7a310de89324b076c9ea214d0ad8cb5738cf0540d708ed",
+      "diagnosis_sha256": "08a361c324b69f390fd93a1a22d18b0eec5b862f41e3e544a7cc0ac6ddbcc819"
+    },
+    {
+      "version": "seen36-resource-regression-r1",
+      "model_id": "bonsai-4b-q1",
+      "label": "bonsai-4b-q1-resources-idle-r1",
+      "runtime_status": "completed",
+      "shutdown": {
+        "method": "owned_sigterm",
+        "exit_code": 0
+      },
+      "count": 36,
+      "exact_before": 28,
+      "exact_after": 29,
+      "contract_ok_before": 35,
+      "contract_ok_after": 36,
+      "positive_exact_before": 20,
+      "positive_exact_after": 21,
+      "hold_exact_before": 8,
+      "hold_exact_after": 8,
+      "false_proposals_before": 4,
+      "false_proposals_after": 4,
+      "statuses_after": {
+        "exact": 29,
+        "semantic_mismatch": 7
+      },
+      "input_integrity_ok": true,
+      "lost_exact_case_ids": [],
+      "gained_exact_case_ids": [
+        "mixed06"
+      ],
+      "changed_case_predictions": [
+        {
+          "case_id": "mixed06",
+          "group": "mixed",
+          "before_status": "contract_violation",
+          "after_status": "exact",
+          "before_prediction": null,
+          "after_prediction": {
+            "action": "propose",
+            "shape": "snake"
+          }
+        }
+      ],
+      "resource_parameters_before": {
+        "context": 2048,
+        "batch": 256,
+        "ubatch": 128,
+        "max_output": 256
+      },
+      "resource_parameters_after": {
+        "context": 1024,
+        "batch": 64,
+        "ubatch": 32,
+        "max_output": 128
+      },
+      "model_file_bytes": 572270624,
+      "server_rss_peak_bytes_before_sampled": 1569128448,
+      "server_rss_peak_bytes_after_sampled": 1401028608,
+      "query_seconds_median_before": 2.450201,
+      "query_seconds_median_after": 2.639989,
+      "query_seconds_max_after": 2.86449,
+      "reply_count_after": 36,
+      "startup_seconds_after_prehash": 1.021268,
+      "idle_independent_check": {
+        "status": "complete_600_seconds",
+        "planned_seconds": 600,
+        "elapsed_seconds": 600.074476542,
+        "cpu_delta_seconds_recomputed": 0.75,
+        "cpu_percent_one_core_recomputed": 0.12498448597946768,
+        "rss_min_bytes": 1376976896,
+        "rss_max_bytes": 1376976896,
+        "rss_mean_bytes": 1376976896.0,
+        "idle_rss_samples": 2268,
+        "later_samples_excluded": 0,
+        "checks": {
+          "cpu_delta": true,
+          "cpu_percent": true,
+          "rss_sample_count": true,
+          "rss_min": true,
+          "rss_max": true,
+          "rss_mean": true
+        },
+        "scope": "Owned server user+system TIME, one core=100%; excludes UI, monitor and OS",
+        "counter_interval_note": "Denominator includes start/end lsof/ps overhead. No energy, active CPU, unloaded idle or complete widget measurement."
+      },
+      "paired_identity_checks": {
+        "model_file_sha256": true,
+        "runtime_binary_sha256": true,
+        "prompt_sha256": true,
+        "fixture_sha256": true,
+        "temperature": true,
+        "seed": true,
+        "threads": true,
+        "threads_batch": true,
+        "prompt_cache": true,
+        "stream": true,
+        "backend": true,
+        "baseline_summary_unchanged": true,
+        "baseline_score_source_pins": true
+      },
+      "inputs_unchanged_after_score": true,
+      "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+      "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa",
+      "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+      "driver_sha256": "f6a7d89e42ca124bb590cacff0ca22dc6b0d8a6fa9d6707e9804795618ca4714",
+      "baseline_summary_sha256": "59bc9bee545175889e9fe0f0a0b4a5a6f1d16f98e4ddf40e821ed43db01ea8f6",
+      "baseline_score_sha256": "b74a478704cccebab549ca6b5482503738ba01b85344f8e836985d4f2f0aa98d",
+      "score_sha256": "a8b311e7cda3ec077d0c477be8e199251759ba67ac9e61fc9d02f0b931574fd0",
+      "summary_sha256": "4dfbe893394741a8744b93b3598fde6e73ef5f9640f3abd67363b430622369ef",
+      "responses_sha256": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7",
+      "rss_samples_sha256": "9f4ff6dacbcd08a8d694f4769a4859deb9d7e3f93078005491d1000355e1dfb0",
+      "scope": "Same already-seen36 shape/action cases; resource regression diagnosis only, not fresh/generalization or whole-widget adoption",
+      "reviewer_model_or_server_calls": 0,
+      "startup_and_queries_rss_peak_bytes_sampled": 1401028608,
+      "startup_and_queries_rss_samples": 377,
+      "phase_note": "RSS before idle-start marker, includes startup and36 queries; non-idle candidate includes whole short run. All phases use saved server-only samples.",
+      "wire_cli_audit_sha256": "54c13286379ae18a1322c8056d72a27a887e503b8194c218886f384dfde30ca2",
+      "diagnosis_sha256": "f8ccbb23b7a53b40efd07ddfdd62ecf19e2349a1b24e6a2aa609386aeae8942f"
+    }
+  ]
+}

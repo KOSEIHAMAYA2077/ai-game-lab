@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "propose",
+        "hold"
+      ]
+    },
+    "shape": {
+      "enum": [
+        "sphere",
+        "box",
+        "mobius",
+        "vase",
+        "sword",
+        "jellyfish",
+        "flower",
+        "fireworks",
+        "tree",
+        "bird",
+        "fish",
+        "snake",
+        null
+      ]
+    },
+    "color": {
+      "enum": [
+        "white",
+        "red",
+        "blue",
+        "yellow",
+        "green",
+        null
+      ]
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "motion": {
+      "enum": [
+        "still",
+        "flow",
+        "pulse",
+        null
+      ]
+    }
+  },
+  "required": [
+    "action",
+    "shape",
+    "color",
+    "count",
+    "motion"
+  ],
+  "additionalProperties": false
+}

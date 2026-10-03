@@ -1,0 +1,30 @@
+{
+  "version": "reference-map-r1",
+  "method": "Historical filename references remain unchanged in frozen initial files; public equivalents are explicit, without republishing raw template source",
+  "mappings": [
+    {
+      "referenced_from": [
+        "research/small-model-sweep-20261003/CANDIDATES.json",
+        "research/small-model-sweep-20261003/CANDIDATES-R2.json"
+      ],
+      "field": "source_snapshot",
+      "historical_value": "HF-METADATA-R1.json",
+      "historical_source_is_private": true,
+      "public_equivalent": "research/small-model-sweep-public-catalog-v1/PUBLIC-HF-METADATA-R2.json",
+      "raw_source_bytes": 143498,
+      "raw_source_sha256": "618de915c6c3e5fde27965c1f6fd0f1415447d5fc0688a40126b1d0d291afc24",
+      "change": "Only chat template text replaced with byte count and digest; artifact pins unchanged"
+    },
+    {
+      "referenced_from": [
+        "research/small-model-sweep-20261003/AUDIT-R1.json"
+      ],
+      "field": "local_links",
+      "historical_source_is_private": true,
+      "interpretation": "Historical local file checks; current public Markdown links are checked in new catalog audit. Old README and fetch/build scripts are not public entrypoints."
+    }
+  ],
+  "known_root_public_link_update": [
+    "research/small-model-sweep-ledger-20261003/README.md: change the old initial README link to the new curated catalog README when root publishes; ledger is root-owned and unchanged by this curation agent"
+  ]
+}
