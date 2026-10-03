@@ -228,3 +228,7 @@ native R5 coreをbyte同一で使うCLI入口R2を別folderへ保存。独立20�
 固定CPU CLIは6000.013秒を通常終了。通常20件とtoken_limit保留4件を分け、600/600標本・RSS peak約42.47MiBを保存した。単独CLIで、8時間の窓・全体RAM・16GB機・意味精度の結果ではない。[図と原票](experiments/native-static-longrun-v1/REPORT-R1.md) / [独立算術](experiments/native-static-longrun-review-v1/REPORT-R1.md)。
 
 [今回の結果と次の方針](research/side-interior-results-20261003.md)をまとめ、別担当が36原資料と照合した。研究の候補は、低資源のサイドインテリアでの文章による形の連想と文字表面の連続性。人による評価0・全アプリ取得未実装・一般16GB laptop未検証を明記し、既定60形Webと13形配布を維持した。
+
+## 2026-10-03 10:32 JST — 期限付き作業の終了
+
+PR42の結果・研究入口はmain e819f015へmerge・タスク添付済み。今回のheartbeatは10:15にPAUSEDへ更新し保存設定を確認。所有caffeinate83393は開始時刻/commandを照合して10:32:24に終了し、PID不在を確認した。他のjob・既存版・保存・URL・アプリを保持。[終了記録](experiments/side-interior-session-close-v1/README.md)。全アプリ入力・16GB実機・人の作業影響は残る検証であり、自動で取得を始めない。
