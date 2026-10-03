@@ -1,0 +1,2100 @@
+{
+  "version": "publication-supplement-check-r4",
+  "observed_at_utc": "2026-10-03T06:28:08.030168+00:00",
+  "check_count": 141,
+  "pass_count": 141,
+  "failed_checks": [],
+  "checks": [
+    {
+      "name": "fixed26_RUNS_unchanged",
+      "pass": true,
+      "actual": {
+        "bytes": 30867,
+        "sha256": "0a561c91f8888c3d259963fe5f631f929f0d056f4c3f850e7e2e7a6a5119e7b3"
+      },
+      "expected": {
+        "bytes": 30867,
+        "sha256": "0a561c91f8888c3d259963fe5f631f929f0d056f4c3f850e7e2e7a6a5119e7b3"
+      }
+    },
+    {
+      "name": "fixed26_TABLE_unchanged",
+      "pass": true,
+      "actual": {
+        "bytes": 3826,
+        "sha256": "84bbaf89e27b54875c92a555a101d039329035582c64251f919c0978fe0a7372"
+      },
+      "expected": {
+        "bytes": 3826,
+        "sha256": "84bbaf89e27b54875c92a555a101d039329035582c64251f919c0978fe0a7372"
+      }
+    },
+    {
+      "name": "supplement_kept_separate",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "supplement_kernel_unverified",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "resources_four_settings",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "resources_loaded_RAM",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "resource_no_widget_success",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "different24_36_not_compared",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "main_resource_table_matches_verified_data",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 4044,
+        "sha256": "accad4b5ba58133c9a794a6c8b4cea355ae5237ebda7f1b92958038d164dfd00"
+      },
+      "expected": {
+        "bytes": 4044,
+        "sha256": "accad4b5ba58133c9a794a6c8b4cea355ae5237ebda7f1b92958038d164dfd00"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": "accad4b5ba58133c9a794a6c8b4cea355ae5237ebda7f1b92958038d164dfd00",
+      "expected": "accad4b5ba58133c9a794a6c8b4cea355ae5237ebda7f1b92958038d164dfd00"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 3664,
+        "sha256": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2"
+      },
+      "expected": {
+        "bytes": 3664,
+        "sha256": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2",
+      "expected": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 3664,
+        "sha256": "0b253e754ab93f3cf2fbd68d3911791f14a42e7fb25daccf5c849cb665682f85"
+      },
+      "expected": {
+        "bytes": 3664,
+        "sha256": "0b253e754ab93f3cf2fbd68d3911791f14a42e7fb25daccf5c849cb665682f85"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": "0b253e754ab93f3cf2fbd68d3911791f14a42e7fb25daccf5c849cb665682f85",
+      "expected": "0b253e754ab93f3cf2fbd68d3911791f14a42e7fb25daccf5c849cb665682f85"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 4001,
+        "sha256": "b9b3b6b05b84ea6525fd0d0e6942257a826ce248dc3e479882a6f7343e308cb7"
+      },
+      "expected": {
+        "bytes": 4001,
+        "sha256": "b9b3b6b05b84ea6525fd0d0e6942257a826ce248dc3e479882a6f7343e308cb7"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": "b9b3b6b05b84ea6525fd0d0e6942257a826ce248dc3e479882a6f7343e308cb7",
+      "expected": "b9b3b6b05b84ea6525fd0d0e6942257a826ce248dc3e479882a6f7343e308cb7"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 4057,
+        "sha256": "f81bc9edb227ee3e30d85f7bd4ea1566c2d41f0f50bba0055f10aa27d3194d33"
+      },
+      "expected": {
+        "bytes": 4057,
+        "sha256": "f81bc9edb227ee3e30d85f7bd4ea1566c2d41f0f50bba0055f10aa27d3194d33"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": "f81bc9edb227ee3e30d85f7bd4ea1566c2d41f0f50bba0055f10aa27d3194d33",
+      "expected": "f81bc9edb227ee3e30d85f7bd4ea1566c2d41f0f50bba0055f10aa27d3194d33"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 4019,
+        "sha256": "de41cba3be9efbeaf1c47793fa67470f20e599c14bf4bf8220a4307922abb1fe"
+      },
+      "expected": {
+        "bytes": 4019,
+        "sha256": "de41cba3be9efbeaf1c47793fa67470f20e599c14bf4bf8220a4307922abb1fe"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": "de41cba3be9efbeaf1c47793fa67470f20e599c14bf4bf8220a4307922abb1fe",
+      "expected": "de41cba3be9efbeaf1c47793fa67470f20e599c14bf4bf8220a4307922abb1fe"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 4049,
+        "sha256": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531"
+      },
+      "expected": {
+        "bytes": 4049,
+        "sha256": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl",
+      "pass": true,
+      "actual": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531",
+      "expected": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_pin:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl",
+      "pass": true,
+      "actual": {
+        "bytes": 3667,
+        "sha256": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7"
+      },
+      "expected": {
+        "bytes": 3667,
+        "sha256": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7"
+      }
+    },
+    {
+      "name": "independent_export_source_pin:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl",
+      "pass": true,
+      "actual": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7",
+      "expected": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7"
+    },
+    {
+      "name": "export_records:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl",
+      "pass": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "export_keys:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "export_case_ids:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl",
+      "pass": true,
+      "actual": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ],
+      "expected": [
+        "appearance01",
+        "appearance02",
+        "appearance03",
+        "appearance04",
+        "appearance05",
+        "appearance06",
+        "appearance07",
+        "appearance08",
+        "appearance09",
+        "appearance10",
+        "appearance11",
+        "appearance12",
+        "hold01",
+        "hold02",
+        "hold03",
+        "hold04",
+        "hold05",
+        "hold06",
+        "hold07",
+        "hold08",
+        "hold09",
+        "hold10",
+        "hold11",
+        "hold12",
+        "mixed01",
+        "mixed02",
+        "mixed03",
+        "mixed04",
+        "mixed05",
+        "mixed06",
+        "named01",
+        "named02",
+        "named03",
+        "named04",
+        "named05",
+        "named06"
+      ]
+    },
+    {
+      "name": "export_ok_maps_to_HTTP200_reply:experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "exports_record_total",
+      "pass": true,
+      "actual": 288,
+      "expected": 288
+    },
+    {
+      "name": "exports_manifest_total",
+      "pass": true,
+      "actual": 288,
+      "expected": 288
+    },
+    {
+      "name": "exports_count",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "curated_source_pin",
+      "pass": true,
+      "actual": {
+        "bytes": 143498,
+        "sha256": "618de915c6c3e5fde27965c1f6fd0f1415447d5fc0688a40126b1d0d291afc24"
+      },
+      "expected": {
+        "bytes": 143498,
+        "sha256": "618de915c6c3e5fde27965c1f6fd0f1415447d5fc0688a40126b1d0d291afc24"
+      }
+    },
+    {
+      "name": "curated_model_record_count",
+      "pass": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "name": "prism-ml/Bonsai-1.7B-gguf:template_replaced_digest",
+      "pass": true,
+      "actual": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7",
+      "expected": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7"
+    },
+    {
+      "name": "prism-ml/Bonsai-1.7B-gguf:template_replaced_bytes",
+      "pass": true,
+      "actual": 4063,
+      "expected": 4063
+    },
+    {
+      "name": "prism-ml/Bonsai-1.7B-gguf:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "prism-ml/Bonsai-4B-gguf:template_replaced_digest",
+      "pass": true,
+      "actual": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7",
+      "expected": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7"
+    },
+    {
+      "name": "prism-ml/Bonsai-4B-gguf:template_replaced_bytes",
+      "pass": true,
+      "actual": 4063,
+      "expected": 4063
+    },
+    {
+      "name": "prism-ml/Bonsai-4B-gguf:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "prism-ml/Bonsai-8B-gguf:template_replaced_digest",
+      "pass": true,
+      "actual": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7",
+      "expected": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7"
+    },
+    {
+      "name": "prism-ml/Bonsai-8B-gguf:template_replaced_bytes",
+      "pass": true,
+      "actual": 4063,
+      "expected": 4063
+    },
+    {
+      "name": "prism-ml/Bonsai-8B-gguf:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "prism-ml/Ternary-Bonsai-1.7B-gguf:template_replaced_digest",
+      "pass": true,
+      "actual": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7",
+      "expected": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7"
+    },
+    {
+      "name": "prism-ml/Ternary-Bonsai-1.7B-gguf:template_replaced_bytes",
+      "pass": true,
+      "actual": 4063,
+      "expected": 4063
+    },
+    {
+      "name": "prism-ml/Ternary-Bonsai-1.7B-gguf:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "prism-ml/Ternary-Bonsai-4B-gguf:template_replaced_digest",
+      "pass": true,
+      "actual": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7",
+      "expected": "30a75d10e60b57e2f260420163dd59720dacf9f63b9a8de070d65dd80a7b30f7"
+    },
+    {
+      "name": "prism-ml/Ternary-Bonsai-4B-gguf:template_replaced_bytes",
+      "pass": true,
+      "actual": 4063,
+      "expected": 4063
+    },
+    {
+      "name": "prism-ml/Ternary-Bonsai-4B-gguf:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Qwen/Qwen3-0.6B-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361",
+      "expected": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361"
+    },
+    {
+      "name": "Qwen/Qwen3-0.6B-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 4100,
+      "expected": 4100
+    },
+    {
+      "name": "Qwen/Qwen3-0.6B-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Qwen/Qwen3-1.7B-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361",
+      "expected": "57f1fd00f0013a2be96aa79b857391f27e23df5b5f847072b524c897e24d0361"
+    },
+    {
+      "name": "Qwen/Qwen3-1.7B-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 4100,
+      "expected": 4100
+    },
+    {
+      "name": "Qwen/Qwen3-1.7B-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Qwen/Qwen2.5-0.5B-Instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "expected": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4"
+    },
+    {
+      "name": "Qwen/Qwen2.5-0.5B-Instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 2509,
+      "expected": 2509
+    },
+    {
+      "name": "Qwen/Qwen2.5-0.5B-Instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Qwen/Qwen2.5-1.5B-Instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+      "expected": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4"
+    },
+    {
+      "name": "Qwen/Qwen2.5-1.5B-Instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 2509,
+      "expected": 2509
+    },
+    {
+      "name": "Qwen/Qwen2.5-1.5B-Instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "unsloth/Qwen3.5-0.8B-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "7f0e529032c25183bcd66c7f238da2d377f43be754a94e2725a58c4e16d2ed67",
+      "expected": "7f0e529032c25183bcd66c7f238da2d377f43be754a94e2725a58c4e16d2ed67"
+    },
+    {
+      "name": "unsloth/Qwen3.5-0.8B-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 7816,
+      "expected": 7816
+    },
+    {
+      "name": "unsloth/Qwen3.5-0.8B-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "f05bf4b967dc993bdc7a2fe6e43759ee218eb0eb340d68b063e1c4f8ad148176",
+      "expected": "f05bf4b967dc993bdc7a2fe6e43759ee218eb0eb340d68b063e1c4f8ad148176"
+    },
+    {
+      "name": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 1783,
+      "expected": 1783
+    },
+    {
+      "name": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LiquidAI/LFM2-350M-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "a805e50fed68938a076b07e2e602639611b50b1ced0e50f11eb92f1ba25be4dc",
+      "expected": "a805e50fed68938a076b07e2e602639611b50b1ced0e50f11eb92f1ba25be4dc"
+    },
+    {
+      "name": "LiquidAI/LFM2-350M-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 209,
+      "expected": 209
+    },
+    {
+      "name": "LiquidAI/LFM2-350M-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "LiquidAI/LFM2-700M-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "a805e50fed68938a076b07e2e602639611b50b1ced0e50f11eb92f1ba25be4dc",
+      "expected": "a805e50fed68938a076b07e2e602639611b50b1ced0e50f11eb92f1ba25be4dc"
+    },
+    {
+      "name": "LiquidAI/LFM2-700M-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 209,
+      "expected": 209
+    },
+    {
+      "name": "LiquidAI/LFM2-700M-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "872be49dbb638044ad01b60388f48d469ff2980e5f0dccdc22ec907db54d0788",
+      "expected": "872be49dbb638044ad01b60388f48d469ff2980e5f0dccdc22ec907db54d0788"
+    },
+    {
+      "name": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "name": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "872be49dbb638044ad01b60388f48d469ff2980e5f0dccdc22ec907db54d0788",
+      "expected": "872be49dbb638044ad01b60388f48d469ff2980e5f0dccdc22ec907db54d0788"
+    },
+    {
+      "name": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "name": "HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "bartowski/SmolLM2-1.7B-Instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "872be49dbb638044ad01b60388f48d469ff2980e5f0dccdc22ec907db54d0788",
+      "expected": "872be49dbb638044ad01b60388f48d469ff2980e5f0dccdc22ec907db54d0788"
+    },
+    {
+      "name": "bartowski/SmolLM2-1.7B-Instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "name": "bartowski/SmolLM2-1.7B-Instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ibm-granite/granite-4.0-micro-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "9524df67b77a7b25a2dfee898f75b316a157eb9d855b51e32aeac79d7c8a83ce",
+      "expected": "9524df67b77a7b25a2dfee898f75b316a157eb9d855b51e32aeac79d7c8a83ce"
+    },
+    {
+      "name": "ibm-granite/granite-4.0-micro-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 6418,
+      "expected": 6418
+    },
+    {
+      "name": "ibm-granite/granite-4.0-micro-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "ibm-granite/granite-4.0-1b-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "9524df67b77a7b25a2dfee898f75b316a157eb9d855b51e32aeac79d7c8a83ce",
+      "expected": "9524df67b77a7b25a2dfee898f75b316a157eb9d855b51e32aeac79d7c8a83ce"
+    },
+    {
+      "name": "ibm-granite/granite-4.0-1b-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 6418,
+      "expected": 6418
+    },
+    {
+      "name": "ibm-granite/granite-4.0-1b-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "bartowski/granite-3.1-1b-a400m-instruct-GGUF:template_replaced_digest",
+      "pass": true,
+      "actual": "22da301945ac6b617a8835d435cbbdc780c0ac08d69c07e1e17e6c6799eed800",
+      "expected": "22da301945ac6b617a8835d435cbbdc780c0ac08d69c07e1e17e6c6799eed800"
+    },
+    {
+      "name": "bartowski/granite-3.1-1b-a400m-instruct-GGUF:template_replaced_bytes",
+      "pass": true,
+      "actual": 3224,
+      "expected": 3224
+    },
+    {
+      "name": "bartowski/granite-3.1-1b-a400m-instruct-GGUF:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "microsoft/bitnet-b1.58-2B-4T-gguf:template_replaced_digest",
+      "pass": true,
+      "actual": "6feccacdd8c7094ee8de807281b2f2a077d538832a4c220c7a2375e32ae5c89d",
+      "expected": "6feccacdd8c7094ee8de807281b2f2a077d538832a4c220c7a2375e32ae5c89d"
+    },
+    {
+      "name": "microsoft/bitnet-b1.58-2B-4T-gguf:template_replaced_bytes",
+      "pass": true,
+      "actual": 282,
+      "expected": 282
+    },
+    {
+      "name": "microsoft/bitnet-b1.58-2B-4T-gguf:template_was_present",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "non_template_fields_preserved",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "templates_removed_count",
+      "pass": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "name": "template_utf8_bytes_removed",
+      "pass": true,
+      "actual": 60996,
+      "expected": 60996
+    },
+    {
+      "name": "template_field_absent_public",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/CANDIDATES-R2.json",
+      "pass": true,
+      "actual": {
+        "bytes": 25662,
+        "sha256": "a8d6e45f7f9351f088083d39eec48aa7b1938a4d0dd527233df5e579c44b9bc0"
+      },
+      "expected": {
+        "bytes": 25662,
+        "sha256": "a8d6e45f7f9351f088083d39eec48aa7b1938a4d0dd527233df5e579c44b9bc0"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/CANDIDATES.json",
+      "pass": true,
+      "actual": {
+        "bytes": 25169,
+        "sha256": "2ffba3679158db52722e5d1ad5b8660adb03c306766db180ca5efd95a2b41909"
+      },
+      "expected": {
+        "bytes": 25169,
+        "sha256": "2ffba3679158db52722e5d1ad5b8660adb03c306766db180ca5efd95a2b41909"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/AUDIT-R1.json",
+      "pass": true,
+      "actual": {
+        "bytes": 1748,
+        "sha256": "a46ba6d835af9b7a9ab163a096655046399232dae1ce53a1045814d7c06be963"
+      },
+      "expected": {
+        "bytes": 1748,
+        "sha256": "a46ba6d835af9b7a9ab163a096655046399232dae1ce53a1045814d7c06be963"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/SOURCE-READS-R1.json",
+      "pass": true,
+      "actual": {
+        "bytes": 4446,
+        "sha256": "024f9829ebb8ed3386d97e797b7120e065b68ba8213ba0460598e454de6f0d01"
+      },
+      "expected": {
+        "bytes": 4446,
+        "sha256": "024f9829ebb8ed3386d97e797b7120e065b68ba8213ba0460598e454de6f0d01"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/RUNTIME-SOURCE-READS-R1.json",
+      "pass": true,
+      "actual": {
+        "bytes": 6476,
+        "sha256": "c4b97cef71856e3ddab8c50c2f32e3c4b48b015a61754e02cd6772d0d85824b6"
+      },
+      "expected": {
+        "bytes": 6476,
+        "sha256": "c4b97cef71856e3ddab8c50c2f32e3c4b48b015a61754e02cd6772d0d85824b6"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/ROOT-RUNTIME-SOURCE-R1.json",
+      "pass": true,
+      "actual": {
+        "bytes": 2669,
+        "sha256": "b4d03f981161d5eb7a73eab06906d7f5b385a7cf3d79f0cb763b263c89377e7a"
+      },
+      "expected": {
+        "bytes": 2669,
+        "sha256": "b4d03f981161d5eb7a73eab06906d7f5b385a7cf3d79f0cb763b263c89377e7a"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/UPSTREAM-METADATA-R1.json",
+      "pass": true,
+      "actual": {
+        "bytes": 9639,
+        "sha256": "3015fc85b1933f763675bee51aa806439ce483e11a156fb3268621ea229653c7"
+      },
+      "expected": {
+        "bytes": 9639,
+        "sha256": "3015fc85b1933f763675bee51aa806439ce483e11a156fb3268621ea229653c7"
+      }
+    },
+    {
+      "name": "curated_allowlist_pin:research/small-model-sweep-20261003/RUNTIME-AND-UPSTREAM-NOTES-R2.md",
+      "pass": true,
+      "actual": {
+        "bytes": 2545,
+        "sha256": "2177364614ae2d36a331e57240dfeb98dadbbb7dce6d671bf6528fd735b1b950"
+      },
+      "expected": {
+        "bytes": 2545,
+        "sha256": "2177364614ae2d36a331e57240dfeb98dadbbb7dce6d671bf6528fd735b1b950"
+      }
+    },
+    {
+      "name": "selected_initial_public_count",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "selected_initial_private_count",
+      "pass": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "all_selected_local_links",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "no_clickable_link_to_excluded_initial_files",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "repo_entrypoint_does_not_adopt",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "repo_entrypoint_separate24_36",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "limited_supplement_privacy_scan",
+      "pass": true,
+      "actual": {
+        "personal_absolute_path": 0,
+        "email": 0,
+        "credential": 0
+      },
+      "expected": {
+        "personal_absolute_path": 0,
+        "email": 0,
+        "credential": 0
+      }
+    }
+  ],
+  "source_pins": {
+    "experiments/small-model-sweep-publication-review-v1/FINAL-DOC-CHECK-R2.json": {
+      "bytes": 175495,
+      "sha256": "9db0a8c6687f19c5d35c5b64c062a90b776d6851532dbcc09c0da13d946b6985"
+    },
+    "experiments/small-model-sweep-v1/RUNS-R1.json": {
+      "bytes": 30867,
+      "sha256": "0a561c91f8888c3d259963fe5f631f929f0d056f4c3f850e7e2e7a6a5119e7b3"
+    },
+    "experiments/small-model-sweep-v1/TABLE-R1.md": {
+      "bytes": 3826,
+      "sha256": "84bbaf89e27b54875c92a555a101d039329035582c64251f919c0978fe0a7372"
+    },
+    "experiments/small-model-sweep-v1/README.md": {
+      "bytes": 12160,
+      "sha256": "6862a2102fa9dcb293addb2fce0dace46c2752fed9933613a3434fd71a932d2d"
+    },
+    "experiments/small-model-sweep-v1/SHAPE-RESOURCE-EXPORTS-R1.json": {
+      "bytes": 2373,
+      "sha256": "2339c8e02de42901d0e714f410f803d3756731c6834c94d1cc5f76f1b35ca8b5"
+    },
+    "experiments/small-model-sweep-shape-only-evaluation-v1/results-r1/COMPARISON-R1.json": {
+      "bytes": 13237,
+      "sha256": "898800db47ee4fce25ae5dee60aa380c1c501d9344b70de0c41e833e2fd6a6de"
+    },
+    "experiments/small-model-sweep-resource-evaluation-v1/COMPARISON-R1.json": {
+      "bytes": 9881,
+      "sha256": "49e59672f816e849563b99c598fc688ed4f249a831ea2d5af73ff8bc75bd2ec9"
+    },
+    "experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-1.7b-q1-shape-only-r1.jsonl": {
+      "bytes": 4044,
+      "sha256": "accad4b5ba58133c9a794a6c8b4cea355ae5237ebda7f1b92958038d164dfd00"
+    },
+    "experiments/small-model-sweep-shape-only-v1/results/bonsai-1.7b-q1-shape-only-r1/summary.json": {
+      "bytes": 26523,
+      "sha256": "41e5e70dc6fcb7d244aad806a6d7ca2a84ee86fe98ccfde635099f3332bf9840"
+    },
+    "experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-4b-q1-shape-only-r1.jsonl": {
+      "bytes": 3664,
+      "sha256": "fa0a9f6926e4f11747f2dc58c488d2e1550b3cf213d324ffec0225cd70a608a2"
+    },
+    "experiments/small-model-sweep-shape-only-v1/results/bonsai-4b-q1-shape-only-r1/summary.json": {
+      "bytes": 26423,
+      "sha256": "59bc9bee545175889e9fe0f0a0b4a5a6f1d16f98e4ddf40e821ed43db01ea8f6"
+    },
+    "experiments/small-model-sweep-shape-only-v1/raw-public-r1/bonsai-8b-q1-shape-only-r1.jsonl": {
+      "bytes": 3664,
+      "sha256": "0b253e754ab93f3cf2fbd68d3911791f14a42e7fb25daccf5c849cb665682f85"
+    },
+    "experiments/small-model-sweep-shape-only-v1/results/bonsai-8b-q1-shape-only-r1/summary.json": {
+      "bytes": 26429,
+      "sha256": "732e3b28562043cf498caeb29c152996ad97bc730a156754f7834542e9d8e2e4"
+    },
+    "experiments/small-model-sweep-shape-only-v1/raw-public-r1/granite4-1b-q4-shape-only-r1.jsonl": {
+      "bytes": 4001,
+      "sha256": "b9b3b6b05b84ea6525fd0d0e6942257a826ce248dc3e479882a6f7343e308cb7"
+    },
+    "experiments/small-model-sweep-shape-only-v1/results/granite4-1b-q4-shape-only-r1/summary.json": {
+      "bytes": 26525,
+      "sha256": "a89766ee4d3709c57f8faa4bce4b9e90c8b32807e53d12d52ff794f0636ce375"
+    },
+    "experiments/small-model-sweep-shape-only-v1/raw-public-r1/qwen3-0.6b-q8-shape-only-r1.jsonl": {
+      "bytes": 4057,
+      "sha256": "f81bc9edb227ee3e30d85f7bd4ea1566c2d41f0f50bba0055f10aa27d3194d33"
+    },
+    "experiments/small-model-sweep-shape-only-v1/results/qwen3-0.6b-q8-shape-only-r1/summary.json": {
+      "bytes": 26362,
+      "sha256": "4406b607140a7786e87952814fa27bf10677b4dbc0c66c3fc44a0e6db0c06f80"
+    },
+    "experiments/small-model-sweep-shape-only-v1/raw-public-r1/ternary-bonsai-1.7b-g64-shape-only-r1.jsonl": {
+      "bytes": 4019,
+      "sha256": "de41cba3be9efbeaf1c47793fa67470f20e599c14bf4bf8220a4307922abb1fe"
+    },
+    "experiments/small-model-sweep-shape-only-v1/results/ternary-bonsai-1.7b-g64-shape-only-r1/summary.json": {
+      "bytes": 26512,
+      "sha256": "ff36bc599c0eeacb02a6059db171d19df2007136cf81740d322e1f30d8b3e46c"
+    },
+    "experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-1.7b-q1-resources-r1.jsonl": {
+      "bytes": 4049,
+      "sha256": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531"
+    },
+    "experiments/small-model-sweep-resources-v1/results/bonsai-1.7b-q1-resources-r1/summary.json": {
+      "bytes": 26512,
+      "sha256": "454960cd2bca48881435bb91e3524e2935869ababca7867a48677ae41f359028"
+    },
+    "experiments/small-model-sweep-resources-v1/raw-public-r1/bonsai-4b-q1-resources-idle-r1.jsonl": {
+      "bytes": 3667,
+      "sha256": "d0483a6588d1376b082f9af136f65f8207fb46cd579ae0e2d646719a30391ca7"
+    },
+    "experiments/small-model-sweep-resources-v1/results/bonsai-4b-q1-resources-idle-r1/summary.json": {
+      "bytes": 27118,
+      "sha256": "4dfbe893394741a8744b93b3598fde6e73ef5f9640f3abd67363b430622369ef"
+    },
+    "research/small-model-sweep-public-catalog-v1/PUBLIC-HF-METADATA-R2.json": {
+      "bytes": 89189,
+      "sha256": "c0917ea68572162084aa3beab034daa38c7bc4a13e1cd00e965848d6cab22106"
+    },
+    "research/small-model-sweep-public-catalog-v1/SUGGESTED-INITIAL-ALLOWLIST-R1.json": {
+      "bytes": 3993,
+      "sha256": "811f0af78550af316aec9d9440504ebec959bc6f74d4b59eb455aa86f12825a0"
+    },
+    "research/small-model-sweep-20261003/CANDIDATES-R2.json": {
+      "bytes": 25662,
+      "sha256": "a8d6e45f7f9351f088083d39eec48aa7b1938a4d0dd527233df5e579c44b9bc0"
+    },
+    "research/small-model-sweep-20261003/CANDIDATES.json": {
+      "bytes": 25169,
+      "sha256": "2ffba3679158db52722e5d1ad5b8660adb03c306766db180ca5efd95a2b41909"
+    },
+    "research/small-model-sweep-20261003/AUDIT-R1.json": {
+      "bytes": 1748,
+      "sha256": "a46ba6d835af9b7a9ab163a096655046399232dae1ce53a1045814d7c06be963"
+    },
+    "research/small-model-sweep-20261003/SOURCE-READS-R1.json": {
+      "bytes": 4446,
+      "sha256": "024f9829ebb8ed3386d97e797b7120e065b68ba8213ba0460598e454de6f0d01"
+    },
+    "research/small-model-sweep-20261003/RUNTIME-SOURCE-READS-R1.json": {
+      "bytes": 6476,
+      "sha256": "c4b97cef71856e3ddab8c50c2f32e3c4b48b015a61754e02cd6772d0d85824b6"
+    },
+    "research/small-model-sweep-20261003/ROOT-RUNTIME-SOURCE-R1.json": {
+      "bytes": 2669,
+      "sha256": "b4d03f981161d5eb7a73eab06906d7f5b385a7cf3d79f0cb763b263c89377e7a"
+    },
+    "research/small-model-sweep-20261003/UPSTREAM-METADATA-R1.json": {
+      "bytes": 9639,
+      "sha256": "3015fc85b1933f763675bee51aa806439ce483e11a156fb3268621ea229653c7"
+    },
+    "research/small-model-sweep-20261003/RUNTIME-AND-UPSTREAM-NOTES-R2.md": {
+      "bytes": 2545,
+      "sha256": "2177364614ae2d36a331e57240dfeb98dadbbb7dce6d671bf6528fd735b1b950"
+    },
+    "experiments/small-model-sweep-resource-evaluation-v1/README.md": {
+      "bytes": 7202,
+      "sha256": "5880fc179894a4b94759eb0abc473401b3ec7d44fd4d3b1abc02f5fc53a6b15e"
+    },
+    "research/small-model-sweep-public-catalog-v1/README.md": {
+      "bytes": 5613,
+      "sha256": "8af1c537ba7cf1843fa082d6dfb68a3bca55eedbd9b85b4af08f6eb8fd80a5c3"
+    },
+    "research/small-model-sweep-ledger-20261003/PUBLIC-README-R2.md": {
+      "bytes": 4870,
+      "sha256": "4dcab02a1fe72e01ce196eaf1591f6beeb1d83036e10be6babdcb735b473a2bc"
+    },
+    "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md": {
+      "bytes": 2232,
+      "sha256": "3f8563ecc4490d4de33da05ee1056527377280c2c299fb1a95a40d655fca5888"
+    },
+    "README.md": {
+      "bytes": 25194,
+      "sha256": "3f430fada850878b3bda78e1d86a02fb4af1905fd818cf117dbd025fe78ed252"
+    }
+  },
+  "local_links": [
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "TABLE-R1.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "RUNS-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-evaluation-v1/REPORT-R2.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-evaluation-v1/raw-public-r2/",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-shape-only-evaluation-v1/results-r1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-resource-evaluation-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-public-catalog-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-extra-20261003/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-ledger-20261003/PUBLIC-README-R2.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-portability-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "BRIEF.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "STATUS.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/ambient-association-policy-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-resource-evaluation-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "METHOD.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-runtime-v1/run_r2.py",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-20261003/CANDIDATES-R2.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-extra-20261003/CANDIDATES-EXTRA-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-20261003/ROOT-RUNTIME-SOURCE-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../../research/small-model-sweep-special-runtime-20261003/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-evaluation-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-shape-only-v1/prompt-r2.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "../small-model-sweep-shape-only-evaluation-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/README.md",
+      "target": "SESSION-CLOSE-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/TABLE-R1.md",
+      "target": "RUNS-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-v1/TABLE-R1.md",
+      "target": "../small-model-sweep-evaluation-v1/REPORT-R2.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "COMPARISON-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "SOURCE-REVIEW-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "DRIVER-DIFF-R1.patch",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "TEST-RESULTS-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "collect_r1.py",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "audit_wire_r1.py",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "finalize_r1.py",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-resource-evaluation-v1/README.md",
+      "target": "../small-model-sweep-shape-only-evaluation-v1/results-r1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/CANDIDATES-R2.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/CANDIDATES.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "PUBLIC-HF-METADATA-R2.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/UPSTREAM-METADATA-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/SOURCE-READS-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/RUNTIME-SOURCE-READS-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/ROOT-RUNTIME-SOURCE-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/RUNTIME-AND-UPSTREAM-NOTES-R2.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-ledger-20261003/INVENTORY-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-extra-20261003/CANDIDATES-EXTRA-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-extra-20261003/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "REFERENCE-MAP-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "SUGGESTED-INITIAL-ALLOWLIST-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "../small-model-sweep-20261003/AUDIT-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-public-catalog-v1/README.md",
+      "target": "AUDIT-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-ledger-20261003/PUBLIC-README-R2.md",
+      "target": "INVENTORY-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-ledger-20261003/PUBLIC-README-R2.md",
+      "target": "CACHED-BASELINE-METADATA-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-ledger-20261003/PUBLIC-README-R2.md",
+      "target": "../small-model-sweep-public-catalog-v1/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "research/small-model-sweep-ledger-20261003/PUBLIC-README-R2.md",
+      "target": "../small-model-sweep-extra-20261003/README.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "../small-model-sweep-evaluation-v1/REPORT-R2.md",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "FREEZE-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "case-r1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "prompt-r1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "raw-public-r1.jsonl",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "PROVENANCE-R1.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    },
+    {
+      "from": "experiments/small-model-sweep-bitnet-diagnostic-v1/README.md",
+      "target": "results/bitnet-2b-i2s-micro-cpu-r1/summary.json",
+      "exists": true,
+      "excluded_initial_private_target": false
+    }
+  ],
+  "limited_privacy_counts": {
+    "personal_absolute_path": 0,
+    "email": 0,
+    "credential": 0
+  },
+  "scope": "Current public entrypoints,8 unchanged artificial exports288records, template-stripped metadata, and fixed26 ledger preservation. Local existence/curated allowlist is not proof of GitHub publication.",
+  "reviewer_model_calls": 0,
+  "downloads_builds_git": 0,
+  "prior_R3_checker_error": "R3 incorrectly required raw status reply; fixed shape/resource driver uses raw ok for HTTP200 content and summary reply. Eight R3 status checks are superseded only by explicit saved-case HTTP mapping. Fixtures, expectations, model raw, original scores and all other R3 checks are unchanged."
+}

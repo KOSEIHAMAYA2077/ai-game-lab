@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "propose",
+        "hold"
+      ]
+    },
+    "shape": {
+      "enum": [
+        "sphere",
+        "box",
+        "mobius",
+        "vase",
+        "sword",
+        "jellyfish",
+        "flower",
+        "fireworks",
+        "tree",
+        "bird",
+        "fish",
+        "snake",
+        null
+      ]
+    }
+  },
+  "required": [
+    "action",
+    "shape"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,260 @@
+{
+  "version": "saved-export-provenance-audit-r1",
+  "label": "smollm3-3b-q4km-extra-cpu-r1",
+  "raw_sha256": "3fa7ff16a51ebd2680734317cca33e8287f807a6d80c935ba650999f6af81a03",
+  "summary_sha256": "9ca3a3d44c8adf8ba59b3ee39908870bb68cd97b8798bd23fecca1216eb7f732",
+  "prompt_sha256": "da0223fdfe8eab4c970b0054f901a3c5dfb042e54be13aebe5dea678e990d73d",
+  "fixture_sha256": "faef1015db57e15a8677ef180c8e658db0f9b82d32311f68bb9477ac06eba23b",
+  "source_sha256": "551a0403573afc845c98793bbbb794fec01098479c7a769eec9b84c14fe48255",
+  "model_calls": 0,
+  "attempted": 24,
+  "requests_match_frozen_prompt_plus_text": 24,
+  "http200_reply_content_matches": 24,
+  "notes": [
+    "Audit helper was added after initial model outputs; it does not change primary scoring or expectations.",
+    "Only text is present as the appended user message; fixture expected/rationale/group are not provided to the model.",
+    "Each successful reply's raw_text is compared with original saved HTTP message.content; failed or partial transport is preserved separately."
+  ],
+  "cases": [
+    {
+      "case_id": "N01",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "8f450dab6a0783562af13913863ce581eb50f07f804614a50ff18e2ca71bf41b",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "4080c7faef4f0ce20c5e24491a22d3757e38123e001f1690237d44f98ada2a2b",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "N02",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "8c799de4d1bd5523f50ad3466a4822d3bdc1353b10a08af21ae3b8b6cdac1c24",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "e0e1ccf9a250f4c5abee35547c21efc8a633d301d634ecce1c136c17248f81e9",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "N03",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "981862dc6d93d7ccc36e7d39357586461f63771b8ae608ad1ec28f6d8bc5293e",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "b5e630970785efe8aa05b176c519dfdb6c1ff237533e4d2a2f71ab09180bf614",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "N04",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "b7af6cdfd0640c7223da52910ab79544155d6471d17a965f7bf724d0428e1579",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "0bdcab9d88109dc3cac87139ba5112f08277e568c14cccc057fdee6002f37654",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "N05",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "478e9c51dd725011cc6a45bef65327df77718a2d93c7547c6e69974ca61fd9ca",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "4269975b0a33a70bed416044eb1464a7adc25d02a4a275f33fffb1d407aa67d5",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "N06",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "d0a0afd860075ad7faffa7c3cd6151e0a1324171f7a5bd0ac7bf12f80d1d565d",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "39aedc26293359439b2ef99adcfb732103bb556e6263e66f32c892c7280f9669",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "M01",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "0a5bd3dcc63c1857fbd8ee9b7020194f06937f399504456328b7a844123b13ec",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "ab65c7c745943b78c54f9616e2cf8d6927dd0e0d580992bb35b75c426eb0706c",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "M02",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "f6d3cbf6838240ce17f61be0415dae982518dbe764b776a661846c4733b9b004",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "12088652ce887d35a9613b0dcc13376baa6ec9bd0a3d4f988547cea95255be1d",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "M03",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "589122c6edd65c6c13672cf635f1b648175efe777c5bc154487ca782def64f19",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "b64ba615c1dfbd9115d3bacd3004688b7df8c20941dcf669dabb01f7ebd12736",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "M04",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "586e9fb3c3dfde74258ab06fc09c4c58349a38094eccd8e5d88dc76f33252baf",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "b3acefec27d2e71601ae6fbaf3c77ebd3f22c22a8f353037f37d4e9812f68865",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "M05",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "76c566ac1be24683a47e7f8fdfabd04af958a9d859264d911ce4aaa72a402bab",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "bb9a11948321ad350b493c71e4549ffb3707dc7c8f93906a681226150e3cec7b",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "M06",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "7b61b4b4ab7762ebd55eb3913d4f95bdc75e052842c1352e5c023bd3768372d4",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "03611221a592256ef72a62d174f3ec8e5c0b0e5482a8826850df65d6e7fd641f",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "A01",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "2cd81ecbe202e9ea3b18ffade11330834bc685e5f6333e951e636a82c924dfb0",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "274f727bf91e7db6b115430e232f422a01fbd0c5952d5f2f987040f38a736a1c",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "A02",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "af74f587cf522f376098159030333b5f6d45fad81a98f406c34fdd2701c0f307",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "0da043562d5c8249da53d4474ffbae15d83367f86fc0c96d7e80af48320205e2",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "A03",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "e1f80f5eaced819f777c8e247ac8a291ae4905008f5f2e55281213788bf6b695",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "adb4e7a9c2cc7d0cb5739a4bbcd7813794e27e8a10e0d4c2a2d98e59b4a2be1d",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "A04",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "f0fa7d25e2859116314a7dfaecf5788e130bdcc4a8e28ad866ab3e6ff216bcfb",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "53c88c57725dadb168add18f60f7b5532c18045b2e649061513b629681c92c78",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "A05",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "4dc39d73007d74c2f8e3dec78f2dbfa11d33f6668fc0e91a1f907529274066c5",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "6a8ed30529d918f83fa050f627acd210f8ed96b944c191af7452761109f08ee0",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "A06",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "f52e66db8823b4129ec5be1800523f3feb9dc6a241b605ff6eb8b842511297cd",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "dad22690f6859b49eaf7a6e70afda97331700fd2f28026b0b7b48f93037493ec",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "H01",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "7c0a509749b6be7562445e1036c03fb1aedc4da0baa960a0fe6f0824c0359767",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "dea75bd5e3713464d2f6b76b1246144738d09376fc8315b7f34672d5419ce10a",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "H02",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "0228f98ba29df27056e4147c5892b25bd56770250bcf3a61f0253040bf0f2107",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "7698ca613338b61f6bfb7a89dd05e823b75ef8d6c8b3e9b8e6bfdcfd20223c79",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "H03",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "45daff1d7a7bd2fe050ee80dbbf4665da9114917afcd9aad0b2ee27975e85fd2",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "ba1ace40ed3d59121b4006a3fb53b858f293b4003b5cf22a933521f6bb1b2ee8",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "H04",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "809583228ae9763e46f4e749f13ff6352c80d58b40d91c4ffc6c3d48be93675b",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "21940d2baaae5152f0370aa223a13ca89cd388c4c542c36b155fb9e282c37fc5",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "H05",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "64ba89e66a457c2b49ec79edb99f1c6c68e4c6e4409856dc4f26f6cf2133c600",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "372567b153d8934e0b311a1b3ac2994af75864c72646a654c546c9c40da857a9",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    },
+    {
+      "case_id": "H06",
+      "runtime_status": "reply",
+      "http_status": 200,
+      "request_sha256": "5ed9555e25d17776caade947272fe4051c3465c01dc7b131a9d39e92bd3f8233",
+      "request_messages_equal_frozen_prompt_plus_case_text_only": true,
+      "response_bin_sha256": "d4cc07450dd46d5c348fe07f80c3630b8701ce9087530ddcade35beddf5ceb3d",
+      "original_http_message_content_matches_unrepaired_export": true,
+      "wire_parse_error": null
+    }
+  ]
+}

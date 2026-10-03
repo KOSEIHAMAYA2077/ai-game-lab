@@ -1,0 +1,25 @@
+{
+  "version": "small-model-sweep-contract-r1",
+  "task": "Map an explicit positive request or an author-defined descriptive request to one of twelve finite shapes and optional attributes. This is not arbitrary 3D generation or ambient association evaluation.",
+  "exact_keys": ["action", "shape", "color", "count", "motion"],
+  "actions": ["propose", "hold"],
+  "shapes": ["sphere", "box", "mobius", "vase", "sword", "jellyfish", "flower", "fireworks", "tree", "bird", "fish", "snake"],
+  "colors": ["white", "red", "blue", "yellow", "green"],
+  "motions": ["still", "flow", "pulse"],
+  "count_min": 1,
+  "count_max": 8,
+  "omitted_attributes": {"color": null, "count": 1, "motion": null},
+  "hold_output": {"action":"hold","shape":null,"color":null,"count":1,"motion":null},
+  "propose_requires_supported_shape": true,
+  "strict_primary_json": "The entire raw_text must be one JSON object, without fences, commentary, duplicate keys, or NaN/Infinity. Leading and trailing whitespace are allowed.",
+  "raw_record_required": ["case_id", "raw_text", "status"],
+  "raw_record_ok_status": "ok",
+  "policy": [
+    "Ordinary prose without a request is hold.",
+    "Negated or explicitly quoted requests and source code are hold.",
+    "Unknown object names without sufficient known descriptive evidence are hold, even when known color/count/motion words occur.",
+    "A descriptive world motion is not automatically a flow or pulse attribute; motion must be requested for the representation.",
+    "The count is the number of displayed bodies, not the number of wings, branches, petals, or other parts.",
+    "Metaphor expectations are author-defined finite-choice targets, not objective proof of complete language understanding."
+  ]
+}

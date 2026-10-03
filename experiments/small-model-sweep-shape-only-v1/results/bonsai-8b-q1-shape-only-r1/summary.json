@@ -1,0 +1,902 @@
+{
+  "version": "small-model-sweep-shape-only-runtime-r1",
+  "label": "bonsai-8b-q1-shape-only-r1",
+  "backend": "cpu",
+  "threads": 4,
+  "threads_batch": 4,
+  "context_tokens": 2048,
+  "max_output_tokens": 256,
+  "temperature": 0,
+  "seed": 17,
+  "stream": false,
+  "prompt_cache": false,
+  "startup_deadline_seconds": 60,
+  "query_deadline_seconds": 30,
+  "batch_deadline_seconds": 900.0,
+  "model_file_bytes": 1158654496,
+  "fixture_count": 36,
+  "cases": [
+    {
+      "id": "named01",
+      "status": "reply",
+      "seconds": 4.453593,
+      "http_status": 200,
+      "response_bytes": 789,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 263,
+        "completion_tokens": 16,
+        "total_tokens": 279,
+        "server_prompt_ms": 3653.986,
+        "server_predicted_ms": 795.262,
+        "server_predicted_per_second": 18.861708468404125,
+        "server_prompt_per_second": 71.97619257435579,
+        "completion_tokens_per_client_second": 3.5926048922746197
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "jellyfish"
+      }
+    },
+    {
+      "id": "named02",
+      "status": "reply",
+      "seconds": 4.362181,
+      "http_status": 200,
+      "response_bytes": 784,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 262,
+        "completion_tokens": 15,
+        "total_tokens": 277,
+        "server_prompt_ms": 3618.246,
+        "server_predicted_ms": 739.622,
+        "server_predicted_per_second": 18.928587846224154,
+        "server_prompt_per_second": 72.41077582895137,
+        "completion_tokens_per_client_second": 3.4386468603664087
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "id": "named03",
+      "status": "reply",
+      "seconds": 4.458519,
+      "http_status": 200,
+      "response_bytes": 788,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 269,
+        "completion_tokens": 15,
+        "total_tokens": 284,
+        "server_prompt_ms": 3710.492,
+        "server_predicted_ms": 743.576,
+        "server_predicted_per_second": 18.82793419905968,
+        "server_prompt_per_second": 72.49712437056864,
+        "completion_tokens_per_client_second": 3.3643458735961427
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "fireworks"
+      }
+    },
+    {
+      "id": "named04",
+      "status": "reply",
+      "seconds": 4.33614,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 262,
+        "completion_tokens": 14,
+        "total_tokens": 276,
+        "server_prompt_ms": 3642.598,
+        "server_predicted_ms": 689.11,
+        "server_predicted_per_second": 18.864912713500022,
+        "server_prompt_per_second": 71.92668529439702,
+        "completion_tokens_per_client_second": 3.228678040838165
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "tree"
+      }
+    },
+    {
+      "id": "named05",
+      "status": "reply",
+      "seconds": 4.325315,
+      "http_status": 200,
+      "response_bytes": 782,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 259,
+        "completion_tokens": 14,
+        "total_tokens": 273,
+        "server_prompt_ms": 3628.32,
+        "server_predicted_ms": 692.702,
+        "server_predicted_per_second": 18.76708887804568,
+        "server_prompt_per_second": 71.38289897252723,
+        "completion_tokens_per_client_second": 3.2367584788622334
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "fish"
+      }
+    },
+    {
+      "id": "named06",
+      "status": "reply",
+      "seconds": 4.570338,
+      "http_status": 200,
+      "response_bytes": 787,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 267,
+        "completion_tokens": 15,
+        "total_tokens": 282,
+        "server_prompt_ms": 3819.535,
+        "server_predicted_ms": 746.334,
+        "server_predicted_per_second": 18.758357518215707,
+        "server_prompt_per_second": 69.90379718997208,
+        "completion_tokens_per_client_second": 3.2820329699904036
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "mobius"
+      }
+    },
+    {
+      "id": "appearance01",
+      "status": "reply",
+      "seconds": 4.378825,
+      "http_status": 200,
+      "response_bytes": 785,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 268,
+        "completion_tokens": 14,
+        "total_tokens": 282,
+        "server_prompt_ms": 3679.33,
+        "server_predicted_ms": 695.164,
+        "server_predicted_per_second": 18.700623162304147,
+        "server_prompt_per_second": 72.83934846833526,
+        "completion_tokens_per_client_second": 3.197204729579282
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "id": "appearance02",
+      "status": "reply",
+      "seconds": 4.629981,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 279,
+        "completion_tokens": 14,
+        "total_tokens": 293,
+        "server_prompt_ms": 3934.698,
+        "server_predicted_ms": 690.918,
+        "server_predicted_per_second": 18.815546852159013,
+        "server_prompt_per_second": 70.90760205738789,
+        "completion_tokens_per_client_second": 3.0237705079135315
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "box"
+      }
+    },
+    {
+      "id": "appearance03",
+      "status": "reply",
+      "seconds": 4.595236,
+      "http_status": 200,
+      "response_bytes": 787,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 277,
+        "completion_tokens": 15,
+        "total_tokens": 292,
+        "server_prompt_ms": 3847.259,
+        "server_predicted_ms": 743.694,
+        "server_predicted_per_second": 18.824946819525234,
+        "server_prompt_per_second": 71.99931171777101,
+        "completion_tokens_per_client_second": 3.264250193025995
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "mobius"
+      }
+    },
+    {
+      "id": "appearance04",
+      "status": "reply",
+      "seconds": 4.60029,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 277,
+        "completion_tokens": 15,
+        "total_tokens": 292,
+        "server_prompt_ms": 3847.06,
+        "server_predicted_ms": 748.813,
+        "server_predicted_per_second": 18.69625660879285,
+        "server_prompt_per_second": 72.00303608469845,
+        "completion_tokens_per_client_second": 3.260664001617289
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "id": "appearance05",
+      "status": "reply",
+      "seconds": 4.523103,
+      "http_status": 200,
+      "response_bytes": 782,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 273,
+        "completion_tokens": 14,
+        "total_tokens": 287,
+        "server_prompt_ms": 3825.556,
+        "server_predicted_ms": 693.281,
+        "server_predicted_per_second": 18.75141537125639,
+        "server_prompt_per_second": 71.3621758510397,
+        "completion_tokens_per_client_second": 3.0952202503458355
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sword"
+      }
+    },
+    {
+      "id": "appearance06",
+      "status": "reply",
+      "seconds": 4.549111,
+      "http_status": 200,
+      "response_bytes": 785,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 277,
+        "completion_tokens": 14,
+        "total_tokens": 291,
+        "server_prompt_ms": 3852.059,
+        "server_predicted_ms": 692.782,
+        "server_predicted_per_second": 18.76492172140731,
+        "server_prompt_per_second": 71.90959432345143,
+        "completion_tokens_per_client_second": 3.077524377839978
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "id": "appearance07",
+      "status": "reply",
+      "seconds": 4.48524,
+      "http_status": 200,
+      "response_bytes": 786,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 273,
+        "completion_tokens": 14,
+        "total_tokens": 287,
+        "server_prompt_ms": 3783.736,
+        "server_predicted_ms": 697.165,
+        "server_predicted_per_second": 18.646948713719134,
+        "server_prompt_per_second": 72.15091116293526,
+        "completion_tokens_per_client_second": 3.1213491362781034
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "flower"
+      }
+    },
+    {
+      "id": "appearance08",
+      "status": "reply",
+      "seconds": 4.616053,
+      "http_status": 200,
+      "response_bytes": 778,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 277,
+        "completion_tokens": 15,
+        "total_tokens": 292,
+        "server_prompt_ms": 3862.784,
+        "server_predicted_ms": 748.986,
+        "server_predicted_per_second": 18.691938167068546,
+        "server_prompt_per_second": 71.70993770296242,
+        "completion_tokens_per_client_second": 3.2495294139820317
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "fireworks"
+      }
+    },
+    {
+      "id": "appearance09",
+      "status": "reply",
+      "seconds": 4.508551,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 271,
+        "completion_tokens": 14,
+        "total_tokens": 285,
+        "server_prompt_ms": 3814.507,
+        "server_predicted_ms": 689.573,
+        "server_predicted_per_second": 18.85224624514011,
+        "server_prompt_per_second": 71.04456748932431,
+        "completion_tokens_per_client_second": 3.1052105210742877
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "tree"
+      }
+    },
+    {
+      "id": "appearance10",
+      "status": "reply",
+      "seconds": 4.445553,
+      "http_status": 200,
+      "response_bytes": 782,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 272,
+        "completion_tokens": 14,
+        "total_tokens": 286,
+        "server_prompt_ms": 3748.795,
+        "server_predicted_ms": 692.411,
+        "server_predicted_per_second": 18.77497613411688,
+        "server_prompt_per_second": 72.55664820295587,
+        "completion_tokens_per_client_second": 3.1492145071715485
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "bird"
+      }
+    },
+    {
+      "id": "appearance11",
+      "status": "reply",
+      "seconds": 4.548533,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 277,
+        "completion_tokens": 14,
+        "total_tokens": 291,
+        "server_prompt_ms": 3852.488,
+        "server_predicted_ms": 691.68,
+        "server_predicted_per_second": 18.794818413139026,
+        "server_prompt_per_second": 71.90158671487102,
+        "completion_tokens_per_client_second": 3.0779154509816684
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "fish"
+      }
+    },
+    {
+      "id": "appearance12",
+      "status": "reply",
+      "seconds": 4.664815,
+      "http_status": 200,
+      "response_bytes": 785,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 280,
+        "completion_tokens": 15,
+        "total_tokens": 295,
+        "server_prompt_ms": 3915.018,
+        "server_predicted_ms": 745.456,
+        "server_predicted_per_second": 18.780451160095296,
+        "server_prompt_per_second": 71.51946683259183,
+        "completion_tokens_per_client_second": 3.215561603193267
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "id": "mixed01",
+      "status": "reply",
+      "seconds": 4.328166,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 264,
+        "completion_tokens": 14,
+        "total_tokens": 278,
+        "server_prompt_ms": 3632.02,
+        "server_predicted_ms": 691.825,
+        "server_predicted_per_second": 18.79087919632855,
+        "server_prompt_per_second": 72.68682441175984,
+        "completion_tokens_per_client_second": 3.234626398340544
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "id": "mixed02",
+      "status": "reply",
+      "seconds": 4.261229,
+      "http_status": 200,
+      "response_bytes": 775,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 265,
+        "completion_tokens": 12,
+        "total_tokens": 277,
+        "server_prompt_ms": 3666.607,
+        "server_predicted_ms": 590.3,
+        "server_predicted_per_second": 18.634592580044046,
+        "server_prompt_per_second": 72.27390336624569,
+        "completion_tokens_per_client_second": 2.816088973392418
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "mixed03",
+      "status": "reply",
+      "seconds": 4.432429,
+      "http_status": 200,
+      "response_bytes": 785,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 269,
+        "completion_tokens": 14,
+        "total_tokens": 283,
+        "server_prompt_ms": 3732.047,
+        "server_predicted_ms": 695.951,
+        "server_predicted_per_second": 18.679475997591783,
+        "server_prompt_per_second": 72.07840630088529,
+        "completion_tokens_per_client_second": 3.1585390313076647
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sword"
+      }
+    },
+    {
+      "id": "mixed04",
+      "status": "reply",
+      "seconds": 4.519292,
+      "http_status": 200,
+      "response_bytes": 787,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 271,
+        "completion_tokens": 14,
+        "total_tokens": 285,
+        "server_prompt_ms": 3820.634,
+        "server_predicted_ms": 694.184,
+        "server_predicted_per_second": 18.727023382849502,
+        "server_prompt_per_second": 70.93063611955503,
+        "completion_tokens_per_client_second": 3.097830368119608
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "flower"
+      }
+    },
+    {
+      "id": "mixed05",
+      "status": "reply",
+      "seconds": 4.405691,
+      "http_status": 200,
+      "response_bytes": 783,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 266,
+        "completion_tokens": 14,
+        "total_tokens": 280,
+        "server_prompt_ms": 3709.943,
+        "server_predicted_ms": 691.464,
+        "server_predicted_per_second": 18.80068955144447,
+        "server_prompt_per_second": 71.69921478577972,
+        "completion_tokens_per_client_second": 3.1777081052665745
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "bird"
+      }
+    },
+    {
+      "id": "mixed06",
+      "status": "reply",
+      "seconds": 4.328565,
+      "http_status": 200,
+      "response_bytes": 777,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 266,
+        "completion_tokens": 12,
+        "total_tokens": 278,
+        "server_prompt_ms": 3720.575,
+        "server_predicted_ms": 603.66,
+        "server_predicted_per_second": 18.222178047245137,
+        "server_prompt_per_second": 71.49432547388508,
+        "completion_tokens_per_client_second": 2.7722813449722943
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold01",
+      "status": "reply",
+      "seconds": 4.295198,
+      "http_status": 200,
+      "response_bytes": 777,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 268,
+        "completion_tokens": 12,
+        "total_tokens": 280,
+        "server_prompt_ms": 3701.619,
+        "server_predicted_ms": 589.243,
+        "server_predicted_per_second": 18.668019815254485,
+        "server_prompt_per_second": 72.40075221139723,
+        "completion_tokens_per_client_second": 2.7938176540406285
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold02",
+      "status": "reply",
+      "seconds": 4.202657,
+      "http_status": 200,
+      "response_bytes": 765,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 261,
+        "completion_tokens": 12,
+        "total_tokens": 273,
+        "server_prompt_ms": 3612.879,
+        "server_predicted_ms": 585.288,
+        "server_predicted_per_second": 18.79416629078334,
+        "server_prompt_per_second": 72.24155583400385,
+        "completion_tokens_per_client_second": 2.8553365168749196
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold03",
+      "status": "reply",
+      "seconds": 4.34373,
+      "http_status": 200,
+      "response_bytes": 777,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 267,
+        "completion_tokens": 12,
+        "total_tokens": 279,
+        "server_prompt_ms": 3754.751,
+        "server_predicted_ms": 584.499,
+        "server_predicted_per_second": 18.819536047110432,
+        "server_prompt_per_second": 71.10990848660802,
+        "completion_tokens_per_client_second": 2.762602647954638
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold04",
+      "status": "reply",
+      "seconds": 4.371494,
+      "http_status": 200,
+      "response_bytes": 775,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 267,
+        "completion_tokens": 12,
+        "total_tokens": 279,
+        "server_prompt_ms": 3782.521,
+        "server_predicted_ms": 584.63,
+        "server_predicted_per_second": 18.815319090706943,
+        "server_prompt_per_second": 70.58784339862224,
+        "completion_tokens_per_client_second": 2.7450569530691338
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold05",
+      "status": "reply",
+      "seconds": 4.200694,
+      "http_status": 200,
+      "response_bytes": 776,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 261,
+        "completion_tokens": 12,
+        "total_tokens": 273,
+        "server_prompt_ms": 3609.679,
+        "server_predicted_ms": 586.705,
+        "server_predicted_per_second": 18.74877493800121,
+        "server_prompt_per_second": 72.30559836484075,
+        "completion_tokens_per_client_second": 2.8566708262967975
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold06",
+      "status": "reply",
+      "seconds": 4.41993,
+      "http_status": 200,
+      "response_bytes": 781,
+      "json_ok": true,
+      "contract_ok": false,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 270,
+        "completion_tokens": 13,
+        "total_tokens": 283,
+        "server_prompt_ms": 3773.52,
+        "server_predicted_ms": 642.089,
+        "server_predicted_per_second": 18.688997942652808,
+        "server_prompt_per_second": 71.55123068116772,
+        "completion_tokens_per_client_second": 2.941223051043795
+      }
+    },
+    {
+      "id": "hold07",
+      "status": "reply",
+      "seconds": 4.342137,
+      "http_status": 200,
+      "response_bytes": 778,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 272,
+        "completion_tokens": 12,
+        "total_tokens": 284,
+        "server_prompt_ms": 3746.248,
+        "server_predicted_ms": 591.552,
+        "server_predicted_per_second": 18.595153088823974,
+        "server_prompt_per_second": 72.60597803455617,
+        "completion_tokens_per_client_second": 2.763616164114582
+      },
+      "parsed_contract": {
+        "action": "hold",
+        "shape": null
+      }
+    },
+    {
+      "id": "hold08",
+      "status": "reply",
+      "seconds": 4.356118,
+      "http_status": 200,
+      "response_bytes": 785,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 262,
+        "completion_tokens": 14,
+        "total_tokens": 276,
+        "server_prompt_ms": 3657.551,
+        "server_predicted_ms": 694.215,
+        "server_predicted_per_second": 18.72618713222849,
+        "server_prompt_per_second": 71.6326306864894,
+        "completion_tokens_per_client_second": 3.2138706986358034
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "id": "hold09",
+      "status": "reply",
+      "seconds": 4.220785,
+      "http_status": 200,
+      "response_bytes": 777,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 256,
+        "completion_tokens": 14,
+        "total_tokens": 270,
+        "server_prompt_ms": 3510.464,
+        "server_predicted_ms": 705.959,
+        "server_predicted_per_second": 18.414667140726305,
+        "server_prompt_per_second": 72.92483272866492,
+        "completion_tokens_per_client_second": 3.316918535296159
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "id": "hold10",
+      "status": "reply",
+      "seconds": 4.571148,
+      "http_status": 200,
+      "response_bytes": 781,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 271,
+        "completion_tokens": 15,
+        "total_tokens": 286,
+        "server_prompt_ms": 3823.13,
+        "server_predicted_ms": 743.733,
+        "server_predicted_per_second": 18.823959673700106,
+        "server_prompt_per_second": 70.884327762854,
+        "completion_tokens_per_client_second": 3.2814513990796184
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "vase"
+      }
+    },
+    {
+      "id": "hold11",
+      "status": "reply",
+      "seconds": 4.293181,
+      "http_status": 200,
+      "response_bytes": 785,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 258,
+        "completion_tokens": 14,
+        "total_tokens": 272,
+        "server_prompt_ms": 3598.695,
+        "server_predicted_ms": 690.233,
+        "server_predicted_per_second": 18.834219748983315,
+        "server_prompt_per_second": 71.69265525419631,
+        "completion_tokens_per_client_second": 3.2609852694307557
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "sphere"
+      }
+    },
+    {
+      "id": "hold12",
+      "status": "reply",
+      "seconds": 4.302239,
+      "http_status": 200,
+      "response_bytes": 787,
+      "json_ok": true,
+      "contract_ok": true,
+      "finish_reason": "stop",
+      "metrics": {
+        "prompt_tokens": 258,
+        "completion_tokens": 14,
+        "total_tokens": 272,
+        "server_prompt_ms": 3605.374,
+        "server_predicted_ms": 692.524,
+        "server_predicted_per_second": 18.771912597974943,
+        "server_prompt_per_second": 71.55984372217696,
+        "completion_tokens_per_client_second": 3.2541195410110872
+      },
+      "parsed_contract": {
+        "action": "propose",
+        "shape": "flower"
+      }
+    }
+  ],
+  "status": "completed",
+  "startup_seconds": 1.596897,
+  "failure_type": null,
+  "hardware_note": "Caller must record host separately; not proof of a 16GB laptop or whole widget",
+  "rss_note": "Owned server RSS only, ps samples every 250ms, sampled peak may miss brief peaks; driver, OS and UI excluded",
+  "model_file_sha256": "284a335aa3fb2ced3b1b01fcb40b08aa783e3b70832767f0dd2e3fdfa134bd54",
+  "runtime_binary_sha256": "6a072f8bf308ea28144476441d25760ee01b84ed102f86be4662d21ace8d72a6",
+  "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "driver_sha256": "d1dbbca277ae895ce8f2ed7441b589455a14e503bc2ed29672b6eb3d9596dcc7",
+  "preflight_hash_seconds": 0.405516,
+  "startup_cache_note": "Input files are hashed before startup; startup is not a controlled cold file-cache measurement",
+  "shutdown": {
+    "method": "owned_sigterm",
+    "exit_code": 0
+  },
+  "elapsed_seconds_including_shutdown": 162.159054,
+  "rss_samples": 628,
+  "valid_rss_samples": 628,
+  "peak_server_rss_bytes_sampled": 2623995904,
+  "last_server_rss_bytes_sampled": 2623995904,
+  "unattempted_case_ids": []
+}

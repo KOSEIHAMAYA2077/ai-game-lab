@@ -1,0 +1,31 @@
+{
+  "version": "shape-only-evaluation-freeze-r1",
+  "created_utc": "2026-10-03T05:25:12.496217+00:00",
+  "candidate_sha256_before_publication": {
+    "prompt": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+    "schema": "ddd0c0b0496f2ffc3a62cf1e0664663c34c8ad5ebf4c2dd3b81ded7f4bfd0da7",
+    "driver": "d1dbbca277ae895ce8f2ed7441b589455a14e503bc2ed29672b6eb3d9596dcc7"
+  },
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "private_draft_matches_public": true,
+  "case_count": 36,
+  "groups": {
+    "named": 6,
+    "appearance": 12,
+    "mixed": 6,
+    "hold": 12
+  },
+  "positive_count": 24,
+  "hold_count": 12,
+  "positive_shape_count": 12,
+  "positive_per_shape": 2,
+  "r1_fixture_body_read": false,
+  "r1_quality_read": false,
+  "model_calls_before_freeze": 0,
+  "consultation_examples_excluded": [
+    "球体にして",
+    "球体にはしないで、形はそのまま"
+  ],
+  "scope": "shape and action only; color/count/motion attribute extraction is not scored, explicit unsupported count requires hold",
+  "not_claimed": "Independent broad Japanese understanding or end-to-end 3D generation. R2 models are chosen using R1 diagnosis by root, not by this fixture."
+}

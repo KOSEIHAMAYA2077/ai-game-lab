@@ -1,0 +1,62 @@
+{
+  "version": "primary-source-notes-r1",
+  "read_date_jst": "2026-10-03",
+  "scope": "Selected relevant source lines, not every file body; remote prism/main branches move and build commit not resolved",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/prism/docs/build.md",
+      "range": "CPU/macOS Metal/x86 variants",
+      "observation": "CPU CMake build, GGML_METAL=OFF, native instruction set and backend distribution notes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/prism/ggml/CMakeLists.txt",
+      "range": "lines85-99,112-176,181-250",
+      "observation": "APPLE Metal/BLAS defaults, native setting, CPU/backend toggles, OpenMP fetch"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/prism/CMakeLists.txt",
+      "range": "lines46-72,117-134,185-228",
+      "observation": "System GGML/shared options, common/tools/server/UI, optional external dependencies"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/prism/tools/CMakeLists.txt",
+      "range": "full 44 lines",
+      "observation": "Tools gate and server subdirectory route"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/prism/tools/server/CMakeLists.txt",
+      "range": "full60 lines",
+      "observation": "llama-server target links server implementation/context"
+    },
+    {
+      "url": "https://developer.apple.com/library/archive/documentation/Performance/Conceptual/EnergyGuide-iOS/MinimizeTimerUse.html",
+      "range": "event synchronization and timer economy",
+      "observation": "Prefer notifications/dispatch completion to useless polling; stop timers when unnecessary. Not measured power of this app."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/mach/task_info.h",
+      "range": "task_vm_info lines326-386",
+      "observation": "resident, resident peak, compressed and phys_footprint are distinct fields"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes",
+      "range": "lpKernelTime/lpUserTime and remarks",
+      "observation": "Thread cumulative CPU sums may exceed wall time; FILETIME100ns units"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex",
+      "range": "Members",
+      "observation": "WorkingSet, PeakWorkingSet and private commit are different statistics"
+    }
+  ],
+  "failed_source_reads": [
+    {
+      "url": "https://api.github.com/repos/PrismML-Eng/llama.cpp/commits/prism",
+      "status": "not accessible via web tool; no fixed commit obtained"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apple-oss-distributions/system_cmds/main/ps/ps.c",
+      "status": "fetch inaccessible; not used as source"
+    }
+  ]
+}

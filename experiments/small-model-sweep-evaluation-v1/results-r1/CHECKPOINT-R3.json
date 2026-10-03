@@ -1,0 +1,934 @@
+{
+  "version": "saved-run-evaluation-checkpoint-r1",
+  "created_at_utc": "2026-10-03T05:32:09.760116+00:00",
+  "model_calls_by_reviewer": 0,
+  "evaluation_freeze_sha256": "e56f916e8fc55d2571e13462dbe928dbc88b6388621bbcf7d465554d904c2cbe",
+  "finalized_runs_scored": 21,
+  "runs": [
+    {
+      "label": "bitnet-2b-i2s-cpu-r1",
+      "runtime_status": "startup_failed",
+      "interpretation": "no_semantic_reply_startup_or_runtime_failure",
+      "strict_schema": 0,
+      "exact": 0,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 0,
+      "unattempted": 24,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 0,
+        "median_seconds": null,
+        "p95_nearest_rank_seconds": null,
+        "max_seconds": null
+      },
+      "startup_seconds": null,
+      "sampled_server_rss_bytes": 917504,
+      "score_sha256": "170da9ae7adbc29bd49f0edea8bedf9a47e80c27c634ef10beaaad20723f4fa8",
+      "context_sha256": "0b8c3a199b00ac01759db5cb72a4dedab800ef6ce84731be2c2a5429b348d753"
+    },
+    {
+      "label": "bonsai-1.7b-q1-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 23,
+      "exact": 3,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 5,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 5,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.4152255,
+        "p95_nearest_rank_seconds": 1.480561,
+        "max_seconds": 1.542097
+      },
+      "startup_seconds": 0.761846,
+      "sampled_server_rss_bytes": 859652096,
+      "score_sha256": "b5e47f563ebdc47ee5210f1c5d375dc863fa00ece153e568117b6393882f6974",
+      "context_sha256": "8ad24aa2ac235a4fed7f569faa3a720c343f56de82c1ce9f3e5bb3f969abd3fc"
+    },
+    {
+      "label": "bonsai-4b-q1-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 17,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 4
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 4
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 6
+        }
+      },
+      "false_propose_valid_schema": 2,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 3.3132875000000004,
+        "p95_nearest_rank_seconds": 3.432362,
+        "max_seconds": 3.473627
+      },
+      "startup_seconds": 1.04475,
+      "sampled_server_rss_bytes": 1570422784,
+      "score_sha256": "8e1e5af0bff4f3be9ba9c24eeb722fac2ebbe8a2071364d510fac8e023f29f7c",
+      "context_sha256": "cfedd9a0f3f5543e53e87a86f27fdb9ba7ff7a4c740a63b36e64e92be3c5513f"
+    },
+    {
+      "label": "bonsai-8b-q1-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 20,
+      "exact": 6,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 6
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 5,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 3,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 3,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 5.9855915,
+        "p95_nearest_rank_seconds": 6.196813,
+        "max_seconds": 6.422725
+      },
+      "startup_seconds": 1.75763,
+      "sampled_server_rss_bytes": 2623291392,
+      "score_sha256": "a125bea89b493abf2348a2595edd5198d05a58553944d04931e97443c6dec110",
+      "context_sha256": "35cffd204d7f0aab49a51e05446902690ff3282a16dd52566287356baa41d31f"
+    },
+    {
+      "label": "granite3.1-1b-moe-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 23,
+      "exact": 2,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 2
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 5,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 5,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.7568575,
+        "p95_nearest_rank_seconds": 0.793473,
+        "max_seconds": 0.794776
+      },
+      "startup_seconds": 0.594123,
+      "sampled_server_rss_bytes": 1814102016,
+      "score_sha256": "a26908c63d319f5fcc5f0e849a9e791b1f71fcb57b851c6dd1a486c3d8b36c1d",
+      "context_sha256": "3b1bdb24645ec864b2b2268323ae3146ccede6feba235cbababf318c7bb862c2"
+    },
+    {
+      "label": "granite4-1b-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 14,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 6
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 1
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 1
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 6
+        }
+      },
+      "false_propose_valid_schema": 5,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.808416,
+        "p95_nearest_rank_seconds": 2.403649,
+        "max_seconds": 2.627668
+      },
+      "startup_seconds": 0.882708,
+      "sampled_server_rss_bytes": 2355085312,
+      "score_sha256": "13388e802fdd56c46e45055bb834769acb7417d8412350efd3dcab6cff0cdc03",
+      "context_sha256": "da3e1ea7b1472250b4ebc6bfa614405708f1892a0cc06c74c9ce47c8bf53514b"
+    },
+    {
+      "label": "lfm2-350m-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 18,
+      "exact": 0,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 3,
+          "exact": 0
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 3,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 3,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.3982345,
+        "p95_nearest_rank_seconds": 0.417547,
+        "max_seconds": 0.427204
+      },
+      "startup_seconds": 0.320039,
+      "sampled_server_rss_bytes": 614301696,
+      "score_sha256": "1c1f94ebc3a8d7c254e5d7d6e2634c83a67ed915ebfbad3ea3755a9ef914f876",
+      "context_sha256": "8bc8b836ebd7edb164f40b3e2b5e6c02bb720f491d2d96cb54c15b6b7e69cfc5"
+    },
+    {
+      "label": "lfm2-700m-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 11,
+      "exact": 0,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 1,
+          "exact": 0
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 4,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 0,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.7900845000000001,
+        "p95_nearest_rank_seconds": 0.824668,
+        "max_seconds": 0.830702
+      },
+      "startup_seconds": 0.451819,
+      "sampled_server_rss_bytes": 1094959104,
+      "score_sha256": "b96720e628b5c09bb9749ec6efd38d6e96725248bc6aa61f9c604a87a5b10b74",
+      "context_sha256": "6e3425e01d20468d6a70ecd65c18e0bc2aeba372294fd79a6482af6636bf6a2a"
+    },
+    {
+      "label": "lfm2.5-1.2b-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 5,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 2
+        }
+      },
+      "false_propose_valid_schema": 6,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.151117,
+        "p95_nearest_rank_seconds": 1.189889,
+        "max_seconds": 1.191459
+      },
+      "startup_seconds": 0.605819,
+      "sampled_server_rss_bytes": 1616576512,
+      "score_sha256": "28ecc989106dc4750b8b4555a0d341df5bfca69cfa311752b481845b2b6225f7",
+      "context_sha256": "9910cb70dbe7a4f4b89f5ebe215c9737d17cbfeb3d49cba32f167dd0427984a4"
+    },
+    {
+      "label": "lfm2.5-1.2b-qad-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 3,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 6,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.9166945,
+        "p95_nearest_rank_seconds": 0.946686,
+        "max_seconds": 0.968784
+      },
+      "startup_seconds": 0.3222,
+      "sampled_server_rss_bytes": 1543438336,
+      "score_sha256": "869bd1bcc116923a01397a529d0c69d63777ec441b87aefd9c2bc28700edf8ab",
+      "context_sha256": "6119508998464f818652f40d2a988bc2ae40fbf02d77bfe02ae3fdf095def58c"
+    },
+    {
+      "label": "qwen2.5-0.5b-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 5,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 2
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        }
+      },
+      "false_propose_valid_schema": 6,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.5693280000000001,
+        "p95_nearest_rank_seconds": 0.579818,
+        "max_seconds": 0.614201
+      },
+      "startup_seconds": 0.463471,
+      "sampled_server_rss_bytes": 787103744,
+      "score_sha256": "818a5db1790e46cbb04a7bb935d2f283b154ebecb165cf4ec331193e10dcbb51",
+      "context_sha256": "1417a49f6be75a388ca43675011fe5a1684edde68201fa0970ff8ff05d23e0be"
+    },
+    {
+      "label": "qwen2.5-1.5b-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 21,
+      "exact": 5,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 5
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 3,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 3,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.5566339999999999,
+        "p95_nearest_rank_seconds": 1.610012,
+        "max_seconds": 1.66336
+      },
+      "startup_seconds": 0.886016,
+      "sampled_server_rss_bytes": 2147696640,
+      "score_sha256": "0f3266c8d80195aba9177fe9613d52d36e10fbdde3dbeaefb096c2b2a34d2fd4",
+      "context_sha256": "dea9d5c8745edff7c1cfc41f5408c45ab4b565903e75bb58359671bfea05407d"
+    },
+    {
+      "label": "qwen3-0.6b-q8-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 23,
+      "exact": 6,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 5,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        }
+      },
+      "false_propose_valid_schema": 5,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.6866515,
+        "p95_nearest_rank_seconds": 0.725122,
+        "max_seconds": 0.726038
+      },
+      "startup_seconds": 0.734222,
+      "sampled_server_rss_bytes": 1680179200,
+      "score_sha256": "c3056a00186adcf242a961a742af04cf28f35dc851bd1fdd82813145604ab341",
+      "context_sha256": "4e46d330c8066c4d48c40d9bc79d50ff94a937ecce257173c9576d9ed2e30ecc"
+    },
+    {
+      "label": "qwen3.5-0.8b-q4-0-baseline-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 13,
+      "exact": 1,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 4,
+          "exact": 0
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 2,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 3,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 4,
+          "exact": 1
+        }
+      },
+      "false_propose_valid_schema": 3,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.7444805,
+        "p95_nearest_rank_seconds": 0.807734,
+        "max_seconds": 0.812708
+      },
+      "startup_seconds": 0.612849,
+      "sampled_server_rss_bytes": 1443086336,
+      "score_sha256": "12f8b5299da3a4c64fe63996d56ba6dddd594cd10b7e9cd31f0b06e9127162aa",
+      "context_sha256": "36307e3b213640f878fc6013f7baf1891f898bc1a4fdb4b6fd1c21754216f06f"
+    },
+    {
+      "label": "qwen3.5-0.8b-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 5,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 1
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 4
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 2,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.945395,
+        "p95_nearest_rank_seconds": 1.00158,
+        "max_seconds": 1.098218
+      },
+      "startup_seconds": 0.747706,
+      "sampled_server_rss_bytes": 1380417536,
+      "score_sha256": "ea58e4f85d3d595f9351e629d3555d85871ef17eeed0696f87173b7167442099",
+      "context_sha256": "dcc70ead08180048a02ce5af3ae8eae7f920f01ae1e5443299ad940fd81412c1"
+    },
+    {
+      "label": "qwen3.5-2b-q4-baseline-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 9,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 2
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 5
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 2
+        }
+      },
+      "false_propose_valid_schema": 1,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.944391,
+        "p95_nearest_rank_seconds": 2.06887,
+        "max_seconds": 2.085075
+      },
+      "startup_seconds": 1.160964,
+      "sampled_server_rss_bytes": 2877800448,
+      "score_sha256": "e534187f109ffdf92dc15ee88cfdaf912710039b3224588cd0cbdea04700ead1",
+      "context_sha256": "9195667c1109d5f9ab943409dec4fbc70e0d6c212ba9612e70c7ff47f2873453"
+    },
+    {
+      "label": "smollm2-1.7b-q4-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 23,
+      "exact": 3,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 5,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 5,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.920141,
+        "p95_nearest_rank_seconds": 2.030221,
+        "max_seconds": 2.132567
+      },
+      "startup_seconds": 0.885336,
+      "sampled_server_rss_bytes": 2646851584,
+      "score_sha256": "d50b93dfd8ec4292eca8292ffbdd866ed14e6e8d77fcaa586a2f277fa52232a4",
+      "context_sha256": "327a9235b95322386227b279e53a75dc5ba57e4770b3b96bd547ca83db60ba9b"
+    },
+    {
+      "label": "smollm2-360m-q8-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 1,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 1
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 6,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 0.4736585,
+        "p95_nearest_rank_seconds": 0.500018,
+        "max_seconds": 0.504555
+      },
+      "startup_seconds": 0.317588,
+      "sampled_server_rss_bytes": 981696512,
+      "score_sha256": "f3ee2f63c7451cb6e0860a7defefb7bd56d1baa2e6d4e66a02f9e535badeb503",
+      "context_sha256": "a5a536d01298b1bde4a8b1003b4bc48c5c02e50665f96504636ddc54498b9f90"
+    },
+    {
+      "label": "ternary-bonsai-1.7b-g64-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 3,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 2
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 1
+        }
+      },
+      "false_propose_valid_schema": 6,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.7995765,
+        "p95_nearest_rank_seconds": 1.878573,
+        "max_seconds": 2.153197
+      },
+      "startup_seconds": 0.478029,
+      "sampled_server_rss_bytes": 974749696,
+      "score_sha256": "454c80ba901818c82e9030a84d64c02978e7acfc554b1e10a7dec08074fdaa79",
+      "context_sha256": "5fcec369e6cb30b48060a094bdd9a6754f40104f5de21740a82d385926c8dddb"
+    },
+    {
+      "label": "ternary-bonsai-1.7b-pq2-g128-cpu-r1",
+      "runtime_status": "startup_failed",
+      "interpretation": "no_semantic_reply_startup_or_runtime_failure",
+      "strict_schema": 0,
+      "exact": 0,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 0,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 0,
+      "unattempted": 24,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 0,
+        "median_seconds": null,
+        "p95_nearest_rank_seconds": null,
+        "max_seconds": null
+      },
+      "startup_seconds": null,
+      "sampled_server_rss_bytes": 950272,
+      "score_sha256": "170da9ae7adbc29bd49f0edea8bedf9a47e80c27c634ef10beaaad20723f4fa8",
+      "context_sha256": "5c0592ed419cacb5c805489c030fba8e07ad89ae12ed42c12da4b0a6702d0dce"
+    },
+    {
+      "label": "ternary-bonsai-pq2-prism-cpu-r2",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 4,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 1
+        }
+      },
+      "false_propose_valid_schema": 6,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 4.57386,
+        "p95_nearest_rank_seconds": 4.742473,
+        "max_seconds": 4.759889
+      },
+      "startup_seconds": 12.348825,
+      "sampled_server_rss_bytes": 913375232,
+      "score_sha256": "e519f48e1e588327807d6f67d3c07e75924d30b04bf7ac353a945804cff249a5",
+      "context_sha256": "e83a5c536059953ef6fe1fb9f47cd71561d380e0a18bba827564b7c6a1d7bb9f"
+    }
+  ],
+  "deferred": []
+}

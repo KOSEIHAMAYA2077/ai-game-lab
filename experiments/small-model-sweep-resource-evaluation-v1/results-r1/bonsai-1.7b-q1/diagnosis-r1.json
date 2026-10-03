@@ -1,0 +1,96 @@
+{
+  "version": "seen36-resource-regression-r1",
+  "model_id": "bonsai-1.7b-q1",
+  "label": "bonsai-1.7b-q1-resources-r1",
+  "runtime_status": "completed",
+  "shutdown": {
+    "method": "owned_sigterm",
+    "exit_code": 0
+  },
+  "count": 36,
+  "exact_before": 16,
+  "exact_after": 16,
+  "contract_ok_before": 36,
+  "contract_ok_after": 36,
+  "positive_exact_before": 16,
+  "positive_exact_after": 16,
+  "hold_exact_before": 0,
+  "hold_exact_after": 0,
+  "false_proposals_before": 12,
+  "false_proposals_after": 12,
+  "statuses_after": {
+    "semantic_mismatch": 20,
+    "exact": 16
+  },
+  "input_integrity_ok": true,
+  "lost_exact_case_ids": [],
+  "gained_exact_case_ids": [],
+  "changed_case_predictions": [
+    {
+      "case_id": "appearance12",
+      "group": "appearance",
+      "before_status": "semantic_mismatch",
+      "after_status": "semantic_mismatch",
+      "before_prediction": {
+        "action": "propose",
+        "shape": "fish"
+      },
+      "after_prediction": {
+        "action": "propose",
+        "shape": "jellyfish"
+      }
+    }
+  ],
+  "resource_parameters_before": {
+    "context": 2048,
+    "batch": 256,
+    "ubatch": 128,
+    "max_output": 256
+  },
+  "resource_parameters_after": {
+    "context": 1024,
+    "batch": 64,
+    "ubatch": 32,
+    "max_output": 128
+  },
+  "model_file_bytes": 248302272,
+  "server_rss_peak_bytes_before_sampled": 859144192,
+  "server_rss_peak_bytes_after_sampled": 731742208,
+  "query_seconds_median_before": 1.00507,
+  "query_seconds_median_after": 1.070112,
+  "query_seconds_max_after": 1.1655,
+  "reply_count_after": 36,
+  "startup_seconds_after_prehash": 0.593034,
+  "idle_independent_check": {
+    "status": "not_measured",
+    "scope": "No idle run for this candidate"
+  },
+  "paired_identity_checks": {
+    "model_file_sha256": true,
+    "runtime_binary_sha256": true,
+    "prompt_sha256": true,
+    "fixture_sha256": true,
+    "temperature": true,
+    "seed": true,
+    "threads": true,
+    "threads_batch": true,
+    "prompt_cache": true,
+    "stream": true,
+    "backend": true,
+    "baseline_summary_unchanged": true,
+    "baseline_score_source_pins": true
+  },
+  "inputs_unchanged_after_score": true,
+  "fixture_sha256": "f47ab6eaaba1ebb498cb0e537a36ccd5cb83f80a241238e2656ba0bc6a57f54b",
+  "scorer_sha256": "43e5dec3f5ac9721d2c727aaa8f2ea3d3de2c1dfbb41cc2205c4f8daa0ba09fa",
+  "prompt_sha256": "0fdab64e6085dce23af280feaee733dc4581f973e8cad4164a0a3244a9e01501",
+  "driver_sha256": "f6a7d89e42ca124bb590cacff0ca22dc6b0d8a6fa9d6707e9804795618ca4714",
+  "baseline_summary_sha256": "41e5e70dc6fcb7d244aad806a6d7ca2a84ee86fe98ccfde635099f3332bf9840",
+  "baseline_score_sha256": "1b0a022a8f782a5d67646c07b1c15bd2350461a537946314e6486bb3dea13667",
+  "score_sha256": "513c6962032a794d138f17222bec8032724d71d0ab37b29c6f1e13e35451fa4e",
+  "summary_sha256": "454960cd2bca48881435bb91e3524e2935869ababca7867a48677ae41f359028",
+  "responses_sha256": "bd8dc6878d1d6370e433ee6d9ca4ee0ed06852b1e2778e4f62c4804dbc5f0531",
+  "rss_samples_sha256": "58ec543112c6887751a6b98527c21d48f093940f49d6b780daa12018c8a6f4dc",
+  "scope": "Same already-seen36 shape/action cases; resource regression diagnosis only, not fresh/generalization or whole-widget adoption",
+  "reviewer_model_or_server_calls": 0
+}

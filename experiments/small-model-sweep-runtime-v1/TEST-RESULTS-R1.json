@@ -1,0 +1,45 @@
+{
+  "version": "small-model-sweep-runtime-test-r2",
+  "actual_models_loaded": 0,
+  "model_downloads": 0,
+  "fixture_body_read_by_author": false,
+  "final_tests": 19,
+  "passed": 19,
+  "failed": 0,
+  "test_command": "python3 -m unittest test_r1 test_lifecycle_r1 -v",
+  "limitations": [
+    "Synthetic HTTP transport and owned fake process only; no actual model performance or quality",
+    "Loopback bind/ps require permitted runtime environment; first sandbox attempt could not start transport"
+  ],
+  "retained_failure": {
+    "source": "run_r1.py",
+    "source_sha256": "8094bc290b84058c6f87ecc33f6519ea98424f3db40ccecdd87ae24bbd9b6e98",
+    "final_r1_test_count": 19,
+    "final_r1_passed": 18,
+    "final_r1_errors": 1,
+    "error": "AttributeError in HTTPResponse close during watchdog/response.read1 concurrent close",
+    "r2_change": "watchdog only socket.shutdown; request thread closes connection in finally"
+  },
+  "files": [
+    {
+      "path": "fake_server_r1.py",
+      "sha256": "c779bc29e6e605a57a581a08e0355053674e4a2708fa337e8481060893a96c7d"
+    },
+    {
+      "path": "run_r1.py",
+      "sha256": "8094bc290b84058c6f87ecc33f6519ea98424f3db40ccecdd87ae24bbd9b6e98"
+    },
+    {
+      "path": "run_r2.py",
+      "sha256": "2c40006c9c302f81f70df68bd2ed0d5b123b9fc3f1aeb34f888cc5d3e570d2fd"
+    },
+    {
+      "path": "test_lifecycle_r1.py",
+      "sha256": "958f10c97de1ab31065ff08e9bf4678a55df0dc89cebbcbae295c3a8bb414506"
+    },
+    {
+      "path": "test_r1.py",
+      "sha256": "06ea262ab6fa26c7e3e1a2ef6074a1b0a49973a2ef7393d8f33efa676ab6921d"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "observed_at_utc": "2026-10-03T05:01:50.789155+00:00",
+  "method": "Read source only; presence of registry/type does not prove complete backend support or successful model load",
+  "sources": [
+    {
+      "repo": "ggml-org/llama.cpp",
+      "branch": "master",
+      "revision": "99b95488cac0f00ce3f05af113a8c1e287753f87",
+      "path": "ggml/include/ggml.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/99b95488cac0f00ce3f05af113a8c1e287753f87/ggml/include/ggml.h",
+      "bytes": 116144,
+      "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9",
+      "markers_and_line_numbers": {
+        "GGML_TYPE_Q1_0": [
+          431
+        ],
+        "GGML_TYPE_Q2_0": [
+          432
+        ]
+      }
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "branch": "master",
+      "revision": "99b95488cac0f00ce3f05af113a8c1e287753f87",
+      "path": "ggml/src/ggml-common.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/99b95488cac0f00ce3f05af113a8c1e287753f87/ggml/src/ggml-common.h",
+      "bytes": 135161,
+      "sha256": "0061131b615c5721fc88a78feeb22c1f8c450f1c2646a317d80796a653bf595c",
+      "markers_and_line_numbers": {
+        "QK1_0": [
+          96,
+          180,
+          183,
+          185
+        ],
+        "QK2_0": [
+          99,
+          187,
+          190,
+          192
+        ]
+      }
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "branch": "master",
+      "revision": "99b95488cac0f00ce3f05af113a8c1e287753f87",
+      "path": "src/llama-arch.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/99b95488cac0f00ce3f05af113a8c1e287753f87/src/llama-arch.cpp",
+      "bytes": 87161,
+      "sha256": "804b98ace992d3df3fbee1f399032230e8040be35089ef23a4b204abec8e31fa",
+      "markers_and_line_numbers": {
+        "qwen35": [
+          41,
+          42
+        ],
+        "lfm2": [
+          129,
+          130
+        ],
+        "granite": [
+          104,
+          105,
+          106,
+          107,
+          108
+        ],
+        "bitnet": [
+          89
+        ]
+      }
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "branch": "master",
+      "revision": "99b95488cac0f00ce3f05af113a8c1e287753f87",
+      "path": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/99b95488cac0f00ce3f05af113a8c1e287753f87/ggml/src/ggml-cpu/ggml-cpu.c",
+      "bytes": 132400,
+      "sha256": "94e4c599aa8e6a0e047b1e4a40830cd5b54a5e0bc773acaccd3be2d4702caf39",
+      "markers_and_line_numbers": {
+        "GGML_TYPE_Q1_0": [
+          228
+        ],
+        "GGML_TYPE_Q2_0": [
+          234
+        ],
+        "quantize_row_q1_0": [
+          229
+        ],
+        "quantize_row_q2_0": [
+          235
+        ]
+      }
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "branch": "master",
+      "revision": "99b95488cac0f00ce3f05af113a8c1e287753f87",
+      "path": "ggml/src/ggml-cpu/vec.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/99b95488cac0f00ce3f05af113a8c1e287753f87/ggml/src/ggml-cpu/vec.cpp",
+      "bytes": 25373,
+      "sha256": "31e43ec66a1e2920a549dd2f71e6ce474e68f2fc298c4d2942404ca327e763d1",
+      "markers_and_line_numbers": {}
+    },
+    {
+      "repo": "PrismML-Eng/llama.cpp",
+      "branch": "prism",
+      "revision": "2459f68b5c0eb26261fd5a81682004b93cd645ba",
+      "path": "ggml/include/ggml.h",
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/2459f68b5c0eb26261fd5a81682004b93cd645ba/ggml/include/ggml.h",
+      "bytes": 114514,
+      "sha256": "9a865c28b0fea8d0adaa3218ac3514bfcef3eb2f35f8e7c67bc7fac90586f5e6",
+      "markers_and_line_numbers": {
+        "GGML_TYPE_Q1_0": [
+          431
+        ],
+        "GGML_TYPE_Q2_0": [
+          432
+        ],
+        "GGML_TYPE_PQ2_0": [
+          435
+        ]
+      }
+    },
+    {
+      "repo": "PrismML-Eng/llama.cpp",
+      "branch": "prism",
+      "revision": "2459f68b5c0eb26261fd5a81682004b93cd645ba",
+      "path": "ggml/src/ggml-common.h",
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/2459f68b5c0eb26261fd5a81682004b93cd645ba/ggml/src/ggml-common.h",
+      "bytes": 136535,
+      "sha256": "96539c9bd8e4544692bf242951180edaa2fd5775864fbc3e833f44111b96b934",
+      "markers_and_line_numbers": {
+        "QK1_0": [
+          96,
+          185,
+          188,
+          190
+        ],
+        "QK2_0": [
+          99,
+          192,
+          195,
+          197
+        ]
+      }
+    },
+    {
+      "repo": "PrismML-Eng/llama.cpp",
+      "branch": "prism",
+      "revision": "2459f68b5c0eb26261fd5a81682004b93cd645ba",
+      "path": "src/llama-arch.cpp",
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/2459f68b5c0eb26261fd5a81682004b93cd645ba/src/llama-arch.cpp",
+      "bytes": 87417,
+      "sha256": "956abb337a1f38deb654e6ff2246894091a2bb5714db505ea21e989f7400cac2",
+      "markers_and_line_numbers": {
+        "qwen35": [
+          41,
+          42
+        ],
+        "lfm2": [
+          126,
+          127
+        ],
+        "granite": [
+          102,
+          103,
+          104,
+          105,
+          106
+        ],
+        "bitnet": [
+          87
+        ]
+      }
+    },
+    {
+      "repo": "PrismML-Eng/llama.cpp",
+      "branch": "prism",
+      "revision": "2459f68b5c0eb26261fd5a81682004b93cd645ba",
+      "path": "ggml/src/ggml-cpu/ggml-cpu.c",
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/2459f68b5c0eb26261fd5a81682004b93cd645ba/ggml/src/ggml-cpu/ggml-cpu.c",
+      "bytes": 132665,
+      "sha256": "19b5bd6f4a2e360312c9d3e2aa4204115712b7a5f54d4b990554fbd1cc18cded",
+      "markers_and_line_numbers": {
+        "GGML_TYPE_Q1_0": [
+          228
+        ],
+        "GGML_TYPE_Q2_0": [
+          234
+        ],
+        "GGML_TYPE_PQ2_0": [
+          240,
+          1187
+        ],
+        "quantize_row_q1_0": [
+          229
+        ],
+        "quantize_row_q2_0": [
+          235
+        ]
+      }
+    },
+    {
+      "repo": "PrismML-Eng/llama.cpp",
+      "branch": "prism",
+      "revision": "2459f68b5c0eb26261fd5a81682004b93cd645ba",
+      "path": "ggml/src/ggml-cpu/vec.cpp",
+      "url": "https://raw.githubusercontent.com/PrismML-Eng/llama.cpp/2459f68b5c0eb26261fd5a81682004b93cd645ba/ggml/src/ggml-cpu/vec.cpp",
+      "bytes": 25309,
+      "sha256": "cda0babb53f9c8ff1faa7459b2c49019d15e5970dfe0c613d58e2659e919f524",
+      "markers_and_line_numbers": {}
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "source_commit": "0b341e582afbf9e1011f24744b554c96a3477eb5",
+  "submodule_commit": "390c307752ab78fd8189f359d6954c9ba1be74af",
+  "cmake": "4.4.4",
+  "compiler": "AppleClang21 arm64",
+  "options": [
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_OSX_ARCHITECTURES=arm64",
+    "-DBITNET_ARM_TL1=OFF",
+    "-DBITNET_X86_TL2=OFF",
+    "-DGGML_METAL=OFF",
+    "-DGGML_BLAS=OFF",
+    "-DGGML_CPU_KLEIDIAI=OFF",
+    "-DGGML_OPENMP=OFF",
+    "-DLLAMA_OPENSSL=OFF",
+    "-DLLAMA_BUILD_UI=OFF",
+    "-DLLAMA_USE_PREBUILT_UI=OFF",
+    "-DLLAMA_LLGUIDANCE=OFF",
+    "-DLLAMA_BUILD_COMMON=ON",
+    "-DLLAMA_BUILD_TOOLS=ON",
+    "-DLLAMA_BUILD_SERVER=ON",
+    "-DLLAMA_BUILD_TESTS=OFF",
+    "-DLLAMA_BUILD_APP=OFF",
+    "-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON",
+    "-DGIT_EXECUTABLE:FILEPATH="
+  ],
+  "parallel": 2,
+  "targets": [
+    "llama-server",
+    "llama-cli"
+  ],
+  "start_utc": "2026-10-03T05:31:31.926431+00:00",
+  "note": "Sources from fixed archives. Disable Git discovery to avoid recording surrounding Glyph Matter commit as BitNet version; binary may report unknown, source pins remain recorded. No OS installation, setup_env.py, model conversion, Torch, or UI download.",
+  "configure_exit": 0,
+  "build_exit": 2,
+  "end_utc": "2026-10-03T05:31:40.850461+00:00"
+}

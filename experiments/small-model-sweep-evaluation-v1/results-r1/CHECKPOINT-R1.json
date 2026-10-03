@@ -1,0 +1,103 @@
+{
+  "version": "saved-run-evaluation-checkpoint-r1",
+  "created_at_utc": "2026-10-03T05:15:30.875846+00:00",
+  "model_calls_by_reviewer": 0,
+  "evaluation_freeze_sha256": "e56f916e8fc55d2571e13462dbe928dbc88b6388621bbcf7d465554d904c2cbe",
+  "finalized_runs_scored": 2,
+  "runs": [
+    {
+      "label": "bonsai-1.7b-q1-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 23,
+      "exact": 3,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 5,
+          "exact": 0
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 0
+        }
+      },
+      "false_propose_valid_schema": 5,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 1.4152255,
+        "p95_nearest_rank_seconds": 1.480561,
+        "max_seconds": 1.542097
+      },
+      "startup_seconds": 0.761846,
+      "sampled_server_rss_bytes": 859652096,
+      "score_sha256": "b5e47f563ebdc47ee5210f1c5d375dc863fa00ece153e568117b6393882f6974",
+      "context_sha256": "8ad24aa2ac235a4fed7f569faa3a720c343f56de82c1ce9f3e5bb3f969abd3fc"
+    },
+    {
+      "label": "bonsai-4b-q1-cpu-r1",
+      "runtime_status": "completed",
+      "interpretation": "all_cases_attempted_saved_reply_contract_comparison",
+      "strict_schema": 24,
+      "exact": 17,
+      "denominator": 24,
+      "groups": {
+        "attributes": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 4
+        },
+        "descriptive_metaphor": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 3
+        },
+        "hold": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 4
+        },
+        "named": {
+          "denominator": 6,
+          "schema_valid": 6,
+          "exact": 6
+        }
+      },
+      "false_propose_valid_schema": 2,
+      "unattempted": 0,
+      "finish_length": 0,
+      "http500": 0,
+      "reply_latency": {
+        "count": 24,
+        "median_seconds": 3.3132875000000004,
+        "p95_nearest_rank_seconds": 3.432362,
+        "max_seconds": 3.473627
+      },
+      "startup_seconds": 1.04475,
+      "sampled_server_rss_bytes": 1570422784,
+      "score_sha256": "8e1e5af0bff4f3be9ba9c24eeb722fac2ebbe8a2071364d510fac8e023f29f7c",
+      "context_sha256": "cfedd9a0f3f5543e53e87a86f27fdb9ba7ff7a4c740a63b36e64e92be3c5513f"
+    }
+  ],
+  "deferred": [
+    {
+      "label": "bonsai-8b-q1-cpu-r1",
+      "reason": "run not finalized"
+    }
+  ]
+}

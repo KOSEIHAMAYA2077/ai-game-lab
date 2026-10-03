@@ -1,0 +1,31 @@
+{
+  "version": "small-model-sweep-evaluation-r1",
+  "language": "ja",
+  "source": "New artificial sentences written for this frozen comparison; not user text.",
+  "cases": [
+    {"case_id":"N01","group":"named","text":"表示する形を球体へ変更してください。","expected":{"action":"propose","shape":"sphere","color":null,"count":1,"motion":null},"rationale":"Explicit positive request for sphere; no attributes requested."},
+    {"case_id":"N02","group":"named","text":"いまの文字の集まりを直方体にしてください。","expected":{"action":"propose","shape":"box","color":null,"count":1,"motion":null},"rationale":"The finite box family includes cuboids; no new mesh class is implied."},
+    {"case_id":"N03","group":"named","text":"メビウスの輪の形を選んでください。","expected":{"action":"propose","shape":"mobius","color":null,"count":1,"motion":null},"rationale":"Explicit positive request for mobius."},
+    {"case_id":"N04","group":"named","text":"花瓶の姿に切り替えてください。","expected":{"action":"propose","shape":"vase","color":null,"count":1,"motion":null},"rationale":"Explicit positive request for vase."},
+    {"case_id":"N05","group":"named","text":"剣のシルエットに変えてください。","expected":{"action":"propose","shape":"sword","color":null,"count":1,"motion":null},"rationale":"Explicit positive request for sword."},
+    {"case_id":"N06","group":"named","text":"クラゲの姿を表示してください。","expected":{"action":"propose","shape":"jellyfish","color":null,"count":1,"motion":null},"rationale":"Explicit positive request for jellyfish."},
+    {"case_id":"M01","group":"descriptive_metaphor","text":"細い茎のてっぺんに、何枚もの柔らかいひらひらが丸く開く姿を作って。","expected":{"action":"propose","shape":"flower","color":null,"count":1,"motion":null},"rationale":"Author-intended flower description among the twelve options; decorative adjectives do not request flow."},
+    {"case_id":"M02","group":"descriptive_metaphor","text":"夜空に打ち上がって、火の光が放射状に開く一瞬の大輪を形にして。","expected":{"action":"propose","shape":"fireworks","color":null,"count":1,"motion":null},"rationale":"Author-intended fireworks from launch and radial light; ordinary world motion is not an explicit motion attribute."},
+    {"case_id":"M03","group":"descriptive_metaphor","text":"一本の太い幹から枝が分かれ、葉の屋根を広げる姿へ変えて。","expected":{"action":"propose","shape":"tree","color":null,"count":1,"motion":null},"rationale":"Author-intended tree from trunk, branches, and canopy; no green color is specified."},
+    {"case_id":"M04","group":"descriptive_metaphor","text":"くちばしを前へ向け、二枚の羽を左右へ広げた空の旅人の姿にして。","expected":{"action":"propose","shape":"bird","color":null,"count":1,"motion":null},"rationale":"Author-intended bird from beak and wings; two wings do not mean two bodies."},
+    {"case_id":"M05","group":"descriptive_metaphor","text":"えらで息をして、尾びれで水を蹴る鱗の旅人のかたちに変えて。","expected":{"action":"propose","shape":"fish","color":null,"count":1,"motion":null},"rationale":"Author-intended fish from gills, tail fin, and scales; prose movement is not flow attribute."},
+    {"case_id":"M06","group":"descriptive_metaphor","text":"手足のない長い胴を地面でくねらせる、舌を出した爬虫類の姿にして。","expected":{"action":"propose","shape":"snake","color":null,"count":1,"motion":null},"rationale":"Author-intended snake among twelve options; descriptive locomotion does not select flow."},
+    {"case_id":"A01","group":"attributes","text":"赤い球体を3個にして、文字を流して。","expected":{"action":"propose","shape":"sphere","color":"red","count":3,"motion":"flow"},"rationale":"Explicit shape, red, body count three, and glyph flow."},
+    {"case_id":"A02","group":"attributes","text":"青い立方体を2個、動かさずに置いて。","expected":{"action":"propose","shape":"box","color":"blue","count":2,"motion":"still"},"rationale":"Explicit box, blue, count two, and no motion."},
+    {"case_id":"A03","group":"attributes","text":"黄色のメビウスの輪を1個、脈打たせて。","expected":{"action":"propose","shape":"mobius","color":"yellow","count":1,"motion":"pulse"},"rationale":"Explicit mobius, yellow, count one, and pulse."},
+    {"case_id":"A04","group":"attributes","text":"緑の花を4個並べて、文字が流れるようにして。","expected":{"action":"propose","shape":"flower","color":"green","count":4,"motion":"flow"},"rationale":"Explicit flower, green, count four, and glyph flow."},
+    {"case_id":"A05","group":"attributes","text":"白いクラゲを8個にして、ゆっくり脈打たせて。","expected":{"action":"propose","shape":"jellyfish","color":"white","count":8,"motion":"pulse"},"rationale":"Explicit jellyfish, white, maximum body count eight, and pulse; speed is not in this schema."},
+    {"case_id":"A06","group":"attributes","text":"赤い花火を5個、停止した姿にして。","expected":{"action":"propose","shape":"fireworks","color":"red","count":5,"motion":"still"},"rationale":"Explicit fireworks, red, count five, and still despite common fireworks animation."},
+    {"case_id":"H01","group":"hold","text":"会議の議事録を読み終えたので、次は見積書を確認する。","expected":{"action":"hold","shape":null,"color":null,"count":1,"motion":null},"rationale":"Ordinary work sentence has no positive shape request."},
+    {"case_id":"H02","group":"hold","text":"立方体への変更は不要です。いまの形を保ってください。","expected":{"action":"hold","shape":null,"color":null,"count":1,"motion":null},"rationale":"Explicit shape change is negated; preserve shape."},
+    {"case_id":"H03","group":"hold","text":"const label = \"sphere\"; const color = \"red\";","expected":{"action":"hold","shape":null,"color":null,"count":1,"motion":null},"rationale":"Standalone source code is data, not an instruction to the artwork."},
+    {"case_id":"H04","group":"hold","text":"青いヌメポリを3個、脈打つ形にして。","expected":{"action":"hold","shape":null,"color":null,"count":1,"motion":null},"rationale":"Artificial unknown noun has no correspondence; known attributes alone must not invent a shape."},
+    {"case_id":"H05","group":"hold","text":"手順書には『花瓶にする』とあるけれど、これは文章の引用であり、形の変更は頼んでいない。","expected":{"action":"hold","shape":null,"color":null,"count":1,"motion":null},"rationale":"Quotation explicitly says it is not a shape-change request."},
+    {"case_id":"H06","group":"hold","text":"球体には変えず、赤という文字を記録するだけにして。","expected":{"action":"hold","shape":null,"color":null,"count":1,"motion":null},"rationale":"Shape is negated and red is quoted data; hold must reset all proposal attributes."}
+  ]
+}
