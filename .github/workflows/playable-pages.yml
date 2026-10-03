@@ -21,6 +21,7 @@ env:
   WIDGET_REF: glyph-matter-v0.14.0-widget.1
   WIDGET_BUDGET_REF: glyph-matter-v0.14.1-widget.2
   WIDGET_ATLAS_REF: glyph-matter-v0.14.2-widget.3
+  TASK_STUDENT_REF: glyph-matter-v0.15.0-task-student.1
 
 jobs:
   build:
@@ -161,6 +162,24 @@ jobs:
           mkdir -p prototype-source/prototypes/glyph-creature/dist/widget-v3
           cp -R widget-atlas-source/prototypes/glyph-creature/dist/. prototype-source/prototypes/glyph-creature/dist/widget-v3/
           cp widget-atlas-source/prototypes/glyph-creature/dist/widget.html prototype-source/prototypes/glyph-creature/dist/widget-v3/index.html
+      - name: Check out the separate task student comparison
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.TASK_STUDENT_REF }}
+          path: task-student-source
+          persist-credentials: false
+      - name: Check and build the task student comparison
+        working-directory: task-student-source
+        run: |
+          npm ci --ignore-scripts --prefix prototypes/glyph-creature
+          prototypes/glyph-creature/node_modules/.bin/tsc --noEmit --project prototypes/glyph-creature/tsconfig.json
+          prototypes/glyph-creature/node_modules/.bin/vitest run --root prototypes/glyph-creature src/task-student-v1/deformation.test.ts
+          node experiments/bonsai-task-student-v1/build-preview.mjs
+      - name: Add task student comparison while preserving previous apps
+        run: |
+          mkdir -p prototype-source/prototypes/glyph-creature/dist/task-student-v1
+          cp -R task-student-source/.local/bonsai-task-student-v1/web-build/. prototype-source/prototypes/glyph-creature/dist/task-student-v1/
+          cp task-student-source/.local/bonsai-task-student-v1/web-build/preview.html prototype-source/prototypes/glyph-creature/dist/task-student-v1/index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload only built public files

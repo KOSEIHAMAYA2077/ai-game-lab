@@ -1,0 +1,196 @@
+{
+  "scope": "Only current task holdout counts, modifier counts and stated table/head byte scale. Older experiment results, dev scores, licenses, publication/URL availability and product behavior were not rechecked. Root documents were not edited.",
+  "files": {
+    "README.md": "2fab0ffe2a5a1d713d422795ada57b3355d6f3bd4e1c7ad6e880df33986a68ec",
+    "experiments/bonsai-task-student-v1/README.md": "8538450354a3605c468972a1d17242d819b6d4d3e282a87dbb6e9fbcaaf35a8a",
+    "experiments/bonsai-task-student-v1/evaluation/metrics.json": "7c961296b6682198ae4693ad971588063140574f30add266fadaafc3131d66cb"
+  },
+  "checks": [
+    {
+      "claim": "candidate README table: 既存形ルール＋明示変形",
+      "observed": [
+        5,
+        60,
+        20,
+        0
+      ],
+      "expected": [
+        5,
+        60,
+        20,
+        0
+      ],
+      "equal": true
+    },
+    {
+      "claim": "candidate README table: 文字seed",
+      "observed": [
+        28,
+        10,
+        3,
+        0
+      ],
+      "expected": [
+        28,
+        10,
+        3,
+        0
+      ],
+      "equal": true
+    },
+    {
+      "claim": "candidate README table: 文字Bonsai4",
+      "observed": [
+        31,
+        10,
+        3,
+        0
+      ],
+      "expected": [
+        31,
+        10,
+        3,
+        0
+      ],
+      "equal": true
+    },
+    {
+      "claim": "candidate README table: 文字Bonsai8",
+      "observed": [
+        33,
+        10,
+        3,
+        0
+      ],
+      "expected": [
+        33,
+        10,
+        3,
+        0
+      ],
+      "equal": true
+    },
+    {
+      "claim": "candidate README table: 意味seed",
+      "observed": [
+        90,
+        58,
+        19,
+        2
+      ],
+      "expected": [
+        90,
+        58,
+        19,
+        2
+      ],
+      "equal": true
+    },
+    {
+      "claim": "candidate README table: 意味Bonsai8",
+      "observed": [
+        90,
+        58,
+        20,
+        2
+      ],
+      "expected": [
+        90,
+        58,
+        20,
+        2
+      ],
+      "equal": true
+    },
+    {
+      "claim": "top README 名称なし描写",
+      "observed": [
+        90,
+        120
+      ],
+      "expected": [
+        90,
+        120
+      ],
+      "equal": true
+    },
+    {
+      "claim": "top README 否定文",
+      "observed": [
+        19,
+        20
+      ],
+      "expected": [
+        19,
+        20
+      ],
+      "equal": true
+    },
+    {
+      "claim": "candidate README modifiers static-seed length",
+      "expectedPhrase": "length19/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README modifiers static-seed width",
+      "expectedPhrase": "width16/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README modifiers static-seed bend",
+      "expectedPhrase": "bend19/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README joint24 static-seed",
+      "expectedPhrase": "10/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README nondefault static-seed",
+      "expectedPhrase": "6/11・6/13・6/9",
+      "equal": true
+    },
+    {
+      "claim": "candidate README modifiers static-bonsai8 length",
+      "expectedPhrase": "length19/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README modifiers static-bonsai8 width",
+      "expectedPhrase": "width16/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README modifiers static-bonsai8 bend",
+      "expectedPhrase": "bend19/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README joint24 static-bonsai8",
+      "expectedPhrase": "10/24",
+      "equal": true
+    },
+    {
+      "claim": "candidate README nondefault static-bonsai8",
+      "expectedPhrase": "6/11・6/13・6/9",
+      "equal": true
+    },
+    {
+      "claim": "candidate README char nondefault all0",
+      "equal": true
+    },
+    {
+      "claim": "top README fixed table8MiB",
+      "observedBytes": 8388608,
+      "expectedBytes": 8388608,
+      "equal": true
+    },
+    {
+      "claim": "top README approximately52KB dense model JSON",
+      "observedBytes": 51721,
+      "equal": true
+    }
+  ],
+  "mismatchCount": 0
+}

@@ -1,0 +1,94 @@
+{
+  "startedAtUTC": "2026-10-03T09:59:46.394Z",
+  "finishedAtUTC": "2026-10-03T09:59:46.769Z",
+  "candidateFreezeSHA256": "b54b95abb6896512d6777652304d227a623be034738f9daed10ebfb1cbaeeaeb",
+  "evaluationSHA256": "cba265119e549427e5cb77f725b2745952b2fbe27c23fa5e6b5ee5626a730a04",
+  "predictionsSHA256": "eeac3682136e7a555f2fbbfe16557e5f5a15cbe00c3527f4888faadaf5e88335",
+  "nodeVersion": "v26.4.0",
+  "methods": [
+    "rules",
+    "seed",
+    "bonsai4",
+    "bonsai8",
+    "static-seed",
+    "static-bonsai8"
+  ],
+  "totalReplies": 1464,
+  "batchTimings": {
+    "rules": {
+      "batchWallMs": 41.51445800000002,
+      "cases": 244
+    },
+    "seed": {
+      "batchWallMs": 23.16541699999999,
+      "cases": 244
+    },
+    "bonsai4": {
+      "batchWallMs": 14.896124999999984,
+      "cases": 244
+    },
+    "bonsai8": {
+      "batchWallMs": 14.655292000000003,
+      "cases": 244
+    },
+    "static-seed": {
+      "batchWallMs": 164.419667,
+      "cases": 244
+    },
+    "static-bonsai8": {
+      "batchWallMs": 103.49354200000005,
+      "cases": 244
+    }
+  },
+  "relevantSourceSHA256": {
+    "prototypes/glyph-creature/src/task-student-v1/inference.mjs": "e55308d7cf2c215f9326f53d4a048eb0ee1cde917764bf01f9bf7478766eca3c",
+    "prototypes/glyph-creature/src/task-student-v1/rule-modifiers.mjs": "aaa64491f801b3cba9bb28ab701c14c45cb959f40e8d7286270261f89553588a",
+    "prototypes/glyph-creature/src/language.ts": "7e80b7853d79a5c3d198a2369b3e0ac0c2f87ca3c0a4546b5d7b7558792b31d3",
+    "prototypes/glyph-creature/src/shape-catalog.ts": "f7244468346bfdfd731753016290ba43250a89abe234225da6570640c1a97e42",
+    "prototypes/glyph-creature/src/lexical.ts": "8709c925b12329a0664d93ead6e90db47c3319c88f08068dc20290acc85d11df",
+    "experiments/bonsai-task-student-v1/rules-adapter.mjs": "dffb4decf06999db8613711e2841fa7d0b84ac3b50ccf1419ec2f19278adb997",
+    "experiments/bonsai-task-student-v1/evaluation/run-once.mjs": "592fa32c83c990c58e44b30516ab8cf47ed4f4029259760bdabec9dc3d9f8dfd"
+  },
+  "candidateFreeze": {
+    "frozenBeforeIndependentEvaluation": true,
+    "charPreview": "bonsai8",
+    "staticPreview": "static-seed",
+    "basis": "Development only. Character student: gated name-free descriptions seed3/240, Bonsai4 3/240, Bonsai8 7/240. Static: equally weighted named/description/hold development objective seed0.6885417, Bonsai8 0.6815972. No holdout predictions inspected by model developer.",
+    "teacherClaim": "Offline paraphrase augmentation only; not transferred Bonsai weights/logits/hidden states. Static feature model is unrelated pretrained Japanese embedding, frozen.",
+    "models": {
+      "seed": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+      "bonsai4": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+      "bonsai8": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+      "static-seed": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df",
+      "static-bonsai8": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889"
+    },
+    "files": {
+      "train.py": "247438d8fc488b585e8898ca916e62524f35f3eec89e0c33286e491ba23d3b38",
+      "train_static.py": "4d8b03b091582fcf7fa6bcb46d2cfc65977d776cfbe21725ff91906c7414fbd9",
+      "predict_static.py": "622614b1c9cb82802b8d863c276bc468909995800cfd1fb3f46112af800a853c",
+      "seeds/shapes.json": "9890b0cc751455a4e895cd4c60e8a9e3a574d3b42d227248151b80f211d9de51",
+      "seeds/holds.json": "9def20d665f1fbca5dcbb0a73b5900a7d078027b8042dfa70944644fecf0c963",
+      "seeds/transforms.json": "d0d10d5f5f2e2cf61ad6e2f03e6bebebce14718755ae97b2e0095a5bddc9e96e",
+      "teacher/curated-r2.json": "d5b8c7be2368393aa4f40f28a2b30ba4c3715bf600818550a017a23eb404f436",
+      "teacher/curated-r3.json": "6d1100c3bfcc4774fd8a4d0283cc8904f5d78a626f0d3466dc3481c78b97116b",
+      "static-candidate/export_features.py": "59040afc86950ec93435f533c3b4ec61029ca745a0db1de053880de0f772d4c6",
+      "artifacts/seed-model.json": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+      "artifacts/seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+      "artifacts/bonsai4-model.json": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+      "artifacts/bonsai4-corpus.json": "9212a59a03eb600013496337b9474973002ab539c9fd594cf79be60269a9ee07",
+      "artifacts/bonsai8-model.json": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+      "artifacts/bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+      "artifacts/static-seed-model.json": "627f5b224ed351f0f55de6efd3ebf940ed1d7c0350eedc638ef808ac9ba597df",
+      "artifacts/static-seed-corpus.json": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+      "artifacts/static-bonsai8-model.json": "97b9ee054e4afae15995e75a9b69868e0597c2c91421a763ba94cecc07d50889",
+      "artifacts/static-bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2"
+    }
+  },
+  "staticEncoderPins": {
+    "revision": "95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3",
+    "tableSHA256": "65122d239d6c9fd804deee853736446415dc815134277c87adb9978f7b9e2201",
+    "tokenizerSHA256": "833add01c9eb44e78ffb2d9195caace320de0fcf64d1f4d95bc541b6e30a9fc9",
+    "verifiedBy": "StaticFeatureEncoder validates files on startup"
+  },
+  "scope": "One independent artificial evaluation pass. No model, gate, data or expectation edits. Persistent Python process per static candidate; one batch each. No latency warmup; timing is supplementary."
+}

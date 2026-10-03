@@ -1,0 +1,962 @@
+[
+  {
+    "index": 0,
+    "accepted": false,
+    "reason": "角のない一様にふくらむ立体を「四角い固体」へ変えており、球の幾何を取り違える。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "c4185101dc8ba97b5ef31bb6711aea75b8654a9f8a7f0182d4edab3df44e5976"
+  },
+  {
+    "index": 1,
+    "accepted": false,
+    "reason": "ボールという形名のみで、遊び方や転がる姿の言い換えがなく、有意な拡張にならない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "394a1888a42ea47d083556975d0025eca8bd70aa277d1b44be3543c18b952fcc"
+  },
+  {
+    "index": 2,
+    "accepted": false,
+    "reason": "流れの回転と中央の細さという主要条件が欠け、広い流れが中心へ入るだけでは渦の幾何が曖昧。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "b472cfdb286059488729f8e400233cf53e29f1e482e2e258192aa1b5edb8c8a9"
+  },
+  {
+    "index": 3,
+    "accepted": false,
+    "reason": "水の回転流の形を排水口そのものの形へ変え、回転も欠ける。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "7f21d7674952e31cb3280b99e7e838e200831891aeee3ab5422e76c879bea721"
+  },
+  {
+    "index": 4,
+    "accepted": false,
+    "reason": "「まっかく」が意味不明で、周回路の向きの違いも明瞭に保たない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "dc4f06714cdc68a8f2873a92b1964c68a9f3be47e9e1c695923d119a898cd09e"
+  },
+  {
+    "index": 5,
+    "accepted": true,
+    "reason": "電子の軌道を立体的に重ねるという原子模型の識別特徴を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "622f92634f637f6249c62756fa937b41fe5377ae8c434dbe645defee1733b15c"
+  },
+  {
+    "index": 6,
+    "accepted": true,
+    "reason": "帯を半回転ひねって両端をつなぐ幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "812a09f7ec11fccd6010b1a9e9cd1107113b109cf19691a89fea28d44ec56a2b"
+  },
+  {
+    "index": 7,
+    "accepted": false,
+    "reason": "表をたどると裏へ回って戻るという片面帯の識別条件が欠け、裏へ戻る帯という説明だけではメビウスを識別できない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "3ac446db7cd0e141c91ce8e43949ca8ec713747c843641e7f2a4b420196b05e9"
+  },
+  {
+    "index": 8,
+    "accepted": true,
+    "reason": "中央の穴と丸い管の周回接続を保つ。「周囲をつながって」は軽微な助詞誤りとして採用。",
+    "reasonCode": "accepted_minor_particle",
+    "sourceDuplicate": false,
+    "textSha256": "2e31b675ea9741170bd59d5f3219febedb231933f9d989f69c9830916e42fede"
+  },
+  {
+    "index": 9,
+    "accepted": false,
+    "reason": "「空いてある中央を持つ」が不自然な日本語で、軽微な助詞誤りだけでは収まらない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "39613bf364b5e7f64e90fa4f7131031f3e0ae0db37b12382ffaa63db2895dfb5"
+  },
+  {
+    "index": 10,
+    "accepted": true,
+    "reason": "六面がすべて同じ大きさの正方形であるという立方体の幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "43219cc64379c7cf1c6c75d9a1791c41bd03c01c78803c39ea343c76b5c9bf20"
+  },
+  {
+    "index": 11,
+    "accepted": false,
+    "reason": "一から六までの異なる目を、六個の目という別の数量条件へ変えている。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "d97cd70f576de0c95586434ba16aab6d77dc60457bba83f2b61178c2e339223c"
+  },
+  {
+    "index": 12,
+    "accepted": false,
+    "reason": "「縦横奥行きに沿っています」が不自然・不明瞭で、長方形の面で囲む立体の説明になっていない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "429d71f8f3b1400d92440983ed54d43df2593a7c3c3dda5832096b5feab98ec5"
+  },
+  {
+    "index": 13,
+    "accepted": false,
+    "reason": "文末の「段ボールのように」が宙に浮く語順で、自然な短い日本語の文として完結していない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "4831bfe82547ec7d9529a3a06003e9b99d1466337f4d6980fb5c90f3a4d46b55"
+  },
+  {
+    "index": 14,
+    "accepted": true,
+    "reason": "縦横二本の棒が中央で直角に交わる構造を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "67f36b785b3983ab4d221a396a75aa98864aa17633ddba24c1434016e684731d"
+  },
+  {
+    "index": 15,
+    "accepted": false,
+    "reason": "足し算の記号の用途を指の動きへ変えており、原文の意味を保たない。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "31e39081caa7407c27a1a5172d35a127d229e28d44ed297380d77b713ada70b9"
+  },
+  {
+    "index": 16,
+    "accepted": false,
+    "reason": "三本のまっすぐな辺を「三本の直角形」へ変え、三角形の幾何を取り違える。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "c37a6f7b564a93b099288b10a676561b1db6f4e0a77a260a141cf26952f8e9e1"
+  },
+  {
+    "index": 17,
+    "accepted": false,
+    "reason": "斜面が下るだけでは、上の一点と左右二斜面が欠けて三角形を識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "dcc7b660ae4eb49b8323b270b6e0db38b65d23e713882f8d6629cdbf951eb49c"
+  },
+  {
+    "index": 18,
+    "accepted": true,
+    "reason": "四辺が等長、四角が直角という平面図形の条件を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "86251ec0fb74906ab86fbafd539135a6121e381da6e50475bd8c1bf77e5e6220"
+  },
+  {
+    "index": 19,
+    "accepted": false,
+    "reason": "正方形という形名のみで、タイルの外形・用途の言い換えがなく、有意な拡張にならない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "3379dba0f10b4d83fba4a6e631ed4950ed14021c042700d0ab9e6b11a0c7d868"
+  },
+  {
+    "index": 20,
+    "accepted": true,
+    "reason": "一点から多数の光線が外へ放射状に広がる幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "5fb54c6d25609b01721f152a06255fcaaaf17ca7104d1680795fbc2c5d73c102"
+  },
+  {
+    "index": 21,
+    "accepted": false,
+    "reason": "夜空に打ち上げるだけでは、光が開くことと音を失い、花火を識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "f8d3b83dfa032ef8c855a21ebd6d137a1696fec5b5a797db3d5c54478ffbb3fd"
+  },
+  {
+    "index": 22,
+    "accepted": true,
+    "reason": "三つの丸い塊を同じ向きに並べてつなぐという主要構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "8c67e4107d506c974e0fa258cb980e50a732963c4e218b05e8fa8465a4848c29"
+  },
+  {
+    "index": 23,
+    "accepted": false,
+    "reason": "「かきつぶ」が不明瞭で、もちもちした丸い菓子の対象を保たない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "adabeef305991d8541074084275c706b0906368f6c62c06fb400709d8930540a"
+  },
+  {
+    "index": 24,
+    "accepted": true,
+    "reason": "中央の芯を丸い薄片が囲み、外向きに開く構造を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "07775ba37e2ed884744737c0bf39649efba8780784560eedb3c2a8170524dd37"
+  },
+  {
+    "index": 25,
+    "accepted": true,
+    "reason": "茎先で花びらが開き色が広がるという開花の姿を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "acb827a872ba3f0c4680843d790a6a5e85f567cd922bc9acba999db0b51084f3"
+  },
+  {
+    "index": 26,
+    "accepted": true,
+    "reason": "細い胴と、左右へ広がる上下一対ずつの大きな羽という構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "21f3c30b8946cfc51b6da182f9f95edbd7d69d8b7f17d65473c3ae7c6343ba6b"
+  },
+  {
+    "index": 27,
+    "accepted": true,
+    "reason": "花から花へ移動し羽をひらひら開閉する昆虫という特徴を保つ。「飛び」から「跳び」への表記変更でも対象は明瞭。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "6b41bc095dd7f5660eba7b7d7c03adc381fe6d50610f3b14af7a5982821b59d3"
+  },
+  {
+    "index": 28,
+    "accepted": true,
+    "reason": "半透明の丸い傘から細い触手が複数垂れるという幾何を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "c0059e4a26d613728218df31c0204a03f519d0da2dd862f5b16b39ff0bfb31b0"
+  },
+  {
+    "index": 29,
+    "accepted": true,
+    "reason": "骨のない柔らかい海生の体がゆっくり漂うという原文の特徴を保つ。「海の奥」の追加は対象を取り違えさせない。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "c45491671140854681b5df165da560fbab6cc159b7e641f7991ece3eb74abdc3"
+  },
+  {
+    "index": 30,
+    "accepted": true,
+    "reason": "地面から立つ幹が枝分かれし大きな茂みを支える構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "5d4124d07085520796630e211c93402494bcfe2c0f8604b10afb06ea729bd857"
+  },
+  {
+    "index": 31,
+    "accepted": false,
+    "reason": "年輪を持つ木の種を育てる説明へ変え、成長した背の高い森林植物という原文の対象と生物の特徴を取り違える。",
+    "reasonCode": "semantic_change_biology",
+    "sourceDuplicate": false,
+    "textSha256": "7b60c986023ea7e09338395a1702f873321909e4622cec1e513f5bec4293867c"
+  },
+  {
+    "index": 32,
+    "accepted": false,
+    "reason": "中央に山と谷が交錯する説明へ変え、中心の周囲に尖りとくぼみが交互に並ぶ星形の幾何を保たない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "7a8e2b7c554d7fabe44a3912528695749bd573bc07a9cc4e841c1864ea42e4bb"
+  },
+  {
+    "index": 33,
+    "accepted": true,
+    "reason": "五方向へ尖った印という星形を識別する幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "18b2d7ef4e0b9d6d057bdd218bdf342462558e70cc1348eabe822ceecefdd924"
+  },
+  {
+    "index": 34,
+    "accepted": true,
+    "reason": "一本の線が軸の周囲を回りながら高さを増す構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "43d5d089953e91a99cb0818ac082f2b17f9f5271ffdbee3a3969e54f6649b7b5"
+  },
+  {
+    "index": 35,
+    "accepted": true,
+    "reason": "押すと縮み、放すと戻る金属ばねという用途と外形を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "e877bb22f15205d0bd14f2a8087043075aa9faf97110c0ffb009108ba04fed67"
+  },
+  {
+    "index": 36,
+    "accepted": false,
+    "reason": "中央の細いくびれを「細いビール」へ変え、上下の容器の形も保たない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "2ed38117549618e538e22db8688d97869465fbd663b6f70de45895a27f3e16b5"
+  },
+  {
+    "index": 37,
+    "accepted": false,
+    "reason": "時計という広い道具名のみで、上下の容器から粒を落とす砂時計の識別条件がない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "6fd2f3add204d8076914a6ebe7c2ae0e15a89bd4abd4ef96aea9450a3e2973f9"
+  },
+  {
+    "index": 38,
+    "accepted": true,
+    "reason": "丸い惑星を大きな平たい帯が囲む構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "bb82b3dab9a6106146e836a33088df9fb3bb3fa5588f8e81ab1cecf78d11c768"
+  },
+  {
+    "index": 39,
+    "accepted": false,
+    "reason": "対象情報は残るが「六番目目」などの重複語と不自然な語順があり、未修正の日本語captionとして除外。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "273ef6cbf19438ec5673b1b6f7e1ec6c2feb4241982b38cbf43a329103c7d56d"
+  },
+  {
+    "index": 40,
+    "accepted": false,
+    "reason": "「先の鋭い長さ」は意味不明で、長い刃という対象の主要部分を失う。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "27387d523018cc54f2c3fb6919675561ad8bb2420cfd4e4d2a37590ca12bbcc6"
+  },
+  {
+    "index": 41,
+    "accepted": false,
+    "reason": "刃を持つ武器だけでは剣・斧・槍等を区別できず、斬る・突く用途を失う。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "2cd3042c404d71e417990780b06760351de689792a979f2554ab3e02dab6e2a7"
+  },
+  {
+    "index": 42,
+    "accepted": true,
+    "reason": "口の開いた容器に細い首とふくらみがあるという花瓶の主要幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "c72f2a0a5f5f12af60e432ab4c483ddb29858f4f8f26613d7f21d6bb4a15b2fc"
+  },
+  {
+    "index": 43,
+    "accepted": true,
+    "reason": "切り花の茎と水を入れて室内に飾る器という用途を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "d63efb22496595768003a2eac147e7ed87abc7e428a8be5db15995744bff285b"
+  },
+  {
+    "index": 44,
+    "accepted": false,
+    "reason": "「すぼまみ」が不自然で、上の一点へ側面が集まる関係も「上のポイントが集まる」へ変えている。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "0d71a023e715fbf70bee87ec1d0a9e06937551b1d33a2011152a21328b4ffed9"
+  },
+  {
+    "index": 45,
+    "accepted": true,
+    "reason": "アイスクリームを盛る先の尖った受け皿という用途と外形を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "fb73324349c33f4d90c7c81fe96cc10b4d5735842abe1639d04743106574e306"
+  },
+  {
+    "index": 46,
+    "accepted": false,
+    "reason": "上下の丸い面が同じ大きさである条件を失い、円柱と径の異なる丸い立体を区別できない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "a4bb0331b4ba92321ab64a25a57c3e5f579caec9d69a0807b57d19b1ad891f6f"
+  },
+  {
+    "index": 47,
+    "accepted": false,
+    "reason": "同じ太さが上下に続くだけでは、丸い断面や飲料缶の文脈がなく、円柱を識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "f8ff47a52c0e616252181d6145270d17e1410e1c7b8844cd677225194e301dee"
+  },
+  {
+    "index": 48,
+    "accepted": false,
+    "reason": "筒の中央部分は丸くないという否定を付加し、原文にない断面解釈を持ち込むため形を明瞭に保てない。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "10f912b5c4d17d8eeb3e4e428f35458d33245343a4db9c0ade87ba9a18ae1aa9"
+  },
+  {
+    "index": 49,
+    "accepted": true,
+    "reason": "粉薬を包む滑らかな細長い殻という用途と外形を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "dccca5a048514c5349f3d65d3e36e276925599172c9b28a23aecd79866ec21cf"
+  },
+  {
+    "index": 50,
+    "accepted": false,
+    "reason": "幾何の情報は残るが「上にある点で合われる」という不自然な動詞の形を含み、軽微な助詞誤りだけでは収まらない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "f36b243b1fa9d3ee520d4ee84e9b833330e9af3345858ffe407d0a473360dc23"
+  },
+  {
+    "index": 51,
+    "accepted": false,
+    "reason": "「巨大な墓のような形をした古代エジプトの砂漠に建った」は語順が崩れた未完の文で、対象の説明として不自然。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "305b7ba8f1f82306d521748a7edfb20163df8df4686b37f7eb9db4b9dff046cf"
+  },
+  {
+    "index": 52,
+    "accepted": true,
+    "reason": "上の小平面から斜面が周囲と下の尖りへ続く構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "18b8dad9f61b836d5d027591ba82c489f1d70010f55d898fa8afbfae5ce08ec2"
+  },
+  {
+    "index": 53,
+    "accepted": true,
+    "reason": "指輪に飾る研磨した透明鉱物という、原文の対象文脈を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "0546a042ab5ec91198c2c834afb95288623568df573d7df702c9fd15abe76e23"
+  },
+  {
+    "index": 54,
+    "accepted": false,
+    "reason": "八枚の三角面を「八角形形の三角面」へ変え、八面体の幾何を取り違える。重複語もある。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "d4bc6dd10557ce30a20a231448aa6e7be00f4731513b2e2e834fdf9a73477e14"
+  },
+  {
+    "index": 55,
+    "accepted": true,
+    "reason": "四角い底を共有する二つの角錐を上下に合わせる構造を保つ。「角錐が…合わせた」は軽微な助詞の不自然さとして採用。",
+    "reasonCode": "accepted_minor_particle",
+    "sourceDuplicate": false,
+    "textSha256": "a8f3e41e727c4bfde922d25d786205569f7dae14df1e5c2ea21874b443a4f638"
+  },
+  {
+    "index": 56,
+    "accepted": true,
+    "reason": "上の二つの丸いふくらみと下の一つの尖りを保つ。「下には…集まる」は軽微な助詞の不自然さとして採用。",
+    "reasonCode": "accepted_minor_particle",
+    "sourceDuplicate": false,
+    "textSha256": "a432afe2e52de7d76dc1783368e4a644f9115a9e101ca363977f267d02325c5d"
+  },
+  {
+    "index": 57,
+    "accepted": false,
+    "reason": "短い文を説明するメタ回答と装飾付きの語句反復で、好きな気持ちを表すハートの識別情報も欠ける。",
+    "reasonCode": "explanation_or_repetition",
+    "sourceDuplicate": false,
+    "textSha256": "7dcc6df5866b6fa026ec36728785318ecb5b8dace4fa200bfb13687a9cc5994f"
+  },
+  {
+    "index": 58,
+    "accepted": false,
+    "reason": "一方だけ少し細い条件を両端が細いへ変え、卵の非対称な外形を保たない。「立体体」の重複もある。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "47ce1dd864d1b2f31efc1af196e21cc02a0e322885f5842a3191f673d5020e56"
+  },
+  {
+    "index": 59,
+    "accepted": true,
+    "reason": "殻付きの卵という食品の対象を保つ。短いが、単独の形名だけでなく殻と食品の文脈がある。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "f0afe270767cc1ec425bfdbdb23ee6c801ef498ed11f3aabe5e23bb36f3d456f"
+  },
+  {
+    "index": 60,
+    "accepted": true,
+    "reason": "下の丸いふくらみと上の一つの細い先端という形を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "4b6f99b498d3fe561f047b1785601cc220f250d93ada9101f6a40cd91e634edc"
+  },
+  {
+    "index": 61,
+    "accepted": true,
+    "reason": "水が一滴ずつ落ちる姿を保つ。蛇口の文脈は省くが、水滴の対象は明瞭。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "af84adf4882f438a23ab73f3d85bd77eb963e322737ce68c31f5efab9fa9cb67"
+  },
+  {
+    "index": 62,
+    "accepted": true,
+    "reason": "二つの異なる曲線が両端で接し、中央が曲がった細い面になる構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "0b590de92c8e4bbc7dfd6b96bc6f89295509ecd2451fd4f78d9afdacc692ebaf"
+  },
+  {
+    "index": 63,
+    "accepted": true,
+    "reason": "夜空の丸い天体の細い部分だけが光って見えるという三日月の文脈を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "acb3b5f2f6594f7b8d7324c5bb31e1815923c7fbd0cd9812a7cf749a1a4a331e"
+  },
+  {
+    "index": 64,
+    "accepted": true,
+    "reason": "丸いふくらみの集合ともこもこした輪郭を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "00745d734159d87a3d67f522c1d6df2563ce6a78766b5c4a852b9b541855c27f"
+  },
+  {
+    "index": 65,
+    "accepted": false,
+    "reason": "空に浮かぶ白いかたまりを白い花びらへ変え、雲の対象を取り違える。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "051e0c518c40983a784340bc3fe52210e32ee2ab828043213ac5a5a3239dbc6c"
+  },
+  {
+    "index": 66,
+    "accepted": false,
+    "reason": "丸く開いた傘を中央の柄が下から支える関係を、傘の先端と柄の下からの支えへ変えている。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "9dd2f3b804a8f14ab896046d819259d610022931e0d2338daed2d48df8ad2738"
+  },
+  {
+    "index": 67,
+    "accepted": true,
+    "reason": "湿った地面から出る、傘と軸を持つ菌類という対象と外形を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "5d4951e0035bf3ce8ab16eefd4e6dd1db763e96af4a337b42883b2459f2a766c"
+  },
+  {
+    "index": 68,
+    "accepted": true,
+    "reason": "薄い楕円が先へすぼまり中央に一本の筋が通る幾何を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "9e5dd5a3f4d74a79f23edff2a5af1aa1805cf75b704f8c9ec5fe52430faaa467"
+  },
+  {
+    "index": 69,
+    "accepted": false,
+    "reason": "葉という対象名と「部分」だけで、平面・緑色・茎や枝への付着の言い換えがなく、有意な拡張にならない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "b0dfbc97b5a37b40c9ebf2b6bda9d8d918a819f0b020c6b283b5b2821975c116"
+  },
+  {
+    "index": 70,
+    "accepted": false,
+    "reason": "丸い果実の上部のくぼみが欠け、少しの果実と短い軸だけではリンゴを識別できない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "407c0b68b017f5cf9883746b83f2ba823f5bebe6f9a707c4e4244f0fbdf6107c"
+  },
+  {
+    "index": 71,
+    "accepted": false,
+    "reason": "「果たん」が意味不明で、しゃきっとした果肉の特徴も失う。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "23ecbcce7874c105e283aae1d6aef4c8c913bb769544571034ae1d091e519230"
+  },
+  {
+    "index": 72,
+    "accepted": false,
+    "reason": "上側が細い条件に対して上側が広がる説明を加え、梨の上下の太さの関係を明瞭に保たない。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "550824ec1e8f36e4c721e1c4a5af0d773d279ef3e388a2e0a185c431d112f8a0"
+  },
+  {
+    "index": 73,
+    "accepted": false,
+    "reason": "細い首という梨の主要幾何を短い茎へ変え、形名に近い文脈だけでは元の外形を保たない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "37b25f43e6041f49d8ca4e93141b7d1f20b7b7ac7210ee06f6b66c0cb3325cae"
+  },
+  {
+    "index": 74,
+    "accepted": false,
+    "reason": "丸い胴を腰へ変え、果実の外形を人の部位のような説明へ変えている。対象を明瞭に保てない。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "e3fe1e9109c6f92458c3367ea08548171c5fab3ed2d7472b060f51dd564bd200"
+  },
+  {
+    "index": 75,
+    "accepted": true,
+    "reason": "硬い外側、橙色の果肉、大きな実という対象特徴を保つ。煮物の用途は省くが対象文脈は残る。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "af00c1a7d3dca045b435d8ec635a59774014d8d772ec8f1f9869f2fa6b441d82"
+  },
+  {
+    "index": 76,
+    "accepted": true,
+    "reason": "細い先端から巻きが次第に広がりつながる殻という幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "555561b66d5c70510439be7f32d5465ae4e85e331ddfafc84a2074579929bdc1"
+  },
+  {
+    "index": 77,
+    "accepted": false,
+    "reason": "海の生物の外殻だけでは、ぐるぐる巻いた形と砂浜の文脈を失い、巻貝の形を識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "657f2ee39d2e6fa9dcdb084d44fbeb4381718a9196c167f70c93ef12a45f5783"
+  },
+  {
+    "index": 78,
+    "accepted": true,
+    "reason": "両側のひれと後方の扇状の尾という魚を識別する構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "ea407ee816418c40e7ba52a4d630c82e5d420156ee322143256314a754160f70"
+  },
+  {
+    "index": 79,
+    "accepted": true,
+    "reason": "水中を泳ぎ、えらを使って呼吸する生物という特徴を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "b5ef2a9717f74b80088e2a337dbbe6a92d3a6c1143f909ea6cef86d73fd64066"
+  },
+  {
+    "index": 80,
+    "accepted": true,
+    "reason": "左右の羽、前のくちばし、後ろの尾羽という鳥の構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "03ec595202cf966c285d453973be5584cb802dd22423dbd5e18e35951c640702"
+  },
+  {
+    "index": 81,
+    "accepted": false,
+    "reason": "鳥という形名のみで、羽毛・翼・飛行の言い換えがなく、有意な拡張にならない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "8754cc62cbb1bcee9ea8a4c252e54788dd7249dbc936cab229a919ec10ffe13e"
+  },
+  {
+    "index": 82,
+    "accepted": false,
+    "reason": "「足足」という不自然な重複語があり、手足がない条件も正確に表現しないため除外。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "82f88d897cc16a726124a869a626bb001333f287f873033312154292f4cb8f9f"
+  },
+  {
+    "index": 83,
+    "accepted": false,
+    "reason": "爬虫類を昆虫、舌を唇へ変え、うろこも少ないと追加し、生物と部位を取り違える。",
+    "reasonCode": "semantic_change_biology",
+    "sourceDuplicate": false,
+    "textSha256": "ce920968a4b49bb47e9e6d25fa99dd56c681a1ad2f331e981bb9bd859beb1331"
+  },
+  {
+    "index": 84,
+    "accepted": true,
+    "reason": "盛り上がった丸い甲羅から頭と四本の足が出る構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "42bbb2f0d336989cd44b82ec68f474246a7cce4dcacd79ed7c95755923d29cfd"
+  },
+  {
+    "index": 85,
+    "accepted": false,
+    "reason": "カメの対象をハムスターと明示的に取り違えている。",
+    "reasonCode": "semantic_change_biology",
+    "sourceDuplicate": false,
+    "textSha256": "041f80b2d36ac9a11605ef80581a4f3307246427faa00299e35471cc84199bb2"
+  },
+  {
+    "index": 86,
+    "accepted": true,
+    "reason": "小さな体から八本の足が左右に広がるというクモの主要構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "01c1bc077e22952b2573995d60a98102b3aab5ef13970d3831d843246a47e272"
+  },
+  {
+    "index": 87,
+    "accepted": false,
+    "reason": "虫を待つ節足動物だけでは、糸で網を張る特徴を失い、クモを識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "a4de741b6ce4f177adaefdf9c0cb4dab5821ad2fb324e5349cfe1699b09df5d8"
+  },
+  {
+    "index": 88,
+    "accepted": false,
+    "reason": "薄片が重なる条件を失い、大きな薄片が中央を囲む花だけでは通常の花と蓮の重なった構造を区別できない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "9084f0f35de61dbf8145ac15cb7bd11fe1eb02f5d24eb24805b9d5c3241da6b7"
+  },
+  {
+    "index": 89,
+    "accepted": false,
+    "reason": "水生植物の花が開くだけでは、池・茎・淡い桃色・大きさを失い、蓮を識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "dcf21ec10bef32e8ce4dad302c1ba7b3b891ec45f113750d40fcfe3258990227"
+  },
+  {
+    "index": 90,
+    "accepted": true,
+    "reason": "花弁が中心を包み内向きに巻き重なるというバラの構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "09b3d176daa40702eaceeac932378ecc2116c3b76d504ed8a880903837b21270"
+  },
+  {
+    "index": 91,
+    "accepted": false,
+    "reason": "とげのある茎を失い、愛を伝える花という文脈だけではバラを識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "aa387e01cc699690d2e29288f711866062bf036dff1d4060c8ae7422f7d808e3"
+  },
+  {
+    "index": 92,
+    "accepted": true,
+    "reason": "丸い円盤から周囲へ光の束が放射状に広がる構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "bc5a4baed8fe9aa6f462a95faa823ccf1bc1fa3876ddb84b502ffe2868474614"
+  },
+  {
+    "index": 93,
+    "accepted": true,
+    "reason": "昼に地面を照らし熱を与える太陽という対象と用途を保ち、形名だけではない。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "a9e71c243d57818ded100cf56efa0a5bdfb398539f6512491199bab66667038d"
+  },
+  {
+    "index": 94,
+    "accepted": true,
+    "reason": "六方向への枝と、その枝からの細かい枝分かれという構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "81b1663581efc8b7885b3ebc7016020ff971a1edec08007290a3a97d733ef444"
+  },
+  {
+    "index": 95,
+    "accepted": true,
+    "reason": "冬に降る小さく対称な氷粒を拡大した姿という特徴を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "a56f38517acea33ea94fe82942b45b5aa1520301afac8face6ec22c3dc3a8e18"
+  },
+  {
+    "index": 96,
+    "accepted": true,
+    "reason": "丸い円盤の外周に等間隔の歯が並ぶ構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "d0c3cc5e5ea21932378ce1feb3611f046ec18c396b8352767b5ade9af2749767"
+  },
+  {
+    "index": 97,
+    "accepted": true,
+    "reason": "歯の噛み合いで回転の力を次の部品へ伝える機構という用途を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "06a92d7f8957b43fad2d1acb340ec293c329cf593c4956f01fe2dbb683330e59"
+  },
+  {
+    "index": 98,
+    "accepted": true,
+    "reason": "折れ線、鋭い屈曲、細い尖った末端という主要幾何を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "705dba50d878998c816338490d794a4a19e4eba50c5a1300fdbc11cf1a5313ce"
+  },
+  {
+    "index": 99,
+    "accepted": true,
+    "reason": "雷雨の空を一瞬走る折れ曲がった強い光という対象を保つ。 sourceTextとの完全一致で、新しい言い換えではない。",
+    "reasonCode": "accepted_source_duplicate",
+    "sourceDuplicate": true,
+    "textSha256": "66e4d3951bbf3af1aecde59d2a416874d4b2d3e0f6cf1d2c8cd741063d9994eb"
+  },
+  {
+    "index": 100,
+    "accepted": false,
+    "reason": "「細長い口と下部にある」の係り受けが不自然で、細い口・首・下の長い胴の関係を明瞭に保たない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "c1faba6a826167c07466db118eacf65f3dcfc3b4c6a3cf34a6d22aa2d31eeb28"
+  },
+  {
+    "index": 101,
+    "accepted": false,
+    "reason": "「封める」は不自然な語で、ふたを閉める用途を自然な日本語として表現していない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "7e80ef044239096bb1b7a8d88e9abb09cee9c3937e5720f8e5631d67d565fbba"
+  },
+  {
+    "index": 102,
+    "accepted": false,
+    "reason": "小さな飲み物用の器だけでは、上が広く開き底が閉じる条件を失い、カップを識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "99815bee96638976a53b2bb3e5dbb49e71ab1be898942e43c2e551d3cc260782"
+  },
+  {
+    "index": 103,
+    "accepted": false,
+    "reason": "カップという形名のみで、お茶・コーヒーを口を付けて飲む用途の言い換えがなく、有意な拡張にならない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "508a4fc5d30e306a36d03dfb401a4545d3720fcb95e3ecb60a4a57a0842c7bf7"
+  },
+  {
+    "index": 104,
+    "accepted": true,
+    "reason": "両側に注ぎ口と持ち手を持つ器の主要構造を保つ。丸い胴は省くが対象は識別できる。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "23718d1355956faee950dd1411234814a8340ad71b394a5c287818d779abfb0b"
+  },
+  {
+    "index": 105,
+    "accepted": false,
+    "reason": "お茶を注ぐ器だけでは、茶葉と湯を入れてふたをする条件を失い、急須と他の器を区別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "34446908eff5c5475cba22a0f32d44f45af3bdd424446a07ea3195c10c550edb"
+  },
+  {
+    "index": 106,
+    "accepted": true,
+    "reason": "丸く開く布の面を中央の一本の軸が下から支える構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "a57d1b0502d38c1359d920e9234f16db949852c5b3c8e0481f13d94eb0e17387"
+  },
+  {
+    "index": 107,
+    "accepted": false,
+    "reason": "傘という形名のみで、雨から体を守る用途の言い換えがなく、有意な拡張にならない。",
+    "reasonCode": "label_only",
+    "sourceDuplicate": false,
+    "textSha256": "bbb6574d70298e0130e99a5e2c3696076ff77bfe4dbfad7c7e7ba844d4d7492f"
+  },
+  {
+    "index": 108,
+    "accepted": false,
+    "reason": "「空の金属の形」と「下へ行くように開く」が不自然で、中空で下ほど裾が開く鐘の幾何を明瞭に保たない。",
+    "reasonCode": "malformed_japanese",
+    "sourceDuplicate": false,
+    "textSha256": "334a9d48bb57df542d999c743ffc01f2c02dbec5baf5fddce983777029973177"
+  },
+  {
+    "index": 109,
+    "accepted": true,
+    "reason": "内側・外側を打って大きな音を出す道具という原文の用途を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "0f0253e86f11aa1845db4f4598d91033324b7679bb7d906528e9808cca332d7c"
+  },
+  {
+    "index": 110,
+    "accepted": false,
+    "reason": "丸い薄い覆いと上下の枠を失い、横骨と上の枠だけでは提灯を識別できない。疑問形の「あるか」も混入する。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "4bdbfb897e4f47a0194979c3938749c4396a407f6c14e998d9a8aa05a3135a31"
+  },
+  {
+    "index": 111,
+    "accepted": false,
+    "reason": "祭りで吊るす物体を「吊り花」へ変えており、提灯の対象を取り違える。",
+    "reasonCode": "semantic_change",
+    "sourceDuplicate": false,
+    "textSha256": "42e3e55fe9b2dc84724afe2823edbd1ea65d3c185342469d8f81f6b19109da78"
+  },
+  {
+    "index": 112,
+    "accepted": false,
+    "reason": "同じ原文を二度、装飾付きで反復する返信で、簡潔な日本語の言い換えとして有意な拡張にならない。原文の一部を削除して修復することはしない。",
+    "reasonCode": "explanation_or_repetition",
+    "sourceDuplicate": false,
+    "textSha256": "7dec8ba8ed99b0e5399c6b5f2be00c83e81f073b807f3cf5673708f48df965b9"
+  },
+  {
+    "index": 113,
+    "accepted": false,
+    "reason": "英語のみの本文で、日本語caption条件を満たさない。",
+    "reasonCode": "foreign_language_only",
+    "sourceDuplicate": false,
+    "textSha256": "a3da4e8c3204af44790cc37fc5a4a86d6bb88fd0564699bc6e8a9ef95201e4f6"
+  },
+  {
+    "index": 114,
+    "accepted": false,
+    "reason": "一本の管が自分の上と下をくぐる自己交差の条件を失い、三つのふくらみと閉じた形だけでは結び目の構造を明瞭に識別できない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "1e628bcaadfe1a6b85c8a8a43c86b88abdb40d485faa4d2e94d734b117d68333"
+  },
+  {
+    "index": 115,
+    "accepted": false,
+    "reason": "ひもを交差させるだけでは絡めてほどけにくくする条件がなく、単なる交差と結び目を区別できない。",
+    "reasonCode": "missing_geometry",
+    "sourceDuplicate": false,
+    "textSha256": "077f5e150f620637b598070a6642de3e8c5e3a9e325c5b8da2c4c07c3e1798b5"
+  },
+  {
+    "index": 116,
+    "accepted": true,
+    "reason": "幅のある連続面が立ち上がり先端を内側へ巻く構造を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "4e2f4f0d892dca90f66384cc9faf430e1d725084e54649cd53f34758d3211921"
+  },
+  {
+    "index": 117,
+    "accepted": true,
+    "reason": "海岸へ向かう水のうねりが上のふちを丸めて崩れる姿を保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "288be0851b656fadea7b03a6ce4ecdb9a29fb66a667e00dbb04b2314f94674eb"
+  },
+  {
+    "index": 118,
+    "accepted": true,
+    "reason": "中央の結合部と、左右に広がる二つのふくらんだループを保つ。",
+    "reasonCode": "accepted",
+    "sourceDuplicate": false,
+    "textSha256": "5014d9eecc5bd4f8b245f7e2bdfc434e058cef2726339cf0d19faef5870898e7"
+  },
+  {
+    "index": 119,
+    "accepted": false,
+    "reason": "結びを付けた帯だけでは、左右の輪と垂れる端を失い、リボンの蝶結びの形を識別できない。",
+    "reasonCode": "insufficient_identity",
+    "sourceDuplicate": false,
+    "textSha256": "892b9a905dd949df2eb82db5407374c1065aa11b1cb15ee4b27e12a0a4ed240d"
+  }
+]

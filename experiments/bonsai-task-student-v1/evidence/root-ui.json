@@ -1,0 +1,54 @@
+{
+  "dateUTC": "2026-10-03T10:18:02.215066+00:00",
+  "surfaceScreenshot": {
+    "file": "surface-rules-before-static.png",
+    "scope": "Early headless Chrome rules-only surface capture before static encoder UI integration; shows unchanged authored glyph surface, not semantic inference success."
+  },
+  "rootIAB": {
+    "url": "http://127.0.0.1:4298/prototypes/glyph-creature/src/task-student-v1/preview.html",
+    "method": "Native in-app browser accessibility actions: Return, Japanese paste, Return, HELP, compare, more input.",
+    "observations": [
+      {
+        "text": "赤い花瓶",
+        "provider": "static-seed",
+        "shape": "vase",
+        "length": "neutral",
+        "width": "neutral",
+        "bend": "straight",
+        "added": 256
+      },
+      {
+        "action": "compare",
+        "providers": [
+          "static-seed",
+          "static-bonsai8",
+          "student",
+          "bonsai4",
+          "seed-baseline",
+          "rules"
+        ],
+        "allShapes": "vase",
+        "noLoadError": true
+      },
+      {
+        "text": "白い全体を細くして縦に伸ばした花瓶",
+        "provider": "static-seed",
+        "shape": "vase",
+        "length": "long",
+        "width": "neutral",
+        "bend": "straight",
+        "added": 4352,
+        "note": "Width narrow request not recognized; retained as an observed failure, no model tuning."
+      },
+      {
+        "text": "今日は作業を進めた",
+        "provider": "student",
+        "shape": "hold",
+        "added": 2304,
+        "note": "Prior vase is retained; this is a named QA case, not fresh semantic evaluation."
+      }
+    ],
+    "consoleErrorCount": 0,
+    "scope": "Japanese paste verified. Native IME composition, Windows16GB, full widget RAM/CPU/power not verified."
+  }
+}

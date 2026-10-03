@@ -1,0 +1,226 @@
+{
+  "normalization": "NFKC + lowercase + whitespace and Unicode punctuation removal",
+  "phraseThresholdCharacters": 8,
+  "strongReviewCriterion": "12+ contiguous chars OR 8+ chars and >=40% of shorter normalized text",
+  "interpretation": "A substring match is a review flag, not proof of shared provenance or leakage. Matching natural shape features is expected in the same ontology. No candidate or label adjustments follow this audit.",
+  "corpora": {
+    "seed-corpus.json": {
+      "sha256": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+      "methodsUsingCorpus": [
+        "seed",
+        "static-seed"
+      ],
+      "totalRows": 17289,
+      "uniqueTextFamilyRecords": 5544,
+      "splits": {
+        "dev": {
+          "sourceRows": 4308,
+          "uniqueTextFamilyRecords": 1212,
+          "uniqueTexts": 1212,
+          "exactFamilyIdOverlap": 0,
+          "literalExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "normalizedExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "strongPhrase": {
+            "pairs": 1,
+            "evaluationCases": 1,
+            "evaluationIds": [
+              "hold-013"
+            ]
+          },
+          "anyPhrase8": {
+            "pairs": 1,
+            "evaluationCases": 1
+          },
+          "maximumMatchingChars": 9
+        },
+        "train": {
+          "sourceRows": 12981,
+          "uniqueTextFamilyRecords": 4332,
+          "uniqueTexts": 4332,
+          "exactFamilyIdOverlap": 0,
+          "literalExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "normalizedExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "strongPhrase": {
+            "pairs": 12,
+            "evaluationCases": 4,
+            "evaluationIds": [
+              "description-015",
+              "description-016",
+              "description-045",
+              "hold-008"
+            ]
+          },
+          "anyPhrase8": {
+            "pairs": 43,
+            "evaluationCases": 10
+          },
+          "maximumMatchingChars": 11
+        }
+      }
+    },
+    "bonsai4-corpus.json": {
+      "sha256": "9212a59a03eb600013496337b9474973002ab539c9fd594cf79be60269a9ee07",
+      "methodsUsingCorpus": [
+        "bonsai4"
+      ],
+      "totalRows": 17361,
+      "uniqueTextFamilyRecords": 5616,
+      "splits": {
+        "dev": {
+          "sourceRows": 4308,
+          "uniqueTextFamilyRecords": 1212,
+          "uniqueTexts": 1212,
+          "exactFamilyIdOverlap": 0,
+          "literalExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "normalizedExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "strongPhrase": {
+            "pairs": 1,
+            "evaluationCases": 1,
+            "evaluationIds": [
+              "hold-013"
+            ]
+          },
+          "anyPhrase8": {
+            "pairs": 1,
+            "evaluationCases": 1
+          },
+          "maximumMatchingChars": 9
+        },
+        "train": {
+          "sourceRows": 13053,
+          "uniqueTextFamilyRecords": 4404,
+          "uniqueTexts": 4404,
+          "exactFamilyIdOverlap": 0,
+          "literalExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "normalizedExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "strongPhrase": {
+            "pairs": 16,
+            "evaluationCases": 4,
+            "evaluationIds": [
+              "description-015",
+              "description-016",
+              "description-045",
+              "hold-008"
+            ]
+          },
+          "anyPhrase8": {
+            "pairs": 51,
+            "evaluationCases": 10
+          },
+          "maximumMatchingChars": 11
+        }
+      }
+    },
+    "bonsai8-corpus.json": {
+      "sha256": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+      "methodsUsingCorpus": [
+        "bonsai8",
+        "static-bonsai8"
+      ],
+      "totalRows": 17481,
+      "uniqueTextFamilyRecords": 5736,
+      "splits": {
+        "dev": {
+          "sourceRows": 4308,
+          "uniqueTextFamilyRecords": 1212,
+          "uniqueTexts": 1212,
+          "exactFamilyIdOverlap": 0,
+          "literalExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "normalizedExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "strongPhrase": {
+            "pairs": 1,
+            "evaluationCases": 1,
+            "evaluationIds": [
+              "hold-013"
+            ]
+          },
+          "anyPhrase8": {
+            "pairs": 1,
+            "evaluationCases": 1
+          },
+          "maximumMatchingChars": 9
+        },
+        "train": {
+          "sourceRows": 13173,
+          "uniqueTextFamilyRecords": 4524,
+          "uniqueTexts": 4524,
+          "exactFamilyIdOverlap": 0,
+          "literalExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "normalizedExact": {
+            "pairs": 0,
+            "evaluationCases": 0,
+            "evaluationIds": []
+          },
+          "strongPhrase": {
+            "pairs": 13,
+            "evaluationCases": 5,
+            "evaluationIds": [
+              "description-015",
+              "description-016",
+              "description-036",
+              "description-045",
+              "hold-008"
+            ]
+          },
+          "anyPhrase8": {
+            "pairs": 51,
+            "evaluationCases": 11
+          },
+          "maximumMatchingChars": 11
+        }
+      }
+    }
+  },
+  "detailsFile": "overlap-details.jsonl",
+  "detailsSHA256": "42350d2e3b5e679c954eb928ca8947d009d3a652de521b345223ebe22855af05",
+  "evaluationSHA256": "cba265119e549427e5cb77f725b2745952b2fbe27c23fa5e6b5ee5626a730a04",
+  "candidateFreezeSHA256": "b54b95abb6896512d6777652304d227a623be034738f9daed10ebfb1cbaeeaeb",
+  "sameCorpusAliasChecks": {
+    "static-seedEqualsSeed": true,
+    "static-bonsai8EqualsBonsai8": true
+  }
+}

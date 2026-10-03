@@ -1,0 +1,212 @@
+[
+  {
+    "id": "condense.name",
+    "kind": "train-name",
+    "text": "球体"
+  },
+  {
+    "id": "condense.radial_geometry",
+    "kind": "train-description",
+    "text": "中心からどちらへ向いても同じようにふくらんだ、角のない立体。"
+  },
+  {
+    "id": "condense.section_dev",
+    "kind": "dev-description",
+    "text": "真ん中をどの向きで切っても、切り口の大きさと丸さがそろう立体。"
+  },
+  {
+    "id": "mobius.name",
+    "kind": "train-name",
+    "text": "メビウスの輪"
+  },
+  {
+    "id": "mobius.half_twist",
+    "kind": "train-description",
+    "text": "帯を一度だけ半回転ひねり、両端をつないだ形。"
+  },
+  {
+    "id": "mobius.boundary_dev",
+    "kind": "dev-description",
+    "text": "閉じた帯のふちを指でたどると、一本の線で全体を一周できる。"
+  },
+  {
+    "id": "cube.name",
+    "kind": "train-name",
+    "text": "立方体"
+  },
+  {
+    "id": "cube.equal_faces",
+    "kind": "train-description",
+    "text": "六つの面がどれも同じ大きさの正方形になった立体。"
+  },
+  {
+    "id": "cube.vertices_dev",
+    "kind": "dev-description",
+    "text": "八つの角が対称に並び、机へ置くと一つの平面で安定する均等な塊。"
+  },
+  {
+    "id": "jellyfish.name",
+    "kind": "train-name",
+    "text": "くらげ"
+  },
+  {
+    "id": "jellyfish.umbrella_body",
+    "kind": "train-description",
+    "text": "半透明の丸い傘の下から、何本もの細い触手が垂れている。"
+  },
+  {
+    "id": "jellyfish.stinging_cells_dev",
+    "kind": "dev-description",
+    "text": "体のふちに刺すための細胞があり、触れると痛むことのある水中の生物。"
+  },
+  {
+    "id": "vase.name",
+    "kind": "train-name",
+    "text": "花瓶"
+  },
+  {
+    "id": "vase.narrow_neck",
+    "kind": "train-description",
+    "text": "胴がふくらみ、上へ向かう首が細くなった口の開いた容器。"
+  },
+  {
+    "id": "vase.hand_access_dev",
+    "kind": "dev-description",
+    "text": "口から手を入れにくい一方、内部の下側には十分な容量がある容器。"
+  },
+  {
+    "id": "snake.name",
+    "kind": "train-name",
+    "text": "蛇"
+  },
+  {
+    "id": "snake.limbless_body",
+    "kind": "train-description",
+    "text": "手足がなく、長い胴が一本の曲線となって地面を進む。"
+  },
+  {
+    "id": "snake.shedding_dev",
+    "kind": "dev-description",
+    "text": "成長すると古い皮を頭の方から脱ぎ、抜け殻を長く残す生き物。"
+  },
+  {
+    "id": "lotus.name",
+    "kind": "train-name",
+    "text": "蓮"
+  },
+  {
+    "id": "lotus.open_layered_petals",
+    "kind": "train-description",
+    "text": "大きな薄片が重なりながら外向きに開き、中央を囲む花。"
+  },
+  {
+    "id": "lotus.seed_pod_dev",
+    "kind": "dev-description",
+    "text": "咲き終わると穴の並んだ蜂の巣状の実が立つ、池の植物。"
+  },
+  {
+    "id": "bottle.name",
+    "kind": "train-name",
+    "text": "瓶"
+  },
+  {
+    "id": "bottle.neck_and_body",
+    "kind": "train-description",
+    "text": "細い口と首の下に、液体をためる長い胴がある容器。"
+  },
+  {
+    "id": "bottle.pouring_dev",
+    "kind": "dev-description",
+    "text": "口を下へ傾けると、保存していた液体が一本の流れとして出る。"
+  },
+  {
+    "id": "probe.ascii-ws",
+    "kind": "normalization-or-contract-probe",
+    "text": "  花瓶\t\n 球体  "
+  },
+  {
+    "id": "probe.fullwidth",
+    "kind": "normalization-or-contract-probe",
+    "text": " ＡＢＣ　花瓶 "
+  },
+  {
+    "id": "probe.combining",
+    "kind": "normalization-or-contract-probe",
+    "text": "é 花瓶"
+  },
+  {
+    "id": "probe.astral",
+    "kind": "normalization-or-contract-probe",
+    "text": "𠮷😀花瓶"
+  },
+  {
+    "id": "probe.case-expansion",
+    "kind": "normalization-or-contract-probe",
+    "text": "İﬃＡ"
+  },
+  {
+    "id": "probe.unicode-16-case",
+    "kind": "normalization-or-contract-probe",
+    "text": "Ᲊ 花瓶"
+  },
+  {
+    "id": "probe.unicode-15-nfkc",
+    "kind": "normalization-or-contract-probe",
+    "text": "𞀰 花瓶"
+  },
+  {
+    "id": "probe.nbsp",
+    "kind": "normalization-or-contract-probe",
+    "text": "花瓶 球体"
+  },
+  {
+    "id": "probe.next-line",
+    "kind": "normalization-or-contract-probe",
+    "text": "花瓶球体"
+  },
+  {
+    "id": "probe.file-separator",
+    "kind": "normalization-or-contract-probe",
+    "text": "花瓶\u001c球体"
+  },
+  {
+    "id": "probe.bom",
+    "kind": "normalization-or-contract-probe",
+    "text": "花瓶﻿球体"
+  },
+  {
+    "id": "probe.empty",
+    "kind": "normalization-or-contract-probe",
+    "text": ""
+  },
+  {
+    "id": "probe.only-space",
+    "kind": "normalization-or-contract-probe",
+    "text": " \t\n "
+  },
+  {
+    "id": "probe.512-chars",
+    "kind": "normalization-or-contract-probe",
+    "text": "ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
+  },
+  {
+    "id": "probe.513-chars",
+    "kind": "normalization-or-contract-probe",
+    "text": "あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
+  },
+  {
+    "id": "probe.whole-modifiers",
+    "kind": "normalization-or-contract-probe",
+    "text": "短い 太い 曲がった 球体"
+  },
+  {
+    "id": "probe.implicit-neck",
+    "kind": "normalization-or-contract-probe",
+    "text": "胴がふくらみ、上へ向かう首が細くなった口の開いた容器。"
+  },
+  {
+    "id": "probe.hold-command",
+    "kind": "normalization-or-contract-probe",
+    "text": "花瓶の姿を作るのはやめて。"
+  }
+]

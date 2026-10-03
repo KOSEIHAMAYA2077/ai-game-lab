@@ -1,0 +1,136 @@
+{
+  "candidates": [
+    {
+      "kind": "bonsai4",
+      "teacherRun": "r2",
+      "acceptedTeacherCaptions": 18,
+      "extraShapeTrainRows": 72,
+      "extraTeacherProvenanceVerified": 72,
+      "acceptedCaptionProvenanceAllTrain": true,
+      "seedRowsIdentical": true,
+      "attributeHeadsByteIdentical": {
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "configurationIdentical": {
+        "dimensions": true,
+        "ngramMin": true,
+        "ngramMax": true,
+        "normalization": true,
+        "hash": true,
+        "seed": true,
+        "epochs": true
+      },
+      "devRowsIdentical": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "devTop1Correct": {
+        "shape": 985,
+        "length": 792,
+        "width": 792,
+        "bend": 912
+      },
+      "baselineDevTop1Correct": {
+        "shape": 985,
+        "length": 792,
+        "width": 792,
+        "bend": 912
+      },
+      "gate": {
+        "score": 0.1,
+        "margin": 0,
+        "coverage": 0,
+        "objective": 0.90125,
+        "positiveAccuracy": 0.8025,
+        "holdAccuracy": 1.0
+      },
+      "baselineGate": {
+        "score": 0.1,
+        "margin": 0,
+        "coverage": 0,
+        "objective": 0.90125,
+        "positiveAccuracy": 0.8025,
+        "holdAccuracy": 1.0
+      },
+      "files": {
+        "artifacts/bonsai4-corpus.json": "9212a59a03eb600013496337b9474973002ab539c9fd594cf79be60269a9ee07",
+        "artifacts/bonsai4-model.json": "938296396ff9471edf500cd4f574015b0010a9317b7e4d3f8e857f23e585ac21",
+        "artifacts/bonsai4-training.json": "247169bb77f9d7f415e30704d575d2c6d9f9218354d5381249e6307148f7369f",
+        "teacher/curated-r2.json": "d5b8c7be2368393aa4f40f28a2b30ba4c3715bf600818550a017a23eb404f436",
+        "teacher/raw-r2.jsonl": "b4d44d7cfbf5bbe25fb5d934bd5b483e8f610b4b6068d160dea87d52c0efc1a7"
+      }
+    },
+    {
+      "kind": "bonsai8",
+      "teacherRun": "r3",
+      "acceptedTeacherCaptions": 48,
+      "extraShapeTrainRows": 192,
+      "extraTeacherProvenanceVerified": 192,
+      "acceptedCaptionProvenanceAllTrain": true,
+      "seedRowsIdentical": true,
+      "attributeHeadsByteIdentical": {
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "configurationIdentical": {
+        "dimensions": true,
+        "ngramMin": true,
+        "ngramMax": true,
+        "normalization": true,
+        "hash": true,
+        "seed": true,
+        "epochs": true
+      },
+      "devRowsIdentical": {
+        "shape": true,
+        "length": true,
+        "width": true,
+        "bend": true
+      },
+      "devTop1Correct": {
+        "shape": 988,
+        "length": 792,
+        "width": 792,
+        "bend": 912
+      },
+      "baselineDevTop1Correct": {
+        "shape": 985,
+        "length": 792,
+        "width": 792,
+        "bend": 912
+      },
+      "gate": {
+        "score": 0.1,
+        "margin": 0,
+        "coverage": 0,
+        "objective": 0.9029166666666666,
+        "positiveAccuracy": 0.8058333333333333,
+        "holdAccuracy": 1.0
+      },
+      "baselineGate": {
+        "score": 0.1,
+        "margin": 0,
+        "coverage": 0,
+        "objective": 0.90125,
+        "positiveAccuracy": 0.8025,
+        "holdAccuracy": 1.0
+      },
+      "files": {
+        "artifacts/bonsai8-corpus.json": "dc18ab990a2248014f2645b08b46522181f4e0fb4ef9dfdbb3a8db1a7ace98d2",
+        "artifacts/bonsai8-model.json": "dfab621131dfe2858bbbd04aaabde95e06194c2539530a0578ef331684f283b0",
+        "artifacts/bonsai8-training.json": "b171c63eb7ae96b6d4f60145ae34332b02089a9753ede2fc8e921dbb5d1536bb",
+        "teacher/curated-r3.json": "6d1100c3bfcc4774fd8a4d0283cc8904f5d78a626f0d3466dc3481c78b97116b",
+        "teacher/raw-r3.jsonl": "00a3909e49777e7ebba55997f04dd1b95f138803855c090c20490b1d2db05621"
+      }
+    }
+  ],
+  "issues": [],
+  "baselineCorpusSha256": "c6f1d1b94b185bff626c7d4d7c0dcea82c9c93201e8d21214000cdf214467e53",
+  "baselineModelSha256": "be6db7dacbc6e6ea4c567dedd1da2eef764f9bb86f5dd2780da59c9dbee24f7d",
+  "scope": "Teacher/corpus/development only. No frozen evaluation data. Byte-identical attrs/config/dev data isolate the comparison to extra shape training captions and resulting shape fit/dev-selected gate. This is output-based supervision, not an isolated soft-target/logit distillation claim."
+}

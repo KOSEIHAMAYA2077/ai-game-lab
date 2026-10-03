@@ -1,0 +1,28 @@
+:root { color-scheme: dark; font-family: ui-monospace, "Hiragino Kaku Gothic ProN", monospace; background: #000; color: #bdbdbd; font-size: 13px; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+[hidden] { display: none !important; }
+#scene { position: fixed; inset: 0; outline: none; touch-action: none; }
+#scene canvas { display: block; width: 100%; height: 100%; }
+button, input, select { font: inherit; color: inherit; }
+button, select { background: #050505; border: 1px solid #505050; border-radius: 0; padding: 5px 9px; cursor: pointer; }
+button:hover, select:hover { border-color: #c0c0c0; }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 1px solid #ededed; outline-offset: 3px; }
+button:disabled { cursor: default; opacity: .45; }
+#start-prompt { position: fixed; bottom: 17%; left: 50%; transform: translateX(-50%); border: 0; background: transparent; color: #898989; }
+#actions { position: fixed; right: 15px; bottom: 15px; display: flex; gap: 6px; }
+#terminal { position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: min(800px, calc(100% - 30px)); background: rgba(0,0,0,.96); border: 1px solid #555; padding: 10px 12px; }
+.input-line { display: flex; align-items: center; gap: 10px; }
+.input-line label { color: #aaa; }
+#text-input { flex: 1; min-width: 0; background: transparent; border: 0; outline-offset: 4px; padding: 4px 0; font-size: 18px; }
+#text-input::placeholder { color: #555; }
+#status { min-height: 1em; margin: 8px 0 0; color: #929292; }
+#guide { margin-top: 9px; }
+#guide summary { width: fit-content; cursor: pointer; color: #969696; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 9px 16px; margin: 10px 0; }
+.controls label { display: flex; align-items: center; gap: 7px; }
+.controls output { color: #707070; }
+#compare-results { max-height: min(28vh, 200px); overflow: auto; margin: 10px 0 0; font: inherit; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; color: #9b9b9b; }
+.keys { color: #626262; margin: 7px 0 0; }
+#fatal { position: fixed; bottom: 25px; margin: 0 20px; color: #d8d8d8; }
+@media(max-width: 500px) { #actions { right: 10px; bottom: 10px; gap: 4px; } #actions button { padding: 5px 7px; } #terminal { bottom: 10px; width: calc(100% - 20px); padding: 9px; } #text-input { font-size: 16px; } }

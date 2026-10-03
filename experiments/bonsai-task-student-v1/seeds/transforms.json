@@ -1,0 +1,353 @@
+[
+  {
+    "head": "length",
+    "value": "short",
+    "phrases": [
+      {
+        "family": "length.direct_length",
+        "text": "短い",
+        "split": "train"
+      },
+      {
+        "family": "length.direct_length",
+        "text": "短めの",
+        "split": "train"
+      },
+      {
+        "family": "length.axis_reduction",
+        "text": "全体の縦寸法を縮めた",
+        "split": "train"
+      },
+      {
+        "family": "length.low_height",
+        "text": "高さを低くした",
+        "split": "train"
+      },
+      {
+        "family": "length.compact_stature",
+        "text": "背を低くした",
+        "split": "train"
+      },
+      {
+        "family": "length.abbreviated_body_dev",
+        "text": "寸詰まりにした",
+        "split": "dev"
+      },
+      {
+        "family": "length.abbreviated_body_dev",
+        "text": "全体の丈を切り詰めた",
+        "split": "dev"
+      }
+    ],
+    "notes": "既存形の全体の長さ/縦寸法を基準より縮める。部位だけの短さは全体変更へ転記しない。"
+  },
+  {
+    "head": "length",
+    "value": "neutral",
+    "phrases": [
+      {
+        "family": "length.ordinary_length",
+        "text": "普通の長さの",
+        "split": "train"
+      },
+      {
+        "family": "length.standard_length",
+        "text": "標準の長さの",
+        "split": "train"
+      },
+      {
+        "family": "length.standard_height",
+        "text": "高さは基準どおりの",
+        "split": "train"
+      },
+      {
+        "family": "length.preserve_length",
+        "text": "長さを変えない",
+        "split": "train"
+      },
+      {
+        "family": "length.ordinary_default",
+        "text": "普通の",
+        "split": "train"
+      },
+      {
+        "family": "length.standard_default",
+        "text": "標準の",
+        "split": "train"
+      },
+      {
+        "family": "length.original_measure_dev",
+        "text": "元の縦寸法を保った",
+        "split": "dev"
+      },
+      {
+        "family": "length.original_measure_dev",
+        "text": "長さは伸ばしも縮めもしない",
+        "split": "dev"
+      }
+    ],
+    "notes": "長さの変更指定がなければneutral。普通/標準だけの指定も全headで基準状態とする。"
+  },
+  {
+    "head": "length",
+    "value": "long",
+    "phrases": [
+      {
+        "family": "length.direct_length",
+        "text": "長い",
+        "split": "train"
+      },
+      {
+        "family": "length.direct_length",
+        "text": "長めの",
+        "split": "train"
+      },
+      {
+        "family": "length.axis_extension",
+        "text": "全体の縦寸法を伸ばした",
+        "split": "train"
+      },
+      {
+        "family": "length.tall_height",
+        "text": "高さを高くした",
+        "split": "train"
+      },
+      {
+        "family": "length.tall_stature",
+        "text": "背を高くした",
+        "split": "train"
+      },
+      {
+        "family": "length.extended_body_dev",
+        "text": "全体の丈を大きく延ばした",
+        "split": "dev"
+      },
+      {
+        "family": "length.extended_body_dev",
+        "text": "縦方向に引き伸ばした",
+        "split": "dev"
+      }
+    ],
+    "notes": "既存形の全体の長さ/縦寸法を基準より伸ばす。自然に長い剣や蛇の同定描写だけではlongとしない。"
+  },
+  {
+    "head": "width",
+    "value": "narrow",
+    "phrases": [
+      {
+        "family": "width.direct_width",
+        "text": "細い",
+        "split": "train"
+      },
+      {
+        "family": "width.direct_width",
+        "text": "細めの",
+        "split": "train"
+      },
+      {
+        "family": "width.narrow_width",
+        "text": "幅が狭い",
+        "split": "train"
+      },
+      {
+        "family": "width.axis_reduction",
+        "text": "全体の横幅を縮めた",
+        "split": "train"
+      },
+      {
+        "family": "width.slender_whole",
+        "text": "全体をほっそりさせた",
+        "split": "train"
+      },
+      {
+        "family": "width.slim_profile_dev",
+        "text": "胴回りを絞った",
+        "split": "dev"
+      },
+      {
+        "family": "width.slim_profile_dev",
+        "text": "横方向にすぼめた",
+        "split": "dev"
+      }
+    ],
+    "notes": "全体の横幅/太さへの変更だけを表す。花瓶の首や蜘蛛の足が細いという固有特徴を全体幅へ転記しない。"
+  },
+  {
+    "head": "width",
+    "value": "neutral",
+    "phrases": [
+      {
+        "family": "width.ordinary_width",
+        "text": "普通の太さの",
+        "split": "train"
+      },
+      {
+        "family": "width.standard_width",
+        "text": "幅は標準の",
+        "split": "train"
+      },
+      {
+        "family": "width.preserve_width",
+        "text": "太さを変えない",
+        "split": "train"
+      },
+      {
+        "family": "width.baseline_width",
+        "text": "横幅は基準どおりの",
+        "split": "train"
+      },
+      {
+        "family": "width.ordinary_default",
+        "text": "普通の",
+        "split": "train"
+      },
+      {
+        "family": "width.standard_default",
+        "text": "標準の",
+        "split": "train"
+      },
+      {
+        "family": "width.original_measure_dev",
+        "text": "元の横寸法を保った",
+        "split": "dev"
+      },
+      {
+        "family": "width.original_measure_dev",
+        "text": "幅を広げも狭めもしない",
+        "split": "dev"
+      }
+    ],
+    "notes": "幅の変更指定がなければneutral。標準形の部位比率を保つ。"
+  },
+  {
+    "head": "width",
+    "value": "wide",
+    "phrases": [
+      {
+        "family": "width.direct_width",
+        "text": "太い",
+        "split": "train"
+      },
+      {
+        "family": "width.direct_width",
+        "text": "太めの",
+        "split": "train"
+      },
+      {
+        "family": "width.wide_width",
+        "text": "幅が広い",
+        "split": "train"
+      },
+      {
+        "family": "width.axis_extension",
+        "text": "全体の横幅を広げた",
+        "split": "train"
+      },
+      {
+        "family": "width.plump_whole",
+        "text": "全体をふっくらさせた",
+        "split": "train"
+      },
+      {
+        "family": "width.bulky_profile_dev",
+        "text": "胴回りを増した",
+        "split": "dev"
+      },
+      {
+        "family": "width.bulky_profile_dev",
+        "text": "横方向に張り出させた",
+        "split": "dev"
+      }
+    ],
+    "notes": "全体の横幅/太さを基準より増す。花弁が広がる等の同定描写は単独では全体変更指定にしない。"
+  },
+  {
+    "head": "bend",
+    "value": "straight",
+    "phrases": [
+      {
+        "family": "bend.direct_straight",
+        "text": "まっすぐな",
+        "split": "train"
+      },
+      {
+        "family": "bend.direct_straight",
+        "text": "直線的な",
+        "split": "train"
+      },
+      {
+        "family": "bend.no_bend",
+        "text": "曲げない",
+        "split": "train"
+      },
+      {
+        "family": "bend.preserve_axis",
+        "text": "軸をそのままにした",
+        "split": "train"
+      },
+      {
+        "family": "bend.ordinary_default",
+        "text": "普通の",
+        "split": "train"
+      },
+      {
+        "family": "bend.standard_default",
+        "text": "標準の",
+        "split": "train"
+      },
+      {
+        "family": "bend.rectilinear_dev",
+        "text": "折れやたわみを加えない",
+        "split": "dev"
+      },
+      {
+        "family": "bend.rectilinear_dev",
+        "text": "中心線を一直線に保った",
+        "split": "dev"
+      }
+    ],
+    "notes": "追加の曲げ指定がなければstraight。本来曲面のメビウス/円環等を数学的に直線へ作り替える意味ではなく、基準形への追加bendがない状態。"
+  },
+  {
+    "head": "bend",
+    "value": "curved",
+    "phrases": [
+      {
+        "family": "bend.direct_curve",
+        "text": "曲がった",
+        "split": "train"
+      },
+      {
+        "family": "bend.direct_curve",
+        "text": "曲げた",
+        "split": "train"
+      },
+      {
+        "family": "bend.bent_axis",
+        "text": "全体の軸を曲げた",
+        "split": "train"
+      },
+      {
+        "family": "bend.bowed_body",
+        "text": "全体を弓なりにした",
+        "split": "train"
+      },
+      {
+        "family": "bend.bending_action",
+        "text": "しなるように変形させた",
+        "split": "train"
+      },
+      {
+        "family": "bend.deviating_axis_dev",
+        "text": "中心線を横へたわませた",
+        "split": "dev"
+      },
+      {
+        "family": "bend.deviating_axis_dev",
+        "text": "姿全体をゆるく湾曲させた",
+        "split": "dev"
+      }
+    ],
+    "notes": "基準形に追加する全体の曲げ。螺旋/蛇の既存の曲線や傘の持ち手だけの曲がりは、そのまま全体bendラベルへ転記しない。"
+  }
+]

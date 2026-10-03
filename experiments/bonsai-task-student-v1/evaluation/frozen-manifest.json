@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "frozenAtUTC": "2026-10-03T09:18:19.155565+00:00",
+  "expectationsFrozen": true,
+  "provenance": "Independent AI-authored and AI-labelled artificial evaluation. No human evaluation. No training/dev data or model predictions were read during authoring.",
+  "counts": {
+    "description": 120,
+    "named": 60,
+    "hold": 40,
+    "modifier": 24
+  },
+  "total": 244,
+  "shapeVocabularySize": 60,
+  "descriptionCasesPerPrimaryShape": 2,
+  "namedCasesPerShape": 1,
+  "families": 244,
+  "acceptance": "A prediction is shape-correct when it is a member of acceptedShapes. Single-output predictions only. Per-category and primary-shape macro results are reported.",
+  "attributeContract": "length:short|neutral|long; width:narrow|neutral|wide; bend:straight|curved. Neutral/straight when unspecified. Identity-inherent geometry descriptions do not request additional deformation.",
+  "modifierDistributions": {
+    "length": {
+      "short": 5,
+      "long": 6,
+      "neutral": 13
+    },
+    "width": {
+      "neutral": 11,
+      "narrow": 7,
+      "wide": 6
+    },
+    "bend": {
+      "straight": 15,
+      "curved": 9
+    }
+  },
+  "datasetFile": "frozen-cases.jsonl",
+  "sha256": "cba265119e549427e5cb77f725b2745952b2fbe27c23fa5e6b5ee5626a730a04",
+  "freezePolicy": "Expectations cannot be changed after this manifest. An error found later must be described, not silently relabelled. Root receives counts/hash/schema only until its model/data/config are frozen. No candidate tuning from this evaluation.",
+  "schema": {
+    "id": "unique string",
+    "category": "description|named|hold|modifier",
+    "subcategory": "optional negation|unrelated",
+    "family": "unique source family string",
+    "text": "Japanese short sentence",
+    "primaryShape": "60-shape catalog label|hold",
+    "expected": {
+      "acceptedShapes": "nonempty array of permissible catalog labels or hold",
+      "length": "short|neutral|long",
+      "width": "narrow|neutral|wide",
+      "bend": "straight|curved"
+    },
+    "labelSource": "AI-authored"
+  }
+}

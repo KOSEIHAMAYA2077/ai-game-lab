@@ -1,0 +1,2469 @@
+[
+  {
+    "shape": "condense",
+    "name": "球体",
+    "aliases": [
+      "球",
+      "ボール",
+      "まるい塊"
+    ],
+    "descriptions": [
+      {
+        "family": "condense.radial_geometry",
+        "text": "中心からどちらへ向いても同じようにふくらんだ、角のない立体。",
+        "split": "train"
+      },
+      {
+        "family": "condense.sport_object",
+        "text": "蹴ったり投げたりして遊ぶ、ころころ転がる丸い物。",
+        "split": "train"
+      },
+      {
+        "family": "condense.touch_profile",
+        "text": "手のひらで包むとどこにも尖りがなく、なめらかな面だけがある。",
+        "split": "train"
+      },
+      {
+        "family": "condense.aggregation",
+        "text": "粒が一か所へ集まり、ひとつの丸いかたまりになっている。",
+        "split": "train"
+      },
+      {
+        "family": "condense.section_dev",
+        "text": "真ん中をどの向きで切っても、切り口の大きさと丸さがそろう立体。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "egg",
+      "droplet"
+    ],
+    "notes": "丸いだけの描写は広い。片端の非対称や尖りを指定する文は卵/雫へ分ける。"
+  },
+  {
+    "shape": "vortex",
+    "name": "渦",
+    "aliases": [
+      "うず",
+      "渦巻き",
+      "うずまき"
+    ],
+    "descriptions": [
+      {
+        "family": "vortex.flow_geometry",
+        "text": "外側の広い流れが回りながら中央の細いところへ巻き込まれる。",
+        "split": "train"
+      },
+      {
+        "family": "vortex.drain_context",
+        "text": "排水口へ水がくるくる吸い込まれるような形。",
+        "split": "train"
+      },
+      {
+        "family": "vortex.air_motion",
+        "text": "強い風が一つの中心をめぐり、巻き上がる姿。",
+        "split": "train"
+      },
+      {
+        "family": "vortex.nested_path",
+        "text": "回転の半径が少しずつ変わり、内と外が続く流路を描いている。",
+        "split": "train"
+      },
+      {
+        "family": "vortex.unequal_turns_dev",
+        "text": "巻かれた道の間隔や大きさが均一でなく、中央へ寄るほど密になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "helix",
+      "shell"
+    ],
+    "notes": "流れの中心への巻込みが主題。等半径で上下へ続くばねとは区別する。"
+  },
+  {
+    "shape": "orbit",
+    "name": "軌道",
+    "aliases": [
+      "原子軌道",
+      "電子軌道",
+      "オービット"
+    ],
+    "descriptions": [
+      {
+        "family": "orbit.center_and_paths",
+        "text": "小さな中心のまわりを、向きの違ういくつもの周回路が取り囲む。",
+        "split": "train"
+      },
+      {
+        "family": "orbit.atom_diagram",
+        "text": "原子模型のように、核を囲む電子の道を立体的に重ねたい。",
+        "split": "train"
+      },
+      {
+        "family": "orbit.crossed_loops",
+        "text": "傾きの違う楕円状の道が、同じ中心を共有して交差している。",
+        "split": "train"
+      },
+      {
+        "family": "orbit.revolution",
+        "text": "中央に核を置き、点がそのまわりを何周もめぐる構造。",
+        "split": "train"
+      },
+      {
+        "family": "orbit.oblique_view_dev",
+        "text": "横から見ると外側の筋が互いに斜めに重なり、中央だけ小さな塊が残る。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "saturn",
+      "ring"
+    ],
+    "notes": "古典的な原子模型を図式として使う。複数の傾いた周回路が特徴で、実際の電子の位置を断定しない。"
+  },
+  {
+    "shape": "mobius",
+    "name": "メビウスの輪",
+    "aliases": [
+      "メビウス",
+      "メビュウス",
+      "メビウス帯"
+    ],
+    "descriptions": [
+      {
+        "family": "mobius.half_twist",
+        "text": "帯を一度だけ半回転ひねり、両端をつないだ形。",
+        "split": "train"
+      },
+      {
+        "family": "mobius.one_surface",
+        "text": "表をたどり続けると、途中で裏へ回って元へ戻る不思議な帯。",
+        "split": "train"
+      },
+      {
+        "family": "mobius.paper_craft",
+        "text": "紙テープの端を反転させて貼り合わせる工作の形。",
+        "split": "train"
+      },
+      {
+        "family": "mobius.continuous_route",
+        "text": "ひねりを越えても道が途切れず、同じ帯の上をずっと進める。",
+        "split": "train"
+      },
+      {
+        "family": "mobius.boundary_dev",
+        "text": "閉じた帯のふちを指でたどると、一本の線で全体を一周できる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "ring",
+      "ribbon"
+    ],
+    "notes": "一度の半ひねりによる片面帯。単にねじれた丸い管まで含めない。"
+  },
+  {
+    "shape": "ring",
+    "name": "円環",
+    "aliases": [
+      "輪",
+      "リング",
+      "ドーナツ",
+      "トーラス"
+    ],
+    "descriptions": [
+      {
+        "family": "ring.hole_geometry",
+        "text": "中央に穴を残して、丸い管が一周つながっている。",
+        "split": "train"
+      },
+      {
+        "family": "ring.food_silhouette",
+        "text": "揚げ菓子のように、真ん中が空いた丸い形。",
+        "split": "train"
+      },
+      {
+        "family": "ring.jewelry_context",
+        "text": "指にはめる飾りのような、切れ目のない丸い物。",
+        "split": "train"
+      },
+      {
+        "family": "ring.loop_construction",
+        "text": "一本の管を曲げて両端をつなぎ、閉じた周回路にした。",
+        "split": "train"
+      },
+      {
+        "family": "ring.tube_section_dev",
+        "text": "中心を通る切断面では、左右に二つの丸い断面が離れて現れる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "orbit",
+      "saturn",
+      "gear"
+    ],
+    "notes": "中央の空洞だけでは歯車や惑星の環と競合する。単独の閉じた丸い管を基準とする。"
+  },
+  {
+    "shape": "cube",
+    "name": "立方体",
+    "aliases": [
+      "キューブ",
+      "サイコロ",
+      "さいころ"
+    ],
+    "descriptions": [
+      {
+        "family": "cube.equal_faces",
+        "text": "六つの面がどれも同じ大きさの正方形になった立体。",
+        "split": "train"
+      },
+      {
+        "family": "cube.dice_context",
+        "text": "一から六までの目を付けて転がす遊び道具の本体。",
+        "split": "train"
+      },
+      {
+        "family": "cube.equal_axes",
+        "text": "縦、横、奥行きがすべて同じ寸法の箱。",
+        "split": "train"
+      },
+      {
+        "family": "cube.puzzle_context",
+        "text": "六面の色をそろえる回転パズルの外側の形。",
+        "split": "train"
+      },
+      {
+        "family": "cube.vertices_dev",
+        "text": "八つの角が対称に並び、机へ置くと一つの平面で安定する均等な塊。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cuboid",
+      "square"
+    ],
+    "notes": "箱だけでは直方体と競合。等辺/等寸の立体を優先する。"
+  },
+  {
+    "shape": "cuboid",
+    "name": "直方体",
+    "aliases": [
+      "長方体",
+      "長方形の箱",
+      "直方体箱"
+    ],
+    "descriptions": [
+      {
+        "family": "cuboid.rectangular_faces",
+        "text": "長方形の平らな面で囲まれた、縦横奥行きのある箱。",
+        "split": "train"
+      },
+      {
+        "family": "cuboid.shipping_context",
+        "text": "荷物を詰める段ボールのように、幅と高さの違う箱。",
+        "split": "train"
+      },
+      {
+        "family": "cuboid.block_profile",
+        "text": "レンガのような、三方向の辺の長さがそろわない角ばった塊。",
+        "split": "train"
+      },
+      {
+        "family": "cuboid.opposite_faces",
+        "text": "向かい合う面どうしが平行で、同じ大きさになった箱形の立体。",
+        "split": "train"
+      },
+      {
+        "family": "cuboid.drawer_dev",
+        "text": "引き出しの外形のように、前後へ続く四本の辺と平らな底がある。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cube",
+      "square"
+    ],
+    "notes": "引き出し等は中空でも外形を対象とする。正方形の平面とは区別する。"
+  },
+  {
+    "shape": "cross",
+    "name": "十字",
+    "aliases": [
+      "十字形",
+      "十字架",
+      "クロス"
+    ],
+    "descriptions": [
+      {
+        "family": "cross.perpendicular_bars",
+        "text": "縦と横の二本の棒が、中央で直角に交わっている。",
+        "split": "train"
+      },
+      {
+        "family": "cross.plus_symbol",
+        "text": "足し算の記号のように、中心から上下左右へ腕が伸びる。",
+        "split": "train"
+      },
+      {
+        "family": "cross.four_arms",
+        "text": "四方向へ突き出した腕が一つの交点でつながる平たい形。",
+        "split": "train"
+      },
+      {
+        "family": "cross.junction_profile",
+        "text": "中央はひとまとまりで、四つの端がそれぞれ外を向く。",
+        "split": "train"
+      },
+      {
+        "family": "cross.concave_corners_dev",
+        "text": "外へ出た四つの部分のあいだに、直角のくぼみが四か所ある輪郭。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "star"
+    ],
+    "notes": "四方向の腕を基準とする。交差という動詞だけでは同定しない。"
+  },
+  {
+    "shape": "triangle",
+    "name": "三角形",
+    "aliases": [
+      "三角",
+      "さんかく",
+      "トライアングル"
+    ],
+    "descriptions": [
+      {
+        "family": "triangle.three_edges",
+        "text": "三本のまっすぐな辺で囲まれた平たい図形。",
+        "split": "train"
+      },
+      {
+        "family": "triangle.roof_outline",
+        "text": "家の屋根の正面のように、上の一点から左右へ斜面が下る。",
+        "split": "train"
+      },
+      {
+        "family": "triangle.three_vertices",
+        "text": "三つの頂点を線で結び、閉じた面を作っている。",
+        "split": "train"
+      },
+      {
+        "family": "triangle.wedge_profile",
+        "text": "下に底辺があり、そこから両側が一つの先端へ集まる輪郭。",
+        "split": "train"
+      },
+      {
+        "family": "triangle.minimal_polygon_dev",
+        "text": "閉じた多角形の中で、辺をこれ以上減らせない面。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cone",
+      "pyramid"
+    ],
+    "notes": "屋根は正面輪郭のみの連想。奥行きのある錐体とは区別する。"
+  },
+  {
+    "shape": "square",
+    "name": "四角形",
+    "aliases": [
+      "正方形",
+      "四角",
+      "スクエア"
+    ],
+    "descriptions": [
+      {
+        "family": "square.four_equal_edges",
+        "text": "四つの辺が同じ長さで、角がすべて直角の平たい面。",
+        "split": "train"
+      },
+      {
+        "family": "square.tile_context",
+        "text": "床のタイル一枚のように、縦と横の長さがそろった図形。",
+        "split": "train"
+      },
+      {
+        "family": "square.front_profile",
+        "text": "奥行きのない板で、上下左右がまっすぐに囲まれている。",
+        "split": "train"
+      },
+      {
+        "family": "square.right_angle_frame",
+        "text": "四本の同じ長さの棒を、直角に曲がりながらつないだ枠。",
+        "split": "train"
+      },
+      {
+        "family": "square.diagonals_dev",
+        "text": "向かい合う角を結ぶ二本の線が、中央で等しく交差する対称な面。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cube",
+      "cuboid"
+    ],
+    "notes": "実装IDの名称は四角形だが、seedは等辺直角の正方形の平面を中心にする。"
+  },
+  {
+    "shape": "fireworks",
+    "name": "花火",
+    "aliases": [
+      "はなび",
+      "打ち上げ花火",
+      "煙火"
+    ],
+    "descriptions": [
+      {
+        "family": "fireworks.radial_burst",
+        "text": "一つの点からたくさんの光の筋が、外側へ放射状に広がる。",
+        "split": "train"
+      },
+      {
+        "family": "fireworks.night_event",
+        "text": "夜空に打ち上がり、音とともに光が大きく開くもの。",
+        "split": "train"
+      },
+      {
+        "family": "fireworks.spark_motion",
+        "text": "光の粒が中心から飛び出して、ゆっくり散りながら消える。",
+        "split": "train"
+      },
+      {
+        "family": "fireworks.burst_profile",
+        "text": "細かな点を放射状に並べ、空中で開いた瞬間を形にする。",
+        "split": "train"
+      },
+      {
+        "family": "fireworks.timed_expansion_dev",
+        "text": "最初は集まっていた発光点が広い範囲へ離れ、最後には暗くなる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "star",
+      "sun"
+    ],
+    "notes": "光点の時間的な拡散を手掛かりにする。静的な放射記号とは区別する。"
+  },
+  {
+    "shape": "dango",
+    "name": "団子",
+    "aliases": [
+      "だんご",
+      "お団子",
+      "串団子"
+    ],
+    "descriptions": [
+      {
+        "family": "dango.three_lobes",
+        "text": "丸い塊を三つ、同じ向きへ一列に並べてつないだ形。",
+        "split": "train"
+      },
+      {
+        "family": "dango.food_context",
+        "text": "もちもちした丸い菓子を、串にいくつか刺している。",
+        "split": "train"
+      },
+      {
+        "family": "dango.beads_profile",
+        "text": "同じ大きさのふくらみが縦に三段連なっている。",
+        "split": "train"
+      },
+      {
+        "family": "dango.skewer_construction",
+        "text": "一本の軸に三個の丸い玉が通り、外側へ並んで見える。",
+        "split": "train"
+      },
+      {
+        "family": "dango.snack_scene_dev",
+        "text": "甘いタレを付けた一口大の塊を、持ち手一本でまとめて食べる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "condense",
+      "capsule"
+    ],
+    "notes": "三つの丸い塊を並べる手書き形。丸い食品一般を一律に同定しない。"
+  },
+  {
+    "shape": "flower",
+    "name": "花",
+    "aliases": [
+      "フラワー",
+      "花びらの花",
+      "はな"
+    ],
+    "descriptions": [
+      {
+        "family": "flower.radial_petals",
+        "text": "中央の芯を囲んで、いくつもの丸い薄片が外へ開く。",
+        "split": "train"
+      },
+      {
+        "family": "flower.bloom_context",
+        "text": "茎の先でつぼみが開き、色のある部分が広がった姿。",
+        "split": "train"
+      },
+      {
+        "family": "flower.plant_structure",
+        "text": "中心にめしべやおしべがあり、その外側に柔らかな薄片が並ぶ。",
+        "split": "train"
+      },
+      {
+        "family": "flower.petal_arrangement",
+        "text": "薄い楕円の片を、中心から外向きに放射状に重ねている。",
+        "split": "train"
+      },
+      {
+        "family": "flower.pollinator_scene_dev",
+        "text": "香りや蜜で昆虫を呼び、受粉を助ける植物の部分。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "lotus",
+      "rose"
+    ],
+    "notes": "一般的な開いた放射花。蓮/薔薇の固有の構造や名称は個別IDを優先する。"
+  },
+  {
+    "shape": "butterfly",
+    "name": "蝶",
+    "aliases": [
+      "ちょうちょ",
+      "チョウチョ",
+      "バタフライ"
+    ],
+    "descriptions": [
+      {
+        "family": "butterfly.paired_wings",
+        "text": "細い胴の左右へ、上下一対ずつ大きな羽が広がっている。",
+        "split": "train"
+      },
+      {
+        "family": "butterfly.garden_flight",
+        "text": "花から花へ飛び、羽をひらひら開いて閉じる昆虫。",
+        "split": "train"
+      },
+      {
+        "family": "butterfly.body_structure",
+        "text": "頭に二本の触角があり、左右の羽はほぼ鏡写しに並ぶ。",
+        "split": "train"
+      },
+      {
+        "family": "butterfly.metamorphosis",
+        "text": "いも虫がさなぎになったあと、四枚の羽を持つ姿へ変わる。",
+        "split": "train"
+      },
+      {
+        "family": "butterfly.wing_rest_dev",
+        "text": "止まると背中の上で大きな羽を立てて合わせる、軽い飛ぶ虫。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "bird",
+      "ribbon"
+    ],
+    "notes": "左右対称だけでは鳥や蝶結びと競合。四枚の羽と昆虫の体を主な手掛かりにする。"
+  },
+  {
+    "shape": "jellyfish",
+    "name": "くらげ",
+    "aliases": [
+      "クラゲ",
+      "海月",
+      "水母"
+    ],
+    "descriptions": [
+      {
+        "family": "jellyfish.umbrella_body",
+        "text": "半透明の丸い傘の下から、何本もの細い触手が垂れている。",
+        "split": "train"
+      },
+      {
+        "family": "jellyfish.sea_drift",
+        "text": "骨のない柔らかな体で、海の中をゆっくり漂う生き物。",
+        "split": "train"
+      },
+      {
+        "family": "jellyfish.pulse_motion",
+        "text": "丸い上半身を縮めたり開いたりして、水を押して進む。",
+        "split": "train"
+      },
+      {
+        "family": "jellyfish.trailing_tentacles",
+        "text": "上のふくらみが先に動き、下の細い糸状の部分が遅れて揺れる。",
+        "split": "train"
+      },
+      {
+        "family": "jellyfish.stinging_cells_dev",
+        "text": "体のふちに刺すための細胞があり、触れると痛むことのある水中の生物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "mushroom",
+      "umbrella"
+    ],
+    "notes": "傘の輪郭だけでは競合。海中/触手/拍動を使う。刺胞は一部の水中生物にも該当するためdevは関連的な手掛かり。"
+  },
+  {
+    "shape": "tree",
+    "name": "木",
+    "aliases": [
+      "樹木",
+      "大樹",
+      "ツリー"
+    ],
+    "descriptions": [
+      {
+        "family": "tree.trunk_canopy",
+        "text": "地面から立つ一本の幹が、上で枝分かれして大きな茂みを支える。",
+        "split": "train"
+      },
+      {
+        "family": "tree.forest_context",
+        "text": "森をつくる背の高い植物で、根を張って何年も成長する。",
+        "split": "train"
+      },
+      {
+        "family": "tree.branch_structure",
+        "text": "中心の幹から左右へ枝が伸び、その先に葉が集まる。",
+        "split": "train"
+      },
+      {
+        "family": "tree.seasonal_growth",
+        "text": "年を重ねるたび幹が太くなり、春には枝先が芽吹く。",
+        "split": "train"
+      },
+      {
+        "family": "tree.annual_rings_dev",
+        "text": "切り株の断面に年ごとの成長の輪が刻まれる植物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "leaf",
+      "flower"
+    ],
+    "notes": "枝や葉だけでは同定しない。幹と全体の植物の姿を対象とする。"
+  },
+  {
+    "shape": "star",
+    "name": "星",
+    "aliases": [
+      "星形",
+      "星型",
+      "スター"
+    ],
+    "descriptions": [
+      {
+        "family": "star.five_points",
+        "text": "中心のまわりに五つの尖りと五つのくぼみが交互に並ぶ。",
+        "split": "train"
+      },
+      {
+        "family": "star.award_symbol",
+        "text": "よくできた答案に付ける、五方向へ尖った印。",
+        "split": "train"
+      },
+      {
+        "family": "star.pointed_outline",
+        "text": "放射状の尖った腕が、ひとつの平たい中心へ集まっている。",
+        "split": "train"
+      },
+      {
+        "family": "star.night_icon",
+        "text": "夜空のきらめきを、尖りのある記号一つで表した形。",
+        "split": "train"
+      },
+      {
+        "family": "star.concave_polygon_dev",
+        "text": "外の頂点と内へ引いた頂点を交互に結び、十本の辺で囲った面。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "sun",
+      "snowflake"
+    ],
+    "notes": "天文学上の恒星一般ではなく、実装の五尖点の記号を基準とする。"
+  },
+  {
+    "shape": "helix",
+    "name": "螺旋",
+    "aliases": [
+      "らせん",
+      "コイル",
+      "スプリング"
+    ],
+    "descriptions": [
+      {
+        "family": "helix.winding_axis",
+        "text": "一本の線が、軸のまわりを回りながら高さを増している。",
+        "split": "train"
+      },
+      {
+        "family": "helix.spring_context",
+        "text": "押すと縮み、放すと戻る金属ばねのような形。",
+        "split": "train"
+      },
+      {
+        "family": "helix.uniform_turns",
+        "text": "同じくらいの半径の周回が、上下方向へ何段も続いている。",
+        "split": "train"
+      },
+      {
+        "family": "helix.screw_route",
+        "text": "ねじの溝のように、一周するごとに前へ進む道。",
+        "split": "train"
+      },
+      {
+        "family": "helix.endpoints_dev",
+        "text": "横から見ると上下に端があり、中央の軸には素材が詰まっていない巻かれた管。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "vortex",
+      "knot",
+      "shell"
+    ],
+    "notes": "上下一定に続く等半径の巻きを基準とする。開いた端がある。"
+  },
+  {
+    "shape": "hourglass",
+    "name": "砂時計",
+    "aliases": [
+      "すなどけい",
+      "砂計",
+      "アワーグラス"
+    ],
+    "descriptions": [
+      {
+        "family": "hourglass.waisted_pair",
+        "text": "上下のふくらんだ容器が、中央の細いくびれでつながる。",
+        "split": "train"
+      },
+      {
+        "family": "hourglass.falling_sand",
+        "text": "上の容器から下へ細かな粒を落とし、時間を測る道具。",
+        "split": "train"
+      },
+      {
+        "family": "hourglass.two_chambers",
+        "text": "ふくらみが上下対称に並び、境目は小さな通路になっている。",
+        "split": "train"
+      },
+      {
+        "family": "hourglass.turnover_use",
+        "text": "上下をひっくり返すと、粒がまた下側へ落ち始める。",
+        "split": "train"
+      },
+      {
+        "family": "hourglass.narrow_passage_dev",
+        "text": "漏斗状の二つの部屋の間を、粒が一筋ずつ通って移動する仕組み。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "vase",
+      "bottle"
+    ],
+    "notes": "上下二部屋と粒の通路を合わせて同定する。中央のくびれ単独は不足する。"
+  },
+  {
+    "shape": "saturn",
+    "name": "土星",
+    "aliases": [
+      "どせい",
+      "環のある惑星",
+      "サターン"
+    ],
+    "descriptions": [
+      {
+        "family": "saturn.planet_and_band",
+        "text": "丸い惑星のまわりを、大きな平たい帯が取り囲んでいる。",
+        "split": "train"
+      },
+      {
+        "family": "saturn.solar_context",
+        "text": "太陽系の六番目にある、目立つ環を持った巨大な惑星。",
+        "split": "train"
+      },
+      {
+        "family": "saturn.equatorial_disk",
+        "text": "中央の丸い本体と、赤道を囲む薄い円盤を組み合わせた姿。",
+        "split": "train"
+      },
+      {
+        "family": "saturn.astronomy_icon",
+        "text": "望遠鏡で見える代表的な環状構造を、惑星の記号として表す。",
+        "split": "train"
+      },
+      {
+        "family": "saturn.ice_particles_dev",
+        "text": "小さな氷や岩の粒が本体の外を帯状に巡る巨大ガス惑星。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "orbit",
+      "ring",
+      "condense"
+    ],
+    "notes": "本体と外周の平たい帯を一体の形として選ぶ。粒の描写は天体側の連想。"
+  },
+  {
+    "shape": "sword",
+    "name": "剣",
+    "aliases": [
+      "つるぎ",
+      "ソード",
+      "刀剣"
+    ],
+    "descriptions": [
+      {
+        "family": "sword.blade_and_grip",
+        "text": "先の尖った長い刃と、握るための柄が一直線につながる。",
+        "split": "train"
+      },
+      {
+        "family": "sword.weapon_context",
+        "text": "手に持って斬ったり突いたりする、刃のある武器。",
+        "split": "train"
+      },
+      {
+        "family": "sword.guard_structure",
+        "text": "細長い金属の刃の根元に、手を守る横向きの部品がある。",
+        "split": "train"
+      },
+      {
+        "family": "sword.hero_equipment",
+        "text": "冒険者が腰へ下げ、戦うときに鞘から抜く道具。",
+        "split": "train"
+      },
+      {
+        "family": "sword.edge_profile_dev",
+        "text": "二つの縁が先端で一点へ集まり、根元の握り部分だけ段差になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "bolt"
+    ],
+    "notes": "刃/柄/鍔のある武器を対象。単に尖った線だけでは確定できない。"
+  },
+  {
+    "shape": "vase",
+    "name": "花瓶",
+    "aliases": [
+      "かびん",
+      "壺",
+      "つぼ"
+    ],
+    "descriptions": [
+      {
+        "family": "vase.narrow_neck",
+        "text": "胴がふくらみ、上へ向かう首が細くなった口の開いた容器。",
+        "split": "train"
+      },
+      {
+        "family": "vase.cut_flower_use",
+        "text": "水を入れて切り花の茎を挿し、室内に飾る器。",
+        "split": "train"
+      },
+      {
+        "family": "vase.pottery_profile",
+        "text": "床につく底は平らで、その上に曲線でふくらむ胴が立つ焼き物。",
+        "split": "train"
+      },
+      {
+        "family": "vase.display_context",
+        "text": "一輪だけを立てて飾れる、上部が開いた卓上の器。",
+        "split": "train"
+      },
+      {
+        "family": "vase.hand_access_dev",
+        "text": "口から手を入れにくい一方、内部の下側には十分な容量がある容器。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "bottle",
+      "cup",
+      "teapot"
+    ],
+    "notes": "名称なしの容器描写には瓶との重複がある。花を活ける用途とふくらんだ胴を主な手掛かりにし、devの容量文は単独では決定不能な可能性がある。"
+  },
+  {
+    "shape": "cone",
+    "name": "円錐",
+    "aliases": [
+      "えんすい",
+      "コーン",
+      "円錐体"
+    ],
+    "descriptions": [
+      {
+        "family": "cone.round_base_apex",
+        "text": "丸い底から側面がすぼまり、上の一点へ集まる立体。",
+        "split": "train"
+      },
+      {
+        "family": "cone.icecream_context",
+        "text": "アイスクリームを載せる、先の尖った受け皿の外形。",
+        "split": "train"
+      },
+      {
+        "family": "cone.straight_generators",
+        "text": "底の周囲から先端へ、まっすぐな斜線が何本も集まる。",
+        "split": "train"
+      },
+      {
+        "family": "cone.party_hat",
+        "text": "パーティーで頭に載せる、丸い裾と一つの頂点がある帽子。",
+        "split": "train"
+      },
+      {
+        "family": "cone.section_triangle_dev",
+        "text": "軸に沿って真ん中を切ると、底辺と二本の斜辺からなる切り口になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "pyramid",
+      "triangle"
+    ],
+    "notes": "丸い底と曲面を基準。断面が三角形でも平面そのものは対象外。"
+  },
+  {
+    "shape": "cylinder",
+    "name": "円柱",
+    "aliases": [
+      "えんちゅう",
+      "シリンダー",
+      "円柱体"
+    ],
+    "descriptions": [
+      {
+        "family": "cylinder.parallel_disks",
+        "text": "同じ大きさの丸い面が上下で平行に並び、その間を側面がつなぐ。",
+        "split": "train"
+      },
+      {
+        "family": "cylinder.can_context",
+        "text": "飲料の缶のように、上から下まで同じ太さの立体。",
+        "split": "train"
+      },
+      {
+        "family": "cylinder.constant_axis",
+        "text": "中心軸に沿って進んでも、横幅が変わらないまっすぐな塊。",
+        "split": "train"
+      },
+      {
+        "family": "cylinder.roll_context",
+        "text": "同じ太さの筒を縦に立て、両端を平らにふさいだ姿。",
+        "split": "train"
+      },
+      {
+        "family": "cylinder.section_rectangle_dev",
+        "text": "中心軸を含む面で切ると、向かい合う二辺が平行な長方形になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "capsule",
+      "bottle",
+      "cup"
+    ],
+    "notes": "容器の中空性は省き外形を対象とする。両端は平ら。"
+  },
+  {
+    "shape": "capsule",
+    "name": "カプセル",
+    "aliases": [
+      "カプセル型",
+      "丸端の筒",
+      "両端丸の柱"
+    ],
+    "descriptions": [
+      {
+        "family": "capsule.rounded_ends",
+        "text": "まっすぐな筒の両端が、半球のように丸く閉じている。",
+        "split": "train"
+      },
+      {
+        "family": "capsule.medicine_context",
+        "text": "粉の薬を中へ包む、つるりとした細長い殻の形。",
+        "split": "train"
+      },
+      {
+        "family": "capsule.stadium_profile",
+        "text": "中央はほぼ同じ幅で、端へ行くと滑らかに丸くすぼまる。",
+        "split": "train"
+      },
+      {
+        "family": "capsule.no_flat_ends",
+        "text": "両端とも平らな切り口がなく、曲面だけで外を包む塊。",
+        "split": "train"
+      },
+      {
+        "family": "capsule.toy_case_dev",
+        "text": "二つに分かれた丸端のケースを合わせ、中へ小さなおもちゃを入れる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cylinder",
+      "egg"
+    ],
+    "notes": "中央の同幅部分と両端の丸みを基準。カプセル玩具の丸い球だけは対象外。"
+  },
+  {
+    "shape": "pyramid",
+    "name": "ピラミッド",
+    "aliases": [
+      "四角錐",
+      "角錐",
+      "四角すい"
+    ],
+    "descriptions": [
+      {
+        "family": "pyramid.square_base_apex",
+        "text": "四角い底から四つの三角面が立ち上がり、頂上の一点で合う。",
+        "split": "train"
+      },
+      {
+        "family": "pyramid.ancient_context",
+        "text": "砂漠に建つ古代エジプトの巨大な墓のような外形。",
+        "split": "train"
+      },
+      {
+        "family": "pyramid.sloping_facets",
+        "text": "周囲の平らな斜面が、底の四辺から同じ先端へ集まっている。",
+        "split": "train"
+      },
+      {
+        "family": "pyramid.stone_stack",
+        "text": "石を積み、上へ行くほど各段の面積が小さくなる建造物の形。",
+        "split": "train"
+      },
+      {
+        "family": "pyramid.five_vertices_dev",
+        "text": "平らな底の四つの角と、その真上に一つの頂点を持つ立体。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cone",
+      "octahedron"
+    ],
+    "notes": "四角錐の全体外形を基準とする。階段状の歴史建造物は近似的連想。"
+  },
+  {
+    "shape": "diamond",
+    "name": "宝石",
+    "aliases": [
+      "ダイヤモンド",
+      "ダイヤ",
+      "ジェム"
+    ],
+    "descriptions": [
+      {
+        "family": "diamond.cut_facets",
+        "text": "上側に小さな平面があり、斜めの面が周囲と下の尖りへ続く立体。",
+        "split": "train"
+      },
+      {
+        "family": "diamond.jewel_context",
+        "text": "指輪に飾る、磨かれた透明な鉱物の形。",
+        "split": "train"
+      },
+      {
+        "family": "diamond.brilliant_profile",
+        "text": "中央の幅広い縁から下へ向かって尖り、上は浅く盛り上がる。",
+        "split": "train"
+      },
+      {
+        "family": "diamond.sparkle_context",
+        "text": "多くの平らな切断面が、光を別々の方向へ反射する飾り。",
+        "split": "train"
+      },
+      {
+        "family": "diamond.cut_stone_dev",
+        "text": "天然の結晶を研磨し、卓上面と周囲の稜線がはっきり見えるようにした石。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "octahedron",
+      "pyramid"
+    ],
+    "notes": "宝石全般の自由な形ではなく、多面にカットした上部卓面と下の尖りを持つ実装の近似。"
+  },
+  {
+    "shape": "octahedron",
+    "name": "八面体",
+    "aliases": [
+      "正八面体",
+      "八面の立体",
+      "オクタヘドロン"
+    ],
+    "descriptions": [
+      {
+        "family": "octahedron.eight_triangles",
+        "text": "同じ形の三角面が八枚集まり、上下へ尖った立体。",
+        "split": "train"
+      },
+      {
+        "family": "octahedron.double_pyramids",
+        "text": "四角い底を共有する二つの角錐を、上下に合わせた形。",
+        "split": "train"
+      },
+      {
+        "family": "octahedron.central_equator",
+        "text": "四つの角が中央の同じ高さにあり、その上と下へ先端が一つずつ伸びる。",
+        "split": "train"
+      },
+      {
+        "family": "octahedron.eight_sided_die",
+        "text": "八種類の数字を付けるゲーム用の骰子の本体。",
+        "split": "train"
+      },
+      {
+        "family": "octahedron.six_vertices_dev",
+        "text": "左右前後と上下の六方向に頂点があり、十二本の辺で結ばれた塊。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "diamond",
+      "pyramid"
+    ],
+    "notes": "正八面体の八つの三角面/六頂点を基準にする。"
+  },
+  {
+    "shape": "heart",
+    "name": "ハート",
+    "aliases": [
+      "ハート形",
+      "心形",
+      "ハートマーク"
+    ],
+    "descriptions": [
+      {
+        "family": "heart.two_lobes_one_tip",
+        "text": "上に二つの丸いふくらみがあり、下は一つの尖りへ集まる。",
+        "split": "train"
+      },
+      {
+        "family": "heart.affection_symbol",
+        "text": "好きな気持ちを伝えるときに使う、左右対称の記号。",
+        "split": "train"
+      },
+      {
+        "family": "heart.central_notch",
+        "text": "上の真ん中にくぼみがあり、左右の肩がふっくら盛り上がる。",
+        "split": "train"
+      },
+      {
+        "family": "heart.card_suit",
+        "text": "トランプで赤く描かれる、丸い肩と下向きの先端を持つ印。",
+        "split": "train"
+      },
+      {
+        "family": "heart.folded_cutout_dev",
+        "text": "紙を半分に折って片側だけ丸く切り、開くと愛情を表す対称な輪郭になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "droplet"
+    ],
+    "notes": "感情そのものは必ずこのIDとしない。愛情を表す視覚記号の描写を対象にする。"
+  },
+  {
+    "shape": "egg",
+    "name": "卵",
+    "aliases": [
+      "たまご",
+      "玉子",
+      "タマゴ"
+    ],
+    "descriptions": [
+      {
+        "family": "egg.unequal_ovoid",
+        "text": "片端が少し細く、反対側が丸く大きい、角のない立体。",
+        "split": "train"
+      },
+      {
+        "family": "egg.bird_food",
+        "text": "鶏が産み、中に黄身と白身が入っている殻付きの食品。",
+        "split": "train"
+      },
+      {
+        "family": "egg.smooth_shell",
+        "text": "ざらつきの少ない殻が中身を包み、尖らずに両端を閉じている。",
+        "split": "train"
+      },
+      {
+        "family": "egg.hatching_context",
+        "text": "温め続けるとひなが中で育ち、殻を割って出てくるもの。",
+        "split": "train"
+      },
+      {
+        "family": "egg.rolling_bias_dev",
+        "text": "机の上で転がすと、片方の丸みが大きいため直線から少しそれる殻の形。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "condense",
+      "capsule",
+      "droplet"
+    ],
+    "notes": "片端の細さはあるが尖りはない。転がりの挙動は理想物体への厳密な証明ではなく連想用。"
+  },
+  {
+    "shape": "droplet",
+    "name": "雫",
+    "aliases": [
+      "しずく",
+      "水滴",
+      "滴",
+      "涙"
+    ],
+    "descriptions": [
+      {
+        "family": "droplet.single_point_lobe",
+        "text": "下側が丸くふくらみ、上側が一つの細い先端になった形。",
+        "split": "train"
+      },
+      {
+        "family": "droplet.falling_water",
+        "text": "蛇口の先で水が小さくまとまり、一粒ずつ落ちる姿。",
+        "split": "train"
+      },
+      {
+        "family": "droplet.tear_context",
+        "text": "目からこぼれる小さな液体の粒を、下の丸みと上の尖りで表す。",
+        "split": "train"
+      },
+      {
+        "family": "droplet.hanging_liquid",
+        "text": "先へぶら下がった液体が、重さで下へふくらんでいる。",
+        "split": "train"
+      },
+      {
+        "family": "droplet.wet_trace_dev",
+        "text": "濡れた窓を流れた跡の先に、ぷっくりした透明な粒が残っている。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "egg",
+      "pear"
+    ],
+    "notes": "自然の落下中の水滴の厳密な物理形状ではなく、丸い下部と尖る上部の図式を基準にする。"
+  },
+  {
+    "shape": "moon",
+    "name": "三日月",
+    "aliases": [
+      "月",
+      "細い月",
+      "クレセント"
+    ],
+    "descriptions": [
+      {
+        "family": "moon.crescent_outline",
+        "text": "二本の異なる弧が両端で合い、中央が曲がった細い面になる。",
+        "split": "train"
+      },
+      {
+        "family": "moon.night_phase",
+        "text": "夜空の丸い天体が、細い一部分だけ光って見える姿。",
+        "split": "train"
+      },
+      {
+        "family": "moon.two_tips",
+        "text": "内側が大きくえぐれ、上下の両端が細く尖った形。",
+        "split": "train"
+      },
+      {
+        "family": "moon.bitten_disk",
+        "text": "丸い円盤の片側を、別の丸い形で大きくくり抜いた輪郭。",
+        "split": "train"
+      },
+      {
+        "family": "moon.waxing_scene_dev",
+        "text": "新しく満ち始めた夜空で、日没のあと西の空に薄く残る光の弧。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "ring",
+      "condense"
+    ],
+    "notes": "月という別名は位相一般を含むが、本IDは欠けた弧の三日月を表示する。"
+  },
+  {
+    "shape": "cloud",
+    "name": "雲",
+    "aliases": [
+      "くも",
+      "白雲",
+      "クラウド"
+    ],
+    "descriptions": [
+      {
+        "family": "cloud.puffy_lobes",
+        "text": "丸いふくらみが何個も寄り集まり、輪郭がもこもこしている。",
+        "split": "train"
+      },
+      {
+        "family": "cloud.sky_context",
+        "text": "空に浮かび、風に流されながら姿を変える白いかたまり。",
+        "split": "train"
+      },
+      {
+        "family": "cloud.soft_outline",
+        "text": "固い角や直線がなく、柔らかな曲線が重なった広い塊。",
+        "split": "train"
+      },
+      {
+        "family": "cloud.weather_context",
+        "text": "雨を運ぶ空のかたまりを、連なったふくらみで表したい。",
+        "split": "train"
+      },
+      {
+        "family": "cloud.condensation_dev",
+        "text": "空気中の水分が微小な粒になり、高いところで集まって見えている。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "condense"
+    ],
+    "notes": "くもは蜘蛛と同音。漢字や周辺文脈で区別し、ひらがな一語だけを安全な確定名としない。"
+  },
+  {
+    "shape": "mushroom",
+    "name": "きのこ",
+    "aliases": [
+      "キノコ",
+      "茸",
+      "マッシュルーム"
+    ],
+    "descriptions": [
+      {
+        "family": "mushroom.cap_and_stem",
+        "text": "丸く開いた傘を、中央の一本の柄が下から支えている。",
+        "split": "train"
+      },
+      {
+        "family": "mushroom.forest_floor",
+        "text": "湿った地面から出てくる、傘と軸を持つ菌類の姿。",
+        "split": "train"
+      },
+      {
+        "family": "mushroom.overhang_profile",
+        "text": "上が幅広く下が細く、傘のふちが柄より外へ張り出す。",
+        "split": "train"
+      },
+      {
+        "family": "mushroom.food_context",
+        "text": "炊き込みご飯や炒め物に使う、傘付きの菌の形。",
+        "split": "train"
+      },
+      {
+        "family": "mushroom.gills_dev",
+        "text": "裏側にひだが放射状に並び、そこから胞子を出す生物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "umbrella",
+      "jellyfish"
+    ],
+    "notes": "傘と柄だけでは競合。菌類/胞子/地面の文脈を使う。"
+  },
+  {
+    "shape": "leaf",
+    "name": "葉",
+    "aliases": [
+      "葉っぱ",
+      "木の葉",
+      "リーフ"
+    ],
+    "descriptions": [
+      {
+        "family": "leaf.flat_tapered_blade",
+        "text": "薄い楕円の面が先端へすぼまり、中央に一本の筋が通る。",
+        "split": "train"
+      },
+      {
+        "family": "leaf.plant_attachment",
+        "text": "茎や枝に付く、平たく広がった緑色の部分。",
+        "split": "train"
+      },
+      {
+        "family": "leaf.vein_structure",
+        "text": "中央の太い筋から、左右へ細かな筋が分かれて広がる。",
+        "split": "train"
+      },
+      {
+        "family": "leaf.photosynthesis",
+        "text": "日光を受けて養分を作るための、植物の薄い面。",
+        "split": "train"
+      },
+      {
+        "family": "leaf.autumn_fall_dev",
+        "text": "秋になると色が変わり、枝から一枚ずつ離れて地面へ落ちる部分。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "flower",
+      "tree"
+    ],
+    "notes": "一枚の植物の薄片を対象。木全体や花弁と分ける。"
+  },
+  {
+    "shape": "apple",
+    "name": "りんご",
+    "aliases": [
+      "リンゴ",
+      "林檎",
+      "アップル"
+    ],
+    "descriptions": [
+      {
+        "family": "apple.round_with_stem",
+        "text": "丸くふくらんだ果実の上が少しくぼみ、短い軸が出ている。",
+        "split": "train"
+      },
+      {
+        "family": "apple.food_context",
+        "text": "赤い皮をむくと、しゃきっとした果肉が現れる果物。",
+        "split": "train"
+      },
+      {
+        "family": "apple.paired_top_lobes",
+        "text": "上の肩が左右に盛り上がり、下側も浅くくぼんだ丸い実。",
+        "split": "train"
+      },
+      {
+        "family": "apple.orchard_context",
+        "text": "枝から丸い実を採り、丸かじりしたりジュースにしたりする。",
+        "split": "train"
+      },
+      {
+        "family": "apple.seed_core_dev",
+        "text": "中心に種の入った芯があり、切るとそのまわりに果肉が広がる果実。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "condense",
+      "pumpkin"
+    ],
+    "notes": "皮の色だけでは一般果実と競合。軸とくぼみ/芯など追加手掛かりが必要。"
+  },
+  {
+    "shape": "pear",
+    "name": "洋梨",
+    "aliases": [
+      "洋ナシ",
+      "洋なし",
+      "西洋梨",
+      "ペアー"
+    ],
+    "descriptions": [
+      {
+        "family": "pear.narrow_top_full_base",
+        "text": "上側が細く、下側へ行くほど大きくふくらむ果実。",
+        "split": "train"
+      },
+      {
+        "family": "pear.fruit_context",
+        "text": "ラ・フランスのように、柔らかい果肉と細い首のある果物。",
+        "split": "train"
+      },
+      {
+        "family": "pear.gourd_profile",
+        "text": "短い軸の下に細い肩があり、底側は丸く豊かに広がる。",
+        "split": "train"
+      },
+      {
+        "family": "pear.ripe_texture",
+        "text": "熟すととろりとした甘い果肉になる、下ぶくれの実。",
+        "split": "train"
+      },
+      {
+        "family": "pear.bumpy_peel_dev",
+        "text": "緑がかった皮に細かな点があり、果梗の近くを持つと下側が重い実。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "droplet",
+      "vase",
+      "bottle"
+    ],
+    "notes": "下ぶくれの形は容器や雫とも競合。果実の文脈を含める。"
+  },
+  {
+    "shape": "pumpkin",
+    "name": "かぼちゃ",
+    "aliases": [
+      "カボチャ",
+      "南瓜",
+      "パンプキン"
+    ],
+    "descriptions": [
+      {
+        "family": "pumpkin.ribbed_round_body",
+        "text": "丸い胴に縦の溝がいくつも入り、上の中央に短い軸が付く。",
+        "split": "train"
+      },
+      {
+        "family": "pumpkin.food_context",
+        "text": "硬い皮の中に橙色の果肉が詰まり、煮物にする大きな実。",
+        "split": "train"
+      },
+      {
+        "family": "pumpkin.halloween_context",
+        "text": "中をくり抜いて顔を彫り、秋の行事で飾る実の形。",
+        "split": "train"
+      },
+      {
+        "family": "pumpkin.squash_profile",
+        "text": "上下が少しつぶれたふくらみに、縦方向の筋が放射状に走る。",
+        "split": "train"
+      },
+      {
+        "family": "pumpkin.seed_cavity_dev",
+        "text": "切ると中心の空洞に平たい種がまとまって入り、外側に厚い果肉がある。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "apple",
+      "condense"
+    ],
+    "notes": "丸いだけでは不足。筋/硬皮/種の空洞などを使う。"
+  },
+  {
+    "shape": "shell",
+    "name": "巻き貝",
+    "aliases": [
+      "貝殻",
+      "螺貝",
+      "シェル"
+    ],
+    "descriptions": [
+      {
+        "family": "shell.spiral_growth",
+        "text": "細い先端から、だんだん大きくなる巻きがつながった殻。",
+        "split": "train"
+      },
+      {
+        "family": "shell.beach_context",
+        "text": "砂浜で拾う、ぐるぐる巻かれた硬い海の生物の外殻。",
+        "split": "train"
+      },
+      {
+        "family": "shell.opening_structure",
+        "text": "巻かれた胴の外側に、一つの大きな入り口が開く。",
+        "split": "train"
+      },
+      {
+        "family": "shell.layered_turns",
+        "text": "成長するにつれて外へ太い巻きが増え、古い先端は小さく残る。",
+        "split": "train"
+      },
+      {
+        "family": "shell.protective_home_dev",
+        "text": "柔らかい体を中へ引っ込められる、石灰質でできた一体の住まい。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "helix",
+      "vortex"
+    ],
+    "notes": "貝殻という別名には二枚貝も含むが、実装は巻いた一体の殻の近似。"
+  },
+  {
+    "shape": "fish",
+    "name": "魚",
+    "aliases": [
+      "さかな",
+      "サカナ",
+      "フィッシュ"
+    ],
+    "descriptions": [
+      {
+        "family": "fish.fins_and_tail",
+        "text": "細長い胴の左右にひれが付き、後ろに扇状の尾がある。",
+        "split": "train"
+      },
+      {
+        "family": "fish.swimming_context",
+        "text": "水の中を泳ぎ、えらで呼吸する生き物の形。",
+        "split": "train"
+      },
+      {
+        "family": "fish.streamlined_body",
+        "text": "前の頭から後ろの尾へ滑らかにすぼまる流線型の体。",
+        "split": "train"
+      },
+      {
+        "family": "fish.tail_motion",
+        "text": "体と尾を左右へ振り、ひれで向きを変えながら進む。",
+        "split": "train"
+      },
+      {
+        "family": "fish.scales_dev",
+        "text": "体を小さなうろこが覆い、口と目が前方に並ぶ水中の脊椎動物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "snake",
+      "bird"
+    ],
+    "notes": "魚種差は対象外。一般的なひれと尾のある流線型。"
+  },
+  {
+    "shape": "bird",
+    "name": "鳥",
+    "aliases": [
+      "小鳥",
+      "ことり",
+      "バード"
+    ],
+    "descriptions": [
+      {
+        "family": "bird.wings_and_beak",
+        "text": "胴の左右に翼があり、前にはくちばし、後ろには尾羽が出る。",
+        "split": "train"
+      },
+      {
+        "family": "bird.flight_context",
+        "text": "羽毛をまとい、翼を上下へ動かして空を飛ぶ生き物。",
+        "split": "train"
+      },
+      {
+        "family": "bird.two_leg_body",
+        "text": "二本の足で枝につかまり、頭から尖った口が伸びる。",
+        "split": "train"
+      },
+      {
+        "family": "bird.wing_motion",
+        "text": "左右の大きな翼を広げて、軽い体を空中で支える姿。",
+        "split": "train"
+      },
+      {
+        "family": "bird.nesting_dev",
+        "text": "小枝で作った巣の中でひなを育て、さえずりを響かせる動物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "butterfly"
+    ],
+    "notes": "翼だけでは昆虫と競合。羽毛/くちばし/二脚を手掛かりにする。"
+  },
+  {
+    "shape": "snake",
+    "name": "蛇",
+    "aliases": [
+      "へび",
+      "ヘビ",
+      "スネーク"
+    ],
+    "descriptions": [
+      {
+        "family": "snake.limbless_body",
+        "text": "手足がなく、長い胴が一本の曲線となって地面を進む。",
+        "split": "train"
+      },
+      {
+        "family": "snake.reptile_context",
+        "text": "うろこのある細長い爬虫類が、舌を出して周囲を探る。",
+        "split": "train"
+      },
+      {
+        "family": "snake.tapered_tail",
+        "text": "頭から長い胴が続き、最後は細い尾へすぼまる。",
+        "split": "train"
+      },
+      {
+        "family": "snake.slithering_motion",
+        "text": "体を左右へ交互に曲げ、腹を地面に付けて這う。",
+        "split": "train"
+      },
+      {
+        "family": "snake.shedding_dev",
+        "text": "成長すると古い皮を頭の方から脱ぎ、抜け殻を長く残す生き物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "helix",
+      "knot"
+    ],
+    "notes": "曲線だけでは管の形と競合。手足のない爬虫類の文脈を使う。"
+  },
+  {
+    "shape": "turtle",
+    "name": "亀",
+    "aliases": [
+      "かめ",
+      "カメ",
+      "タートル"
+    ],
+    "descriptions": [
+      {
+        "family": "turtle.shell_and_limbs",
+        "text": "丸く盛り上がった甲羅の下から、頭と四本の足が出る。",
+        "split": "train"
+      },
+      {
+        "family": "turtle.slow_animal",
+        "text": "硬い背中を背負い、短い足でゆっくり歩く生き物。",
+        "split": "train"
+      },
+      {
+        "family": "turtle.domed_back",
+        "text": "平たい腹と高く丸い背中に、前後へ小さな手足が付く。",
+        "split": "train"
+      },
+      {
+        "family": "turtle.head_retraction",
+        "text": "危険を感じると、頭や足を甲羅の内側へ引っ込める。",
+        "split": "train"
+      },
+      {
+        "family": "turtle.scutes_dev",
+        "text": "背中の硬い板が区画に分かれ、下には腹を守る平らな板がある爬虫類。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "shell"
+    ],
+    "notes": "殻単体ではなく頭と四脚を伴う動物を基準にする。"
+  },
+  {
+    "shape": "spider",
+    "name": "蜘蛛",
+    "aliases": [
+      "くも型",
+      "スパイダー",
+      "クモ"
+    ],
+    "descriptions": [
+      {
+        "family": "spider.eight_legs",
+        "text": "二つに分かれた小さな胴から、八本の足が左右へ広がる。",
+        "split": "train"
+      },
+      {
+        "family": "spider.web_context",
+        "text": "糸で網を張り、虫を待つ節足動物。",
+        "split": "train"
+      },
+      {
+        "family": "spider.leg_layout",
+        "text": "胴の左右へ四本ずつ、関節のある長い足が伸びる。",
+        "split": "train"
+      },
+      {
+        "family": "spider.silk_motion",
+        "text": "お腹の後ろから糸を出し、空中の網へぶら下がる生き物。",
+        "split": "train"
+      },
+      {
+        "family": "spider.not_insect_dev",
+        "text": "触角を持たず、頭胸部と腹部を分けて歩く小さな捕食者。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "cloud"
+    ],
+    "notes": "クモ/くもは雲と同音。脚や糸の文脈がない単語は曖昧。"
+  },
+  {
+    "shape": "lotus",
+    "name": "蓮",
+    "aliases": [
+      "はす",
+      "ハス",
+      "ロータス"
+    ],
+    "descriptions": [
+      {
+        "family": "lotus.open_layered_petals",
+        "text": "大きな薄片が重なりながら外向きに開き、中央を囲む花。",
+        "split": "train"
+      },
+      {
+        "family": "lotus.pond_context",
+        "text": "池から伸びた茎の先に、淡い桃色の大きな花が開く水生植物。",
+        "split": "train"
+      },
+      {
+        "family": "lotus.radial_layers",
+        "text": "複数の段の花弁が中心を共有し、浅い器のように広がる。",
+        "split": "train"
+      },
+      {
+        "family": "lotus.sacred_context",
+        "text": "仏像の座として描かれる、重なった花弁の花。",
+        "split": "train"
+      },
+      {
+        "family": "lotus.seed_pod_dev",
+        "text": "咲き終わると穴の並んだ蜂の巣状の実が立つ、池の植物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "flower",
+      "rose"
+    ],
+    "notes": "睡蓮は蓮と分類学的に異なるためaliasには採用しない。devの蜂の巣状の実で限定する。"
+  },
+  {
+    "shape": "rose",
+    "name": "薔薇",
+    "aliases": [
+      "ばら",
+      "バラ",
+      "ローズ"
+    ],
+    "descriptions": [
+      {
+        "family": "rose.nested_petals",
+        "text": "中心を包むように、幾重もの花弁が内向きに巻き重なる。",
+        "split": "train"
+      },
+      {
+        "family": "rose.bouquet_context",
+        "text": "愛情を伝える花束に選ばれる、とげのある茎の花。",
+        "split": "train"
+      },
+      {
+        "family": "rose.tight_bloom",
+        "text": "外側は開きながら、中心には丸く密な花弁の層が残る。",
+        "split": "train"
+      },
+      {
+        "family": "rose.garden_context",
+        "text": "庭の低木に咲き、芳香を持つ重なった花弁の花。",
+        "split": "train"
+      },
+      {
+        "family": "rose.perfume_dev",
+        "text": "香りを抽出して香水に使い、枝に鋭いとげを持つ観賞植物。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "flower",
+      "lotus"
+    ],
+    "notes": "花弁の重なりだけでは一般の八重咲きと競合。とげや芳香を追加する。"
+  },
+  {
+    "shape": "sun",
+    "name": "太陽",
+    "aliases": [
+      "お日様",
+      "おひさま",
+      "サン"
+    ],
+    "descriptions": [
+      {
+        "family": "sun.radiating_disk",
+        "text": "中央の丸い円盤から、光の筋が周囲へ放射状に伸びる。",
+        "split": "train"
+      },
+      {
+        "family": "sun.daylight_context",
+        "text": "昼に空から地面を明るく照らし、熱を与える天体。",
+        "split": "train"
+      },
+      {
+        "family": "sun.solar_center",
+        "text": "惑星たちがそのまわりを巡る、太陽系の中心の恒星。",
+        "split": "train"
+      },
+      {
+        "family": "sun.weather_icon",
+        "text": "晴れの日を表す、丸い中心に短い光線が付いた印。",
+        "split": "train"
+      },
+      {
+        "family": "sun.dawn_dev",
+        "text": "朝に東の地平線から姿を現し、夕方に西へ沈む光源。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "star",
+      "fireworks"
+    ],
+    "notes": "放射状の印の見た目と、昼/日没の天体文脈を合わせて対象とする。"
+  },
+  {
+    "shape": "snowflake",
+    "name": "雪の結晶",
+    "aliases": [
+      "雪結晶",
+      "雪片",
+      "スノーフレーク"
+    ],
+    "descriptions": [
+      {
+        "family": "snowflake.six_branches",
+        "text": "中心から六方向へ同じような枝が伸び、さらに細い枝が分かれる。",
+        "split": "train"
+      },
+      {
+        "family": "snowflake.winter_context",
+        "text": "冬に空から降る、小さく対称な氷の粒を拡大した姿。",
+        "split": "train"
+      },
+      {
+        "family": "snowflake.hexagonal_symmetry",
+        "text": "六十度ずつ向きを変えても似た形になる、繊細な平面の枝。",
+        "split": "train"
+      },
+      {
+        "family": "snowflake.cold_window",
+        "text": "冷たい窓や手袋に乗る、枝分かれした白い氷の印。",
+        "split": "train"
+      },
+      {
+        "family": "snowflake.dendrites_dev",
+        "text": "水蒸気が凍って成長し、先端ごとに樹枝状の細かな模様を作るもの。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "star",
+      "flower"
+    ],
+    "notes": "枝分かれした対称性と氷の文脈を使う。単に雪の量/降雪の話だけで確定しない。"
+  },
+  {
+    "shape": "gear",
+    "name": "歯車",
+    "aliases": [
+      "ギア",
+      "ギヤ",
+      "コグ"
+    ],
+    "descriptions": [
+      {
+        "family": "gear.toothed_disk",
+        "text": "丸い円盤の外周に、同じ大きさの歯が等間隔で並ぶ。",
+        "split": "train"
+      },
+      {
+        "family": "gear.mechanical_use",
+        "text": "相手の歯と噛み合い、回転の力を次の部品へ伝える機構。",
+        "split": "train"
+      },
+      {
+        "family": "gear.central_hole",
+        "text": "中心の軸穴を囲む厚い円盤に、小さな突起が多数ある。",
+        "split": "train"
+      },
+      {
+        "family": "gear.meshing_motion",
+        "text": "二つを並べて回すと、接触した歯が押し合って逆向きに回る。",
+        "split": "train"
+      },
+      {
+        "family": "gear.ratio_dev",
+        "text": "歯の数の違うものを組み合わせ、速さと回す力の比を変える機械部品。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "ring",
+      "sun"
+    ],
+    "notes": "外周の歯と噛合いの機構を基準。厚い丸い円盤だけでは不足。"
+  },
+  {
+    "shape": "bolt",
+    "name": "稲妻",
+    "aliases": [
+      "いなずま",
+      "雷光",
+      "ライトニング"
+    ],
+    "descriptions": [
+      {
+        "family": "bolt.zigzag_path",
+        "text": "折れ線が左右へ鋭く曲がり、最後は細い尖りで終わる。",
+        "split": "train"
+      },
+      {
+        "family": "bolt.storm_context",
+        "text": "雷雨の空に一瞬走る、折れ曲がった強い光。",
+        "split": "train"
+      },
+      {
+        "family": "bolt.electric_symbol",
+        "text": "電気の危険を示す、斜めの鋭いジグザグの印。",
+        "split": "train"
+      },
+      {
+        "family": "bolt.branching_flash",
+        "text": "暗い空を切り裂くように、尖った光の線が連なっている。",
+        "split": "train"
+      },
+      {
+        "family": "bolt.discharge_dev",
+        "text": "雲と地面の間で放電するとき、空気の通り道が明るい折れ筋になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "sword"
+    ],
+    "notes": "文字通りの放電か電気記号を対象。音だけの雷はaliasに採用しない。"
+  },
+  {
+    "shape": "bottle",
+    "name": "瓶",
+    "aliases": [
+      "びん",
+      "ボトル",
+      "ガラス瓶"
+    ],
+    "descriptions": [
+      {
+        "family": "bottle.neck_and_body",
+        "text": "細い口と首の下に、液体をためる長い胴がある容器。",
+        "split": "train"
+      },
+      {
+        "family": "bottle.drink_storage",
+        "text": "飲み物を入れてふたを閉め、持ち運べる容器。",
+        "split": "train"
+      },
+      {
+        "family": "bottle.flat_bottom",
+        "text": "平らな底で立ち、肩から細い首へつながる外形。",
+        "split": "train"
+      },
+      {
+        "family": "bottle.sealed_mouth",
+        "text": "注ぎ口を栓やふたで閉じられる、胴と首を持った器。",
+        "split": "train"
+      },
+      {
+        "family": "bottle.pouring_dev",
+        "text": "口を下へ傾けると、保存していた液体が一本の流れとして出る。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "vase",
+      "cup",
+      "teapot"
+    ],
+    "notes": "蓋/栓と液体の保存を主な手掛かり。開いた細首容器だけでは花瓶と競合する。"
+  },
+  {
+    "shape": "cup",
+    "name": "カップ",
+    "aliases": [
+      "コップ",
+      "マグカップ",
+      "マグ"
+    ],
+    "descriptions": [
+      {
+        "family": "cup.open_vessel",
+        "text": "上が広く開き、底が閉じた小さな飲み物用の器。",
+        "split": "train"
+      },
+      {
+        "family": "cup.drinking_use",
+        "text": "お茶やコーヒーを一人分入れ、口を付けて飲む道具。",
+        "split": "train"
+      },
+      {
+        "family": "cup.side_handle",
+        "text": "短い胴の側面に、指を掛ける一つの取っ手が付いている。",
+        "split": "train"
+      },
+      {
+        "family": "cup.tableware_profile",
+        "text": "口から底まで見通せる程度に浅く、机の上で立つ器。",
+        "split": "train"
+      },
+      {
+        "family": "cup.warm_hands_dev",
+        "text": "熱い飲み物の入った小さな器を、胴を包むか持ち手をつかんで口へ運ぶ。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "vase",
+      "cylinder",
+      "teapot"
+    ],
+    "notes": "飲む用途と広い口を基準。取っ手なしのコップも名称候補。"
+  },
+  {
+    "shape": "teapot",
+    "name": "ティーポット",
+    "aliases": [
+      "急須",
+      "茶瓶",
+      "ティーポット型"
+    ],
+    "descriptions": [
+      {
+        "family": "teapot.spout_and_handle",
+        "text": "丸い胴の一方に注ぎ口、反対側に持ち手が付いている。",
+        "split": "train"
+      },
+      {
+        "family": "teapot.tea_brewing",
+        "text": "茶葉と湯を入れてふたをし、飲む前にお茶を注ぐ器。",
+        "split": "train"
+      },
+      {
+        "family": "teapot.lidded_body",
+        "text": "丸い容器の上に小さなふたがあり、胴から管が外へ伸びる。",
+        "split": "train"
+      },
+      {
+        "family": "teapot.pouring_use",
+        "text": "取っ手を持って傾けると、横の細い口から温かい飲み物が出る。",
+        "split": "train"
+      },
+      {
+        "family": "teapot.strainer_dev",
+        "text": "内側の茶葉をこし、透明な飲み物だけを小さな器へ移す道具。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "bottle",
+      "cup"
+    ],
+    "notes": "急須との形状差は同IDの近似。やかんは用途/形が広いのでaliasに採用しない。"
+  },
+  {
+    "shape": "umbrella",
+    "name": "傘",
+    "aliases": [
+      "かさ",
+      "カサ",
+      "アンブレラ"
+    ],
+    "descriptions": [
+      {
+        "family": "umbrella.canopy_and_shaft",
+        "text": "丸く開いた布の面を、中央の一本の軸が下から支える。",
+        "split": "train"
+      },
+      {
+        "family": "umbrella.rain_use",
+        "text": "雨の日に頭の上へ広げ、体が濡れないように持つ道具。",
+        "split": "train"
+      },
+      {
+        "family": "umbrella.ribs_structure",
+        "text": "中心から放射状に骨が伸び、その間を張った布がつなぐ。",
+        "split": "train"
+      },
+      {
+        "family": "umbrella.folding_action",
+        "text": "閉じると細くまとまり、開くと頭を覆う面が広がる。",
+        "split": "train"
+      },
+      {
+        "family": "umbrella.curved_grip_dev",
+        "text": "手元の曲がった持ち手を握り、長い軸の上の布をかざして歩く。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "mushroom",
+      "jellyfish"
+    ],
+    "notes": "手持ちの雨具と骨/布を基準。丸い傘状の形だけでは不十分。"
+  },
+  {
+    "shape": "bell",
+    "name": "鐘",
+    "aliases": [
+      "つりがね",
+      "釣鐘",
+      "ベル"
+    ],
+    "descriptions": [
+      {
+        "family": "bell.flared_open_bottom",
+        "text": "上が丸く閉じ、下へ行くほど裾が開く中空の金属の形。",
+        "split": "train"
+      },
+      {
+        "family": "bell.ringing_use",
+        "text": "内側や外側を打つと、大きく響く音を出す道具。",
+        "split": "train"
+      },
+      {
+        "family": "bell.hanging_structure",
+        "text": "上の頂部を吊り、下の広い開口部が空中を向く。",
+        "split": "train"
+      },
+      {
+        "family": "bell.temple_context",
+        "text": "寺で重い棒を横から当てて、時を知らせるもの。",
+        "split": "train"
+      },
+      {
+        "family": "bell.resonance_dev",
+        "text": "内側に空間を持つ厚い金属が、叩かれたあとも長く振動を続ける。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "vase",
+      "cone"
+    ],
+    "notes": "金属の中空形と音を基準。鈴の閉じた球は別形なのでaliasから省く。"
+  },
+  {
+    "shape": "lantern",
+    "name": "提灯",
+    "aliases": [
+      "ちょうちん",
+      "紙提灯",
+      "ランタン"
+    ],
+    "descriptions": [
+      {
+        "family": "lantern.ribbed_lamp",
+        "text": "丸くふくらんだ薄い覆いに横の骨が何段もあり、上下に枠が付く。",
+        "split": "train"
+      },
+      {
+        "family": "lantern.festival_context",
+        "text": "祭りで吊るし、内側の明かりが紙を通って柔らかく光る。",
+        "split": "train"
+      },
+      {
+        "family": "lantern.paper_structure",
+        "text": "細かな輪状の骨に紙を張り、中へ光源を入れる道具。",
+        "split": "train"
+      },
+      {
+        "family": "lantern.hanging_light",
+        "text": "上の小さな持ち手で吊るす、ふくらんだ覆いの照明。",
+        "split": "train"
+      },
+      {
+        "family": "lantern.foldable_paper_dev",
+        "text": "使わないときは上下へ縮められ、広げると紙の胴が光を包む。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "bottle",
+      "pumpkin"
+    ],
+    "notes": "実装は上下へ畳める和式紙照明の近似。ランタンという別名は金属製照明も含んで広い。"
+  },
+  {
+    "shape": "crown",
+    "name": "王冠",
+    "aliases": [
+      "冠",
+      "クラウン",
+      "おうかん"
+    ],
+    "descriptions": [
+      {
+        "family": "crown.pointed_band",
+        "text": "頭を囲む丸い帯の上に、複数の尖った飾りが並ぶ。",
+        "split": "train"
+      },
+      {
+        "family": "crown.royal_context",
+        "text": "王や女王が頭に載せ、地位を表す金属の飾り。",
+        "split": "train"
+      },
+      {
+        "family": "crown.open_top",
+        "text": "内側が空いた円形の土台に、上向きの突起をいくつも立てる。",
+        "split": "train"
+      },
+      {
+        "family": "crown.coronation",
+        "text": "戴冠式で授ける、宝石の付いた頭飾りの形。",
+        "split": "train"
+      },
+      {
+        "family": "crown.rim_peaks_dev",
+        "text": "横から見ると上縁が山と谷を繰り返し、下縁だけ連続した帯になる。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "ring",
+      "gear",
+      "star"
+    ],
+    "notes": "頭飾りと上向き突起を基準とする。単なる環状形では不足。"
+  },
+  {
+    "shape": "knot",
+    "name": "結び目",
+    "aliases": [
+      "結び紐",
+      "三葉結び目",
+      "ノット"
+    ],
+    "descriptions": [
+      {
+        "family": "knot.interwoven_tube",
+        "text": "一本の管が自分の上と下をくぐり、三つのふくらみを持つ閉じた形。",
+        "split": "train"
+      },
+      {
+        "family": "knot.rope_context",
+        "text": "ひもを交差させて絡め、ほどけにくくした部分の形。",
+        "split": "train"
+      },
+      {
+        "family": "knot.trefoil_topology",
+        "text": "三回の交差を持つ道が、途切れず一周つながっている。",
+        "split": "train"
+      },
+      {
+        "family": "knot.over_under",
+        "text": "管が交点ごとに手前と奥へ回り、互いに絡み合って見える。",
+        "split": "train"
+      },
+      {
+        "family": "knot.untangling_dev",
+        "text": "端を切ったりすり抜けさせたりしない限り、単純な一重の丸い道に戻せない。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "helix",
+      "ring",
+      "ribbon"
+    ],
+    "notes": "実装は閉じた三葉結び目。日常のひも結び一般は近似的連想として扱う。"
+  },
+  {
+    "shape": "wave",
+    "name": "波",
+    "aliases": [
+      "波浪",
+      "なみ",
+      "ウェーブ"
+    ],
+    "descriptions": [
+      {
+        "family": "wave.curling_sheet",
+        "text": "幅のある連続した面が立ち上がり、先端を内側へ巻いている。",
+        "split": "train"
+      },
+      {
+        "family": "wave.surf_context",
+        "text": "海岸へ向かう水のうねりが、上のふちを丸めて崩れる姿。",
+        "split": "train"
+      },
+      {
+        "family": "wave.crest_and_trough",
+        "text": "高い山と低い谷がつながり、面全体がうねっている。",
+        "split": "train"
+      },
+      {
+        "family": "wave.water_motion",
+        "text": "水面が持ち上がって前へ進み、頂部が手前に倒れ込む。",
+        "split": "train"
+      },
+      {
+        "family": "wave.hollow_crest_dev",
+        "text": "横から見ると上端の内側に空洞があり、下の面は切れずに続いている。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "vortex",
+      "orbit"
+    ],
+    "notes": "実装は巻いた水面の連続シート。音波や電波を同形とする根拠は弱い。"
+  },
+  {
+    "shape": "ribbon",
+    "name": "リボン",
+    "aliases": [
+      "蝶結び",
+      "ボウ",
+      "リボン結び"
+    ],
+    "descriptions": [
+      {
+        "family": "ribbon.bow_loops",
+        "text": "中央の小さな結合部から、左右にふくらんだ二つのループが広がる。",
+        "split": "train"
+      },
+      {
+        "family": "ribbon.gift_context",
+        "text": "贈り物の上に結び、左右の輪と下へ垂れる端を作る帯。",
+        "split": "train"
+      },
+      {
+        "family": "ribbon.two_tails",
+        "text": "左右に開いた帯のふくらみの下から、二本の端が垂れている。",
+        "split": "train"
+      },
+      {
+        "family": "ribbon.hair_decoration",
+        "text": "髪飾りにする、左右対称の布を結んだ形。",
+        "split": "train"
+      },
+      {
+        "family": "ribbon.pull_to_release_dev",
+        "text": "垂れた端を引くと左右のループが小さくなり、ひもがほどける飾り。",
+        "split": "dev"
+      }
+    ],
+    "relatedIds": [
+      "butterfly",
+      "knot",
+      "mobius"
+    ],
+    "notes": "実装は蝶結びの飾り。まっすぐな長い布帯一般の別名とは範囲差がある。"
+  }
+]
