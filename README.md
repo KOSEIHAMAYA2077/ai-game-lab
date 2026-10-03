@@ -4,6 +4,8 @@
 
 [▶ ブラウザで試す・60形](https://koseihamaya2077.github.io/glyph-matter/) / [小窓Web版](https://koseihamaya2077.github.io/glyph-matter/widget-v3/) / [研究の技術・課題・先行研究](research/widget-research-map-20261003.md)。全アプリ入力との連動はまだ実装していません。
 
+今回の期限付き作業は終了し、自動継続と専用スリープ防止を停止しました。[終了記録](experiments/side-interior-session-close-v1/README.md)。
+
 **作業の横へ置く用途の結果と次の方針は、[今回の整理](research/side-interior-results-20261003.md)から読めます。** 試せる版、入力・意味・描画の比較、未確認の部分を分けました。[独立した文書照合](experiments/side-interior-summary-review-v1/REPORT.md)も保存しています。
 
 固定した日本語CPU CLIの100分観測は、人工24返信・600/600標本・通常終了を確認。最大RSS約42.47MiBでした。[図・原票・方法と限界](experiments/native-static-longrun-v1/REPORT-R1.md) / [独立算術監査](experiments/native-static-longrun-review-v1/REPORT-R1.md)。単独CLIの結果で、8時間の小窓・全アプリ連動・一般16GB機・意味精度の達成ではありません。
