@@ -1,0 +1,823 @@
+{
+  "auditUTC": "2026-10-03T01:04:07.283303+00:00",
+  "interim": false,
+  "scope": "Saved files of native R5 CPU CLI; not UI, OS input, power or semantic quality",
+  "rawFiles": [
+    {
+      "path": "experiments/native-static-longrun-v1/FREEZE-R1.json",
+      "bytes": 1698,
+      "sha256": "f3ac6754172bec0b93ac988a4a879bf568d7e99f31c39073d775327f9a374866"
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/RUN-R1.json",
+      "bytes": 222,
+      "sha256": "2bb93a1f079b6a58462893a88d7cbbb27322ab676b9f3b6d09c7f48eed102b5b"
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/QUERIES-RAW-R1.json",
+      "bytes": 962259,
+      "sha256": "abb3ed7e5115cf7579523c244366a3df0c5b8a55855dcce8d40252b443a895c8"
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/SAMPLES-R1.json",
+      "bytes": 110761,
+      "sha256": "4ada968fc55b7c9f9fcf93166756d644941190157a5dda4db2d0b371fe55a30a"
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/SUMMARY-R1.json",
+      "bytes": 539,
+      "sha256": "66969fc86c7cd214af961a97bf9ac00b1cb534a7ef0c950ff9575430814f0278"
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/TIME-R1.log",
+      "bytes": 777,
+      "sha256": "1b7385f8c3dee70f0553935574166a62e6a05f5ddd44b63b0e1152a0f9deab36"
+    }
+  ],
+  "sourcePins": [
+    {
+      "path": "experiments/native-static-longrun-v1/METHOD-R1.md",
+      "bytes": 2300,
+      "sha256": "c40b7c15306fcd6edfed41fa52f69d36ad2d41ea2b5fffc080072afa26c6509d",
+      "matched": true
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/QUERIES-R1.json",
+      "bytes": 12393,
+      "sha256": "65ce680780e2dcc80838aebf511927b2d3a6868ae83b476f7b6a02c18e02ae97",
+      "matched": true
+    },
+    {
+      "path": "experiments/native-static-longrun-v1/run_r1.py",
+      "bytes": 8212,
+      "sha256": "9041e74e20214a191ec9a286c98b83ac77110ceae925f496349d1ba4635a458e",
+      "matched": true
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/NativeStaticR5.swift",
+      "bytes": 16386,
+      "sha256": "fb99669e9afc3287dab7706d00fe89d4b52f2d10f7cf22bd37d1f97fa06a4be4",
+      "matched": true
+    },
+    {
+      "path": "experiments/native-static-japanese-v1/native-static-r5",
+      "bytes": 379856,
+      "sha256": "52b7ea7fc00d5413fe79ad85e56743e890c36ae2800b7095b7c47a853dde4c74",
+      "matched": true
+    },
+    {
+      "path": ".local/static-japanese-v1/tables/table-128-float16.bin",
+      "bytes": 8388608,
+      "sha256": "65122d239d6c9fd804deee853736446415dc815134277c87adb9978f7b9e2201",
+      "matched": true
+    },
+    {
+      "path": ".local/static-japanese-v1/source/95b3d9c80a7ccf604e2b5daee7b1b3eed6b1a9d3/0_StaticEmbedding/tokenizer.json",
+      "bytes": 2127941,
+      "sha256": "833add01c9eb44e78ffb2d9195caace320de0fcf64d1f4d95bc541b6e30a9fc9",
+      "matched": true
+    },
+    {
+      "path": "experiments/static-japanese-retrieval-v1/captions.json",
+      "bytes": 27220,
+      "sha256": "00a0483a29f2afa11d85d5019ac867d14c6b0d8ee71ac020da2bacb92ff587a8",
+      "matched": true
+    }
+  ],
+  "run": {
+    "startedUTC": "2026-10-02T23:23:30.704267+00:00",
+    "nativePID": 14760,
+    "timeWrapperPID": 14758,
+    "driverPID": 14749,
+    "scheduledDurationSeconds": 6000,
+    "scope": "Pinned native CPU CLI only, artificial inputs"
+  },
+  "completionChecksSatisfied": true,
+  "summary": {
+    "startedUTC": "2026-10-02T23:23:30.704267+00:00",
+    "endedUTC": "2026-10-03T01:03:30.610373+00:00",
+    "elapsedSeconds": 6000.0133435,
+    "scheduledDurationSeconds": 6000,
+    "queryCount": 24,
+    "ordinaryCount": 20,
+    "longCount": 4,
+    "sampleCount": 600,
+    "validSampleCount": 600,
+    "exitCode": 0,
+    "failure": null,
+    "sourceModelFreezeUnchanged": true,
+    "modelSemanticScoring": false,
+    "GUIOSGPUHumanEvaluations": 0,
+    "defaultAdoption": false,
+    "freezeSHA256": "f3ac6754172bec0b93ac988a4a879bf568d7e99f31c39073d775327f9a374866"
+  },
+  "countersAgree": true,
+  "queryCounts": {
+    "ordinary": 20,
+    "long4000": 4,
+    "total": 24
+  },
+  "ordinaryOffsets": [
+    0,
+    300,
+    600,
+    900,
+    1200,
+    1500,
+    1800,
+    2100,
+    2400,
+    2700,
+    3000,
+    3300,
+    3600,
+    3900,
+    4200,
+    4500,
+    4800,
+    5100,
+    5400,
+    5700
+  ],
+  "longOffsets": [
+    0,
+    1800,
+    3600,
+    5400
+  ],
+  "queryRows": [
+    {
+      "index": 0,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 0,
+      "sentElapsedSeconds": 0.020118040999999996,
+      "estimatedReceivedElapsedSeconds": 0.042482875,
+      "latenessSeconds": 0.020118040999999996,
+      "rpcMilliseconds": 22.364834000000005,
+      "utcMinusMonotonicSeconds": -2.287500000000553e-05,
+      "tokenCount": 6,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 33636856,
+        "residentBytes": 43024384,
+        "maxRSSBytes": 43024384
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 1,
+      "kind": "long4000",
+      "scheduledOffsetSeconds": 0,
+      "sentElapsedSeconds": 0.043151416,
+      "estimatedReceivedElapsedSeconds": 0.046025041,
+      "latenessSeconds": 0.043151416,
+      "rpcMilliseconds": 2.8736250000000045,
+      "utcMinusMonotonicSeconds": -3.204100000000348e-05,
+      "tokenCount": 4001,
+      "hold": "token_limit",
+      "rankCount": 0,
+      "memory": {
+        "physicalFootprintBytes": 34652664,
+        "maxRSSBytes": 44056576,
+        "residentBytes": 44056576
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 2,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 300,
+      "sentElapsedSeconds": 300.092929541,
+      "estimatedReceivedElapsedSeconds": 300.093502541,
+      "latenessSeconds": 0.09292954099998951,
+      "rpcMilliseconds": 0.573000000031243,
+      "utcMinusMonotonicSeconds": 0.0033324589999779164,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 26952184,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42401792
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 3,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 600,
+      "sentElapsedSeconds": 600.507676291,
+      "estimatedReceivedElapsedSeconds": 600.5084840830001,
+      "latenessSeconds": 0.5076762910000525,
+      "rpcMilliseconds": 0.8077920000459926,
+      "utcMinusMonotonicSeconds": 0.006692916999895715,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 26984952,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42434560
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 4,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 900,
+      "sentElapsedSeconds": 900.0655524580001,
+      "estimatedReceivedElapsedSeconds": 900.0662066250001,
+      "latenessSeconds": 0.06555245800007015,
+      "rpcMilliseconds": 0.654166999993322,
+      "utcMinusMonotonicSeconds": 0.010043374999895605,
+      "tokenCount": 7,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 26984952,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42434560
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 5,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 1200,
+      "sentElapsedSeconds": 1200.2857826250001,
+      "estimatedReceivedElapsedSeconds": 1200.286456083,
+      "latenessSeconds": 0.28578262500013807,
+      "rpcMilliseconds": 0.6734579999374546,
+      "utcMinusMonotonicSeconds": -0.02229808300012337,
+      "tokenCount": 6,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27034104,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42467328
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 6,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 1500,
+      "sentElapsedSeconds": 1500.282424166,
+      "estimatedReceivedElapsedSeconds": 1500.283134125,
+      "latenessSeconds": 0.28242416600005527,
+      "rpcMilliseconds": 0.7099590000052558,
+      "utcMinusMonotonicSeconds": -0.022072125000022425,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27034104,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42467328
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 7,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 1800,
+      "sentElapsedSeconds": 1800.253785208,
+      "estimatedReceivedElapsedSeconds": 1800.254388083,
+      "latenessSeconds": 0.25378520799995385,
+      "rpcMilliseconds": 0.602875000140557,
+      "utcMinusMonotonicSeconds": -0.02184708300001148,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27083256,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42516480
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 8,
+      "kind": "long4000",
+      "scheduledOffsetSeconds": 1800,
+      "sentElapsedSeconds": 1800.2595189160002,
+      "estimatedReceivedElapsedSeconds": 1800.2632880830001,
+      "latenessSeconds": 0.25951891600016097,
+      "rpcMilliseconds": 3.769166999973095,
+      "utcMinusMonotonicSeconds": -0.021847083000238854,
+      "tokenCount": 4001,
+      "hold": "token_limit",
+      "rankCount": 0,
+      "memory": {
+        "physicalFootprintBytes": 27116024,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42549248
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 9,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 2100,
+      "sentElapsedSeconds": 2100.1866785409998,
+      "estimatedReceivedElapsedSeconds": 2100.187381208,
+      "latenessSeconds": 0.18667854099976466,
+      "rpcMilliseconds": 0.7026670000414015,
+      "utcMinusMonotonicSeconds": -0.02161820799983616,
+      "tokenCount": 7,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27116024,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42483712
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 10,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 2400,
+      "sentElapsedSeconds": 2400.0523573749997,
+      "estimatedReceivedElapsedSeconds": 2400.052893666,
+      "latenessSeconds": 0.05235737499970128,
+      "rpcMilliseconds": 0.536291000116762,
+      "utcMinusMonotonicSeconds": -0.02139266599988332,
+      "tokenCount": 6,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27148792,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42549248
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 11,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 2700,
+      "sentElapsedSeconds": 2700.0600259579996,
+      "estimatedReceivedElapsedSeconds": 2700.060574416,
+      "latenessSeconds": 0.06002595799964183,
+      "rpcMilliseconds": 0.5484580001393624,
+      "utcMinusMonotonicSeconds": -0.02116741599957095,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27148792,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42549248
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 12,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 3000,
+      "sentElapsedSeconds": 3000.096629916,
+      "estimatedReceivedElapsedSeconds": 3000.0972387499996,
+      "latenessSeconds": 0.0966299159999835,
+      "rpcMilliseconds": 0.6088339996495051,
+      "utcMinusMonotonicSeconds": -0.020938749999459105,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27148792,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42549248
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 13,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 3300,
+      "sentElapsedSeconds": 3300.076683125,
+      "estimatedReceivedElapsedSeconds": 3300.077234166,
+      "latenessSeconds": 0.07668312499981766,
+      "rpcMilliseconds": 0.5510410001079435,
+      "utcMinusMonotonicSeconds": -0.02210616599995774,
+      "tokenCount": 7,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27148792,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42549248
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 14,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 3600,
+      "sentElapsedSeconds": 3600.316064625,
+      "estimatedReceivedElapsedSeconds": 3600.316711125,
+      "latenessSeconds": 0.31606462499985355,
+      "rpcMilliseconds": 0.6465000001298904,
+      "utcMinusMonotonicSeconds": -0.022034125000118365,
+      "tokenCount": 6,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27148792,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42549248
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 15,
+      "kind": "long4000",
+      "scheduledOffsetSeconds": 3600,
+      "sentElapsedSeconds": 3600.328859458,
+      "estimatedReceivedElapsedSeconds": 3600.332272541,
+      "latenessSeconds": 0.32885945799989713,
+      "rpcMilliseconds": 3.4130829999412526,
+      "utcMinusMonotonicSeconds": -0.022035540999695513,
+      "tokenCount": 4001,
+      "hold": "token_limit",
+      "rankCount": 0,
+      "memory": {
+        "physicalFootprintBytes": 27165176,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42565632
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 16,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 3900,
+      "sentElapsedSeconds": 3900.2832990409997,
+      "estimatedReceivedElapsedSeconds": 3900.283867416,
+      "latenessSeconds": 0.28329904099973646,
+      "rpcMilliseconds": 0.5683750000571308,
+      "utcMinusMonotonicSeconds": -0.021964415999718767,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27165176,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42565632
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 17,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 4200,
+      "sentElapsedSeconds": 4200.4772542499995,
+      "estimatedReceivedElapsedSeconds": 4200.477809458,
+      "latenessSeconds": 0.4772542499995325,
+      "rpcMilliseconds": 0.555208000150742,
+      "utcMinusMonotonicSeconds": -0.02189345799979492,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 18,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 4500,
+      "sentElapsedSeconds": 4500.0790225,
+      "estimatedReceivedElapsedSeconds": 4500.079613916,
+      "latenessSeconds": 0.07902250000006461,
+      "rpcMilliseconds": 0.5914160001339042,
+      "utcMinusMonotonicSeconds": -0.021821916000590136,
+      "tokenCount": 7,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 19,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 4800,
+      "sentElapsedSeconds": 4800.18582325,
+      "estimatedReceivedElapsedSeconds": 4800.186476958,
+      "latenessSeconds": 0.18582324999988487,
+      "rpcMilliseconds": 0.65370799984521,
+      "utcMinusMonotonicSeconds": -0.021746957999312144,
+      "tokenCount": 6,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 20,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 5100,
+      "sentElapsedSeconds": 5100.349262166,
+      "estimatedReceivedElapsedSeconds": 5100.349938165999,
+      "latenessSeconds": 0.34926216599978943,
+      "rpcMilliseconds": 0.6759999996575061,
+      "utcMinusMonotonicSeconds": -0.021681165999325458,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 21,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 5400,
+      "sentElapsedSeconds": 5400.020676583,
+      "estimatedReceivedElapsedSeconds": 5400.021289666,
+      "latenessSeconds": 0.02067658299984032,
+      "rpcMilliseconds": 0.6130829997346154,
+      "utcMinusMonotonicSeconds": -0.09917666599994845,
+      "tokenCount": 8,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 22,
+      "kind": "long4000",
+      "scheduledOffsetSeconds": 5400,
+      "sentElapsedSeconds": 5400.033960791,
+      "estimatedReceivedElapsedSeconds": 5400.037282249999,
+      "latenessSeconds": 0.0339607910000268,
+      "rpcMilliseconds": 3.321458999380411,
+      "utcMinusMonotonicSeconds": -0.09917824999956792,
+      "tokenCount": 4001,
+      "hold": "token_limit",
+      "rankCount": 0,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    },
+    {
+      "index": 23,
+      "kind": "ordinary",
+      "scheduledOffsetSeconds": 5700,
+      "sentElapsedSeconds": 5700.166178875,
+      "estimatedReceivedElapsedSeconds": 5700.166890416,
+      "latenessSeconds": 0.16617887499978679,
+      "rpcMilliseconds": 0.7115409998732503,
+      "utcMinusMonotonicSeconds": -0.1079254159994889,
+      "tokenCount": 7,
+      "hold": null,
+      "rankCount": 60,
+      "memory": {
+        "physicalFootprintBytes": 27181560,
+        "maxRSSBytes": 44531712,
+        "residentBytes": 42582016
+      },
+      "flags": {
+        "requestSHAAndBytes": true,
+        "scheduledOffset": true,
+        "finiteReply": true,
+        "replyStructure": true,
+        "timingWithinDriverDeadline": true
+      }
+    }
+  ],
+  "rpcMilliseconds": {
+    "count": 24,
+    "min": 0.536291000116762,
+    "max": 22.364834000000005,
+    "median": 0.654166999993322,
+    "mean": 1.9886058749619089
+  },
+  "latenessSeconds": {
+    "count": 24,
+    "min": 0.020118040999999996,
+    "max": 0.5076762910000525,
+    "median": 0.18582324999988487,
+    "mean": 0.18848812983323926
+  },
+  "sampleCounts": {
+    "total": 600,
+    "valid": 600,
+    "missing": 0,
+    "ideal": 600
+  },
+  "missingSamples": [],
+  "sampleTimeStrictlyIncreasing": true,
+  "sampleCPUMonotonic": true,
+  "sampleIntervalSeconds": {
+    "count": 599,
+    "min": 9.5828480830005,
+    "max": 10.170587333000014,
+    "median": 10.113546749999841,
+    "mean": 10.000093491165277
+  },
+  "residentBytesFromPs": {
+    "count": 600,
+    "min": 42401792,
+    "max": 44531712,
+    "median": 42549248,
+    "mean": 42565222.4
+  },
+  "replyPhysicalFootprintBytes": {
+    "count": 24,
+    "min": 26952184,
+    "max": 34652664,
+    "median": 27148792,
+    "mean": 27705848.0
+  },
+  "replyResidentBytes": {
+    "count": 24,
+    "min": 42401792,
+    "max": 44056576,
+    "median": 42549248,
+    "mean": 42616149.333333336
+  },
+  "roundedSampledCPU": {
+    "firstElapsedSeconds": 0.04795962499999999,
+    "lastElapsedSeconds": 5990.103960833,
+    "observedIntervalSeconds": 5990.056001208,
+    "roundedCumulativeCPUDeltaSeconds": 0.019999999999999997,
+    "oneCorePercentFromRoundedTIME": 0.0003338866948149841,
+    "excludesBeforeFirstAndAfterLastSample": true
+  },
+  "nativeTimeL": {
+    "realSeconds": 5999.96,
+    "userSeconds": 0.05,
+    "sysSeconds": 0.0,
+    "oneCorePercent": 0.0008333388889259261,
+    "maximumResidentBytes": 44531712,
+    "chargedFootprint": null,
+    "driverOrPsIncluded": false,
+    "driverElapsedMinusNativeRealSeconds": 0.053343499999755295
+  },
+  "errors": [],
+  "priorReviewCountsAdded": false,
+  "freshModelCalls": 0,
+  "additionalProcessSamples": 0
+}

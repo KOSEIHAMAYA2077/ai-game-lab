@@ -181,3 +181,11 @@ Model2Vecが示す「最大500倍」「CPUで蒸留約30秒」は作者のモデ
 [内容からの連想policy](ambient-association-policy-v1/README.md)は、形の命令精度とサイドインテリアの連想価値を別の研究質問にする。120文・140文・6 Programは異なる課題なので合算せず、top3の候補包含を自動受理の成功へ読み替えない。人の快適性・好みは未検証である。
 
 [本文なしのbounded CLI](../experiments/native-static-wire-v1/README.md)は同じ静的特徴の外側を制限する比較。異常なlineからの復帰、固定5項目の返信、旧top3との一致を確認した。モデルが本文を理解する品質・本当のIPC・入力監視の許可・常駐全体の省電力とは別の境界である。
+
+## 9. 今回の結果から研究へ進む入口
+
+[サイドインテリアの整理](side-interior-results-20261003.md)は、実装済みの機構・実際の操作・提案・未検証を分けた入口。36原資料の[独立照合](../experiments/side-interior-summary-review-v1/REPORT.md)で、人間評価、骨格の範囲、CPU描画レコードの一致、浮動許容誤差、正例のfamily構成、容量単位を確認した。
+
+[固定日本語CLIの100分補足](../experiments/native-static-longrun-v1/REPORT-R1.md)は、24返信/600標本/通常終了、単独native RSS peak約42.47MiBを追加した。通常20件とtoken_limit保留4件を分ける。意味精度・実窓・一般16GB機・電力・8時間利用を実証せず、本文なし入口R2の長期結果とも混ぜない。[独立原票算術](../experiments/native-static-longrun-review-v1/REPORT-R1.md)。
+
+次は、一日の材料量、同じ文字表面での定期/辞書/低頻度提案、対応アプリと実IME、目標PCの全process資源、人の作業影響を順に比較する。

@@ -1,5 +1,15 @@
 # 小窓版の継続状況
 
+## 最新: 2026-10-03 10:07 JST
+
+期限10:37、10:17以降新機能停止。PR40 cache R2/連想policy、PR41 本文なしCLI入口R2はmainへmerge・タスク添付済み。旧60形Web、13形Release、保存、URLを維持。新native実窓/IMEは未確認のまま、OS全体の取得・権限変更・実本文送信なし。
+
+固定native R5の100分補足は10:03:30に通常終了。6000.013秒、通常20＋token_limit保留4、24返信、600/600ps、8入力SHA不変。driver/time/nativeの所有3 PIDは終了確認。RSS peak約42.47MiBは単独CLIで、全widget/8時間/16GB機/意味精度の数値ではない。保存原票の独立最終算術と研究の入口の公開をrootが担当。
+
+サイドインテリアの整理は36原資料の別担当照合を終えた。root以外は共有source・Gitを編集しない。所有caffeinate83393（02:37:01開始）は終了期限まで保持、未知82495は触らない。heartbeat3d-5はまだACTIVEで、公開・まとめを終えて停止する。
+
+以下は前の状態の履歴。
+
 ## 最新: 2026-10-03 08:09 JST
 
 期限10:37、10:17以降新機能停止。PR37有限検索R1/独立120文はmain1730dbfへmerge・添付済み。rootはexperiment/ambient-native-r2で作者94/独立39返却とmanifest自身/共有文書を検査、公開選択141＋公開記録2をPR38へ準備中。実compiled10/source30/app6一致、strict署名・保存算術・JSON/リンク/具体privatepathに問題0。Mac lockのため新native実UI/IMEは未確認、全アプリ取得なし。
